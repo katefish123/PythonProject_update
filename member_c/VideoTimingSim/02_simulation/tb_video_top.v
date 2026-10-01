@@ -65,7 +65,7 @@ video_top #(
 always #1 clk = ~clk;
 
 task fail_test;
-    input [8*96-1:0] reason;
+    input [8*64-1:0] reason;
     begin
         test_failed = 1;
         $display("TEST_FAIL_TOP: %0s", reason);
