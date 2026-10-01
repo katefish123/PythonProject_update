@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+`default_nettype none
 
 // TPG（Test Pattern Generator）：根据当前像素坐标产生可切换的测试图案。
 // pattern_sel：00=竖彩条，01=纯色，10=四象限，11=保留（黑色）。
@@ -73,3 +74,5 @@ always @(*) begin
 end
 
 endmodule
+
+`default_nettype wire
