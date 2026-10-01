@@ -1,0 +1,17 @@
+# ModelSim compile libraries and generated databases
+work/
+work_*/
+*.wlf
+wlft*
+
+# ModelSim local session and crash files
+transcript
+modelsim.ini
+*.cr.mti
+*.vstf
+*.bak
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
