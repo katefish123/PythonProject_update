@@ -1,4 +1,5 @@
 `timescale 1ns/1ps
+`default_nettype none
 
 // VTC（Video Timing Controller）：只负责扫描坐标、同步信号和有效区信号。
 module video_timing_vtc #(
@@ -58,3 +59,5 @@ assign hsync = (h_cnt < H_SYNC) ? HSYNC_ACTIVE : !HSYNC_ACTIVE;
 assign vsync = (v_cnt < V_SYNC) ? VSYNC_ACTIVE : !VSYNC_ACTIVE;
 
 endmodule
+
+`default_nettype wire

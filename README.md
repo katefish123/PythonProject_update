@@ -1,0 +1,82 @@
+# FPGA 视频处理三人协作项目
+
+本仓库用于盘古 676 FPGA 视频项目的团队协作。项目目标是先跑通 HDMI 视频链路，再逐步加入图像旋转、插值与任意角度畸变矫正。
+
+## 总体数据链
+
+```text
+HDMI 输入
+  -> 视频接收 / 解码
+  -> RGB 像素流
+  -> FPGA 缓存与图像处理
+  -> RGB 像素流
+  -> HDMI 输出
+```
+
+## 三人分工
+
+| 成员 | 主线 | 主要职责 | 阶段交付 |
+| --- | --- | --- | --- |
+| A | FPGA 主程 / 工程整合 | 顶层设计、模块例化、时钟与复位、RAM/FIFO、综合、时序约束和最终工程 | 可综合顶层、统一接口、缓存验证和构建说明 |
+| B | 图像算法 / 硬件化 | Python/OpenCV 正确模型、逆映射、边界处理、插值、定点格式和算法 RTL 验证 | 参考结果、算法公式、定点参数、测试向量和算法模块 |
+| C | 视频链路 / 板卡联调 | VTC、TPG、视频时序、HDMI IN/OUT、RGB 像素流、透传和板卡调试 | 视频时序模块、测试图案、ModelSim 验证、HDMI 例程和联调记录 |
+
+> B 不只是编写 Python，后期还要参与定点化和算法 RTL 验证；C 也不是把 B 的 Python 逐行翻译成 Verilog。A 负责把各模块连接成可运行工程。
+
+## 仓库导航
+
+| 路径 | 内容 |
+| --- | --- |
+| [`v1/`](v1/) | Python/OpenCV 图像旋转初版，采用最近邻取样 |
+| [`v2/`](v2/) | 加入双线性插值、输入校验和更完整的文件处理 |
+| [`v3/`](v3/) | 使用 Q1.16 定点系数，向 FPGA 硬件实现靠拢 |
+| [`member_c/`](member_c/) | 成员 C 的视频与硬件成果 |
+| [`member_c/VideoTimingSim/`](member_c/VideoTimingSim/) | VTC、TPG、正式顶层及 ModelSim 仿真工程 |
+| [`docs/`](docs/) | 已确认的设计说明和协作资料 |
+
+成员 C 的工程使用说明见 [`member_c/VideoTimingSim/README.md`](member_c/VideoTimingSim/README.md)。
+
+## 成员 C 版本
+
+| 版本 | GitHub 分支 | 主要内容 |
+| --- | --- | --- |
+| V1 | [`member-c/v1-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v1-video-timing) | 首次保存已验证的 VTC、TPG 和 ModelSim 仿真基线 |
+| V2 | [`member-c/v2-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v2-video-timing) | 按团队仓库目录和成员命名规则归档，保留 V1 历史 |
+| V3 | [`member-c/v3-video-top`](https://github.com/katefish123/PythonProject_update/tree/member-c/v3-video-top) | 拆分 VTC/TPG，增加正式 `video_top` 和顶层自动检查 |
+
+[查看全部版本标签](https://github.com/katefish123/PythonProject_update/tags)
+
+## 当前验证结果
+
+成员 C 的 V3 已通过以下 ModelSim 检查：
+
+- TPG 三种图案自动检查：`0 Errors, 0 Warnings`
+- 1920x1080 完整时序检查：2,475,000 个像素位置、1,125 行，`0 Errors, 0 Warnings`
+- VTC + TPG 顶层联调检查：`0 Errors, 0 Warnings`
+
+## 联调前必须统一
+
+三条路线合并前，需要共同确认：
+
+- 分辨率与帧率
+- RGB / YUV 格式及各通道位宽
+- `pixel_clk` 频率
+- `hsync`、`vsync` 的有效极性
+- `de` 有效区定义
+- 坐标原点、横纵方向和边界规则
+- 定点数 Q 格式、取整和溢出规则
+- 帧开始、行开始及模块握手方式
+
+## GitHub 协作规则
+
+1. 每位成员在自己的分支和目录中提交，提交信息带成员或模块名称。
+2. 正式阶段成果使用递增版本标签，保留旧版本，禁止覆盖历史成果。
+3. 合并到团队 `main` 前先由另外一名成员检查接口、测试结果和文件归属。
+4. 不提交 ModelSim `work*`、临时波形、崩溃记录或编辑器缓存。
+5. 每次联调记录使用的分支、标签、分辨率、时钟和接口版本，避免三个人测试不同代码。
+
+## 当前下一步
+
+- A：确认顶层与缓存接口骨架。
+- B：提供软件参考结果、坐标映射公式和定点约定。
+- C：在已验证的 VTC/TPG 基础上接入官方 HDMI OUT 例程，再推进 HDMI IN 与视频透传。
