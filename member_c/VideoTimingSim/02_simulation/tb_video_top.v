@@ -34,6 +34,9 @@ wire        de;
 wire [23:0] rgb;
 
 integer checked_cycles;
+integer test_failed;
+reg [11:0] expected_h;
+reg [11:0] expected_v;
 reg expected_de;
 reg [23:0] expected_rgb;
 
@@ -64,10 +67,11 @@ always #1 clk = ~clk;
 task fail_test;
     input [8*96-1:0] reason;
     begin
+        test_failed = 1;
         $display("TEST_FAIL_TOP: %0s", reason);
         $display("  h_cnt=%0d v_cnt=%0d pattern=%0b de=%0b rgb=%06h",
                  dut.h_cnt, dut.v_cnt, pattern_sel, de, rgb);
-        $finish;
+        $stop;
     end
 endtask
 
@@ -96,6 +100,9 @@ initial begin
     rst_n          = 1'b0;
     pattern_sel    = PATTERN_COLOR_BARS;
     checked_cycles = 0;
+    test_failed    = 0;
+    expected_h     = 12'd0;
+    expected_v     = 12'd0;
 
     repeat (4) @(negedge clk);
     #0.1 rst_n = 1'b1;
@@ -129,33 +136,53 @@ initial begin
     pattern_sel = PATTERN_BLACK;
     check_rgb(24'h000000, "reserved pattern selection is not black");
 
-    // 再检查完整一帧，确认顶层输出始终跟随内部时序和 TPG。
+    // 再从 (0,0) 开始检查完整一帧。期望坐标独立计算，不能依赖 DUT 自己。
     pattern_sel = PATTERN_COLOR_BARS;
+    wait_position(12'd0, 12'd0);
+    expected_h = 12'd0;
+    expected_v = 12'd0;
+
     repeat (H_TOTAL * V_TOTAL) begin
         @(negedge clk);
         #0.1;
         checked_cycles = checked_cycles + 1;
 
-        if (hsync !== (dut.h_cnt < H_SYNC))
+        if (expected_h == H_TOTAL - 12'd1) begin
+            expected_h = 12'd0;
+            if (expected_v == V_TOTAL - 12'd1)
+                expected_v = 12'd0;
+            else
+                expected_v = expected_v + 12'd1;
+        end
+        else begin
+            expected_h = expected_h + 12'd1;
+        end
+
+        if (dut.h_cnt !== expected_h)
+            fail_test("h_cnt does not follow the configured line length");
+        if (dut.v_cnt !== expected_v)
+            fail_test("v_cnt does not follow the configured frame length");
+
+        if (hsync !== (expected_h < H_SYNC))
             fail_test("hsync does not match the VTC counter");
-        if (vsync !== (dut.v_cnt < V_SYNC))
+        if (vsync !== (expected_v < V_SYNC))
             fail_test("vsync does not match the VTC counter");
 
-        expected_de = (dut.h_cnt >= H_ACTIVE_START) &&
-                      (dut.h_cnt <  H_ACTIVE_END)   &&
-                      (dut.v_cnt >= V_ACTIVE_START) &&
-                      (dut.v_cnt <  V_ACTIVE_END);
+        expected_de = (expected_h >= H_ACTIVE_START) &&
+                      (expected_h <  H_ACTIVE_END)   &&
+                      (expected_v >= V_ACTIVE_START) &&
+                      (expected_v <  V_ACTIVE_END);
 
         if (de !== expected_de)
             fail_test("de does not match the active window");
 
         if (!expected_de)
             expected_rgb = 24'h000000;
-        else if (dut.h_cnt < H_ACTIVE_START + H_ACTIVE / 4)
+        else if (expected_h < H_ACTIVE_START + H_ACTIVE / 4)
             expected_rgb = 24'hFF0000;
-        else if (dut.h_cnt < H_ACTIVE_START + H_ACTIVE / 2)
+        else if (expected_h < H_ACTIVE_START + H_ACTIVE / 2)
             expected_rgb = 24'h00FF00;
-        else if (dut.h_cnt < H_ACTIVE_START + H_ACTIVE * 3 / 4)
+        else if (expected_h < H_ACTIVE_START + H_ACTIVE * 3 / 4)
             expected_rgb = 24'h0000FF;
         else
             expected_rgb = 24'hFFFFFF;
@@ -166,6 +193,8 @@ initial begin
 
     if (checked_cycles != H_TOTAL * V_TOTAL)
         fail_test("top-level frame check did not cover one complete frame");
+    if (dut.h_cnt !== 12'd0 || dut.v_cnt !== 12'd0)
+        fail_test("top-level counters did not return to frame origin");
 
     $display("TEST_PASS_TOP: VTC and TPG top-level integration is correct");
     $display("  checked pixels: %0d", checked_cycles);

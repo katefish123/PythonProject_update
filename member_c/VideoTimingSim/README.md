@@ -29,7 +29,7 @@
 | 名称 | 用途 |
 | --- | --- |
 | `01_design_code` | FPGA 最终实现的正式 Verilog 设计代码 |
-| `02_simulation` | 三份仅用于电脑仿真的 Testbench |
+| `02_simulation` | 四份仅用于电脑仿真的 Testbench |
 | `03_documents` | 模块接口、时序参数和仿真操作说明 |
 | `04_results` | 已验证的测试结论和 ModelSim 日志 |
 | `work*` | ModelSim 自动生成的本地编译缓存，不放入分享包 |
@@ -41,4 +41,4 @@
 
 ## 分享注意事项
 
-分享时保留 README、三份运行脚本、ModelSim 工程和四个编号目录；排除 `work*` 编译缓存、`.bak` 备份文件、`.cr.mti` 崩溃记录和临时 WLF 文件。工程源文件使用相对路径，同伴无需使用与你相同的磁盘目录。
+分享时保留 README、四份运行脚本、ModelSim 工程和四个编号目录；排除 `work*` 编译缓存、`.bak` 备份文件、`.cr.mti` 崩溃记录和临时 WLF 文件。工程源文件使用相对路径，同伴无需使用与你相同的磁盘目录。
