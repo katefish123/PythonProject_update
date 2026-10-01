@@ -2,25 +2,25 @@
 # vmap work_tpg_check work_tpg_check 
 # Modifying modelsim.ini
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:54:01 on Oct 01,2026
+# Start time: 12:56:14 on Oct 01,2026
 # vlog -work work_tpg_check 01_design_code/test_pattern_generator_tpg.v 
 # -- Compiling module test_pattern_generator_tpg
 # 
 # Top level modules:
 # 	test_pattern_generator_tpg
-# End time: 12:54:01 on Oct 01,2026, Elapsed time: 0:00:00
+# End time: 12:56:14 on Oct 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:54:01 on Oct 01,2026
+# Start time: 12:56:14 on Oct 01,2026
 # vlog -work work_tpg_check 02_simulation/tb_tpg_patterns.v 
 # -- Compiling module tb_tpg_patterns
 # 
 # Top level modules:
 # 	tb_tpg_patterns
-# End time: 12:54:01 on Oct 01,2026, Elapsed time: 0:00:00
+# End time: 12:56:14 on Oct 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -wlf 04_results/tpg_check.wlf work_tpg_check.tb_tpg_patterns 
-# Start time: 12:54:01 on Oct 01,2026
+# Start time: 12:56:14 on Oct 01,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2020.4 Oct 13 2020
 # //
@@ -39,5 +39,5 @@
 # TEST_PASS_TPG: all pattern modes are correct
 # ** Note: $finish    : 02_simulation/tb_tpg_patterns.v(73)
 #    Time: 11 ns  Iteration: 0  Instance: /tb_tpg_patterns
-# End time: 12:54:02 on Oct 01,2026, Elapsed time: 0:00:01
+# End time: 12:56:15 on Oct 01,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

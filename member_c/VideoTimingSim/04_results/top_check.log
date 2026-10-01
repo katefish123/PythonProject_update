@@ -2,43 +2,43 @@
 # vmap work_top_check work_top_check 
 # Modifying modelsim.ini
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:53:51 on Oct 01,2026
+# Start time: 12:56:11 on Oct 01,2026
 # vlog -work work_top_check 01_design_code/video_timing_vtc.v 
 # -- Compiling module video_timing_vtc
 # 
 # Top level modules:
 # 	video_timing_vtc
-# End time: 12:53:51 on Oct 01,2026, Elapsed time: 0:00:00
+# End time: 12:56:11 on Oct 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:53:52 on Oct 01,2026
+# Start time: 12:56:11 on Oct 01,2026
 # vlog -work work_top_check 01_design_code/test_pattern_generator_tpg.v 
 # -- Compiling module test_pattern_generator_tpg
 # 
 # Top level modules:
 # 	test_pattern_generator_tpg
-# End time: 12:53:52 on Oct 01,2026, Elapsed time: 0:00:00
+# End time: 12:56:11 on Oct 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:53:52 on Oct 01,2026
+# Start time: 12:56:11 on Oct 01,2026
 # vlog -work work_top_check 01_design_code/video_top.v 
 # -- Compiling module video_top
 # 
 # Top level modules:
 # 	video_top
-# End time: 12:53:52 on Oct 01,2026, Elapsed time: 0:00:00
+# End time: 12:56:11 on Oct 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 12:53:52 on Oct 01,2026
+# Start time: 12:56:11 on Oct 01,2026
 # vlog -work work_top_check 02_simulation/tb_video_top.v 
 # -- Compiling module tb_video_top
 # 
 # Top level modules:
 # 	tb_video_top
-# End time: 12:53:52 on Oct 01,2026, Elapsed time: 0:00:00
+# End time: 12:56:11 on Oct 01,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -voptargs="+acc" -wlf 04_results/top_check.wlf work_top_check.tb_video_top 
-# Start time: 12:53:52 on Oct 01,2026
+# Start time: 12:56:12 on Oct 01,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2020.4 Oct 13 2020
 # //
@@ -61,5 +61,5 @@
 #   checked pixels: 98
 # ** Note: $finish    : 02_simulation/tb_video_top.v(201)
 #    Time: 400100 ps  Iteration: 0  Instance: /tb_video_top
-# End time: 12:53:53 on Oct 01,2026, Elapsed time: 0:00:01
+# End time: 12:56:13 on Oct 01,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
