@@ -4,8 +4,9 @@
 // MS7210 配置连接层。
 //
 // 本文件只负责连接“MS7210 寄存器控制器”和“通用 I2C 驱动”。
-// 真正的寄存器表由盘古官方 ms7210_ctl.v 提供，I2C 时序由官方
-// iic_dri.v 提供；取得有明确来源的文件后，将它们加入 PDS 工程即可。
+// V5 接入的寄存器表和 I2C 驱动位于 third_party/ms7210。
+// 文件保留原始作者署名；来源、许可证与验证边界见该目录 SOURCE.md。
+// init_done 只表示控制器进入状态读取阶段，不代表 HDMI 画面已通过验收。
 module ms7210_config (
     input  wire cfg_clk,
     input  wire reset_n,
@@ -72,4 +73,3 @@ assign sda_input = iic_sda;
 endmodule
 
 `default_nettype wire
-

@@ -44,12 +44,13 @@ HDMI 输入
 | V2 | [`member-c/v2-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v2-video-timing) | 按团队仓库目录和成员命名规则归档，保留 V1 历史 |
 | V3 | [`member-c/v3-video-top`](https://github.com/katefish123/PythonProject_update/tree/member-c/v3-video-top) | 拆分 VTC/TPG，增加正式 `video_top` 和顶层自动检查 |
 | V4 | [`member-c/v4-hdmi-pll`](https://github.com/katefish123/PythonProject_update/tree/member-c/v4-hdmi-pll) | 增加两路 PDS PLL、HDMI 板级连接顶层、MS7210 配置接口和自动仿真检查 |
+| V5 | [`member-c/v5-ms7210-integration`](https://github.com/katefish123/PythonProject_update/tree/member-c/v5-ms7210-integration) | 整合真实MS7210/I²C驱动、总线仿真、正式PDS工程与34个引脚，完成内部时序验证并生成HDMI OUT实验码流 |
 
 [查看全部版本标签](https://github.com/katefish123/PythonProject_update/tags)
 
 ## 当前验证结果
 
-成员 C 的 V4 已通过以下 ModelSim 检查：
+成员 C 的 V5 延续以下 ModelSim 检查：
 
 - TPG 三种图案自动检查：`0 Errors, 0 Warnings`
 - 1920x1080 完整时序检查：2,475,000 个像素位置、1,125 行，`0 Errors, 0 Warnings`
@@ -57,7 +58,7 @@ HDMI 输入
 - HDMI 板级连接检查：`TEST_PASS_HDMI_TOP`，`0 Errors, 0 Warnings`
 - PDS 生成的 148.5 MHz 与 10 MHz PLL 自带 Testbench：均为 `Simulation Success`，`0 Errors, 0 Warnings`
 
-V4 已生成目标器件 `PG2L100H / -6 / FBG676` 的真实 PDS PLL IP；真实上板还需补充来源明确的 MS7210 控制器、I2C 驱动、PDS 工程源文件清单和 FDC 管脚约束。
+V5已加入来源明确的真实MS7210控制器和I²C驱动；真实总线仿真及完整硬件顶层编译载入通过。正式PDS工程在 `member_c/VideoTimingSim/05_pds/VideoTimingSim_V5.pds`，34个管脚按官方手册核对。PDS编译、综合、布局布线、内部时序与码流生成通过，视频内部建立WNS为4.475ns。报告与3791112字节sbit见 `member_c/VideoTimingSim/04_results/pds_v5/`。MS7210外部接口时序、复位/I²C行为复核和实板彩条验收仍未完成。
 
 ## 联调前必须统一
 
@@ -84,4 +85,4 @@ V4 已生成目标器件 `PG2L100H / -6 / FBG676` 的真实 PDS PLL IP；真实�
 
 - A：确认顶层与缓存接口骨架。
 - B：提供软件参考结果、坐标映射公式和定点约定。
-- C：把 V4 接入官方 HDMI OUT 工程，补齐 MS7210 控制器和管脚约束，先完成显示器彩条验收，再推进 HDMI IN 与视频透传。
+- C：使用V5 PDS工程与实验码流，先复核外部接口时序、初始化和复位/I²C行为，完成显示器彩条验收，再推进HDMI IN与视频透传。
