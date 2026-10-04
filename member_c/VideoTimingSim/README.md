@@ -1,5 +1,9 @@
 # VideoTimingSim
 
+当前版本：**V5：真实 MS7210 与 I²C 配置模块整合**（2026-10-05）。
+
+先看 `03_documents/V5整合说明与缺项清单.md`。正式硬件源码清单为 `hardware_sources.f`，板级顶层为 `hdmi_colorbar_top`。PDS工程在 `05_pds/VideoTimingSim_V5.pds`；已生成HDMI OUT实验码流，尚未上板验收。
+
 这是视频时序模块的 Verilog 学习与仿真工程。工程使用 VS Code 编辑代码，使用 ModelSim 编译、自动检查和查看波形。
 
 ## 当前成果
@@ -9,13 +13,15 @@
 - `video_top.v`：正式可综合顶层，统一参数并连接 VTC 与 TPG。
 - `hdmi_colorbar_top.v`：MES2L676-100HP 板级连接顶层，把两路 PLL、视频核心和 MS7210 配置接口连接起来。
 - `ms7210_config.v`：连接 MS7210 寄存器控制器与 I2C 驱动的配置层。
+- `01_design_code/third_party/ms7210`：V5 接入的真实寄存器控制器、I²C驱动、上游许可证和来源说明；这些模块来自第三方参考工程。
 - `01_design_code/ip`：PDS 生成的两个 Logos2 GPLL，分别完成 27 MHz→148.5 MHz 和 27 MHz→10 MHz。
 - `tb_video_timing.v`：14x7 缩小版教学仿真，用于看清计数、同步、`de` 和 RGB 彩条。
 - `tb_video_timing_1080p.v`：正式参数仿真，自动检查完整一帧的 2475000 个像素位置。
 - `tb_tpg_patterns.v`：不依赖 VTC 的 TPG 独立测试，逐项检查三种图案。
 - `tb_video_top.v`：检查正式顶层的参数传递、模块连接和完整一帧输出。
 - `tb_hdmi_colorbar_top.v`：使用仿真 PLL 和 MS7210 模型检查板级连线、复位释放和第一段彩条。
-- 五组仿真均已通过，编译为 0 错误、0 警告。
+- `tb_ms7210_config.v`：通过真实控制器/驱动和外部I²C设备模型，检查缺设备、校验读回、配置传输与复位。
+- V5 本轮六项检查通过：真实I²C、真实硬件顶层编译载入、TPG、视频顶层、1080p一帧与原HDMI行为测试，均为0错误、0警告。证明范围见结果说明，不能替代上板验收。
 
 ## 从哪里开始
 
@@ -28,6 +34,8 @@
 7. 运行正式 1080p 检查：在工程根目录执行 `vsim -c -do run_1080p_check.do`。
 8. 检查 HDMI 板级连线：在工程根目录执行 `vsim -c -do run_hdmi_board_check.do`。
 9. 查看结果：打开 `04_results/README.md` 和对应的检查日志。
+10. 检查真实MS7210配置：执行 `vsim -c -do run_ms7210_check.do`。
+11. 检查完整真实硬件源码：执行 `vsim -c -do run_hdmi_real_compile.do`，只编译与载入，不运行端到端视频测试。更换PDS安装位置时，设置环境变量 `PDS_SIM_GPLL` 指向该版本的 `GTP_GPLL.v` 仿真文件。
 
 ## 目录说明
 
@@ -35,16 +43,24 @@
 | --- | --- |
 | `01_design_code` | FPGA 最终实现的正式 Verilog 设计代码 |
 | `01_design_code/ip` | PDS 生成的 PLL 配置、Verilog、模板和自带 Testbench |
-| `02_simulation` | 五份仅用于电脑仿真的 Testbench |
+| `01_design_code/third_party` | 第三方模块，保留作者、许可证与来源记录 |
+| `02_simulation` | 仅用于电脑仿真的Testbench与外部设备模型 |
 | `03_documents` | 模块接口、时序参数和仿真操作说明 |
-| `04_results` | 已验证的测试结论和 ModelSim 日志 |
+| `04_results` | ModelSim日志及PDS V5报告、码流与校验摘要 |
+| `05_pds` | 可打开的PDS工程、相对路径构建脚本和FDC约束 |
 | `work*` | ModelSim 自动生成的本地编译缓存，不放入分享包 |
 | `VideoTimingSim.mpf` | ModelSim 工程入口 |
 
 ## 当前边界
 
-本阶段已经完成 VTC、TPG、视频顶层、HDMI 板级连接层以及两路 PDS PLL。板级连接已通过行为仿真，两路 PLL 已由 PDS 针对 `PG2L100H / -6 / FBG676` 生成并通过其自带 Testbench；真实上板仍需加入来源明确的官方 MS7210 控制器、I2C 驱动、正式 PDS 工程和 FDC 管脚约束。完整订货型号中的 `I` 表示工业温度等级，PDS 不把它写进封装名称。相机输入仍不在本阶段内。
+V5 已补入真实MS7210控制器和I²C驱动，完成真实总线仿真及包括两路PLL的完整模块编译载入。两路PLL针对 `PG2L100H / -6 / FBG676` 生成；完整型号中的 `I` 表示工业温度等级。已补齐正式PDS工程、34个引脚约束和27MHz输入约束，真实PLL自动推导两路时钟，完成综合、布局布线、内部时序检查和码流生成。仍缺MS7210外部接口时序、复位/I²C电气及错误处理复核、寄存器格式验证和上板画面验收。相机HDMI输入、DDR帧缓存和算法还需后续集成。
+
+`tb_hdmi_colorbar_top.v` 内含与真实模块同名的行为替身，只由其专用脚本编译；不要把它加入 `hardware_sources.f` 或与第三方驱动混编。VS Code索引使用真实模块，ModelSim工程已登记新文件。
 
 ## 分享注意事项
 
-分享时保留 README、四份运行脚本、ModelSim 工程和四个编号目录；排除 `work*` 编译缓存、`.bak` 备份文件、`.cr.mti` 崩溃记录和临时 WLF 文件。工程源文件使用相对路径，同伴无需使用与你相同的磁盘目录。
+分享时保留README、运行脚本、`hardware_sources.f`、ModelSim工程和五个编号目录，尤其保留第三方的LICENSE与SOURCE.md；排除 `work*` 编译缓存、备份、崩溃记录和WLF文件。工程源文件使用相对路径。对外发布前核对第三方原始授权范围，V5上传至Katefish团队仓库的成员C分支，保留旧版本与团队main。
+
+## PDS V5补充
+
+打开 `05_pds/VideoTimingSim_V5.pds`；构建、管脚和上板步骤见 `05_pds/README.md`。完整流程已通过，视频内部建立余量4.475ns；MS7210外部接口时序和实板画面尚未验收。下载文件与原始报告见 `04_results/pds_v5`。本地原V5标签保留初始整合快照，PDS补充保存在同一V5分支的新提交；团队 `member-c-v5` 标签包含本次PDS补充。
