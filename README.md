@@ -43,16 +43,21 @@ HDMI 输入
 | V1 | [`member-c/v1-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v1-video-timing) | 首次保存已验证的 VTC、TPG 和 ModelSim 仿真基线 |
 | V2 | [`member-c/v2-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v2-video-timing) | 按团队仓库目录和成员命名规则归档，保留 V1 历史 |
 | V3 | [`member-c/v3-video-top`](https://github.com/katefish123/PythonProject_update/tree/member-c/v3-video-top) | 拆分 VTC/TPG，增加正式 `video_top` 和顶层自动检查 |
+| V4 | [`member-c/v4-hdmi-pll`](https://github.com/katefish123/PythonProject_update/tree/member-c/v4-hdmi-pll) | 增加两路 PDS PLL、HDMI 板级连接顶层、MS7210 配置接口和自动仿真检查 |
 
 [查看全部版本标签](https://github.com/katefish123/PythonProject_update/tags)
 
 ## 当前验证结果
 
-成员 C 的 V3 已通过以下 ModelSim 检查：
+成员 C 的 V4 已通过以下 ModelSim 检查：
 
 - TPG 三种图案自动检查：`0 Errors, 0 Warnings`
 - 1920x1080 完整时序检查：2,475,000 个像素位置、1,125 行，`0 Errors, 0 Warnings`
 - VTC + TPG 顶层联调检查：`0 Errors, 0 Warnings`
+- HDMI 板级连接检查：`TEST_PASS_HDMI_TOP`，`0 Errors, 0 Warnings`
+- PDS 生成的 148.5 MHz 与 10 MHz PLL 自带 Testbench：均为 `Simulation Success`，`0 Errors, 0 Warnings`
+
+V4 已生成目标器件 `PG2L100H / -6 / FBG676` 的真实 PDS PLL IP；真实上板还需补充来源明确的 MS7210 控制器、I2C 驱动、PDS 工程源文件清单和 FDC 管脚约束。
 
 ## 联调前必须统一
 
@@ -79,4 +84,4 @@ HDMI 输入
 
 - A：确认顶层与缓存接口骨架。
 - B：提供软件参考结果、坐标映射公式和定点约定。
-- C：在已验证的 VTC/TPG 基础上接入官方 HDMI OUT 例程，再推进 HDMI IN 与视频透传。
+- C：把 V4 接入官方 HDMI OUT 工程，补齐 MS7210 控制器和管脚约束，先完成显示器彩条验收，再推进 HDMI IN 与视频透传。
