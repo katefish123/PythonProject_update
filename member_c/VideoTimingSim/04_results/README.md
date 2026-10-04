@@ -1,5 +1,25 @@
 # 仿真结果
 
+## PDS PLL 生成与检查
+
+- 检查日期：2026-10-04
+- 器件：`PG2L100H / -6 / FBG676`
+- `video_pll_27m_148m5`：27 MHz → 148.5 MHz，PDS 生成 0 Errors、0 Warnings
+- `config_pll_27m_10m`：27 MHz → 10 MHz，PDS 生成 0 Errors、0 Warnings
+- 两个生成模块与 PDS 官方 `GTP_GPLL` 模型：ModelSim 编译 0 Errors、0 Warnings
+- 两个 PDS 自动生成的 Testbench：`Simulation Success`，0 Errors、0 Warnings
+- PDS 原始生成日志：分别位于两个 `01_design_code/ip/<PLL名>/generate.log`
+
+## HDMI 板级连接检查
+
+- 检查日期：2026-10-04
+- 检查内容：两路 PLL 接口、MS7210 复位延时、初始化完成、VTC/TPG 到 HDMI 输出端口的连接
+- 测试方式：PLL 和 MS7210 控制器使用仿真模型，现有 VTC/TPG 使用真实工程代码
+- 编译结果：0 Errors，0 Warnings
+- 仿真结论：`TEST_PASS_HDMI_TOP`
+- 详细输出：`hdmi_board_check.log`
+- 边界：该结果证明连接逻辑正确，不等同于真实 PDS PLL、寄存器初始化和引脚约束已经完成
+
 ## 顶层集成检查
 
 - 检查日期：2026-10-01
