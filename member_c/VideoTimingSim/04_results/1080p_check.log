@@ -2,34 +2,34 @@
 # vmap work_1080p work_1080p 
 # Modifying modelsim.ini
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 00:02:45 on Oct 05,2026
+# Start time: 16:32:02 on Oct 08,2026
 # vlog -work work_1080p 01_design_code/video_timing_vtc.v 
 # -- Compiling module video_timing_vtc
 # 
 # Top level modules:
 # 	video_timing_vtc
-# End time: 00:02:45 on Oct 05,2026, Elapsed time: 0:00:00
+# End time: 16:32:02 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 00:02:45 on Oct 05,2026
+# Start time: 16:32:02 on Oct 08,2026
 # vlog -work work_1080p 01_design_code/test_pattern_generator_tpg.v 
 # -- Compiling module test_pattern_generator_tpg
 # 
 # Top level modules:
 # 	test_pattern_generator_tpg
-# End time: 00:02:45 on Oct 05,2026, Elapsed time: 0:00:00
+# End time: 16:32:02 on Oct 08,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
-# Start time: 00:02:45 on Oct 05,2026
+# Start time: 16:32:02 on Oct 08,2026
 # vlog -work work_1080p 02_simulation/tb_video_timing_1080p.v 
 # -- Compiling module tb_video_timing_1080p
 # 
 # Top level modules:
 # 	tb_video_timing_1080p
-# End time: 00:02:45 on Oct 05,2026, Elapsed time: 0:00:00
+# End time: 16:32:03 on Oct 08,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -c -voptargs="+acc" -wlf 04_results/1080p_check.wlf work_1080p.tb_video_timing_1080p 
-# Start time: 00:02:45 on Oct 05,2026
+# Start time: 16:32:03 on Oct 08,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # //  ModelSim SE-64 2020.4 Oct 13 2020
 # //
@@ -53,5 +53,5 @@
 #   timing        : 2200 x 1125 totals, 1920 x 1080 active
 # ** Note: $finish    : 02_simulation/tb_video_timing_1080p.v(160)
 #    Time: 4950008 ns  Iteration: 1  Instance: /tb_video_timing_1080p
-# End time: 00:02:47 on Oct 05,2026, Elapsed time: 0:00:02
+# End time: 16:32:05 on Oct 08,2026, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
