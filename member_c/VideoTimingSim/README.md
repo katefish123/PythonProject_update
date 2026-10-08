@@ -59,8 +59,8 @@ V5 已补入真实MS7210控制器和I²C驱动，完成真实总线仿真及包�
 
 ## 分享注意事项
 
-分享时保留README、运行脚本、`hardware_sources.f`、ModelSim工程和五个编号目录，尤其保留第三方的LICENSE与SOURCE.md；排除 `work*` 编译缓存、备份、崩溃记录和WLF文件。工程源文件使用相对路径。对外发布前核对第三方原始授权范围，V5上传至Katefish团队仓库的成员C分支，保留旧版本与团队main。
+分享时保留README、运行脚本、`hardware_sources.f`、ModelSim工程和五个编号目录，尤其保留第三方的LICENSE与SOURCE.md；排除 `work*` 编译缓存、备份、崩溃记录和WLF文件。工程源文件使用相对路径。对外发布前核对第三方原始授权范围；正式成果统一维护在团队仓库的 `main-C` 分支。
 
 ## PDS V5补充
 
-打开 `05_pds/VideoTimingSim_V5.pds`；构建、管脚和上板步骤见 `05_pds/README.md`。完整流程已通过，视频内部建立余量4.475ns；MS7210外部接口时序和实板画面尚未验收。下载文件与原始报告见 `04_results/pds_v5`。本地原V5标签保留初始整合快照，PDS补充保存在同一V5分支的新提交；团队 `member-c-v5` 标签包含本次PDS补充。
+打开 `05_pds/VideoTimingSim_V5.pds`；构建、管脚和上板步骤见 `05_pds/README.md`。完整流程已通过，视频内部建立余量4.475ns；MS7210外部接口时序和实板画面尚未验收。下载文件与原始报告见 `04_results/pds_v5`。相关源码、PDS补充和验证记录均已归档在 `main-C`。
