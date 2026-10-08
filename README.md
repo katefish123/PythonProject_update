@@ -36,17 +36,9 @@ HDMI 输入
 
 成员 C 的工程使用说明见 [`member_c/VideoTimingSim/README.md`](member_c/VideoTimingSim/README.md)。
 
-## 成员 C 版本
+## 成员 C 正式成果
 
-| 版本 | GitHub 分支 | 主要内容 |
-| --- | --- | --- |
-| V1 | [`member-c/v1-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v1-video-timing) | 首次保存已验证的 VTC、TPG 和 ModelSim 仿真基线 |
-| V2 | [`member-c/v2-video-timing`](https://github.com/katefish123/PythonProject_update/tree/member-c/v2-video-timing) | 按团队仓库目录和成员命名规则归档，保留 V1 历史 |
-| V3 | [`member-c/v3-video-top`](https://github.com/katefish123/PythonProject_update/tree/member-c/v3-video-top) | 拆分 VTC/TPG，增加正式 `video_top` 和顶层自动检查 |
-| V4 | [`member-c/v4-hdmi-pll`](https://github.com/katefish123/PythonProject_update/tree/member-c/v4-hdmi-pll) | 增加两路 PDS PLL、HDMI 板级连接顶层、MS7210 配置接口和自动仿真检查 |
-| V5 | [`member-c/v5-ms7210-integration`](https://github.com/katefish123/PythonProject_update/tree/member-c/v5-ms7210-integration) | 整合真实MS7210/I²C驱动、总线仿真、正式PDS工程与34个引脚，完成内部时序验证并生成HDMI OUT实验码流 |
-
-[查看全部版本标签](https://github.com/katefish123/PythonProject_update/tags)
+成员 C 的正式交付统一维护在 [`main-C`](https://github.com/katefish123/PythonProject_update/tree/main-C)。旧的 V1–V5 临时分支和标签已完成整合，不再作为独立入口保留；历史变化仍可通过 `main-C` 的提交记录查看。
 
 ## 当前验证结果
 
@@ -75,8 +67,8 @@ V5已加入来源明确的真实MS7210控制器和I²C驱动；真实总线仿�
 
 ## GitHub 协作规则
 
-1. 每位成员在自己的分支和目录中提交，提交信息带成员或模块名称。
-2. 正式阶段成果使用递增版本标签，保留旧版本，禁止覆盖历史成果。
+1. 每位成员在自己的正式分支和目录中提交：A 使用 `main-A`，B 使用 `main-B`，C 使用 `main-C`；提交信息带成员或模块名称。
+2. 阶段历史通过正式分支的提交记录保存，不再额外建立成员版本分支或版本标签。
 3. 合并到团队 `main` 前先由另外一名成员检查接口、测试结果和文件归属。
 4. 不提交 ModelSim `work*`、临时波形、崩溃记录或编辑器缓存。
 5. 每次联调记录使用的分支、标签、分辨率、时钟和接口版本，避免三个人测试不同代码。
