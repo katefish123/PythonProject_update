@@ -1,5 +1,7 @@
 # VideoTimingSim
 
+> 2026-10-08 C 相机链路交接：最新现场基线是 `hdmi_camera_loop_top` 的 RGB888 全分辨率、接收端优先版本。源码快照、复现入口和验收边界见 [C相机链路交接](03_documents/C相机链路交接_20261008.md)。原 V5 彩条工程保留独立入口；本增量需要仓库外的 RX 依赖，不能仅据仿真或下载成功宣称端到端验收。
+
 当前版本：**V5：真实 MS7210 与 I²C 配置模块整合**（2026-10-05）。
 
 先看 `03_documents/V5整合说明与缺项清单.md`。正式硬件源码清单为 `hardware_sources.f`，板级顶层为 `hdmi_colorbar_top`。PDS工程在 `05_pds/VideoTimingSim_V5.pds`；已生成HDMI OUT实验码流，尚未上板验收。
