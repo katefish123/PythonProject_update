@@ -1,0 +1,12 @@
+Date: 2026-10-12 Asia/Shanghai
+Tool: ModelSim SE-64 2020.4
+TDD red: FAIL_STREAM_COUNT received=0 starts=0 ends=0; exit 1.
+Green: PASS_SOURCE_STREAM W=8 H=4; Errors: 0, Warnings: 0.
+Green: PASS_SOURCE_STREAM W=1920 H=1080; Errors: 0, Warnings: 0.
+Six complete frames per size, RGB/coordinates/SOF/EOF checked per pixel.
+Startup partial frame, short line, link loss/reconnect, mid-frame reset,
+early frame boundary and recovery checks passed.
+Integration: PASS_C_TO_B_MARKER frames=2 corners=2; Errors: 0, Warnings: 0.
+External B reference: main-B 7fa2fa4e7a53c3e7b6a2c63b179594192e89844f.
+Production HDMI top and bitstream unchanged. No board programming.
+Not proven: PDS timing, DDR responses, final rectification display, hardware recovery.
