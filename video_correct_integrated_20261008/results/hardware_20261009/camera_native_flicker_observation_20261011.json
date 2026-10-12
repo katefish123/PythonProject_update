@@ -1,0 +1,73 @@
+{
+  "recorded_at_utc": "2026-10-10T17:11:37.645632+00:00",
+  "current_image": "release/camera_native_rx_first_20261010/camera_native_rx_first_top.sbit",
+  "program_log": "results/hardware_20261009/program_camera_native_rx_first_20261011_005851.log",
+  "native_user_report_verbatim": "有真是取景，但是一直在闪烁，非常不稳定",
+  "native_real_camera_observed": true,
+  "native_real_camera_source_frame_verified": true,
+  "native_display_stability_accepted": false,
+  "nv12_user_result_verbatim": "仍然闪烁",
+  "nv12_settings_verified_in_obs_log": true,
+  "nv12_settings": "1920x1080, 30fps, NV12; same 39ae5db8 capture device",
+  "nv12_saved_source_frame_all_black": true,
+  "evidence": [
+    {
+      "original": "C:\\Users\\夏菲\\Videos\\Screenshot 2026-10-11 01-02-08.png",
+      "copy": "results\\hardware_20261009\\native_camera_mjpeg_flicker_20261011.png",
+      "label": "Native b918, MJPEG 1080p30",
+      "sha256": "05734ca0dafdb37ac43b1addc02c98f043df8d755804bdd5e9c583e598c3cbce",
+      "rgb_extrema": [
+        [
+          9,
+          240
+        ],
+        [
+          2,
+          238
+        ],
+        [
+          0,
+          251
+        ]
+      ],
+      "all_black": false
+    },
+    {
+      "original": "C:\\Users\\夏菲\\Videos\\Screenshot 2026-10-11 01-07-27.png",
+      "copy": "results\\hardware_20261009\\native_camera_nv12_black_frame_20261011.png",
+      "label": "Native b918, NV12 1080p30",
+      "sha256": "fa20ca01f393807e89e6453bb0dca221dd9f3ba1aca393cb030bd139cba899eb",
+      "rgb_extrema": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "all_black": true
+    }
+  ],
+  "obs_log": "results\\hardware_20261009\\obs_native_mjpeg_and_nv12_flicker_20261011.txt",
+  "mjpeg_log_counts": {
+    "sample_start": "2026-10-11 01:00:00 Asia/Shanghai",
+    "sample_end_exclusive": "2026-10-11 01:07:04 Asia/Shanghai",
+    "eoi_missing_warnings": 554,
+    "decode_errors": 70,
+    "note": "OBS diagnostics only; not a count of complete displayed frames or actual hardware VS edges"
+  },
+  "root_cause_proven": false,
+  "actual_camera_display_accepted": false,
+  "clarity_accepted": false,
+  "continuous_camera_display_verified": false,
+  "actual_camera_correction_accepted": false,
+  "computer_use_paused_by_user": true,
+  "programmed_image_changed_after_native_download": false,
+  "pending": "User compares direct camera-to-capture with identical NV12 1080p30 settings, camera aimed at desk or hand instead of computer screen, observes 20 seconds; desktop automation stays paused"
+}

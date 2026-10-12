@@ -1,0 +1,48 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do tb_native_display.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_native_display work_tb_native_display 
+# Modifying C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_camera_hires_20261011\results\modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 18:51:39 on Oct 11,2026
+# vlog -sv -work work_tb_native_display C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_20261011/results/ddr_result_display.v C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_20261011/tb_native_display.sv 
+# -- Compiling module ddr_result_display
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_native_display
+# 
+# Top level modules:
+# 	tb_native_display
+# End time: 18:51:39 on Oct 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_20261011/results/tb_native_display.wlf work_tb_native_display.tb_native_display 
+# Start time: 18:51:39 on Oct 11,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_native_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# NATIVE_DISPLAY_PASS pixels_per_frame=578560 frames=2 row512=1 lastbeat79=1 delayed_memory=1 bank_swap=1 requests=144640
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_20261011/tb_native_display.sv(63)
+#    Time: 48632160122 ps  Iteration: 2  Instance: /tb_native_display
+# Break in Module tb_native_display at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_20261011/tb_native_display.sv line 63
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_20261011/tb_native_display.sv line 63
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 18:51:48 on Oct 11,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0

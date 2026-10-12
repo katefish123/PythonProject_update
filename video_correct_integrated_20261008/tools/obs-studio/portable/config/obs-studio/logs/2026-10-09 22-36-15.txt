@@ -1,0 +1,310 @@
+22:36:15.965: Command Line Arguments: --portable --profile FPGA --collection FPGA --scene �忨ʵʱ����
+22:36:15.966: CPU Name: AMD Ryzen 9 9955HX 16-Core Processor           
+22:36:15.966: CPU Speed: 2495MHz
+22:36:15.966: Physical Cores: 16, Logical Cores: 32
+22:36:15.966: Physical Memory: 15549MB Total, 4520MB Free
+22:36:15.966: Windows Version: 10.0 Build 26200 (release: 25H2; revision: 9457; 64-bit)
+22:36:15.966: Running as administrator: false
+22:36:15.966: Windows 10/11 Gaming Features:
+22:36:15.966: 	Game DVR: On
+22:36:15.966: 	Game Mode: Probably On (no reg key set)
+22:36:15.968: Sec. Software Status:
+22:36:15.969: 	Microsoft Defender 防病毒: enabled (AV)
+22:36:15.969: 	Windows 防火墙: enabled (FW)
+22:36:15.970: Current Date/Time: 2026-10-09, 22:36:15
+22:36:15.970: Browser Hardware Acceleration: true
+22:36:15.970: Hide OBS windows from screen capture: false
+22:36:15.970: Qt Version: 6.11.1 (runtime), 6.11.1 (compiled)
+22:36:15.970: Portable mode: true
+22:36:16.556: OBS 32.2.2 (64-bit, windows)
+22:36:16.556: ---------------------------------
+22:36:16.576: ---------------------------------
+22:36:16.576: audio settings reset:
+22:36:16.576: 	samples per sec: 48000
+22:36:16.576: 	speakers:        2
+22:36:16.576: 	max buffering:   960 milliseconds
+22:36:16.576: 	buffering type:  dynamically increasing
+22:36:16.593: ---------------------------------
+22:36:16.593: Initializing D3D11...
+22:36:16.593: Available Video Adapters: 
+22:36:16.620: 	Adapter 0: NVIDIA GeForce RTX 5070 Laptop GPU
+22:36:16.620: 	  Dedicated VRAM: 8274313216 (7.7 GiB)
+22:36:16.620: 	  Shared VRAM:    8152512512 (7.6 GiB)
+22:36:16.620: 	  PCI ID:         10de:2d58
+22:36:16.620: 	  HAGS Status:    Enabled (Default: No, Driver status: Supported)
+22:36:16.620: 	  Driver Version: 32.0.15.9613
+22:36:16.621: 	  output 0:
+22:36:16.621: 	    name=NE160QDM-NYM
+22:36:16.621: 	    pos={0, 0}
+22:36:16.621: 	    size={2560, 1600}
+22:36:16.621: 	    attached=true
+22:36:16.621: 	    refresh=165
+22:36:16.621: 	    bits_per_color=8
+22:36:16.621: 	    space=RGB_FULL_G22_NONE_P709
+22:36:16.621: 	    primaries=[r=(0.646484, 0.330078), g=(0.300781, 0.607422), b=(0.146484, 0.060547), wp=(0.313477, 0.329102)]
+22:36:16.621: 	    relative_gamut_area=[709=1.034581, P3=0.762663, 2020=0.547160]
+22:36:16.621: 	    sdr_white_nits=80
+22:36:16.621: 	    nit_range=[min=4.000000, max=400.000000, max_full_frame=400.000000]
+22:36:16.621: 	    dpi=144 (150%)
+22:36:16.621: 	    id=\\?\DISPLAY#BOE0D16#5&3063884a&0&UID512#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}
+22:36:16.621: 	    alt_id=\\.\DISPLAY1
+22:36:16.621: 	Adapter 1: AMD Radeon(TM) 610M
+22:36:16.621: 	  Dedicated VRAM: 506920960 (0.5 GiB)
+22:36:16.621: 	  Shared VRAM:    8152512512 (7.6 GiB)
+22:36:16.621: 	  PCI ID:         1002:13c0
+22:36:16.621: 	  HAGS Status:    Disabled (Default: No, Driver status: Unsupported)
+22:36:16.621: 	  Driver Version: 32.0.21036.11002
+22:36:16.621: 	Adapter 2: AMD Radeon(TM) 610M
+22:36:16.621: 	  Dedicated VRAM: 506920960 (0.5 GiB)
+22:36:16.621: 	  Shared VRAM:    8152512512 (7.6 GiB)
+22:36:16.621: 	  PCI ID:         1002:13c0
+22:36:16.621: 	  HAGS Status:    Disabled (Default: No, Driver status: Unsupported)
+22:36:16.621: 	  Driver Version: 32.0.21036.11002
+22:36:16.623: Loading up D3D11 on adapter NVIDIA GeForce RTX 5070 Laptop GPU (0)
+22:36:16.871: D3D11 loaded successfully, feature level used: b000
+22:36:16.871: DXGI increase maximum frame latency success
+22:36:16.871: Hardware-Accelerated GPU Scheduling enabled on adapter!
+22:36:16.876: D3D11 GPU priority setup failed (not admin?)
+22:36:17.785: ---------------------------------
+22:36:17.785: video settings reset:
+22:36:17.785: 	base resolution:   1920x1080
+22:36:17.785: 	output resolution: 1920x1080
+22:36:17.785: 	downscale filter:  Bicubic
+22:36:17.785: 	fps:               30/1
+22:36:17.785: 	format:            NV12
+22:36:17.785: 	YUV mode:          Rec. 709/Partial
+22:36:17.786: NV12 texture support enabled
+22:36:17.786: P010 texture support not available
+22:36:17.787: Audio monitoring device:
+22:36:17.787: 	name: 默认
+22:36:17.787: 	id: default
+22:36:17.803: ---------------------------------
+22:36:17.831: No AJA devices found, skipping loading AJA UI plugin
+22:36:17.831: Failed to initialize module 'aja-output-ui.dll'
+22:36:17.855: No AJA devices found, skipping loading AJA plugin
+22:36:17.855: Failed to initialize module 'aja.dll'
+22:36:17.860: Skipping module '../../obs-plugins/64bit/chrome_elf.dll', not an OBS plugin
+22:36:17.882: [CoreAudio encoder]: CoreAudio AAC encoder not installed on the system or couldn't be loaded
+22:36:17.896: Failed to load 'en-US' text for module: 'decklink-captions.dll'
+22:36:17.909: Failed to load 'en-US' text for module: 'decklink-output-ui.dll'
+22:36:17.936: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+22:36:17.936: Failed to initialize module 'decklink.dll'
+22:36:18.197: Skipping module '../../obs-plugins/64bit/libcef.dll', not an OBS plugin
+22:36:18.199: Skipping module '../../obs-plugins/64bit/libEGL.dll', not an OBS plugin
+22:36:18.209: Skipping module '../../obs-plugins/64bit/libGLESv2.dll', not an OBS plugin
+22:36:18.236: Failed to get C:\Program Files\NVIDIA Corporation\NVIDIA Audio Effects SDK\NVAudioEffects.dll version info size
+22:36:18.237: [NVIDIA Audio Effects:] NVIDIA denoiser disabled, redistributable not found or could not be loaded.
+22:36:18.237: Failed to get C:\Program Files\NVIDIA Corporation\NVIDIA Video Effects\NVVideoEffects.dll version info size
+22:36:18.237: [NVIDIA VIDEO FX]: FX disabled, redistributable not found or could not be loaded.
+22:36:18.296: [obs-browser]: Version 2.26.9
+22:36:18.297: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.145.7+g2b7d20b+chromium-127.0.6533.120 (compiled)
+22:36:19.014: [obs-nvenc] NVENC version: 13.0 (compiled) / 13.0 (driver), CUDA driver version: 13.20, AV1 supported: true
+22:36:19.300: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.4 | RPC Version: 1)
+22:36:19.300: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.1 | Qt version (run-time): 6.11.1
+22:36:19.300: [obs-websocket] [obs_module_load] Linked ASIO Version: 103200
+22:36:19.301: [obs-websocket] [Config::Load] Existing configuration not found, using defaults.
+22:36:19.301: [obs-websocket] [Config::Load] (FirstLoad) Generating new server password.
+22:36:19.311: [obs-websocket] [obs_module_load] Module loaded.
+22:36:19.389: [vlc-video]: Couldn't find VLC installation, VLC video source disabled
+22:36:19.467: ---------------------------------
+22:36:19.467:   Loaded Modules:
+22:36:19.467:     win-wasapi.dll
+22:36:19.467:     win-dshow.dll
+22:36:19.467:     win-capture.dll
+22:36:19.467:     vlc-video.dll
+22:36:19.467:     text-freetype2.dll
+22:36:19.467:     rtmp-services.dll
+22:36:19.467:     obs-x264.dll
+22:36:19.467:     obs-websocket.dll
+22:36:19.467:     obs-webrtc.dll
+22:36:19.467:     obs-vst.dll
+22:36:19.467:     obs-transitions.dll
+22:36:19.467:     obs-text.dll
+22:36:19.467:     obs-qsv11.dll
+22:36:19.467:     obs-outputs.dll
+22:36:19.467:     obs-nvenc.dll
+22:36:19.467:     obs-filters.dll
+22:36:19.467:     obs-ffmpeg.dll
+22:36:19.467:     obs-browser.dll
+22:36:19.467:     nv-filters.dll
+22:36:19.467:     image-source.dll
+22:36:19.467:     frontend-tools.dll
+22:36:19.467:     decklink-output-ui.dll
+22:36:19.467:     decklink-captions.dll
+22:36:19.467:     coreaudio-encoder.dll
+22:36:19.467: ---------------------------------
+22:36:19.468: ---------------------------------
+22:36:19.468: Available Encoders:
+22:36:19.468:   Video Encoders:
+22:36:19.468: 	- ffmpeg_svt_av1 (SVT-AV1)
+22:36:19.468: 	- ffmpeg_aom_av1 (AOM AV1)
+22:36:19.468: 	- h264_texture_amf (AMD HW H.264 (AVC))
+22:36:19.468: 	- h265_texture_amf (AMD HW H.265 (HEVC))
+22:36:19.468: 	- obs_nvenc_h264_tex (NVIDIA NVENC H.264)
+22:36:19.468: 	- obs_nvenc_hevc_tex (NVIDIA NVENC HEVC)
+22:36:19.468: 	- obs_nvenc_av1_tex (NVIDIA NVENC AV1)
+22:36:19.468: 	- obs_x264 (x264)
+22:36:19.468:   Audio Encoders:
+22:36:19.468: 	- ffmpeg_aac (FFmpeg AAC)
+22:36:19.468: 	- ffmpeg_opus (FFmpeg Opus)
+22:36:19.468: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16位))
+22:36:19.468: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24位))
+22:36:19.468: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32位浮点))
+22:36:19.468: 	- ffmpeg_alac (FFmpeg ALAC (24位))
+22:36:19.468: 	- ffmpeg_flac (FFmpeg FLAC (16位))
+22:36:19.468: ==== Startup complete ===============================================
+22:36:19.644: All scene data cleared
+22:36:19.644: ------------------------------------------------
+22:36:19.662: Switched to scene '板卡实时画面'
+22:36:19.663: ------------------------------------------------
+22:36:19.663: Loaded scenes:
+22:36:19.663: - scene '板卡实时画面':
+22:36:19.663:     - source: 'FPGA HDMI 输出（采集卡）' (dshow_input)
+22:36:19.663: ------------------------------------------------
+22:36:20.032: ---------------------------------
+22:36:20.032: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+22:36:20.032: 	video device: VC-002Pro 
+22:36:20.032: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+22:36:20.032: 	resolution: 1920x1080
+22:36:20.032: 	flip: 0
+22:36:20.032: 	fps: 30.00 (interval: 333333)
+22:36:20.032: 	format: MJPEG
+22:36:20.032: 	buffering: disabled
+22:36:20.032: 	hardware decode: disabled
+22:36:22.772: [rtmp-services plugin] Successfully updated file 'services.json' (version 293)
+22:36:22.772: [rtmp-services plugin] Successfully updated package (version 293)
+22:37:03.917: ---------------------------------
+22:37:03.917: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+22:37:03.917: 	video device: VC-002Pro 
+22:37:03.917: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+22:37:03.917: 	resolution: 1920x1080
+22:37:03.917: 	flip: 0
+22:37:03.917: 	fps: 30.00 (interval: 333333)
+22:37:03.917: 	format: MJPEG
+22:37:03.917: 	buffering: disabled
+22:37:03.917: 	hardware decode: disabled
+22:37:06.117: ---------------------------------
+22:37:06.117: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+22:37:06.117: 	video device: VC-002Pro 
+22:37:06.117: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+22:37:06.117: 	resolution: 1920x1080
+22:37:06.117: 	flip: 0
+22:37:06.117: 	fps: 30.00 (interval: 333333)
+22:37:06.117: 	format: MJPEG
+22:37:06.117: 	buffering: disabled
+22:37:06.117: 	hardware decode: disabled
+23:39:54.596: ---------------------------------
+23:39:54.597: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+23:39:54.597: 	video device: VC-002Pro 
+23:39:54.597: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+23:39:54.597: 	resolution: 1920x1080
+23:39:54.597: 	flip: 0
+23:39:54.597: 	fps: 30.00 (interval: 333333)
+23:39:54.597: 	format: MJPEG
+23:39:54.597: 	buffering: disabled
+23:39:54.597: 	hardware decode: disabled
+23:42:00.345: ---------------------------------
+23:42:00.345: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+23:42:00.345: 	video device: VC-002Pro 
+23:42:00.345: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+23:42:00.345: 	resolution: 1920x1080
+23:42:00.345: 	flip: 0
+23:42:00.345: 	fps: 59.94 (interval: 166833)
+23:42:00.345: 	format: MJPEG
+23:42:00.345: 	buffering: disabled
+23:42:00.345: 	hardware decode: disabled
+23:57:54.479: ---------------------------------
+23:57:54.479: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+23:57:54.479: 	video device: VC-002Pro 
+23:57:54.479: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+23:57:54.479: 	resolution: 1920x1080
+23:57:54.479: 	flip: 0
+23:57:54.479: 	fps: 60.00 (interval: 166666)
+23:57:54.479: 	format: NV12
+23:57:54.479: 	buffering: disabled
+23:57:54.479: 	hardware decode: disabled
+00:50:08.213: ---------------------------------
+00:50:08.213: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+00:50:08.213: 	video device: VC-002Pro 
+00:50:08.213: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+00:50:08.213: 	resolution: 1920x1080
+00:50:08.213: 	flip: 0
+00:50:08.213: 	fps: 60.00 (interval: 166666)
+00:50:08.213: 	format: NV12
+00:50:08.213: 	buffering: disabled
+00:50:08.213: 	hardware decode: disabled
+01:06:24.847: Saved screenshot to 'C:/Users/夏菲/Videos/Screenshot 2026-10-10 01-06-24.png'
+01:15:01.833: ==== Shutting down ==================================================
+01:15:01.915: All scene data cleared
+01:15:01.915: ------------------------------------------------
+01:15:01.967: Tried to call obs_frontend_remove_event_callback with no callbacks!
+01:15:02.066: [obs-websocket] [obs_module_unload] Shutting down...
+01:15:02.069: Tried to call obs_frontend_remove_event_callback with no callbacks!
+01:15:02.069: [obs-websocket] [obs_module_unload] Finished shutting down.
+01:15:02.076: [Scripting] Total detached callbacks: 0
+01:15:02.077: Freeing OBS context data
+01:15:02.236: == Profiler Results =============================
+01:15:02.236: run_program_init: 4479.15 ms
+01:15:02.236:  ┣OBSApp::AppInit: 95.487 ms
+01:15:02.236:  ┃ ┗OBSApp::InitLocale: 27.34 ms
+01:15:02.236:  ┗OBSApp::OBSInit: 3982.91 ms
+01:15:02.236:    ┣obs_startup: 4.548 ms
+01:15:02.236:    ┗OBSBasic::OBSInit: 3391.42 ms
+01:15:02.236:      ┣OBSBasic::InitBasicConfig: 19.126 ms
+01:15:02.236:      ┣OBSBasic::ResetAudio: 0.207 ms
+01:15:02.236:      ┣OBSBasic::ResetVideo: 1210.97 ms
+01:15:02.236:      ┃ ┗obs_init_graphics: 1209.38 ms
+01:15:02.236:      ┃   ┗shader compilation: 877.077 ms
+01:15:02.236:      ┣OBSBasic::InitOBSCallbacks: 0.004 ms
+01:15:02.236:      ┣OBSBasic::InitHotkeys: 0.045 ms
+01:15:02.236:      ┣obs_load_all_modules2: 1663.57 ms
+01:15:02.236:      ┃ ┣obs_init_module(aja-output-ui.dll): 0.188 ms
+01:15:02.236:      ┃ ┣obs_init_module(aja.dll): 0.157 ms
+01:15:02.236:      ┃ ┣obs_init_module(coreaudio-encoder.dll): 0.902 ms
+01:15:02.236:      ┃ ┣obs_init_module(decklink-captions.dll): 0 ms
+01:15:02.236:      ┃ ┣obs_init_module(decklink-output-ui.dll): 0 ms
+01:15:02.236:      ┃ ┣obs_init_module(decklink.dll): 3.825 ms
+01:15:02.236:      ┃ ┣obs_init_module(frontend-tools.dll): 3.489 ms
+01:15:02.236:      ┃ ┣obs_init_module(image-source.dll): 0.008 ms
+01:15:02.236:      ┃ ┣obs_init_module(nv-filters.dll): 0.519 ms
+01:15:02.236:      ┃ ┣obs_init_module(obs-browser.dll): 1.013 ms
+01:15:02.236:      ┃ ┣obs_init_module(obs-ffmpeg.dll): 272.689 ms
+01:15:02.236:      ┃ ┣obs_init_module(obs-filters.dll): 0.031 ms
+01:15:02.236:      ┃ ┣obs_init_module(obs-nvenc.dll): 336.242 ms
+01:15:02.236:      ┃ ┃ ┗nvenc_check: 336.23 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-outputs.dll): 0.025 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-qsv11.dll): 103.119 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-text.dll): 1.533 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-transitions.dll): 0.013 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-vst.dll): 0.01 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-webrtc.dll): 0.331 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-websocket.dll): 11.15 ms
+01:15:02.237:      ┃ ┣obs_init_module(obs-x264.dll): 0.002 ms
+01:15:02.237:      ┃ ┣obs_init_module(rtmp-services.dll): 0.795 ms
+01:15:02.237:      ┃ ┣obs_init_module(text-freetype2.dll): 0.67 ms
+01:15:02.237:      ┃ ┣obs_init_module(vlc-video.dll): 0.067 ms
+01:15:02.237:      ┃ ┣obs_init_module(win-capture.dll): 5.311 ms
+01:15:02.237:      ┃ ┣obs_init_module(win-dshow.dll): 3.319 ms
+01:15:02.237:      ┃ ┣obs_init_module(win-wasapi.dll): 0.416 ms
+01:15:02.237:      ┃ ┗reset_win32_symbol_paths: 1.676 ms
+01:15:02.237:      ┣OBSBasic::InitService: 8.763 ms
+01:15:02.237:      ┣OBSBasic::ResetOutputs: 0.543 ms
+01:15:02.237:      ┣OBSBasic::CreateHotkeys: 0.132 ms
+01:15:02.237:      ┣OBSBasic::InitPrimitives: 0.33 ms
+01:15:02.237:      ┗OBSBasic::Load: 180.686 ms
+01:15:02.237: obs_hotkey_thread(25 ms): min=0.001 ms, median=0.013 ms, max=262.423 ms, 99th percentile=0.229 ms, 99.9985% below 25 ms
+01:15:02.237: audio_thread(Audio): min=0.001 ms, median=0.02 ms, max=2.405 ms, 99th percentile=0.797 ms
+01:15:02.237: obs_graphics_thread(33.3333 ms): min=0.063 ms, median=0.529 ms, max=177.011 ms, 99th percentile=1.167 ms, 99.999% below 33.333 ms
+01:15:02.237:  ┣tick_sources: min=0.001 ms, median=0.01 ms, max=131.326 ms, 99th percentile=0.051 ms
+01:15:02.237:  ┣output_frame: min=0.057 ms, median=0.404 ms, max=6.437 ms, 99th percentile=0.978 ms
+01:15:02.237:  ┃ ┗gs_context(video->graphics): min=0.056 ms, median=0.404 ms, max=6.436 ms, 99th percentile=0.975 ms
+01:15:02.237:  ┃   ┣render_video: min=0.005 ms, median=0.302 ms, max=6.295 ms, 99th percentile=0.762 ms
+01:15:02.237:  ┃   ┃ ┗render_main_texture: min=0.004 ms, median=0.3 ms, max=6.293 ms, 99th percentile=0.758 ms
+01:15:02.237:  ┃   ┗gs_flush: min=0.029 ms, median=0.157 ms, max=5.182 ms, 99th percentile=0.342 ms
+01:15:02.237:  ┗render_displays: min=0 ms, median=0.079 ms, max=37.376 ms, 99th percentile=0.402 ms
+01:15:02.237: =================================================
+01:15:02.237: == Profiler Time Between Calls ==================
+01:15:02.237: obs_hotkey_thread(25 ms): min=24.175 ms, median=27.524 ms, max=287.658 ms, 22.9461% within ±2% of 25 ms (0.00152646% lower, 77.0524% higher)
+01:15:02.237: obs_graphics_thread(33.3333 ms): min=1.193 ms, median=33.333 ms, max=177.021 ms, 41.7291% within ±2% of 33.333 ms (37.0035% lower, 21.2674% higher)
+01:15:02.237: =================================================
+01:15:02.278: Number of memory leaks: 1

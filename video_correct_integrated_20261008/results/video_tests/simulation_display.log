@@ -1,0 +1,33 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -voptargs="+acc" video_display.tb_result_display -do "C:\D\FPGA\video_correct_integrated_20261008\results\video_tests\run_display.do" 
+# Start time: 00:37:28 on Oct 09,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_result_display(fast)
+# Loading work.result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# do {C:\D\FPGA\video_correct_integrated_20261008\results\video_tests\run_display.do}
+# RESULT_DISPLAY_FRAME_ATOMIC_PASS pixels_per_frame=4 async_clocks=1
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/sim/tb_result_display.sv(71)
+#    Time: 2745500 ps  Iteration: 0  Instance: /tb_result_display
+# Break in Module tb_result_display at C:/D/FPGA/video_correct_integrated_20261008/sim/tb_result_display.sv line 71
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/sim/tb_result_display.sv line 71
+# 1
+# End time: 00:37:28 on Oct 09,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

@@ -1,0 +1,14 @@
+Rebuilt from the GitHub handoff source with the portable PDS entry point.
+External prepared RX hash matches original final dependency.
+No rebuilt bitstream was programmed.
+Design Summary : All Constraints Met.
+ rx_pixel               rx_pixel                     1.802       0.000              0            189
+ rx_pixel               tx_pixel                     1.943       0.000              0             27
+ rx_pixel               rx_pixel                     0.350       0.000              0            189
+ rx_pixel               tx_pixel                     0.309       0.000              0             27
+ rx_pixel               rx_pixel                     5.063       0.000              0             54
+ rx_pixel               rx_pixel                     0.434       0.000              0             54
+ rx_pixel               rx_pixel                     2.406       0.000              0            189
+ rx_pixel               tx_pixel                     3.213       0.000              0             27
+ rx_pixel               rx_pixel                     0.252       0.000              0            189
+ rx_pixel               tx_pixel                     0.310       0.000              0             27

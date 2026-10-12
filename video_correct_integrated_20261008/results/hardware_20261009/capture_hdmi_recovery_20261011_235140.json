@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-10-11T15:51:40.245250+00:00",
+  "board_last_programmed_image": "release/ddr_camera_hires_status_20261011/video_correct_ddr_top.sbit",
+  "image_sha256": "614f6814fe9dad63359176d9cb43a3b4273cf621c7247a3c15e2cafdbde997d7",
+  "state_copies": {
+    "results\\hardware_20261009\\hires_status_state_20261011.json": "results\\hardware_20261009\\capture_hdmi_recovery_20261011_235140_hires_status_state_20261011.json",
+    "results\\hardware_20261009\\clean_camera_state_20261011.json": "results\\hardware_20261009\\capture_hdmi_recovery_20261011_235140_clean_camera_state_20261011.json",
+    "docs\\hardware_20261009.json": "results\\hardware_20261009\\capture_hdmi_recovery_20261011_235140_hardware_20261009.json"
+  },
+  "capture_usb_present": true,
+  "capture_usb_status": "OK VC-002Pro, same device path",
+  "obs_last_device_settings": "1920x1080 NV12 30fps, source reopened at23:38:15 and23:39:04",
+  "physical_action_reported": "User unplugged capture HDMI, FPGA power remained on.",
+  "after_reseat_KEY0_and_source_refresh": "User reports still no video input signal.",
+  "camera_direct_to_capture": "User confirms real live image with camera connected directly after this event.",
+  "scan": "results\\hardware_20261009\\scan_board_1mhz_20261011_234202.log",
+  "scan_sha256": "518a874081d14fb6e437eee042821fe107e2a49f41858f449dc6482518828df6",
+  "fpga_identified_and_configured": true,
+  "current_bitstream_readback_identity_checked_during_scan": false,
+  "conclusion": "Current camera/capture direct path works; missing signal remains on FPGA output route. HDMI output cable/link and D206 startup are not yet separated.",
+  "next": "Restore retained physically verified clean a4 bitstream, then reconnect FPGA output path and check HDMI signal.",
+  "high_detail_picture_accepted": false,
+  "d206_real_grid_decoded": false,
+  "flash_modified": false,
+  "computer_use_paused_by_user": true
+}

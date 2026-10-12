@@ -1,0 +1,6 @@
+{
+    "device_name_requested":  "VC-002Pro ",
+    "found":  false,
+    "read_only":  true,
+    "error":  "(0) : 未能找到源文件“C:\\Windows\\TEMP\\xxbba4pn.0.cs”\n\n(1) : using System;\n"
+}

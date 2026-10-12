@@ -1,0 +1,36 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\bram_diagnostic_fpga_20261011_133957.mp4':
+  Metadata:
+    major_brand     : iso4
+    minor_version   : 0
+    compatible_brands: iso4isomobs1iso2avc1mp41
+    creation_time   : 2026-10-11T05:39:57.000000Z
+    encoder         : OBS Studio (32.2.2)
+  Duration: 00:00:41.47, start: 0.000000, bitrate: 6080 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 6070 kb/s, 30 fps, 30 tbr, 30 tbn (default)
+      Metadata:
+        creation_time   : 2026-10-11T05:39:57.000000Z
+        handler_name    : OBS Video Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : obs_nvenc_h264_tex
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+      Metadata:
+        creation_time   : 2026-10-11T05:39:57.000000Z
+        handler_name    : OBS Audio Handler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> png (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\bram_diagnostic_fpga_20261011_133957\frame_%03d.png':
+  Metadata:
+    major_brand     : iso4
+    minor_version   : 0
+    compatible_brands: iso4isomobs1iso2avc1mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: png, rgb24(pc, gbr/bt709/bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], q=2-31, 200 kb/s, 1 fps, 1 tbn (default)
+      Metadata:
+        creation_time   : 2026-10-11T05:39:57.000000Z
+        handler_name    : OBS Video Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 png
+frame=   17 fps=0.0 q=-0.0 size=N/A time=00:00:17.00 bitrate=N/A speed=33.8x    [out#0/image2 @ 000002081bdb0000] video:27793KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=   41 fps=0.0 q=-0.0 Lsize=N/A time=00:00:41.00 bitrate=N/A speed=49.9x    

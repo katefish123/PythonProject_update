@@ -1,0 +1,9 @@
+{
+  "projectRoot": "C:\\D\\FPGA\\video_correct_integrated_20261008",
+  "capturePid": 24024,
+  "ffmpegPath": "C:\\D\\FPGA\\video_correct_integrated_20261008\\tools\\python_packages\\imageio_ffmpeg\\binaries\\ffmpeg-win-x86_64-v7.1.exe",
+  "serverPid": 30056,
+  "pythonPath": "C:\\Users\\夏菲\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "previewScript": "C:\\D\\FPGA\\video_correct_integrated_20261008\\scripts\\hdmi_preview.py",
+  "startedAt": "2026-10-09T19:20:15.6872895+08:00"
+}

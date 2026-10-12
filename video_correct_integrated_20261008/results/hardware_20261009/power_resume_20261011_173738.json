@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-10-11T09:37:38.4611744Z",
+  "reason": "User reports camera battery recharge and FPGA power interruption, then physical reconnection",
+  "program_log": "results/hardware_20261009/program_ddr_camera_status_20261011_173110.log",
+  "bitstream_sha256": "79edec3bb9730776f75ee204832b8884c69e74700c297046bde7cff9d5c2397b",
+  "program_verify_passed": true,
+  "capture_device_present": true,
+  "scan_log": "results/hardware_20261009/scan_board_1mhz_20261011_172949.log",
+  "current_boot_measurements_pending": true,
+  "previous_complete_capture_and_marker_evidence": "results/hardware_20261009/ddr_status_fpga_20261011_143638.json",
+  "target": "显示相机测试图_大角标.cmd",
+  "original_test_target_modified": false,
+  "computer_use_paused_by_user": true,
+  "flash_modified": false
+}

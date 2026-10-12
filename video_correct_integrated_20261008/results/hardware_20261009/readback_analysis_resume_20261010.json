@@ -1,0 +1,158 @@
+{
+  "files": [
+    {
+      "path": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_passthrough_rx_first\\results\\generate_bitstream\\hdmi_camera_passthrough_rx_first_top.sbit",
+      "length": 3791112,
+      "head_hex": "00090ff00ff00ff00ff00050414e474f204d4943524f53595354454d532c20494e432e000161002568646d695f63616d"
+    },
+    {
+      "path": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_passthrough_rx_first\\results\\generate_bitstream\\hdmi_camera_passthrough_rx_first_top.smsk",
+      "length": 3791112,
+      "head_hex": "00090ff00ff00ff00ff00050414e474f204d4943524f53595354454d532c20494e432e000161002568646d695f63616d"
+    },
+    {
+      "path": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\rdfile_2026_10_10_13_38_8",
+      "length": 3787904,
+      "head_hex": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "path": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\rdfile_2026_10_10_13_40_25",
+      "length": 3787904,
+      "head_hex": "00000000000000000000000000000000000000100000001000000010000da00800000000000000000000000000000000"
+    }
+  ],
+  "expected_vs_first_1mhz": {
+    "different_lengths": true
+  },
+  "expected_vs_second_1mhz": {
+    "different_lengths": true
+  },
+  "between_1mhz_reads": {
+    "raw_changed_bits": 65,
+    "first_differences": [
+      {
+        "byte_offset": 19,
+        "a": 0,
+        "b": 16
+      },
+      {
+        "byte_offset": 23,
+        "a": 0,
+        "b": 16
+      },
+      {
+        "byte_offset": 27,
+        "a": 0,
+        "b": 16
+      },
+      {
+        "byte_offset": 29,
+        "a": 0,
+        "b": 13
+      },
+      {
+        "byte_offset": 30,
+        "a": 0,
+        "b": 160
+      },
+      {
+        "byte_offset": 31,
+        "a": 0,
+        "b": 8
+      },
+      {
+        "byte_offset": 104,
+        "a": 6,
+        "b": 0
+      },
+      {
+        "byte_offset": 105,
+        "a": 4,
+        "b": 0
+      },
+      {
+        "byte_offset": 109,
+        "a": 32,
+        "b": 0
+      },
+      {
+        "byte_offset": 110,
+        "a": 6,
+        "b": 0
+      },
+      {
+        "byte_offset": 113,
+        "a": 8,
+        "b": 0
+      },
+      {
+        "byte_offset": 117,
+        "a": 1,
+        "b": 0
+      },
+      {
+        "byte_offset": 118,
+        "a": 8,
+        "b": 0
+      },
+      {
+        "byte_offset": 177,
+        "a": 8,
+        "b": 0
+      },
+      {
+        "byte_offset": 181,
+        "a": 1,
+        "b": 0
+      },
+      {
+        "byte_offset": 182,
+        "a": 8,
+        "b": 0
+      },
+      {
+        "byte_offset": 190,
+        "a": 6,
+        "b": 0
+      },
+      {
+        "byte_offset": 193,
+        "a": 8,
+        "b": 0
+      },
+      {
+        "byte_offset": 197,
+        "a": 1,
+        "b": 0
+      },
+      {
+        "byte_offset": 198,
+        "a": 28,
+        "b": 0
+      },
+      {
+        "byte_offset": 199,
+        "a": 128,
+        "b": 0
+      },
+      {
+        "byte_offset": 202,
+        "a": 28,
+        "b": 0
+      },
+      {
+        "byte_offset": 203,
+        "a": 39,
+        "b": 0
+      },
+      {
+        "byte_offset": 213,
+        "a": 8,
+        "b": 0
+      }
+    ],
+    "changed_bits_by_64k_block": {
+      "0": 65
+    }
+  }
+}

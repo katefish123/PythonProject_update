@@ -1,0 +1,165 @@
+{
+  "device_name_requested": "VC-002Pro ",
+  "found": true,
+  "read_only": true,
+  "note": "Values use device-specific units. Only IAMVideoProcAmp::Get and GetRange are called.",
+  "devices": [
+    {
+      "friendly_name": "VC-002Pro ",
+      "device_path": "\\\\?\\usb#vid_345f&pid_2132&mi_00#7&2386f4fb&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+      "moniker_display_name": "@device:pnp:\\\\?\\usb#vid_345f&pid_2132&mi_00#7&2386f4fb&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+      "interface_supported": true,
+      "interface_error": null,
+      "properties": {
+        "Brightness": {
+          "supported": true,
+          "current": 50,
+          "current_flags": 2,
+          "current_control": "manual",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "default": 50,
+          "capability_flags": 2,
+          "capability_control": [
+            "manual"
+          ],
+          "get_hresult": "0x00000000",
+          "get_range_hresult": "0x00000000"
+        },
+        "Contrast": {
+          "supported": true,
+          "current": 50,
+          "current_flags": 2,
+          "current_control": "manual",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "default": 50,
+          "capability_flags": 2,
+          "capability_control": [
+            "manual"
+          ],
+          "get_hresult": "0x00000000",
+          "get_range_hresult": "0x00000000"
+        },
+        "Hue": {
+          "supported": true,
+          "current": 50,
+          "current_flags": 2,
+          "current_control": "manual",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "default": 50,
+          "capability_flags": 2,
+          "capability_control": [
+            "manual"
+          ],
+          "get_hresult": "0x00000000",
+          "get_range_hresult": "0x00000000"
+        },
+        "Saturation": {
+          "supported": true,
+          "current": 50,
+          "current_flags": 2,
+          "current_control": "manual",
+          "minimum": 0,
+          "maximum": 100,
+          "step": 1,
+          "default": 50,
+          "capability_flags": 2,
+          "capability_control": [
+            "manual"
+          ],
+          "get_hresult": "0x00000000",
+          "get_range_hresult": "0x00000000"
+        },
+        "Sharpness": {
+          "supported": false,
+          "current": null,
+          "current_flags": null,
+          "current_control": null,
+          "minimum": null,
+          "maximum": null,
+          "step": null,
+          "default": null,
+          "capability_flags": null,
+          "capability_control": [],
+          "get_hresult": "0x80070490",
+          "get_range_hresult": "0x80070490"
+        },
+        "Gamma": {
+          "supported": false,
+          "current": null,
+          "current_flags": null,
+          "current_control": null,
+          "minimum": null,
+          "maximum": null,
+          "step": null,
+          "default": null,
+          "capability_flags": null,
+          "capability_control": [],
+          "get_hresult": "0x80070490",
+          "get_range_hresult": "0x80070490"
+        },
+        "ColorEnable": {
+          "supported": false,
+          "current": null,
+          "current_flags": null,
+          "current_control": null,
+          "minimum": null,
+          "maximum": null,
+          "step": null,
+          "default": null,
+          "capability_flags": null,
+          "capability_control": [],
+          "get_hresult": "0x80070490",
+          "get_range_hresult": "0x80070490"
+        },
+        "WhiteBalance": {
+          "supported": false,
+          "current": null,
+          "current_flags": null,
+          "current_control": null,
+          "minimum": null,
+          "maximum": null,
+          "step": null,
+          "default": null,
+          "capability_flags": null,
+          "capability_control": [],
+          "get_hresult": "0x80070490",
+          "get_range_hresult": "0x80070490"
+        },
+        "BacklightCompensation": {
+          "supported": false,
+          "current": null,
+          "current_flags": null,
+          "current_control": null,
+          "minimum": null,
+          "maximum": null,
+          "step": null,
+          "default": null,
+          "capability_flags": null,
+          "capability_control": [],
+          "get_hresult": "0x80070490",
+          "get_range_hresult": "0x80070490"
+        },
+        "Gain": {
+          "supported": false,
+          "current": null,
+          "current_flags": null,
+          "current_control": null,
+          "minimum": null,
+          "maximum": null,
+          "step": null,
+          "default": null,
+          "capability_flags": null,
+          "capability_control": [],
+          "get_hresult": "0x80070490",
+          "get_range_hresult": "0x80070490"
+        }
+      }
+    }
+  ]
+}

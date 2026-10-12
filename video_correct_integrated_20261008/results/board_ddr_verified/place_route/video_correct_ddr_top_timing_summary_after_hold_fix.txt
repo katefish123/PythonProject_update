@@ -1,0 +1,208 @@
+Design Summary : Some Constraints Violated.
+
+Setup Summary(Slow Corner):
+****************************************************************************************************
+                                                                          TNS Failing      TNS Total
+ Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                 21.488       0.000              0          22652
+ rx_pixel               rx_pixel                     2.310       0.000              0           2497
+ cfg_clock              cfg_clock                   95.510       0.000              0            912
+ pixel_clock            pixel_clock                  1.959       0.000              0            590
+ pixel_clock            tx_pixel                     1.166       0.000              0             27
+ ref_clk                ref_clk                      7.177       0.000              0              1
+ ddrphy_sysclk          rst_clk                      1.478       0.000              0              5
+ rst_clk                rst_clk                      4.290       0.000              0            422
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        rst_clk                      3.187       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                0.594       0.000              0          20090
+ rst_clk                ddrphy_sysclk                0.382       0.000              0            804
+ phy_dq_sysclk_1        ddrphy_sysclk                2.508       0.000              0            260
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        ddrphy_sysclk                5.129       0.000              0              1
+ ddrphy_sysclk          phy_dq_sysclk_1              0.335       0.000              0            420
+ ddrphy_sysclk          phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                    -3.328    -512.240            196            196
+====================================================================================================
+
+Hold Summary(Slow Corner):
+****************************************************************************************************
+                                                                          THS Failing      THS Total
+ Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                  0.157       0.000              0          22652
+ rx_pixel               rx_pixel                     0.104       0.000              0           2497
+ cfg_clock              cfg_clock                    0.247       0.000              0            912
+ pixel_clock            pixel_clock                  0.364       0.000              0            590
+ pixel_clock            tx_pixel                     1.178       0.000              0             27
+ ref_clk                ref_clk                      0.468       0.000              0              1
+ ddrphy_sysclk          rst_clk                      0.557       0.000              0              5
+ rst_clk                rst_clk                      0.346       0.000              0            422
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        rst_clk                      1.713       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                0.227       0.000              0          20090
+ rst_clk                ddrphy_sysclk                1.390       0.000              0            804
+ phy_dq_sysclk_1        ddrphy_sysclk                0.906       0.000              0            260
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        ddrphy_sysclk                0.718       0.000              0              1
+ ddrphy_sysclk          phy_dq_sysclk_1              0.726       0.000              0            420
+ ddrphy_sysclk          phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                     7.704       0.000              0            196
+====================================================================================================
+
+Recovery Summary(Slow Corner):
+****************************************************************************************************
+                                                                          TNS Failing      TNS Total
+ Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                 28.684       0.000              0           5479
+ rx_pixel               rx_pixel                     2.825       0.000              0            515
+ cfg_clock              cfg_clock                   95.998       0.000              0              7
+ pixel_clock            pixel_clock                  3.520       0.000              0            193
+ rst_clk                rst_clk                      4.493       0.000              0             97
+ ref_clk                rst_clk                      3.041       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                3.671       0.000              0           5210
+ rst_clk                ddrphy_sysclk                2.503       0.000              0              3
+ ref_clk                ddrphy_sysclk                0.866       0.000              0             21
+ rst_clk                phy_dq_clk_0                -4.958    -149.219             34             34
+ ddrphy_sysclk          phy_dq_clk_0                -3.859      -9.919              3              3
+ rst_clk                phy_dq_clk_1                -5.743    -404.278             84             84
+ ddrphy_sysclk          phy_dq_clk_1                -3.950     -13.598              4              4
+ rst_clk                phy_dq_sysclk_1             -4.656    -309.698             84             84
+ rst_clk                phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                    -3.871    -109.644             35             35
+====================================================================================================
+
+Removal Summary(Slow Corner):
+****************************************************************************************************
+                                                                          THS Failing      THS Total
+ Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                  0.692       0.000              0           5479
+ rx_pixel               rx_pixel                     0.388       0.000              0            515
+ cfg_clock              cfg_clock                    0.427       0.000              0              7
+ pixel_clock            pixel_clock                  0.405       0.000              0            193
+ rst_clk                rst_clk                      0.424       0.000              0             97
+ ref_clk                rst_clk                      1.292       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                0.389       0.000              0           5210
+ rst_clk                ddrphy_sysclk                1.908       0.000              0              3
+ ref_clk                ddrphy_sysclk                2.194       0.000              0             21
+ rst_clk                phy_dq_clk_0                 3.032       0.000              0             34
+ ddrphy_sysclk          phy_dq_clk_0                 1.937       0.000              0              3
+ rst_clk                phy_dq_clk_1                 3.195       0.000              0             84
+ ddrphy_sysclk          phy_dq_clk_1                 1.574       0.000              0              4
+ rst_clk                phy_dq_sysclk_1              9.252       0.000              0             84
+ rst_clk                phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                     8.932       0.000              0             35
+====================================================================================================
+
+Minimum Pulse Width Summary(Slow Corner):
+****************************************************************************************************
+                                                                         WPWS Failing     WPWS Total
+ Clock                                            WPWS(ns)    TPWS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+
+Setup Summary(Fast Corner):
+****************************************************************************************************
+                                                                          TNS Failing      TNS Total
+ Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                 27.359       0.000              0          22652
+ rx_pixel               rx_pixel                     3.157       0.000              0           2497
+ cfg_clock              cfg_clock                   97.148       0.000              0            912
+ pixel_clock            pixel_clock                  3.827       0.000              0            590
+ pixel_clock            tx_pixel                     2.754       0.000              0             27
+ ref_clk                ref_clk                      7.502       0.000              0              1
+ ddrphy_sysclk          rst_clk                      3.221       0.000              0              5
+ rst_clk                rst_clk                      5.681       0.000              0            422
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        rst_clk                      4.226       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                3.326       0.000              0          20090
+ rst_clk                ddrphy_sysclk                3.723       0.000              0            804
+ phy_dq_sysclk_1        ddrphy_sysclk                4.149       0.000              0            260
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        ddrphy_sysclk                6.021       0.000              0              1
+ ddrphy_sysclk          phy_dq_sysclk_1              2.842       0.000              0            420
+ ddrphy_sysclk          phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                    -2.206    -339.865            196            196
+====================================================================================================
+
+Hold Summary(Fast Corner):
+****************************************************************************************************
+                                                                          THS Failing      THS Total
+ Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                  0.105       0.000              0          22652
+ rx_pixel               rx_pixel                     0.107       0.000              0           2497
+ cfg_clock              cfg_clock                    0.173       0.000              0            912
+ pixel_clock            pixel_clock                  0.253       0.000              0            590
+ pixel_clock            tx_pixel                     0.940       0.000              0             27
+ ref_clk                ref_clk                      0.321       0.000              0              1
+ ddrphy_sysclk          rst_clk                      0.719       0.000              0              5
+ rst_clk                rst_clk                      0.250       0.000              0            422
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        rst_clk                      1.587       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                0.169       0.000              0          20090
+ rst_clk                ddrphy_sysclk                0.254       0.000              0            804
+ phy_dq_sysclk_1        ddrphy_sysclk                0.266       0.000              0            260
+ phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                        ddrphy_sysclk                0.348       0.000              0              1
+ ddrphy_sysclk          phy_dq_sysclk_1              0.266       0.000              0            420
+ ddrphy_sysclk          phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                     7.721       0.000              0            196
+====================================================================================================
+
+Recovery Summary(Fast Corner):
+****************************************************************************************************
+                                                                          TNS Failing      TNS Total
+ Launch Clock           Capture Clock              WNS(ns)     TNS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                 31.653       0.000              0           5479
+ rx_pixel               rx_pixel                     4.229       0.000              0            515
+ cfg_clock              cfg_clock                   97.465       0.000              0              7
+ pixel_clock            pixel_clock                  4.728       0.000              0            193
+ rst_clk                rst_clk                      5.719       0.000              0             97
+ ref_clk                rst_clk                      5.176       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                5.267       0.000              0           5210
+ rst_clk                ddrphy_sysclk                5.005       0.000              0              3
+ ref_clk                ddrphy_sysclk                4.193       0.000              0             21
+ rst_clk                phy_dq_clk_0                -3.251     -91.994             34             34
+ ddrphy_sysclk          phy_dq_clk_0                -2.931      -7.753              3              3
+ rst_clk                phy_dq_clk_1                -3.722    -251.808             84             84
+ ddrphy_sysclk          phy_dq_clk_1                -3.006     -10.556              4              4
+ rst_clk                phy_dq_sysclk_1             -2.472    -160.652             84             84
+ rst_clk                phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                    -1.965     -53.910             35             35
+====================================================================================================
+
+Removal Summary(Fast Corner):
+****************************************************************************************************
+                                                                          THS Failing      THS Total
+ Launch Clock           Capture Clock              WHS(ns)     THS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+ sys_clk_27m            sys_clk_27m                  0.476       0.000              0           5479
+ rx_pixel               rx_pixel                     0.272       0.000              0            515
+ cfg_clock              cfg_clock                    0.297       0.000              0              7
+ pixel_clock            pixel_clock                  0.279       0.000              0            193
+ rst_clk                rst_clk                      0.295       0.000              0             97
+ ref_clk                rst_clk                      0.518       0.000              0              1
+ ddrphy_sysclk          ddrphy_sysclk                0.272       0.000              0           5210
+ rst_clk                ddrphy_sysclk                0.549       0.000              0              3
+ ref_clk                ddrphy_sysclk                0.492       0.000              0             21
+ rst_clk                phy_dq_clk_0                 2.019       0.000              0             34
+ ddrphy_sysclk          phy_dq_clk_0                 1.649       0.000              0              3
+ rst_clk                phy_dq_clk_1                 2.180       0.000              0             84
+ ddrphy_sysclk          phy_dq_clk_1                 1.424       0.000              0              4
+ rst_clk                phy_dq_sysclk_1              8.201       0.000              0             84
+ rst_clk                phy_dq_clk_0|memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/CLKDIVOUT_Inferred
+                                                     7.997       0.000              0             35
+====================================================================================================
+
+Minimum Pulse Width Summary(Fast Corner):
+****************************************************************************************************
+                                                                         WPWS Failing     WPWS Total
+ Clock                                            WPWS(ns)    TPWS(ns)      Endpoints      Endpoints
+----------------------------------------------------------------------------------------------------
+====================================================================================================
+

@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 08:23:23 on Oct 09,2026
+vlog -sv -work C:\D\FPGA\video_correct_integrated_20261008\results\ddr_display\work C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v C:\D\FPGA\video_correct_integrated_20261008\rtl\video\ddr_result_display.v C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_display.sv 
+-- Compiling module video_timing_vtc
+-- Compiling module ddr_result_display
+-- Compiling module tb_ddr_display
+
+Top level modules:
+	tb_ddr_display
+End time: 08:23:23 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

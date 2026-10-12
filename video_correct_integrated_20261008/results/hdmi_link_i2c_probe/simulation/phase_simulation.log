@@ -1,0 +1,33 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -modelsimini modelsim.ini i2c_phase_work.tb_iic_dri_read_bytes -do "run -all; quit -f" 
+# Start time: 18:35:21 on Oct 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_iic_dri_read_bytes(fast)
+# Loading work.iic_dri(fast)
+# run -all
+# I2C_MASTER_BYTE[0]=b2
+# I2C_MASTER_BYTE[1]=03
+# I2C_MASTER_BYTE[2]=00
+# I2C_MASTER_BYTE[3]=b3
+# I2C_READ_SEQUENCE_PASS: B2 03 00 B3; LSBs valid at SCL rising edges
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/sim/tb_iic_dri_read_bytes.sv(83)
+#    Time: 95262 ns  Iteration: 0  Instance: /tb_iic_dri_read_bytes
+# End time: 18:35:22 on Oct 09,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

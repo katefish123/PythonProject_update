@@ -1,0 +1,113 @@
+{
+  "source_size": [
+    640,
+    480
+  ],
+  "input_raster": [
+    1920,
+    1080
+  ],
+  "output_size": [
+    320,
+    452
+  ],
+  "markers_tl_tr_br_bl": [
+    [
+      100,
+      60
+    ],
+    [
+      540,
+      90
+    ],
+    [
+      570,
+      420
+    ],
+    [
+      70,
+      390
+    ]
+  ],
+  "marker_size": "8x8",
+  "marker_boxes_inclusive": [
+    [
+      96,
+      56,
+      103,
+      63
+    ],
+    [
+      536,
+      86,
+      543,
+      93
+    ],
+    [
+      566,
+      416,
+      573,
+      423
+    ],
+    [
+      66,
+      386,
+      73,
+      393
+    ]
+  ],
+  "centroid_rule": "RTL round-half-up: (sum + count/2) / count; 8x8 boxes chosen to round exactly to the stated integer centers",
+  "marker_stats": {
+    "red": {
+      "count": 64,
+      "span": [
+        7,
+        7
+      ]
+    },
+    "green": {
+      "count": 64,
+      "span": [
+        7,
+        7
+      ]
+    },
+    "yellow": {
+      "count": 64,
+      "span": [
+        7,
+        7
+      ]
+    },
+    "blue": {
+      "count": 64,
+      "span": [
+        7,
+        7
+      ]
+    }
+  },
+  "algorithm_oracle": "vendor/b/python/brect.fixed.rectify_fixed bilinear",
+  "fixed_h_q16_24": [
+    23452506,
+    -1430195,
+    1677721600,
+    1629714,
+    10525502,
+    1006632960,
+    576,
+    -4488,
+    16777216
+  ],
+  "input_mapping": {
+    "x": "ix//3",
+    "y": "ceil(iy*4/9), clipped to 479 on the two unsampled terminal rows"
+  },
+  "display_window_active_relative": [
+    640,
+    88,
+    1280,
+    992
+  ],
+  "expected_pixel_count": 144640
+}

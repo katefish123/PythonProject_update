@@ -1,0 +1,43 @@
+{
+  "recorded_at_utc": "2026-10-10T16:58:51.442639+00:00",
+  "user_report_verbatim": "真实取景但是非常糊",
+  "programmed_image_before_comparison": "release/camera_live_bram_reconnect_20261010/camera_live_bram_top.sbit",
+  "programmed_image_sha256": "be1a72cade3008e25cff3f6925bf6347fea8211da6e5447fdd82ef137e7f5212",
+  "actual_camera_display_accepted": true,
+  "continuous_camera_display_verified": false,
+  "actual_camera_correction_accepted": false,
+  "clarity_accepted": false,
+  "bram_sampling": "320x180 RGB888, enlarged 6x6 to 1920x1080",
+  "image_observation": "Both source PNGs contain actual photographed laptop/OBS screen; BRAM path has visibly coarse enlarged pixels compared with direct frame",
+  "quality_metric_note": "Camera framing varies; this is a visual route comparison, not a controlled sharpness or resolution benchmark",
+  "current_receiver_probe_decoded": false,
+  "receiver_probe_note": "The live-camera screenshot does not contain the D104/B401 no-camera grid; do not decode photographed colors as status bits. Earlier no-input probe is historical.",
+  "evidence": [
+    {
+      "original": "C:\\Users\\夏菲\\Videos\\Screenshot 2026-10-11 00-53-51.png",
+      "copy": "results\\hardware_20261009\\direct_camera_before_reconnect_20261011.png",
+      "sha256": "51488dad4e47bfbd0d6283c070a4ad373198d8929ddebe4f6c0861eceb1257fd",
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "route_reported_by_user": "R50 directly to capture",
+      "camera_photo_visually_verified": true
+    },
+    {
+      "original": "C:\\Users\\夏菲\\Videos\\Screenshot 2026-10-11 00-57-02.png",
+      "copy": "results\\hardware_20261009\\bram_camera_recovered_before_native_20261011.png",
+      "sha256": "fd3fa09f4afe6d23f9936726052d239ed3a69a78b669915e1ac019647fdad92f",
+      "frame_size": [
+        1920,
+        1080
+      ],
+      "route_reported_by_user": "R50 through FPGA be1 BRAM preview to capture",
+      "camera_photo_visually_verified": true
+    }
+  ],
+  "programmed_image_changed": false,
+  "obs_configuration_changed": false,
+  "computer_use_paused_by_user": true,
+  "pending": "Download qualified b918 RX-first full-pixel native preview with camera still live; then manually check image and source screenshot, preserving be1 rollback"
+}

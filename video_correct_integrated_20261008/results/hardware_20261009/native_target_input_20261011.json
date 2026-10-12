@@ -1,0 +1,3155 @@
+{
+  "recorded_at_utc": "2026-10-11T04:20:36.972136+00:00",
+  "original": "C:\\Users\\夏菲\\Videos\\2026-10-11 12-09-34.mp4",
+  "video": "results\\hardware_20261009\\native_target_input_20261011_120934.mp4",
+  "video_sha256": "7ec627f4693cda18aca0ab6359ae34de72500af733ae70598873150557a8aa67",
+  "source": "Actual R50 direct-to-capture recording; FPGA bypassed",
+  "sampled_frames_1fps": 48,
+  "valid_four_marker_samples": 0,
+  "first_valid_sample": null,
+  "sample_25_seconds": {
+    "sample_index_at_1fps": 25,
+    "all_markers_valid": false,
+    "points": null,
+    "all_color_stats": {
+      "red": {
+        "count": 0,
+        "span": [
+          0,
+          0
+        ],
+        "centroid": null,
+        "bounds": null
+      },
+      "green": {
+        "count": 80,
+        "span": [
+          7,
+          11
+        ],
+        "centroid": [
+          437.6375,
+          76.025
+        ],
+        "bounds": [
+          434,
+          71,
+          441,
+          82
+        ]
+      },
+      "yellow": {
+        "count": 40,
+        "span": [
+          7,
+          10
+        ],
+        "centroid": [
+          406.05,
+          474.45
+        ],
+        "bounds": [
+          402,
+          469,
+          409,
+          479
+        ]
+      },
+      "blue": {
+        "count": 0,
+        "span": [
+          0,
+          0
+        ],
+        "centroid": null,
+        "bounds": null
+      }
+    }
+  },
+  "samples": [
+    {
+      "sample_index_at_1fps": 0,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 40,
+          "span": [
+            113,
+            34
+          ],
+          "centroid": [
+            377.825,
+            427.0
+          ],
+          "bounds": [
+            314,
+            407,
+            427,
+            441
+          ]
+        },
+        "green": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            613.0,
+            479.0
+          ],
+          "bounds": [
+            613,
+            479,
+            613,
+            479
+          ]
+        },
+        "yellow": {
+          "count": 51,
+          "span": [
+            20,
+            7
+          ],
+          "centroid": [
+            336.98039215686276,
+            435.8627450980392
+          ],
+          "bounds": [
+            322,
+            432,
+            342,
+            439
+          ]
+        },
+        "blue": {
+          "count": 901,
+          "span": [
+            532,
+            431
+          ],
+          "centroid": [
+            113.90788013318534,
+            166.90788013318536
+          ],
+          "bounds": [
+            23,
+            0,
+            555,
+            431
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 1,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 23,
+          "span": [
+            111,
+            33
+          ],
+          "centroid": [
+            363.0869565217391,
+            429.60869565217394
+          ],
+          "bounds": [
+            316,
+            407,
+            427,
+            440
+          ]
+        },
+        "green": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            613.0,
+            479.0
+          ],
+          "bounds": [
+            613,
+            479,
+            613,
+            479
+          ]
+        },
+        "yellow": {
+          "count": 60,
+          "span": [
+            31,
+            269
+          ],
+          "centroid": [
+            338.18333333333334,
+            430.53333333333336
+          ],
+          "bounds": [
+            322,
+            170,
+            353,
+            439
+          ]
+        },
+        "blue": {
+          "count": 2078,
+          "span": [
+            532,
+            347
+          ],
+          "centroid": [
+            366.76371511068334,
+            239.82964388835418
+          ],
+          "bounds": [
+            24,
+            83,
+            556,
+            430
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 2,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 30,
+          "span": [
+            111,
+            32
+          ],
+          "centroid": [
+            386.3,
+            422.5
+          ],
+          "bounds": [
+            316,
+            404,
+            427,
+            436
+          ]
+        },
+        "green": {
+          "count": 16,
+          "span": [
+            22,
+            3
+          ],
+          "centroid": [
+            620.8125,
+            477.875
+          ],
+          "bounds": [
+            613,
+            476,
+            635,
+            479
+          ]
+        },
+        "yellow": {
+          "count": 46,
+          "span": [
+            411,
+            400
+          ],
+          "centroid": [
+            340.10869565217394,
+            408.04347826086956
+          ],
+          "bounds": [
+            223,
+            78,
+            634,
+            478
+          ]
+        },
+        "blue": {
+          "count": 978,
+          "span": [
+            168,
+            280
+          ],
+          "centroid": [
+            92.0961145194274,
+            158.5521472392638
+          ],
+          "bounds": [
+            23,
+            148,
+            191,
+            428
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 3,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            317.0,
+            431.0
+          ],
+          "bounds": [
+            317,
+            431,
+            317,
+            431
+          ]
+        },
+        "green": {
+          "count": 2,
+          "span": [
+            2,
+            1
+          ],
+          "centroid": [
+            621.0,
+            478.5
+          ],
+          "bounds": [
+            620,
+            478,
+            622,
+            479
+          ]
+        },
+        "yellow": {
+          "count": 56,
+          "span": [
+            120,
+            385
+          ],
+          "centroid": [
+            284.64285714285717,
+            182.26785714285714
+          ],
+          "bounds": [
+            220,
+            49,
+            340,
+            434
+          ]
+        },
+        "blue": {
+          "count": 19,
+          "span": [
+            140,
+            275
+          ],
+          "centroid": [
+            79.89473684210526,
+            168.57894736842104
+          ],
+          "bounds": [
+            47,
+            152,
+            187,
+            427
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 4,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "yellow": {
+          "count": 11,
+          "span": [
+            69,
+            191
+          ],
+          "centroid": [
+            275.6363636363636,
+            132.36363636363637
+          ],
+          "bounds": [
+            220,
+            60,
+            289,
+            251
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 5,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "yellow": {
+          "count": 31,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            403.7741935483871,
+            372.6774193548387
+          ],
+          "bounds": [
+            400,
+            368,
+            407,
+            377
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            0,
+            1
+          ],
+          "centroid": [
+            167.0,
+            316.5
+          ],
+          "bounds": [
+            167,
+            316,
+            167,
+            317
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 6,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 2,
+          "span": [
+            0,
+            1
+          ],
+          "centroid": [
+            604.0,
+            364.5
+          ],
+          "bounds": [
+            604,
+            364,
+            604,
+            365
+          ]
+        },
+        "yellow": {
+          "count": 50,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            403.56,
+            373.4
+          ],
+          "bounds": [
+            400,
+            368,
+            407,
+            378
+          ]
+        },
+        "blue": {
+          "count": 30,
+          "span": [
+            5,
+            7
+          ],
+          "centroid": [
+            163.93333333333334,
+            319.56666666666666
+          ],
+          "bounds": [
+            162,
+            316,
+            167,
+            323
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 7,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 8,
+          "span": [
+            17,
+            7
+          ],
+          "centroid": [
+            620.75,
+            473.625
+          ],
+          "bounds": [
+            610,
+            471,
+            627,
+            478
+          ]
+        },
+        "yellow": {
+          "count": 81,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            403.34567901234567,
+            371.7283950617284
+          ],
+          "bounds": [
+            400,
+            367,
+            407,
+            377
+          ]
+        },
+        "blue": {
+          "count": 35,
+          "span": [
+            7,
+            7
+          ],
+          "centroid": [
+            163.28571428571428,
+            318.62857142857143
+          ],
+          "bounds": [
+            160,
+            315,
+            167,
+            322
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 8,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            605.0,
+            472.0
+          ],
+          "bounds": [
+            605,
+            472,
+            605,
+            472
+          ]
+        },
+        "yellow": {
+          "count": 69,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            398.82608695652175,
+            372.4927536231884
+          ],
+          "bounds": [
+            395,
+            367,
+            402,
+            378
+          ]
+        },
+        "blue": {
+          "count": 22,
+          "span": [
+            3,
+            7
+          ],
+          "centroid": [
+            159.6818181818182,
+            320.09090909090907
+          ],
+          "bounds": [
+            158,
+            316,
+            161,
+            323
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 9,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 80,
+          "span": [
+            6,
+            11
+          ],
+          "centroid": [
+            429.0375,
+            42.2375
+          ],
+          "bounds": [
+            426,
+            37,
+            432,
+            48
+          ]
+        },
+        "yellow": {
+          "count": 49,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            393.81632653061223,
+            445.46938775510205
+          ],
+          "bounds": [
+            390,
+            441,
+            397,
+            451
+          ]
+        },
+        "blue": {
+          "count": 3,
+          "span": [
+            3,
+            6
+          ],
+          "centroid": [
+            157.33333333333334,
+            393.0
+          ],
+          "bounds": [
+            156,
+            389,
+            159,
+            395
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 10,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 73,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            429.4657534246575,
+            79.3013698630137
+          ],
+          "bounds": [
+            426,
+            74,
+            433,
+            84
+          ]
+        },
+        "yellow": {
+          "count": 44,
+          "span": [
+            7,
+            6
+          ],
+          "centroid": [
+            396.77272727272725,
+            476.1363636363636
+          ],
+          "bounds": [
+            393,
+            473,
+            400,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 11,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 82,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            441.6341463414634,
+            68.2439024390244
+          ],
+          "bounds": [
+            438,
+            63,
+            445,
+            74
+          ]
+        },
+        "yellow": {
+          "count": 37,
+          "span": [
+            6,
+            10
+          ],
+          "centroid": [
+            408.6756756756757,
+            468.64864864864865
+          ],
+          "bounds": [
+            406,
+            463,
+            412,
+            473
+          ]
+        },
+        "blue": {
+          "count": 5,
+          "span": [
+            3,
+            1
+          ],
+          "centroid": [
+            175.0,
+            416.6
+          ],
+          "bounds": [
+            174,
+            416,
+            177,
+            417
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 12,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 68,
+          "span": [
+            8,
+            11
+          ],
+          "centroid": [
+            442.45588235294116,
+            68.20588235294117
+          ],
+          "bounds": [
+            438,
+            63,
+            446,
+            74
+          ]
+        },
+        "yellow": {
+          "count": 42,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            410.0,
+            467.85714285714283
+          ],
+          "bounds": [
+            406,
+            463,
+            413,
+            473
+          ]
+        },
+        "blue": {
+          "count": 3,
+          "span": [
+            3,
+            1
+          ],
+          "centroid": [
+            173.66666666666666,
+            419.3333333333333
+          ],
+          "bounds": [
+            172,
+            419,
+            175,
+            420
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 13,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            207.0,
+            6.0
+          ],
+          "bounds": [
+            207,
+            6,
+            207,
+            6
+          ]
+        },
+        "green": {
+          "count": 81,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            441.71604938271605,
+            69.17283950617283
+          ],
+          "bounds": [
+            438,
+            64,
+            446,
+            74
+          ]
+        },
+        "yellow": {
+          "count": 34,
+          "span": [
+            6,
+            9
+          ],
+          "centroid": [
+            408.88235294117646,
+            468.3529411764706
+          ],
+          "bounds": [
+            406,
+            464,
+            412,
+            473
+          ]
+        },
+        "blue": {
+          "count": 5,
+          "span": [
+            0,
+            4
+          ],
+          "centroid": [
+            177.0,
+            415.0
+          ],
+          "bounds": [
+            177,
+            413,
+            177,
+            417
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 14,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 66,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            440.2878787878788,
+            72.33333333333333
+          ],
+          "bounds": [
+            436,
+            67,
+            443,
+            78
+          ]
+        },
+        "yellow": {
+          "count": 37,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            408.0810810810811,
+            470.72972972972974
+          ],
+          "bounds": [
+            404,
+            466,
+            411,
+            476
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            1,
+            0
+          ],
+          "centroid": [
+            172.5,
+            419.0
+          ],
+          "bounds": [
+            172,
+            419,
+            173,
+            419
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 15,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 76,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            439.85526315789474,
+            73.02631578947368
+          ],
+          "bounds": [
+            436,
+            68,
+            443,
+            78
+          ]
+        },
+        "yellow": {
+          "count": 36,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            408.0833333333333,
+            471.8611111111111
+          ],
+          "bounds": [
+            404,
+            467,
+            411,
+            477
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 16,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 77,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            439.6623376623377,
+            72.50649350649351
+          ],
+          "bounds": [
+            436,
+            68,
+            443,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 32,
+          "span": [
+            6,
+            9
+          ],
+          "centroid": [
+            406.84375,
+            471.28125
+          ],
+          "bounds": [
+            404,
+            467,
+            410,
+            476
+          ]
+        },
+        "blue": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            173.0,
+            420.0
+          ],
+          "bounds": [
+            173,
+            420,
+            173,
+            420
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 17,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 78,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            439.6025641025641,
+            73.91025641025641
+          ],
+          "bounds": [
+            436,
+            69,
+            443,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 33,
+          "span": [
+            6,
+            9
+          ],
+          "centroid": [
+            406.90909090909093,
+            473.3333333333333
+          ],
+          "bounds": [
+            404,
+            469,
+            410,
+            478
+          ]
+        },
+        "blue": {
+          "count": 3,
+          "span": [
+            2,
+            1
+          ],
+          "centroid": [
+            174.33333333333334,
+            420.3333333333333
+          ],
+          "bounds": [
+            173,
+            420,
+            175,
+            421
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 18,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 76,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            439.38157894736844,
+            74.10526315789474
+          ],
+          "bounds": [
+            435,
+            69,
+            443,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 30,
+          "span": [
+            6,
+            10
+          ],
+          "centroid": [
+            406.93333333333334,
+            473.0
+          ],
+          "bounds": [
+            404,
+            468,
+            410,
+            478
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            0,
+            1
+          ],
+          "centroid": [
+            175.0,
+            420.5
+          ],
+          "bounds": [
+            175,
+            420,
+            175,
+            421
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 19,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 70,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            440.01428571428573,
+            77.3
+          ],
+          "bounds": [
+            436,
+            72,
+            443,
+            82
+          ]
+        },
+        "yellow": {
+          "count": 30,
+          "span": [
+            7,
+            8
+          ],
+          "centroid": [
+            407.53333333333336,
+            475.4
+          ],
+          "bounds": [
+            404,
+            471,
+            411,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 20,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 66,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            438.6818181818182,
+            78.28787878787878
+          ],
+          "bounds": [
+            434,
+            73,
+            442,
+            83
+          ]
+        },
+        "yellow": {
+          "count": 39,
+          "span": [
+            6,
+            7
+          ],
+          "centroid": [
+            407.0769230769231,
+            475.0769230769231
+          ],
+          "bounds": [
+            404,
+            472,
+            410,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 21,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 70,
+          "span": [
+            8,
+            13
+          ],
+          "centroid": [
+            436.3857142857143,
+            80.65714285714286
+          ],
+          "bounds": [
+            432,
+            75,
+            440,
+            88
+          ]
+        },
+        "yellow": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 22,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 78,
+          "span": [
+            9,
+            12
+          ],
+          "centroid": [
+            439.56410256410254,
+            77.1923076923077
+          ],
+          "bounds": [
+            434,
+            72,
+            443,
+            84
+          ]
+        },
+        "yellow": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 23,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 81,
+          "span": [
+            8,
+            12
+          ],
+          "centroid": [
+            438.0740740740741,
+            76.14814814814815
+          ],
+          "bounds": [
+            434,
+            71,
+            442,
+            83
+          ]
+        },
+        "yellow": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 24,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 67,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            437.67164179104475,
+            77.08955223880596
+          ],
+          "bounds": [
+            434,
+            73,
+            441,
+            82
+          ]
+        },
+        "yellow": {
+          "count": 35,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            405.42857142857144,
+            475.0571428571429
+          ],
+          "bounds": [
+            402,
+            470,
+            409,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 25,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 80,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            437.6375,
+            76.025
+          ],
+          "bounds": [
+            434,
+            71,
+            441,
+            82
+          ]
+        },
+        "yellow": {
+          "count": 40,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            406.05,
+            474.45
+          ],
+          "bounds": [
+            402,
+            469,
+            409,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 26,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 85,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            437.6,
+            76.03529411764706
+          ],
+          "bounds": [
+            434,
+            71,
+            441,
+            81
+          ]
+        },
+        "yellow": {
+          "count": 39,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            406.12820512820514,
+            474.46153846153845
+          ],
+          "bounds": [
+            402,
+            469,
+            409,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 27,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 88,
+          "span": [
+            9,
+            10
+          ],
+          "centroid": [
+            437.39772727272725,
+            76.06818181818181
+          ],
+          "bounds": [
+            432,
+            71,
+            441,
+            81
+          ]
+        },
+        "yellow": {
+          "count": 38,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            405.0,
+            474.36842105263156
+          ],
+          "bounds": [
+            402,
+            470,
+            409,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 28,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            201.0,
+            16.0
+          ],
+          "bounds": [
+            201,
+            16,
+            201,
+            16
+          ]
+        },
+        "green": {
+          "count": 74,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            437.7027027027027,
+            77.20270270270271
+          ],
+          "bounds": [
+            434,
+            72,
+            441,
+            83
+          ]
+        },
+        "yellow": {
+          "count": 35,
+          "span": [
+            6,
+            9
+          ],
+          "centroid": [
+            406.1142857142857,
+            474.9714285714286
+          ],
+          "bounds": [
+            403,
+            470,
+            409,
+            479
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            1,
+            0
+          ],
+          "centroid": [
+            170.5,
+            427.0
+          ],
+          "bounds": [
+            170,
+            427,
+            171,
+            427
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 29,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 76,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            437.86842105263156,
+            73.1842105263158
+          ],
+          "bounds": [
+            434,
+            68,
+            441,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 39,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            406.0,
+            472.4871794871795
+          ],
+          "bounds": [
+            402,
+            468,
+            409,
+            477
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            0,
+            1
+          ],
+          "centroid": [
+            171.0,
+            421.5
+          ],
+          "bounds": [
+            171,
+            421,
+            171,
+            422
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 30,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 77,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            437.6623376623377,
+            73.97402597402598
+          ],
+          "bounds": [
+            434,
+            69,
+            441,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 41,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            406.0487804878049,
+            472.5365853658537
+          ],
+          "bounds": [
+            402,
+            468,
+            409,
+            477
+          ]
+        },
+        "blue": {
+          "count": 4,
+          "span": [
+            1,
+            2
+          ],
+          "centroid": [
+            170.5,
+            422.0
+          ],
+          "bounds": [
+            170,
+            421,
+            171,
+            423
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 31,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 83,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            437.5421686746988,
+            73.95180722891567
+          ],
+          "bounds": [
+            434,
+            69,
+            441,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 34,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            406.1470588235294,
+            472.02941176470586
+          ],
+          "bounds": [
+            402,
+            468,
+            409,
+            477
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 32,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 74,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            437.8783783783784,
+            73.08108108108108
+          ],
+          "bounds": [
+            434,
+            68,
+            441,
+            78
+          ]
+        },
+        "yellow": {
+          "count": 41,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            406.0243902439024,
+            472.1463414634146
+          ],
+          "bounds": [
+            402,
+            467,
+            409,
+            477
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 33,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 88,
+          "span": [
+            7,
+            11
+          ],
+          "centroid": [
+            437.5568181818182,
+            73.23863636363636
+          ],
+          "bounds": [
+            434,
+            68,
+            441,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 33,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            405.42424242424244,
+            472.3636363636364
+          ],
+          "bounds": [
+            402,
+            468,
+            409,
+            477
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 34,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 86,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            437.36046511627904,
+            72.88372093023256
+          ],
+          "bounds": [
+            433,
+            68,
+            441,
+            78
+          ]
+        },
+        "yellow": {
+          "count": 37,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            405.6756756756757,
+            472.3783783783784
+          ],
+          "bounds": [
+            402,
+            468,
+            409,
+            477
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            0,
+            1
+          ],
+          "centroid": [
+            171.0,
+            422.5
+          ],
+          "bounds": [
+            171,
+            422,
+            171,
+            423
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 35,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 71,
+          "span": [
+            6,
+            10
+          ],
+          "centroid": [
+            436.8169014084507,
+            73.85915492957747
+          ],
+          "bounds": [
+            434,
+            69,
+            440,
+            79
+          ]
+        },
+        "yellow": {
+          "count": 31,
+          "span": [
+            6,
+            10
+          ],
+          "centroid": [
+            405.03225806451616,
+            472.4516129032258
+          ],
+          "bounds": [
+            402,
+            468,
+            408,
+            478
+          ]
+        },
+        "blue": {
+          "count": 2,
+          "span": [
+            3,
+            2
+          ],
+          "centroid": [
+            169.5,
+            426.0
+          ],
+          "bounds": [
+            168,
+            425,
+            171,
+            427
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 36,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 78,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            436.35897435897436,
+            77.17948717948718
+          ],
+          "bounds": [
+            432,
+            72,
+            440,
+            82
+          ]
+        },
+        "yellow": {
+          "count": 28,
+          "span": [
+            6,
+            9
+          ],
+          "centroid": [
+            404.5,
+            475.17857142857144
+          ],
+          "bounds": [
+            402,
+            470,
+            408,
+            479
+          ]
+        },
+        "blue": {
+          "count": 5,
+          "span": [
+            3,
+            4
+          ],
+          "centroid": [
+            172.0,
+            425.2
+          ],
+          "bounds": [
+            170,
+            423,
+            173,
+            427
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 37,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            199.0,
+            16.0
+          ],
+          "bounds": [
+            199,
+            16,
+            199,
+            16
+          ]
+        },
+        "green": {
+          "count": 69,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            435.3333333333333,
+            76.72463768115942
+          ],
+          "bounds": [
+            432,
+            72,
+            439,
+            82
+          ]
+        },
+        "yellow": {
+          "count": 37,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            403.8378378378378,
+            474.64864864864865
+          ],
+          "bounds": [
+            400,
+            470,
+            407,
+            479
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 38,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 81,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            435.60493827160496,
+            71.0246913580247
+          ],
+          "bounds": [
+            432,
+            66,
+            439,
+            76
+          ]
+        },
+        "yellow": {
+          "count": 43,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            403.8837209302326,
+            470.6744186046512
+          ],
+          "bounds": [
+            400,
+            466,
+            407,
+            475
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 39,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 72,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            436.22222222222223,
+            70.79166666666667
+          ],
+          "bounds": [
+            432,
+            65,
+            440,
+            75
+          ]
+        },
+        "yellow": {
+          "count": 40,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            403.6,
+            469.675
+          ],
+          "bounds": [
+            400,
+            465,
+            407,
+            474
+          ]
+        },
+        "blue": {
+          "count": 3,
+          "span": [
+            4,
+            1
+          ],
+          "centroid": [
+            169.66666666666666,
+            418.3333333333333
+          ],
+          "bounds": [
+            168,
+            418,
+            172,
+            419
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 40,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 72,
+          "span": [
+            8,
+            9
+          ],
+          "centroid": [
+            436.4166666666667,
+            70.41666666666667
+          ],
+          "bounds": [
+            432,
+            66,
+            440,
+            75
+          ]
+        },
+        "yellow": {
+          "count": 42,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            403.76190476190476,
+            468.6904761904762
+          ],
+          "bounds": [
+            400,
+            464,
+            408,
+            474
+          ]
+        },
+        "blue": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            173.0,
+            419.0
+          ],
+          "bounds": [
+            173,
+            419,
+            173,
+            419
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 41,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 78,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            436.38461538461536,
+            71.2948717948718
+          ],
+          "bounds": [
+            432,
+            66,
+            440,
+            76
+          ]
+        },
+        "yellow": {
+          "count": 37,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            404.6216216216216,
+            470.3243243243243
+          ],
+          "bounds": [
+            401,
+            465,
+            408,
+            475
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 42,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 85,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            436.2352941176471,
+            69.23529411764706
+          ],
+          "bounds": [
+            432,
+            64,
+            440,
+            74
+          ]
+        },
+        "yellow": {
+          "count": 39,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            403.7435897435897,
+            469.0
+          ],
+          "bounds": [
+            400,
+            464,
+            407,
+            474
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 43,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 72,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            436.1666666666667,
+            67.98611111111111
+          ],
+          "bounds": [
+            432,
+            63,
+            439,
+            73
+          ]
+        },
+        "yellow": {
+          "count": 40,
+          "span": [
+            7,
+            9
+          ],
+          "centroid": [
+            403.575,
+            467.6
+          ],
+          "bounds": [
+            400,
+            463,
+            407,
+            472
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 44,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 91,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            440.0989010989011,
+            31.912087912087912
+          ],
+          "bounds": [
+            436,
+            27,
+            444,
+            37
+          ]
+        },
+        "yellow": {
+          "count": 42,
+          "span": [
+            7,
+            10
+          ],
+          "centroid": [
+            403.76190476190476,
+            434.7857142857143
+          ],
+          "bounds": [
+            400,
+            430,
+            407,
+            440
+          ]
+        },
+        "blue": {
+          "count": 6,
+          "span": [
+            4,
+            3
+          ],
+          "centroid": [
+            168.66666666666666,
+            381.6666666666667
+          ],
+          "bounds": [
+            167,
+            380,
+            171,
+            383
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 45,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "green": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "yellow": {
+          "count": 39,
+          "span": [
+            8,
+            10
+          ],
+          "centroid": [
+            406.20512820512823,
+            386.0769230769231
+          ],
+          "bounds": [
+            402,
+            381,
+            410,
+            391
+          ]
+        },
+        "blue": {
+          "count": 8,
+          "span": [
+            1,
+            3
+          ],
+          "centroid": [
+            168.5,
+            335.5
+          ],
+          "bounds": [
+            168,
+            334,
+            169,
+            337
+          ]
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 46,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 1,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": [
+            323.0,
+            441.0
+          ],
+          "bounds": [
+            323,
+            441,
+            323,
+            441
+          ]
+        },
+        "green": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "yellow": {
+          "count": 64,
+          "span": [
+            122,
+            384
+          ],
+          "centroid": [
+            281.84375,
+            259.3125
+          ],
+          "bounds": [
+            227,
+            64,
+            349,
+            448
+          ]
+        },
+        "blue": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        }
+      }
+    },
+    {
+      "sample_index_at_1fps": 47,
+      "all_markers_valid": false,
+      "points": null,
+      "all_color_stats": {
+        "red": {
+          "count": 7,
+          "span": [
+            84,
+            7
+          ],
+          "centroid": [
+            350.2857142857143,
+            443.42857142857144
+          ],
+          "bounds": [
+            323,
+            439,
+            407,
+            446
+          ]
+        },
+        "green": {
+          "count": 0,
+          "span": [
+            0,
+            0
+          ],
+          "centroid": null,
+          "bounds": null
+        },
+        "yellow": {
+          "count": 26,
+          "span": [
+            21,
+            6
+          ],
+          "centroid": [
+            344.46153846153845,
+            442.2692307692308
+          ],
+          "bounds": [
+            328,
+            439,
+            349,
+            445
+          ]
+        },
+        "blue": {
+          "count": 23,
+          "span": [
+            477,
+            145
+          ],
+          "centroid": [
+            349.04347826086956,
+            252.08695652173913
+          ],
+          "bounds": [
+            52,
+            166,
+            529,
+            311
+          ]
+        }
+      }
+    }
+  ],
+  "obs_saved_scene_transform": {
+    "pos": {
+      "x": -117.0,
+      "y": -178.0
+    },
+    "scale": {
+      "x": 1.0,
+      "y": 1.0
+    },
+    "bounds": {
+      "x": 2124.0,
+      "y": 1371.0
+    },
+    "bounds_type": 2,
+    "crop_left": 0,
+    "crop_top": 0,
+    "crop_right": 0,
+    "crop_bottom": 0
+  },
+  "qualification_limit": "OBS canvas was transformed/cropped and H264/NV12 are lossy. This checks visible colors and geometry availability, not exact MS7200 RGB thresholds or hardware corner coordinates. Native full source frame or in-board measurements needed for exact claims.",
+  "actual_camera_correction_accepted": false,
+  "previous_inferred_source": "Actual camera through native FPGA, user-operated OBS target recording",
+  "verification_scope_corrected_at_utc": "2026-10-11T05:14:43.641213+00:00",
+  "source_route_corrected": "R50 directly to capture; FPGA bypassed",
+  "correction_evidence": "results\\hardware_20261009\\route_scope_correction_20261011.json",
+  "actual_camera_display_accepted": false,
+  "fpga_path_qualified_by_this_record": false,
+  "direct_camera_capture_short_observation_valid": true
+}

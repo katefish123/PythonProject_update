@@ -1,0 +1,25 @@
+# ModelSim compile libraries and generated databases
+work/
+work_*/
+*.wlf
+wlft*
+
+# ModelSim local session and crash files
+transcript
+modelsim.ini
+*.cr.mti
+*.vstf
+*.bak
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# PDS generated databases and local diagnostics (release results live in 04_results/pds_v5)
+05_pds/*/
+05_pds/*.log
+05_pds/*.csv
+05_pds/impl.tcl
+05_pds/help_commands.*
+05_pds/*.completed.pds

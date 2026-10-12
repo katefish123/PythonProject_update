@@ -1,0 +1,56 @@
+{
+  "recorded_at_utc": "2026-10-11T15:06:16.614011+00:00",
+  "current_image": "release/ddr_camera_hires_status_20261011/video_correct_ddr_top.sbit",
+  "current_image_sha256": "614f6814fe9dad63359176d9cb43a3b4273cf621c7247a3c15e2cafdbde997d7",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_hires_status_20261011_215211.log",
+  "program_log_sha256": "4e56570fc1d3e68df32b1a9779ec66d3a116a394f0c7dfec54327a41b341139f",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "phase": "Measure actual high-detail DDR row-fetch deadline",
+  "source_sampling": [
+    960,
+    540
+  ],
+  "processed_output": [
+    640,
+    904
+  ],
+  "hdmi_output": [
+    1920,
+    1080
+  ],
+  "scale": 1,
+  "display_window": {
+    "x": 640,
+    "y": 88,
+    "width": 640,
+    "height": 904
+  },
+  "diagnostic_grid_present": true,
+  "diagnostic_signature": "D206",
+  "diagnostic_fields": "Physical DDR/RX/processor/marker state plus last/max row-fetch UI cycles, row count/index/beat.",
+  "project": "diagnostics/ddr_camera_hires_status_20261011/results/ddr_camera_hires_status.pds",
+  "source_snapshot": "release/ddr_camera_hires_status_20261011/source_snapshot.zip",
+  "download_entry": "下载高清校正诊断.cmd",
+  "previous_verified_baseline": "results/hardware_20261009/working_clean_baseline_verified_20261011.json",
+  "baseline_restore_entry": "下载相机校正_重连版.cmd",
+  "previous_high_detail_failure": "results/hardware_20261009/hires_display_failure_20261011_211430.json",
+  "actual_camera_correction_accepted": false,
+  "actual_camera_display_accepted": false,
+  "actual_camera_display_accepted_for_current_image": false,
+  "clarity_accepted": false,
+  "clarity_improvement_accepted": false,
+  "current_boot_ddr_bist_observed": false,
+  "current_receiver_probe_decoded": false,
+  "current_valid_camera_width_height_measured": false,
+  "successful_result_count": null,
+  "capture_bad_count": null,
+  "current_failed_stage": null,
+  "algorithm_update_fps_measured": false,
+  "long_term_camera_display_verified": false,
+  "computer_use_paused_by_user": true,
+  "original_A_B_C_modified": false,
+  "original_target_modified": false,
+  "pending": "Manual OBS deactivate/reactivate, record actual large-marker target for about 20 seconds to read D206, no KEY0 or HDMI recabling.",
+  "qualification_limit": "Eight simulations and PDS timing pass; diagnosed high-detail scanout must still be verified on the board."
+}

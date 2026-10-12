@@ -1,0 +1,9 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 00:33:54 on Oct 09,2026
+vlog -sv -work C:\D\FPGA\video_correct_integrated_20261008\results\board_fixture\simulation\work C:\D\FPGA\video_correct_integrated_20261008\sim\tb_board_frame.sv 
+-- Compiling module tb_board_frame
+
+Top level modules:
+	tb_board_frame
+End time: 00:33:54 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

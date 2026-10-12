@@ -1,0 +1,71 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008
+T_opt
+!s110 1791542065
+VKJHje:^=Qi]oam0nR1ADG3
+04 19 4 work tb_ddr_status_video fast 0
+=1-bcfce7c3c068-6ac8c331-1f8-102c
+o-quiet -auto_acc_if_foreign -work ddr_status_video_work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vddr_status_video
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791542252
+!i10b 1
+!s100 MQ:ZQP_lmG^FJ@LWo2@f<0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IP:GECJXcTLRZVn@S1JbDl2
+S1
+R0
+w1791542035
+8C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\ddr_status_video.v
+FC:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\ddr_status_video.v
+!i122 4
+L0 5 55
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1791542252.000000
+!s107 C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\tb_ddr_status_video.sv|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\ddr_status_video.v|
+Z8 !s90 -sv|-work|C:\D\FPGA\video_correct_integrated_20261008\results\ddr_status_probe\simulation\work|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\ddr_status_video.v|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\tb_ddr_status_video.sv|
+!i113 0
+Z9 o-sv -work {C:\D\FPGA\video_correct_integrated_20261008\results\ddr_status_probe\simulation\work} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_ddr_status_video
+R2
+R3
+!i10b 1
+!s100 =AcLfg`ZFlg=cj=`73ZL:3
+R4
+IcLGK^l7@>QN5g=R1L5J8B3
+S1
+R0
+w1791542059
+8C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\tb_ddr_status_video.sv
+FC:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\tb_ddr_status_video.sv
+!i122 4
+L0 2 38
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z10 !s107 C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\tb_ddr_status_video.sv|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_status\ddr_status_video.v|
+R8
+!i113 0
+R9
+R1

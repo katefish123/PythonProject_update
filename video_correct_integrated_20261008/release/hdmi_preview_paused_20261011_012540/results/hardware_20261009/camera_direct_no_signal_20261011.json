@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-10T16:52:08.881099+00:00",
+  "route_reported_by_user": "R50 HDMI directly to VC-002Pro HDMI input; USB to PC; FPGA bypassed",
+  "source": "User reply to direct-camera-to-capture comparison",
+  "user_report_verbatim": "未识别到信号视频输入",
+  "actual_camera_display_accepted": false,
+  "capture_usb_present_readonly_check": true,
+  "capture_usb_status": "OK",
+  "capture_usb_instance": "USB\\VID_345F&PID_2132&MI_00\\7&39AE5DB8&0&0000",
+  "obs_capture_format_last_verified": "1920x1080 MJPEG 30fps",
+  "additional_obs_log_findings": "MJPEG decode errors and EOI warnings also occur after the 30fps change at 00:37-00:38; EOI warnings at 00:45. Root cause remains unproven.",
+  "scope_of_inference": "The current failure also occurs with FPGA bypassed. This does not prove the FPGA camera or native-HDMI paths are correct, and does not distinguish camera output, HDMI cable/handshake, capture hardware or capture settings.",
+  "programmed_image_changed": false,
+  "obs_configuration_changed": false,
+  "computer_use_paused_by_user": true,
+  "pending": "User-operated direct R50-to-capture recovery: power camera off, reseat the camera-side HDMI connector, power on to movie live view, wait 10 seconds; keep OBS 1080p30 MJPEG unchanged and desktop automation paused"
+}

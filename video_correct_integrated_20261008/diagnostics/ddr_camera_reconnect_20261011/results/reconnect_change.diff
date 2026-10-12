@@ -1,0 +1,11 @@
+--- retained_main_ms7200_ctl.v
++++ isolated_fixed_ms7200_ctl.v
+@@ -804,7 +804,7 @@
+ 
+     	    freq_ensure <= 1'b0;
+ 
+-    	else if(state_n ==STA_RD && dri_cnt == 9'd2 && busy_falling && (freq_rec_1d[17] == 1'b1) && (freq_rec_1d[15:0] != 16'h0000) && (!init_over || ((freq_rec_2d[17:16] == 2'b00) && (freq_rec_1d[17:16] == 2'b10))))
++    	else if(state_n ==STA_RD && dri_cnt == 9'd2 && busy_falling && (freq_rec_1d[17] == 1'b1) && (freq_rec_1d[15:0] != 16'h0000) && (!init_over || (freq_rec_2d[17] == 1'b0)))
+ 
+     	    freq_ensure <= 1'b1;
+ 

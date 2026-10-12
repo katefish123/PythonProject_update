@@ -1,0 +1,333 @@
+##### Written on 2026/10/09 07:50:32 ###############################
+
+
+##### INFO ##################################################
+
+Current device : 
+	PG2L100H-6FBG676
+
+Top Module : 
+	video_correct_ddr_top
+
+Constraint File(s) : 
+	C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc
+
+##### SUMMARY ######################################################
+
+Found 0 error(s), 69 critical warning(s), 0 warning(s), out of 1004 constraint(s)
+
+
+Inapplicable constraints(except overwritten constraints):
+********************************************
+
+define_attribute {p:hd_tx_vs} {PAP_IO_LOC} {R21}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 16)] | Port hd_tx_vs has been placed at location R21, whose type is share pin.
+
+define_attribute {p:hd_tx_hs} {PAP_IO_LOC} {R20}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 22)] | Port hd_tx_hs has been placed at location R20, whose type is share pin.
+
+define_attribute {p:hd_tx_de} {PAP_IO_LOC} {N19}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 28)] | Port hd_tx_de has been placed at location N19, whose type is share pin.
+
+define_attribute {p:hd_reset_n} {PAP_IO_LOC} {G25}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 34)] | Port hd_reset_n has been placed at location G25, whose type is share pin.
+
+define_attribute {p:hd_scl} {PAP_IO_LOC} {K22}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 40)] | Port hd_scl has been placed at location K22, whose type is share pin.
+
+define_attribute {p:hd_sda} {PAP_IO_LOC} {K23}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 46)] | Port hd_sda has been placed at location K23, whose type is share pin.
+
+define_attribute {p:hd_tx_data[0]} {PAP_IO_LOC} {P19}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 52)] | Port hd_tx_data[0] has been placed at location P19, whose type is share pin.
+
+define_attribute {p:hd_tx_data[5]} {PAP_IO_LOC} {N18}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 82)] | Port hd_tx_data[5] has been placed at location N18, whose type is share pin.
+
+define_attribute {p:hd_tx_data[6]} {PAP_IO_LOC} {R22}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 88)] | Port hd_tx_data[6] has been placed at location R22, whose type is share pin.
+
+define_attribute {p:hd_tx_data[7]} {PAP_IO_LOC} {T22}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 94)] | Port hd_tx_data[7] has been placed at location T22, whose type is share pin.
+
+define_attribute {p:hd_tx_data[8]} {PAP_IO_LOC} {T25}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 100)] | Port hd_tx_data[8] has been placed at location T25, whose type is share pin.
+
+define_attribute {p:hd_tx_data[9]} {PAP_IO_LOC} {P25}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 106)] | Port hd_tx_data[9] has been placed at location P25, whose type is share pin.
+
+define_attribute {p:hd_tx_data[10]} {PAP_IO_LOC} {R25}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 112)] | Port hd_tx_data[10] has been placed at location R25, whose type is share pin.
+
+define_attribute {p:hd_tx_data[11]} {PAP_IO_LOC} {P24}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 118)] | Port hd_tx_data[11] has been placed at location P24, whose type is share pin.
+
+define_attribute {p:hd_tx_data[12]} {PAP_IO_LOC} {P23}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 124)] | Port hd_tx_data[12] has been placed at location P23, whose type is share pin.
+
+define_attribute {p:hd_tx_data[13]} {PAP_IO_LOC} {N24}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 130)] | Port hd_tx_data[13] has been placed at location N24, whose type is share pin.
+
+define_attribute {p:hd_tx_data[14]} {PAP_IO_LOC} {N23}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 136)] | Port hd_tx_data[14] has been placed at location N23, whose type is share pin.
+
+define_attribute {p:hd_tx_data[19]} {PAP_IO_LOC} {L25}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 166)] | Port hd_tx_data[19] has been placed at location L25, whose type is share pin.
+
+define_attribute {p:hd_tx_data[21]} {PAP_IO_LOC} {K26}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 178)] | Port hd_tx_data[21] has been placed at location K26, whose type is share pin.
+
+define_attribute {p:hd_tx_data[22]} {PAP_IO_LOC} {K25}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 184)] | Port hd_tx_data[22] has been placed at location K25, whose type is share pin.
+
+define_attribute {p:hd_tx_data[23]} {PAP_IO_LOC} {P16}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 190)] | Port hd_tx_data[23] has been placed at location P16, whose type is share pin.
+
+define_attribute {p:hd_rx_vs} {PAP_IO_LOC} {H24}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 200)] | Port hd_rx_vs has been placed at location H24, whose type is share pin.
+
+define_attribute {p:hd_rx_data[0]} {PAP_IO_LOC} {L18}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 212)] | Port hd_rx_data[0] has been placed at location L18, whose type is share pin.
+
+define_attribute {p:hd_rx_data[2]} {PAP_IO_LOC} {J18}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 220)] | Port hd_rx_data[2] has been placed at location J18, whose type is share pin.
+
+define_attribute {p:hd_rx_data[3]} {PAP_IO_LOC} {H18}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 224)] | Port hd_rx_data[3] has been placed at location H18, whose type is share pin.
+
+define_attribute {p:hd_rx_data[4]} {PAP_IO_LOC} {L17}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 228)] | Port hd_rx_data[4] has been placed at location L17, whose type is share pin.
+
+define_attribute {p:hd_rx_data[9]} {PAP_IO_LOC} {J14}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 248)] | Port hd_rx_data[9] has been placed at location J14, whose type is share pin.
+
+define_attribute {p:hd_rx_data[10]} {PAP_IO_LOC} {J15}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 252)] | Port hd_rx_data[10] has been placed at location J15, whose type is share pin.
+
+define_attribute {p:hd_rx_data[11]} {PAP_IO_LOC} {J16}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 256)] | Port hd_rx_data[11] has been placed at location J16, whose type is share pin.
+
+define_attribute {p:hd_rx_data[12]} {PAP_IO_LOC} {K15}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 260)] | Port hd_rx_data[12] has been placed at location K15, whose type is share pin.
+
+define_attribute {p:hd_rx_data[13]} {PAP_IO_LOC} {K17}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 264)] | Port hd_rx_data[13] has been placed at location K17, whose type is share pin.
+
+define_attribute {p:hd_rx_data[14]} {PAP_IO_LOC} {K16}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 268)] | Port hd_rx_data[14] has been placed at location K16, whose type is share pin.
+
+define_attribute {p:hd_rx_data[15]} {PAP_IO_LOC} {L15}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 272)] | Port hd_rx_data[15] has been placed at location L15, whose type is share pin.
+
+define_attribute {p:hd_rx_data[16]} {PAP_IO_LOC} {M15}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 276)] | Port hd_rx_data[16] has been placed at location M15, whose type is share pin.
+
+define_attribute {p:hd_rx_data[17]} {PAP_IO_LOC} {H19}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 280)] | Port hd_rx_data[17] has been placed at location H19, whose type is share pin.
+
+define_attribute {p:hd_rx_data[18]} {PAP_IO_LOC} {J19}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 284)] | Port hd_rx_data[18] has been placed at location J19, whose type is share pin.
+
+define_attribute {p:hd_rx_data[19]} {PAP_IO_LOC} {J20}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 288)] | Port hd_rx_data[19] has been placed at location J20, whose type is share pin.
+
+define_attribute {p:hd_rx_data[20]} {PAP_IO_LOC} {K20}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 292)] | Port hd_rx_data[20] has been placed at location K20, whose type is share pin.
+
+define_attribute {p:mem_dq[1]} {PAP_IO_LOC} {J6}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 396)] | Port mem_dq[1] has been placed at location J6, whose type is share pin.
+
+define_attribute {p:mem_dq[3]} {PAP_IO_LOC} {L8}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 418)] | Port mem_dq[3] has been placed at location L8, whose type is share pin.
+
+define_attribute {p:mem_dq[5]} {PAP_IO_LOC} {K7}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 440)] | Port mem_dq[5] has been placed at location K7, whose type is share pin.
+
+define_attribute {p:mem_dq[7]} {PAP_IO_LOC} {J5}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 462)] | Port mem_dq[7] has been placed at location J5, whose type is share pin.
+
+define_attribute {p:mem_dqs[0]} {PAP_IO_LOC} {J4}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 473)] | Port mem_dqs[0] has been placed at location J4, whose type is share pin.
+
+define_attribute {p:mem_dqs_n[0]} {PAP_IO_LOC} {H4}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 484)] | Port mem_dqs_n[0] has been placed at location H4, whose type is share pin.
+
+define_attribute {p:mem_dm[0]} {PAP_IO_LOC} {K6}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 495)] | Port mem_dm[0] has been placed at location K6, whose type is share pin.
+
+define_attribute {p:mem_dq[8]} {PAP_IO_LOC} {H6}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 501)] | Port mem_dq[8] has been placed at location H6, whose type is share pin.
+
+define_attribute {p:mem_dq[10]} {PAP_IO_LOC} {H8}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 523)] | Port mem_dq[10] has been placed at location H8, whose type is share pin.
+
+define_attribute {p:mem_dq[11]} {PAP_IO_LOC} {D6}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 534)] | Port mem_dq[11] has been placed at location D6, whose type is share pin.
+
+define_attribute {p:mem_dq[12]} {PAP_IO_LOC} {G8}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 545)] | Port mem_dq[12] has been placed at location G8, whose type is share pin.
+
+define_attribute {p:mem_dq[13]} {PAP_IO_LOC} {E6}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 556)] | Port mem_dq[13] has been placed at location E6, whose type is share pin.
+
+define_attribute {p:mem_dq[15]} {PAP_IO_LOC} {G6}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 578)] | Port mem_dq[15] has been placed at location G6, whose type is share pin.
+
+define_attribute {p:mem_dqs[1]} {PAP_IO_LOC} {H7}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 589)] | Port mem_dqs[1] has been placed at location H7, whose type is share pin.
+
+define_attribute {p:mem_dqs_n[1]} {PAP_IO_LOC} {G7}
+	C: ConstraintEditor-2002: [C:/D/FPGA/video_correct_integrated_20261008/constr/board_ddr.fdc(line number: 600)] | Port mem_dqs_n[1] has been placed at location G7, whose type is share pin.
+
+
+Constraints with issues:
+********************************************
+
+
+Issues without commands:
+********************************************
+
+C: ConstraintEditor-2009: p:led[0] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[0] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[1] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[1] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[2] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[2] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[3] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[3] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[4] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[4] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[5] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[5] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[6] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[6] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+C: ConstraintEditor-2009: p:led[7] is lack of PAP_IO_DRIVE, OUTPUT or INOUT PORT had better set PAP_IO_DRIVE, the optional value is {4, 8, 12, 16}.
+C: ConstraintEditor-2009: p:led[7] is lack of PAP_IO_SLEW, OUTPUT or INOUT PORT had better set PAP_IO_SLEW, the optional value is {FAST, SLOW}.
+
+Unconstrained ports:
+********************************************
+
+
+Constraints with matching wildcard expressions:
+********************************************
+
+set_false_path -to [get_ports {led[*] hd_reset_n hd_scl hd_sda}]
+	I: The pattern 'led[*]' in command 'get_ports {led[*] hd_reset_n hd_scl hd_sda}' match 8 objects below:
+	I: port led[0]
+	I: port led[1]
+	I: port led[2]
+	I: port led[3]
+	I: port led[4]
+	I: port led[5]
+	I: port led[6]
+	I: port led[7]
+
+set_input_delay -clock [get_clocks {rx_pixel}] -max 3.474 [get_ports {hd_rx_data[*] hd_rx_de hd_rx_hs hd_rx_vs}]
+	I: The pattern 'hd_rx_data[*]' in command 'get_ports {hd_rx_data[*] hd_rx_de hd_rx_hs hd_rx_vs}' match 24 objects below:
+	I: port hd_rx_data[0]
+	I: port hd_rx_data[1]
+	I: port hd_rx_data[2]
+	I: port hd_rx_data[3]
+	I: port hd_rx_data[4]
+	I: port hd_rx_data[5]
+	I: port hd_rx_data[6]
+	I: port hd_rx_data[7]
+	I: port hd_rx_data[8]
+	I: port hd_rx_data[9]
+	I: port hd_rx_data[10]
+	I: port hd_rx_data[11]
+	I: port hd_rx_data[12]
+	I: port hd_rx_data[13]
+	I: port hd_rx_data[14]
+	I: port hd_rx_data[15]
+	I: port hd_rx_data[16]
+	I: port hd_rx_data[17]
+	I: port hd_rx_data[18]
+	I: port hd_rx_data[19]
+	I: port hd_rx_data[20]
+	I: port hd_rx_data[21]
+	I: port hd_rx_data[22]
+	I: port hd_rx_data[23]
+
+set_input_delay -clock [get_clocks {rx_pixel}] -min 1.626 [get_ports {hd_rx_data[*] hd_rx_de hd_rx_hs hd_rx_vs}]
+	I: The pattern 'hd_rx_data[*]' in command 'get_ports {hd_rx_data[*] hd_rx_de hd_rx_hs hd_rx_vs}' match 24 objects below:
+	I: port hd_rx_data[0]
+	I: port hd_rx_data[1]
+	I: port hd_rx_data[2]
+	I: port hd_rx_data[3]
+	I: port hd_rx_data[4]
+	I: port hd_rx_data[5]
+	I: port hd_rx_data[6]
+	I: port hd_rx_data[7]
+	I: port hd_rx_data[8]
+	I: port hd_rx_data[9]
+	I: port hd_rx_data[10]
+	I: port hd_rx_data[11]
+	I: port hd_rx_data[12]
+	I: port hd_rx_data[13]
+	I: port hd_rx_data[14]
+	I: port hd_rx_data[15]
+	I: port hd_rx_data[16]
+	I: port hd_rx_data[17]
+	I: port hd_rx_data[18]
+	I: port hd_rx_data[19]
+	I: port hd_rx_data[20]
+	I: port hd_rx_data[21]
+	I: port hd_rx_data[22]
+	I: port hd_rx_data[23]
+
+set_output_delay -clock [get_clocks {tx_pixel}] -max 0.879 [get_ports {hd_tx_data[*] hd_tx_de hd_tx_hs hd_tx_vs}]
+	I: The pattern 'hd_tx_data[*]' in command 'get_ports {hd_tx_data[*] hd_tx_de hd_tx_hs hd_tx_vs}' match 24 objects below:
+	I: port hd_tx_data[0]
+	I: port hd_tx_data[1]
+	I: port hd_tx_data[2]
+	I: port hd_tx_data[3]
+	I: port hd_tx_data[4]
+	I: port hd_tx_data[5]
+	I: port hd_tx_data[6]
+	I: port hd_tx_data[7]
+	I: port hd_tx_data[8]
+	I: port hd_tx_data[9]
+	I: port hd_tx_data[10]
+	I: port hd_tx_data[11]
+	I: port hd_tx_data[12]
+	I: port hd_tx_data[13]
+	I: port hd_tx_data[14]
+	I: port hd_tx_data[15]
+	I: port hd_tx_data[16]
+	I: port hd_tx_data[17]
+	I: port hd_tx_data[18]
+	I: port hd_tx_data[19]
+	I: port hd_tx_data[20]
+	I: port hd_tx_data[21]
+	I: port hd_tx_data[22]
+	I: port hd_tx_data[23]
+
+set_output_delay -clock [get_clocks {tx_pixel}] -min -0.220 [get_ports {hd_tx_data[*] hd_tx_de hd_tx_hs hd_tx_vs}]
+	I: The pattern 'hd_tx_data[*]' in command 'get_ports {hd_tx_data[*] hd_tx_de hd_tx_hs hd_tx_vs}' match 24 objects below:
+	I: port hd_tx_data[0]
+	I: port hd_tx_data[1]
+	I: port hd_tx_data[2]
+	I: port hd_tx_data[3]
+	I: port hd_tx_data[4]
+	I: port hd_tx_data[5]
+	I: port hd_tx_data[6]
+	I: port hd_tx_data[7]
+	I: port hd_tx_data[8]
+	I: port hd_tx_data[9]
+	I: port hd_tx_data[10]
+	I: port hd_tx_data[11]
+	I: port hd_tx_data[12]
+	I: port hd_tx_data[13]
+	I: port hd_tx_data[14]
+	I: port hd_tx_data[15]
+	I: port hd_tx_data[16]
+	I: port hd_tx_data[17]
+	I: port hd_tx_data[18]
+	I: port hd_tx_data[19]
+	I: port hd_tx_data[20]
+	I: port hd_tx_data[21]
+	I: port hd_tx_data[22]
+	I: port hd_tx_data[23]
+
+

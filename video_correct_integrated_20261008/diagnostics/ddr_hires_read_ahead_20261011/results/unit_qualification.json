@@ -1,0 +1,30 @@
+{
+  "recorded_at_utc": "2026-10-11T16:02:01.1176070Z",
+  "unit_checks_passed": true,
+  "display_engine_integration_passed": true,
+  "physical_DDR_latency_measured": false,
+  "tests": {
+    "tb_ddr_word_engine": {
+      "passed": true,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_ddr_word_engine.run.log",
+      "log_sha256": "d2b3cf709b18f2a3277cd328e1c6f733c8c987e4248a6d5726134a3bc8eaea8c"
+    },
+    "tb_ddr_read_ahead": {
+      "passed": true,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_ddr_read_ahead.run.log",
+      "log_sha256": "daa0779d30821d159b513e23d09afce30549c58cc61f4d43449296f9845e59a6"
+    },
+    "tb_hires_read_ahead_display": {
+      "passed": true,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_hires_read_ahead_display.run.log",
+      "log_sha256": "9972f868d38d26859bdb18c19373a34f3669a38482dc39a25f2bc2219292ef72"
+    },
+    "tb_hires_read_ahead_control": {
+      "passed": true,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_hires_read_ahead_control.run.log",
+      "log_sha256": "711c226b5f6758a0f49ef5ae324cc4428974260b613f02aea46ac84bb4daa603"
+    }
+  },
+  "qualified_for_board": false,
+  "programmed": false
+}

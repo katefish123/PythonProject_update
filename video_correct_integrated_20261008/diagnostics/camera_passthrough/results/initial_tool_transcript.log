@@ -1,0 +1,8 @@
+# vsim -c -lib C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\work tb_hdmi_camera_native -do "run -all; if {[examine test_passed] != 1} {quit -code 1}; quit -code 0" 
+# Start time: 22:05:36 on Oct 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-2253) No module name found in command-line argument "C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\work.tb_hdmi_camera_native"
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 22:05:37 on Oct 09,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

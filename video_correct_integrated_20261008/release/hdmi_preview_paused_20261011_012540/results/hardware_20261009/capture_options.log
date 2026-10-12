@@ -1,0 +1,58 @@
+[dshow @ 000001c94070f980] DirectShow video device options (from video devices)
+[dshow @ 000001c94070f980]  Pin "捕获" (alternative pin name "0")
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=1920x1080 fps=25 max s=1920x1080 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=1920x1080 fps=25 max s=1920x1080 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=1280x720 fps=25 max s=1280x720 fps=120
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=1280x720 fps=25 max s=1280x720 fps=120 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=720x576 fps=25 max s=720x576 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=720x576 fps=25 max s=720x576 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=720x480 fps=25 max s=720x480 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=720x480 fps=25 max s=720x480 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=640x480 fps=25 max s=640x480 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=640x480 fps=25 max s=640x480 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=3840x2160 fps=25 max s=3840x2160 fps=25
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=3840x2160 fps=25 max s=3840x2160 fps=25 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=2560x1440 fps=25 max s=2560x1440 fps=50
+[dshow @ 000001c94070f980]   pixel_format=yuyv422  min s=2560x1440 fps=25 max s=2560x1440 fps=50 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=1920x1080 fps=25 max s=1920x1080 fps=240.004
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=1920x1080 fps=25 max s=1920x1080 fps=240.004 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=1280x720 fps=25 max s=1280x720 fps=240.004
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=1280x720 fps=25 max s=1280x720 fps=240.004 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=720x576 fps=25 max s=720x576 fps=60.0002
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=720x576 fps=25 max s=720x576 fps=60.0002 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=720x480 fps=25 max s=720x480 fps=60.0002
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=720x480 fps=25 max s=720x480 fps=60.0002 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=640x480 fps=25 max s=640x480 fps=60.0002
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=640x480 fps=25 max s=640x480 fps=60.0002 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=3840x2160 fps=25 max s=3840x2160 fps=60.0002
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=3840x2160 fps=25 max s=3840x2160 fps=60.0002 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=2560x1440 fps=25 max s=2560x1440 fps=144.001
+[dshow @ 000001c94070f980]   vcodec=mjpeg  min s=2560x1440 fps=25 max s=2560x1440 fps=144.001 (pc, bt709/bt709/unknown, center)
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=1920x1080 fps=25 max s=1920x1080 fps=60.0002
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=1920x1080 fps=25 max s=1920x1080 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=1280x720 fps=25 max s=1280x720 fps=120
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=1280x720 fps=25 max s=1280x720 fps=120 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=720x576 fps=25 max s=720x576 fps=60.0002
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=720x576 fps=25 max s=720x576 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=720x480 fps=25 max s=720x480 fps=60.0002
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=720x480 fps=25 max s=720x480 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=640x480 fps=25 max s=640x480 fps=60.0002
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=640x480 fps=25 max s=640x480 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=2560x1440 fps=25 max s=2560x1440 fps=30
+[dshow @ 000001c94070f980]   unknown compression type 0xE436EB7D  min s=2560x1440 fps=25 max s=2560x1440 fps=30 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=1920x1080 fps=25 max s=1920x1080 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=1920x1080 fps=25 max s=1920x1080 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=1280x720 fps=25 max s=1280x720 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=1280x720 fps=25 max s=1280x720 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=720x576 fps=25 max s=720x576 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=720x576 fps=25 max s=720x576 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=720x480 fps=25 max s=720x480 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=720x480 fps=25 max s=720x480 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=640x480 fps=25 max s=640x480 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=640x480 fps=25 max s=640x480 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=3840x2160 fps=25 max s=3840x2160 fps=30
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=3840x2160 fps=25 max s=3840x2160 fps=30 (tv, bt709/bt709/unknown, topleft)
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=2560x1440 fps=25 max s=2560x1440 fps=60.0002
+[dshow @ 000001c94070f980]   pixel_format=nv12  min s=2560x1440 fps=25 max s=2560x1440 fps=60.0002 (tv, bt709/bt709/unknown, topleft)
+[in#0 @ 000001c94070f580] Error opening input: Immediate exit requested
+Error opening input file video=VC-002Pro .

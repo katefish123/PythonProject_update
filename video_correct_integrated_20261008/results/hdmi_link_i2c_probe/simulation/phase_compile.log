@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 18:32:50 on Oct 09,2026
+vlog -sv -work i2c_phase_work C:\D\FPGA\video_correct_integrated_20261008\rtl\hdmi\iic_dri.v C:\D\FPGA\video_correct_integrated_20261008\sim\tb_iic_dri_read_bytes.sv 
+-- Compiling module iic_dri
+-- Compiling module tb_iic_dri_read_bytes
+
+Top level modules:
+	tb_iic_dri_read_bytes
+End time: 18:32:50 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

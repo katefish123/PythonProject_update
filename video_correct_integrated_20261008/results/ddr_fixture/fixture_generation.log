@@ -1,0 +1,22 @@
+{
+  "output_dir": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\ddr_fixture",
+  "detected": [
+    [
+      200,
+      45
+    ],
+    [
+      465,
+      100
+    ],
+    [
+      435,
+      420
+    ],
+    [
+      180,
+      390
+    ]
+  ],
+  "expected_pixels": 144640
+}

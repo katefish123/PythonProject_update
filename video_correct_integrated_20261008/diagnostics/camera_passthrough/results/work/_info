@@ -1,0 +1,197 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_fpga
+T_opt
+!s110 1791554959
+V;4K__1NY56LE;HegNFX;W3
+Z1 04 21 4 work tb_hdmi_camera_native fast 0
+=1-bcfce7c3c068-6ac8f58f-13f-4bdc
+o-quiet -auto_acc_if_foreign -work camdiag
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1791558089
+VKk3O8^XCKCK2jGS>1M1LW0
+R1
+=1-bcfce7c3c068-6ac901c9-1d1-93f0
+o-quiet -auto_acc_if_foreign -work camdiag -g H_FRONT=90 -g MISSING_VS=1
+R2
+n@_opt1
+R3
+vconfig_pll_27m_10m
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1791554735
+!i10b 1
+!s100 Z>0`OdlbRg2>KKUV=>08m1
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I_^bo9ZaFTgPaz_079W=[32
+S1
+R0
+Z7 w1791554735
+Z8 8C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\tb_camera_passthrough.sv
+Z9 FC:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\tb_camera_passthrough.sv
+!i122 0
+L0 2 4
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z12 !s108 1791554735.000000
+Z13 !s107 C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\hdmi_vs_recover.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\common\reset_sync.v|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\hdmi_camera_passthrough_top.v|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\tb_camera_passthrough.sv|
+Z14 !s90 -work|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\work|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\tb_camera_passthrough.sv|C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\hdmi_camera_passthrough_top.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\common\reset_sync.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\hdmi_vs_recover.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v|
+!i113 0
+Z15 o-work {C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\work} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vhdmi_camera_passthrough_top
+R5
+!i10b 1
+!s100 `eci0=WYm3UT]jSjLTaa11
+R6
+Il1:nX^eY:XSTAm?Clng9j3
+R0
+R7
+8C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\hdmi_camera_passthrough_top.v
+FC:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\hdmi_camera_passthrough_top.v
+!i122 0
+L0 6 45
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vhdmi_config
+R4
+R5
+!i10b 1
+!s100 59nCEiC;Hi7>SEKi]bXbY0
+R6
+I>3a09JeA?]Q3Cn7VgFz<41
+S1
+R0
+R7
+R8
+R9
+!i122 0
+L0 6 1
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vhdmi_vs_recover
+R5
+!i10b 1
+!s100 H8?nj8MBY2?TR:OSCNH7g2
+R6
+I]hD9mB<Olg06c:1I0m@zP2
+R0
+Z16 w1791476583
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\hdmi_vs_recover.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\hdmi_vs_recover.v
+!i122 0
+L0 3 31
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vreset_sync
+R5
+!i10b 1
+!s100 a<G4_3^6^^LMc?3;i`mlm0
+R6
+IJJLMd_A>[KoI>h9ejlhlE0
+R0
+w1791461077
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\common\reset_sync.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\common\reset_sync.v
+!i122 0
+L0 2 7
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vtb_hdmi_camera_native
+R4
+R5
+!i10b 1
+!s100 IjIKL?a];^WebWGQ<20PN2
+R6
+IHB2n?KZMmOchf766Ze0HS1
+S1
+R0
+R7
+R8
+R9
+!i122 0
+L0 7 42
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vvideo_timing_vtc
+R5
+!i10b 1
+!s100 OLZ`=Di<fQ0:gWL0SboN;2
+R6
+IScUZo5C0;O7Pjan]R4k;K0
+R0
+R16
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v
+!i122 0
+L0 5 57
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2

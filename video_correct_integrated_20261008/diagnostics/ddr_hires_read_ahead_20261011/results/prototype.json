@@ -1,0 +1,10 @@
+{
+  "prototype_only": true,
+  "programmed": false,
+  "qualified_for_board": false,
+  "interface": "Existing single-command / single-response 256-bit client API retained.",
+  "implementation": "Only completed-result ranges may fill an aligned 64-word cache using ARLEN=7. Cache publishes after all eight valid beats; overlapping writes invalidate it. Source reads/BIST/writes retain single-beat behavior.",
+  "protocol_source": "C:/pango/PDS_2022.2-SP6.4/ip/system_ip/ips2l_hmic_s/ips2l_hmic_eval/ips2l_hmic_s/UG042003_Logos2_HMIC_S_IP.pdf, pp31-38; ARLEN+1 beat count and no RREADY.",
+  "engine_sha256": "ef917af25a493808c1bc3ada24b293eda85160fd0704e7e9c7273489aa694247",
+  "limit": "Independent unit/integrated display regression, synthesis/timing and actual board comparison required. Current board diagnostic must first confirm the row deadline."
+}

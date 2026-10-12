@@ -1,0 +1,71 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results
+T_opt
+!s110 1791699675
+V[Hoz2_SKKm4=EV_:Em1?W1
+04 21 4 work tb_ddr_status_overlay fast 0
+=1-bcfce7c3c068-6acb2adb-e-1360
+o-quiet -auto_acc_if_foreign -work work_tb_ddr_status_overlay +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vddr_status_overlay
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791699906
+!i10b 1
+!s100 4`^1<Z3;>7X<OLeNO=o`A0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ID?caJc5_eYMG@1Q8YEDlJ1
+S1
+R0
+w1791699548
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/ddr_status_overlay.v
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/ddr_status_overlay.v
+!i122 6
+L0 4 24
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1791699906.000000
+!s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/tb_ddr_status_overlay.sv|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/ddr_status_overlay.v|
+Z8 !s90 -sv|-work|work_tb_ddr_status_overlay|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/ddr_status_overlay.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/tb_ddr_status_overlay.sv|
+!i113 0
+Z9 o-sv -work work_tb_ddr_status_overlay -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_ddr_status_overlay
+R2
+R3
+!i10b 1
+!s100 @1zJNLkdjYIcPP2l1nhDK3
+R4
+I>:IC0kd3?kj;7:7o>]9?92
+S1
+R0
+w1791699650
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/tb_ddr_status_overlay.sv
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/tb_ddr_status_overlay.sv
+!i122 6
+L0 2 42
+R5
+R6
+r1
+!s85 0
+31
+R7
+Z10 !s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/tb_ddr_status_overlay.sv|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/ddr_status_overlay.v|
+R8
+!i113 0
+R9
+R1

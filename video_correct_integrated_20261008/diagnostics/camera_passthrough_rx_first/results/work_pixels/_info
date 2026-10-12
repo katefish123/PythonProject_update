@@ -1,0 +1,205 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_passthrough_rx_first/results
+T_opt
+!s110 1791610433
+VKS@FaMSelKiZ@ohN800?62
+Z1 04 21 4 work tb_hdmi_camera_native fast 0
+=1-bcfce7c3c068-6ac9ce40-3e7-583c
+o-quiet -auto_acc_if_foreign -work work_pixels -g H_FRONT=88 -g MISSING_VS=0 +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1791610438
+VW`_1L7XR<K7R40jc8bYRb2
+R1
+=1-bcfce7c3c068-6ac9ce46-31-8d34
+o-quiet -auto_acc_if_foreign -work work_pixels -g H_FRONT=90 -g MISSING_VS=1 +acc
+R2
+n@_opt1
+R3
+vconfig_pll_27m_10m
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1791610437
+!i10b 1
+!s100 Z>0`OdlbRg2>KKUV=>08m1
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`UKzWbKk3bWjei[f5EQhI0
+S1
+R0
+Z7 w1791610431
+Z8 8tb_rx_first_pixels.sv
+Z9 Ftb_rx_first_pixels.sv
+!i122 2
+L0 2 4
+Z10 VDg1SIo80bB@j0V0VzS_@n1
+Z11 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z12 !s108 1791610437.000000
+Z13 !s107 tb_rx_first_pixels.sv|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/hdmi_vs_recover.v|C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v|hdmi_camera_passthrough_rx_first_top.v|
+Z14 !s90 -sv|-work|work_pixels|hdmi_camera_passthrough_rx_first_top.v|C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/hdmi_vs_recover.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v|tb_rx_first_pixels.sv|
+!i113 0
+Z15 o-sv -work work_pixels -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vhdmi_camera_passthrough_rx_first_top
+R4
+R5
+!i10b 1
+!s100 ]BozQ^6R9BFNJKZmYgmP]1
+R6
+I73BdIRj8Nn7PB5kJ@9onR2
+S1
+R0
+R7
+8hdmi_camera_passthrough_rx_first_top.v
+Fhdmi_camera_passthrough_rx_first_top.v
+!i122 2
+L0 6 45
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vhdmi_config
+R4
+R5
+!i10b 1
+!s100 59nCEiC;Hi7>SEKi]bXbY0
+R6
+I]TiPCDPZz`b:jKK_58eYE0
+S1
+R0
+R7
+R8
+R9
+!i122 2
+L0 6 1
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vhdmi_vs_recover
+R4
+R5
+!i10b 1
+!s100 cJ:K]<M0nhd6P095UDDRH2
+R6
+IL8Wjcl1VdW[;e`YGgAIQl1
+S1
+R0
+Z16 w1791476583
+8C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/hdmi_vs_recover.v
+FC:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/hdmi_vs_recover.v
+!i122 2
+L0 3 31
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vreset_sync
+R4
+R5
+!i10b 1
+!s100 >L@QLA@n^9=cQ_2oGzlGB3
+R6
+IG4b7Idc2=PbmQ_DdS[L]V0
+S1
+R0
+w1791461077
+8C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v
+FC:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v
+!i122 2
+L0 2 7
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vtb_hdmi_camera_native
+R4
+R5
+!i10b 1
+!s100 N]3EfZ;HGdD1ROf9I1l`n0
+R6
+I[`JKfT4O>O7d?ePXhc@k>1
+S1
+R0
+R7
+R8
+R9
+!i122 2
+L0 7 42
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2
+vvideo_timing_vtc
+R4
+R5
+!i10b 1
+!s100 >bN_?_:BQEijb7?^:jc3O0
+R6
+IO`_Dda8Zlb0icV[5dCd^91
+S1
+R0
+R16
+8C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v
+FC:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v
+!i122 2
+L0 5 57
+R10
+R11
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 0
+R15
+R2

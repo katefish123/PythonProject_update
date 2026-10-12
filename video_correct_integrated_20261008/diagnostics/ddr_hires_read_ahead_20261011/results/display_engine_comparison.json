@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-10-11T16:05:51.552782+00:00",
+  "all_four_checks_passed": true,
+  "read_ahead_enabled": {
+    "read_ahead": 1,
+    "expected_underflow": 0,
+    "frames": 2,
+    "correct_pixels": 1157120,
+    "black_pixels": 0,
+    "physical_reads": 18080,
+    "logical_reads": 144640,
+    "max_row_cycles": 799,
+    "model_latency_only": 1
+  },
+  "single_beat_control": {
+    "read_ahead": 0,
+    "expected_underflow": 1,
+    "frames": 1,
+    "correct_pixels": 640,
+    "black_pixels": 577920,
+    "physical_reads": 24194,
+    "logical_reads": 24194,
+    "max_row_cycles": 5656,
+    "model_latency_only": 1
+  },
+  "model": "28 UI clocks until first data, sequential beats, occasional additional100-clock refresh delay; 125MHz UI and148.5MHz pixel.",
+  "checks": "Two complete640x904 encoded frames checked pixel-by-pixel; midscan pending bank publication cannot mix banks. Default single-beat mode under same model reproduces missing rows.",
+  "hardware_latency_measured": false,
+  "PDS_and_board_qualified": false,
+  "programmed": false,
+  "source_hashes": {
+    "diagnostics\\ddr_hires_read_ahead_20261011\\results\\ddr_word_engine.v": "ef917af25a493808c1bc3ada24b293eda85160fd0704e7e9c7273489aa694247",
+    "diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_ddr_word_engine.sv": "b4c89192f83df32e7de60ba415101cf0a906856d68f727bf4aabacc05547c410",
+    "diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_ddr_read_ahead.sv": "84e119a6c755323dc06af98d5e1b052ab853aae45879b44c5b665618b4b2ec7d",
+    "diagnostics\\ddr_hires_read_ahead_20261011\\results\\tb_hires_read_ahead_display.sv": "941ebc3599b08b5295250cc1ec197db83bc588739fe7f315dc3b8384e968fdb4",
+    "diagnostics\\ddr_camera_hires_status_20261011\\results\\ddr_result_display.v": "18e62ded216c9cf28b84ef752e646cef3180c205c4b0c2590c13690e6c5f215a",
+    "rtl\\memory\\ddr_arbiter3.v": "cab398b830250fbbe27ab4b56776fa35dd6504ee58adeb254fcb796ab981c806",
+    "vendor\\c_current\\01_design_code\\video_timing_vtc.v": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+  },
+  "limit": "This isolates display/arbiter/engine under an assumed physical response. It does not prove real DDR performance, camera image clarity, simultaneous capture/processor contention, or HDMI recovery."
+}

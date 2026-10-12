@@ -1,0 +1,13 @@
+Input #0, dshow, from 'video=VC-002Pro ':
+  Duration: N/A, start: 4320.803555, bitrate: N/A
+  Stream #0:0: Video: mjpeg (Baseline) (MJPG / 0x47504A4D), yuvj422p(pc, bt470bg/bt709/unknown), 1920x1080, 30 fps, 30 tbr, 10000k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, image2, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\capture_internal_fixture_card_mjpeg.jpg':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: mjpeg (Baseline) (MJPG / 0x47504A4D), yuvj422p(pc, bt470bg/bt709/unknown), 1920x1080, q=2-31, 30 fps, 30 tbr, 10000k tbn
+Press [q] to stop, [?] for help
+frame=    0 fps=0.0 q=-1.0 size=       0KiB time=00:00:00.56 bitrate=   0.0kbits/s speed=1.11x    
+[out#0/image2 @ 000001fdc1e8ffc0] video:118KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    1 fps=1.0 q=-1.0 Lsize=N/A time=00:00:01.06 bitrate=N/A speed=1.03x    

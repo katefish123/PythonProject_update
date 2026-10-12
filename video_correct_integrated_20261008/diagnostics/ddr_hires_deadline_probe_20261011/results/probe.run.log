@@ -1,0 +1,49 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {.\probe.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work work 
+# Modifying .\modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 21:33:32 on Oct 11,2026
+# vlog -sv C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_status_20261011/results/ddr_result_display.v C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_deadline_probe_20261011/results/tb_hires_deadline_probe.sv 
+# -- Compiling module ddr_result_display
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_hires_deadline_probe
+# 
+# Top level modules:
+# 	tb_hires_deadline_probe
+# End time: 21:33:32 on Oct 11,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" work.tb_hires_deadline_probe 
+# Start time: 21:33:32 on Oct 11,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_hires_deadline_probe(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# DDR_DEADLINE_REPRODUCED correct_pixels=640 black_pixels=577920 max_row_cycles=5591 one_line_budget=1852 hypothetical_memory_only=1
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_deadline_probe_20261011/results/tb_hires_deadline_probe.sv(66)
+#    Time: 31965510122 ps  Iteration: 2  Instance: /tb_hires_deadline_probe
+# Break in Module tb_hires_deadline_probe at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_deadline_probe_20261011/results/tb_hires_deadline_probe.sv line 66
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_deadline_probe_20261011/results/tb_hires_deadline_probe.sv line 66
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 21:33:37 on Oct 11,2026, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
