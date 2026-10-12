@@ -1,0 +1,95 @@
+{
+  "utc": "2026-10-10T14:52:44.215363+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "tests": {
+    "utc": "2026-10-10T14:50:35.5507835Z",
+    "baseline_polling_failure_reproduced": true,
+    "tests": {
+      "fixed_rx_reconnect": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+        ]
+      },
+      "fixed_rx_dvi": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+        ]
+      },
+      "fixed_tx_reconnect": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+        ]
+      },
+      "config_rx": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_CONFIG",
+          "TEST_PASS_OPEN_DRAIN",
+          "TEST_PASS_BOOTSTRAP_NACK_RECOVERY",
+          "TEST_PASS_POSTPROBE_NACK_FATAL",
+          "TEST_PASS_NO_DEVICE"
+        ]
+      },
+      "config_tx": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_CONFIG",
+          "TEST_PASS_OPEN_DRAIN",
+          "TEST_PASS_BOOTSTRAP_NACK_RECOVERY",
+          "TEST_PASS_POSTPROBE_NACK_FATAL",
+          "TEST_PASS_NO_DEVICE"
+        ]
+      },
+      "pixels": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "PASS_NATIVE_ALL_PIXELS"
+        ]
+      },
+      "pixels_missing_vs": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "PASS_NATIVE_ALL_PIXELS"
+        ]
+      }
+    },
+    "hardware_accepted": false
+  },
+  "native_rgb888_every_pixel": true,
+  "downsample_or_upscale": false,
+  "frame_buffer_or_ddr": false,
+  "input_format_target": "1920x1080 progressive 59.94/60Hz",
+  "output_clock": "Actual RX pixel clock forwarded to TX",
+  "config_order": "RX first, then TX, then return ownership to RX and resume deferred request",
+  "hardware_programmed": false,
+  "actual_camera_display_accepted": false,
+  "flash_modified": false,
+  "files": {
+    "baseline_polling.run.log": "12f684a633ee96bd99bebf171100ca2f548a18f6cca66c8956926a552984d044",
+    "build_run.log": "2e786ee8a3791a93d6c4476471421bc56e30fe8fef469221a2e92bfb297128cb",
+    "camera_native_rx_first_top.sbit": "b918087a2ec5179e78f1a3f78e903538e401abbc120ba40201abb45a9fb5cbc2",
+    "camera_native_rx_first_top.smsk": "61bfdac038bdcd5c7eb6a427b7d9d3b5a06046742db34e805ec5f8dde79f18c1",
+    "camera_native_rx_first_top_timing_summary_after_hold_fix.txt": "ff69bdf1557dcabd3402cfe48388e8974713191a8233db91f2e5bb5ef354b268",
+    "config_rx.run.log": "19922a7b4765aa25793aded559e5e662d2e358ef29420d1946434c186fed8599",
+    "config_tx.run.log": "52050729d90acd1d8bb286b50bfd7b58d62e460c067112700262f973a87f9c51",
+    "fixed_rx_dvi.run.log": "4d6dba919ce3df1f19498d8973d980e17748168c0bd676377fdb2f39674c2286",
+    "fixed_rx_reconnect.run.log": "ea356ed410addf8e21ee2a6ec1bad2681c32bad0dce3db91cc71a6a45d96ace0",
+    "fixed_tx_reconnect.run.log": "c09fada40cf167509c3834f3f888c16ddb8d2179b4d917b4eb599daf58ed07c3",
+    "pixels.run.log": "76150b036ef1b28dcdab38a84e4b24546a244db6edb137ea72dcf0985b659225",
+    "pixels_missing_vs.run.log": "2d0656a489db2b391d0cb315c2682ea2c0d8eca6411a067ca37ec10654a81939",
+    "simulation_qualification.json": "7be614395ab2d26e666beec5ecbbb780c11800c1033c533fdb1d12e5467278fe",
+    "source_hashes.json": "fa5a26f91c542b3251c63d4373c80c842d9a2b10445d5e2da06bbdcaaad7d243",
+    "source_snapshot.zip": "6e18bd53ae8807ca9034f0390e4d5e697e1e61b991224abd7b71f6617992e8e8"
+  }
+}

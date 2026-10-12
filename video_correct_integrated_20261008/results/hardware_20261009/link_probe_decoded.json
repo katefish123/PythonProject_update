@@ -1,0 +1,11 @@
+{
+  "init_done": false,
+  "ack_error": true,
+  "rx_clock_seen": false,
+  "de_seen": false,
+  "rx_width": 0,
+  "hs_lines": 0,
+  "sample_rgb": "0x0",
+  "bits": "010000000000000000000000000000000000000000000000000000000000",
+  "word_hex": "0x400000000000000"
+}

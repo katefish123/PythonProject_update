@@ -1,0 +1,31 @@
+{
+  "recorded_at_utc": "2026-10-11T16:49:35.951202+00:00",
+  "original_video": "C:\\Users\\夏菲\\Videos\\2026-10-12 00-37-42.mp4",
+  "video_copy": "results\\hardware_20261009\\clean_corrected_camera_20261012_003742.mp4",
+  "video_sha256": "f5539bd929e4be1aec84dfc5a9b27d706bedaddfd7c182575277a7f367db9e31",
+  "image": "release/ddr_camera_reconnect_20261011/video_correct_ddr_top.sbit",
+  "image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "decoded_frames": 1765,
+  "decode_succeeded": true,
+  "white_page_candidate_frames": 1567,
+  "black_like_window_frames": 0,
+  "first_white_page_frame": 198,
+  "last_white_page_frame": 1764,
+  "non_page_frames_after_first_page": 0,
+  "black_like_frames_after_first_page": 0,
+  "minimum_outside_window_dark_ratio_during_page": 1.0,
+  "largest_successive_roi_mean_difference": 142.26516203703704,
+  "frames_requiring_visual_check": [
+    "results\\hardware_20261009\\clean_corrected_camera_20261012_003742_first.png",
+    "results\\hardware_20261009\\clean_corrected_camera_20261012_003742_middle.png",
+    "results\\hardware_20261009\\clean_corrected_camera_20261012_003742_last.png"
+  ],
+  "full_page_visually_checked": true,
+  "continuous_real_correction_update_accepted": false,
+  "algorithm_update_fps_measured": false,
+  "limit": "Candidate detection on actual OBS video, requiring visual review of the full prescribed rectangle. Stable held frame is allowed and cannot establish live update FPS. Encoded recording rate is not algorithm throughput.",
+  "visual_review": "First page is optically defocused; middle and last show the upright complete test sheet with all four colored corners, text/grid, full prescribed window and dark surroundings. Text remains soft with screen moire.",
+  "current_boot_complete_correction_observed": true,
+  "short_recording_stable_picture_accepted": true,
+  "clarity_improvement_accepted": false
+}

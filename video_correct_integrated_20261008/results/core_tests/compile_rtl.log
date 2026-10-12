@@ -1,0 +1,24 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 00:37:29 on Oct 09,2026
+vlog -work C:\D\FPGA\video_correct_integrated_20261008\results\core_tests\work C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\b_rectifier.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\bilinear_interp.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\homography_solver.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\marker_detector.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_coord.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_core.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\scaled_div_pipe.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\signed_div_seq.v C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\unsigned_div_seq.v C:\D\FPGA\video_correct_integrated_20261008\vendor\c\01_design_code\video_timing_vtc.v C:\D\FPGA\video_correct_integrated_20261008\rtl\video\result_display.v C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_session.v C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_board_top.v C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_core.v 
+-- Compiling module b_rectifier
+-- Compiling module bilinear_interp
+-- Compiling module homography_solver
+-- Compiling module marker_detector
+-- Compiling module perspective_coord
+-- Compiling module perspective_core
+-- Compiling module scaled_div_pipe
+-- Compiling module signed_div_seq
+-- Compiling module unsigned_div_seq
+-- Compiling module video_timing_vtc
+-- Compiling module result_display
+-- Compiling module snapshot_capture
+-- Compiling module frame_processor
+-- Compiling module frame_session
+-- Compiling module video_correct_board_top
+-- Compiling module video_correct_core
+
+Top level modules:
+	video_correct_board_top
+End time: 00:37:29 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,44 @@
+{
+  "recorded_at_utc": "2026-10-11T13:45:36.632600+00:00",
+  "image": "release/ddr_camera_hires_20261011/video_correct_ddr_top.sbit",
+  "image_sha256": "7aed1ed5af2d32994a620f7bd3f198253365ceeccd967528daa6694e52dac2e0",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_hires_20261011_190358.log",
+  "videos": [
+    "results\\hardware_20261009\\hires_corrected_camera_20261011_211309.mp4",
+    "results\\hardware_20261009\\hires_corrected_camera_20261011_211430.mp4"
+  ],
+  "frames": [
+    {
+      "frame": "results\\hardware_20261009\\hires_211309_t20.png",
+      "sha256": "26152dc84dc86b959ccfa7f03e4b74bb51e000fb1085694335642587009b4aa9",
+      "nonuniform_window_rows": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "dark_uniform_window_rows": 900,
+      "visually_reviewed": true,
+      "observed": "Only a thin top strip of the prescribed result window is visible; 900 of its 904 encoded rows are dark. Encoding can spread a single physical line across adjacent rows."
+    },
+    {
+      "frame": "results\\hardware_20261009\\hires_211430_t15.png",
+      "sha256": "aa231e98f2ab6307eb3aaa42edc436edd308c4e7bd55f2f42c0bb13f39e59cbd",
+      "nonuniform_window_rows": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "dark_uniform_window_rows": 900,
+      "visually_reviewed": true,
+      "observed": "Only a thin top strip of the prescribed result window is visible; 900 of its 904 encoded rows are dark. Encoding can spread a single physical line across adjacent rows."
+    }
+  ],
+  "observed_failure": "Initial colorbars followed by a single visible top result row, no complete corrected page.",
+  "hypothesis": "Published result display cannot fetch later rows before scanout; require physical per-row fetch counters to confirm.",
+  "actual_camera_correction_accepted": false,
+  "clarity_improvement_accepted": false,
+  "verified_fallback": "results/hardware_20261009/working_clean_baseline_verified_20261011.json",
+  "next": "Independent D206 image retaining 960x540 source, 640x904 result and unchanged thresholds, with row-fetch timing/progress."
+}

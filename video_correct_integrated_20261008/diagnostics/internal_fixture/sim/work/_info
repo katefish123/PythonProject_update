@@ -1,0 +1,70 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008
+T_opt
+!s110 1791543374
+ViPJAEb2RKUGPl1b?>RGBE1
+04 25 4 work tb_internal_fixture_video fast 0
+=1-bcfce7c3c068-6ac8c84e-1cf-4290
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vinternal_fixture_video
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791543373
+!i10b 1
+!s100 SMM>gB3WYzLV@0Xg6LJ]80
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IPj29]YScDJ^:8n_dz:]2E0
+S1
+R0
+w1791543188
+8diagnostics/internal_fixture/internal_fixture_video.v
+Fdiagnostics/internal_fixture/internal_fixture_video.v
+!i122 0
+L0 4 39
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1791543373.000000
+Z8 !s107 diagnostics/internal_fixture/sim/tb_internal_fixture_video.sv|diagnostics/internal_fixture/internal_fixture_video.v|
+Z9 !s90 -sv|-work|work|diagnostics/internal_fixture/internal_fixture_video.v|diagnostics/internal_fixture/sim/tb_internal_fixture_video.sv|
+!i113 0
+Z10 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_internal_fixture_video
+R2
+R3
+!i10b 1
+!s100 Ib]aA>fQb9O]S`LRB]W;@3
+R4
+I<MzMhBz^^`nd27EoWhEX^3
+S1
+R0
+w1791543303
+8diagnostics/internal_fixture/sim/tb_internal_fixture_video.sv
+Fdiagnostics/internal_fixture/sim/tb_internal_fixture_video.sv
+!i122 0
+L0 3 38
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1

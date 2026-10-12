@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-10T17:17:06.865246+00:00",
+  "source": "User reply to identical-NV12 direct-camera comparison",
+  "user_report_verbatim": "取景稳定，不闪烁，但是你确定我相机调的对吗，要调哪些你完整说一遍",
+  "route_reported_by_user": "R50 HDMI directly to capture; camera aimed away from computer display",
+  "obs_settings": "1920x1080, 30fps, NV12",
+  "settings_previously_verified_in_log_at": "2026-10-11 01:07:15.440 Asia/Shanghai",
+  "manual_observation_requested_seconds": 20,
+  "current_direct_camera_to_capture_accepted": true,
+  "user_reported_short_direct_observation_stable": true,
+  "all_camera_menu_values_independently_verified": false,
+  "long_term_stability_verified": false,
+  "fpga_native_display_stability_accepted": false,
+  "actual_camera_correction_accepted": false,
+  "scope_of_inference": "Native FPGA path flickers under MJPEG and NV12; the same NV12 capture settings produce a user-reported stable direct-camera image. Focus investigation on the FPGA-inclusive path, including HDMI-OUT cable; this does not prove a specific FPGA code or clock defect.",
+  "current_physical_video_route": "R50 direct to capture, FPGA bypassed",
+  "current_fpga_image": "release/camera_native_rx_first_20261010/camera_native_rx_first_top.sbit",
+  "camera_checklist": "docs/R50相机与OBS设置_20261011.md",
+  "computer_use_paused_by_user": true,
+  "pending": "User verifies documented R50 FHD59.94/NTSC, HDMI1080p, camera+monitor, no auto-off settings against current stable direct capture; inspect FPGA native output clock/sync/IO and HDMI-OUT path next; desktop automation remains paused"
+}

@@ -1,0 +1,34 @@
+HDMI link I2C diagnostic v2 status decoder
+
+The bottom 90 active lines show a 9-row x 15-column grid. Each cell is 128
+pixels wide and 10 lines tall. Read left-to-right, then top-to-bottom. Green
+(00B000)=1; red (B00000)=0. The 135 displayed bits are MSB-first:
+
+  134:4 payload (131 bits, below); 3:0 zero padding
+  130 tx_done                129 rx_done
+  128 sticky ack_error       127 latest_nack_valid
+  126:119 latest_nack_device (B2=TX/MS7210, 56=RX/MS7200; 8-bit byte)
+  118:103 latest_nack_addr  (16-bit register address latched at START)
+  102:100 latest_nack_state (I2C FSM state; 3=S_ACK)
+   99:95 latest_nack_byte   (ACK byte ordinal, one-based: 1=device ID,
+                              2=low address, 3=high address, 4=data)
+   94 latest_nack_write     (1=write, 0=read)
+   93 latest_nack_owner_tx  (1=TX controller, 0=RX controller)
+   92:91 sampled SDA         (00=low, 10=high, 11=X/Z)
+   90 sampled SCL
+   89 rxclockSeen           88 deSeen
+   87:72 completed DE line width in pixels
+   71:56 HS pulse count since last VS (total lines, not active height; 1080p
+       typically 1125; if VS is absent this counter continues to advance)
+   55:32 latest RGB sample captured during DE
+   31:16 ACK-slot count (saturates at 65535)
+   15:0 NACK-slot count (saturates at 65535)
+
+Decode by shifting the 135-bit raw word right 4 bits before extracting the
+131-bit payload. The most recent NACK metadata uses device/address/write/owner
+latched on the transaction's START, so a controller advancing its live command
+at the final data boundary cannot mislabel that NACK. The first NACK fields are
+not sticky; latest NACK overwrites them. ACK and NACK counters count sampled
+S_ACK slots. The status word is latched at TX VS rising edge for each frame.
+LED[7:0] = rxclockSeen, ackError, deSeen, tx_done, rx_done, cfgPLL lock,
+videoPLL lock, 27 MHz heartbeat.

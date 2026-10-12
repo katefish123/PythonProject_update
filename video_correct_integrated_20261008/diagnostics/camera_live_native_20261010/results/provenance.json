@@ -1,0 +1,9 @@
+{
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\reset_sync.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\common\\reset_sync.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\hdmi_config.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\hdmi\\hdmi_config.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\iic_dri.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\hdmi\\iic_dri.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\ms7210_ctl.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\hdmi\\ms7210_ctl.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\ms7200_ctl.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\receiver_reconnect_20261010\\board_results\\ms7200_ctl.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\hdmi_vs_recover.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\vendor\\c_current\\01_design_code\\hdmi_vs_recover.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_live_native_20261010\\results\\config_pll_27m_10m.v": "C:\\D\\FPGA\\video_correct_integrated_20261008\\vendor\\c_current\\01_design_code\\ip\\config_pll_27m_10m\\config_pll_27m_10m.v"
+}

@@ -1,0 +1,33 @@
+version,2022.2-SP6.4<build 146967>
+project name,camera_live_bram_reconnect.pds
+
+Single Seed:
+Seed,State,Convergence,Setup(Slow),Setup(Fast),Hold(Slow),Hold(Fast),Recovery(Slow),Recovery(Fast),Removal(Slow),Removal(Fast),PBM-GP,PBM-PreGP,PBM-PostGP,LP,Total Placement Cpu Time,Detailed routing,Total Routing Cpu Time,Wire Length After Post-GP,Wire Length After LP,Wire Length After DP,Routing Arc Length,Worst Slack After GP Timing,Worst Slack After LP Timing,Worst Slack Before RP,Worst Slack Before DP,Worst Slack After DP,Worst Slack After Placement,Worst Slack After TA By Preroute,TNS After DP,TNS Before Route,Setup(Slow) Total Failing TNS,Setup(Slow) Total Failing Endpoints,Hold(Slow) Total Failing THS,Hold(Slow) Total Failing Endpoints,Power
+single,OK,OK,0.831,2.760,0.100,0.132,2.384,4.027,0.440,0.309,NA,NA,NA,0.12,9.09,2.14,16.05,NA,NA,NA,37484,NA,NA,931,931,1037,1037,NA,0,0,0.000,0,0.000,0,NA
+Pass Rate/Convergence Rate,100.00%,100.00%
+
+Synthesize:
+control_set,75
+Synthesize Performance Summary:
+slack category,Synthesize Setup WNS,Synthesize Setup TNS,Synthesize Recovery WNS,Synthesize Recovery TNS
+slack value,1.024,0.000,5.248,0.000
+Synthesize Process Cpu Time,0h:0m:10s
+
+Device Map:
+Device Map Resource Usage Summary:
+Logic Utilization,LUT,FF,DRM,APM,Distributed RAM,HSSTHP,USCM,HCKB,RCKB
+Used,791,1549,97,0,0,NA,4,0,0
+Available,66600,133200,155,240,19900,NA,32,96,24
+Utilization(%),2%,2%,63%,0%,0%,NA,13%,0%,0%
+Device Map Process Cpu Time,0h:0m:8s
+
+Project Configurations:
+top module,camera_live_bram_top
+compile," -top_module {camera_live_bram_top} "
+synthesize," -ads "
+device map,
+place & route,
+
+Test Parameters Configurations:
+testparam,
+

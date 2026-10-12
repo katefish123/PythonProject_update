@@ -1,0 +1,27 @@
+{
+  "qualified_at_utc": "2026-10-11T06:05:42.5803863Z",
+  "tests": {
+    "tb_hdmi_bram_probe": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "PASS_BRAM_TWO_CLOCKS_TWO_BANKS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_bram_overlay_20261011\\results\\tb_hdmi_bram_probe.run.log",
+      "log_sha256": "c3dfc7f91bd146d412a58bb3efa6affce017d6254e90cde65598baf69d5a98a4"
+    },
+    "tb_hdmi_bram_stale": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "PASS_BRAM_STALE_TIMEOUT_AND_RECOVERY",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_bram_overlay_20261011\\results\\tb_hdmi_bram_stale.run.log",
+      "log_sha256": "70e5de62a7ef2e80799681f4eedf0382bf26959ee83d9d1bac1feda6340f556d"
+    },
+    "tb_camera_bram_overlay": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "PASS_LIVE_CAMERA_STATUS_OVERLAY_FULL_1080P",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_bram_overlay_20261011\\results\\tb_camera_bram_overlay.run.log",
+      "log_sha256": "c719ac88817a203fd3f07915a9a57db64ad60af94b8f7b7ce5d20de7592fa7f4"
+    }
+  },
+  "hardware_accepted": false
+}

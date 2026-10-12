@@ -1,0 +1,16 @@
+test_bad_or_empty_manifest_cannot_pass (__main__.ModelSimScript.test_bad_or_empty_manifest_cannot_pass) ... ok
+test_compile_failure_stops_before_any_simulation (__main__.ModelSimScript.test_compile_failure_stops_before_any_simulation) ... ok
+test_every_source_is_a_separate_existing_filename (__main__.ModelSimScript.test_every_source_is_a_separate_existing_filename) ... ok
+test_multiple_values_cannot_be_treated_as_one_pass_flag (__main__.ModelSimScript.test_multiple_values_cannot_be_treated_as_one_pass_flag) ... ok
+test_new_integration_failure_blocks_all_pass_marker (__main__.ModelSimScript.test_new_integration_failure_blocks_all_pass_marker) ... ok
+test_one_bit_pass_does_not_use_signed_decimal_display (__main__.ModelSimScript.test_one_bit_pass_does_not_use_signed_decimal_display) ... ok
+test_package_directory_may_contain_spaces (__main__.ModelSimScript.test_package_directory_may_contain_spaces) ... ok
+test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) ... ok
+test_transcript_is_enabled_for_complete_native_log (__main__.ModelSimScript.test_transcript_is_enabled_for_complete_native_log) ... ok
+test_unpassed_testbench_stops_before_next_top (__main__.ModelSimScript.test_unpassed_testbench_stops_before_next_top) ... ok
+test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.210s
+
+OK

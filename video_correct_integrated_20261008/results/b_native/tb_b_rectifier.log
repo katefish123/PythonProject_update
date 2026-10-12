@@ -1,0 +1,43 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -voptargs="+acc" work.tb_b_rectifier -do "C:\D\FPGA\video_correct_integrated_20261008\results\b_native\tb_b_rectifier.do" 
+# Start time: 19:55:43 on Oct 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_b_rectifier(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# do {C:\D\FPGA\video_correct_integrated_20261008\results\b_native\tb_b_rectifier.do}
+# VIDEO_PASS pixels=2344 corners=2 rejected=1
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/vendor/b/sim/tb_b_rectifier.sv(112)
+#    Time: 147970 ns  Iteration: 1  Instance: /tb_b_rectifier
+# Break in Module tb_b_rectifier at C:/D/FPGA/video_correct_integrated_20261008/vendor/b/sim/tb_b_rectifier.sv line 112
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/vendor/b/sim/tb_b_rectifier.sv line 112
+# 1
+# NATIVE_PASS_BIT=1
+# End time: 19:55:44 on Oct 08,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

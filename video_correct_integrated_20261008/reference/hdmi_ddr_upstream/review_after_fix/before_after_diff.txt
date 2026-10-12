@@ -1,0 +1,1322 @@
+before_after_diff.txt
+Generated from exact S02F1 pre-fix backups where available.
+
+===== DIFF: codex_backups/S02F1_20260712_162812/HDMI_IN_DDR3_ROI_top.v -> source/rtl/HDMI_IN_DDR3_ROI_top/HDMI_IN_DDR3_ROI_top.v =====
+diff --git a/codex_backups/S02F1_20260712_162812/HDMI_IN_DDR3_ROI_top.v b/source/rtl/HDMI_IN_DDR3_ROI_top/HDMI_IN_DDR3_ROI_top.v
+index d334282..22ff9c2 100644
+--- a/codex_backups/S02F1_20260712_162812/HDMI_IN_DDR3_ROI_top.v
++++ b/source/rtl/HDMI_IN_DDR3_ROI_top/HDMI_IN_DDR3_ROI_top.v
+@@ -126,8 +126,6 @@ wire [15:0]                 hdmi_rgb565_in;
+ wire [15:0]                 o_rgb565;
+ 
+ reg  [26:0]                 cnt;
+-reg                         rst_reg;
+-
+ // AXI bus
+ wire [CTRL_ADDR_WIDTH-1:0]  axi_awaddr;
+ wire [3:0]                  axi_awuser_id;
+@@ -196,7 +194,7 @@ assign rx_rst_n     = rstn_out;
+ assign hdmi_int_led = init_over;
+ 
+ always @(posedge cfg_clk) begin
+-    if(!locked)
++    if(!locked || !rst_in)
+         rstn_1ms <= 16'd0;
+     else begin
+         if(rstn_1ms == 16'h2710)
+@@ -206,16 +204,38 @@ always @(posedge cfg_clk) begin
+     end
+ end
+ 
+-assign rstn_out = (rstn_1ms == 16'h2710);
++assign rstn_out = rst_in && (rstn_1ms == 16'h2710);
+ 
+-always @(posedge sys_clk) begin
+-    if(~rst_in)
+-        rst_reg <= 1'b1;
+-    else
+-        rst_reg <= 1'b0;
++// Capture the source-synchronous MS7200 bus at the input boundary.  Keeping
++// this stage explicit lets PDS pack the registers next to the input pads and
++// leaves a full pixel period for the colour-conversion arithmetic.
++reg        vs_in_q;
++reg        hs_in_q;
++reg        de_in_q;
++reg [7:0]  r_in_q;
++reg [7:0]  g_in_q;
++reg [7:0]  b_in_q;
++
++always @(posedge pixclk_in or negedge pixclk_in_rst_n) begin
++    if(!pixclk_in_rst_n) begin
++        vs_in_q <= 1'b0;
++        hs_in_q <= 1'b0;
++        de_in_q <= 1'b0;
++        r_in_q  <= 8'd0;
++        g_in_q  <= 8'd0;
++        b_in_q  <= 8'd0;
++    end
++    else begin
++        vs_in_q <= vs_in;
++        hs_in_q <= hs_in;
++        de_in_q <= de_in;
++        r_in_q  <= r_in;
++        g_in_q  <= g_in;
++        b_in_q  <= b_in;
++    end
+ end
+ 
+-assign hdmi_rgb565_in = {r_in[7:3], g_in[7:2], b_in[7:3]};
++assign hdmi_rgb565_in = {r_in_q[7:3], g_in_q[7:2], b_in_q[7:3]};
+ 
+ /////////////////////////////////////////////////////////////////////////////////////
+ // One-stage align before DDR write
+@@ -230,8 +250,8 @@ always @(posedge pixclk_in or negedge pixclk_in_rst_n) begin
+         rgb565_d1 <= 16'd0;
+     end
+     else begin
+-        vs_in_d1  <= vs_in;
+-        de_in_d1  <= de_in;
++        vs_in_d1  <= vs_in_q;
++        de_in_d1  <= de_in_q;
+         rgb565_d1 <= hdmi_rgb565_in;
+     end
+ end
+@@ -251,8 +271,7 @@ wire        edge_link_vs;
+ wire        edge_link_de;
+ wire        edge_link_bin;
+ 
+-localparam integer COLOR_ALIGN_MIN = 3;
+-localparam integer COLOR_ALIGN_MAX = 9;
++localparam integer COLOR_ALIGN_DELAY = 6;
+ 
+ wire        color_hit_raw;
+ wire        color_blue_hit;
+@@ -295,12 +314,12 @@ reg [15:0]  color_de_pipe;
+ RGB2YCbCr RGB2YCbCr_inst (
+     .clk       (pixclk_in),
+     .rst_n     (pixclk_in_rst_n),
+-    .vsync_in  (vs_in),
+-    .hsync_in  (de_in),
+-    .de_in     (de_in),
+-    .red       (r_in[7:3]),
+-    .green     (g_in[7:2]),
+-    .blue      (b_in[7:3]),
++    .vsync_in  (vs_in_q),
++    .hsync_in  (hs_in_q),
++    .de_in     (de_in_q),
++    .red       (r_in_q),
++    .green     (g_in_q),
++    .blue      (b_in_q),
+     .vsync_out (y_vs),
+     .hsync_out (y_hs),
+     .de_out    (y_de),
+@@ -322,7 +341,7 @@ assign color_blue_hit =
+     (cb_ext >= 9'd145) && (cb_ext <= 9'd245) &&
+     (cr_ext >= 9'd55)  && (cr_ext <= 9'd155) &&
+     (cb_ext >= (cr_ext + 9'd25));
+- // 横向连续蓝色过滤：过滤零散蓝色反�?小蓝�?
++ // 横向连续蓝色过滤：过滤零散蓝色反�?小蓝�?
+ reg [5:0] blue_run_cnt;
+ reg       color_blue_run_hit;
+ reg [5:0] blue_run_cnt_next;
+@@ -374,7 +393,7 @@ assign color_green_hit =
+     (cr_ext >= 9'd28)  && (cr_ext <= 9'd135) &&
+     (cb_ext >= (cr_ext + 9'd2)) &&
+     (chroma_sum >= 9'd38);
+-    // 横向连续绿色过滤：过滤零散绿色反�?背景�?
++    // 横向连续绿色过滤：过滤零散绿色反�?背景�?
+ reg [5:0] green_run_cnt;
+ reg       color_green_run_hit;
+ reg [5:0] green_run_cnt_next;
+@@ -418,7 +437,7 @@ assign color_yellow_hit =
+     (cr_ext >= (cb_ext + 9'd45)) &&
+     (chroma_sum >= 9'd60);
+ 
+-    // 横向连续黄色过滤：过滤零散黄色反�?灯光/背景�?
++    // 横向连续黄色过滤：过滤零散黄色反�?灯光/背景�?
+ always @(*) begin
+     if(!y_de)
+         yellow_run_cnt_next = 6'd0;
+@@ -481,11 +500,8 @@ always @(posedge pixclk_in or negedge pixclk_in_rst_n) begin
+         color_hit_pipe <= {color_hit_pipe[14:0], color_hit_raw};
+         color_de_pipe  <= {color_de_pipe[14:0], y_de};
+ 
+-        if(|color_de_pipe[COLOR_ALIGN_MAX:COLOR_ALIGN_MIN])
+-            color_hit_edge <= |(color_hit_pipe[COLOR_ALIGN_MAX:COLOR_ALIGN_MIN] &
+-                                color_de_pipe[COLOR_ALIGN_MAX:COLOR_ALIGN_MIN]);
+-        else
+-            color_hit_edge <= 1'b0;
++        color_hit_edge <= color_hit_pipe[COLOR_ALIGN_DELAY] &&
++                          color_de_pipe[COLOR_ALIGN_DELAY];
+     end
+ end
+ 
+@@ -530,38 +546,6 @@ assign selected_color_hit_aligned = strong_color_hit;
+ assign score_color_in = selected_color_hit_aligned;
+ assign score_bin_in   = edge_link_bin;
+ 
+-wire                  run_valid_w       /* synthesis PAP_MARK_DEBUG="true" */;
+-wire [X_BITS-1:0]     run_x1_w          /* synthesis PAP_MARK_DEBUG="true" */;
+-wire [X_BITS-1:0]     run_x2_w          /* synthesis PAP_MARK_DEBUG="true" */;
+-wire [Y_BITS-1:0]     run_y_w           /* synthesis PAP_MARK_DEBUG="true" */;
+-wire [X_BITS-1:0]     run_width_w       /* synthesis PAP_MARK_DEBUG="true" */;
+-wire [15:0]           run_color_count_w /* synthesis PAP_MARK_DEBUG="true" */;
+-wire [15:0]           run_edge_count_w  /* synthesis PAP_MARK_DEBUG="true" */;
+-wire                  run_frame_done_w  /* synthesis PAP_MARK_DEBUG="true" */;
+-
+-run_segment_detect #(
+-    .IMG_WIDTH   (1920),
+-    .IMG_HEIGHT  (1080),
+-    .X_BITS      (X_BITS),
+-    .Y_BITS      (Y_BITS),
+-    .RUN_MIN_LEN (12)
+-) u_run_segment_detect (
+-    .clk             (pixclk_in),
+-    .rst_n           (pixclk_in_rst_n),
+-    .bin_vsync       (edge_link_vs),
+-    .bin_de          (edge_link_de),
+-    .color_hit_in    (selected_color_hit_aligned),
+-    .edge_hit_in     (edge_link_bin),
+-    .run_valid       (run_valid_w),
+-    .run_x1          (run_x1_w),
+-    .run_x2          (run_x2_w),
+-    .run_y           (run_y_w),
+-    .run_width       (run_width_w),
+-    .run_color_count (run_color_count_w),
+-    .run_edge_count  (run_edge_count_w),
+-    .frame_done      (run_frame_done_w)
+-);
+-
+ /////////////////////////////////////////////////////////////////////////////////////
+ // ROI raw
+ wire                  roi_valid_raw;
+@@ -620,10 +604,19 @@ Plate_Window_Scorer #(
+     .TRACK_LOOSE_COLOR_MIN(1),
+     .TRACK_PAD_X          (200),
+     .TRACK_PAD_Y          (90),
+-    .FAR_CONFIRM_FRAMES   (12),
++    .FAR_CONFIRM_FRAMES   (2),
+     .FORCE_SWITCH_LOST_FRAMES(20),
+     .COLOR_SWITCH_MARGIN_STRONG(6),
+-    .EDGE_COLOR_PAD       (8)
++    .EDGE_COLOR_PAD       (8),
++    .STRICT_MAX_ASPECT    (10),
++    .ROW_X_TOL            (24),
++    .ACQUIRE_CONFIRM_FRAMES(2),
++    .CORNER_CONFIRM_FRAMES(3),
++    .CORNER_GUARD_X       (96),
++    .CORNER_GUARD_Y       (64),
++    .GLOBAL_RESCAN_PERIOD (15),
++    .FAR_SCORE_RATIO_NUM  (5),
++    .FAR_SCORE_RATIO_DEN  (4)
+ ) u_Plate_Window_Scorer (
+     .clk            (pixclk_in),
+     .rst_n          (pixclk_in_rst_n),
+@@ -691,43 +684,6 @@ assign roi_y1_map    = roi_y1_adj;
+ assign roi_x2_map    = roi_x2_adj;
+ assign roi_y2_map    = roi_y2_adj;
+ 
+-/////////////////////////////////////////////////////////////////////////////////////
+-// ROI cropper
+-wire              roi_frame_start_w;
+-wire              roi_de_w;
+-wire [7:0]        roi_r_w;
+-wire [7:0]        roi_g_w;
+-wire [7:0]        roi_b_w;
+-wire [X_BITS-1:0] roi_rel_x_w;
+-wire [Y_BITS-1:0] roi_rel_y_w;
+-
+-ROI_Cropper_Simple #(
+-    .IMG_WIDTH    (1920),
+-    .IMG_HEIGHT   (1080),
+-    .X_BITS       (X_BITS),
+-    .Y_BITS       (Y_BITS)
+-) u_ROI_Cropper_Simple (
+-    .clk             (pixclk_in),
+-    .rst_n           (pixclk_in_rst_n),
+-    .src_vsync       (vs_in),
+-    .src_de          (de_in),
+-    .src_r           (r_in),
+-    .src_g           (g_in),
+-    .src_b           (b_in),
+-    .roi_valid_in    (roi_valid_map),
+-    .roi_x1_in       (roi_x1_map),
+-    .roi_y1_in       (roi_y1_map),
+-    .roi_x2_in       (roi_x2_map),
+-    .roi_y2_in       (roi_y2_map),
+-    .roi_frame_start (roi_frame_start_w),
+-    .roi_de          (roi_de_w),
+-    .roi_r           (roi_r_w),
+-    .roi_g           (roi_g_w),
+-    .roi_b           (roi_b_w),
+-    .roi_rel_x       (roi_rel_x_w),
+-    .roi_rel_y       (roi_rel_y_w)
+-);
+-
+ /////////////////////////////////////////////////////////////////////////////////////
+ // ROI coords cross clock domain: pixclk_in -> pix_clk
+ reg roi_map_done_d0, roi_map_done_d1, roi_map_done_d2;
+@@ -783,6 +739,10 @@ reg roi_update_meta2_d;
+ reg              roi_valid_disp;
+ reg [X_BITS-1:0] roi_x1_disp, roi_x2_disp;
+ reg [Y_BITS-1:0] roi_y1_disp, roi_y2_disp;
++reg              roi_valid_pending;
++reg [X_BITS-1:0] roi_x1_pending, roi_x2_pending;
++reg [Y_BITS-1:0] roi_y1_pending, roi_y2_pending;
++reg              vs_reg_d;
+ 
+ always @(posedge pix_clk or negedge pix_clk_rst_n) begin
+     if(!pix_clk_rst_n) begin
+@@ -790,25 +750,40 @@ always @(posedge pix_clk or negedge pix_clk_rst_n) begin
+         roi_update_meta1   <= 1'b0;
+         roi_update_meta2   <= 1'b0;
+         roi_update_meta2_d <= 1'b0;
++        vs_reg_d           <= 1'b0;
+ 
+         roi_valid_disp <= 1'b0;
+         roi_x1_disp    <= {X_BITS{1'b0}};
+         roi_x2_disp    <= {X_BITS{1'b0}};
+         roi_y1_disp    <= {Y_BITS{1'b0}};
+         roi_y2_disp    <= {Y_BITS{1'b0}};
++        roi_valid_pending <= 1'b0;
++        roi_x1_pending    <= {X_BITS{1'b0}};
++        roi_x2_pending    <= {X_BITS{1'b0}};
++        roi_y1_pending    <= {Y_BITS{1'b0}};
++        roi_y2_pending    <= {Y_BITS{1'b0}};
+     end
+     else begin
+         roi_update_meta0   <= roi_update_toggle_in;
+         roi_update_meta1   <= roi_update_meta0;
+         roi_update_meta2   <= roi_update_meta1;
+         roi_update_meta2_d <= roi_update_meta2;
++        vs_reg_d           <= vs_reg;
+ 
+         if(roi_update_meta2 ^ roi_update_meta2_d) begin
+-            roi_valid_disp <= roi_valid_hold_in;
+-            roi_x1_disp    <= roi_x1_hold_in;
+-            roi_x2_disp    <= roi_x2_hold_in;
+-            roi_y1_disp    <= roi_y1_hold_in;
+-            roi_y2_disp    <= roi_y2_hold_in;
++            roi_valid_pending <= roi_valid_hold_in;
++            roi_x1_pending    <= roi_x1_hold_in;
++            roi_x2_pending    <= roi_x2_hold_in;
++            roi_y1_pending    <= roi_y1_hold_in;
++            roi_y2_pending    <= roi_y2_hold_in;
++        end
++
++        if(!vs_reg_d && vs_reg) begin
++            roi_valid_disp <= roi_valid_pending;
++            roi_x1_disp    <= roi_x1_pending;
++            roi_x2_disp    <= roi_x2_pending;
++            roi_y1_disp    <= roi_y1_pending;
++            roi_y2_disp    <= roi_y2_pending;
+         end
+     end
+ end
+@@ -953,19 +928,8 @@ assign on_box_right =
+     (act_x <= sel_roi_x2) && (act_x > sel_roi_x2 - BOX_THICK);
+ 
+ assign on_roi_box = on_box_top | on_box_bottom | on_box_left | on_box_right;
+-wire inside_roi_disp;
+-
+-assign inside_roi_disp =
+-    sel_roi_valid &&
+-    (act_x >= sel_roi_x1) && (act_x <= sel_roi_x2) &&
+-    (act_y >= sel_roi_y1) && (act_y <= sel_roi_y2);
+-
+ /////////////////////////////////////////////////////////////////////////////////////
+-// HDMI output: original image + green ROI box
+-/////////////////////////////////////////////////////////////////////////////////////
+-// HDMI output: ROI inside image, outside black, no green box
+-/////////////////////////////////////////////////////////////////////////////////////
+-// HDMI output: ROI inside image, outside black, with green ROI box
++// HDMI output: full image with green ROI box
+ always @(posedge pix_clk or negedge pix_clk_rst_n) begin
+     if(!pix_clk_rst_n) begin
+         vs_out <= 1'b0;
+@@ -996,18 +960,11 @@ always @(posedge pix_clk or negedge pix_clk_rst_n) begin
+             g_out <= 8'hFF;
+             b_out <= 8'd0;
+         end
+-        else if(inside_roi_disp) begin
+-            // ROI 内部输出原始 RGB 图像
++        else begin
+             r_out <= {o_rgb565[15:11], 3'd0};
+             g_out <= {o_rgb565[10:5],  2'd0};
+             b_out <= {o_rgb565[4:0],   3'd0};
+         end
+-        else begin
+-            // ROI 外部全部置黑
+-            r_out <= 8'd0;
+-            g_out <= 8'd0;
+-            b_out <= 8'd0;
+-        end
+     end
+ end
+ 
+
+===== DIFF: codex_backups/S02F1_20260712_162812/Plate_Window_Scorer.v -> source/rtl/Target_Analysis_Top/Plate_Window_Scorer.v =====
+diff --git a/codex_backups/S02F1_20260712_162812/Plate_Window_Scorer.v b/source/rtl/Target_Analysis_Top/Plate_Window_Scorer.v
+index 3762013..fb92c61 100644
+--- a/codex_backups/S02F1_20260712_162812/Plate_Window_Scorer.v
++++ b/source/rtl/Target_Analysis_Top/Plate_Window_Scorer.v
+@@ -1,3 +1,5 @@
++`timescale 1ns/1ps
++
+ module Plate_Window_Scorer #(
+     parameter IMG_WIDTH=1920,
+     parameter IMG_HEIGHT=1080,
+@@ -91,7 +93,17 @@ module Plate_Window_Scorer #(
+ 
+     // 轻量输入扩张
+     parameter EDGE_EXPAND_LEN         = 2,
+-    parameter COLOR_EXPAND_LEN        = 1
++    parameter COLOR_EXPAND_LEN        = 1,
++
++    parameter STRICT_MAX_ASPECT       = 10,
++    parameter ROW_X_TOL               = 24,
++    parameter ACQUIRE_CONFIRM_FRAMES  = 2,
++    parameter CORNER_CONFIRM_FRAMES   = 3,
++    parameter CORNER_GUARD_X          = 96,
++    parameter CORNER_GUARD_Y          = 64,
++    parameter GLOBAL_RESCAN_PERIOD    = 15,
++    parameter FAR_SCORE_RATIO_NUM     = 5,
++    parameter FAR_SCORE_RATIO_DEN     = 4
+ )(
+     input  wire              clk,
+     input  wire              rst_n,
+@@ -146,6 +158,7 @@ module Plate_Window_Scorer #(
+     wire [11:0] raw_ymax;
+     wire [23:0] raw_score;
+     wire [15:0] raw_color_sum;
++    wire        raw_is_strict;
+ 
+     // normalize 后候选框
+     wire        norm_valid;
+@@ -154,9 +167,19 @@ module Plate_Window_Scorer #(
+     wire [11:0] norm_xmax;
+     wire [11:0] norm_ymax;
+ 
++    reg         cand_valid_r;
++    reg  [11:0] cand_xmin;
++    reg  [11:0] cand_ymin;
++    reg  [11:0] cand_xmax;
++    reg  [11:0] cand_ymax;
++    reg  [23:0] cand_score;
++    reg  [15:0] cand_color_sum;
++    reg         cand_is_strict;
++
+     // 帧同步
+     reg  bin_vsync_d;
+     reg  frame_armed_top;
++    reg  frame_capture_top;
+     reg  frame_eval_top;
+     wire frame_edge;
+     wire frame_event_top;
+@@ -187,6 +210,10 @@ module Plate_Window_Scorer #(
+     reg [11:0]  far_y2;
+     reg [23:0]  far_score;
+     reg [15:0]  far_color_sum;
++    reg         far_pending_strict;
++
++    reg [7:0]   global_scan_cnt;
++    reg         force_global_scan;
+ 
+     function [11:0] step_limit12;
+         input [11:0] cur;
+@@ -219,7 +246,7 @@ module Plate_Window_Scorer #(
+     wire [11:0] search_ymin_cur;
+     wire [11:0] search_ymax_cur;
+ 
+-    wire use_local_search = track_locked && (track_lost_cnt < LOST_CONFIRM_FRAMES);
++    wire use_local_search = track_locked && (track_lost_cnt < LOST_CONFIRM_FRAMES) && !force_global_scan;
+ 
+     wire [11:0] local_xmin_raw = (lock_x1 > TRACK_PAD_X_W) ? (lock_x1 - TRACK_PAD_X_W) : 12'd0;
+     wire [11:0] local_ymin_raw = (lock_y1 > TRACK_PAD_Y_W) ? (lock_y1 - TRACK_PAD_Y_W) : 12'd0;
+@@ -251,8 +278,14 @@ module Plate_Window_Scorer #(
+         .LOOSE_W_MAX    (12'd800),
+         .X_PAD          (12'd20),
+         .Y_PAD          (12'd12),
+-        .COLOR_WEIGHT   (COLOR_WEIGHT),
+-        .EDGE_COLOR_PAD (EDGE_COLOR_PAD)
++        .COLOR_WEIGHT     (COLOR_WEIGHT),
++        .EDGE_COLOR_PAD   (EDGE_COLOR_PAD),
++        .STRICT_MAX_ASPECT(STRICT_MAX_ASPECT),
++        .ROW_X_TOL        (ROW_X_TOL),
++        .COLOR_RATIO_NUM  (COLOR_RATIO_NUM),
++        .COLOR_RATIO_DEN  (COLOR_RATIO_DEN),
++        .WEAK_RATIO_NUM   (WEAK_COLOR_RATIO_NUM),
++        .WEAK_RATIO_DEN   (WEAK_COLOR_RATIO_DEN)
+     ) u_plate_bbox_segment_ref (
+         .clk              (clk),
+         .rst_n            (rst_n),
+@@ -274,7 +307,8 @@ module Plate_Window_Scorer #(
+         .bbox_xmax        (raw_xmax),
+         .bbox_ymax        (raw_ymax),
+         .bbox_score       (raw_score),
+-        .bbox_color_sum   (raw_color_sum)
++        .bbox_color_sum   (raw_color_sum),
++        .bbox_is_strict   (raw_is_strict)
+     );
+ 
+     bbox_plate_normalize_ref #(
+@@ -298,12 +332,12 @@ module Plate_Window_Scorer #(
+     );
+ 
+     // 候选参数
+-    wire cand_valid = norm_valid && (norm_xmax >= norm_xmin) && (norm_ymax >= norm_ymin);
+-    wire [11:0] cand_w = cand_valid ? (norm_xmax - norm_xmin + 1'b1) : 12'd0;
+-    wire [11:0] cand_h = cand_valid ? (norm_ymax - norm_ymin + 1'b1) : 12'd0;
++    wire cand_valid = cand_valid_r && (cand_xmax >= cand_xmin) && (cand_ymax >= cand_ymin);
++    wire [11:0] cand_w = cand_valid ? (cand_xmax - cand_xmin + 1'b1) : 12'd0;
++    wire [11:0] cand_h = cand_valid ? (cand_ymax - cand_ymin + 1'b1) : 12'd0;
+ 
+-    wire [12:0] cand_cx = ({1'b0, norm_xmin} + {1'b0, norm_xmax}) >> 1;
+-    wire [12:0] cand_cy = ({1'b0, norm_ymin} + {1'b0, norm_ymax}) >> 1;
++    wire [12:0] cand_cx = ({1'b0, cand_xmin} + {1'b0, cand_xmax}) >> 1;
++    wire [12:0] cand_cy = ({1'b0, cand_ymin} + {1'b0, cand_ymax}) >> 1;
+     wire [12:0] lock_cx = ({1'b0, lock_x1} + {1'b0, lock_x2}) >> 1;
+     wire [12:0] lock_cy = ({1'b0, lock_y1} + {1'b0, lock_y2}) >> 1;
+ 
+@@ -319,18 +353,18 @@ module Plate_Window_Scorer #(
+     wire cand_near_far_pending = (far_dx <= SWITCH_X_RADIUS) && (far_dy <= SWITCH_Y_RADIUS);
+ 
+     // 平滑更新
+-    wire [11:0] smooth_x1 = (norm_xmin >= lock_x1) ?
+-                             (lock_x1 + ((norm_xmin - lock_x1) >> SMOOTH_SHIFT)) :
+-                             (lock_x1 - ((lock_x1 - norm_xmin) >> SMOOTH_SHIFT));
+-    wire [11:0] smooth_y1 = (norm_ymin >= lock_y1) ?
+-                             (lock_y1 + ((norm_ymin - lock_y1) >> SMOOTH_SHIFT)) :
+-                             (lock_y1 - ((lock_y1 - norm_ymin) >> SMOOTH_SHIFT));
+-    wire [11:0] smooth_x2 = (norm_xmax >= lock_x2) ?
+-                             (lock_x2 + ((norm_xmax - lock_x2) >> SMOOTH_SHIFT)) :
+-                             (lock_x2 - ((lock_x2 - norm_xmax) >> SMOOTH_SHIFT));
+-    wire [11:0] smooth_y2 = (norm_ymax >= lock_y2) ?
+-                             (lock_y2 + ((norm_ymax - lock_y2) >> SMOOTH_SHIFT)) :
+-                             (lock_y2 - ((lock_y2 - norm_ymax) >> SMOOTH_SHIFT));
++    wire [11:0] smooth_x1 = (cand_xmin >= lock_x1) ?
++                             (lock_x1 + ((cand_xmin - lock_x1) >> SMOOTH_SHIFT)) :
++                             (lock_x1 - ((lock_x1 - cand_xmin) >> SMOOTH_SHIFT));
++    wire [11:0] smooth_y1 = (cand_ymin >= lock_y1) ?
++                             (lock_y1 + ((cand_ymin - lock_y1) >> SMOOTH_SHIFT)) :
++                             (lock_y1 - ((lock_y1 - cand_ymin) >> SMOOTH_SHIFT));
++    wire [11:0] smooth_x2 = (cand_xmax >= lock_x2) ?
++                             (lock_x2 + ((cand_xmax - lock_x2) >> SMOOTH_SHIFT)) :
++                             (lock_x2 - ((lock_x2 - cand_xmax) >> SMOOTH_SHIFT));
++    wire [11:0] smooth_y2 = (cand_ymax >= lock_y2) ?
++                             (lock_y2 + ((cand_ymax - lock_y2) >> SMOOTH_SHIFT)) :
++                             (lock_y2 - ((lock_y2 - cand_ymax) >> SMOOTH_SHIFT));
+ 
+     wire [11:0] smooth_w = (smooth_x2 >= smooth_x1) ? (smooth_x2 - smooth_x1 + 1'b1) : 12'd0;
+     wire [11:0] smooth_h = (smooth_y2 >= smooth_y1) ? (smooth_y2 - smooth_y1 + 1'b1) : 12'd0;
+@@ -353,19 +387,38 @@ module Plate_Window_Scorer #(
+     wire [11:0] hold_w  = (hold_x2 >= hold_x1) ? (hold_x2 - hold_x1 + 1'b1) : lock_w;
+     wire [11:0] hold_h  = (hold_y2 >= hold_y1) ? (hold_y2 - hold_y1 + 1'b1) : lock_h;
+ 
+-    wire [23:0] switch_margin_conf = {19'd0, lock_conf} << 4;
++    wire [27:0] far_score_scaled = {4'd0, cand_score} * FAR_SCORE_RATIO_DEN;
++    wire [27:0] lock_score_scaled = {4'd0, lock_score} * FAR_SCORE_RATIO_NUM;
+     wire far_candidate_better =
+         cand_valid &&
+         !cand_near_lock &&
+-        (raw_score >= (lock_score + SWITCH_MARGIN + switch_margin_conf)) &&
+-        (raw_color_sum >= (lock_color_sum + COLOR_SWITCH_MARGIN_STRONG));
++        (far_score_scaled >= lock_score_scaled);
++
++    wire cand_at_left   = cand_xmin <= (GLOBAL_X_MIN + CORNER_GUARD_X);
++    wire cand_at_right  = cand_xmax >= (GLOBAL_X_MAX - CORNER_GUARD_X);
++    wire cand_at_top    = cand_ymin <= (GLOBAL_Y_MIN + CORNER_GUARD_Y);
++    wire cand_at_bottom = cand_ymax >= (GLOBAL_Y_MAX - CORNER_GUARD_Y);
++    wire cand_in_corner = (cand_at_left || cand_at_right) &&
++                          (cand_at_top || cand_at_bottom);
++    wire [3:0] acquire_required = cand_in_corner ?
++                                  CORNER_CONFIRM_FRAMES : ACQUIRE_CONFIRM_FRAMES;
+ 
+     always @(posedge clk or negedge rst_n) begin
+         if(!rst_n) begin
+             bin_vsync_d     <= 1'b0;
+             frame_armed_top <= 1'b1;
++            frame_capture_top <= 1'b0;
+             frame_eval_top  <= 1'b0;
+ 
++            cand_valid_r    <= 1'b0;
++            cand_xmin       <= 12'd0;
++            cand_ymin       <= 12'd0;
++            cand_xmax       <= 12'd0;
++            cand_ymax       <= 12'd0;
++            cand_score      <= 24'd0;
++            cand_color_sum  <= 16'd0;
++            cand_is_strict  <= 1'b0;
++
+             edge_d1  <= 1'b0;
+             edge_d2  <= 1'b0;
+             color_d1 <= 1'b0;
+@@ -388,8 +441,11 @@ module Plate_Window_Scorer #(
+             far_y1            <= 12'd0;
+             far_x2            <= 12'd0;
+             far_y2            <= 12'd0;
+-            far_score         <= 24'd0;
+-            far_color_sum     <= 16'd0;
++            far_score          <= 24'd0;
++            far_color_sum      <= 16'd0;
++            far_pending_strict <= 1'b0;
++            global_scan_cnt    <= 8'd0;
++            force_global_scan  <= 1'b0;
+ 
+             roi_valid      <= 1'b0;
+             roi_x1         <= {X_BITS{1'b0}};
+@@ -403,8 +459,20 @@ module Plate_Window_Scorer #(
+         end
+         else begin
+             bin_vsync_d     <= bin_vsync;
+-            frame_eval_top  <= frame_event_top;
+-            roi_frame_done  <= frame_event_top;
++            frame_capture_top <= frame_event_top;
++            frame_eval_top  <= frame_capture_top;
++            roi_frame_done  <= frame_eval_top;
++
++            if(frame_capture_top) begin
++                cand_valid_r   <= norm_valid;
++                cand_xmin      <= norm_xmin;
++                cand_ymin      <= norm_ymin;
++                cand_xmax      <= norm_xmax;
++                cand_ymax      <= norm_ymax;
++                cand_score     <= raw_score;
++                cand_color_sum <= raw_color_sum;
++                cand_is_strict <= raw_is_strict;
++            end
+ 
+             if(bin_de) begin
+                 frame_armed_top <= 1'b1;
+@@ -423,33 +491,80 @@ module Plate_Window_Scorer #(
+ 
+             if(frame_eval_top) begin
+                 if(!track_locked) begin
+-                    far_pending_valid <= 1'b0;
+-                    far_pending_cnt   <= 4'd0;
+-
+-                    if(cand_valid) begin
+-                        track_locked   <= 1'b1;
+-                        track_lost_cnt <= 6'd0;
+-                        lock_conf      <= LOCK_CONF_INC_W;
+-                        hold_expand_x  <= 12'd0;
+-                        hold_expand_y  <= 12'd0;
++                    global_scan_cnt   <= 8'd0;
++                    force_global_scan <= 1'b0;
++
++                    if(cand_valid && !(cand_in_corner && !cand_is_strict)) begin
++                        if(far_pending_valid && cand_near_far_pending &&
++                           (far_pending_strict == cand_is_strict)) begin
++                            far_x1            <= cand_xmin;
++                            far_y1            <= cand_ymin;
++                            far_x2            <= cand_xmax;
++                            far_y2            <= cand_ymax;
++                            far_score         <= cand_score;
++                            far_color_sum     <= cand_color_sum;
++                            far_pending_strict<= cand_is_strict;
++
++                            if((far_pending_cnt + 1'b1) >= acquire_required) begin
++                                track_locked      <= 1'b1;
++                                track_lost_cnt    <= 6'd0;
++                                lock_conf         <= LOCK_CONF_INC_W;
++                                hold_expand_x     <= 12'd0;
++                                hold_expand_y     <= 12'd0;
++                                lock_x1           <= cand_xmin;
++                                lock_y1           <= cand_ymin;
++                                lock_x2           <= cand_xmax;
++                                lock_y2           <= cand_ymax;
++                                lock_score        <= cand_score;
++                                lock_color_sum    <= cand_color_sum;
++                                far_pending_valid <= 1'b0;
++                                far_pending_cnt   <= 4'd0;
+ 
+-                        lock_x1        <= norm_xmin;
+-                        lock_y1        <= norm_ymin;
+-                        lock_x2        <= norm_xmax;
+-                        lock_y2        <= norm_ymax;
+-                        lock_score     <= raw_score;
+-                        lock_color_sum <= raw_color_sum;
+-
+-                        roi_valid <= 1'b1;
+-                        roi_x1    <= norm_xmin[X_BITS-1:0];
+-                        roi_y1    <= norm_ymin[Y_BITS-1:0];
+-                        roi_x2    <= norm_xmax[X_BITS-1:0];
+-                        roi_y2    <= norm_ymax[Y_BITS-1:0];
+-                        roi_w     <= cand_w[X_BITS-1:0];
+-                        roi_h     <= cand_h[Y_BITS-1:0];
+-                        roi_area  <= cand_w * cand_h;
++                                roi_valid <= 1'b1;
++                                roi_x1    <= cand_xmin[X_BITS-1:0];
++                                roi_y1    <= cand_ymin[Y_BITS-1:0];
++                                roi_x2    <= cand_xmax[X_BITS-1:0];
++                                roi_y2    <= cand_ymax[Y_BITS-1:0];
++                                roi_w     <= cand_w[X_BITS-1:0];
++                                roi_h     <= cand_h[Y_BITS-1:0];
++                                roi_area  <= cand_w * cand_h;
++                            end
++                            else begin
++                                far_pending_cnt <= far_pending_cnt + 1'b1;
++                                roi_valid <= 1'b0;
++                                roi_x1    <= {X_BITS{1'b0}};
++                                roi_y1    <= {Y_BITS{1'b0}};
++                                roi_x2    <= {X_BITS{1'b0}};
++                                roi_y2    <= {Y_BITS{1'b0}};
++                                roi_w     <= {X_BITS{1'b0}};
++                                roi_h     <= {Y_BITS{1'b0}};
++                                roi_area  <= 32'd0;
++                            end
++                        end
++                        else begin
++                            far_pending_valid <= 1'b1;
++                            far_pending_cnt   <= 4'd1;
++                            far_pending_strict<= cand_is_strict;
++                            far_x1            <= cand_xmin;
++                            far_y1            <= cand_ymin;
++                            far_x2            <= cand_xmax;
++                            far_y2            <= cand_ymax;
++                            far_score         <= cand_score;
++                            far_color_sum     <= cand_color_sum;
++                            roi_valid <= 1'b0;
++                            roi_x1    <= {X_BITS{1'b0}};
++                            roi_y1    <= {Y_BITS{1'b0}};
++                            roi_x2    <= {X_BITS{1'b0}};
++                            roi_y2    <= {Y_BITS{1'b0}};
++                            roi_w     <= {X_BITS{1'b0}};
++                            roi_h     <= {Y_BITS{1'b0}};
++                            roi_area  <= 32'd0;
++                        end
+                     end
+                     else begin
++                        far_pending_valid <= 1'b0;
++                        far_pending_cnt   <= 4'd0;
++                        far_pending_strict<= 1'b0;
+                         roi_valid <= 1'b0;
+                         roi_x1    <= {X_BITS{1'b0}};
+                         roi_y1    <= {Y_BITS{1'b0}};
+@@ -461,6 +576,18 @@ module Plate_Window_Scorer #(
+                     end
+                 end
+                 else begin
++                    if(force_global_scan) begin
++                        force_global_scan <= 1'b0;
++                        global_scan_cnt   <= 8'd0;
++                    end
++                    else if(global_scan_cnt >= (GLOBAL_RESCAN_PERIOD - 2)) begin
++                        force_global_scan <= 1'b1;
++                        global_scan_cnt   <= 8'd0;
++                    end
++                    else begin
++                        global_scan_cnt <= global_scan_cnt + 1'b1;
++                    end
++
+                     if(cand_valid && cand_near_lock) begin
+                         // 近候选：正常平滑更新
+                         track_lost_cnt <= 6'd0;
+@@ -471,15 +598,18 @@ module Plate_Window_Scorer #(
+                         else
+                             lock_conf <= lock_conf + LOCK_CONF_INC_W;
+ 
+-                        far_pending_valid <= 1'b0;
+-                        far_pending_cnt   <= 4'd0;
++                        if(force_global_scan) begin
++                            far_pending_valid  <= 1'b0;
++                            far_pending_cnt    <= 4'd0;
++                            far_pending_strict <= 1'b0;
++                        end
+ 
+                         lock_x1        <= limited_x1;
+                         lock_y1        <= limited_y1;
+                         lock_x2        <= limited_x2;
+                         lock_y2        <= limited_y2;
+-                        lock_score     <= raw_score;
+-                        lock_color_sum <= raw_color_sum;
++                        lock_score     <= cand_score;
++                        lock_color_sum <= cand_color_sum;
+ 
+                         roi_valid <= 1'b1;
+                         roi_x1    <= limited_x1[X_BITS-1:0];
+@@ -490,6 +620,71 @@ module Plate_Window_Scorer #(
+                         roi_h     <= limited_h[Y_BITS-1:0];
+                         roi_area  <= limited_w * limited_h;
+                     end
++                    else if(force_global_scan && far_candidate_better) begin
++                        far_x1            <= cand_xmin;
++                        far_y1            <= cand_ymin;
++                        far_x2            <= cand_xmax;
++                        far_y2            <= cand_ymax;
++                        far_score         <= cand_score;
++                        far_color_sum     <= cand_color_sum;
++                        far_pending_strict<= cand_is_strict;
++
++                        if(far_pending_valid && cand_near_far_pending &&
++                           (far_pending_strict == cand_is_strict) &&
++                           ((far_pending_cnt + 1'b1) >= FAR_CONFIRM_FRAMES)) begin
++                            track_lost_cnt    <= 6'd0;
++                            lock_conf         <= LOCK_CONF_MAX_W;
++                            hold_expand_x     <= 12'd0;
++                            hold_expand_y     <= 12'd0;
++                            lock_x1           <= cand_xmin;
++                            lock_y1           <= cand_ymin;
++                            lock_x2           <= cand_xmax;
++                            lock_y2           <= cand_ymax;
++                            lock_score        <= cand_score;
++                            lock_color_sum    <= cand_color_sum;
++                            far_pending_valid <= 1'b0;
++                            far_pending_cnt   <= 4'd0;
++
++                            roi_valid <= 1'b1;
++                            roi_x1    <= cand_xmin[X_BITS-1:0];
++                            roi_y1    <= cand_ymin[Y_BITS-1:0];
++                            roi_x2    <= cand_xmax[X_BITS-1:0];
++                            roi_y2    <= cand_ymax[Y_BITS-1:0];
++                            roi_w     <= cand_w[X_BITS-1:0];
++                            roi_h     <= cand_h[Y_BITS-1:0];
++                            roi_area  <= cand_w * cand_h;
++                        end
++                        else begin
++                            far_pending_valid <= 1'b1;
++                            if(far_pending_valid && cand_near_far_pending &&
++                               (far_pending_strict == cand_is_strict))
++                                far_pending_cnt <= far_pending_cnt + 1'b1;
++                            else
++                                far_pending_cnt <= 4'd1;
++
++                            roi_valid <= 1'b1;
++                            roi_x1    <= hold_x1[X_BITS-1:0];
++                            roi_y1    <= hold_y1[Y_BITS-1:0];
++                            roi_x2    <= hold_x2[X_BITS-1:0];
++                            roi_y2    <= hold_y2[Y_BITS-1:0];
++                            roi_w     <= hold_w[X_BITS-1:0];
++                            roi_h     <= hold_h[Y_BITS-1:0];
++                            roi_area  <= hold_w * hold_h;
++                        end
++                    end
++                    else if(force_global_scan) begin
++                        far_pending_valid  <= 1'b0;
++                        far_pending_cnt    <= 4'd0;
++                        far_pending_strict <= 1'b0;
++                        roi_valid <= 1'b1;
++                        roi_x1    <= hold_x1[X_BITS-1:0];
++                        roi_y1    <= hold_y1[Y_BITS-1:0];
++                        roi_x2    <= hold_x2[X_BITS-1:0];
++                        roi_y2    <= hold_y2[Y_BITS-1:0];
++                        roi_w     <= hold_w[X_BITS-1:0];
++                        roi_h     <= hold_h[Y_BITS-1:0];
++                        roi_area  <= hold_w * hold_h;
++                    end
+                     else if(track_lost_cnt < LOST_CONFIRM_FRAMES) begin
+                         // 局部搜索阶段还没找到：先保持旧框
+                         track_lost_cnt <= track_lost_cnt + 1'b1;
+@@ -514,12 +709,12 @@ module Plate_Window_Scorer #(
+                         // 已进入重搜索态：允许全局远候选，但必须严格确认
+                         if(far_candidate_better) begin
+                             if(far_pending_valid && cand_near_far_pending) begin
+-                                far_x1        <= norm_xmin;
+-                                far_y1        <= norm_ymin;
+-                                far_x2        <= norm_xmax;
+-                                far_y2        <= norm_ymax;
+-                                far_score     <= raw_score;
+-                                far_color_sum <= raw_color_sum;
++                                far_x1        <= cand_xmin;
++                                far_y1        <= cand_ymin;
++                                far_x2        <= cand_xmax;
++                                far_y2        <= cand_ymax;
++                                far_score     <= cand_score;
++                                far_color_sum <= cand_color_sum;
+ 
+                                 if((far_pending_cnt + 1'b1) >= FAR_CONFIRM_FRAMES || track_lost_cnt >= FORCE_SWITCH_LOST_FRAMES) begin
+                                     track_lost_cnt <= 6'd0;
+@@ -527,21 +722,21 @@ module Plate_Window_Scorer #(
+                                     hold_expand_x  <= 12'd0;
+                                     hold_expand_y  <= 12'd0;
+                                     // 切换到远候选
+-                                    lock_x1        <= norm_xmin;
+-                                    lock_y1        <= norm_ymin;
+-                                    lock_x2        <= norm_xmax;
+-                                    lock_y2        <= norm_ymax;
+-                                    lock_score     <= raw_score;
+-                                    lock_color_sum <= raw_color_sum;
++                                    lock_x1        <= cand_xmin;
++                                    lock_y1        <= cand_ymin;
++                                    lock_x2        <= cand_xmax;
++                                    lock_y2        <= cand_ymax;
++                                    lock_score     <= cand_score;
++                                    lock_color_sum <= cand_color_sum;
+ 
+                                     far_pending_valid <= 1'b0;
+                                     far_pending_cnt   <= 4'd0;
+ 
+                                     roi_valid <= 1'b1;
+-                                    roi_x1    <= norm_xmin[X_BITS-1:0];
+-                                    roi_y1    <= norm_ymin[Y_BITS-1:0];
+-                                    roi_x2    <= norm_xmax[X_BITS-1:0];
+-                                    roi_y2    <= norm_ymax[Y_BITS-1:0];
++                                    roi_x1    <= cand_xmin[X_BITS-1:0];
++                                    roi_y1    <= cand_ymin[Y_BITS-1:0];
++                                    roi_x2    <= cand_xmax[X_BITS-1:0];
++                                    roi_y2    <= cand_ymax[Y_BITS-1:0];
+                                     roi_w     <= cand_w[X_BITS-1:0];
+                                     roi_h     <= cand_h[Y_BITS-1:0];
+                                     roi_area  <= cand_w * cand_h;
+@@ -567,12 +762,12 @@ module Plate_Window_Scorer #(
+                             else begin
+                                 far_pending_valid <= 1'b1;
+                                 far_pending_cnt   <= 4'd1;
+-                                far_x1            <= norm_xmin;
+-                                far_y1            <= norm_ymin;
+-                                far_x2            <= norm_xmax;
+-                                far_y2            <= norm_ymax;
+-                                far_score         <= raw_score;
+-                                far_color_sum     <= raw_color_sum;
++                                far_x1            <= cand_xmin;
++                                far_y1            <= cand_ymin;
++                                far_x2            <= cand_xmax;
++                                far_y2            <= cand_ymax;
++                                far_score         <= cand_score;
++                                far_color_sum     <= cand_color_sum;
+ 
+                                 if(track_lost_cnt < FORCE_SWITCH_LOST_FRAMES)
+                                     track_lost_cnt <= track_lost_cnt + 1'b1;
+@@ -611,6 +806,8 @@ module Plate_Window_Scorer #(
+                             track_locked      <= 1'b0;
+                             track_lost_cnt    <= 6'd0;
+                             lock_conf         <= 5'd0;
++                            global_scan_cnt   <= 8'd0;
++                            force_global_scan <= 1'b0;
+                             hold_expand_x     <= 12'd0;
+                             hold_expand_y     <= 12'd0;
+                             far_pending_valid <= 1'b0;
+@@ -645,8 +842,14 @@ module plate_bbox_segment_ref #(
+     parameter LOOSE_W_MAX    = 12'd520,
+     parameter X_PAD          = 12'd12,
+     parameter Y_PAD          = 12'd8,
+-    parameter COLOR_WEIGHT   = 10,
+-    parameter EDGE_COLOR_PAD = 10
++    parameter COLOR_WEIGHT      = 10,
++    parameter EDGE_COLOR_PAD    = 10,
++    parameter STRICT_MAX_ASPECT = 10,
++    parameter ROW_X_TOL         = 24,
++    parameter COLOR_RATIO_NUM   = 2,
++    parameter COLOR_RATIO_DEN   = 1,
++    parameter WEAK_RATIO_NUM    = 4,
++    parameter WEAK_RATIO_DEN    = 1
+ )(
+     input  wire        clk,
+     input  wire        rst_n,
+@@ -671,7 +874,8 @@ module plate_bbox_segment_ref #(
+     output reg  [11:0] bbox_xmax,
+     output reg  [11:0] bbox_ymax,
+     output reg  [23:0] bbox_score,
+-    output reg  [15:0] bbox_color_sum
++    output reg  [15:0] bbox_color_sum,
++    output reg         bbox_is_strict
+ );
+ 
+     localparam [11:0] X_LAST = IMG_WIDTH  - 1;
+@@ -741,10 +945,16 @@ module plate_bbox_segment_ref #(
+     wire [11:0] row_w =
+         (row_box_xmax >= row_box_xmin) ? (row_box_xmax - row_box_xmin + 1'b1) : 12'd0;
+ 
++    wire [27:0] strict_color_scaled = row_color_sum * COLOR_RATIO_NUM;
++    wire [27:0] strict_width_scaled = row_w * COLOR_RATIO_DEN;
++    wire [27:0] loose_color_scaled  = row_color_sum * WEAK_RATIO_NUM;
++    wire [27:0] loose_width_scaled  = row_w * WEAK_RATIO_DEN;
++
+     wire row_strict_ok =
+         row_has_pixel &&
+         (row_color_sum >= strict_color_min) &&
+         (row_edge_sum  >= strict_edge_min)  &&
++        (strict_color_scaled >= strict_width_scaled) &&
+         (row_w >= W_MIN) &&
+         (row_w <= W_MAX);
+ 
+@@ -752,6 +962,7 @@ module plate_bbox_segment_ref #(
+         row_has_pixel &&
+         (row_color_sum >= loose_color_min) &&
+         (row_edge_sum  >= loose_edge_min)  &&
++        (loose_color_scaled >= loose_width_scaled) &&
+         (row_w >= LOOSE_W_MIN) &&
+         (row_w <= LOOSE_W_MAX);
+ 
+@@ -762,6 +973,12 @@ module plate_bbox_segment_ref #(
+     wire [11:0] seg_h = (seg_ymax >= seg_ymin) ? (seg_ymax - seg_ymin + 1'b1) : 12'd0;
+     wire [15:0] seg_w16 = {4'd0, seg_w};
+     wire [15:0] seg_h16 = {4'd0, seg_h};
++    wire [19:0] seg_h_max_aspect = {4'd0, seg_h16} * STRICT_MAX_ASPECT;
++    wire [12:0] seg_xmax_tol = {1'b0, seg_xmax} + ROW_X_TOL;
++    wire [12:0] row_xmax_tol = {1'b0, row_box_xmax} + ROW_X_TOL;
++    wire row_seg_compatible =
++        ({1'b0, row_box_xmin} <= seg_xmax_tol) &&
++        ({1'b0, seg_xmin} <= row_xmax_tol);
+ 
+     wire [11:0] loose_bbox_xmin =
+         (best_loose_row_xmin > (X_PAD + 12'd24)) ?
+@@ -788,7 +1005,7 @@ module plate_bbox_segment_ref #(
+         (seg_w >= W_MIN) && (seg_w <= W_MAX) &&
+         (seg_h >= H_MIN) && (seg_h <= H_MAX) &&
+         (seg_w16 >= (seg_h16 << 1)) &&
+-        (seg_w16 <= (seg_h16 << 5));
++        ({4'd0, seg_w16} <= seg_h_max_aspect);
+ 
+     wire active_seg_better =
+         seg_active &&
+@@ -852,6 +1069,7 @@ module plate_bbox_segment_ref #(
+             bbox_ymax <= 12'd0;
+             bbox_score <= 24'd0;
+             bbox_color_sum <= 16'd0;
++            bbox_is_strict <= 1'b0;
+         end
+         else begin
+             vs_d1 <= in_vs;
+@@ -871,6 +1089,7 @@ module plate_bbox_segment_ref #(
+                     bbox_ymax  <= (strict_ymax + Y_PAD < Y_LAST) ? (strict_ymax + Y_PAD) : Y_LAST;
+                     bbox_score <= strict_score;
+                     bbox_color_sum <= strict_color;
++                    bbox_is_strict <= 1'b1;
+                 end
+                 else if(best_loose_row_found && loose_aspect_ok) begin
+                     bbox_valid <= 1'b1;
+@@ -880,6 +1099,7 @@ module plate_bbox_segment_ref #(
+                     bbox_ymax  <= loose_bbox_ymax;
+                     bbox_score <= best_loose_row_score;
+                     bbox_color_sum <= best_loose_row_color_sum;
++                    bbox_is_strict <= 1'b0;
+                 end
+                 else begin
+                     bbox_valid <= 1'b0;
+@@ -889,6 +1109,7 @@ module plate_bbox_segment_ref #(
+                     bbox_ymax <= 12'd0;
+                     bbox_score <= 24'd0;
+                     bbox_color_sum <= 16'd0;
++                    bbox_is_strict <= 1'b0;
+                 end
+ 
+                 x_cnt <= 12'd0;
+@@ -966,13 +1187,30 @@ module plate_bbox_segment_ref #(
+                             seg_score     <= row_strict_score;
+                             seg_color_sum <= row_color_sum;
+                         end
+-                        else begin
++                        else if(row_seg_compatible) begin
+                             if(row_box_xmin < seg_xmin) seg_xmin <= row_box_xmin;
+                             if(row_box_xmax > seg_xmax) seg_xmax <= row_box_xmax;
+                             seg_ymax      <= y_cnt;
+                             seg_score     <= seg_score + row_strict_score;
+                             seg_color_sum <= seg_color_sum + row_color_sum;
+                         end
++                        else begin
++                            if(seg_ok && ((!best_found) || (seg_score > best_score))) begin
++                                best_found     <= 1'b1;
++                                best_xmin      <= seg_xmin;
++                                best_xmax      <= seg_xmax;
++                                best_ymin      <= seg_ymin;
++                                best_ymax      <= seg_ymax;
++                                best_score     <= seg_score;
++                                best_color_sum <= seg_color_sum;
++                            end
++                            seg_xmin      <= row_box_xmin;
++                            seg_xmax      <= row_box_xmax;
++                            seg_ymin      <= y_cnt;
++                            seg_ymax      <= y_cnt;
++                            seg_score     <= row_strict_score;
++                            seg_color_sum <= row_color_sum;
++                        end
+                     end
+                     else if(seg_active) begin
+                         if(seg_ok && ((!best_found) || (seg_score > best_score))) begin
+
+===== DIFF: codex_backups/S02F1_20260712_162812/plate_window_scorer_tb.sv -> sim_prj/plate_window_scorer_sim/tb/plate_window_scorer_tb.sv =====
+diff --git a/codex_backups/S02F1_20260712_162812/plate_window_scorer_tb.sv b/sim_prj/plate_window_scorer_sim/tb/plate_window_scorer_tb.sv
+index e4d4d8c..b73e63c 100644
+--- a/codex_backups/S02F1_20260712_162812/plate_window_scorer_tb.sv
++++ b/sim_prj/plate_window_scorer_sim/tb/plate_window_scorer_tb.sv
+@@ -10,6 +10,8 @@ module plate_window_scorer_tb;
+     localparam integer LINE_EMPTY  = 0;
+     localparam integer LINE_STRICT = 1;
+     localparam integer LINE_LOOSE  = 2;
++    localparam integer LINE_SPARSE = 3;
++    localparam integer LINE_SPLIT  = 4;
+ 
+     reg clk;
+     reg rst_n;
+@@ -88,10 +90,19 @@ module plate_window_scorer_tb;
+         .TRACK_LOOSE_COLOR_MIN      (1),
+         .TRACK_PAD_X                (200),
+         .TRACK_PAD_Y                (90),
+-        .FAR_CONFIRM_FRAMES         (12),
++        .FAR_CONFIRM_FRAMES         (2),
+         .FORCE_SWITCH_LOST_FRAMES   (20),
+         .COLOR_SWITCH_MARGIN_STRONG (6),
+-        .EDGE_COLOR_PAD             (8)
++        .EDGE_COLOR_PAD             (8),
++        .STRICT_MAX_ASPECT          (10),
++        .ROW_X_TOL                  (24),
++        .ACQUIRE_CONFIRM_FRAMES     (2),
++        .CORNER_CONFIRM_FRAMES      (3),
++        .CORNER_GUARD_X             (96),
++        .CORNER_GUARD_Y             (64),
++        .GLOBAL_RESCAN_PERIOD       (15),
++        .FAR_SCORE_RATIO_NUM        (5),
++        .FAR_SCORE_RATIO_DEN        (4)
+     ) dut (
+         .clk            (clk),
+         .rst_n          (rst_n),
+@@ -176,9 +187,18 @@ module plate_window_scorer_tb;
+                         color_hit_in = (x >= 300) && (x <= 359);
+                     end
+                     LINE_LOOSE: begin
++                        bin_data     = (x >= 500) && (x <= 505);
++                        color_hit_in = (x >= 500) && (x <= 505);
++                    end
++                    LINE_SPARSE: begin
+                         bin_data     = (x == 500);
+                         color_hit_in = (x == 500);
+                     end
++                    LINE_SPLIT: begin
++                        bin_data = ((x >= 300) && (x <= 305)) ||
++                                   ((x >= 800) && (x <= 805));
++                        color_hit_in = bin_data;
++                    end
+                     default: begin
+                         bin_data     = 1'b0;
+                         color_hit_in = 1'b0;
+@@ -203,20 +223,22 @@ module plate_window_scorer_tb;
+             for (y = 0; y < IMG_HEIGHT; y = y + 1) begin
+                 kind = LINE_EMPTY;
+                 case (scenario)
+-                    1: if ((y >= 300) && (y <= 303)) kind = LINE_STRICT;
++                    1: if ((y >= 300) && (y <= 307)) kind = LINE_STRICT;
+                     2: begin
+-                        if ((y >= 300) && (y <= 303)) kind = LINE_STRICT;
+-                        if ((y >= 400) && (y <= 405)) kind = LINE_STRICT;
++                        if ((y >= 300) && (y <= 307)) kind = LINE_STRICT;
++                        if ((y >= 400) && (y <= 409)) kind = LINE_STRICT;
+                     end
+                     3: begin
+-                        if ((y >= 300) && (y <= 305)) kind = LINE_STRICT;
+-                        if ((y >= 400) && (y <= 403)) kind = LINE_STRICT;
++                        if ((y >= 300) && (y <= 309)) kind = LINE_STRICT;
++                        if ((y >= 400) && (y <= 407)) kind = LINE_STRICT;
+                     end
+                     4: if (y == 350) kind = LINE_LOOSE;
+                     5: begin
+-                        if ((y >= 300) && (y <= 303)) kind = LINE_STRICT;
++                        if ((y >= 300) && (y <= 307)) kind = LINE_STRICT;
+                         if (y == 500) kind = LINE_LOOSE;
+                     end
++                    6: if (y == 350) kind = LINE_SPARSE;
++                    7: if (y == 350) kind = LINE_SPLIT;
+                     default: kind = LINE_EMPTY;
+                 endcase
+                 drive_active_line(kind);
+@@ -224,6 +246,16 @@ module plate_window_scorer_tb;
+         end
+     endtask
+ 
++    task automatic finish_short_empty_frame;
++        begin
++            drive_active_line(LINE_EMPTY);
++            @(negedge clk);
++            bin_vsync = ~bin_vsync;
++            repeat (4) @(posedge clk);
++            #1;
++        end
++    endtask
++
+     task automatic check_raw_and_norm;
+         input integer expected_valid;
+         input integer raw_x1_e;
+@@ -284,10 +316,10 @@ module plate_window_scorer_tb;
+             @(negedge clk);
+             bin_vsync = ~bin_vsync;
+ 
+-            // P0: frame_event is consumed; bbox is committed internally.
++            // P0: frame_event commits the raw bbox.
+             @(posedge clk);
+             #1;
+-            check_value("frame_event.roi_frame_done", 1, roi_frame_done);
++            check_value("frame_event.roi_frame_done", 0, roi_frame_done);
+             check_value("frame_event.roi_valid_unchanged", old_valid, roi_valid);
+             check_value("frame_event.roi_x1_unchanged", old_x1, roi_x1);
+             check_value("frame_event.roi_y1_unchanged", old_y1, roi_y1);
+@@ -299,10 +331,16 @@ module plate_window_scorer_tb;
+                                final_x1_e, final_y1_e, final_x2_e, final_y2_e);
+             monitor_stable = 1'b0;
+ 
+-            // P1: delayed frame_eval_top updates the public ROI outputs.
++            // P1: normalized candidate is captured into the timing pipeline.
+             @(posedge clk);
+             #1;
+-            check_value("commit.roi_frame_done", 0, roi_frame_done);
++            check_value("capture.roi_frame_done", 0, roi_frame_done);
++            check_value("capture.roi_valid_unchanged", old_valid, roi_valid);
++
++            // P2: frame_eval_top updates public ROI outputs.
++            @(posedge clk);
++            #1;
++            check_value("commit.roi_frame_done", 1, roi_frame_done);
+             check_value("commit.roi_valid", expected_valid, roi_valid);
+             if (expected_valid) begin
+                 check_value("commit.roi_x1", final_x1_e, roi_x1);
+@@ -326,6 +364,50 @@ module plate_window_scorer_tb;
+         end
+     endtask
+ 
++    task automatic end_confirmation_frame;
++        input integer raw_x1_e;
++        input integer raw_y1_e;
++        input integer raw_x2_e;
++        input integer raw_y2_e;
++        input integer raw_score_e;
++        input integer raw_color_e;
++        reg old_valid;
++        reg [11:0] old_x1;
++        reg [11:0] old_y1;
++        reg [11:0] old_x2;
++        reg [11:0] old_y2;
++        begin
++            old_valid = roi_valid;
++            old_x1 = roi_x1;
++            old_y1 = roi_y1;
++            old_x2 = roi_x2;
++            old_y2 = roi_y2;
++
++            @(negedge clk);
++            bin_vsync = ~bin_vsync;
++            @(posedge clk);
++            #1;
++            check_value("confirm.frame_event.roi_valid_unchanged", old_valid, roi_valid);
++            check_value("confirm.frame_event.roi_x1_unchanged", old_x1, roi_x1);
++            check_value("confirm.frame_event.roi_y1_unchanged", old_y1, roi_y1);
++            check_value("confirm.frame_event.roi_x2_unchanged", old_x2, roi_x2);
++            check_value("confirm.frame_event.roi_y2_unchanged", old_y2, roi_y2);
++            check_raw_and_norm(1, raw_x1_e, raw_y1_e, raw_x2_e, raw_y2_e,
++                               raw_score_e, raw_color_e,
++                               raw_x1_e, raw_y1_e, raw_x2_e, raw_y2_e);
++
++            @(posedge clk);
++            #1;
++            check_value("confirm.pending.roi_valid", 0, roi_valid);
++            @(posedge clk);
++            #1;
++            check_value("confirm.commit.roi_valid", 0, roi_valid);
++            repeat (3) @(posedge clk);
++            #1;
++            check_value("confirm.post_commit.roi_valid", 0, roi_valid);
++        end
++    endtask
++
+     always @(negedge clk) begin
+         if (monitor_stable &&
+             ((roi_valid !== monitor_valid) ||
+@@ -355,39 +437,51 @@ module plate_window_scorer_tb;
+         begin_case("S-00 empty frame");
+         drive_frame(0);
+         end_frame_and_check(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+-        end_case();
++        end_case;
+ 
+         // Strict row: 62 expanded edge pixels + 61 expanded color pixels.
+         // Score per row = 62 + 61*20 = 1282.
+         begin_case("S-01 one strict candidate");
+         drive_frame(1);
++        end_confirmation_frame(272, 288, 388, 319, 10256, 488);
++        drive_frame(1);
+         end_frame_and_check(1,
+-                            272, 288, 388, 315, 5128, 244,
+-                            272, 288, 388, 315, 117, 28, 3276);
+-        end_case();
++                            272, 288, 388, 319, 10256, 488,
++                            272, 288, 388, 319, 117, 32, 3744);
++
++        finish_short_empty_frame;
++        check_value("tracking.holds_after_one_miss", 1, roi_valid);
++        repeat (30) finish_short_empty_frame;
++        check_value("tracking.releases_after_loss", 0, roi_valid);
++        end_case;
+ 
+         begin_case("S-02A later candidate higher");
+         drive_frame(2);
++        end_confirmation_frame(272, 388, 388, 421, 12820, 610);
++        drive_frame(2);
+         end_frame_and_check(1,
+-                            272, 388, 388, 417, 7692, 366,
+-                            272, 388, 388, 417, 117, 30, 3510);
+-        end_case();
++                            272, 388, 388, 421, 12820, 610,
++                            272, 388, 388, 421, 117, 34, 3978);
++        end_case;
+ 
+         begin_case("S-02B earlier candidate higher");
+         drive_frame(3);
++        end_confirmation_frame(272, 288, 388, 321, 12820, 610);
++        drive_frame(3);
+         end_frame_and_check(1,
+-                            272, 288, 388, 317, 7692, 366,
+-                            272, 288, 388, 317, 117, 30, 3510);
+-        end_case();
++                            272, 288, 388, 321, 12820, 610,
++                            272, 288, 388, 321, 117, 34, 3978);
++        end_case;
+ 
+-        // One source hit expands to 3 edge pixels and 2 color pixels.
+-        // It fails strict edge>=4 but passes loose edge>=2.
++        // Six adjacent source hits form a valid low-confidence plate row.
+         begin_case("S-03 loose fallback");
+         drive_frame(4);
++        end_confirmation_frame(448, 322, 558, 378, 148, 7);
++        drive_frame(4);
+         end_frame_and_check(1,
+-                            448, 322, 553, 378, 43, 2,
+-                            448, 322, 553, 378, 106, 57, 6042);
+-        end_case();
++                            448, 322, 558, 378, 148, 7,
++                            448, 322, 558, 378, 111, 57, 6327);
++        end_case;
+ 
+         begin_case("S-04 strict priority and stable commit");
+         monitor_valid = roi_valid;
+@@ -397,13 +491,25 @@ module plate_window_scorer_tb;
+         monitor_y2 = roi_y2;
+         monitor_stable = 1'b1;
+         drive_frame(5);
++        end_confirmation_frame(272, 288, 388, 319, 10256, 488);
++        drive_frame(5);
+         end_frame_and_check(1,
+-                            272, 288, 388, 315, 5128, 244,
+-                            272, 288, 388, 315, 117, 28, 3276);
+-        end_case();
++                            272, 288, 388, 319, 10256, 488,
++                            272, 288, 388, 319, 117, 32, 3744);
++        end_case;
++
++        begin_case("S-05 sparse distraction rejected");
++        drive_frame(6);
++        end_frame_and_check(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
++        end_case;
++
++        begin_case("S-06 separated targets are not merged");
++        drive_frame(7);
++        end_frame_and_check(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
++        end_case;
+ 
+         if (fail_count == 0) begin
+-            $display("A02R1_RESULT PASS cases=6 logical_groups=5 seed=0x%08x time=%0t",
++            $display("A02R1_RESULT PASS cases=8 logical_groups=8 seed=0x%08x time=%0t",
+                      FIXED_SEED, $time);
+             $finish;
+         end
+
+===== FILES WITHOUT EXACT PRE-ROUND BACKUP =====
+The following confirmed manual files were modified during the S02F1->latest window, but no exact before copy exists in codex_backups. No invented before text is included; current line references and rollback limits are recorded in review_summary.md.
+
+NO_EXACT_BEFORE: source/rtl/fram_buf.v
+NO_EXACT_BEFORE: source/rtl/rd_buf.v
+NO_EXACT_BEFORE: source/rtl/wr_buf.v
+NO_EXACT_BEFORE: source/rtl/HDMI_IN_DDR3_YCbCr_top.v
+NO_EXACT_BEFORE: source/img_process/RGB2YCbCr.v
+NO_EXACT_BEFORE: sim_prj/frame_buffer_control_tb.sv
+NO_EXACT_BEFORE: sim_prj/rgb2ycbcr_tb.sv
+NO_EXACT_BEFORE: sim_prj/hdmi_roi_top_tb.sv
+NO_EXACT_BEFORE: build.ps1
+NO_EXACT_BEFORE: test.ps1

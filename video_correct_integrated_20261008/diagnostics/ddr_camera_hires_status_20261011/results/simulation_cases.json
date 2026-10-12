@@ -1,0 +1,10 @@
+{
+  "tb_ddr_status_overlay": "DDR_STATUS_OVERLAY_PASS",
+  "tb_marker_detector": "MARKER_STATUS_PASS",
+  "tb_ddr_capture": "DDR_CAPTURE_PASS",
+  "tb_video_correct_ddr_core": "DDR_CORE_STATUS_PASS",
+  "tb_native_display": "NATIVE_DISPLAY_PASS",
+  "tb_native_display_stress": "NATIVE_DISPLAY_PASS",
+  "tb_native_capture": "NATIVE_CAPTURE_PASS",
+  "tb_ddr_full_frame": "DDR_FULL_FRAME_PASS"
+}

@@ -1,0 +1,18 @@
+{
+  "qualified_at_utc": "2026-10-10T11:23:35.2828829Z",
+  "tests": {
+    "tb_hdmi_bram_probe": {
+      "exit_code": 0,
+      "pass_message": "PASS_BRAM_TWO_CLOCKS_TWO_BANKS"
+    },
+    "tb_hdmi_bram_stale": {
+      "exit_code": 0,
+      "pass_message": "PASS_BRAM_STALE_TIMEOUT_AND_RECOVERY"
+    },
+    "tb_camera_live_bram": {
+      "exit_code": 0,
+      "pass_message": "PASS_RAW_CAMERA_FULL_1080P_FRAME"
+    }
+  },
+  "hardware_accepted": false
+}

@@ -1,0 +1,71 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_bram_20261010/results
+T_opt
+!s110 1791631209
+VPmDHaD`42T5_BER;7@PSA2
+04 18 4 work tb_hdmi_bram_probe fast 0
+=1-bcfce7c3c068-6aca1f69-1f0-95c4
+o-quiet -auto_acc_if_foreign -work work_tb_hdmi_bram_probe +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vhdmi_bram_probe
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791631406
+!i10b 1
+!s100 Q^CJ=eR3[lk5]heHVYVBE0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZk=b<0@Ok`FP_P>oim=NH0
+S1
+R0
+Z5 w1791631405
+8hdmi_bram_probe.v
+Fhdmi_bram_probe.v
+!i122 2
+L0 3 63
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791631406.000000
+!s107 tb_hdmi_bram_probe.v|hdmi_bram_probe.v|
+Z9 !s90 -sv|-work|work_tb_hdmi_bram_probe|hdmi_bram_probe.v|tb_hdmi_bram_probe.v|
+!i113 0
+Z10 o-sv -work work_tb_hdmi_bram_probe -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_hdmi_bram_probe
+R2
+R3
+!i10b 1
+!s100 cV`GcPza8ke;O[IbAg<_K2
+R4
+ID7L8Ei`SK2f18LU_`Zh6G0
+S1
+R0
+R5
+8tb_hdmi_bram_probe.v
+Ftb_hdmi_bram_probe.v
+!i122 2
+L0 2 39
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z11 !s107 tb_hdmi_bram_probe.v|hdmi_bram_probe.v|
+R9
+!i113 0
+R10
+R1

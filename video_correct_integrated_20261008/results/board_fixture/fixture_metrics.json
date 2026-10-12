@@ -1,0 +1,102 @@
+{
+  "source_size": [
+    320,
+    180
+  ],
+  "output_size": [
+    160,
+    226
+  ],
+  "markers_tl_tr_br_bl": [
+    [
+      110,
+      15
+    ],
+    [
+      235,
+      30
+    ],
+    [
+      205,
+      160
+    ],
+    [
+      100,
+      150
+    ]
+  ],
+  "marker_pixels_each": 49,
+  "detected_markers": [
+    [
+      110,
+      15
+    ],
+    [
+      235,
+      30
+    ],
+    [
+      205,
+      160
+    ],
+    [
+      100,
+      150
+    ]
+  ],
+  "marker_stats": {
+    "red": {
+      "count": 49,
+      "span": [
+        6,
+        6
+      ]
+    },
+    "green": {
+      "count": 49,
+      "span": [
+        6,
+        6
+      ]
+    },
+    "yellow": {
+      "count": 49,
+      "span": [
+        6,
+        6
+      ]
+    },
+    "blue": {
+      "count": 49,
+      "span": [
+        6,
+        6
+      ]
+    }
+  },
+  "method": "fixed bilinear",
+  "fixed_h_q16_24": [
+    13767331,
+    724273,
+    1845493760,
+    1656504,
+    12271220,
+    251658240,
+    2458,
+    14699,
+    16777216
+  ],
+  "valid_output_pixels": 36160,
+  "expected_source_reads": 202240,
+  "hdmi_scale": "nearest 6x",
+  "hdmi_size": [
+    1920,
+    1080
+  ],
+  "background_rgb": [
+    112,
+    112,
+    112
+  ],
+  "gray_only_paper_detail": true
+}

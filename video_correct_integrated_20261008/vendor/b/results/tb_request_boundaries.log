@@ -1,0 +1,5 @@
+BOUNDARY_CASE_PASS source=4096x4096 requests=13 outputs=13
+BOUNDARY_CASE_PASS source=1920x1080 requests=14 outputs=14
+BOUNDARY_CASE_PASS source=640x480 requests=16 outputs=16
+BOUNDARIES_PASS sizes=640x480,1920x1080,4096x4096 sparse_addresses=yes edge_black_policy=characterized
+sim/tb_request_boundaries.sv:117: $finish called at 10390000 (1ps)

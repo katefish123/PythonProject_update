@@ -1,0 +1,245 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_bram_overlay_20261011/results
+T_opt
+Z1 !s110 1791698736
+V8N3MP<RZ]kH]4mbPkfioV1
+04 22 4 work tb_camera_bram_overlay fast 0
+=1-bcfce7c3c068-6acb2730-14f-ad18
+o-quiet -auto_acc_if_foreign -work work_tb_camera_bram_overlay +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vcamera_live_bram_top
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
+!i10b 1
+!s100 fa?U1Vbkm^@ES`861doQ13
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ImM=dMcFleAG@m`77f3Ead3
+S1
+R0
+Z5 w1791698731
+8camera_live_bram_top.v
+Fcamera_live_bram_top.v
+!i122 0
+L0 5 202
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791698736.000000
+Z9 !s107 tb_camera_bram_overlay.v|video_timing_vtc.v|reset_sync.v|cdc_snapshot.v|hdmi_bram_probe.v|camera_live_bram_top.v|
+Z10 !s90 -sv|-work|work_tb_camera_bram_overlay|camera_live_bram_top.v|hdmi_bram_probe.v|cdc_snapshot.v|reset_sync.v|video_timing_vtc.v|tb_camera_bram_overlay.v|
+!i113 0
+Z11 o-sv -work work_tb_camera_bram_overlay -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vcdc_snapshot
+R3
+R1
+!i10b 1
+!s100 QY1U5MEKhV5LQelUDZ]8V3
+R4
+IZQM>OX`2J^EBO4KAa4oR@1
+S1
+R0
+R5
+8cdc_snapshot.v
+Fcdc_snapshot.v
+!i122 0
+L0 3 23
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vconfig_pll_27m_10m
+R3
+R1
+!i10b 1
+!s100 9=BnNzPjdLjTj8VUCz`3L3
+R4
+I5h5A=7MX0XE22J3DJ0j861
+S1
+R0
+R5
+Z12 8tb_camera_bram_overlay.v
+Z13 Ftb_camera_bram_overlay.v
+!i122 0
+L0 77 4
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vhdmi_bram_probe
+R3
+R1
+!i10b 1
+!s100 Q^CJ=eR3[lk5]heHVYVBE0
+R4
+Ie4HH0mnAKHKoA=VZLVd`j1
+S1
+R0
+R5
+8hdmi_bram_probe.v
+Fhdmi_bram_probe.v
+!i122 0
+L0 3 63
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vhdmi_config_runtime_diag
+R3
+R1
+!i10b 1
+!s100 A44IWEN7>DY7HR]N6]jnV1
+R4
+IQ_T^l;lkO=ijL5g7o5nYk2
+S1
+R0
+R5
+R12
+R13
+!i122 0
+L0 81 7
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vreset_sync
+R3
+R1
+!i10b 1
+!s100 >L@QLA@n^9=cQ_2oGzlGB3
+R4
+ILR^YL71@GD`_?4D[GYe@G3
+S1
+R0
+R5
+8reset_sync.v
+Freset_sync.v
+!i122 0
+L0 2 7
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vtb_camera_bram_overlay
+R3
+R1
+!i10b 1
+!s100 2<hE<@O<GHW1:g@a>EPVo1
+R4
+IORKVCE>>`iNKYDH2h4Y@S0
+S1
+R0
+R5
+R12
+R13
+!i122 0
+L0 2 69
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vvideo_pll_27m_148m5
+R3
+R1
+!i10b 1
+!s100 E4^:;XHRR`JcMSTMKG;423
+R4
+IROQNj;H11@kV5KEbePMj>3
+S1
+R0
+R5
+R12
+R13
+!i122 0
+L0 73 4
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vvideo_timing_vtc
+R3
+R1
+!i10b 1
+!s100 >bN_?_:BQEijb7?^:jc3O0
+R4
+I19U9[IC:<UHH;UZLZH@4e1
+S1
+R0
+R5
+8video_timing_vtc.v
+Fvideo_timing_vtc.v
+!i122 0
+L0 5 57
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2

@@ -1,0 +1,55 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do pixels_missing_vs.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_pixels_missing_vs work_pixels_missing_vs 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:50:28 on Oct 10,2026
+# vlog -sv -work work_pixels_missing_vs camera_native_rx_first_top.v reset_sync.v hdmi_vs_recover.v video_timing_vtc.v tb_native_pixels.sv 
+# -- Compiling module camera_native_rx_first_top
+# -- Compiling module reset_sync
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module video_timing_vtc
+# -- Compiling module config_pll_27m_10m
+# -- Compiling module hdmi_config
+# -- Compiling module tb_hdmi_camera_native
+# 
+# Top level modules:
+# 	tb_hdmi_camera_native
+# End time: 22:50:29 on Oct 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf pixels_missing_vs.wlf work_pixels_missing_vs.tb_hdmi_camera_native -gH_FRONT=90 -gMISSING_VS=1 
+# Start time: 22:50:29 on Oct 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_hdmi_camera_native(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.camera_native_rx_first_top(fast)
+# Loading work.config_pll_27m_10m(fast)
+# Loading work.reset_sync(fast)
+# Loading work.hdmi_config(fast)
+# Loading work.reset_sync(fast__1)
+# Loading work.hdmi_vs_recover(fast)
+# PASS_NATIVE_ALL_PIXELS frames=2 pixels_per_frame=2073600
+# ** Note: $finish    : tb_native_pixels.sv(41)
+#    Time: 51045268820 ps  Iteration: 1  Instance: /tb_hdmi_camera_native
+# Break in Module tb_hdmi_camera_native at tb_native_pixels.sv line 41
+# Stopped at tb_native_pixels.sv line 41
+# End time: 22:50:35 on Oct 10,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0

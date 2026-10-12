@@ -1,0 +1,691 @@
+19:51:31.647: Command Line Arguments: --portable --profile FPGA --collection FPGA
+19:51:31.651: CPU Name: AMD Ryzen 9 9955HX 16-Core Processor           
+19:51:31.652: CPU Speed: 2495MHz
+19:51:31.652: Physical Cores: 16, Logical Cores: 32
+19:51:31.652: Physical Memory: 15549MB Total, 4336MB Free
+19:51:31.652: Windows Version: 10.0 Build 26200 (release: 25H2; revision: 9457; 64-bit)
+19:51:31.652: Running as administrator: false
+19:51:31.652: Windows 10/11 Gaming Features:
+19:51:31.652: 	Game DVR: On
+19:51:31.652: 	Game Mode: Probably On (no reg key set)
+19:51:31.653: Sec. Software Status:
+19:51:31.655: 	Microsoft Defender 防病毒: enabled (AV)
+19:51:31.655: 	Windows 防火墙: enabled (FW)
+19:51:31.656: Current Date/Time: 2026-10-10, 19:51:31
+19:51:31.656: Browser Hardware Acceleration: true
+19:51:31.656: Hide OBS windows from screen capture: false
+19:51:31.656: Qt Version: 6.11.1 (runtime), 6.11.1 (compiled)
+19:51:31.656: Portable mode: true
+19:51:32.389: OBS 32.2.2 (64-bit, windows)
+19:51:32.389: ---------------------------------
+19:51:32.402: ---------------------------------
+19:51:32.402: audio settings reset:
+19:51:32.402: 	samples per sec: 48000
+19:51:32.402: 	speakers:        2
+19:51:32.402: 	max buffering:   960 milliseconds
+19:51:32.402: 	buffering type:  dynamically increasing
+19:51:32.418: ---------------------------------
+19:51:32.418: Initializing D3D11...
+19:51:32.418: Available Video Adapters: 
+19:51:32.441: 	Adapter 0: NVIDIA GeForce RTX 5070 Laptop GPU
+19:51:32.441: 	  Dedicated VRAM: 8274313216 (7.7 GiB)
+19:51:32.441: 	  Shared VRAM:    8152512512 (7.6 GiB)
+19:51:32.441: 	  PCI ID:         10de:2d58
+19:51:32.441: 	  HAGS Status:    Enabled (Default: No, Driver status: Supported)
+19:51:32.441: 	  Driver Version: 32.0.15.9613
+19:51:32.442: 	  output 0:
+19:51:32.442: 	    name=NE160QDM-NYM
+19:51:32.442: 	    pos={0, 0}
+19:51:32.442: 	    size={2560, 1600}
+19:51:32.442: 	    attached=true
+19:51:32.442: 	    refresh=165
+19:51:32.442: 	    bits_per_color=8
+19:51:32.442: 	    space=RGB_FULL_G22_NONE_P709
+19:51:32.442: 	    primaries=[r=(0.646484, 0.330078), g=(0.300781, 0.607422), b=(0.146484, 0.060547), wp=(0.313477, 0.329102)]
+19:51:32.442: 	    relative_gamut_area=[709=1.034581, P3=0.762663, 2020=0.547160]
+19:51:32.442: 	    sdr_white_nits=80
+19:51:32.442: 	    nit_range=[min=4.000000, max=400.000000, max_full_frame=400.000000]
+19:51:32.442: 	    dpi=144 (150%)
+19:51:32.442: 	    id=\\?\DISPLAY#BOE0D16#5&3063884a&0&UID512#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}
+19:51:32.442: 	    alt_id=\\.\DISPLAY1
+19:51:32.442: 	Adapter 1: AMD Radeon(TM) 610M
+19:51:32.442: 	  Dedicated VRAM: 506920960 (0.5 GiB)
+19:51:32.442: 	  Shared VRAM:    8152512512 (7.6 GiB)
+19:51:32.442: 	  PCI ID:         1002:13c0
+19:51:32.442: 	  HAGS Status:    Disabled (Default: No, Driver status: Unsupported)
+19:51:32.442: 	  Driver Version: 32.0.21036.11002
+19:51:32.442: 	Adapter 2: AMD Radeon(TM) 610M
+19:51:32.442: 	  Dedicated VRAM: 506920960 (0.5 GiB)
+19:51:32.442: 	  Shared VRAM:    8152512512 (7.6 GiB)
+19:51:32.442: 	  PCI ID:         1002:13c0
+19:51:32.442: 	  HAGS Status:    Disabled (Default: No, Driver status: Unsupported)
+19:51:32.442: 	  Driver Version: 32.0.21036.11002
+19:51:32.443: Loading up D3D11 on adapter NVIDIA GeForce RTX 5070 Laptop GPU (0)
+19:51:32.609: D3D11 loaded successfully, feature level used: b000
+19:51:32.609: DXGI increase maximum frame latency success
+19:51:32.609: Hardware-Accelerated GPU Scheduling enabled on adapter!
+19:51:32.613: D3D11 GPU priority setup failed (not admin?)
+19:51:33.041: ---------------------------------
+19:51:33.041: video settings reset:
+19:51:33.041: 	base resolution:   1920x1080
+19:51:33.041: 	output resolution: 1920x1080
+19:51:33.041: 	downscale filter:  Bicubic
+19:51:33.041: 	fps:               30/1
+19:51:33.041: 	format:            NV12
+19:51:33.041: 	YUV mode:          Rec. 709/Partial
+19:51:33.041: NV12 texture support enabled
+19:51:33.041: P010 texture support not available
+19:51:33.042: Audio monitoring device:
+19:51:33.042: 	name: 默认
+19:51:33.042: 	id: default
+19:51:33.055: ---------------------------------
+19:51:33.078: No AJA devices found, skipping loading AJA UI plugin
+19:51:33.078: Failed to initialize module 'aja-output-ui.dll'
+19:51:33.106: No AJA devices found, skipping loading AJA plugin
+19:51:33.106: Failed to initialize module 'aja.dll'
+19:51:33.107: Skipping module '../../obs-plugins/64bit/chrome_elf.dll', not an OBS plugin
+19:51:33.128: [CoreAudio encoder]: CoreAudio AAC encoder not installed on the system or couldn't be loaded
+19:51:33.143: Failed to load 'en-US' text for module: 'decklink-captions.dll'
+19:51:33.158: Failed to load 'en-US' text for module: 'decklink-output-ui.dll'
+19:51:33.182: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+19:51:33.182: Failed to initialize module 'decklink.dll'
+19:51:33.256: Skipping module '../../obs-plugins/64bit/libcef.dll', not an OBS plugin
+19:51:33.257: Skipping module '../../obs-plugins/64bit/libEGL.dll', not an OBS plugin
+19:51:33.258: Skipping module '../../obs-plugins/64bit/libGLESv2.dll', not an OBS plugin
+19:51:33.276: Failed to get C:\Program Files\NVIDIA Corporation\NVIDIA Audio Effects SDK\NVAudioEffects.dll version info size
+19:51:33.276: [NVIDIA Audio Effects:] NVIDIA denoiser disabled, redistributable not found or could not be loaded.
+19:51:33.277: Failed to get C:\Program Files\NVIDIA Corporation\NVIDIA Video Effects\NVVideoEffects.dll version info size
+19:51:33.277: [NVIDIA VIDEO FX]: FX disabled, redistributable not found or could not be loaded.
+19:51:33.313: [obs-browser]: Version 2.26.9
+19:51:33.313: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.145.7+g2b7d20b+chromium-127.0.6533.120 (compiled)
+19:51:33.824: [obs-nvenc] NVENC version: 13.0 (compiled) / 13.0 (driver), CUDA driver version: 13.20, AV1 supported: true
+19:51:34.080: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.4 | RPC Version: 1)
+19:51:34.080: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.1 | Qt version (run-time): 6.11.1
+19:51:34.080: [obs-websocket] [obs_module_load] Linked ASIO Version: 103200
+19:51:34.087: [obs-websocket] [obs_module_load] Module loaded.
+19:51:34.159: [vlc-video]: Couldn't find VLC installation, VLC video source disabled
+19:51:34.388: ---------------------------------
+19:51:34.388:   Loaded Modules:
+19:51:34.388:     win-wasapi.dll
+19:51:34.388:     win-dshow.dll
+19:51:34.388:     win-capture.dll
+19:51:34.388:     vlc-video.dll
+19:51:34.388:     text-freetype2.dll
+19:51:34.388:     rtmp-services.dll
+19:51:34.388:     obs-x264.dll
+19:51:34.388:     obs-websocket.dll
+19:51:34.388:     obs-webrtc.dll
+19:51:34.388:     obs-vst.dll
+19:51:34.388:     obs-transitions.dll
+19:51:34.388:     obs-text.dll
+19:51:34.388:     obs-qsv11.dll
+19:51:34.388:     obs-outputs.dll
+19:51:34.388:     obs-nvenc.dll
+19:51:34.388:     obs-filters.dll
+19:51:34.388:     obs-ffmpeg.dll
+19:51:34.388:     obs-browser.dll
+19:51:34.388:     nv-filters.dll
+19:51:34.388:     image-source.dll
+19:51:34.388:     frontend-tools.dll
+19:51:34.388:     decklink-output-ui.dll
+19:51:34.388:     decklink-captions.dll
+19:51:34.388:     coreaudio-encoder.dll
+19:51:34.388: ---------------------------------
+19:51:34.389: ---------------------------------
+19:51:34.389: Available Encoders:
+19:51:34.389:   Video Encoders:
+19:51:34.389: 	- ffmpeg_svt_av1 (SVT-AV1)
+19:51:34.389: 	- ffmpeg_aom_av1 (AOM AV1)
+19:51:34.389: 	- h264_texture_amf (AMD HW H.264 (AVC))
+19:51:34.389: 	- h265_texture_amf (AMD HW H.265 (HEVC))
+19:51:34.389: 	- obs_nvenc_h264_tex (NVIDIA NVENC H.264)
+19:51:34.389: 	- obs_nvenc_hevc_tex (NVIDIA NVENC HEVC)
+19:51:34.389: 	- obs_nvenc_av1_tex (NVIDIA NVENC AV1)
+19:51:34.389: 	- obs_x264 (x264)
+19:51:34.389:   Audio Encoders:
+19:51:34.389: 	- ffmpeg_aac (FFmpeg AAC)
+19:51:34.389: 	- ffmpeg_opus (FFmpeg Opus)
+19:51:34.389: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16位))
+19:51:34.389: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24位))
+19:51:34.389: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32位浮点))
+19:51:34.389: 	- ffmpeg_alac (FFmpeg ALAC (24位))
+19:51:34.389: 	- ffmpeg_flac (FFmpeg FLAC (16位))
+19:51:34.389: ==== Startup complete ===============================================
+19:51:34.509: All scene data cleared
+19:51:34.509: ------------------------------------------------
+19:51:34.524: Switched to scene '板卡实时画面'
+19:51:34.524: ------------------------------------------------
+19:51:34.524: Loaded scenes:
+19:51:34.524: - scene '板卡实时画面':
+19:51:34.524:     - source: 'FPGA HDMI 输出（采集卡）' (dshow_input)
+19:51:34.524: ------------------------------------------------
+19:51:34.803: ---------------------------------
+19:51:34.804: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+19:51:34.804: 	video device: VC-002Pro 
+19:51:34.804: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+19:51:34.804: 	resolution: 1920x1080
+19:51:34.804: 	flip: 0
+19:51:34.804: 	fps: 60.00 (interval: 166666)
+19:51:34.804: 	format: NV12
+19:51:34.804: 	buffering: disabled
+19:51:34.804: 	hardware decode: disabled
+19:55:15.267: ---------------------------------
+19:55:15.267: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+19:55:15.267: 	video device: VC-002Pro 
+19:55:15.267: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+19:55:15.267: 	resolution: 1920x1080
+19:55:15.267: 	flip: 0
+19:55:15.267: 	fps: 59.94 (interval: 166833)
+19:55:15.267: 	format: MJPEG
+19:55:15.267: 	buffering: disabled
+19:55:15.267: 	hardware decode: disabled
+19:56:01.855: ---------------------------------
+19:56:01.855: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+19:56:01.855: 	video device: VC-002Pro 
+19:56:01.855: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+19:56:01.855: 	resolution: 1920x1080
+19:56:01.855: 	flip: 0
+19:56:01.855: 	fps: 60.00 (interval: 166666)
+19:56:01.855: 	format: MJPEG
+19:56:01.855: 	buffering: disabled
+19:56:01.855: 	hardware decode: disabled
+19:57:05.196: Saved screenshot to 'C:/Users/夏菲/Videos/Screenshot 2026-10-10 19-57-05.png'
+20:14:59.518: warning: EOI missing, emulating
+20:15:00.490: warning: EOI missing, emulating
+20:15:03.079: warning: EOI missing, emulating
+20:40:06.868: warning: EOI missing, emulating
+20:40:07.495: warning: EOI missing, emulating
+20:40:09.408: warning: EOI missing, emulating
+20:44:18.988: [obs-nvenc: 'simple_video_stream'] settings:
+20:44:18.988: 	codec:        H264
+20:44:18.988: 	rate_control: CBR
+20:44:18.988: 	bitrate:      6000
+20:44:18.988: 	keyint:       250
+20:44:18.988: 	preset:       p5
+20:44:18.988: 	tuning:       hq
+20:44:18.988: 	multipass:    qres
+20:44:18.988: 	profile:      high
+20:44:18.988: 	width:        1920
+20:44:18.988: 	height:       1080
+20:44:18.988: 	b-frames:     2
+20:44:18.988: 	b-ref-mode:   0
+20:44:18.988: 	lookahead:    true (8 frames)
+20:44:18.988: 	aq:           true
+20:44:18.988: 
+20:44:19.068: ---------------------------------
+20:44:19.070: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+20:44:19.070: 
+20:44:19.088: ==== Recording Start ===============================================
+20:44:19.088: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file 'C:/Users/夏菲/Videos/2026-10-10 20-44-18.mp4'...
+20:45:58.528: [mp4 muxer: 'simple_file_output'] Flushing final fragment...
+20:45:58.530: [mp4 muxer: 'simple_file_output'] Number of fragments: 12
+20:45:58.530: [mp4 muxer: 'simple_file_output'] Full moov size: 54 KiB
+20:45:58.530: [mp4 muxer: 'simple_file_output'] Final mdat size: 72463 KiB
+20:45:58.530: Output 'simple_file_output': stopping
+20:45:58.530: Output 'simple_file_output': Total frames output: 2967
+20:45:58.530: Output 'simple_file_output': Total drawn frames: 2984
+20:45:58.531: [mp4 output: 'simple_file_output'] Waiting for file writer to finish...
+20:45:58.532: ==== Recording Stop ================================================
+20:45:58.533: [mp4 output: 'simple_file_output'] File output complete. Finalization took 4 ms.
+20:45:58.640: warning: 2 frames left in the queue on closing
+21:04:26.448: warning: EOI missing, emulating
+21:04:27.381: warning: EOI missing, emulating
+21:04:56.910: warning: EOI missing, emulating
+21:04:57.954: warning: EOI missing, emulating
+21:04:58.266: warning: EOI missing, emulating
+21:04:58.327: warning: EOI missing, emulating
+21:04:58.458: FPGA HDMI 输出（采集卡）: Error decoding video
+21:05:29.710: warning: EOI missing, emulating
+21:05:30.776: warning: EOI missing, emulating
+21:44:47.370: warning: EOI missing, emulating
+21:44:47.824: warning: EOI missing, emulating
+21:44:49.419: warning: EOI missing, emulating
+21:47:53.341: ---------------------------------
+21:47:53.341: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+21:47:53.341: 	video device: VC-002Pro 
+21:47:53.341: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+21:47:53.341: 	resolution: 1920x1080
+21:47:53.341: 	flip: 0
+21:47:53.341: 	fps: 60.00 (interval: 166666)
+21:47:53.341: 	format: MJPEG
+21:47:53.341: 	buffering: disabled
+21:47:53.341: 	hardware decode: disabled
+22:32:29.199: Saved screenshot to 'C:/Users/夏菲/Videos/Screenshot 2026-10-10 22-32-29.png'
+22:43:46.557: ---------------------------------
+22:43:46.560: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+22:43:46.560: 	video device: VC-002Pro 
+22:43:46.560: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+22:43:46.560: 	resolution: 1920x1080
+22:43:46.560: 	flip: 0
+22:43:46.560: 	fps: 60.00 (interval: 166666)
+22:43:46.560: 	format: MJPEG
+22:43:46.560: 	buffering: disabled
+22:43:46.560: 	hardware decode: disabled
+22:43:47.592: warning: EOI missing, emulating
+22:44:59.965: warning: EOI missing, emulating
+22:45:10.373: warning: EOI missing, emulating
+22:45:22.654: warning: EOI missing, emulating
+22:45:22.720: warning: EOI missing, emulating
+22:48:52.663: warning: EOI missing, emulating
+22:53:13.134: warning: EOI missing, emulating
+00:24:03.616: warning: EOI missing, emulating
+00:24:09.329: warning: EOI missing, emulating
+00:24:09.405: warning: EOI missing, emulating
+00:24:09.495: warning: EOI missing, emulating
+00:24:09.922: warning: EOI missing, emulating
+00:24:10.068: warning: EOI missing, emulating
+00:24:10.130: warning: EOI missing, emulating
+00:24:10.194: warning: EOI missing, emulating
+00:24:10.323: warning: EOI missing, emulating
+00:24:10.417: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:10.554: warning: EOI missing, emulating
+00:24:10.966: warning: EOI missing, emulating
+00:24:11.041: warning: EOI missing, emulating
+00:24:11.222: warning: EOI missing, emulating
+00:24:11.867: warning: EOI missing, emulating
+00:24:11.976: warning: EOI missing, emulating
+00:24:12.136: warning: EOI missing, emulating
+00:24:12.212: warning: EOI missing, emulating
+00:24:12.273: warning: EOI missing, emulating
+00:24:12.403: warning: EOI missing, emulating
+00:24:12.544: warning: EOI missing, emulating
+00:24:12.672: warning: EOI missing, emulating
+00:24:12.740: warning: EOI missing, emulating
+00:24:13.002: warning: EOI missing, emulating
+00:24:13.143: warning: EOI missing, emulating
+00:24:13.236: warning: EOI missing, emulating
+00:24:13.298: warning: EOI missing, emulating
+00:24:13.408: warning: EOI missing, emulating
+00:24:13.831: warning: EOI missing, emulating
+00:24:13.992: warning: EOI missing, emulating
+00:24:14.609: warning: EOI missing, emulating
+00:24:14.926: warning: EOI missing, emulating
+00:24:15.170: warning: EOI missing, emulating
+00:24:15.430: warning: EOI missing, emulating
+00:24:15.512: warning: EOI missing, emulating
+00:24:15.639: warning: EOI missing, emulating
+00:24:15.702: warning: EOI missing, emulating
+00:24:15.813: warning: EOI missing, emulating
+00:24:16.574: warning: EOI missing, emulating
+00:24:16.636: warning: EOI missing, emulating
+00:24:17.464: warning: EOI missing, emulating
+00:24:17.703: warning: EOI missing, emulating
+00:24:17.914: warning: EOI missing, emulating
+00:24:18.076: warning: EOI missing, emulating
+00:24:18.555: warning: EOI missing, emulating
+00:24:18.818: warning: EOI missing, emulating
+00:24:19.026: warning: EOI missing, emulating
+00:24:19.105: warning: EOI missing, emulating
+00:24:19.552: warning: EOI missing, emulating
+00:24:20.437: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:20.505: warning: EOI missing, emulating
+00:24:21.116: warning: EOI missing, emulating
+00:24:21.240: warning: EOI missing, emulating
+00:24:21.346: warning: EOI missing, emulating
+00:24:21.519: warning: EOI missing, emulating
+00:24:21.616: warning: EOI missing, emulating
+00:24:23.681: warning: EOI missing, emulating
+00:24:23.841: warning: EOI missing, emulating
+00:24:24.083: warning: EOI missing, emulating
+00:24:24.411: warning: EOI missing, emulating
+00:24:25.406: warning: EOI missing, emulating
+00:24:27.706: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:28.036: warning: EOI missing, emulating
+00:24:28.233: warning: EOI missing, emulating
+00:24:28.527: warning: EOI missing, emulating
+00:24:29.204: warning: EOI missing, emulating
+00:24:29.987: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:30.586: warning: EOI missing, emulating
+00:24:31.276: warning: EOI missing, emulating
+00:24:31.347: warning: EOI missing, emulating
+00:24:31.418: warning: EOI missing, emulating
+00:24:31.524: warning: EOI missing, emulating
+00:24:31.649: warning: EOI missing, emulating
+00:24:31.714: warning: EOI missing, emulating
+00:24:31.825: warning: EOI missing, emulating
+00:24:32.053: warning: EOI missing, emulating
+00:24:32.181: warning: EOI missing, emulating
+00:24:32.989: warning: EOI missing, emulating
+00:24:33.465: warning: EOI missing, emulating
+00:24:33.610: warning: EOI missing, emulating
+00:24:34.841: warning: EOI missing, emulating
+00:24:35.336: warning: EOI missing, emulating
+00:24:35.659: warning: EOI missing, emulating
+00:24:36.902: warning: EOI missing, emulating
+00:24:37.128: warning: EOI missing, emulating
+00:24:37.491: warning: EOI missing, emulating
+00:24:37.788: warning: EOI missing, emulating
+00:24:38.085: warning: EOI missing, emulating
+00:24:38.349: warning: EOI missing, emulating
+00:24:38.593: warning: EOI missing, emulating
+00:24:39.154: warning: EOI missing, emulating
+00:24:39.784: warning: EOI missing, emulating
+00:24:40.196: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:40.382: warning: EOI missing, emulating
+00:24:40.646: warning: EOI missing, emulating
+00:24:40.790: warning: EOI missing, emulating
+00:24:40.960: warning: EOI missing, emulating
+00:24:42.130: warning: EOI missing, emulating
+00:24:42.290: warning: EOI missing, emulating
+00:24:42.399: warning: EOI missing, emulating
+00:24:42.637: warning: EOI missing, emulating
+00:24:43.263: warning: EOI missing, emulating
+00:24:43.461: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:43.763: warning: EOI missing, emulating
+00:24:43.888: warning: EOI missing, emulating
+00:24:44.543: warning: EOI missing, emulating
+00:24:44.839: warning: EOI missing, emulating
+00:24:45.070: warning: EOI missing, emulating
+00:24:45.132: warning: EOI missing, emulating
+00:24:45.446: warning: EOI missing, emulating
+00:24:45.507: warning: EOI missing, emulating
+00:24:45.586: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:45.856: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:46.076: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:46.329: warning: EOI missing, emulating
+00:24:46.426: warning: EOI missing, emulating
+00:24:46.885: warning: EOI missing, emulating
+00:24:46.961: warning: EOI missing, emulating
+00:24:47.224: warning: EOI missing, emulating
+00:24:47.497: warning: EOI missing, emulating
+00:24:47.639: warning: EOI missing, emulating
+00:24:47.820: warning: EOI missing, emulating
+00:24:48.326: warning: EOI missing, emulating
+00:24:48.489: warning: EOI missing, emulating
+00:24:48.668: warning: EOI missing, emulating
+00:24:48.813: warning: EOI missing, emulating
+00:24:48.937: warning: EOI missing, emulating
+00:24:49.100: warning: EOI missing, emulating
+00:24:49.430: warning: EOI missing, emulating
+00:24:49.491: warning: EOI missing, emulating
+00:24:49.700: warning: EOI missing, emulating
+00:24:49.758: warning: EOI missing, emulating
+00:24:49.841: warning: EOI missing, emulating
+00:24:50.203: warning: EOI missing, emulating
+00:24:50.263: warning: EOI missing, emulating
+00:24:50.341: warning: EOI missing, emulating
+00:24:50.499: warning: EOI missing, emulating
+00:24:50.711: warning: EOI missing, emulating
+00:24:50.991: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:51.095: warning: EOI missing, emulating
+00:24:51.610: warning: EOI missing, emulating
+00:24:51.678: warning: EOI missing, emulating
+00:24:51.811: warning: EOI missing, emulating
+00:24:51.876: warning: EOI missing, emulating
+00:24:52.086: warning: EOI missing, emulating
+00:24:52.275: FPGA HDMI 输出（采集卡）: Error decoding video
+00:24:52.730: warning: EOI missing, emulating
+00:24:52.794: warning: EOI missing, emulating
+00:24:53.141: warning: EOI missing, emulating
+00:24:53.204: warning: EOI missing, emulating
+00:24:53.800: warning: EOI missing, emulating
+00:24:53.997: warning: EOI missing, emulating
+00:24:54.131: warning: EOI missing, emulating
+00:24:54.577: warning: EOI missing, emulating
+00:24:54.781: warning: EOI missing, emulating
+00:24:55.044: warning: EOI missing, emulating
+00:24:55.273: warning: EOI missing, emulating
+00:24:55.466: warning: EOI missing, emulating
+00:24:55.876: warning: EOI missing, emulating
+00:24:55.984: warning: EOI missing, emulating
+00:24:56.100: warning: EOI missing, emulating
+00:24:56.747: warning: EOI missing, emulating
+00:24:56.988: warning: EOI missing, emulating
+00:24:57.080: warning: EOI missing, emulating
+00:24:57.141: warning: EOI missing, emulating
+00:24:57.303: warning: EOI missing, emulating
+00:24:57.394: warning: EOI missing, emulating
+00:24:57.733: warning: EOI missing, emulating
+00:24:58.010: warning: EOI missing, emulating
+00:24:58.090: warning: EOI missing, emulating
+00:24:58.297: warning: EOI missing, emulating
+00:24:58.457: warning: EOI missing, emulating
+00:24:58.671: warning: EOI missing, emulating
+00:24:58.936: warning: EOI missing, emulating
+00:24:59.015: warning: EOI missing, emulating
+00:24:59.124: warning: EOI missing, emulating
+00:24:59.474: warning: EOI missing, emulating
+00:25:01.370: warning: EOI missing, emulating
+00:25:02.147: warning: EOI missing, emulating
+00:25:02.322: warning: EOI missing, emulating
+00:25:02.634: warning: EOI missing, emulating
+00:25:03.415: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:03.484: warning: EOI missing, emulating
+00:25:03.677: warning: EOI missing, emulating
+00:25:03.788: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:03.860: warning: EOI missing, emulating
+00:25:03.941: warning: EOI missing, emulating
+00:25:04.381: warning: EOI missing, emulating
+00:25:04.786: warning: EOI missing, emulating
+00:25:05.193: warning: EOI missing, emulating
+00:25:05.250: warning: EOI missing, emulating
+00:25:05.379: warning: EOI missing, emulating
+00:25:05.573: warning: EOI missing, emulating
+00:25:05.781: warning: EOI missing, emulating
+00:25:05.908: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:06.145: warning: EOI missing, emulating
+00:25:07.192: warning: EOI missing, emulating
+00:25:07.285: warning: EOI missing, emulating
+00:25:08.064: warning: EOI missing, emulating
+00:25:08.130: warning: EOI missing, emulating
+00:25:08.194: warning: EOI missing, emulating
+00:25:08.437: warning: EOI missing, emulating
+00:25:08.532: warning: EOI missing, emulating
+00:25:08.748: warning: EOI missing, emulating
+00:25:08.811: warning: EOI missing, emulating
+00:25:08.872: warning: EOI missing, emulating
+00:25:09.118: warning: EOI missing, emulating
+00:25:09.382: warning: EOI missing, emulating
+00:25:09.446: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:09.799: warning: EOI missing, emulating
+00:25:09.864: warning: EOI missing, emulating
+00:25:10.312: warning: EOI missing, emulating
+00:25:10.589: warning: EOI missing, emulating
+00:25:10.700: warning: EOI missing, emulating
+00:25:10.761: warning: EOI missing, emulating
+00:25:10.824: warning: EOI missing, emulating
+00:25:10.886: warning: EOI missing, emulating
+00:25:11.018: warning: EOI missing, emulating
+00:25:11.283: warning: EOI missing, emulating
+00:25:11.395: warning: EOI missing, emulating
+00:25:11.489: warning: EOI missing, emulating
+00:25:11.580: warning: EOI missing, emulating
+00:25:11.643: warning: EOI missing, emulating
+00:25:12.071: warning: EOI missing, emulating
+00:25:12.397: warning: EOI missing, emulating
+00:25:12.468: warning: EOI missing, emulating
+00:25:12.530: warning: EOI missing, emulating
+00:25:12.715: warning: EOI missing, emulating
+00:25:12.914: warning: EOI missing, emulating
+00:25:13.164: warning: EOI missing, emulating
+00:25:13.514: warning: EOI missing, emulating
+00:25:13.728: warning: EOI missing, emulating
+00:25:13.792: warning: EOI missing, emulating
+00:25:13.868: warning: EOI missing, emulating
+00:25:14.060: warning: EOI missing, emulating
+00:25:14.251: warning: EOI missing, emulating
+00:25:14.424: warning: EOI missing, emulating
+00:25:14.552: warning: EOI missing, emulating
+00:25:14.718: warning: EOI missing, emulating
+00:25:14.816: warning: EOI missing, emulating
+00:25:15.126: warning: EOI missing, emulating
+00:25:15.252: warning: EOI missing, emulating
+00:25:15.315: warning: EOI missing, emulating
+00:25:15.460: warning: EOI missing, emulating
+00:25:15.732: warning: EOI missing, emulating
+00:25:15.855: warning: EOI missing, emulating
+00:25:16.043: warning: EOI missing, emulating
+00:25:16.164: warning: EOI missing, emulating
+00:25:16.238: warning: EOI missing, emulating
+00:25:16.761: warning: EOI missing, emulating
+00:25:16.821: warning: EOI missing, emulating
+00:25:16.947: warning: EOI missing, emulating
+00:25:17.109: warning: EOI missing, emulating
+00:25:17.239: warning: EOI missing, emulating
+00:25:17.402: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:17.535: warning: EOI missing, emulating
+00:25:17.659: warning: EOI missing, emulating
+00:25:17.736: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:17.804: warning: EOI missing, emulating
+00:25:18.021: warning: EOI missing, emulating
+00:25:18.084: warning: EOI missing, emulating
+00:25:18.147: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:18.218: warning: EOI missing, emulating
+00:25:18.299: warning: EOI missing, emulating
+00:25:18.376: warning: EOI missing, emulating
+00:25:18.453: warning: EOI missing, emulating
+00:25:18.579: warning: EOI missing, emulating
+00:25:18.641: warning: EOI missing, emulating
+00:25:18.772: warning: EOI missing, emulating
+00:25:19.039: warning: EOI missing, emulating
+00:25:19.119: warning: EOI missing, emulating
+00:25:19.195: warning: EOI missing, emulating
+00:25:19.569: warning: EOI missing, emulating
+00:25:19.694: warning: EOI missing, emulating
+00:25:19.772: warning: EOI missing, emulating
+00:25:19.999: warning: EOI missing, emulating
+00:25:20.074: warning: EOI missing, emulating
+00:25:20.350: warning: EOI missing, emulating
+00:25:20.697: warning: EOI missing, emulating
+00:25:20.792: warning: EOI missing, emulating
+00:25:20.871: warning: EOI missing, emulating
+00:25:20.933: warning: EOI missing, emulating
+00:25:21.228: warning: EOI missing, emulating
+00:25:21.372: warning: EOI missing, emulating
+00:25:21.450: warning: EOI missing, emulating
+00:25:21.511: warning: EOI missing, emulating
+00:25:21.575: warning: EOI missing, emulating
+00:25:21.768: warning: EOI missing, emulating
+00:25:21.890: warning: EOI missing, emulating
+00:25:22.083: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:22.252: warning: EOI missing, emulating
+00:25:22.343: warning: EOI missing, emulating
+00:25:22.404: warning: EOI missing, emulating
+00:25:22.802: warning: EOI missing, emulating
+00:25:22.879: warning: EOI missing, emulating
+00:25:22.958: warning: EOI missing, emulating
+00:25:23.087: warning: EOI missing, emulating
+00:25:23.358: warning: EOI missing, emulating
+00:25:23.415: warning: EOI missing, emulating
+00:25:23.495: warning: EOI missing, emulating
+00:25:23.776: warning: EOI missing, emulating
+00:25:23.874: warning: EOI missing, emulating
+00:25:24.114: warning: EOI missing, emulating
+00:25:24.174: warning: EOI missing, emulating
+00:25:24.268: warning: EOI missing, emulating
+00:25:24.363: warning: EOI missing, emulating
+00:25:24.423: warning: EOI missing, emulating
+00:25:24.499: warning: EOI missing, emulating
+00:25:24.560: warning: EOI missing, emulating
+00:25:24.690: warning: EOI missing, emulating
+00:25:24.751: warning: EOI missing, emulating
+00:25:24.813: warning: EOI missing, emulating
+00:25:24.939: warning: EOI missing, emulating
+00:25:24.998: warning: EOI missing, emulating
+00:25:25.113: warning: EOI missing, emulating
+00:25:25.229: warning: EOI missing, emulating
+00:25:25.378: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:25.478: warning: EOI missing, emulating
+00:25:25.572: warning: EOI missing, emulating
+00:25:25.704: warning: EOI missing, emulating
+00:25:25.814: warning: EOI missing, emulating
+00:25:25.886: warning: EOI missing, emulating
+00:25:26.127: warning: EOI missing, emulating
+00:25:26.258: warning: EOI missing, emulating
+00:25:26.422: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:26.593: warning: EOI missing, emulating
+00:25:26.839: warning: EOI missing, emulating
+00:25:27.050: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:27.171: warning: EOI missing, emulating
+00:25:27.322: warning: EOI missing, emulating
+00:25:27.448: warning: EOI missing, emulating
+00:25:27.625: warning: EOI missing, emulating
+00:25:27.700: warning: EOI missing, emulating
+00:25:28.007: warning: EOI missing, emulating
+00:25:28.101: warning: EOI missing, emulating
+00:25:28.180: warning: EOI missing, emulating
+00:25:28.255: warning: EOI missing, emulating
+00:25:28.328: warning: EOI missing, emulating
+00:25:28.569: warning: EOI missing, emulating
+00:25:28.669: warning: EOI missing, emulating
+00:25:28.800: warning: EOI missing, emulating
+00:25:28.891: warning: EOI missing, emulating
+00:25:29.182: warning: EOI missing, emulating
+00:25:29.342: warning: EOI missing, emulating
+00:25:29.470: warning: EOI missing, emulating
+00:25:29.547: warning: EOI missing, emulating
+00:25:29.657: warning: EOI missing, emulating
+00:25:29.804: warning: EOI missing, emulating
+00:25:29.916: warning: EOI missing, emulating
+00:25:30.097: warning: EOI missing, emulating
+00:25:30.175: warning: EOI missing, emulating
+00:25:30.233: warning: EOI missing, emulating
+00:25:30.296: warning: EOI missing, emulating
+00:25:30.438: warning: EOI missing, emulating
+00:25:30.530: warning: EOI missing, emulating
+00:25:30.607: warning: EOI missing, emulating
+00:25:30.817: warning: EOI missing, emulating
+00:25:30.911: warning: EOI missing, emulating
+00:25:31.242: warning: EOI missing, emulating
+00:25:31.339: warning: EOI missing, emulating
+00:25:31.412: warning: EOI missing, emulating
+00:25:31.472: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:31.691: warning: EOI missing, emulating
+00:25:31.751: warning: EOI missing, emulating
+00:25:31.812: warning: EOI missing, emulating
+00:25:31.874: warning: EOI missing, emulating
+00:25:31.934: warning: EOI missing, emulating
+00:25:32.078: warning: EOI missing, emulating
+00:25:32.150: warning: EOI missing, emulating
+00:25:32.257: warning: EOI missing, emulating
+00:25:32.832: warning: EOI missing, emulating
+00:25:32.989: warning: EOI missing, emulating
+00:25:33.146: warning: EOI missing, emulating
+00:25:33.226: warning: EOI missing, emulating
+00:25:33.340: warning: EOI missing, emulating
+00:25:33.520: warning: EOI missing, emulating
+00:25:33.599: warning: EOI missing, emulating
+00:25:33.778: warning: EOI missing, emulating
+00:25:33.837: warning: EOI missing, emulating
+00:25:34.064: warning: EOI missing, emulating
+00:25:34.309: warning: EOI missing, emulating
+00:25:34.387: warning: EOI missing, emulating
+00:25:34.515: warning: EOI missing, emulating
+00:25:34.678: warning: EOI missing, emulating
+00:25:34.788: warning: EOI missing, emulating
+00:25:35.100: warning: EOI missing, emulating
+00:25:35.231: warning: EOI missing, emulating
+00:25:35.313: warning: EOI missing, emulating
+00:25:35.455: warning: EOI missing, emulating
+00:25:35.949: warning: EOI missing, emulating
+00:25:36.043: warning: EOI missing, emulating
+00:25:36.225: warning: EOI missing, emulating
+00:25:36.374: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:36.456: warning: EOI missing, emulating
+00:25:36.794: warning: EOI missing, emulating
+00:25:36.967: warning: EOI missing, emulating
+00:25:37.059: warning: EOI missing, emulating
+00:25:37.127: warning: EOI missing, emulating
+00:25:37.376: warning: EOI missing, emulating
+00:25:38.157: warning: EOI missing, emulating
+00:25:38.419: warning: EOI missing, emulating
+00:25:38.605: warning: EOI missing, emulating
+00:25:39.065: warning: EOI missing, emulating
+00:25:39.411: warning: EOI missing, emulating
+00:25:39.753: warning: EOI missing, emulating
+00:25:40.077: warning: EOI missing, emulating
+00:25:40.250: warning: EOI missing, emulating
+00:25:40.346: warning: EOI missing, emulating
+00:25:40.460: warning: EOI missing, emulating
+00:25:40.554: warning: EOI missing, emulating
+00:25:40.819: warning: EOI missing, emulating
+00:25:40.933: warning: EOI missing, emulating
+00:25:41.129: warning: EOI missing, emulating
+00:25:41.193: warning: EOI missing, emulating
+00:25:41.341: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:41.461: FPGA HDMI 输出（采集卡）: Error decoding video
+00:25:41.529: warning: EOI missing, emulating
+00:25:42.078: warning: EOI missing, emulating
+00:25:42.275: warning: EOI missing, emulating
+00:25:45.100: warning: EOI missing, emulating
+00:25:45.489: warning: EOI missing, emulating

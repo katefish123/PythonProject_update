@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-11T06:10:05.538562+00:00",
+  "current_image": "release/camera_bram_overlay_20261011/camera_live_bram_top.sbit",
+  "current_image_sha256": "b6f8ddafba670fffe2b9045a4c84cceb4c41c043551753c2172d1394e0154a2f",
+  "program_log": "results\\hardware_20261009\\program_camera_bram_overlay_20261011_140811.log",
+  "program_log_sha256": "03050e6a4cc5c248a30d5065cce2f10564dd4c794cb7bc0d2c8296b7806332c1",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "phase": "Read real live camera width/height/sync with a continuously visible status overlay",
+  "previous_accepted_coarse_camera_evidence": "results/hardware_20261009/bram_diagnostic_fpga_20261011.json",
+  "retained_previous_working_image": "release/camera_live_bram_reconnect_20261010/camera_live_bram_top.sbit",
+  "actual_camera_display_accepted_for_current_image": true,
+  "actual_camera_correction_accepted": false,
+  "current_receiver_probe_decoded": true,
+  "current_valid_camera_width_height_measured": true,
+  "paused_by_user": false,
+  "resumed_by_user": true,
+  "computer_use_paused_by_user": true,
+  "pending": "Build full-DDR D205 state observer to distinguish capture, DDR drain, marker and processing outcomes on real target.",
+  "evidence": "results\\hardware_20261009\\live_camera_input_verified_20261011.json"
+}

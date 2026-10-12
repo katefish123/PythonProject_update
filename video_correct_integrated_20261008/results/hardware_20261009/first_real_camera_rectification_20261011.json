@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-10-11T09:50:28.301706+00:00",
+  "evidence": "results\\hardware_20261009\\ddr_status_fpga_20261011_174046.json",
+  "image_sha256": "79edec3bb9730776f75ee204832b8884c69e74700c297046bde7cff9d5c2397b",
+  "original_video": "C:\\Users\\夏菲\\Videos\\2026-10-11 17-40-46.mp4",
+  "video_sha256": "1011837d6de1a7112b7eb9621b3c57e7019816afe6f8d79f6a65d64e28bb2635",
+  "user_verbatim": "出现矩形校正图了，闪烁的绿红是什么",
+  "decoded_samples": 25,
+  "image_valid_samples": 25,
+  "display_underrun_samples": 0,
+  "successful_results_first_last": [
+    1,
+    2
+  ],
+  "new_completed_results_within_recording": 1,
+  "first_real_camera_rectification_observed": true,
+  "upright_test_page_visually_checked": true,
+  "diagnostic_grid_masks_lower_part": true,
+  "current_boot_ddr_bist_observed": true,
+  "actual_camera_ddr_complete_capture_observed": true,
+  "zero_bad_capture_samples": true,
+  "continuous_marker_detection_accepted": false,
+  "algorithm_update_fps_measured": false,
+  "qualification_limit": "Actual FPGA-routed optical test page and real successful result counter verified. Diagnostic grid hides lower part. Valid-target duration was not independently captured, so this clip cannot establish steady correction rate or reliable marker detection across all 25 seconds.",
+  "next": "Program retained qualified clean a4 image, record the full corrected page and stability; preserve all diagnostics and originals."
+}

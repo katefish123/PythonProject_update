@@ -1,0 +1,10 @@
+{
+  "current_board_state": "results/hardware_20261009/hires_status_state_20261011.json",
+  "actual_high_detail_picture_accepted": false,
+  "physical_d206_video_pending": true,
+  "unit_checked_unprogrammed_fix": "diagnostics/ddr_hires_read_ahead_20261011/results/unit_qualification.json",
+  "restore_entry": "下载相机校正_重连版.cmd",
+  "next": "Decode unique D206 actual recording, then qualify targeted display fix.",
+  "computer_use_paused_by_user": true,
+  "original_materials_modified": false
+}

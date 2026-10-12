@@ -1,0 +1,23 @@
+Input #0, dshow, from 'video=VC-002Pro ':
+  Duration: N/A, start: 3972.110520, bitrate: N/A
+  Stream #0:0: Video: rawvideo (NV12 / 0x3231564E), nv12(tv, bt709/bt709/unknown), 1920x1080, 30 fps, 30 tbr, 10000k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> png (native))
+  Stream #0:0 -> #1:0 (rawvideo (native) -> rawvideo (native))
+Press [q] to stop, [?] for help
+Output #1, rawvideo, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\capture_internal_fixture_native.nv12':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #1:0: Video: rawvideo (NV12 / 0x3231564E), nv12(tv, bt709/bt709/unknown, progressive), 1920x1080, q=2-31, 746496 kb/s, 30 fps, 30 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 rawvideo
+Output #0, image2, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\capture_internal_fixture_native.png':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown, progressive), 1920x1080, q=2-31, 200 kb/s, 30 fps, 30 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 png
+frame=    0 fps=0.0 q=0.0 q=-0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    
+[out#0/image2 @ 000001ed418d9ec0] video:72KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+[out#1/rawvideo @ 000001ed418e0a80] video:3038KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000000%
+frame=    1 fps=0.9 q=-0.0 Lq=-0.0 size=N/A time=00:00:00.06 bitrate=N/A speed=0.0625x    

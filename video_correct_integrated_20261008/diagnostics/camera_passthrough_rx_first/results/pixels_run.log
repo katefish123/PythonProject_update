@@ -1,0 +1,33 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {.\run_pixels.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_pixels work_pixels 
+# Copying C:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 01:09:44 on Oct 10,2026
+# vlog -sv -work work_pixels hdmi_camera_passthrough_rx_first_top.v C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/hdmi_vs_recover.v tb_rx_first_pixels.sv 
+# -- Compiling module hdmi_camera_passthrough_rx_first_top
+# -- Compiling module reset_sync
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module config_pll_27m_10m
+# -- Compiling module hdmi_config
+# -- Compiling module tb_hdmi_camera_native
+# 
+# Top level modules:
+# 	tb_hdmi_camera_native
+# End time: 01:09:44 on Oct 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf pixels.wlf work_pixels.tb_hdmi_camera_native 
+# Start time: 01:09:44 on Oct 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: tb_rx_first_pixels.sv(18): Module 'video_timing_vtc' is not defined.
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+Error loading design
+# End time: 01:09:45 on Oct 10,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/hdmi_runtime/results
+T_opt
+!s110 1791565341
+VbVMU7GMG?:kl6;kE^KeGG1
+04 19 4 work tb_runtime_snapshot fast 0
+=1-bcfce7c3c068-6ac91e1d-119-7658
+o-quiet -auto_acc_if_foreign -work work_snapshot +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vconfig_pll_27m_10m
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791565340
+!i10b 1
+!s100 4W77AMoj9D0N@Hh^]SiC]0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`hZEO;oMi>EE@f82:=fzm2
+S1
+R0
+Z5 w1791565339
+Z6 8../tb_runtime_snapshot.sv
+Z7 F../tb_runtime_snapshot.sv
+!i122 0
+L0 67 3
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z10 !s108 1791565340.000000
+Z11 !s107 ../tb_runtime_snapshot.sv|../../../rtl/common/reset_sync.v|../hdmi_runtime_probe_top.v|
+Z12 !s90 -sv|-work|work_snapshot|../hdmi_runtime_probe_top.v|../../../rtl/common/reset_sync.v|../tb_runtime_snapshot.sv|
+!i113 0
+Z13 o-sv -work work_snapshot -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vhdmi_config_runtime_diag
+R2
+R3
+!i10b 1
+!s100 Yk<E18N1HUC0?9d2ZC0793
+R4
+I`B1FFB0:`PRW`c611743@1
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 70 8
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+vhdmi_runtime_probe_top
+R2
+R3
+!i10b 1
+!s100 NLTT9V@I]_nbfNNhNP>BG0
+R4
+IVMkcMj4fTPT5`AnO4fDP21
+S1
+R0
+w1791565185
+8../hdmi_runtime_probe_top.v
+F../hdmi_runtime_probe_top.v
+!i122 0
+L0 5 154
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+vreset_sync
+R2
+R3
+!i10b 1
+!s100 >L@QLA@n^9=cQ_2oGzlGB3
+R4
+Ia:S09l=EK0aNA<Og:z<2A2
+S1
+R0
+w1791461077
+8../../../rtl/common/reset_sync.v
+F../../../rtl/common/reset_sync.v
+!i122 0
+L0 2 7
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+vtb_runtime_snapshot
+R2
+R3
+!i10b 1
+!s100 oa<QlYI<o5F;CG0I;COoS0
+R4
+I4TLi>m?JJibGR:MY1>ffg1
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 2 62
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+vvideo_pll_27m_148m5
+R2
+R3
+!i10b 1
+!s100 ^TjA2>nVN?WWI_TeGG^OW0
+R4
+IeYa6okkPmaiK?h`W39GQQ0
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 64 3
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1
+vvideo_timing_vtc
+R2
+R3
+!i10b 1
+!s100 @[i68dJ]6Oi?HDzD]bi>c1
+R4
+IiN;Rm]aT`IiQ1iWQP3P_11
+S1
+R0
+R5
+R6
+R7
+!i122 0
+L0 78 8
+R8
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+R1

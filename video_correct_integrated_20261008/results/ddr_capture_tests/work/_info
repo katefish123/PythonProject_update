@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008
+T_opt
+!s110 1791502865
+V[2LI1PYoQF^Tj96hiGBT80
+04 14 4 work tb_ddr_capture fast 0
+=1-bcfce7c3c068-6ac82a11-18f-386c
+o-quiet -auto_acc_if_foreign -work ddr_capture_work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vasync_packet_fifo
+Z2 !s110 1791503021
+!i10b 1
+!s100 Y>BkJU_CmT5Ca195bG6oa0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+If@m8PleWei@h4E1hIMZK73
+R0
+w1791502470
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\async_packet_fifo.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\memory\async_packet_fifo.v
+!i122 10
+L0 5 64
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1791503021.000000
+Z7 !s107 C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_capture_writer.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\ddr_snapshot_capture.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\async_packet_fifo.v|
+Z8 !s90 -work|C:\D\FPGA\video_correct_integrated_20261008\results\ddr_capture_tests\work|C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\async_packet_fifo.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\ddr_snapshot_capture.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_capture_writer.v|
+!i113 0
+Z9 o-work {C:\D\FPGA\video_correct_integrated_20261008\results\ddr_capture_tests\work} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vddr_capture_writer
+R2
+!i10b 1
+!s100 HNaL[l2Plkg=04iB@iUEJ1
+R3
+IH:Sz>cVf>9cRaWC>g@ZUg1
+R0
+w1791502840
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_capture_writer.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_capture_writer.v
+!i122 10
+L0 5 80
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
+vddr_snapshot_capture
+R2
+!i10b 1
+!s100 oV;e>PNzhz?14FPFfo<b80
+R3
+IcD1Kj5:>h0A58WUa>=mFJ0
+R0
+w1791502836
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\video\ddr_snapshot_capture.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\video\ddr_snapshot_capture.v
+!i122 10
+L0 5 109
+R4
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!i113 0
+R9
+R1
+vtb_ddr_capture
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R2
+!i10b 1
+!s100 aT_:2kL4k8Wl2_OVJ809@2
+R3
+I9EJ?ZVVi=`oMQk4F;68g`1
+S1
+R0
+w1791502844
+8C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_capture.sv
+FC:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_capture.sv
+!i122 11
+L0 2 170
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_capture.sv|
+!s90 -sv|-work|C:\D\FPGA\video_correct_integrated_20261008\results\ddr_capture_tests\work|C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_capture.sv|
+!i113 0
+o-sv -work {C:\D\FPGA\video_correct_integrated_20261008\results\ddr_capture_tests\work} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1

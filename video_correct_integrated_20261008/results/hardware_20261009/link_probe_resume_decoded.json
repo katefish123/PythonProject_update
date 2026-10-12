@@ -1,0 +1,19 @@
+{
+  "frame": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\capture_link_probe_resume.png",
+  "word_hex": "0xf07800069652e2a",
+  "bits": "111100000111100000000000000001101001011001010010111000101010",
+  "init_done": true,
+  "ack_error": true,
+  "rx_clock_seen": true,
+  "de_seen": true,
+  "rx_width": 1920,
+  "hs_lines": 105,
+  "sample_rgb": "0x652e2a",
+  "ambiguous_color_cells": [
+    40,
+    51,
+    58
+  ],
+  "coherent_snapshot": false,
+  "measurement_note": "Original probe changes counters/RGB during display; hs_lines/sample_rgb are raw samples, not frame-size measurements."
+}

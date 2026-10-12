@@ -1,0 +1,50 @@
+# 本轮文件归属清单
+
+审查窗口：2026-07-12 16:28:12（S02F1）至 19:01:16。确认的人工文件数量：13。
+
+## RTL人工修改（7）
+
+- `source/rtl/fram_buf.v`
+- `source/rtl/rd_buf.v`
+- `source/rtl/wr_buf.v`
+- `source/rtl/HDMI_IN_DDR3_YCbCr_top.v`
+- `source/rtl/HDMI_IN_DDR3_ROI_top/HDMI_IN_DDR3_ROI_top.v`
+- `source/rtl/Target_Analysis_Top/Plate_Window_Scorer.v`
+- `source/img_process/RGB2YCbCr.v`
+
+## FDC/PDS/IP修改
+
+- 无可证实的本轮人工 FDC/PDS/IP 修改。
+- `HDMI_IN_DDR3_YCbCr_top.fdc` 在本轮窗口内刷新且已复制到 `after/`，但没有 S02F1 前备份，归属标为“待确认/工具刷新”；PNR 证据显示 `hs_in` dangling。
+
+## testbench修改（4）
+
+- `sim_prj/frame_buffer_control_tb.sv`（新增）
+- `sim_prj/rgb2ycbcr_tb.sv`（新增）
+- `sim_prj/hdmi_roi_top_tb.sv`（新增）
+- `sim_prj/plate_window_scorer_sim/tb/plate_window_scorer_tb.sv`
+
+## 工具自动刷新文件
+
+- `HDMI_IN_DDR3_YCbCr.pds`
+- `impl.tcl`
+- `source/rtl/wr_fram_buf/**`（IP 生成文件、`rev_1/`、generate/compile/synthesize/PNR 日志）
+- `source/rtl/rd_fram_buf/**`（同上）
+- `ipcore/cfg_pll/**`（IP 生成文件、`rev_1/`、日志）
+- `ipcore/fifo_line_buffer/**`（IP 生成文件、`rev_1/`、日志）
+- `compile/**`、`synthesize/**`、`device_map/**`、`place_route/**`、`report_timing/**`、`generate_netlist/**`、`generate_bitstream/**` 的当前实现产物和日志
+
+## 工具/验证辅助文件（人工，但不计入 RTL 修改）
+
+- `build.ps1`
+- `test.ps1`
+
+## 新增/删除文件
+
+- 新增 testbench：见上方 testbench 清单。
+- 未发现本轮删除文件。
+- `review_after_fix/` 为本次审查材料目录，不属于工程功能修改。
+
+## 旧文件备份
+
+精确 S02F1 前备份已复制到 `before/`：ROI 顶层、Plate_Window_Scorer、scorer testbench。其余人工文件没有本轮前精确备份。

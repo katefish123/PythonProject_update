@@ -1,0 +1,10 @@
+{
+  "updated_at_utc": "2026-10-10T11:51:30.888012+00:00",
+  "backup": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\obs_scene_before_device_refresh_20261010_115130.json",
+  "previous_device_id": "VC-002Pro :\\\\?\\usb#22vid_345f&pid_2132&mi_00#227&2386f4fb&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+  "current_device_id": "VC-002Pro :\\\\?\\usb#22vid_345f&pid_2132&mi_00#227&39ae5db8&0&0000#22{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global",
+  "changed_settings": [
+    "video_device_id"
+  ],
+  "source_name": "FPGA HDMI 输出（采集卡）"
+}

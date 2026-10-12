@@ -1,0 +1,11 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {.\run_config.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_rx_config work_rx_config 
+# ** Error: (vmap-20) Cannot access for writing file "C:/modeltech64_2020.4/win64/../modelsim.ini".
+# Permission denied. (errno = EACCES)
+# ** Warning: modelsim.ini and default $MODEL_TECH/../modelsim.ini are the same file
+# Executing ONERROR command at macro ././run_config.do line 4

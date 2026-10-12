@@ -1,0 +1,7 @@
+{
+  "terminated_at_utc": "2026-10-10T05:58:34.7085169Z",
+  "client_pid": 18808,
+  "server_pid": 23260,
+  "reason": "Explicit ISC program reported success; readback made no progress or data for over five minutes; stopped owned tool processes for recovery",
+  "verification_passed": false
+}

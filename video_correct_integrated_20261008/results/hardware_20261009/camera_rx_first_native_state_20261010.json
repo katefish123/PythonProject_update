@@ -1,0 +1,49 @@
+{
+  "utc": "2026-10-10T14:56:49.311573+00:00",
+  "current_image": "release/camera_native_rx_first_20261010/camera_native_rx_first_top.sbit",
+  "current_image_sha256": "b918087a2ec5179e78f1a3f78e903538e401abbc120ba40201abb45a9fb5cbc2",
+  "program_verify_passed": true,
+  "program_log": "results\\hardware_20261009\\program_camera_native_rx_first_20261010_225301.log",
+  "flash_modified": false,
+  "video_path": "Every real RX RGB888 pixel, HS and DE forwarded through two register stages; VS recovery retained from C",
+  "frame_buffer_or_ddr": false,
+  "downsample_or_upscale": false,
+  "config_order": "RX first, then TX, then return bus ownership to RX and replay its deferred request",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "camera_settings_user_confirmed": {
+    "HDMI_display": "Camera + external monitor",
+    "auto_power_off": "Disabled"
+  },
+  "previous_reconnect_preview_user_reported_recovered": true,
+  "pre_upgrade_capture": "results/hardware_20261009/bram_reconnect_before_hd_upgrade_20261010.png",
+  "pre_upgrade_frequency_registers": "0x00000000",
+  "board_power_cycle_reported_by_user": true,
+  "obs_old_frame_cleared_by_deactivate_reactivate": true,
+  "latest_observation": "OBS black before latest physical KEY0 and camera restart confirmation",
+  "actual_camera_display_accepted": false,
+  "continuous_camera_display_verified": false,
+  "actual_camera_correction_accepted": false,
+  "pending": "Await user KEY0 and R50 restart after RX-first b918 image; observe actual frame, refresh capture source if required, save native image and continuity evidence",
+  "retained_releases": [
+    "release/camera_live_bram_20261010",
+    "release/camera_live_bram_reconnect_20261010",
+    "release/ddr_startup_fixed_20261009",
+    "release/camera_live_native_20261010"
+  ],
+  "restore_entries": [
+    "恢复相机预览.cmd",
+    "恢复相机预览_重连修正版.cmd",
+    "下载高清相机预览.cmd",
+    "下载高清相机预览_接收优先.cmd"
+  ],
+  "obs_recording_running": false,
+  "obs_streaming_started": false,
+  "original_A_B_C_modified": false,
+  "esc_behavior_modified": false,
+  "integrated_rx_first_polling_failure_reproduced": true,
+  "receiver_polling_repair_seven_checks_passed": true,
+  "previous_tx_first_native_key0_user_result": "No image",
+  "previous_tx_first_native_sha256": "00e696c084513c48465ad22662585d862a7d30cc76efb0c998d70a98bb388b53",
+  "latest_window_evidence": "results\\hardware_20261009\\native_rx_first_before_reset_20261010.jpg"
+}
