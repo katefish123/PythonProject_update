@@ -1,0 +1,4 @@
+# Preserve imported bytes so upstream SHA256 manifests remain reproducible.
+accepted/** -text
+hires_candidate/** -text
+upstream_records/** -text
