@@ -5,7 +5,7 @@
 ## 同步内容
 
 - `accepted/`：A 的 `release/ddr_camera_reconnect_20261011/source_snapshot.zip` 原样展开，包含完整编译源闭包、DDR IP、板约束、B 算法与 C 时序依赖。对应 109 个源码文件逐字节通过 A 原始 `source_hashes.json` 核对。归档还含构建入口，原绝对路径需要迁移后才能在新目录构建；不能直接运行原下载脚本。
-- `hires_candidate/`：按 A 的 `diagnostics/ddr_camera_hires_prefetch_20261012/results/source_hashes.json` 重建完整 109 个编译源码文件，全部哈希匹配。保留 A 的高清采样和连续读取修复；仅同步，不代表重新构建或上板验收。
+- `hires_candidate/`：按 A 的 `diagnostics/ddr_camera_hires_prefetch_20261012/results/source_hashes.json` 重建完整 109 个编译源码文件，全部哈希匹配。保留 A 的高清采样和连续读取修复；本机复现结果见下面的候选版交付说明，上板验收仍待完成。
 - 每个目录中的 `sync_manifest.json` 使用相对路径，记录各编译源码的 SHA256。`upstream_*` 为 A 原始资格记录。
 - `upstream_records/`：A 最新接续、基础版恢复证据、暂停状态与 HDMI 来源许可证。记录中的“当前板上”仅指 A 当时的现场状态，本轮没有检查硬件状态。
 - `accepted/sim/` 六个 testbench 和 `accepted/vendor/b/vectors/` 为同一个 A 提交提供的附加验证文件，不在 109 项编译源码清单内。
@@ -52,7 +52,7 @@ A 当前基础版采用一个不可变源快照和两个结果银行，源为 64
 
 ## 接下来实际要做的事
 
-1. 从 `hires_candidate/` 继续 A 的连续读取修复，核对其完整构建与时序资格，迁移本机路径，复现候选版检查及构建。
+1. 候选版本机复现已完成，交付入口见 [高清候选复现说明](HIRES_REPRODUCTION.md)。保留 A 的 RTL/IP 和约束，后续硬件验收使用 `release_hires_20261013/` 中码流及掩码。
 2. 保留基础版回退后，再做高清版真实相机完整页、黑行、闪烁、清晰度与重连验收。当前仅有 A 保存的基础版约 52 秒稳定记录，未继承为高清资格。
 3. 测量算法实际更新速度和 DDR 争用，依据数据决定是否需要三源槽、突发写或其他吞吐优化。
 4. B 新黑色角标版属于独立算法配置变更，若采用需配套目标图、ROI 和阈值验证，不能只换算法文件。
