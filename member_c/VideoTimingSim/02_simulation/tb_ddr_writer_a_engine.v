@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module tb_ddr_writer_a_engine;
+module tb_ddr_writer_a_engine #(parameter USE_SESSION=0);
  reg clk=0;always #5 clk=~clk;
  reg rst_n=0,start=0,abort_frame=0,pv=0,pl=0;
  reg [23:0] rgb=0;reg [31:0] base=0;
@@ -16,8 +16,19 @@ module tb_ddr_writer_a_engine;
  rgb888_block_packer pack(.clk(clk),.rst_n(rst_n),.in_valid(pv),.in_ready(pr),
   .in_rgb(rgb),.in_last(pl),.in_abort(abort_frame),.out_valid(bv),.out_ready(br),
   .out_data(bd),.out_strb(bs),.out_last(bl));
- ddr_block_writer writer(clk,rst_n,start,sr,base,abort_frame,bv,br,bd,bs,bl,
-  busy,done,ok,cv,cr,cw,ca,cd,cs,rv,rw,fault);
+ generate if(USE_SESSION)begin: session_mode
+  ddr_capture_session #(.SRC_W(16),.SRC_H(1),.OUT_W(8),.OUT_H(8)) session(
+   .clk(clk),.rst_n(rst_n),.capture_start(start),.capture_ready(sr),
+   .source_done(pv&&pr&&pl),.source_ok(1'b1),.capture_abort(abort_frame),
+   .block_valid(bv),.block_ready(br),.block_data(bd),.block_strb(bs),.block_last(bl),
+   .busy(busy),.capture_done(done),.capture_ok(ok),.cmd_valid(cv),.cmd_ready(cr),.cmd_write(cw),
+   .cmd_addr(ca),.cmd_wdata(cd),.cmd_wstrb(cs),.rsp_valid(rv),.rsp_write(rw),.mem_fault(fault),
+   .read_acquire(1'b0),.read_release(1'b0),.latest_valid(),.latest_slot(),.latest_frame_id(),
+   .read_locked(),.read_slot(),.read_frame_id(),.result_base0_byte(),.result_base1_byte(),.layout_valid());
+ end else begin: writer_mode
+  ddr_block_writer writer(clk,rst_n,start,sr,base,abort_frame,bv,br,bd,bs,bl,
+   busy,done,ok,cv,cr,cw,ca,cd,cs,rv,rw,fault);
+ end endgenerate
  ddr_word_engine #(.WATCHDOG_CYCLES(32)) engine(
   .clk(clk),.rst_n(rst_n),.init_done(1'b1),.cmd_valid(cv),.cmd_ready(cr),
   .cmd_write(cw),.cmd_addr(ca),.cmd_wdata(cd),.cmd_wstrb(cs),
@@ -42,7 +53,7 @@ module tb_ddr_writer_a_engine;
    if(pending&&delay>0)delay<=delay-1;
    if(pending&&wready)begin
     for(j=0;j<8;j=j+1)for(k=0;k<4;k=k+1)
-     if(ws[j*4+k])memory[(write_addr%2073600)+j][k*8+:8]<=wd[j*32+k*8+:8];
+     if(ws[j*4+k])memory[(write_addr%(USE_SESSION?16:2073600))+j][k*8+:8]<=wd[j*32+k*8+:8];
     pending<=0;writes<=writes+1;
    end
    if(arv)$fatal(1,"write pipeline issued read");
@@ -66,15 +77,19 @@ module tb_ddr_writer_a_engine;
  initial begin
   for(j=0;j<64;j=j+1)memory[j]=32'ha5a5a5a5;
   tick;@(negedge clk);rst_n=1;tick;
-  frame(19,1);frame(16,2);
-  if(writes!=5)$fatal(1,"wrong count of accepted DDR beats");
+  if(USE_SESSION)begin frame(16,0);frame(16,1);end
+  else begin frame(19,1);frame(16,2);end
+  if(writes!=(USE_SESSION?4:5))$fatal(1,"wrong count of accepted DDR beats");
   @(negedge clk);start=1;base=0;stall_write=1;tick;@(negedge clk);start=0;
   for(integer n=0;n<8;n=n+1)begin
-   while(!pr)tick;@(negedge clk);pv=1;pl=(n==7);rgb=n;tick;@(negedge clk);pv=0;
+   while(!pr)tick;@(negedge clk);pv=1;pl=!USE_SESSION&&(n==7);rgb=n;tick;@(negedge clk);pv=0;
   end
   while(!done)tick;
-  if(ok||!fault||writes!=5)$fatal(1,"A timeout incorrectly published frame");
-  test_passed=1;$display("PASS_DDR_WRITER_A_ENGINE pixels=35 beats=5 partial_mask timeout");$finish;
+  if(ok||!fault||writes!=(USE_SESSION?4:5))$fatal(1,"A timeout incorrectly published frame");
+  test_passed=1;
+  if(USE_SESSION)$display("PASS_DDR_SESSION_A_ENGINE pixels=32 beats=4 timeout");
+  else $display("PASS_DDR_WRITER_A_ENGINE pixels=35 beats=5 partial_mask timeout");
+  $finish;
  end
  initial begin #100000;$fatal(1,"timeout");end
 endmodule
