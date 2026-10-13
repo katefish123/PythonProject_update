@@ -1,0 +1,43 @@
+{
+  "saved_at_utc": "2026-10-11T17:34:05.040231+00:00",
+  "saved_at_local": "2026-10-12T01:34:05.040231+08:00",
+  "paused_by_user": true,
+  "pause_request": "今天就先到这吧，高清晰度的明天再搞，先保存",
+  "current_board_image": "release/ddr_camera_reconnect_20261011/video_correct_ddr_top.sbit",
+  "current_board_image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "current_program_log": "results\\hardware_20261009\\program_ddr_camera_reconnect_20261011_235140.log",
+  "working_baseline_evidence": "results/hardware_20261009/baseline_recovered_verified_20261012.json",
+  "working_baseline_video": "results/hardware_20261009/clean_corrected_camera_20261012_003742.mp4",
+  "current_baseline_complete_correction_verified": true,
+  "baseline_short_stable_encoded_picture_seconds": 52.233333333333334,
+  "baseline_clarity_improvement_accepted": false,
+  "algorithm_update_fps_measured": false,
+  "high_detail_project": "diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_camera_hires_prefetch.pds",
+  "high_detail_source": [
+    960,
+    540
+  ],
+  "high_detail_result": [
+    640,
+    904
+  ],
+  "display": [
+    1920,
+    1080
+  ],
+  "high_detail_twelve_simulations_passed": true,
+  "high_detail_build_completed": true,
+  "high_detail_timing_report_all_constraints_met": true,
+  "high_detail_generated_bitstream": "diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\generate_bitstream\\video_correct_ddr_top.sbit",
+  "high_detail_generated_bitstream_sha256": "60fb0b53a5c13b2c1adf47539c66bb4426d967effa2e3f2a279a9cac09865f22",
+  "high_detail_generated_mask_sha256": "161f64918b0459b24282a733030b142ee14976a65035d8d6d989955bbe2585da",
+  "high_detail_release_sealed": false,
+  "high_detail_programmed": false,
+  "high_detail_real_camera_accepted": false,
+  "flash_modified": false,
+  "original_A_B_C_modified": false,
+  "original_target_and_Esc_modified": false,
+  "computer_use_paused_by_user": true,
+  "active_prefetch_build": false,
+  "resume": "Wait for user resume. Check power/devices, seal the qualified high-detail release, update its current state/video analyzer, then Program/Verify and compare actual same-target clarity/full rows. Restore a4 if needed."
+}
