@@ -2,7 +2,9 @@
 
 正式分支：`main-C`
 
-本开发分支保存已通过22项仿真、PDS编译及最终时序检查的[采集与校正并行候选版](IntegratedBaseline/capture_overlap_20261014/README.md)。用户准备烧录的正式版本仍固定在 `main-C` 的 `809c082`，不使用本目录候选替代。
+本开发分支最新入口：[完整分辨率连续帧优化](IntegratedBaseline/fullhd_pipeline_20261014/README.md)。27 项仿真、PDS 构建及最终时序均通过；完整原生 DDR 三帧模型平均处理间隔 691.648ms → 599.984ms，减少 13.25%。板上验收未执行。用户准备烧录的正式版本仍固定在 `main-C` 的 `809c082`。
+
+上一轮[采集与校正并行候选版](IntegratedBaseline/capture_overlap_20261014/README.md)的小模型改善没有在完整链路上重现；其原始记录保留，最新结论和对照测量以上述新入口为准。
 
 初版交接与板测清单：[初版交接_20261014](IntegratedBaseline/初版交接_20261014.md)。
 

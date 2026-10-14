@@ -1,0 +1,21 @@
+{
+  "qualified_at_utc": "2026-10-14T12:31:08.7057784Z",
+  "upstream_commit": "6b0b2e257efcfbb379d3f447403beb5ad08e0086",
+  "simulation_qualification_sha256": "f6aa61f7c2130473258f4b9a072d71b0f5b793d3b00dd5b0a8a2bcb493fda048",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "hardware_accepted": false,
+  "source_manifest_sha256": "298a06a3a4cd87bec47487fc450eace057e0f91790b93c6231e29fa3d7a25d47",
+  "build_log": "D:\\FPGA\\output\\c_fullhd_pipeline_guard_20261014\\build_20261014_202242\\build.log",
+  "timing_report": "D:\\FPGA\\output\\c_fullhd_pipeline_guard_20261014\\build_20261014_202242\\place_route\\video_correct_ddr_top_timing_summary_after_hold_fix.txt",
+  "artifacts": {
+    "sbit": {
+      "path": "D:\\FPGA\\output\\c_fullhd_pipeline_guard_20261014\\build_20261014_202242\\generate_bitstream\\video_correct_ddr_top.sbit",
+      "sha256": "f53961223fbab381bb02b2c0789b803fe03de199304dc216f10f881ec9bea3b1"
+    },
+    "smsk": {
+      "path": "D:\\FPGA\\output\\c_fullhd_pipeline_guard_20261014\\build_20261014_202242\\generate_bitstream\\video_correct_ddr_top.smsk",
+      "sha256": "fa4f2a3f6713849d46034fb1bcc3e2023f0ea5f58a504cb1b87573f8d8197438"
+    }
+  }
+}

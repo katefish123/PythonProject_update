@@ -1,0 +1,177 @@
+{
+  "evidence": "simulation_native_engine_full_algorithm_three_frames",
+  "hardware_accepted": false,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "result_size": [
+    640,
+    904
+  ],
+  "display_size": [
+    1920,
+    1080
+  ],
+  "proc_clock_hz": 27000000,
+  "reduction_vs_serial_percent": 13.25302701609725,
+  "reduction_vs_eager_percent": 22.580646394607033,
+  "results": [
+    {
+      "mode": "serial",
+      "average_start_interval_cycles": 18674496,
+      "average_start_interval_ms": 691.648,
+      "corrected_pixels": 1735680,
+      "display_pixels": 1735680,
+      "source_age_ms": [
+        16.66705,
+        16.667055,
+        16.667066
+      ],
+      "image_age_at_publish_ms": [
+        651.27392,
+        677.076633,
+        677.024161
+      ],
+      "max_ui_wait_cycles": 140,
+      "native_reads": 2698263,
+      "overlap_beats": 0,
+      "phase_profiles": [
+        {
+          "frame": 1,
+          "scan_cycles": 5530559,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8131098,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 578560,
+          "other_cycles": 578584,
+          "processing_ms": 634.606499
+        },
+        {
+          "frame": 2,
+          "scan_cycles": 5630982,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8710434,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 595456,
+          "other_cycles": 578584,
+          "processing_ms": 660.409207
+        },
+        {
+          "frame": 3,
+          "scan_cycles": 5630645,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8709378,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 595431,
+          "other_cycles": 578584,
+          "processing_ms": 660.356687
+        }
+      ]
+    },
+    {
+      "mode": "eager_overlap",
+      "average_start_interval_cycles": 20924432,
+      "average_start_interval_ms": 774.978962962963,
+      "corrected_pixels": 1735680,
+      "display_pixels": 1735680,
+      "source_age_ms": [
+        16.667087,
+        633.332946,
+        883.332699
+      ],
+      "image_age_at_publish_ms": [
+        657.322892,
+        1527.871092,
+        1777.989367
+      ],
+      "max_ui_wait_cycles": 3580,
+      "native_reads": 2915223,
+      "overlap_beats": 777600,
+      "phase_profiles": [
+        {
+          "frame": 1,
+          "scan_cycles": 5693951,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8131023,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 578560,
+          "other_cycles": 578584,
+          "processing_ms": 640.655434
+        },
+        {
+          "frame": 2,
+          "scan_cycles": 8145867,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 12115643,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 996531,
+          "other_cycles": 578584,
+          "processing_ms": 894.532665
+        },
+        {
+          "frame": 3,
+          "scan_cycles": 8145866,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 12118643,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 996730,
+          "other_cycles": 578584,
+          "processing_ms": 894.651112
+        }
+      ]
+    },
+    {
+      "mode": "late_overlap_source_prefetch",
+      "average_start_interval_cycles": 16199560,
+      "average_start_interval_ms": 599.9837037037037,
+      "corrected_pixels": 1735680,
+      "display_pixels": 1735680,
+      "source_age_ms": [
+        16.667087,
+        16.667096,
+        33.333544
+      ],
+      "image_age_at_publish_ms": [
+        595.141942,
+        628.430668,
+        645.135302
+      ],
+      "max_ui_wait_cycles": 3607,
+      "native_reads": 1759232,
+      "overlap_beats": 699846,
+      "phase_profiles": [
+        {
+          "frame": 1,
+          "scan_cycles": 4152627,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 7990335,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 581730,
+          "other_cycles": 578584,
+          "processing_ms": 578.474484
+        },
+        {
+          "frame": 2,
+          "scan_cycles": 4172700,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8807557,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 643207,
+          "other_cycles": 578584,
+          "processing_ms": 611.763202
+        },
+        {
+          "frame": 3,
+          "scan_cycles": 4172723,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8805996,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 645776,
+          "other_cycles": 578584,
+          "processing_ms": 611.801388
+        }
+      ]
+    }
+  ]
+}

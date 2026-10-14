@@ -1,0 +1,3 @@
+overrides/** -text whitespace=cr-at-eol
+release/** -text -whitespace
+performance.json -text whitespace=cr-at-eol
