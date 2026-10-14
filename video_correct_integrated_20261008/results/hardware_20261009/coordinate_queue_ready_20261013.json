@@ -1,0 +1,11 @@
+{
+  "qualified_release": "release/ddr_camera_coordqueue_20261013",
+  "image_sha256": "1be0d8aeb90745a560089912d6c221a91962247926d82cb159ac0c335b3ac996",
+  "simulations_passed": 15,
+  "timing_passed": true,
+  "modeled_cycle_speed_ratio": 2.0293720048515964,
+  "hardware_programmed": false,
+  "thermal_hold_active": true,
+  "board_power_reported_off": true,
+  "next": "Manual fresh ADC temperature measurement; do not attribute baseline footage to unprogrammed new image."
+}

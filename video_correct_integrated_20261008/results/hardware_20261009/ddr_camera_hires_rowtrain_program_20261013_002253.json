@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-12T16:24:10.4403398Z",
+  "bitstream_sha256": "eb06c8f9645665111b339e2ea305549a107830275d50f7625245b163b371d987",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\program_ddr_camera_hires_rowtrain_20261013_002253.log",
+  "actual_camera_correction_accepted": false
+}

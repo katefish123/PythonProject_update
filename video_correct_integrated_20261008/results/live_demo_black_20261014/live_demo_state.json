@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-14T05:22:57.2423870Z",
+  "user_requested_obs_live_demo": true,
+  "obs_operated_by_user": true,
+  "release": "ddr_camera_black_fast_20261014",
+  "bitstream_sha256": "39574d43ef4605fc1953de32dab1bb520a2f46de0ddfa059cb7860333669777d",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "program_receipt": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black_fast\\black_fast_program_20261014_132008.json",
+  "current_resident_release": "ddr_camera_black_fast_20261014",
+  "live_output_accepted": false,
+  "actual_update_rate_measured": false,
+  "note": "The user explicitly asked to program existing firmware and will operate OBS for presentation. Programming success is separate from optical demonstration acceptance."
+}

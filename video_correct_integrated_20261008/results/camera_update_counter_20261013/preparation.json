@@ -1,0 +1,39 @@
+{
+  "original_asset_sha256": "ecc1fab5412fb87fbe76b4ea4e262976a3d183e8470e481f8830df8241fc572d",
+  "synthetic_values_checked": [
+    0,
+    1,
+    42,
+    777,
+    1023,
+    4095
+  ],
+  "hardware_picture_or_fps_accepted": false,
+  "source_corner_points": [
+    [
+      200,
+      45
+    ],
+    [
+      465,
+      100
+    ],
+    [
+      435,
+      420
+    ],
+    [
+      180,
+      390
+    ]
+  ],
+  "stimulus_tick_hz": 10,
+  "counter_bits": 12,
+  "gray_coded": true,
+  "inverse_row_check": true,
+  "sampling_output_size": [
+    320,
+    452
+  ],
+  "note": "Synthetic layout/decoder validation only. Original asset and FPGA code unchanged. Actual rate must be measured from a new physical OBS recording."
+}

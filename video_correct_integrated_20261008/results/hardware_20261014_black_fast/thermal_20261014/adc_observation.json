@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-14T03:10:40.9356777Z",
+  "source": "user_attached_ADC_Console_screenshot",
+  "fpga_temperature_present_c": 53.8,
+  "fpga_temperature_sample_max_c": 54.0,
+  "fpga_temperature_sample_min_c": 53.2,
+  "user_confirmed_no_fan_during_measurement": true,
+  "heatsink_present": true,
+  "valid_samples_visible": true,
+  "history_contains_timestamped_changes": true,
+  "continuous_live_refresh_at_this_instant_proven": false,
+  "long_term_thermal_stability_accepted": false,
+  "exact_current_bitstream_verified": false,
+  "fast_release_programmed_by_assistant": false,
+  "ddr_surface_temperature_measured": false,
+  "initial_na_plot_was_not_a_temperature_reading": true,
+  "screenshot_sha256": "d368937b494cb400b41d3fd8d042e7f16d1066415fcb8b4c7349c79884208124"
+}

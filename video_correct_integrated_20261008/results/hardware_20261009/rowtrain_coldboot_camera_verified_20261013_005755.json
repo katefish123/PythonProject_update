@@ -1,0 +1,38 @@
+{
+  "verified_at_utc": "2026-10-13T06:11:03.908520+00:00",
+  "image_sha256": "eb06c8f9645665111b339e2ea305549a107830275d50f7625245b163b371d987",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_hires_rowtrain_20261013_004921.log",
+  "program_log_sha256": "9db45612ad5b4a8f1c2d2f11a084a77661ce61d0dfa814fe5a84fa5401685068",
+  "board_power_cycle_reported_by_user": true,
+  "same_image_reprogrammed": true,
+  "user_report": "Corrected image recovered, stable throughout, recordings stopped.",
+  "cold_boot_picture_recovery_verified": true,
+  "full_corrected_page_visually_checked": true,
+  "analyzed_page_frames": 1005,
+  "analyzed_page_seconds": 33.5,
+  "first_page_encoded_seconds_estimate": 4.7,
+  "missing_dark_rows_after_page": 0,
+  "recordings": [
+    {
+      "original": "C:\\Users\\夏菲\\Videos\\2026-10-13 00-57-02.mp4",
+      "sha256": "174fed05d93f2118f3069d0e2205bbe2a912ba2d12567dfa1d3b44b66f0e3818",
+      "encoded_seconds": 50.2,
+      "probe": "results\\hardware_20261009\\rowtrain_probe_20261013_005702\\probe.json",
+      "preserved_video": "results\\hardware_20261009\\rowtrain_coldboot_camera_20261013_005702.mp4"
+    },
+    {
+      "original": "C:\\Users\\夏菲\\Videos\\2026-10-13 00-57-55.mp4",
+      "sha256": "10232cb38d1657c79d5dbde6f569b57b75405d90858ac9bbd6fc01ecb346425c",
+      "encoded_seconds": 38.23,
+      "probe": "results\\hardware_20261009\\rowtrain_probe_20261013_005755\\probe.json",
+      "preserved_video": "results\\hardware_20261009\\rowtrain_coldboot_camera_20261013_005755.mp4"
+    }
+  ],
+  "startup_clip_only_bars": true,
+  "startup_black_frames_before_any_page": 18,
+  "continuous_two_minute_recording_verified": false,
+  "long_term_camera_display_verified": false,
+  "algorithm_update_fps_measured": false,
+  "flash_modified": false,
+  "scope": "Previous power cycle recovery plus ~33.5s complete corrected page in actual recording. The two files do not contain two continuous minutes of corrected page. Startup-only bars/black excluded from page stability; no change to earlier evidence."
+}

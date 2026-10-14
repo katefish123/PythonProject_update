@@ -1,0 +1,20 @@
+{
+  "synthetic": true,
+  "board_latency_measured": false,
+  "sample_requests": 2314240,
+  "roi_pixels": 10404,
+  "full_scan_pixels": 518400,
+  "old_two_entry_full_scan_reads": 378528,
+  "roi_scan_cache_reads": {
+    "fully_associative_2": 315156,
+    "fully_associative_4": 150372,
+    "fully_associative_8": 150372,
+    "fully_associative_16": 150372,
+    "two_way_8_sets": 150372,
+    "two_way_16_sets": 150372,
+    "two_way_32_sets": 150092,
+    "two_way_64_sets": 110237,
+    "two_way_128_sets": 39351,
+    "two_way_256_sets": 33420
+  }
+}

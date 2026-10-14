@@ -1,0 +1,371 @@
+14:00:27.711: Command Line Arguments: --portable --profile FPGA --collection FPGA
+14:00:27.711: CPU Name: AMD Ryzen 9 9955HX 16-Core Processor           
+14:00:27.711: CPU Speed: 2495MHz
+14:00:27.711: Physical Cores: 16, Logical Cores: 32
+14:00:27.711: Physical Memory: 15549MB Total, 4053MB Free
+14:00:27.711: Windows Version: 10.0 Build 26200 (release: 25H2; revision: 9457; 64-bit)
+14:00:27.711: Running as administrator: false
+14:00:27.711: Windows 10/11 Gaming Features:
+14:00:27.711: 	Game DVR: On
+14:00:27.711: 	Game Mode: Probably On (no reg key set)
+14:00:27.712: Sec. Software Status:
+14:00:27.713: 	Microsoft Defender 防病毒: enabled (AV)
+14:00:27.713: 	Windows 防火墙: enabled (FW)
+14:00:27.714: Current Date/Time: 2026-10-13, 14:00:27
+14:00:27.714: Browser Hardware Acceleration: true
+14:00:27.714: Hide OBS windows from screen capture: false
+14:00:27.714: Qt Version: 6.11.1 (runtime), 6.11.1 (compiled)
+14:00:27.714: Portable mode: true
+14:00:27.976: OBS 32.2.2 (64-bit, windows)
+14:00:27.976: ---------------------------------
+14:00:27.998: ---------------------------------
+14:00:27.999: audio settings reset:
+14:00:27.999: 	samples per sec: 48000
+14:00:27.999: 	speakers:        2
+14:00:27.999: 	max buffering:   960 milliseconds
+14:00:27.999: 	buffering type:  dynamically increasing
+14:00:28.015: ---------------------------------
+14:00:28.015: Initializing D3D11...
+14:00:28.015: Available Video Adapters: 
+14:00:28.036: 	Adapter 0: NVIDIA GeForce RTX 5070 Laptop GPU
+14:00:28.036: 	  Dedicated VRAM: 8274313216 (7.7 GiB)
+14:00:28.036: 	  Shared VRAM:    8152512512 (7.6 GiB)
+14:00:28.036: 	  PCI ID:         10de:2d58
+14:00:28.036: 	  HAGS Status:    Enabled (Default: No, Driver status: Supported)
+14:00:28.036: 	  Driver Version: 32.0.15.9613
+14:00:28.036: 	  output 0:
+14:00:28.036: 	    name=NE160QDM-NYM
+14:00:28.036: 	    pos={0, 0}
+14:00:28.036: 	    size={2560, 1600}
+14:00:28.036: 	    attached=true
+14:00:28.036: 	    refresh=165
+14:00:28.036: 	    bits_per_color=8
+14:00:28.036: 	    space=RGB_FULL_G22_NONE_P709
+14:00:28.036: 	    primaries=[r=(0.646484, 0.330078), g=(0.300781, 0.607422), b=(0.146484, 0.060547), wp=(0.313477, 0.329102)]
+14:00:28.036: 	    relative_gamut_area=[709=1.034581, P3=0.762663, 2020=0.547160]
+14:00:28.036: 	    sdr_white_nits=80
+14:00:28.036: 	    nit_range=[min=4.000000, max=400.000000, max_full_frame=400.000000]
+14:00:28.036: 	    dpi=144 (150%)
+14:00:28.036: 	    id=\\?\DISPLAY#BOE0D16#5&3063884a&0&UID512#{e6f07b5f-ee97-4a90-b076-33f57bf4eaa7}
+14:00:28.036: 	    alt_id=\\.\DISPLAY1
+14:00:28.036: 	Adapter 1: AMD Radeon(TM) 610M
+14:00:28.036: 	  Dedicated VRAM: 506920960 (0.5 GiB)
+14:00:28.036: 	  Shared VRAM:    8152512512 (7.6 GiB)
+14:00:28.036: 	  PCI ID:         1002:13c0
+14:00:28.036: 	  HAGS Status:    Disabled (Default: No, Driver status: Unsupported)
+14:00:28.037: 	  Driver Version: 32.0.21036.11002
+14:00:28.037: 	Adapter 2: AMD Radeon(TM) 610M
+14:00:28.037: 	  Dedicated VRAM: 506920960 (0.5 GiB)
+14:00:28.037: 	  Shared VRAM:    8152512512 (7.6 GiB)
+14:00:28.037: 	  PCI ID:         1002:13c0
+14:00:28.037: 	  HAGS Status:    Disabled (Default: No, Driver status: Unsupported)
+14:00:28.037: 	  Driver Version: 32.0.21036.11002
+14:00:28.038: Loading up D3D11 on adapter NVIDIA GeForce RTX 5070 Laptop GPU (0)
+14:00:28.140: D3D11 loaded successfully, feature level used: b000
+14:00:28.140: DXGI increase maximum frame latency success
+14:00:28.140: Hardware-Accelerated GPU Scheduling enabled on adapter!
+14:00:28.144: D3D11 GPU priority setup failed (not admin?)
+14:00:28.687: ---------------------------------
+14:00:28.687: video settings reset:
+14:00:28.687: 	base resolution:   1920x1080
+14:00:28.687: 	output resolution: 1920x1080
+14:00:28.687: 	downscale filter:  Bicubic
+14:00:28.687: 	fps:               30/1
+14:00:28.687: 	format:            NV12
+14:00:28.687: 	YUV mode:          Rec. 709/Partial
+14:00:28.689: NV12 texture support enabled
+14:00:28.689: P010 texture support not available
+14:00:28.694: Audio monitoring device:
+14:00:28.694: 	name: 默认
+14:00:28.694: 	id: default
+14:00:28.715: ---------------------------------
+14:00:28.740: No AJA devices found, skipping loading AJA UI plugin
+14:00:28.740: Failed to initialize module 'aja-output-ui.dll'
+14:00:28.767: No AJA devices found, skipping loading AJA plugin
+14:00:28.767: Failed to initialize module 'aja.dll'
+14:00:28.768: Skipping module '../../obs-plugins/64bit/chrome_elf.dll', not an OBS plugin
+14:00:28.786: [CoreAudio encoder]: CoreAudio AAC encoder not installed on the system or couldn't be loaded
+14:00:28.798: Failed to load 'en-US' text for module: 'decklink-captions.dll'
+14:00:28.811: Failed to load 'en-US' text for module: 'decklink-output-ui.dll'
+14:00:28.833: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+14:00:28.833: Failed to initialize module 'decklink.dll'
+14:00:28.915: Skipping module '../../obs-plugins/64bit/libcef.dll', not an OBS plugin
+14:00:28.916: Skipping module '../../obs-plugins/64bit/libEGL.dll', not an OBS plugin
+14:00:28.917: Skipping module '../../obs-plugins/64bit/libGLESv2.dll', not an OBS plugin
+14:00:28.934: Failed to get C:\Program Files\NVIDIA Corporation\NVIDIA Audio Effects SDK\NVAudioEffects.dll version info size
+14:00:28.935: [NVIDIA Audio Effects:] NVIDIA denoiser disabled, redistributable not found or could not be loaded.
+14:00:28.935: Failed to get C:\Program Files\NVIDIA Corporation\NVIDIA Video Effects\NVVideoEffects.dll version info size
+14:00:28.935: [NVIDIA VIDEO FX]: FX disabled, redistributable not found or could not be loaded.
+14:00:29.024: [obs-browser]: Version 2.26.9
+14:00:29.024: [obs-browser]: CEF Version 127.0.6533.120 (runtime), 127.145.7+g2b7d20b+chromium-127.0.6533.120 (compiled)
+14:00:29.523: [obs-nvenc] NVENC version: 13.0 (compiled) / 13.0 (driver), CUDA driver version: 13.20, AV1 supported: true
+14:00:29.811: [obs-websocket] [obs_module_load] you can haz websockets (Version: 5.7.4 | RPC Version: 1)
+14:00:29.811: [obs-websocket] [obs_module_load] Qt version (compile-time): 6.11.1 | Qt version (run-time): 6.11.1
+14:00:29.811: [obs-websocket] [obs_module_load] Linked ASIO Version: 103200
+14:00:29.829: [obs-websocket] [obs_module_load] Module loaded.
+14:00:29.914: [vlc-video]: Couldn't find VLC installation, VLC video source disabled
+14:00:30.158: ---------------------------------
+14:00:30.158:   Loaded Modules:
+14:00:30.158:     win-wasapi.dll
+14:00:30.158:     win-dshow.dll
+14:00:30.158:     win-capture.dll
+14:00:30.158:     vlc-video.dll
+14:00:30.158:     text-freetype2.dll
+14:00:30.158:     rtmp-services.dll
+14:00:30.158:     obs-x264.dll
+14:00:30.158:     obs-websocket.dll
+14:00:30.158:     obs-webrtc.dll
+14:00:30.158:     obs-vst.dll
+14:00:30.158:     obs-transitions.dll
+14:00:30.158:     obs-text.dll
+14:00:30.158:     obs-qsv11.dll
+14:00:30.158:     obs-outputs.dll
+14:00:30.158:     obs-nvenc.dll
+14:00:30.158:     obs-filters.dll
+14:00:30.158:     obs-ffmpeg.dll
+14:00:30.158:     obs-browser.dll
+14:00:30.158:     nv-filters.dll
+14:00:30.158:     image-source.dll
+14:00:30.158:     frontend-tools.dll
+14:00:30.158:     decklink-output-ui.dll
+14:00:30.158:     decklink-captions.dll
+14:00:30.158:     coreaudio-encoder.dll
+14:00:30.158: ---------------------------------
+14:00:30.158: ---------------------------------
+14:00:30.158: Available Encoders:
+14:00:30.158:   Video Encoders:
+14:00:30.159: 	- ffmpeg_svt_av1 (SVT-AV1)
+14:00:30.159: 	- ffmpeg_aom_av1 (AOM AV1)
+14:00:30.159: 	- h264_texture_amf (AMD HW H.264 (AVC))
+14:00:30.159: 	- h265_texture_amf (AMD HW H.265 (HEVC))
+14:00:30.159: 	- obs_nvenc_h264_tex (NVIDIA NVENC H.264)
+14:00:30.159: 	- obs_nvenc_hevc_tex (NVIDIA NVENC HEVC)
+14:00:30.159: 	- obs_nvenc_av1_tex (NVIDIA NVENC AV1)
+14:00:30.159: 	- obs_x264 (x264)
+14:00:30.159:   Audio Encoders:
+14:00:30.159: 	- ffmpeg_aac (FFmpeg AAC)
+14:00:30.159: 	- ffmpeg_opus (FFmpeg Opus)
+14:00:30.159: 	- ffmpeg_pcm_s16le (FFmpeg PCM (16位))
+14:00:30.159: 	- ffmpeg_pcm_s24le (FFmpeg PCM (24位))
+14:00:30.159: 	- ffmpeg_pcm_f32le (FFmpeg PCM (32位浮点))
+14:00:30.159: 	- ffmpeg_alac (FFmpeg ALAC (24位))
+14:00:30.159: 	- ffmpeg_flac (FFmpeg FLAC (16位))
+14:00:30.159: ==== Startup complete ===============================================
+14:00:30.319: All scene data cleared
+14:00:30.319: ------------------------------------------------
+14:00:30.345: Switched to scene '板卡实时画面'
+14:00:30.346: ------------------------------------------------
+14:00:30.346: Loaded scenes:
+14:00:30.346: - scene '板卡实时画面':
+14:00:30.346:     - source: 'FPGA HDMI 输出（采集卡）' (dshow_input)
+14:00:30.346: ------------------------------------------------
+14:00:30.723: ---------------------------------
+14:00:30.723: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+14:00:30.723: 	video device: VC-002Pro 
+14:00:30.723: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+14:00:30.723: 	resolution: 1920x1080
+14:00:30.723: 	flip: 0
+14:00:30.723: 	fps: 30.00 (interval: 333333)
+14:00:30.723: 	format: NV12
+14:00:30.723: 	buffering: disabled
+14:00:30.723: 	hardware decode: disabled
+14:29:10.920: ---------------------------------
+14:29:10.920: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+14:29:10.920: 	video device: VC-002Pro 
+14:29:10.920: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+14:29:10.920: 	resolution: 1920x1080
+14:29:10.920: 	flip: 0
+14:29:10.920: 	fps: 30.00 (interval: 333333)
+14:29:10.920: 	format: NV12
+14:29:10.920: 	buffering: disabled
+14:29:10.920: 	hardware decode: disabled
+14:29:12.527: [obs-nvenc: 'simple_video_stream'] settings:
+14:29:12.527: 	codec:        H264
+14:29:12.527: 	rate_control: CBR
+14:29:12.527: 	bitrate:      6000
+14:29:12.527: 	keyint:       250
+14:29:12.527: 	preset:       p5
+14:29:12.527: 	tuning:       hq
+14:29:12.527: 	multipass:    qres
+14:29:12.527: 	profile:      high
+14:29:12.527: 	width:        1920
+14:29:12.527: 	height:       1080
+14:29:12.527: 	b-frames:     2
+14:29:12.527: 	b-ref-mode:   0
+14:29:12.527: 	lookahead:    true (8 frames)
+14:29:12.527: 	aq:           true
+14:29:12.527: 
+14:29:12.611: ---------------------------------
+14:29:12.612: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+14:29:12.612: 
+14:29:12.627: ==== Recording Start ===============================================
+14:29:12.627: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file 'C:/Users/夏菲/Videos/2026-10-13 14-29-12.mp4'...
+14:29:56.943: [mp4 muxer: 'simple_file_output'] Flushing final fragment...
+14:29:56.943: [mp4 muxer: 'simple_file_output'] Number of fragments: 6
+14:29:56.943: [mp4 muxer: 'simple_file_output'] Full moov size: 24 KiB
+14:29:56.944: [mp4 muxer: 'simple_file_output'] Final mdat size: 32040 KiB
+14:29:56.944: Output 'simple_file_output': stopping
+14:29:56.944: Output 'simple_file_output': Total frames output: 1313
+14:29:56.944: Output 'simple_file_output': Total drawn frames: 1330
+14:29:56.944: [mp4 output: 'simple_file_output'] Waiting for file writer to finish...
+14:29:56.944: ==== Recording Stop ================================================
+14:29:56.945: [mp4 output: 'simple_file_output'] File output complete. Finalization took 1 ms.
+14:29:57.045: warning: 2 frames left in the queue on closing
+14:30:08.830: ---------------------------------
+14:30:08.830: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+14:30:08.830: 	video device: VC-002Pro 
+14:30:08.830: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+14:30:08.830: 	resolution: 1920x1080
+14:30:08.830: 	flip: 0
+14:30:08.830: 	fps: 30.00 (interval: 333333)
+14:30:08.830: 	format: NV12
+14:30:08.830: 	buffering: disabled
+14:30:08.830: 	hardware decode: disabled
+14:30:10.657: [obs-nvenc: 'simple_video_stream'] settings:
+14:30:10.657: 	codec:        H264
+14:30:10.657: 	rate_control: CBR
+14:30:10.657: 	bitrate:      6000
+14:30:10.657: 	keyint:       250
+14:30:10.657: 	preset:       p5
+14:30:10.657: 	tuning:       hq
+14:30:10.657: 	multipass:    qres
+14:30:10.657: 	profile:      high
+14:30:10.657: 	width:        1920
+14:30:10.657: 	height:       1080
+14:30:10.657: 	b-frames:     2
+14:30:10.657: 	b-ref-mode:   0
+14:30:10.657: 	lookahead:    true (8 frames)
+14:30:10.657: 	aq:           true
+14:30:10.657: 
+14:30:10.730: ---------------------------------
+14:30:10.731: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+14:30:10.731: 
+14:30:10.737: ==== Recording Start ===============================================
+14:30:10.737: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file 'C:/Users/夏菲/Videos/2026-10-13 14-30-10.mp4'...
+14:30:42.143: [mp4 muxer: 'simple_file_output'] Flushing final fragment...
+14:30:42.144: [mp4 muxer: 'simple_file_output'] Number of fragments: 4
+14:30:42.144: [mp4 muxer: 'simple_file_output'] Full moov size: 17 KiB
+14:30:42.144: [mp4 muxer: 'simple_file_output'] Final mdat size: 22582 KiB
+14:30:42.144: Output 'simple_file_output': stopping
+14:30:42.144: Output 'simple_file_output': Total frames output: 926
+14:30:42.144: Output 'simple_file_output': Total drawn frames: 943
+14:30:42.144: [mp4 output: 'simple_file_output'] Waiting for file writer to finish...
+14:30:42.145: ==== Recording Stop ================================================
+14:30:42.146: [mp4 output: 'simple_file_output'] File output complete. Finalization took 2 ms.
+14:30:42.250: warning: 2 frames left in the queue on closing
+14:31:06.314: [obs-nvenc: 'simple_video_stream'] settings:
+14:31:06.314: 	codec:        H264
+14:31:06.314: 	rate_control: CBR
+14:31:06.314: 	bitrate:      6000
+14:31:06.314: 	keyint:       250
+14:31:06.314: 	preset:       p5
+14:31:06.314: 	tuning:       hq
+14:31:06.314: 	multipass:    qres
+14:31:06.314: 	profile:      high
+14:31:06.314: 	width:        1920
+14:31:06.314: 	height:       1080
+14:31:06.314: 	b-frames:     2
+14:31:06.314: 	b-ref-mode:   0
+14:31:06.314: 	lookahead:    true (8 frames)
+14:31:06.314: 	aq:           true
+14:31:06.314: 
+14:31:06.364: ---------------------------------
+14:31:06.364: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+14:31:06.364: 
+14:31:06.371: ==== Recording Start ===============================================
+14:31:06.371: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file 'C:/Users/夏菲/Videos/2026-10-13 14-31-06.mp4'...
+14:31:33.359: [mp4 muxer: 'simple_file_output'] Flushing final fragment...
+14:31:33.359: [mp4 muxer: 'simple_file_output'] Number of fragments: 4
+14:31:33.359: [mp4 muxer: 'simple_file_output'] Full moov size: 15 KiB
+14:31:33.359: [mp4 muxer: 'simple_file_output'] Final mdat size: 19332 KiB
+14:31:33.359: Output 'simple_file_output': stopping
+14:31:33.359: Output 'simple_file_output': Total frames output: 793
+14:31:33.359: Output 'simple_file_output': Total drawn frames: 810
+14:31:33.359: [mp4 output: 'simple_file_output'] Waiting for file writer to finish...
+14:31:33.360: ==== Recording Stop ================================================
+14:31:33.361: [mp4 output: 'simple_file_output'] File output complete. Finalization took 2 ms.
+14:31:33.462: warning: 2 frames left in the queue on closing
+14:31:49.708: ---------------------------------
+14:31:49.708: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+14:31:49.708: 	video device: VC-002Pro 
+14:31:49.708: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+14:31:49.708: 	resolution: 1920x1080
+14:31:49.708: 	flip: 0
+14:31:49.708: 	fps: 30.00 (interval: 333333)
+14:31:49.708: 	format: NV12
+14:31:49.708: 	buffering: disabled
+14:31:49.708: 	hardware decode: disabled
+14:31:54.706: [obs-nvenc: 'simple_video_stream'] settings:
+14:31:54.706: 	codec:        H264
+14:31:54.706: 	rate_control: CBR
+14:31:54.706: 	bitrate:      6000
+14:31:54.706: 	keyint:       250
+14:31:54.706: 	preset:       p5
+14:31:54.706: 	tuning:       hq
+14:31:54.706: 	multipass:    qres
+14:31:54.706: 	profile:      high
+14:31:54.706: 	width:        1920
+14:31:54.706: 	height:       1080
+14:31:54.706: 	b-frames:     2
+14:31:54.706: 	b-ref-mode:   0
+14:31:54.706: 	lookahead:    true (8 frames)
+14:31:54.706: 	aq:           true
+14:31:54.706: 
+14:31:54.750: ---------------------------------
+14:31:54.750: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+14:31:54.750: 
+14:31:54.756: ==== Recording Start ===============================================
+14:31:54.756: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file 'C:/Users/夏菲/Videos/2026-10-13 14-31-54.mp4'...
+14:32:19.710: [mp4 muxer: 'simple_file_output'] Flushing final fragment...
+14:32:19.711: [mp4 muxer: 'simple_file_output'] Number of fragments: 3
+14:32:19.711: [mp4 muxer: 'simple_file_output'] Full moov size: 14 KiB
+14:32:19.711: [mp4 muxer: 'simple_file_output'] Final mdat size: 17841 KiB
+14:32:19.712: Output 'simple_file_output': stopping
+14:32:19.712: Output 'simple_file_output': Total frames output: 732
+14:32:19.712: Output 'simple_file_output': Total drawn frames: 749
+14:32:19.712: [mp4 output: 'simple_file_output'] Waiting for file writer to finish...
+14:32:19.712: ==== Recording Stop ================================================
+14:32:19.712: [mp4 output: 'simple_file_output'] File output complete. Finalization took 2 ms.
+14:32:19.820: warning: 2 frames left in the queue on closing
+01:04:18.935: ---------------------------------
+01:04:18.936: [DShow Device: 'FPGA HDMI 输出（采集卡）'] settings updated: 
+01:04:18.936: 	video device: VC-002Pro 
+01:04:18.936: 	video path: \\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global
+01:04:18.936: 	resolution: 1920x1080
+01:04:18.936: 	flip: 0
+01:04:18.936: 	fps: 30.00 (interval: 333333)
+01:04:18.936: 	format: NV12
+01:04:18.936: 	buffering: disabled
+01:04:18.936: 	hardware decode: disabled
+01:14:46.361: [obs-nvenc: 'simple_video_stream'] settings:
+01:14:46.361: 	codec:        H264
+01:14:46.361: 	rate_control: CBR
+01:14:46.361: 	bitrate:      6000
+01:14:46.361: 	keyint:       250
+01:14:46.361: 	preset:       p5
+01:14:46.361: 	tuning:       hq
+01:14:46.361: 	multipass:    qres
+01:14:46.361: 	profile:      high
+01:14:46.361: 	width:        1920
+01:14:46.361: 	height:       1080
+01:14:46.361: 	b-frames:     2
+01:14:46.361: 	b-ref-mode:   0
+01:14:46.361: 	lookahead:    true (8 frames)
+01:14:46.361: 	aq:           true
+01:14:46.361: 
+01:14:46.439: ---------------------------------
+01:14:46.446: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: stereo, track: 1
+01:14:46.446: 
+01:14:46.463: ==== Recording Start ===============================================
+01:14:46.463: [mp4 output: 'simple_file_output'] Writing Hybrid MP4/MOV file 'C:/Users/夏菲/Videos/2026-10-14 01-14-46.mp4'...
+01:15:28.043: [mp4 muxer: 'simple_file_output'] Flushing final fragment...
+01:15:28.044: [mp4 muxer: 'simple_file_output'] Number of fragments: 5
+01:15:28.045: [mp4 muxer: 'simple_file_output'] Full moov size: 23 KiB
+01:15:28.045: [mp4 muxer: 'simple_file_output'] Final mdat size: 30036 KiB
+01:15:28.045: Output 'simple_file_output': stopping
+01:15:28.045: Output 'simple_file_output': Total frames output: 1231
+01:15:28.045: Output 'simple_file_output': Total drawn frames: 1248
+01:15:28.045: [mp4 output: 'simple_file_output'] Waiting for file writer to finish...
+01:15:28.046: ==== Recording Stop ================================================
+01:15:28.046: [mp4 output: 'simple_file_output'] File output complete. Finalization took 3 ms.
+01:15:28.151: warning: 2 frames left in the queue on closing

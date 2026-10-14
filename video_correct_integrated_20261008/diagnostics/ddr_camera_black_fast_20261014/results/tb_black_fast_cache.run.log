@@ -1,0 +1,80 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do tb_black_fast_cache.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_black_fast_cache work_tb_black_fast_cache 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:24:52 on Oct 14,2026
+# vlog -sv -work work_tb_black_fast_cache C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/b_rectifier.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/bilinear_interp.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/homography_solver.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/perspective_coord.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/perspective_core.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/scaled_div_pipe.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/signed_div_seq.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/unsigned_div_seq.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/b_algorithm/rtl/marker_detector.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/common/reset_sync.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/diagnostics/ddr_camera_hires_rowtrain_20261013/results/ddr_result_display.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/video/ddr_snapshot_capture.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/video/result_display.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/video/snapshot_capture.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/async_packet_fifo.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/ddr_arbiter3.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/ddr_capture_writer.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/ddr_command_bridge.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/ddr_pixel_cache_fast.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/ddr_result_writer.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/memory/ddr_self_test.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/diagnostics/ddr_camera_hires_rowtrain_20261013/results/ddr_word_engine.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/hdmi/hdmi_config.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/hdmi/iic_dri.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/hdmi/ms7210_ctl.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/diagnostics/ddr_camera_coordqueue_20261013/results/frame_processor.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/top/frame_session.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/rtl/top/video_correct_ddr_core.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/diagnostics/ddr_camera_hires_rowtrain_20261013/results/video_correct_ddr_top.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/vendor/c_current/01_design_code/video_timing_vtc.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/src/vendor/c_current/01_design_code/hdmi_vs_recover.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/results/tb_black_fast_cache.sv 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_black_fast_cache
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_black_fast_cache
+# End time: 10:24:52 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/results/tb_black_fast_cache.wlf work_tb_black_fast_cache.tb_black_fast_cache 
+# Start time: 10:24:52 on Oct 14,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_black_fast_cache(fast)
+# Loading work.ddr_pixel_cache(fast)
+# BLACK_FAST_CACHE_PASS requests=1055 reads=534 epochs=5
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/results/tb_black_fast_cache.sv(122)
+#    Time: 72150 ns  Iteration: 1  Instance: /tb_black_fast_cache
+# Break in Module tb_black_fast_cache at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/results/tb_black_fast_cache.sv line 122
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/results/tb_black_fast_cache.sv line 122
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 10:24:53 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

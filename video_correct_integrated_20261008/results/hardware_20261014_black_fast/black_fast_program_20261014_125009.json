@@ -1,0 +1,11 @@
+{
+  "utc": "2026-10-14T04:51:29.1784380Z",
+  "release": "ddr_camera_black_fast_20261014",
+  "marker_mode": "black_rgb_with_spatial_rois",
+  "bitstream_sha256": "39574d43ef4605fc1953de32dab1bb520a2f46de0ddfa059cb7860333669777d",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black_fast\\program_black_fast_20261014_125009.log",
+  "actual_camera_correction_accepted": false,
+  "actual_latency_measured": false
+}

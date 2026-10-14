@@ -1,0 +1,111 @@
+{
+  "qualified_at_utc": "2026-10-13T13:53:20.7221507Z",
+  "tests": {
+    "tb_ddr_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_ddr_display.run.log",
+      "log_sha256": "f7f91895a5f73d6e423f043e90fc91521d17df8464c018603541e78027a8626b"
+    },
+    "tb_native_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "NATIVE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_native_display.run.log",
+      "log_sha256": "8d82c419e4dd67a0c06d00c93c3f1a8707087a74e26b7dcb46b3ba389d0777e7"
+    },
+    "tb_video_correct_ddr_core": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_CORE_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_video_correct_ddr_core.run.log",
+      "log_sha256": "ada82a9730dfd258778d4bdf7b775c11d64ac80a151160bdf601a5b7c59b0f0e"
+    },
+    "tb_ddr_full_frame": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_FULL_FRAME_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_ddr_full_frame.run.log",
+      "log_sha256": "c290ce57d69bdbf826baa0c1d2e06f865066717c97cb0bf38dc1b5b1444bdde9"
+    },
+    "tb_native_capture": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "NATIVE_CAPTURE_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_native_capture.run.log",
+      "log_sha256": "6ccfcdee7fd49dfd7084b5e1fc63a58ce8941702a41edbd69900169e37c60c1d"
+    },
+    "tb_native_display_stress": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "NATIVE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_native_display_stress.run.log",
+      "log_sha256": "00649464afed74e25a10cd8b727cb9a6570823c8a794c66d137326bc84c86143"
+    },
+    "tb_ddr_word_engine": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_WORD_ENGINE_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_ddr_word_engine.run.log",
+      "log_sha256": "b7fa3db8330854842a422ecbeb4df36d35ea32cf52eb8a950d1d30b05e814314"
+    },
+    "tb_ddr_read_ahead": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_READ_AHEAD_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_ddr_read_ahead.run.log",
+      "log_sha256": "a9894723c3500110850e2b68eede006da15a28a9b8ceccb72e09ee954466c87a"
+    },
+    "tb_hires_read_ahead_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_hires_read_ahead_display.run.log",
+      "log_sha256": "11a3d2db22ba7963eb09b02010bf39d9b77d88800092788be39781b8a991e1ee"
+    },
+    "tb_hires_read_ahead_control": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_hires_read_ahead_control.run.log",
+      "log_sha256": "0478493c6c22520b9a201cbaca6e821fbacae35f3162b182aa68f38587e0e5cc"
+    },
+    "tb_hires_read_ahead_shared": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_hires_read_ahead_shared.run.log",
+      "log_sha256": "8f1ec6a6b2229a3f5bf47d99524868091912b22701c344134e1842640e18f804"
+    },
+    "tb_core_word_engine": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "CORE_WORD_ENGINE_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_core_word_engine.run.log",
+      "log_sha256": "7b9b30b5ebee3aafa0e5f0b02d412ca666d936eafc170fb073d56fcdd96c0315"
+    },
+    "tb_rowtrain_contention": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_rowtrain_contention.run.log",
+      "log_sha256": "4c3bb54d2a04b35d8da8ed3d7dc4d2e723ebd2bfc84de9304078eec3be88153e"
+    },
+    "tb_old_contention_control": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_old_contention_control.run.log",
+      "log_sha256": "118bbc1bb8f0bb6a48c80d4ad7be09d9ef58f404575267c36e7e490693a21700"
+    },
+    "tb_coord_queue_control": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "CONTROL_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_coord_queue_control.run.log",
+      "log_sha256": "ad1d738bc68392113638aaecad2b6b77485fd75239cd6136ca8b4c9517bc6421"
+    }
+  },
+  "hardware_accepted": false
+}

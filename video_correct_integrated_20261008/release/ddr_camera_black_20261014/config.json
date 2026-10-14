@@ -1,0 +1,18 @@
+{
+  "input": [1920, 1080],
+  "source": [960, 540],
+  "output": [640, 904],
+  "black": [[0, 0, 0], [64, 64, 64]],
+  "min_pixels": 16,
+  "max_pixels": 4096,
+  "max_span": 128,
+  "rois": {
+    "TL": [[290, 43], [340, 93]],
+    "TR": [[705, 87], [755, 137]],
+    "BR": [[740, 460], [790, 510]],
+    "BL": [[113, 443], [163, 493]]
+  },
+  "fixture_points": [[315, 68], [730, 112], [765, 485], [138, 468]],
+  "fixture_marker_radius": 10,
+  "note": "ROIs use the sampled 960x540 source coordinates. These initial windows match the supplied synthetic target; real camera placement needs verification. Black blocks have no encoded orientation."
+}

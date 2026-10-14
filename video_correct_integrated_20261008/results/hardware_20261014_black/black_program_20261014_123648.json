@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-14T04:38:05.9735254Z",
+  "marker_mode": "black_rgb_with_spatial_rois",
+  "bitstream_sha256": "873cb996a1351e8047e39b1b99ace6dc0214c393413c11b31aa899aa2e86b374",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black\\program_black_20261014_123648.log",
+  "actual_camera_correction_accepted": false
+}

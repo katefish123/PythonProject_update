@@ -1,0 +1,13 @@
+Input #0, dshow, from 'video=VC-002Pro ':
+  Duration: N/A, start: 9862.077281, bitrate: N/A
+  Stream #0:0: Video: rawvideo (NV12 / 0x3231564E), nv12(tv, bt709/bt709/unknown), 1920x1080, 30 fps, 30 tbr, 10000k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> png (native))
+Output #0, image2, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261014_black_fast\compare_20261014_short_01\baseline_probe_20261014_124340.png':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown, progressive), 1920x1080, q=2-31, 200 kb/s, 30 fps, 30 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 png
+frame=    0 fps=0.0 q=0.0 size=       0KiB time=N/A bitrate=N/A speed=N/A    [out#0/image2 @ 0000016b88ba7dc0] video:580KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    1 fps=0.5 q=-0.0 Lsize=N/A time=00:00:00.06 bitrate=N/A speed=0.0316x    

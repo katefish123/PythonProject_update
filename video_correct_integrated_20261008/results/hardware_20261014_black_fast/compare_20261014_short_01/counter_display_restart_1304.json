@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-14T05:04:37.5336425Z",
+  "pid": 31192,
+  "period_ms": 100,
+  "purpose": "fresh dynamic target for fixed-camera comparison",
+  "stop_file": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black_fast\\compare_20261014_short_01\\counter_stop_1304_after_comparison.flag"
+}

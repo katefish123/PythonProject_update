@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-14T04:43:40.7027748Z",
+  "pid": 36376,
+  "period_ms": 100,
+  "purpose": "keep same optical stimulus across both captures",
+  "stop_file": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black_fast\\compare_20261014_short_01\\counter_stop_after_comparison.flag"
+}
