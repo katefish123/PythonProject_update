@@ -1,0 +1,21 @@
+{
+  "qualified_at_utc": "2026-10-14T05:49:02.7943061Z",
+  "upstream_commit": "6b0b2e257efcfbb379d3f447403beb5ad08e0086",
+  "simulation_qualification_sha256": "65d8de3e3e78d485fa12167be26f18d9c3c36a2379230a8206da9eb6f08f1da8",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "hardware_accepted": false,
+  "source_manifest_sha256": "df6a213739b2984d8dddfa27ceba9f1ccabca6d7d897bc22a3d4248d48750e0c",
+  "build_log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\build_20261014_134149\\build.log",
+  "timing_report": "D:\\FPGA\\output\\c_capture_overlap_20261014\\build_20261014_134149\\place_route\\video_correct_ddr_top_timing_summary_after_hold_fix.txt",
+  "artifacts": {
+    "sbit": {
+      "path": "D:\\FPGA\\output\\c_capture_overlap_20261014\\build_20261014_134149\\generate_bitstream\\video_correct_ddr_top.sbit",
+      "sha256": "38a4986b5e157ec7344f6fbae402c3125b2c6e5acf47989e7bcc0a5fd47b9886"
+    },
+    "smsk": {
+      "path": "D:\\FPGA\\output\\c_capture_overlap_20261014\\build_20261014_134149\\generate_bitstream\\video_correct_ddr_top.smsk",
+      "sha256": "e24f18b8af4b1b6c4918aa08fddb46502d1119c42f150df7be60c3f661a949b0"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "frozen_commit": "809c082504230350e3da9c30ac68a16cbd062a89",
+  "frozen_sbit_sha256": "0cd20e384d5f9ad2098f38c66f59ead141dafeda5f0bfdaf0a1637e13176db29",
+  "throughput_benchmark": {
+    "source_size": [
+      64,
+      48
+    ],
+    "input_size": [
+      128,
+      96
+    ],
+    "result_size": [
+      32,
+      24
+    ],
+    "mode": "bilinear",
+    "processing_clock_hz": 27000000,
+    "serial_average_start_interval_cycles": 24065,
+    "parallel_average_start_interval_cycles": 21511,
+    "interval_reduction_percent": 10.612923332640765,
+    "measurement": "scaled_core_model_same_input_same_memory_wait",
+    "log": "release/logs/tb_overlap_throughput.log",
+    "log_sha256": "84c8ee7e7a95bc9b016c1231e9628f3f15efcdf82c18a0ea0a7e23c6174bbcde"
+  },
+  "pressure_benchmark": {
+    "source_pixels": 2073600,
+    "capture_beats": 259200,
+    "display_frames": 2,
+    "compared_display_pixels": 1157120,
+    "black_pixels": 0,
+    "processor_max_ui_wait_cycles": 1860,
+    "ui_period_ns": 8,
+    "processor_max_wait_us": 14.88,
+    "log": "release/logs/tb_banked_capture_display.log",
+    "log_sha256": "f9b9ca53e86a59899c7cf0539114b34a092582d7f598928b5e40bfe96b911d58"
+  },
+  "simulations_passed": 22,
+  "hardware_measured": false,
+  "fullhd_concurrent_algorithm_update_rate_measured": false
+}

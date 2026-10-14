@@ -1,0 +1,4 @@
+overrides/** -text whitespace=cr-at-eol
+release/** -text -whitespace
+# Preserve upstream display source whitespace and verified input hashes.
+overrides/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v -whitespace

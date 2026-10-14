@@ -2,6 +2,8 @@
 
 正式分支：`main-C`
 
+本开发分支保存已通过22项仿真、PDS编译及最终时序检查的[采集与校正并行候选版](IntegratedBaseline/capture_overlap_20261014/README.md)。用户准备烧录的正式版本仍固定在 `main-C` 的 `809c082`，不使用本目录候选替代。
+
 初版交接与板测清单：[初版交接_20261014](IntegratedBaseline/初版交接_20261014.md)。
 
 最新整合入口：[全高清校正处理提速](IntegratedBaseline/processing_speed_20261014/README.md)。

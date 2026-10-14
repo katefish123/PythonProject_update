@@ -1,0 +1,163 @@
+{
+  "qualified_at_utc": "2026-10-14T05:41:49.4397136Z",
+  "tests": {
+    "tb_ddr_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_ddr_display.reproduction.log",
+      "log_sha256": "c61765706c086611a07c55b0c9e6a5f8b00bfd3df78c5b50220da0bb5bf527ce"
+    },
+    "tb_native_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "NATIVE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_native_display.reproduction.log",
+      "log_sha256": "e315f1f58888e6700e359d7522245ddfdc46d098b8fff116e96cb4090e988765"
+    },
+    "tb_video_correct_ddr_core": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_CORE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_video_correct_ddr_core.reproduction.log",
+      "log_sha256": "e9fc4fa42d192f13ba00203e1b7af92cd6d375820746d251af74fb4241967b3c"
+    },
+    "tb_ddr_full_frame": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_FULL_FRAME_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_ddr_full_frame.reproduction.log",
+      "log_sha256": "210ca298e4b1b347d26f4a18d21d954f2403d95b26d46f8604651674dbcad66a"
+    },
+    "tb_native_capture": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "NATIVE_CAPTURE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_native_capture.reproduction.log",
+      "log_sha256": "efcbde31040ff7b50024e296ed828a69fe80c26d92ae528ac6674a8296c6f43f"
+    },
+    "tb_native_display_stress": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "NATIVE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_native_display_stress.reproduction.log",
+      "log_sha256": "09e572005628a0ab2f9ce7720913ec2c01c73eaa1dfec1e8e0ab0e943f5cb178"
+    },
+    "tb_ddr_word_engine": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_WORD_ENGINE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_ddr_word_engine.reproduction.log",
+      "log_sha256": "d40e2deef5bb4dd824681b46b438320659b4a12c987a43c5c3739023abc71eb8"
+    },
+    "tb_ddr_read_ahead": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_READ_AHEAD_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_ddr_read_ahead.reproduction.log",
+      "log_sha256": "f83e62adda492fafbeecef68c48fcf0a691eb2c420093b9b671ea44dcbd8efc1"
+    },
+    "tb_hires_read_ahead_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_hires_read_ahead_display.reproduction.log",
+      "log_sha256": "8509b114eab1be85fde46d22fa6d7a4e1cc5eb393aedf9d3011e7d99bccb5ceb"
+    },
+    "tb_hires_read_ahead_control": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_hires_read_ahead_control.reproduction.log",
+      "log_sha256": "d08803c7bdb9a3acb2a2eb5a5a53f201e109ecbfe69c149f3f6d90353334585b"
+    },
+    "tb_hires_read_ahead_shared": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "HIRES_ENGINE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_hires_read_ahead_shared.reproduction.log",
+      "log_sha256": "34d45babf6cf9e41ab1e1d149f4cde8979df7676ed6b10076471523b4bdbd156"
+    },
+    "tb_core_word_engine": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "CORE_WORD_ENGINE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_core_word_engine.reproduction.log",
+      "log_sha256": "f2b0e285b9c91c130ee38745ab00fe40f2afe0d044bbe1927c743ba258433c14"
+    },
+    "tb_fullhd_capture_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "FULLHD_CAPTURE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_fullhd_capture_display.reproduction.log",
+      "log_sha256": "8d970ed07f8bf8e6c1a499a6171d237c7b2ed43ac887a37e368bd942d0b82fb4"
+    },
+    "tb_fullhd_frame": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_FULL_FRAME_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_fullhd_frame.reproduction.log",
+      "log_sha256": "880bd93a22ff348c21d21ee0d1b3ea7b43fcf7c6eb4b1d0361e1dd42a03f5fe0"
+    },
+    "tb_relocated_core": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_CORE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_relocated_core.reproduction.log",
+      "log_sha256": "0bbde48edeeb5c7412ec423ee6b4d367a7d078442a69578d48f1420a17872883"
+    },
+    "tb_capture_errors": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_CAPTURE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_capture_errors.reproduction.log",
+      "log_sha256": "af02b50d68fb3a7936059003afa611c9b201bcef2c53b5493a5b23604cad2248"
+    },
+    "tb_scheduler": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "SCHEDULER_BACKPRESSURE_RESET_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_scheduler.reproduction.log",
+      "log_sha256": "05448da5c7d1bedd901ca66cd9d07a192d7eb13b03ea44b15e3dd0c429bb0dfd"
+    },
+    "tb_overlap_session": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "OVERLAP_SESSION_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_overlap_session.reproduction.log",
+      "log_sha256": "c05e8511d32371a2303576ba8d8f7ff1e91f4956277b4535c47670a85d0703eb"
+    },
+    "tb_banked_writer": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "BANKED_WRITER_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_banked_writer.reproduction.log",
+      "log_sha256": "47b84da8994ba6b024d67f3b9b03f67c1b0ebc37bb56d0da11a860b85da42fe1"
+    },
+    "tb_overlap_core": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "OVERLAP_CORE_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_overlap_core.reproduction.log",
+      "log_sha256": "0b1ce6df1e04cd6ec76cbd9bcab5a64832b9f47611f6bd0fdf6ed7b22060960d"
+    },
+    "tb_banked_capture_display": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "BANKED_FULLHD_CAPTURE_DISPLAY_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_banked_capture_display.reproduction.log",
+      "log_sha256": "f9b9ca53e86a59899c7cf0539114b34a092582d7f598928b5e40bfe96b911d58"
+    },
+    "tb_overlap_throughput": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "OVERLAP_THROUGHPUT_PASS",
+      "log": "D:\\FPGA\\output\\c_capture_overlap_20261014\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\tb_overlap_throughput.reproduction.log",
+      "log_sha256": "84c8ee7e7a95bc9b016c1231e9628f3f15efcdf82c18a0ea0a7e23c6174bbcde"
+    }
+  },
+  "hardware_accepted": false,
+  "source_manifest_sha256": "df6a213739b2984d8dddfa27ceba9f1ccabca6d7d897bc22a3d4248d48750e0c",
+  "upstream_commit": "6b0b2e257efcfbb379d3f447403beb5ad08e0086",
+  "status": "passed"
+}
