@@ -2,6 +2,8 @@
 
 正式分支：`main-C`
 
+初版交接与板测清单：[初版交接_20261014](IntegratedBaseline/初版交接_20261014.md)。
+
 最新整合入口：[全高清校正处理提速](IntegratedBaseline/processing_speed_20261014/README.md)。
 
 - 完整1920×1080源图写入DDR，校正为640×904竖向文档，并在1080p60中居中显示。
