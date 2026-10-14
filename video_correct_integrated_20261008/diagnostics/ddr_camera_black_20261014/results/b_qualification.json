@@ -1,0 +1,171 @@
+{
+  "native_modelsim_passed": true,
+  "test_count": 9,
+  "actual_rtl_comparison": {
+    "coordinates": 4329,
+    "interpolations": 1000,
+    "solver_cases": 37,
+    "video_pixels": 2344
+  },
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_black_20261014\\results\\b_native_checks.log",
+  "log_sha256": "4ec430b3a5a1a477041dfe43d7a2818df33b18c38d919329b34836eab707801b",
+  "python": {
+    "status": "pass",
+    "version": "black_markers_2026-10-11",
+    "marker_mode": "black_rgb_with_spatial_rois",
+    "generated_utc": "2026-10-13T16:41:34.685612+00:00",
+    "limitations": [
+      "PDS synthesis/place-route/Fmax not run",
+      "Native ModelSim execution is not performed by this Icarus runner",
+      "Board/camera/DDR/HDMI not tested"
+    ],
+    "python_syntax": "pass",
+    "test_targets": [
+      "tb_perspective_coord",
+      "tb_homography_solver",
+      "tb_bilinear_interp",
+      "tb_marker_detector",
+      "tb_marker_config",
+      "tb_b_rectifier",
+      "tb_cache_contract",
+      "tb_b_integration",
+      "tb_request_boundaries"
+    ],
+    "test_manifest_sha256": "fe72896852aee1b65b9e5d43c27dd0ebfb6b5ded9f5c8ede4b7c43ce757686c1",
+    "integration_example_sha256": "1784bc1bb094629296868438cf09a0ce2bfef7f8b7d6503539d48c68ba85dc4d",
+    "float_fixed": {
+      "scene0": {
+        "points": [
+          [
+            10,
+            8
+          ],
+          [
+            52,
+            13
+          ],
+          [
+            56,
+            40
+          ],
+          [
+            7,
+            38
+          ]
+        ],
+        "H_q": [
+          26175995,
+          -2968810,
+          167772160,
+          3567396,
+          17646447,
+          134217728,
+          66261,
+          -111496,
+          16777216
+        ],
+        "method": "bilinear",
+        "coordinate_max_error_px": 0.0039491853133881705,
+        "pixel_mae": 0.07291666666666667,
+        "pixel_max_error": 1
+      },
+      "scene1": {
+        "points": [
+          [
+            14,
+            7
+          ],
+          [
+            49,
+            10
+          ],
+          [
+            54,
+            37
+          ],
+          [
+            10,
+            41
+          ]
+        ],
+        "H_q": [
+          24913143,
+          -4596464,
+          234881024,
+          2842198,
+          17918483,
+          117440512,
+          121859,
+          -167868,
+          16777216
+        ],
+        "method": "nearest",
+        "coordinate_max_error_px": 0.0039225133359330755,
+        "pixel_mae": 0.0,
+        "pixel_max_error": 0
+      },
+      "hd_coordinates": {
+        "source_size": [
+          1920,
+          1080
+        ],
+        "output_size": [
+          1280,
+          720
+        ],
+        "samples": 800,
+        "coordinate_max_error_px": 0.05613507555540309,
+        "H_q": [
+          22233753,
+          -2248369,
+          3405774848,
+          1189394,
+          17946767,
+          1912602624,
+          1553,
+          -2768,
+          16777216
+        ]
+      }
+    },
+    "python_tests": 17,
+    "modelsim_script_sha256": "7afa4679e1a5392c8c1cf16eab60b9e97b95e084408c80ec13037e6a4deb7509",
+    "modelsim_script_control": {
+      "status": "not_run",
+      "reason": "standalone tclsh unavailable"
+    },
+    "v3_compatibility": {
+      "status": "not_requested"
+    },
+    "rtl_status": "not_run_requested_python_only",
+    "source_sha256": {
+      "rtl\\b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
+      "rtl\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+      "rtl\\homography_solver.v": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9",
+      "rtl\\marker_detector.v": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+      "rtl\\perspective_coord.v": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3",
+      "rtl\\perspective_core.v": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5",
+      "rtl\\scaled_div_pipe.v": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741",
+      "rtl\\signed_div_seq.v": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d",
+      "rtl\\unsigned_div_seq.v": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3",
+      "python\\brect\\__init__.py": "6a9149d010477884e6c344af747f38c8c19301a17938385a3cd2070d6630ba43",
+      "python\\brect\\cli.py": "c905add34345b7ba29e0a5dbbc7294bbaef445d51186d4d259657d537c15b744",
+      "python\\brect\\fixed.py": "5f4114f814e6105c4e1801785ad661431b07d3d37bb7113445beda070fca49a5",
+      "python\\brect\\golden.py": "5feae6940719d3d072ed3333da7a9c1e10d1f3c01b3906eaf989de5107023b78",
+      "sim\\tb_b_integration.sv": "ad079a43f6f83dc799d0e3ff6d4660f332772528e99181ad287d167735c37a6b",
+      "sim\\tb_b_rectifier.sv": "6f4d9115712d8bc877e74f38c44b2429bbd1402127f90c0cb96ac9dfb156c702",
+      "sim\\tb_bilinear_interp.sv": "810c183f9713d77edb03eda5bec69f62235a4f10a33a6cb72b2490e6b123f317",
+      "sim\\tb_cache_contract.sv": "6702aca2c887c70dac9f5d9e8b8162c7cf84628e3d065407097ae33d3acc58f7",
+      "sim\\tb_homography_solver.sv": "807448282e6a1c9f862b8bd34a1e8082ab13e1b67ecc4f560cc0025b80ee8431",
+      "sim\\tb_marker_config.sv": "1af7f5c7b2521113ceedfdd688bfc2ed748ea73acda57a7a93526ca1b2871fcb",
+      "sim\\tb_marker_detector.sv": "fe001b971bf7763b354b066738d5d1773229f0b8dcbee708d1a95c1ccd6ed3f6",
+      "sim\\tb_perspective_coord.sv": "25e6b5727a30935efab8c36a2e5931997a53143b661af6d477ad6ac6085b0a8d",
+      "sim\\tb_request_boundaries.sv": "c56ba95e9b4dd1e7a78e2768236555d7f655e6128cf9187151aa1367c9b17f93",
+      "scripts\\generate_vectors.py": "a147c4f0694dddc7b0dfa3e736b84d0fd4d7f571a123e2500d3a612883f7d7ea",
+      "scripts\\make_demo.py": "e91e167648641e5e724ea84e6da9e28d109752fe644c9f9635188ea837dca2a1",
+      "scripts\\run_checks.py": "f6b7ce5f774364c2a795b5467b087113813199ab41fd6ece232a2d50f34f365b",
+      "scripts\\test_models.py": "31583939d09027880d9c04ff589df075c5b8e5d0a9513093b171ed579d6ccda4",
+      "scripts\\test_modelsim_script.py": "96e4abeb3c49930fa45347a377588e4c9cbcc72daabded6c5045ec09190f99da"
+    }
+  }
+}

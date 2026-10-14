@@ -1,0 +1,43 @@
+{
+  "input": [
+    1920,
+    1080
+  ],
+  "source": [
+    960,
+    540
+  ],
+  "output": [
+    640,
+    904
+  ],
+  "display": [
+    1920,
+    1080
+  ],
+  "scale": 1,
+  "window": {
+    "x": 640,
+    "y": 88,
+    "width": 640,
+    "height": 904
+  },
+  "capture_fifo_packets": 1024,
+  "source_bytes": 2073600,
+  "result_bank_bytes": 2314240,
+  "source_base_byte": 0,
+  "bank0_base_byte": 4194304,
+  "bank1_base_byte": 8388608,
+  "baseline_image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "physical_acceptance": false,
+  "note": "Only frame processor scheduling changed; immutable source and single source request interface preserved. Source/result dimensions and all thresholds unchanged. Physical speed acceptance pending.",
+  "read_ahead_beats": 8,
+  "result_cache_bytes": 256,
+  "line_memory_style": "Pango syn_ramstyle=block_ram",
+  "diagnostic_grid_present": false,
+  "base_release": "release/ddr_camera_hires_rowtrain_20261013",
+  "display_row_train": true,
+  "coordinate_lookahead_credits": 16,
+  "public_source_reads_outstanding": 1,
+  "processed_pixel_samples_outstanding": 1
+}

@@ -1,0 +1,16 @@
+{
+  "tb_ddr_display": "DDR_DISPLAY_PASS",
+  "tb_native_display": "NATIVE_DISPLAY_PASS",
+  "tb_video_correct_ddr_core": "DDR_CORE_PASS",
+  "tb_ddr_full_frame": "DDR_FULL_FRAME_PASS",
+  "tb_native_capture": "NATIVE_CAPTURE_PASS",
+  "tb_native_display_stress": "NATIVE_DISPLAY_PASS",
+  "tb_ddr_word_engine": "DDR_WORD_ENGINE_PASS",
+  "tb_ddr_read_ahead": "DDR_READ_AHEAD_PASS",
+  "tb_hires_read_ahead_display": "HIRES_ENGINE_DISPLAY_PASS",
+  "tb_hires_read_ahead_control": "HIRES_ENGINE_DISPLAY_PASS",
+  "tb_hires_read_ahead_shared": "HIRES_ENGINE_DISPLAY_PASS",
+  "tb_core_word_engine": "CORE_WORD_ENGINE_PASS",
+  "tb_rowtrain_contention": "HIRES_ENGINE_DISPLAY_PASS",
+  "tb_coord_queue_control": "CONTROL_PASS"
+}

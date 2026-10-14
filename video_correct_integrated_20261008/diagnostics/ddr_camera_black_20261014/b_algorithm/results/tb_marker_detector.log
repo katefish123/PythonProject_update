@@ -1,0 +1,2 @@
+MARKER_PASS valid=2 rejected=9 dropped=1 black_upper=64 channel_65_rejected=3
+sim/tb_marker_detector.sv:66: $finish called at 22480000 (1ps)

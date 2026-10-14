@@ -1,0 +1,28 @@
+{
+  "baseline_scan_passed": true,
+  "baseline_program_executed": true,
+  "fast_program_executed": true,
+  "fast_program_verify_passed": true,
+  "fast_program_receipt": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black_fast\\black_fast_program_20261014_125009.json",
+  "flash_modified": false,
+  "capture_card_observation": "Valid HDMI output; aligned probe followed by desk-only recording",
+  "user_authorized_short_comparison": true,
+  "qualified_comparison_recordings": 0,
+  "rejected_recordings": [
+    "baseline_capture_20261014_124908.mp4"
+  ],
+  "actual_speedup_measured": false,
+  "counter_display_pid": 36376,
+  "current_temperature_measured": false,
+  "current_program_resident": "ddr_camera_black_20261014",
+  "user_confirmed_counter_source_advancing": true,
+  "latest_observation": "Fast optical probes 13:02:44 and 13:04:37 have identical SHA256 ff8249fd54c3d7540a84757f1dd34fcc24e15679a5d14ed941acc014182a21d3. Baseline reloaded successfully at 13:05:06, then two probes show color bars; no valid new output frame.",
+  "latest_probe": "baseline_probe_20261014_130752.png",
+  "presentation_report": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\成果展示_20261014\\成果说明.md",
+  "counter_display_stop_requested": true,
+  "latest_probe_counter_visible": false,
+  "utc": "2026-10-14T05:12:46.0719630Z",
+  "baseline_program_receipt": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black\\black_program_20261014_130506.json",
+  "counter_display_running_at_last_check": false,
+  "waiting_for": "Inspect camera source and marker ROIs/input state after presenting saved result"
+}

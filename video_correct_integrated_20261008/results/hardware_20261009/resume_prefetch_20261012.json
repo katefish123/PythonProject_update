@@ -1,0 +1,9 @@
+{
+  "resumed_at_utc": "2026-10-12T14:14:44.293059+00:00",
+  "paused_by_user": false,
+  "current_state": "results/hardware_20261009/prefetch_camera_state_20261012.json",
+  "release_sealed": true,
+  "program_verify_passed": true,
+  "actual_camera_picture_accepted": false,
+  "next": "Manual OBS activation and same-target physical video; decode/visually review before acceptance."
+}

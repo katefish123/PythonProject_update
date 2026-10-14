@@ -1,0 +1,100 @@
+[Debug] [2026-10-14 11:08:28] Send RPC: 62.
+[Debug] [2026-10-14 11:08:28] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:28] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:28] COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:29] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:29] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:29] Send RPC: 63.
+[Debug] [2026-10-14 11:08:29] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:29] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:29] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:30] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:30] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:30] Send RPC: 64.
+[Debug] [2026-10-14 11:08:30] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:30] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:30] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:31] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:31] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:31] Send RPC: 65.
+[Debug] [2026-10-14 11:08:31] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:31] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:31] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:32] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:32] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:32] Send RPC: 66.
+[Debug] [2026-10-14 11:08:32] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:32] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:32] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:33] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:33] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:33] Send RPC: 67.
+[Debug] [2026-10-14 11:08:33] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:33] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:33] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:34] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:34] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:34] Send RPC: 68.
+[Debug] [2026-10-14 11:08:34] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:34] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:34] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:35] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:35] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:35] Send RPC: 69.
+[Debug] [2026-10-14 11:08:35] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:35] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:35] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:36] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:36] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:36] Send RPC: 70.
+[Debug] [2026-10-14 11:08:36] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:36] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:36] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:37] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:37] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:37] Send RPC: 71.
+[Debug] [2026-10-14 11:08:37] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:37] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:37] COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:38] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:38] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:38] Send RPC: 72.
+[Debug] [2026-10-14 11:08:38] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:38] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:38] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:39] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:39] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:39] Send RPC: 73.
+[Debug] [2026-10-14 11:08:39] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:39] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:39] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:40] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:40] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:40] Send RPC: 74.
+[Debug] [2026-10-14 11:08:40] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:40] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:40] COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:41] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:41] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:41] Send RPC: 75.
+[Debug] [2026-10-14 11:08:41] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:41] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:41] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:42] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:42] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:42] Send RPC: 76.
+[Debug] [2026-10-14 11:08:42] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:42] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:42] COMMAND[read_adc_register] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-14 11:08:43] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:43] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:43] Send RPC: 77.
+[Debug] [2026-10-14 11:08:43] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:43] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:43] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:44] Operation: Read ADC register.
+[Debug] [2026-10-14 11:08:44] Log::Print : read_adc_register
+[Debug] [2026-10-14 11:08:44] Send RPC: 78.
+[Debug] [2026-10-14 11:08:44] Send cmd [read_adc_register:10012] OK
+[Info] [2026-10-14 11:08:44] MsgOut: COMMAND[read_adc_register] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-14 11:08:44] COMMAND[read_adc_register] execute successfully, takes 0.6 secs.

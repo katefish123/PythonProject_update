@@ -1,0 +1,4 @@
+[dshow @ 00000197ea334a80] Could not run graph (sometimes caused by a device already in use by other application)
+[in#0 @ 00000197ea334680] Error opening input: I/O error
+Error opening input file video=VC-002Pro .
+Error opening input files: I/O error

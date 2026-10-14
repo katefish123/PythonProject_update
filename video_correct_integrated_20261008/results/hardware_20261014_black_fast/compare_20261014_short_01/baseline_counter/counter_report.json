@@ -1,0 +1,25 @@
+{
+  "video": "results\\hardware_20261014_black_fast\\compare_20261014_short_01\\baseline_capture_20261014_124908.mp4",
+  "sampled_frames": 250,
+  "valid_samples": 0,
+  "sample_fps": 10,
+  "counter_period_seconds": 0.1,
+  "counter_changes": 0,
+  "sample_time_quantization_seconds": 0.1,
+  "absolute_latency_measured": false,
+  "processing_fps_directly_measured": false,
+  "limitations": [
+    "Output-only capture measures visible counter changes, not source-to-display delay",
+    "Counter stimulus is capped at 10 Hz; repeated counter values may hide updates",
+    "Failed counter decoding must not be classified as a frozen result"
+  ],
+  "first_valid_sample": null,
+  "last_valid_sample": null,
+  "visible_change_interval_median_seconds": null,
+  "visible_change_interval_p90_seconds": null,
+  "visible_changes_per_second": null,
+  "median_source_counter_step": null,
+  "decoded": [],
+  "changes": [],
+  "rejected_nonmonotonic_or_large_jumps": []
+}
