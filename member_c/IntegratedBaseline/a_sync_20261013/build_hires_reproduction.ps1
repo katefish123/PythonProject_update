@@ -1,6 +1,7 @@
 param(
  [Parameter(Mandatory=$true)][string]$OutputRoot,
- [Parameter(Mandatory=$true)][string]$PdsExe
+ [Parameter(Mandatory=$true)][string]$PdsExe,
+ [int]$RequiredChecks=12
 )
 $ErrorActionPreference='Stop'
 . (Join-Path $PSScriptRoot 'assert_reproduction_inputs.ps1')
@@ -11,7 +12,7 @@ $qualification=Get-Content -LiteralPath (Join-Path $candidate 'reproduced_simula
 if($qualification.status -ne 'passed' -or $qualification.source_manifest_sha256 -ne $binding.digest -or
    $qualification.upstream_commit -ne $binding.commit){throw 'Simulation evidence belongs to different or unqualified inputs'}
 $simulationDigest=(Get-FileHash -LiteralPath (Join-Path $candidate 'reproduced_simulation_qualification.json') -Algorithm SHA256).Hash.ToLowerInvariant()
-if(@($qualification.tests.PSObject.Properties).Count -ne 12){throw 'Twelve fresh checks required'}
+if(@($qualification.tests.PSObject.Properties).Count -ne $RequiredChecks){throw "$RequiredChecks fresh checks required"}
 foreach($test in $qualification.tests.PSObject.Properties){
  if(-not $test.Value.passed -or
     (Get-FileHash -LiteralPath $test.Value.log -Algorithm SHA256).Hash.ToLowerInvariant() -ne $test.Value.log_sha256){

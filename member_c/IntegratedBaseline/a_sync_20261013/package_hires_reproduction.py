@@ -25,6 +25,7 @@ def main():
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--build", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--expected-tests", type=int, default=12)
     args = parser.parse_args()
     mp = args.root / "reproduction_manifest.json"
     manifest = read(mp)
@@ -36,14 +37,20 @@ def main():
     simulation = read(sp)
     build_path = args.build / "build_qualification.json"
     build = read(build_path)
+    require(build.get('simulations_passed') is True and build.get('timing_passed') is True, 'Build qualification incomplete')
+    if 'simulation_qualification_sha256' in build:
+        require(build['simulation_qualification_sha256'] == sha(sp), 'Build used a different simulation qualification')
     for record in (simulation, build):
         require(record["source_manifest_sha256"] == digest, "Input manifest mismatch")
         require(record["upstream_commit"] == manifest["upstream_commit"], "Commit mismatch")
     require(simulation.get("status") == "passed", "Simulation incomplete")
     cases = read(candidate / "simulation_cases.json")
-    require(len(cases) == 12 and set(simulation["tests"]) == set(cases), "Test set mismatch")
+    require(len(cases) == args.expected_tests and set(simulation["tests"]) == set(cases), "Test set mismatch")
     files = {"reproduction_manifest.json": mp, "simulation_qualification.json": sp,
              "original_build_qualification.json": build_path}
+    if manifest.get('configuration') == 'fullhd_source_portrait':
+        for name in ('fixture.json','source_1920x1080.png','expected_640x904.png'):
+            files['fixture/'+name] = args.root/'fullhd_tests'/name
     for name, test in simulation["tests"].items():
         log = Path(test["log"])
         content = log.read_text(encoding="utf-8-sig", errors="replace")
@@ -68,8 +75,10 @@ def main():
         shutil.copyfile(path, target)
     result = dict(qualified_at_utc=datetime.now(timezone.utc).isoformat(),
                   upstream_commit=manifest["upstream_commit"], source_manifest_sha256=digest,
-                  qualification_method="post_build_revalidation_with_bound_simulation_replay",
-                  simulations_passed=12, timing_passed=True, hardware_accepted=False,
+                  configuration=manifest.get('configuration','upstream_hires_candidate'),
+                  qualification_method=('bound_prebuild_simulation_and_postbuild_revalidation'
+                    if 'simulation_qualification_sha256' in build else 'post_build_revalidation_with_bound_simulation_replay'),
+                  simulations_passed=len(cases), timing_passed=True, hardware_accepted=False,
                   files={name: sha(args.output / name) for name in files})
     (args.output / "package_manifest.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     print(f"PACKAGE_VERIFIED {args.output}")

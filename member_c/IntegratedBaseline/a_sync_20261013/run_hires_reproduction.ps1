@@ -1,11 +1,11 @@
-param([Parameter(Mandatory=$true)][string]$OutputRoot)
+param([Parameter(Mandatory=$true)][string]$OutputRoot,[int]$RequiredChecks=12)
 $ErrorActionPreference='Stop'
 . (Join-Path $PSScriptRoot 'assert_reproduction_inputs.ps1')
 $binding=Assert-ReproductionInputs -Root $OutputRoot
 $candidate=Join-Path $OutputRoot 'diagnostics\ddr_camera_hires_prefetch_20261012\results'
 $simulator=(Get-Command vsim.exe -ErrorAction Stop).Source
 $cases=Get-Content -LiteralPath (Join-Path $candidate 'simulation_cases.json') -Raw | ConvertFrom-Json
-if(@($cases.PSObject.Properties).Count -ne 12){throw 'Expected twelve upstream tests'}
+if(@($cases.PSObject.Properties).Count -ne $RequiredChecks){throw "Expected $RequiredChecks tests"}
 $completed=[ordered]@{}
 [ordered]@{status='running';hardware_accepted=$false} | ConvertTo-Json |
  Set-Content -LiteralPath (Join-Path $candidate 'reproduced_simulation_qualification.json') -Encoding utf8
