@@ -1,0 +1,200 @@
+{
+  "repository": "https://github.com/katefish123/PythonProject_update",
+  "branch": "main-A",
+  "commit": "256b5ea2b8bf4a559f19adfca7465161654b8226",
+  "b_commit": "4106f3babb65096927d365bbab55f070b90325e2",
+  "baseline_release": "ddr_camera_black_20261014",
+  "baseline_sbit_sha256": "873cb996a1351e8047e39b1b99ace6dc0214c393413c11b31aa899aa2e86b374",
+  "excluded_recommended_release": "ddr_camera_black_fast_20261014",
+  "hardware_accepted_by_c": false,
+  "files": {
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/bilinear_interp.v": {
+      "sha256": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/b_rectifier.v": {
+      "sha256": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/homography_solver.v": {
+      "sha256": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/marker_detector.v": {
+      "sha256": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/perspective_coord.v": {
+      "sha256": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/perspective_core.v": {
+      "sha256": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/scaled_div_pipe.v": {
+      "sha256": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/signed_div_seq.v": {
+      "sha256": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/unsigned_div_seq.v": {
+      "sha256": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/python/brect/cli.py": {
+      "sha256": "c905add34345b7ba29e0a5dbbc7294bbaef445d51186d4d259657d537c15b744",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/python/brect/fixed.py": {
+      "sha256": "5f4114f814e6105c4e1801785ad661431b07d3d37bb7113445beda070fca49a5",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/python/brect/golden.py": {
+      "sha256": "5feae6940719d3d072ed3333da7a9c1e10d1f3c01b3906eaf989de5107023b78",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/python/brect/__init__.py": {
+      "sha256": "6a9149d010477884e6c344af747f38c8c19301a17938385a3cd2070d6630ba43",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/algorithm.md": {
+      "sha256": "be0eaaf10dc944cf45816a6fc3e135e25e6255b764af2874f8f9fb601b1775c4",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/black_markers.md": {
+      "sha256": "6ee5fd7ed2412d9226989e5699ad7612e4ab236638f9c60d3093415f56020438",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/board_pds.md": {
+      "sha256": "d2de1d6118e5175f10ef07a186ddca5444ffcd438028caf3a5d63225e24aa281",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/changes_black_detection.md": {
+      "sha256": "76fca8acc6fa6d22bb14bb75b8bdefd0e2d8d13f09dda1860312578afa570842",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/changes_v1.md": {
+      "sha256": "49d9443a0c5cdb6f6e140bae893e69826fb2c2c8bd6713849b753f1f078adadd",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/file_guide.md": {
+      "sha256": "823eb50e1bd50da416a02034c2b138bf113f2ed77b44db867d4e0ac9f5df53c7",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/integration_v1.md": {
+      "sha256": "8352c3929eb9560245a9e6acf2903045aee695994ffbdcdf87178b203c22afa4",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/interfaces.md": {
+      "sha256": "cdead3efec8443cb1c1c30fa5f1e3ac0bd8c18bfe4efb1a2ff4b77dd55fbefa3",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/b_algorithm/docs/validation_record.md": {
+      "sha256": "bf90e47c2e3eb101638850f22ced7ca9caa68aba89c930e6e3fbe7ad7bcbef8a",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/top/frame_session.v": {
+      "sha256": "78b4dc1044bb72e202d013ca308aa42b6548d209b88ea1f47c82681d5f1a6bad",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/top/video_correct_ddr_core.v": {
+      "sha256": "998a39c888a00dfc9e162c7a881263068dd0f108e2faa39f0e28de1dfc5438fa",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/video/ddr_snapshot_capture.v": {
+      "sha256": "5e0fd4776c8041ea2886328b14b535ff491ca8750507b58e32b962e3739e2322",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/video/result_display.v": {
+      "sha256": "461f6100edf4ecb073b83fab9dc0472d6e6df1c15fb88029c8b7ddbbcb7872e9",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/video/snapshot_capture.v": {
+      "sha256": "ee2ee9ff0fe56e1ac63556230e56f979a88701f9fa726dd8abaf6ac11e19b51f",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/async_packet_fifo.v": {
+      "sha256": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr_arbiter3.v": {
+      "sha256": "cab398b830250fbbe27ab4b56776fa35dd6504ee58adeb254fcb796ab981c806",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr_capture_writer.v": {
+      "sha256": "4ebb54ac3f0f15d32373404c43ef8d95c7dac45e0d47fa8304240b78be875432",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr_command_bridge.v": {
+      "sha256": "b35d1c1fb0cdfb3e3a9e1d2a1f853fb3a6a8c6dc12f469b971288f60318e7d6a",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr_pixel_cache.v": {
+      "sha256": "754c430b90ca813930a5b159936ddeaf28acfd1bde5d5e4cbf040d1998bf5a71",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr_result_writer.v": {
+      "sha256": "48d771abfa3df1c097c0c12103445583ee52e6c7716fb8137df9a1fabfe017e9",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr_self_test.v": {
+      "sha256": "f4d45a38f5461c0f0e58f30e0af0236c9493e39b67a750014733e8b020597cb4",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr3_ip/ddr3_ip.v": {
+      "sha256": "d3a103ce4864f2c5fdc1a01420f7bf28dcd0b1ea6c49b4d7e24a3c289222649c",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr3_ip/ddr3_ip_ddrphy_top.v": {
+      "sha256": "bebb715c84309ed6277152f51fe305ed164febc70c44aa5715259c50ea685e87",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/rtl/memory/ddr3_ip/rtl/ddrphy/ddr3_ip_slice_top_v1_10.v": {
+      "sha256": "6a4319f8cc5cc68ec647e5db7ba893f4932d19a42e977ad48dfb09987f3947c9",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/diagnostics/ddr_camera_coordqueue_20261013/results/frame_processor.v": {
+      "sha256": "cf1d2011b22ca83427bb2d788ec933d0dfdbc906d46062afe7f108517d902712",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/diagnostics/ddr_camera_hires_rowtrain_20261013/results/ddr_result_display.v": {
+      "sha256": "3b1871be286013396b563ae6b3979e9935f31808b991f2ed9992dbda4a4c5822",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/diagnostics/ddr_camera_hires_rowtrain_20261013/results/ddr_word_engine.v": {
+      "sha256": "ef917af25a493808c1bc3ada24b293eda85160fd0704e7e9c7273489aa694247",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/src/diagnostics/ddr_camera_hires_rowtrain_20261013/results/video_correct_ddr_top.v": {
+      "sha256": "55c13c6666e9af0bf80267e051082496fe7e136dcfb3d64c2549a7273358f94b",
+      "matched_a_source_manifest": true
+    },
+    "diagnostics/ddr_camera_black_20261014/config.json": {
+      "sha256": "c8f9f0e60e1cceb127617f069b9a33712ea5cab767f2a65b5bc99abd68e9a026",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/README.md": {
+      "sha256": "d179e76ce54d7cfd42f3f8c4c24042fce7b8169b433d70356789ad96cc659af3",
+      "matched_a_source_manifest": false
+    },
+    "diagnostics/ddr_camera_black_20261014/results/configuration.json": {
+      "sha256": "f704e33481356acb17656296a2a20b58765e650c67d25b638ed5cbfc3a716648",
+      "matched_a_source_manifest": false
+    },
+    "docs/版本弃用_黑标提速_20261014.md": {
+      "sha256": "b6cca998c6b9f0752936eb5530a4a83ffe85fc3cb1e51098ee02b126e9b1aaf9",
+      "matched_a_source_manifest": false
+    },
+    "docs/保存与接续_20261014.md": {
+      "sha256": "23b8e34d7a80d3994c50d5dbdf02f1aed61b4ca5698c628ae7df08a9c93b9ff4",
+      "matched_a_source_manifest": false
+    },
+    "docs/黑色角标校正_20261014.md": {
+      "sha256": "d4174ac9e8719e5a4553c7ea7b53fff1100f7094caba019dde79c1fbc56161bf",
+      "matched_a_source_manifest": false
+    }
+  }
+}

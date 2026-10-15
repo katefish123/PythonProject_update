@@ -1,0 +1,108 @@
+{
+  "input": [
+    1920,
+    1080
+  ],
+  "source": [
+    960,
+    540
+  ],
+  "output": [
+    640,
+    904
+  ],
+  "black": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      64,
+      64,
+      64
+    ]
+  ],
+  "min_pixels": 16,
+  "max_pixels": 4096,
+  "max_span": 128,
+  "rois": {
+    "TL": [
+      [
+        290,
+        43
+      ],
+      [
+        340,
+        93
+      ]
+    ],
+    "TR": [
+      [
+        705,
+        87
+      ],
+      [
+        755,
+        137
+      ]
+    ],
+    "BR": [
+      [
+        740,
+        460
+      ],
+      [
+        790,
+        510
+      ]
+    ],
+    "BL": [
+      [
+        113,
+        443
+      ],
+      [
+        163,
+        493
+      ]
+    ]
+  },
+  "fixture_points": [
+    [
+      315,
+      68
+    ],
+    [
+      730,
+      112
+    ],
+    [
+      765,
+      485
+    ],
+    [
+      138,
+      468
+    ]
+  ],
+  "fixture_marker_radius": 10,
+  "note": "ROIs use the sampled 960x540 source coordinates. These initial windows match the supplied synthetic target; real camera placement needs verification. Black blocks have no encoded orientation.",
+  "marker_mode": "black_rgb_with_spatial_rois",
+  "processing_clock_mhz": 27,
+  "coordinate_lookahead_credits": 16,
+  "display_row_train": true,
+  "physical_acceptance": false,
+  "upstream_repository": "https://github.com/katefish123/PythonProject_update",
+  "upstream_branch": "main-B",
+  "upstream_commit": "4106f3babb65096927d365bbab55f070b90325e2",
+  "upstream_zip_sha256": "b6a476ae2307a34455c21dd7c9a2f94ca583ca111d3e43cfbb1bbbbd7fa9aceb",
+  "prepared_at_utc": "2026-10-13T16:41:08.312089+00:00",
+  "baseline_release": "ddr_camera_coordqueue_20261013",
+  "limitations": [
+    "Fixed ROI centroids do not support free 360-degree tracking",
+    "30/60fps processing not verified",
+    "Lens distortion calibration is not included",
+    "New camera and hardware validation required"
+  ]
+}

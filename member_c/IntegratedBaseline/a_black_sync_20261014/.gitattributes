@@ -1,0 +1,2 @@
+upstream/** -text -whitespace
+upstream_manifest.json -text whitespace=cr-at-eol
