@@ -1,0 +1,29 @@
+
+Algorithm : SHA256
+Hash      : 58E66D0B286EB6717A008773D9211DD27CE55FB0861866E922C4AAAE7419171A
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\prepare_board.py
+
+Algorithm : SHA256
+Hash      : A9659CE21168D954C72D0022EAACFC17A3D0704157CAEFFFAD2B9FD7DC31ECE0
+Path      : D:\FPGA\output\c_stream_board_v1_20261015\rtl\top\video_correct_ddr_stream_core.v
+
+Algorithm : SHA256
+Hash      : 9BE2D817B89DE670785C7B30C0EC23FDC60E74A9E2CBD5465008A46C2BE27CD5
+Path      : D:\FPGA\output\c_stream_board_v1_20261015\rtl\top\frame_session_overlap_stream.v
+
+Algorithm : SHA256
+Hash      : 483E6746D4555A592BBF144DFC411F7A8C25934CD759C8344D47B9FDBD524AD4
+Path      : D:\FPGA\output\c_stream_board_v1_20261015\diagnostics\ddr_camera_hires_prefetch_20261012\results\video_correct_ddr_top.v
+
+Algorithm : SHA256
+Hash      : 28FEE9183F53C9BEAE293A0832CADE7D1F1B92B265AC7920C374364BD21D7B2D
+Path      : D:\FPGA\output\c_stream_board_v1_20261015\constr\board_ddr.fdc
+
+Algorithm : SHA256
+Hash      : A0BB25CF2C32152BB3F1EBBDA2B94E94367009F28722ECF1AEAA7A4F15E66FE3
+Path      : D:\FPGA\output\c_stream_board_v1_20261015\vendor\c_current\01_design_code\ip\video_pll_27m_148m5\video_pll_27m_148m5.v
+
+Algorithm : SHA256
+Hash      : 5D2321008AFCCFD9FF5ADDB7D6719FF28D04D54B940B2C30AA831EA84CF34CAB
+Path      : D:\FPGA\output\c_stream_board_v1_20261015\stream_sources.json
+

@@ -1,0 +1,13 @@
+{
+  "status": "timing_failed",
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "run": "D:\\FPGA\\output\\c_stream_board_v2_20261015\\build_unqualified_20261015_1552",
+  "report_sha256": "fbd55ca7e2c9641e29a8b8f96b7a79e449c1f5a047d7490b16febadf93e07777",
+  "slow_setup_wns_ns": {
+    "rx": 0.713,
+    "processing": 2.473,
+    "pixel": 0.563,
+    "ui": -0.8
+  }
+}

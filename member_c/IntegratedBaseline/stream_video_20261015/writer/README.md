@@ -1,0 +1,17 @@
+# Streaming DDR result writer
+
+Source ports: `clk`, `rst_n`, `frame_start`, `abort_frame`, `frame_bank`, `write_valid`, `write_ready`, `write_addr[23:0]`, `write_rgb[23:0]`, `drained`, `fault`.
+UI ports: `ui_clk`, `ui_rst_n`, `cmd_valid`, `cmd_ready`, `cmd_write`, `cmd_addr[27:0]`, `cmd_wdata[255:0]`, `cmd_wstrb[31:0]`, `rsp_valid`, `rsp_write`.
+Parameters: OUT_W=768, OUT_H=1080, BASE0=28'h0200000, BASE1=28'h0400000, FIFO_ADDR_BITS=6 (minimum 2).
+
+Pixel addresses are sequential pixel indices from zero. A beat's UI address is latched frame base + (pixel_index & ~7), preserving the baseline engine's address units. Every RGB888 pixel occupies a low 24-bit lane with zero high byte. Last partial beat has valid-byte strobes only for real pixels. No separate frame-end input: OUT_W*OUT_H pixels define the frame.
+
+A source handshake can occur every source clock while command FIFO capacity permits. The eighth pixel directly pushes the completed beat; the next partial beat collects independently. UI holds one outstanding transaction and prefetches the following beat. It reserves a free acknowledgement FIFO slot before issue, so even a stopped source clock cannot drop responses. Every queued beat remains owned until its actual UI response crosses back. Abort/error discards only the source partial beat; all queued/held/issued beats still drain with their original address and bank. New frame_start while not drained faults and does not reset ownership. Abort clears fault and blocks pixels until a valid drained frame_start.
+
+`drained` means no partial beat and no unretired owned beat. The session must also know that the intended frame's last pixel was delivered before publishing it. A missing source pixel cannot be detected without an external end-of-frame signal; extra/out-of-order/out-of-range pixels fault. New-bank reuse must be gated on drained after abort/error. UI responses must belong to this writer, occur exactly once per accepted command, and set rsp_write for successful write completion. The writer tolerates a response in the command acceptance cycle. Unsolicited responses with no owned UI command are ignored.
+
+Both resets assert together with a hard reset of the external command engine. A source-only/session reset must not flush these FIFOs. Common reset is rst_n && ui_rst_n, and each clock domain synchronizes release. This is a new module and does not edit the legacy writer.
+
+Verification: ModelSim testbenches in this directory. Logs and runnable .do scripts in D:/FPGA/output/c_stream_writer_unit_20261015. TDD initial inert stub produced expected FAIL early drained (red.log), then implementation passed. full_final.log checks two 768x1080 frames (207360 beats), every lane/address/strobe, zero source stalls at source period 10 ns / UI period 6 ns. random_final.log exercises randomized source/UI clocks, command stalls, delayed ACKs, immutable bank, stopped source clock and full ACK FIFO, partial/queued/inflight abort, late ACK, busy frame_start, bad response type, extra pixel, wrong order, common reset/restart. partial_final.log checks nine-pixel final partial strobes and immediate responses.
+
+Limits: no synthesis/place-and-route/board validation in this unit task; only one outstanding UI write, so sustained throughput depends on actual UI response latency and FIFO depth. Source backpressure remains mandatory. FIFO depth default 64. Full-rate evidence covers the tested clock/response relationship, not an arbitrary UI latency guarantee.

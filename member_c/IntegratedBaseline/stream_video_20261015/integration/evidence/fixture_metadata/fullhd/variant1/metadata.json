@@ -1,0 +1,82 @@
+{
+  "size": "fullhd",
+  "variant": 1,
+  "source_generation_seed": 29,
+  "source": [
+    1920,
+    1080
+  ],
+  "storage": [
+    768,
+    1080
+  ],
+  "logical": [
+    765,
+    1080
+  ],
+  "active_x": 1,
+  "corners": [
+    [
+      650,
+      70
+    ],
+    [
+      1250,
+      110
+    ],
+    [
+      1320,
+      1010
+    ],
+    [
+      590,
+      960
+    ]
+  ],
+  "corners96_hex": "28a0464e206e5283f224e3c0",
+  "H_q24_signed": [
+    13142221,
+    -2565548,
+    10905190400,
+    875431,
+    11182019,
+    1174405120,
+    -26,
+    -2767,
+    16777216
+  ],
+  "H_40bit_hex": [
+    "0000c888cd",
+    "ffffd8da54",
+    "028a000000",
+    "00000d5ba7",
+    "0000aa9fc3",
+    "0046000000",
+    "ffffffffe6",
+    "fffffff531",
+    "0001000000"
+  ],
+  "independent_reference": true,
+  "hdl_q_requests_used": false,
+  "scalar_audit_pixels": 2056,
+  "source_formula": "R=(addr+gen*13)%251;G=(addr//7+gen*29)%253;B=(addr//13+gen*41)%255",
+  "artifacts": {
+    "source": {
+      "hex_sha256": "82e138fa7244ac867275d8d8b1718743e26b441727940fa3e7860e84e30a459e",
+      "png_sha256": "ef8f954427108e16fc8795d52e1b504e7983c710793b912d48b6f938dabe92b0",
+      "pixels": 2073600
+    },
+    "expected_bilinear": {
+      "hex_sha256": "9b4ff0430eeec6dd35736bbd8ab78ec94611e783ff6704605d2f861d1e1cafd7",
+      "png_sha256": "36ddb75747ed1f25dbeeb86be211667a2533affc30acbe16df4ad283e832bd67",
+      "pixels": 829440
+    },
+    "expected_nearest": {
+      "hex_sha256": "e49aa1ca780ac952a6538aeb9fa16676e04fa41b32a2dd10e4c6fa2d146b173a",
+      "png_sha256": "e1059f455f7c405a86be59a40fa7443b5317cc286a94cefeedb5eb822c31948c",
+      "pixels": 829440
+    }
+  },
+  "synthetic": true,
+  "hardware_accepted": false
+}

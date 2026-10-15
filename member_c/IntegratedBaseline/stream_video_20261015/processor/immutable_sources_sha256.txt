@@ -1,0 +1,37 @@
+
+Algorithm : SHA256
+Hash      : CA8DEDFBCDD7A69AD92FE49797481AF38B09CB495F51DF02E3361ECF260155F2
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\b_rectifier.v
+
+Algorithm : SHA256
+Hash      : AC5E9DC73EFBBC64F385D2EA50D7E5EFEE02F057F444CCC4DD7D3F1272091BB6
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\bilinear_interp.v
+
+Algorithm : SHA256
+Hash      : FFD648C0B51A5E6B9378614446A2B62980CE3BDB9897AB2388ADA036A914BEE9
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\homography_solver.v
+
+Algorithm : SHA256
+Hash      : FC0FB7D1AD820AACD54A2AE64D9ED99F8E87E7313B9B1EF5E8B630ABEA6FD4F3
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\perspective_coord.v
+
+Algorithm : SHA256
+Hash      : C39509435A668D6F74158781A7C8F794D754C02CF10CEBC66B44D0829E891DB5
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\perspective_core.v
+
+Algorithm : SHA256
+Hash      : 372F81D1D1961D9FBC583632FEB0EF93124E6B8E6B13423A6ADE2BA2E940B741
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\scaled_div_pipe.v
+
+Algorithm : SHA256
+Hash      : 2A4E95A1FC77D2EEA7F392BF2F4260066EBA456D03A7D6C31868C28E0FCB765D
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\signed_div_seq.v
+
+Algorithm : SHA256
+Hash      : DC12588B771773A9D9492D84BEA826166C6AB5D4B3857A0A22949B3445EB05C3
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\b\rtl\unsigned_div_seq.v
+
+Algorithm : SHA256
+Hash      : EAFFA95C6B1F277B4D2D6D36190E1DBAF5972D40932EB8865764941522714443
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\rtl\algo\c_corner_rectifier.v
+

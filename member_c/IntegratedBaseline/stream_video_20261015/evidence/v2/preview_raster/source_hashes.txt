@@ -1,0 +1,25 @@
+
+Algorithm : SHA256
+Hash      : D1D5E25AEF6456ECF566804B8EE453BDC6059F3FD8330C3A6950BB5478C9979C
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\diagnostics\ddr_camera_hires_prefetch_20261012\results\ddr_result_display.v
+
+Algorithm : SHA256
+Hash      : 461F6100EDF4ECB073B83FAB9DC0472D6E6DF1C15FB88029C8B7DDBBCB7872E9
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\rtl\video\result_display.v
+
+Algorithm : SHA256
+Hash      : 72B946984FB922BD4E36B88152E3977055D72A40ED6647F9BA398B6CBD9129C2
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\rtl\common\reset_sync.v
+
+Algorithm : SHA256
+Hash      : 7E8669366CCC747356A3CE62FDD2B67E8BD41339D15370A4BB4BB6BD7AB6C028
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\preview\rx_preview_stream.v
+
+Algorithm : SHA256
+Hash      : 0CF1386F82ECB2B86622BAB7A8F731A4CEE7F0D2CCDCB796C341A684C9F66512
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\preview\tb_preview_raster.sv
+
+Algorithm : SHA256
+Hash      : 23260615DAB0BC47CFBE5BF53366E2E9A1F9131204B4B29A9BCB879C6A210577
+Path      : D:\FPGA\output\c_black_burst_merge_v3_20261015\vendor\c_current\01_design_code\video_timing_vtc.v
+

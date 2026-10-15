@@ -1,0 +1,11 @@
+# Explicit source block extension
+
+New input `cmd_source_block`; new registered output `rsp_source_block[2047:0]`. All original ports and parameters retain their names and behavior. Connect cmd_source_block=0 on legacy clients; only exact 1 enables forced mode, so an omitted legacy input also leaves forced mode disabled.
+
+A forced command must be a read at a 64-word aligned source-region address whose complete 64-word block remains inside one configured source bank. Illegal forced commands retire with fault_reason=1 and zero data, without native AXI traffic. Forced reads issue ARLEN=7 even with SOURCE_PREFETCH_ENABLE=0 and random/nonsequential addresses. A hit returns all eight cached source beats without AXI traffic. The output packs beat0 at bits255:0 and beat7 at bits2047:1792. Final fill uses the current AXI beat directly for beat7, avoiding nonblocking-assignment stale data. rsp_rdata retains the existing selected 256-bit beat behavior. cmd_source_block excludes result-cache hits, avoiding cross-client cache classification aliasing.
+
+The engine stays single-outstanding, consumes all unbackpressurable read beats before responding, and preserves sticky hard-stop fault semantics. Read ID/last faults use reason3; AR/R timeouts use6/7. Source writes invalidate the source block cache. Result-cache, normal source-prefetch and capture bursts remain supported.
+
+TDD red evidence: D:/FPGA/output/c_source_block_engine_unit_20261015/red.log failed because baseline issued ARLEN=0 for forced random block. Final forced_final.log passes randomized forced blocks, last beat assembly, cache hit, source-write invalidation, unsafe partial tail, out-of-source address, forced write, misalignment, bad RID/early RLAST, AR/R timeout and reset recovery. regression_final.log separately checks pass bits for legacy tb_ddr_word_engine, tb_ddr_read_ahead, tb_source_prefetch and tb_capture_burst_protocol. Copied legacy testbenches only tie the new ports and existing unused ports explicitly; their behavioral checks remain intact.
+
+No synthesis, timing closure or board validation performed here. Integrate this engine in place of the old module, not alongside another definition named ddr_word_engine. Shared hard reset must also reset the actual DDR command engine before recovering from a sticky fault.

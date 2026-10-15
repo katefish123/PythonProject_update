@@ -1,0 +1,38 @@
+# do partial.do
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 11:08:53 on Oct 15,2026
+# vlog -sv D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/writer/ddr_result_writer_stream.v D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/writer/tb_writer_partial.sv 
+# -- Compiling module ddr_result_writer_stream
+# -- Compiling module stream_writer_async_fifo
+# -- Compiling module tb_writer_partial
+# 
+# Top level modules:
+# 	tb_writer_partial
+# End time: 11:08:53 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.tb_writer_partial 
+# Start time: 11:08:53 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_writer_partial(fast)
+# Loading work.ddr_result_writer_stream(fast)
+# Loading work.stream_writer_async_fifo(fast)
+# Loading work.stream_writer_async_fifo(fast__1)
+# PASS 9-pixel frame partial strobes/zero unused lanes and zero-latency UI response
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/writer/tb_writer_partial.sv(26)
+#    Time: 310 ns  Iteration: 1  Instance: /tb_writer_partial
+# End time: 11:08:54 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

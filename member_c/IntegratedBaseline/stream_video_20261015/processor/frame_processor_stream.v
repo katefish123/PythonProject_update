@@ -1,0 +1,128 @@
+`timescale 1ns/1ps
+`default_nettype none
+// All addresses count RGB888 pixels. Responses must preserve accepted request order.
+// Generation is reset only by the public hard reset, never by abort or a frame fault.
+module frame_processor_stream #(
+ parameter SRC_W=1920,SRC_H=1080,OUT_W=768,OUT_H=1080,
+ parameter ACTIVE_W=765,ACTIVE_X=1,FIXED_IDENTITY=0,
+ parameter TIMEOUT_CYCLES=300000000
+)(
+ input wire clk,rst_n,start,abort,nearest,input_geometry_valid,
+ input wire[95:0]input_corners,
+ output wire busy,output reg done,error,output reg[3:0]failure_reason,
+ output reg[31:0]cycles,completed_pixels,output wire geometry_valid,
+ output wire q_valid,input wire q_ready,output wire q_inside,q_nearest,
+ output wire[23:0]q_addr00,q_addr10,q_addr01,q_addr11,q_tag,
+ output wire[7:0]q_fx,q_fy,output wire[31:0]q_generation,
+ input wire r_valid,output wire r_ready,input wire r_inside,
+ input wire[23:0]r_p00,r_p10,r_p01,r_p11,r_tag,
+ input wire[7:0]r_fx,r_fy,input wire[31:0]r_generation,
+ output wire write_valid,input wire write_ready,
+ output wire[23:0]write_addr,write_rgb
+);
+ localparam IDLE=0,PREP=1,SOLVE=2,COMMIT=3,RUN=4;
+ reg[2:0]state;reg mode;reg[95:0]corners;reg[31:0]generation;
+ reg[11:0]ix,iy,cx,cy,rx,ry,ox,oy;
+ reg[31:0]issued,accepted,responded,produced;
+ reg[8:0]coord_reserved,descriptor_count;
+ reg[6:0]output_reserved,pixel_count;
+ reg[7:0]dr,dw;reg[5:0]pr,pw;
+ reg[136:0]descriptors[0:255];reg[47:0]pixels[0:63];
+ wire running=state==RUN&&!abort;
+ wire math_reset_n=rst_n&&!abort&&state!=IDLE;
+ wire[11:0]logical_x=ix<ACTIVE_X ? 12'd0 : ix>=ACTIVE_X+ACTIVE_W ? ACTIVE_W-1 : ix-ACTIVE_X;
+ wire[11:0]expected_logical_x=cx<ACTIVE_X ? 12'd0 : cx>=ACTIVE_X+ACTIVE_W ? ACTIVE_W-1 : cx-ACTIVE_X;
+ wire issue=running&&issued<OUT_W*OUT_H&&coord_reserved<256;
+ wire req_valid,req_inside,req_error,out_valid,pending,solver_reject;
+ wire[23:0]req_tag,a00,a10,a01,a11,out_rgb,out_tag;
+ wire[7:0]fx,fy;
+ wire descriptor_push=running&&req_valid;
+ wire descriptor_pop=q_valid&&q_ready;
+ wire stale=r_generation!=generation;
+ assign r_ready=stale||!running||output_reserved<64;
+ wire response_pop=r_valid&&r_ready&&!stale&&running;
+ wire pixel_push=running&&out_valid;
+ wire pixel_pop=write_valid&&write_ready;
+ assign busy=state!=IDLE;
+ assign q_generation=generation;
+ assign q_valid=running&&descriptor_count!=0;
+ assign {q_inside,q_tag,q_addr00,q_addr10,q_addr01,q_addr11,q_fx,q_fy}=descriptors[dr];
+ assign q_nearest=mode;
+ assign write_valid=running&&pixel_count!=0;
+ assign {write_addr,write_rgb}=pixels[pr];
+ generate if(FIXED_IDENTITY)begin: fixed_geometry
+ assign pending=1'b1;assign solver_reject=1'b0;assign geometry_valid=state!=IDLE;
+ perspective_core #(.SRC_W(SRC_W),.SRC_H(SRC_H)) algorithm(
+ .clk(clk),.rst_n(math_reset_n),.in_valid(issue),.nearest(mode),.geometry_valid(1'b1),
+ .dst_x(logical_x),.dst_y(iy),.h00(40'sd16777216),.h01(40'sd0),.h02(40'sd0),
+ .h10(40'sd0),.h11(40'sd16777216),.h12(40'sd0),.h20(40'sd0),.h21(40'sd0),.h22(40'sd16777216),
+ .req_valid(req_valid),.req_inside(req_inside),.req_error(req_error),.req_tag(req_tag),
+ .addr00(a00),.addr10(a10),.addr01(a01),.addr11(a11),.req_fx(fx),.req_fy(fy),
+ .rsp_valid(response_pop),.rsp_inside(r_inside),.rsp_tag(r_tag),.p00(r_p00),.p10(r_p10),.p01(r_p01),.p11(r_p11),.rsp_fx(r_fx),.rsp_fy(r_fy),
+ .out_valid(out_valid),.out_rgb(out_rgb),.out_tag(out_tag));
+ end else begin: corner_geometry
+ c_corner_rectifier #(.SRC_W(SRC_W),.SRC_H(SRC_H),.OUT_W(ACTIVE_W),.OUT_H(OUT_H),.UPDATE_EVERY(1)) algorithm(
+ .clk(clk),.rst_n(math_reset_n),.src_valid(1'b0),.src_frame_start(1'b0),.src_frame_end(1'b0),.src_x(12'd0),.src_y(12'd0),.src_rgb(24'd0),
+ .dst_valid(issue),.dst_frame_start(state==COMMIT),.nearest(mode),.dst_x(logical_x),.dst_y(iy),
+ .corners_valid(state==PREP),.marker_reject(),.marker_dropped(),.solver_reject(solver_reject),
+ .x0(corners[95:84]),.y0(corners[83:72]),.x1(corners[71:60]),.y1(corners[59:48]),.x2(corners[47:36]),.y2(corners[35:24]),.x3(corners[23:12]),.y3(corners[11:0]),
+ .geometry_valid(geometry_valid),.params_pending(pending),.stale_frames(),
+ .req_valid(req_valid),.req_inside(req_inside),.req_error(req_error),.req_tag(req_tag),
+ .addr00(a00),.addr10(a10),.addr01(a01),.addr11(a11),.req_fx(fx),.req_fy(fy),
+ .rsp_valid(response_pop),.rsp_inside(r_inside),.rsp_tag(r_tag),.p00(r_p00),.p10(r_p10),.p01(r_p01),.p11(r_p11),.rsp_fx(r_fx),.rsp_fy(r_fy),
+ .out_valid(out_valid),.out_rgb(out_rgb),.out_tag(out_tag));
+ end endgenerate
+ always @(posedge clk or negedge rst_n)begin
+ if(!rst_n)begin
+ state<=IDLE;generation<=0;mode<=0;corners<=0;done<=0;error<=0;failure_reason<=0;cycles<=0;completed_pixels<=0;
+ ix<=0;iy<=0;cx<=0;cy<=0;rx<=0;ry<=0;ox<=0;oy<=0;
+ issued<=0;accepted<=0;responded<=0;produced<=0;coord_reserved<=0;descriptor_count<=0;output_reserved<=0;pixel_count<=0;dr<=0;dw<=0;pr<=0;pw<=0;
+ end else begin
+ done<=0;error<=0;
+ if(abort)state<=IDLE;
+ else if(state==IDLE)begin
+ ix<=0;iy<=0;cx<=0;cy<=0;rx<=0;ry<=0;ox<=0;oy<=0;
+ issued<=0;accepted<=0;responded<=0;produced<=0;coord_reserved<=0;descriptor_count<=0;output_reserved<=0;pixel_count<=0;dr<=0;dw<=0;pr<=0;pw<=0;
+ if(start)begin
+ generation<=generation+1;cycles<=0;completed_pixels<=0;failure_reason<=0;corners<=input_corners;mode<=nearest;
+ if(!FIXED_IDENTITY&&!input_geometry_valid)begin error<=1;failure_reason<=3;end
+ else state<=PREP;
+ end
+ end else begin
+ cycles<=cycles+1;
+ if(state==PREP)state<=SOLVE;
+ if(state==SOLVE&&pending)state<=COMMIT;
+ if(state==COMMIT)state<=RUN;
+ if(running)begin
+ case({issue,descriptor_pop}) 2'b10:coord_reserved<=coord_reserved+1;2'b01:coord_reserved<=coord_reserved-1;default:begin end endcase
+ case({descriptor_push,descriptor_pop})2'b10:descriptor_count<=descriptor_count+1;2'b01:descriptor_count<=descriptor_count-1;default:begin end endcase
+ case({response_pop,pixel_pop})2'b10:output_reserved<=output_reserved+1;2'b01:output_reserved<=output_reserved-1;default:begin end endcase
+ case({pixel_push,pixel_pop})2'b10:pixel_count<=pixel_count+1;2'b01:pixel_count<=pixel_count-1;default:begin end endcase
+ if(issue)begin issued<=issued+1;if(ix==OUT_W-1)begin ix<=0;iy<=iy+1;end else ix<=ix+1;end
+ if(descriptor_push)begin
+ descriptors[dw]<={req_inside&&(cx>=ACTIVE_X)&&(cx<ACTIVE_X+ACTIVE_W),cy,cx,a00,a10,a01,a11,fx,fy};dw<=dw+1;
+ if(cx==OUT_W-1)begin cx<=0;cy<=cy+1;end else cx<=cx+1;
+ end
+ if(descriptor_pop)begin dr<=dr+1;accepted<=accepted+1;end
+ if(response_pop)begin responded<=responded+1;if(rx==OUT_W-1)begin rx<=0;ry<=ry+1;end else rx<=rx+1;end
+ if(pixel_push)begin
+ pixels[pw]<={produced[23:0],out_rgb};pw<=pw+1;produced<=produced+1;
+ if(ox==OUT_W-1)begin ox<=0;oy<=oy+1;end else ox<=ox+1;
+ end
+ if(pixel_pop)begin
+ pr<=pr+1;completed_pixels<=completed_pixels+1;
+ if(completed_pixels==OUT_W*OUT_H-1)begin done<=1;state<=IDLE;end
+ end
+ if((descriptor_push&&(req_tag!={cy,expected_logical_x}||descriptor_count==256))||
+ (response_pop&&(r_tag!={ry,rx}||responded>=accepted))||
+ (pixel_push&&(out_tag!={oy,ox}||pixel_count==64))||
+ (pixel_pop&&write_addr!=completed_pixels))begin error<=1;failure_reason<=11;state<=IDLE;done<=0;end
+ end
+ if(solver_reject)begin error<=1;failure_reason<=4;state<=IDLE;done<=0;end
+ if(cycles>=TIMEOUT_CYCLES-1)begin error<=1;failure_reason<=5;state<=IDLE;done<=0;end
+ end
+ end
+ end
+endmodule
+`default_nettype wire
+

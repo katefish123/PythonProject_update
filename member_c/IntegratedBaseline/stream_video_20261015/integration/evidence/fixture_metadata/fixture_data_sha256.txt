@@ -1,0 +1,73 @@
+
+Algorithm : SHA256
+Hash      : CF5DCE1E530704771A683E46B9C73C6203BC64B668359339DCF27FFF2CCFFBBE
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant0\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : 9A660AC5A77D9B50FB652234C165DCF9BBF0033A4A12E770B3E4D8780C5C434D
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant0\expected_nearest.hex
+
+Algorithm : SHA256
+Hash      : 91BF27290380EBA3A48056845A3FC11DE6443D568EFD75AA0FB1177749AC6E09
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant0\source.hex
+
+Algorithm : SHA256
+Hash      : 9B4FF0430EEEC6DD35736BBD8AB78EC94611E783FF6704605D2F861D1E1CAFD7
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant1\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : E49AA1CA780AC952A6538AEB9FA16676E04FA41B32A2DD10E4C6FA2D146B173A
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant1\expected_nearest.hex
+
+Algorithm : SHA256
+Hash      : 82E138FA7244AC867275D8D8B1718743E26B441727940FA3E7860E84E30A459E
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant1\source.hex
+
+Algorithm : SHA256
+Hash      : 99444D9934DF605530E63B1A25E359CB6C0A01C6DAD661894D9A25D56A682FFC
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant2\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : F242A0EE2BF9BC65C511B76BE5C69AB26C47FAF6C915A72091295B5CAB7418B1
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant2\expected_nearest.hex
+
+Algorithm : SHA256
+Hash      : 567D3FF93C28977C174D7D7011615E161B4F12698FFEF7DE28A9B55B95BD9233
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant2\source.hex
+
+Algorithm : SHA256
+Hash      : 286EB38CB555763365EB43ACA3BD5D639C114623132FE0210966412270DBAE6E
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant0\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : 97C47C1585CB4776687156C4A27D3A311A16885B7229730A39BB59B8B756FA75
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant0\expected_nearest.hex
+
+Algorithm : SHA256
+Hash      : FEC5633C5201D04FFB84CD9025CC91E84544DE52A24C3C857079A0BA5690ABB2
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant0\source.hex
+
+Algorithm : SHA256
+Hash      : 802955BDED9982D20D967A83E7C1B83B7E6FB38FC0EEBF47B594ED7524532058
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant1\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : 67D4A9EAFBB42C40D17A46B1EBBDE8B1551960E6636414E2A342710F85F5973D
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant1\expected_nearest.hex
+
+Algorithm : SHA256
+Hash      : 514BC1901B973389BBA46DC14EA156FB1A74425157C1E964A33E22F1F9C6C302
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant1\source.hex
+
+Algorithm : SHA256
+Hash      : 9EA780F78771F6A1FE7C700A5ABA5DA25B9B15AF5095E45E0486107E27C829CA
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant2\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : 7764A6D54D3C8885607345DF3C69FE83765D7DBA20E36C54D8A99981720BEA16
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant2\expected_nearest.hex
+
+Algorithm : SHA256
+Hash      : 798949AE40B8CEF5D010FD33FEF093DA621EA8C7715F6A5565AE7F789FF559C6
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\reduced\variant2\source.hex
+

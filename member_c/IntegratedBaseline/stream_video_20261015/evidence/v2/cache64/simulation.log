@@ -1,0 +1,35 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "onbreak {quit -code 1}; onerror {quit -code 1}; run -all; quit -code 0" work.tb_quad_tile 
+# Start time: 15:46:59 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_quad_tile(fast)
+# onbreak {quit -code 1}
+#  Warning: onbreak command for use within macro
+#  onerror {quit -code 1}
+#  Warning: onerror command for use within macro
+#  run -all
+# NEW warm 64 quads cycles=71
+# PASS quad tile RGB metadata/backpressure/eviction/generation/bank/edges 413 packets 216 commands
+# PASS watchdog and common reset recovery
+# PASS invalid address and wrong response hard faults
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/cache/tb_quad_tile.sv(115)
+#    Time: 38920 ns  Iteration: 1  Instance: /tb_quad_tile
+# End time: 15:47:01 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

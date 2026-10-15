@@ -1,0 +1,4 @@
+* -text whitespace=blank-at-eol,space-before-tab,cr-at-eol,-blank-at-eof
+**/evidence/** -text -whitespace
+# Preserve the native generated vendor wrapper byte layout for clock binding.
+clock/video_pll_clock_test.v -text -whitespace

@@ -1,0 +1,40 @@
+# do full.do
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 11:09:26 on Oct 15,2026
+# vlog -sv D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/writer/ddr_result_writer_stream.v D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/writer/tb_writer_full.sv 
+# -- Compiling module ddr_result_writer_stream
+# -- Compiling module stream_writer_async_fifo
+# -- Compiling module tb_writer_full
+# 
+# Top level modules:
+# 	tb_writer_full
+# End time: 11:09:26 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.tb_writer_full 
+# Start time: 11:09:26 on Oct 15,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_writer_full(fast)
+# Loading work.ddr_result_writer_stream(fast)
+# Loading work.stream_writer_async_fifo(fast)
+# Loading work.stream_writer_async_fifo(fast__1)
+# PASS default 768x1080 frame=0 beats=103680 source_stalls=0
+# PASS default 768x1080 frame=1 beats=103680 source_stalls=0
+# PASS two default frames, every RGB/padding/address checked, 1 pixel/source clock, total_beats=207360
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/writer/tb_writer_full.sv(37)
+#    Time: 16589140 ns  Iteration: 1  Instance: /tb_writer_full
+# End time: 11:09:31 on Oct 15,2026, Elapsed time: 0:00:05
+# Errors: 0, Warnings: 0
