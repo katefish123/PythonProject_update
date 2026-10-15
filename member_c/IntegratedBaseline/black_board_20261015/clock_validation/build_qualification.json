@@ -1,0 +1,21 @@
+{
+  "qualified_at_utc": "2026-10-15T02:13:40.2101156Z",
+  "upstream_commit": "6b0b2e257efcfbb379d3f447403beb5ad08e0086",
+  "simulation_qualification_sha256": "d02e5d3776bca429c2211497a4f878d9b3c1737baede39b716d1ac90d8df2ed3",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "hardware_accepted": false,
+  "source_manifest_sha256": "f8d2ef77e3bab0388debb32ee5887155d374b9a1a17fc6fae29906559451155a",
+  "build_log": "D:\\FPGA\\output\\c_filtered_black_clock_20261015\\build_20261015_100532\\build.log",
+  "timing_report": "D:\\FPGA\\output\\c_filtered_black_clock_20261015\\build_20261015_100532\\place_route\\video_correct_ddr_top_timing_summary_after_hold_fix.txt",
+  "artifacts": {
+    "sbit": {
+      "path": "D:\\FPGA\\output\\c_filtered_black_clock_20261015\\build_20261015_100532\\generate_bitstream\\video_correct_ddr_top.sbit",
+      "sha256": "2b4a23ca691f1150477485beef2bd5f92325d1e3a0e3f435ff3378426501205d"
+    },
+    "smsk": {
+      "path": "D:\\FPGA\\output\\c_filtered_black_clock_20261015\\build_20261015_100532\\generate_bitstream\\video_correct_ddr_top.smsk",
+      "sha256": "23afd51af7f3a0a67126614b91a6817905144d54d36c39695e4b26f82cac7858"
+    }
+  }
+}

@@ -2,9 +2,9 @@
 
 正式分支：`main-C`
 
-2026-10-15 已同步 [A 最新黑标版本的固定源码与状态](IntegratedBaseline/a_black_sync_20261014/README.md)，来源 `main-A / 256b5ea`、B `4106f3b`。A 已撤下整套提速发布入口；本开发分支正在适配完整1920×1080采集内检测，尚未继承为板测通过的新候选。下方 `833af36` 发布包继续保留。
+2026-10-15 已同步 [A 最新黑标版本的固定源码与状态](IntegratedBaseline/a_black_sync_20261014/README.md)，来源 `main-A / 256b5ea`、B `4106f3b`；远端再次核对无新提交。A 已撤下整套提速发布入口。最新开发入口为[全源图黑标/突发/恢复整合](IntegratedBaseline/black_board_20261015/README.md)：33项新仿真、额外错误期间旧/新显示检查、PDS构建和最终时序全部通过，硬件验收未做；sbit以 `8b1b07ad` 开头。既有正式与板上版本保持。
 
-当前进度：[采集内黑标检测](IntegratedBaseline/inline_geometry_20261014/README.md)已通过21项完整回归，三帧平均启动间隔691.648→508.319ms；最终PDS输入域时序失败−1.812ns，未发布烧录文件。正在修正时钟接入，并继续合并烧录聊天的原子采集突发、状态预览和整核恢复验证。该阶段还不是实时视频成果。
+当前缺项：最终合并版三帧平均启动间隔508.319ms，约1.97张/s模型样本，未达每秒60张不同结果。已审计[真实赛题和B最新代码](IntegratedBaseline/compliance_20261015/README.md)，确认还需镜头径向/切向、真实标定和硬件参数加载；新增[浮点/定点软件参考](IntegratedBaseline/lens_model_20261015/README.md)17项通过，尚未接入镜头RTL。旧[采集内黑标检测](IntegratedBaseline/inline_geometry_20261014/README.md)的−1.812ns失败证据保留；最新合并版RX为+1.449ns。
 
 本开发分支最新入口：[完整分辨率连续帧优化](IntegratedBaseline/fullhd_pipeline_20261014/README.md)。27 项仿真、PDS 构建及最终时序均通过；完整原生 DDR 三帧模型平均处理间隔 691.648ms → 599.984ms，减少 13.25%。板上验收未执行。用户准备烧录的正式版本仍固定在 `main-C` 的 `809c082`。
 

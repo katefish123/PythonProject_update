@@ -1,0 +1,1965 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {D:\FPGA\output\c_black_burst_merge_v3_20261015\compile_preflight\compile_all.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_ddr_display work_tb_ddr_display 
+# Copying D:/softwares/modelsim/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:24:51 on Oct 15,2026
+# vlog -sv -work work_tb_ddr_display D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_ddr_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_ddr_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_ddr_display
+# End time: 10:24:51 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_ddr_display.wlf work_tb_ddr_display.tb_ddr_display 
+# Start time: 10:24:51 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_ddr_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# End time: 10:24:52 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_native_display work_tb_native_display 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:24:53 on Oct 15,2026
+# vlog -sv -work work_tb_native_display D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/tb_native_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_result_display
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_native_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_native_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:24:53 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_native_display.wlf work_tb_native_display.tb_native_display 
+# Start time: 10:24:53 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# Loading sv_std.std
+# Loading work.tb_native_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# End time: 10:24:54 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_native_capture work_tb_native_capture 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:24:54 on Oct 15,2026
+# vlog -sv -work work_tb_native_capture D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/tb_native_capture.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_native_capture
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_native_capture
+# End time: 10:24:55 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_native_capture.wlf work_tb_native_capture.tb_native_capture 
+# Start time: 10:24:55 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# Loading sv_std.std
+# Loading work.tb_native_capture(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_capture_writer(fast)
+# End time: 10:24:56 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_native_display_stress work_tb_native_display_stress 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:24:56 on Oct 15,2026
+# vlog -sv -work work_tb_native_display_stress D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/tb_native_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_result_display
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_native_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_native_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:24:56 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_native_display_stress.wlf work_tb_native_display_stress.tb_native_display -gCONTENTIOUS=1 
+# Start time: 10:24:56 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# Loading sv_std.std
+# Loading work.tb_native_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# End time: 10:24:58 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_ddr_word_engine work_tb_ddr_word_engine 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:24:58 on Oct 15,2026
+# vlog -sv -work work_tb_ddr_word_engine D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_ddr_word_engine.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module tb_ddr_word_engine
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_ddr_word_engine
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:24:58 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_ddr_word_engine.wlf work_tb_ddr_word_engine.tb_ddr_word_engine 
+# Start time: 10:24:58 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_word_engine(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:24:59 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_ddr_read_ahead work_tb_ddr_read_ahead 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:01 on Oct 15,2026
+# vlog -sv -work work_tb_ddr_read_ahead D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_ddr_read_ahead.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module tb_ddr_read_ahead
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_ddr_read_ahead
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:25:01 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_ddr_read_ahead.wlf work_tb_ddr_read_ahead.tb_ddr_read_ahead 
+# Start time: 10:25:01 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_read_ahead(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:02 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_hires_read_ahead_display work_tb_hires_read_ahead_display 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:02 on Oct 15,2026
+# vlog -sv -work work_tb_hires_read_ahead_display D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_hires_read_ahead_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_arbiter3
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_hires_read_ahead_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_hires_read_ahead_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:25:02 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_hires_read_ahead_display.wlf work_tb_hires_read_ahead_display.tb_hires_read_ahead_display 
+# Start time: 10:25:02 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_hires_read_ahead_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:04 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_hires_read_ahead_control work_tb_hires_read_ahead_control 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:04 on Oct 15,2026
+# vlog -sv -work work_tb_hires_read_ahead_control D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_hires_read_ahead_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_arbiter3
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_hires_read_ahead_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_hires_read_ahead_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:25:04 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_hires_read_ahead_control.wlf work_tb_hires_read_ahead_control.tb_hires_read_ahead_display -gREAD_AHEAD=0 -gEXPECT_UNDERRUN=1 
+# Start time: 10:25:04 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_hires_read_ahead_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:06 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_hires_read_ahead_shared work_tb_hires_read_ahead_shared 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:06 on Oct 15,2026
+# vlog -sv -work work_tb_hires_read_ahead_shared D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_hires_read_ahead_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_arbiter3
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_hires_read_ahead_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_hires_read_ahead_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:25:06 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_hires_read_ahead_shared.wlf work_tb_hires_read_ahead_shared.tb_hires_read_ahead_display -gLOAD_TRAFFIC=1 
+# Start time: 10:25:06 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_hires_read_ahead_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:07 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_fullhd work_fullhd 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:08 on Oct 15,2026
+# vlog -sv -work work_fullhd D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_fullhd_capture_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_fullhd_capture_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	ddr_capture_writer_banked
+# 	tb_fullhd_capture_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:25:08 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" work_fullhd.tb_fullhd_capture_display 
+# Start time: 10:25:08 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_fullhd_capture_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_capture_writer(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:09 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_ddr_capture work_tb_ddr_capture 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:09 on Oct 15,2026
+# vlog -sv -work work_tb_ddr_capture D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_ddr_capture.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_ddr_capture
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_ddr_capture
+# End time: 10:25:10 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_capture_errors.wlf work_tb_ddr_capture.tb_ddr_capture 
+# Start time: 10:25:10 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.ddr_capture_writer(fast)
+# End time: 10:25:11 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_scheduler work_scheduler 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:11 on Oct 15,2026
+# vlog -sv -work work_scheduler D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_scheduler.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_scheduler
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_scheduler
+# End time: 10:25:11 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_scheduler.wlf work_scheduler.tb_scheduler 
+# Start time: 10:25:11 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# Loading sv_std.std
+# Loading work.tb_scheduler(fast)
+# Loading work.frame_processor(fast)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# End time: 10:25:13 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_overlap_session work_tb_overlap_session 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:13 on Oct 15,2026
+# vlog -sv -work work_tb_overlap_session D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_overlap_session.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_overlap_session
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_overlap_session
+# End time: 10:25:13 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_overlap_session.wlf work_tb_overlap_session.tb_overlap_session 
+# Start time: 10:25:13 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 2 FSMs in module "frame_session_overlap(fast)".
+# Loading sv_std.std
+# Loading work.tb_overlap_session(fast)
+# Loading work.frame_session_overlap(fast)
+# End time: 10:25:15 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_banked_writer work_tb_banked_writer 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:15 on Oct 15,2026
+# vlog -sv -work work_tb_banked_writer D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_banked_writer.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_banked_writer
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_banked_writer
+# End time: 10:25:15 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_banked_writer.wlf work_tb_banked_writer.tb_banked_writer 
+# Start time: 10:25:15 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# Loading sv_std.std
+# Loading work.tb_banked_writer(fast)
+# Loading work.ddr_capture_writer_banked(fast)
+# Loading work.ddr_capture_writer(fast)
+# End time: 10:25:17 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_banked_fullhd work_banked_fullhd 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:17 on Oct 15,2026
+# vlog -sv -work work_banked_fullhd D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_banked_capture_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module ddr_word_engine
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module video_timing_vtc
+# -- Compiling module tb_banked_capture_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	tb_banked_capture_display
+# 	c_corner_rectifier
+# 	capture_geometry
+# 	geometry_frame_join
+# 	rx_preview
+# 	status_overlay
+# End time: 10:25:17 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" work_banked_fullhd.tb_banked_capture_display 
+# Start time: 10:25:17 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_banked_capture_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_capture_writer_banked(fast)
+# Loading work.ddr_capture_writer(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:18 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_fullhd_pipeline_2 work_fullhd_pipeline_2 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:19 on Oct 15,2026
+# vlog -sv -work work_fullhd_pipeline_2 D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_fullhd_pipeline.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_fullhd_pipeline
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_fullhd_pipeline
+# End time: 10:25:19 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc=rnp+/tb_fullhd_pipeline" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_fullhd_pipeline_2.wlf work_fullhd_pipeline_2.tb_fullhd_pipeline -gLATE_CAPTURE=95 -gPREFETCH=1 -gOVERLAP=1 
+# Start time: 10:25:19 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_fullhd_pipeline(fast)
+# End time: 10:25:20 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_source_prefetch work_tb_source_prefetch 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:21 on Oct 15,2026
+# vlog -sv -work work_tb_source_prefetch D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_source_prefetch.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_source_prefetch
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_source_prefetch
+# End time: 10:25:21 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_source_prefetch.wlf work_tb_source_prefetch.tb_source_prefetch 
+# Start time: 10:25:21 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_source_prefetch(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:22 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_late_capture work_tb_late_capture 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:22 on Oct 15,2026
+# vlog -sv -work work_tb_late_capture D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_late_capture.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_late_capture
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_late_capture
+# End time: 10:25:23 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_late_capture.wlf work_tb_late_capture.tb_late_capture 
+# Start time: 10:25:23 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 2 FSMs in module "frame_session_overlap(fast)".
+# Loading sv_std.std
+# Loading work.tb_late_capture(fast)
+# Loading work.frame_session_overlap(fast)
+# End time: 10:25:24 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_fullhd_pipeline_3 work_fullhd_pipeline_3 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:24 on Oct 15,2026
+# vlog -sv -work work_fullhd_pipeline_3 D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_fullhd_pipeline.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_fullhd_pipeline
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_fullhd_pipeline
+# End time: 10:25:24 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc=rnp+/tb_fullhd_pipeline" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_fullhd_pipeline_3.wlf work_fullhd_pipeline_3.tb_fullhd_pipeline -gLATE_CAPTURE=95 -gPREFETCH=1 -gOVERLAP=1 -gINLINE=1 
+# Start time: 10:25:24 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_fullhd_pipeline(fast)
+# End time: 10:25:26 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_capture_geometry work_tb_capture_geometry 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:26 on Oct 15,2026
+# vlog -sv -work work_tb_capture_geometry D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_capture_geometry.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_capture_geometry
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_capture_geometry
+# End time: 10:25:26 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_capture_geometry.wlf work_tb_capture_geometry.tb_capture_geometry 
+# Start time: 10:25:26 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_capture_geometry(fast)
+# Loading work.capture_geometry(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# End time: 10:25:28 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_geometry_join work_tb_geometry_join 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:28 on Oct 15,2026
+# vlog -sv -work work_tb_geometry_join D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_geometry_join.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_geometry_join
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_geometry_join
+# End time: 10:25:28 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_geometry_join.wlf work_tb_geometry_join.tb_geometry_join 
+# Start time: 10:25:28 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_geometry_join(fast)
+# Loading work.geometry_frame_join(fast)
+# End time: 10:25:30 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_dense_geometry work_tb_dense_geometry 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:30 on Oct 15,2026
+# vlog -sv -work work_tb_dense_geometry D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_dense_geometry.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_dense_geometry
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_dense_geometry
+# End time: 10:25:30 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_dense_geometry.wlf work_tb_dense_geometry.tb_dense_geometry 
+# Start time: 10:25:30 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_dense_geometry(fast)
+# Loading work.capture_geometry(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# End time: 10:25:32 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_rx_preview work_tb_rx_preview 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:32 on Oct 15,2026
+# vlog -sv -work work_tb_rx_preview D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_rx_preview.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_rx_preview
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_rx_preview
+# End time: 10:25:32 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_rx_preview.wlf work_tb_rx_preview.tb_rx_preview 
+# Start time: 10:25:32 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_rx_preview(fast)
+# Loading work.rx_preview(fast)
+# End time: 10:25:33 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_preview_display work_tb_preview_display 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:34 on Oct 15,2026
+# vlog -sv -work work_tb_preview_display D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_preview_display.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_preview_display
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_preview_display
+# End time: 10:25:34 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_preview_display.wlf work_tb_preview_display.tb_preview_display 
+# Start time: 10:25:34 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# Loading sv_std.std
+# Loading work.tb_preview_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.rx_preview(fast)
+# End time: 10:25:35 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_reason work_tb_reason 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:35 on Oct 15,2026
+# vlog -sv -work work_tb_reason D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_reason.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_reason
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_reason
+# End time: 10:25:36 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_reason.wlf work_tb_reason.tb_reason 
+# Start time: 10:25:36 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# Loading sv_std.std
+# Loading work.tb_reason(fast)
+# Loading work.frame_processor(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# End time: 10:25:37 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_selftest_status work_tb_selftest_status 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:37 on Oct 15,2026
+# vlog -sv -work work_tb_selftest_status D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_selftest_status.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_selftest_status
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_selftest_status
+# End time: 10:25:38 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_selftest_status.wlf work_tb_selftest_status.tb_selftest_status 
+# Start time: 10:25:38 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_pixel_cache(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_session(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_self_test(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_command_bridge(fast)".
+# Loading sv_std.std
+# Loading work.tb_selftest_status(fast)
+# Loading work.video_correct_ddr_core(fast)
+# Loading work.ddr_self_test(fast)
+# Loading work.frame_session(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_capture_writer_banked(fast)
+# Loading work.ddr_capture_writer(fast)
+# Loading work.frame_processor(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# Loading work.ddr_pixel_cache(fast)
+# Loading work.ddr_result_writer(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_command_bridge(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# End time: 10:25:39 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_tag_status work_tb_tag_status 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:39 on Oct 15,2026
+# vlog -sv -work work_tb_tag_status D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_tag_status.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_tag_status
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_tag_status
+# End time: 10:25:40 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_tag_status.wlf work_tb_tag_status.tb_tag_status 
+# Start time: 10:25:40 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# Loading sv_std.std
+# Loading work.tb_tag_status(fast)
+# Loading work.frame_processor(fast)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# End time: 10:25:41 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_capture_batch_recovery work_tb_capture_batch_recovery 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:41 on Oct 15,2026
+# vlog -sv -work work_tb_capture_batch_recovery D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_capture_batch_recovery.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_capture_batch_recovery
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_capture_batch_recovery
+# End time: 10:25:41 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_capture_batch_recovery.wlf work_tb_capture_batch_recovery.tb_capture_batch_recovery 
+# Start time: 10:25:41 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_capture_batch_recovery(fast)
+# Loading work.ddr_capture_writer(fast)
+# End time: 10:25:43 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_capture_burst_protocol work_tb_capture_burst_protocol 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:43 on Oct 15,2026
+# vlog -sv -work work_tb_capture_burst_protocol D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_capture_burst_protocol.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_capture_burst_protocol
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_capture_burst_protocol
+# End time: 10:25:43 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_capture_burst_protocol.wlf work_tb_capture_burst_protocol.tb_capture_burst_protocol 
+# Start time: 10:25:43 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_capture_burst_protocol(fast)
+# Loading work.ddr_word_engine(fast)
+# End time: 10:25:45 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_core_recovery work_tb_core_recovery 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:45 on Oct 15,2026
+# vlog -sv -work work_tb_core_recovery D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_core_recovery.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_core_recovery
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_core_recovery
+# End time: 10:25:45 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_core_recovery.wlf work_tb_core_recovery.tb_core_recovery 
+# Start time: 10:25:45 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# ** Note: (vopt-143) Recognized 2 FSMs in module "frame_session_overlap(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_pixel_cache(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_self_test(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_command_bridge(fast)".
+# Loading sv_std.std
+# Loading work.tb_core_recovery(fast)
+# Loading work.video_correct_ddr_core(fast)
+# Loading work.ddr_self_test(fast)
+# Loading work.frame_session_overlap(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.capture_geometry(fast)
+# Loading work.async_packet_fifo(fast__1)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.geometry_frame_join(fast)
+# Loading work.ddr_capture_writer_banked(fast)
+# Loading work.ddr_capture_writer(fast)
+# Loading work.frame_processor(fast)
+# Loading work.c_corner_rectifier(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# Loading work.ddr_pixel_cache(fast)
+# Loading work.ddr_result_writer(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_command_bridge(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# End time: 10:25:47 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_geometry_reset work_tb_geometry_reset 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:47 on Oct 15,2026
+# vlog -sv -work work_tb_geometry_reset D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_geometry_reset.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_geometry_reset
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_geometry_reset
+# End time: 10:25:47 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_geometry_reset.wlf work_tb_geometry_reset.tb_geometry_reset 
+# Start time: 10:25:47 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_geometry_reset(fast)
+# Loading work.capture_geometry(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# End time: 10:25:49 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_banked_burst_writer work_tb_banked_burst_writer 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:49 on Oct 15,2026
+# vlog -sv -work work_tb_banked_burst_writer D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_banked_burst_writer.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_banked_burst_writer
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_banked_burst_writer
+# End time: 10:25:49 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_banked_burst_writer.wlf work_tb_banked_burst_writer.tb_banked_burst_writer 
+# Start time: 10:25:49 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_banked_burst_writer(fast)
+# Loading work.ddr_capture_writer_banked(fast)
+# Loading work.ddr_capture_writer(fast)
+# End time: 10:25:51 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_burst_source_cache work_tb_burst_source_cache 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:25:51 on Oct 15,2026
+# vlog -sv -work work_tb_burst_source_cache D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/frame_session.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_black_burst_merge_v3_20261015/fullhd_tests/tb_burst_source_cache.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/geometry_frame_join.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/rx_preview.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/status_overlay.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_burst_source_cache
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# -- Compiling module rx_preview
+# -- Compiling module status_overlay
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_burst_source_cache
+# End time: 10:25:51 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_burst_source_cache.wlf work_tb_burst_source_cache.tb_burst_source_cache 
+# Start time: 10:25:51 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# Loading sv_std.std
+# Loading work.tb_burst_source_cache(fast)
+# Loading work.ddr_word_engine(fast)
+COMPILE_PREFLIGHT_PASS
+# End time: 10:25:52 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

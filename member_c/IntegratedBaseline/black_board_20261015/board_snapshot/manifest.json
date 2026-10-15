@@ -1,0 +1,36 @@
+{
+  "origin_root": "D:\\FPGA\\output\\c_capture_burst_20261014",
+  "source_manifest_sha256": "bd9cd68109c3d2e87fe1994160759fcb49dc6c8e9fd8741fc1cfc56a0520e6e1",
+  "board_release_sbit_sha256": "540dd628d92dbd477e6f8cbd4ccf7d0ebffbd1ae067929dc10015a7ae1a7793f",
+  "inherited_acceptance": false,
+  "test_source_distinctions": {
+    "fullhd_tests/tb_preview_display.sv": {
+      "source": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\FPGA\\initial_display_fix\\tb_preview_display.sv",
+      "board_bound_counterpart_sha256": "f7d5f3e8df75690a8553c44d924bc6dea05c319460a0dec2951af160d65bddf5",
+      "same_as_board_bound_copy": false
+    },
+    "fullhd_tests/tb_reason.sv": {
+      "source": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\FPGA\\initial_display_fix\\tb_reason.sv",
+      "board_bound_counterpart_sha256": "3cac2e379b2a4d747026897f377ac5400260a8a9246161340fa67756b1ee39b7",
+      "same_as_board_bound_copy": false
+    },
+    "fullhd_tests/tb_selftest_status.sv": {
+      "source": "C:\\Users\\Lenovo\\Documents\\ChatGPT\\FPGA\\initial_display_fix\\tb_selftest_status.sv",
+      "board_bound_counterpart_sha256": "b5444ad54699e0344c628b68dd748009e3ab50368af28debc9e758de7bb5d665",
+      "same_as_board_bound_copy": false
+    }
+  },
+  "files": {
+    "rtl/memory/ddr_capture_writer.v": "5e8a72fb42ffe8aaad3e7499d36e31d75904d6e88ddabc6e0a46783ab91741f6",
+    "rtl/video/rx_preview.v": "cca7aabd5247f4068a0a96e105e1df1b78e78b06ff23ded6fb60885cff2c945f",
+    "rtl/video/status_overlay.v": "b732624e6c8ae9cacaf938fe4536aaa4783a03ad0667044f08ac2a6a5f9698ed",
+    "diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v": "8f2e12dbe371d8aa76201c7b4be41a95400449955a78b023ee1f29b2b83d0f4f",
+    "fullhd_tests/tb_rx_preview.sv": "9c6abbb25c60bd98de52a6293a99db7fc447a32af1a18b568a97ac72c5dae2ab",
+    "fullhd_tests/tb_preview_display.sv": "4895ca58dd365de83496e1e315cf262da859777324eb3ca02d89c3099df03ccb",
+    "fullhd_tests/tb_reason.sv": "bc0df44c125b2dbad53c80237034c96b8bd34c5fb1e453870a5c84a3ee5f0a6f",
+    "fullhd_tests/tb_selftest_status.sv": "5c14f86f83b9f5557d789257f75caf324aa0efe241fba634272fb25c0f9298be",
+    "fullhd_tests/tb_tag_status.sv": "7cb8e7a54319107d7c12e7b82bd38b457e0dc76b311576fdeedb5c9892e4f061",
+    "fullhd_tests/tb_capture_batch_recovery.sv": "a41daa08cd3d9ad354f78741e36093e1b2852128bc1223e50168d67500fc30e9",
+    "fullhd_tests/tb_capture_burst_protocol.sv": "e21059c4835759dffde554294c66cccbd9f5a1e183372764800e4eef53d4d7bb"
+  }
+}

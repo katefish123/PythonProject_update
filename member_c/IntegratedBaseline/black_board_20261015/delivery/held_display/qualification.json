@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "source_manifest_sha256": "10de19daf40c84ae10df606ec13931228313c52352d424091126c11a902d40ac",
+  "root": "D:\\FPGA\\output\\c_black_burst_merge_v3_20261015",
+  "tests": {
+    "tb_core_recovery": {
+      "passed": true,
+      "exit_code": 0,
+      "log_sha256": "d4b6861a7d175b39975649716a9dd4bc99d5e96073d87aef05838dea92b0c92d"
+    }
+  },
+  "inputs": {
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\tb_core_recovery.sv": "3db0efda76aa5c6a5c9d1dd8204de665b3f45efabfaa6b9568d3384b4f0151ba",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\expected0.hex": "0ce1379a859d049d82426c042d3c9a815ad1734a8f5408a6d4a785bee0ab73c6",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\expected4.hex": "48e7e246ca2fa01debbeefd9310bfc204b46a78fa2d84214ff44abc9c0bf3689",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\source0.hex": "dc04de9b1e4dc8002415f1b19b9c47fd67249a1ffcc85d238ce42adf6963880c",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\source1.hex": "a9e99868066b15f816b048a23acdcc72adb431f07370f25c4e2de65f08049314",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\source2.hex": "529df4c34adccc344c47ac4035ee484a50c3406f5fdfc32a5a63f61a3c7faacd",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\source3.hex": "c800026b7c977e47925cde0a174aa563851242a6884ddaab9a9c5d6251600162",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\recovery\\source4.hex": "60648f6581563a06bb2d9e2c8e28562b0127ac5c34045aa60b1e6cf511a4c890",
+    "D:\\FPGA\\output\\c_black_hold_display_20261015\\tb_core_recovery\\run.do": "229929b74e5fe430022dcd3932e8c019b1ab284b3f47b2cddde880c86a04d9b4"
+  },
+  "original_test_sources": {
+    "tb_core_recovery": "3afc6353b996908f76dc331fbb1c83f2ad9752431684811f274c63339fe0d9bc"
+  },
+  "held_display_pixel_check": true,
+  "hardware_accepted": false
+}

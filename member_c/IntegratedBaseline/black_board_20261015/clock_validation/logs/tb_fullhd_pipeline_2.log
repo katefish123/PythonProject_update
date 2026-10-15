@@ -1,0 +1,95 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {D:\FPGA\output\c_filtered_black_clock_20261015\diagnostics\ddr_camera_hires_prefetch_20261012\results\tb_fullhd_pipeline_2.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_fullhd_pipeline_2 work_fullhd_pipeline_2 
+# Copying D:/softwares/modelsim/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 09:48:56 on Oct 15,2026
+# vlog -sv -work work_fullhd_pipeline_2 D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_filtered_black_clock_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/video/ddr_snapshot_capture.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/video/result_display.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/video/snapshot_capture.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/ddr_capture_writer.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/ddr_command_bridge.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/ddr_pixel_cache.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_filtered_black_clock_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_word_engine.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/hdmi/hdmi_config.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/hdmi/iic_dri.v D:/FPGA/output/c_filtered_black_clock_20261015/diagnostics/ddr_camera_reconnect_20261011/results/ms7200_ctl.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/hdmi/ms7210_ctl.v D:/FPGA/output/c_filtered_black_clock_20261015/diagnostics/ddr_camera_hires_20261011/results/frame_processor.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/top/frame_session.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/top/video_correct_ddr_core.v D:/FPGA/output/c_filtered_black_clock_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_filtered_black_clock_20261015/vendor/c_current/01_design_code/hdmi_vs_recover.v D:/FPGA/output/c_filtered_black_clock_20261015/fullhd_tests/tb_fullhd_pipeline.sv D:/FPGA/output/c_filtered_black_clock_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/algo/capture_geometry.v D:/FPGA/output/c_filtered_black_clock_20261015/rtl/algo/geometry_frame_join.v 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module ddr_result_display
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module result_display
+# -- Compiling module snapshot_capture
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_capture_writer_banked
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module hdmi_config
+# -- Compiling module iic_dri
+# -- Compiling module ms7200_ctl
+# -- Compiling module ms7210_ctl
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module frame_session_overlap
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module video_correct_ddr_top
+# -- Compiling module video_timing_vtc
+# -- Compiling module hdmi_vs_recover
+# -- Compiling module tb_fullhd_pipeline
+# -- Compiling module c_corner_rectifier
+# -- Compiling module capture_geometry
+# -- Compiling module geometry_frame_join
+# 
+# Top level modules:
+# 	result_display
+# 	snapshot_capture
+# 	video_correct_ddr_top
+# 	tb_fullhd_pipeline
+# End time: 09:48:56 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc=rnp+/tb_fullhd_pipeline" -wlf D:/FPGA/output/c_filtered_black_clock_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/tb_fullhd_pipeline_2.wlf work_fullhd_pipeline_2.tb_fullhd_pipeline -gLATE_CAPTURE=95 -gPREFETCH=1 -gOVERLAP=1 
+# Start time: 09:48:56 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_fullhd_pipeline(fast)
+# FULLHD_PIPELINE_CONFIG overlap=1 prefetch=1 late_percent=95 inline=0
+# FULLHD_FRAME_BEGIN mode=1 frame=1 source_bank=0 kind=0 time_ns=33333811 source_age_ns=16667087
+# FULLHD_PHASE_PROFILE mode=1 frame=1 scan=4152627 solve=888 read=8591111 interp=2314240 write=584461 other=578584 processing_ns=600827177
+# FULLHD_FRAME_PUBLISH mode=1 frame=1 time_ns=634161358 image_age_ns=617494634
+# FULLHD_FRAME_BEGIN mode=1 frame=2 source_bank=1 kind=1 time_ns=649999659 source_age_ns=33333535
+# FULLHD_PHASE_PROFILE mode=1 frame=2 scan=5379853 solve=888 read=11372811 interp=2314240 write=936222 other=578584 processing_ns=762338302
+# FULLHD_FRAME_PUBLISH mode=1 frame=2 time_ns=1412338331 image_age_ns=795672207
+# FULLHD_FRAME_BEGIN mode=1 frame=3 source_bank=0 kind=2 time_ns=1416665592 source_age_ns=33333568
+# FULLHD_PHASE_PROFILE mode=1 frame=3 scan=5379882 solve=888 read=11336474 interp=2314240 write=945507 other=578584 processing_ns=761337423
+# FULLHD_FRAME_PUBLISH mode=1 frame=3 time_ns=2178003386 image_age_ns=794671362
+# FULLHD_PIPELINE_PASS mode=1 frames=3 corrected_pixels=1735680 display_pixels=1735680 average_start_interval_cycles=18674493 max_ui_wait=3556 overlap_beats=777600 native_reads=2036228
+# ** Note: $finish    : D:/FPGA/output/c_filtered_black_clock_20261015/fullhd_tests/tb_fullhd_pipeline.sv(213)
+#    Time: 2198630023590 ps  Iteration: 2  Instance: /tb_fullhd_pipeline
+# Break at D:/FPGA/output/c_filtered_black_clock_20261015/fullhd_tests/tb_fullhd_pipeline.sv line 213
+# Stopped at D:/FPGA/output/c_filtered_black_clock_20261015/fullhd_tests/tb_fullhd_pipeline.sv line 213
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 09:56:10 on Oct 15,2026, Elapsed time: 0:07:14
+# Errors: 0, Warnings: 0

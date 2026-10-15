@@ -1,0 +1,21 @@
+{
+  "generated_utc": "2026-10-15T02:29:38.413858+00:00",
+  "status": "pass",
+  "exit_code": 0,
+  "tests": 17,
+  "independent_expanded_polynomial_samples": 600,
+  "fixed_comparison_samples": 5000,
+  "fixed_maximum_source_pixel_error_on_declared_samples": 0.00753098925907,
+  "source_sha256": {
+    "lens_golden.py": "cf034463592e1067a0dab2293d41865b9cdaa31d8edf40158dd3bacff4ab8904",
+    "test_lens_golden.py": "d75620bf13a724fb12b63ac113470d2aabfa4e6acb2987674adb32849c3422d3",
+    "lens_fixed.py": "1de61f65ee6bcf9520d1a48c317ebf1c674dd9a685a78ec9df8a163772b12e75",
+    "test_lens_fixed.py": "2c703fcc911c98e0005694887041e81470851543c052120b9d01b170585ea9cc"
+  },
+  "scope": "synthetic Python float64 and signed Q34.30 integer model only",
+  "fixed_integer_model": "implemented_and_sample_tested",
+  "exhaustive_error_bound_proved": false,
+  "rtl_lens": "not_implemented",
+  "real_camera_calibration": "not_available",
+  "hardware_acceptance": false
+}

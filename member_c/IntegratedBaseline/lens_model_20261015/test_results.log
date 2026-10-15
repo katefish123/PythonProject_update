@@ -1,0 +1,23 @@
+test_coordinate_and_h_rejection (test_lens_golden.LensTests.test_coordinate_and_h_rejection) ... ok
+test_frame_snapshot_immutable (test_lens_golden.LensTests.test_frame_snapshot_immutable) ... ok
+test_h_composition_order (test_lens_golden.LensTests.test_h_composition_order) ... ok
+test_identity_and_source_boundary (test_lens_golden.LensTests.test_identity_and_source_boundary) ... ok
+test_independently_expanded_polynomial (test_lens_golden.LensTests.test_independently_expanded_polynomial) ... ok
+test_load_synthetic_profile_and_size_match (test_lens_golden.LensTests.test_load_synthetic_profile_and_size_match) ... ok
+test_profile_rejection (test_lens_golden.LensTests.test_profile_rejection) ... ok
+test_radial_k1_analytic_sign (test_lens_golden.LensTests.test_radial_k1_analytic_sign) ... ok
+test_radial_k2_analytic (test_lens_golden.LensTests.test_radial_k2_analytic) ... ok
+test_tangent_p1_axes_and_sign (test_lens_golden.LensTests.test_tangent_p1_axes_and_sign) ... ok
+test_tangent_p2_axes_and_sign (test_lens_golden.LensTests.test_tangent_p2_axes_and_sign) ... ok
+test_h_before_lens_and_signed_outside (test_lens_fixed.FixedLensTests.test_h_before_lens_and_signed_outside) ... ok
+test_numeric_rejection_is_explicit (test_lens_fixed.FixedLensTests.test_numeric_rejection_is_explicit) ... ok
+test_quantization_retains_signed_bounds (test_lens_fixed.FixedLensTests.test_quantization_retains_signed_bounds) ... ok
+test_signed_ties_to_even (test_lens_fixed.FixedLensTests.test_signed_ties_to_even) ... ok
+test_synthetic_operating_set_error (test_lens_fixed.FixedLensTests.test_synthetic_operating_set_error) ... ok
+test_zero_distortion_exact_identity_edges (test_lens_fixed.FixedLensTests.test_zero_distortion_exact_identity_edges) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.100s
+
+OK
+FIXED_SYNTHETIC_ERROR samples=5000 maximum_source_pixel_error=0.00753098925907

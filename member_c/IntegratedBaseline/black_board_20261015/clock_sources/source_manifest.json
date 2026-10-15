@@ -1,0 +1,34 @@
+{
+  "evidence": "generated_inputs_only_not_build_acceptance",
+  "provenance": {
+    "a_commit": "256b5ea2b8bf4a559f19adfca7465161654b8226",
+    "b_commit": "4106f3babb65096927d365bbab55f070b90325e2",
+    "upstream_files_verified": 47,
+    "original_b_rtl_verified": [
+      "b_rectifier.v",
+      "bilinear_interp.v",
+      "homography_solver.v",
+      "marker_detector.v",
+      "perspective_coord.v",
+      "perspective_core.v",
+      "scaled_div_pipe.v",
+      "signed_div_seq.v",
+      "unsigned_div_seq.v"
+    ],
+    "distinct_geometry_generations": 3,
+    "hardware_accepted": false
+  },
+  "files": {
+    "rtl/video/ddr_snapshot_capture.v": "40636e292cf30b62877f358e3dee417724cba8a1cb4b26086bd091e407f3c7c3",
+    "rtl/top/video_correct_ddr_core.v": "6f3983281f9e2a599b6fa912255baa3722be014a9811f4b920b514327ff09471",
+    "rtl/algo/c_corner_rectifier.v": "eaffa95c6b1f277b4d2d6d36190e1dbaf5972d40932eb8865764941522714443",
+    "rtl/algo/capture_geometry.v": "15aadbdc4f63b695caf4030a6533a3516bce945c8952af6a51d51736f40482a9",
+    "rtl/algo/geometry_frame_join.v": "c70c322ede8b919a8de87f32d6cdcd5b829dec97252aeca0a78d716e41cde0fd",
+    "diagnostics/ddr_camera_hires_20261011/results/frame_processor.v": "bebcad05db34532c415412f1b4070fa652b8b2604ac7ded903927e2d8a6fb625",
+    "diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v": "fbd4d81e408c16386ca72ebf05452a2217de1865ccdf0f3da29ce95e5edbbb2b",
+    "diagnostics/ddr_camera_hires_prefetch_20261012/results/video_correct_ddr_top.v": "5441af27ee5ff501d4efc79e906a00421d77ab55edd18f24feeb6b3cebcbb77b",
+    "fullhd_tests/tb_fullhd_pipeline.sv": "c90bc67a8e32a68b2154b48bf99fed08b21c2fd5a6f59ad064bb0ff7e318bb0d",
+    "fullhd_tests/tb_capture_geometry.sv": "f8c459e1a436d1bc4de0ebd5e023935e44b1801c37568c56054f5ca6efc2a571",
+    "fullhd_tests/tb_geometry_join.sv": "8444acb96ad1ed7f169eaf3b2d8db09c83e287ced290d3b3708ddf330ffc1229"
+  }
+}

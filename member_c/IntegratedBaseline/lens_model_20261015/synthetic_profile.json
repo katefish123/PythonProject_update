@@ -1,0 +1,14 @@
+{
+  "width": 640,
+  "height": 480,
+  "fx": 400.0,
+  "fy": 400.0,
+  "cx": 319.5,
+  "cy": 239.5,
+  "k1": -0.12,
+  "k2": 0.025,
+  "p1": 0.002,
+  "p2": -0.001,
+  "profile_id": "synthetic-640x480-example-not-calibration",
+  "provenance": "synthetic"
+}
