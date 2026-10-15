@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 16:26:21 on Oct 15,2026
+vlog -sv D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\telemetry/frame_telemetry_overlay.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\telemetry/tb_frame_telemetry.sv 
+-- Compiling module frame_telemetry_overlay
+-- Compiling module tb_frame_telemetry
+
+Top level modules:
+	tb_frame_telemetry
+End time: 16:26:21 on Oct 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

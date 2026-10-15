@@ -1,0 +1,7 @@
+# Cache-fill scheduling experiment
+
+The first returned beat writes directly to the synchronous tile RAM on its response edge. The remaining seven beats use the existing RAM port. A registered PREP stage can issue its request immediately; the last local beat can issue the next source-row command. This preserves complete-tile publication, immutable generation/address tags, watchdogs and exact RGB. A new FIRST_FILL_BEAT_REQUIRED test fails on the prior cache and passes on the new8-way and64-way versions.
+
+A reduced pressure test exposed a display deadline when the changed transaction phases aligned with a long source read. The narrow one-beat display compatibility mode now releases old parity after its last sampled pixel, schedules future rows in blanking, waits for ACK metadata installation and discards duplicate wanted rows. The native64-pixel block mode keeps its original request schedule because earlier whole-row requests increased DDR contention in measurements. The pixel pipeline has finished reading the old row before UI sees the release through three synchronizer stages.
+
+This is an optional experiment, not the selected candidate. Native54MHz source/correction/HDMI remains around30 distinct outputs/s despite modest processing reductions. The selected57.115MHz candidate uses the simpler verified pre-experiment cache/display scheduling instead. No hardware acceptance is implied by unit or functional-system passes.

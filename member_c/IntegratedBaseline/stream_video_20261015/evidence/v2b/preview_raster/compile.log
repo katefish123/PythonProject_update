@@ -1,0 +1,16 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 15:47:33 on Oct 15,2026
+vlog -sv D:/FPGA/output/c_black_burst_merge_v3_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/video/result_display.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/common/reset_sync.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\preview/rx_preview_stream.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\preview/tb_preview_raster.sv D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/c_current/01_design_code/video_timing_vtc.v 
+-- Compiling module ddr_result_display
+-- Compiling module result_display
+-- Compiling module reset_sync
+-- Compiling module rx_preview_stream
+-- Compiling module tb_preview_raster
+-- Compiling module video_timing_vtc
+
+Top level modules:
+	result_display
+	reset_sync
+	tb_preview_raster
+End time: 15:47:33 on Oct 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

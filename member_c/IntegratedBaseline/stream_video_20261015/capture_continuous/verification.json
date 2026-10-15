@@ -1,0 +1,524 @@
+{
+  "candidate_ready_for_integration": true,
+  "full_corrected_hdmi_60fps_verified": false,
+  "board_accepted": false,
+  "native_source_frames": 60,
+  "native_source_pixels_checked": 124416000,
+  "native_capture_burst8_commands_acked": 1944000,
+  "module_sha256": {
+    "continuous_capture_rx.v": "cfba030768c40bc76aa1ad21a1ab59fc41b91e180fc45d3a73343ff52f66c274",
+    "continuous_capture_writer.v": "e8cdbd7a787fc3863795e2f35897f32cf97fa18b62da49160745d0ab1094e051",
+    "continuous_capture_geometry.v": "d65e1ade9552740ee326531a0bcd9e74269ec9a55e15aa8265729512f65d809d",
+    "continuous_capture_manager.v": "f20fe031979489d8d5ae13b587e74411508596e5e17006b7a31d58995641fb90",
+    "continuous_source_path.v": "4d2232a7110b1419d24722439e2f83dbe101c587feba70ae82c4b5d0fd135687"
+  },
+  "runs": {
+    "manager_telemetry": {
+      "simulation_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_manager_telemetry\\simulation.log",
+      "log_sha256": "0f6b5dad5b976825b2a2d899fc523a9b0ad9ec6123e6328d60b62365010549f5",
+      "compile_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_manager_telemetry\\compile.log",
+      "compile_sha256": "e43384eae5922b314a85281bdd5ddf24f903257081768226adc16df1bc547783"
+    },
+    "reduced_overflow_restart": {
+      "simulation_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_reduced_overflow_restart\\simulation.log",
+      "log_sha256": "d55b348cf8c67cafc616d08f8e8584c8cb35841b9fc87982fc3f97a7eaff9f71",
+      "compile_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_reduced_overflow_restart\\compile.log",
+      "compile_sha256": "e8ab5e249c48046b1106808701ca28395d6e8810d2cbc851092332608271deab"
+    },
+    "native60_telemetry": {
+      "simulation_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_native60_telemetry\\simulation.log",
+      "log_sha256": "6adeda5c9aee21143920fa962fcefe82967b8b262a408ebfeacc01604bb72386",
+      "compile_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_native60_telemetry\\compile.log",
+      "compile_sha256": "28ba231a289fa10170a4af617646cf2d20529247cb625dc10875f7e2971c80e4",
+      "descriptors": [
+        {
+          "generation": 1,
+          "bank": 0,
+          "source_frame": 1,
+          "capture_ms": 0,
+          "timestamp_ps": 16673431000
+        },
+        {
+          "generation": 2,
+          "bank": 1,
+          "source_frame": 2,
+          "capture_ms": 16,
+          "timestamp_ps": 33340076000
+        },
+        {
+          "generation": 3,
+          "bank": 0,
+          "source_frame": 3,
+          "capture_ms": 33,
+          "timestamp_ps": 50006739000
+        },
+        {
+          "generation": 4,
+          "bank": 1,
+          "source_frame": 4,
+          "capture_ms": 50,
+          "timestamp_ps": 66673383000
+        },
+        {
+          "generation": 5,
+          "bank": 0,
+          "source_frame": 5,
+          "capture_ms": 66,
+          "timestamp_ps": 83340028000
+        },
+        {
+          "generation": 6,
+          "bank": 1,
+          "source_frame": 6,
+          "capture_ms": 83,
+          "timestamp_ps": 100006690000
+        },
+        {
+          "generation": 7,
+          "bank": 0,
+          "source_frame": 7,
+          "capture_ms": 100,
+          "timestamp_ps": 116673335000
+        },
+        {
+          "generation": 8,
+          "bank": 1,
+          "source_frame": 8,
+          "capture_ms": 116,
+          "timestamp_ps": 133339979000
+        },
+        {
+          "generation": 9,
+          "bank": 0,
+          "source_frame": 9,
+          "capture_ms": 133,
+          "timestamp_ps": 150006624000
+        },
+        {
+          "generation": 10,
+          "bank": 1,
+          "source_frame": 10,
+          "capture_ms": 150,
+          "timestamp_ps": 166673287000
+        },
+        {
+          "generation": 11,
+          "bank": 0,
+          "source_frame": 11,
+          "capture_ms": 166,
+          "timestamp_ps": 183339931000
+        },
+        {
+          "generation": 12,
+          "bank": 1,
+          "source_frame": 12,
+          "capture_ms": 183,
+          "timestamp_ps": 200006576000
+        },
+        {
+          "generation": 13,
+          "bank": 0,
+          "source_frame": 13,
+          "capture_ms": 200,
+          "timestamp_ps": 216673239000
+        },
+        {
+          "generation": 14,
+          "bank": 1,
+          "source_frame": 14,
+          "capture_ms": 216,
+          "timestamp_ps": 233339883000
+        },
+        {
+          "generation": 15,
+          "bank": 0,
+          "source_frame": 15,
+          "capture_ms": 233,
+          "timestamp_ps": 250006527000
+        },
+        {
+          "generation": 16,
+          "bank": 1,
+          "source_frame": 16,
+          "capture_ms": 250,
+          "timestamp_ps": 266673190000
+        },
+        {
+          "generation": 17,
+          "bank": 0,
+          "source_frame": 17,
+          "capture_ms": 266,
+          "timestamp_ps": 283339835000
+        },
+        {
+          "generation": 18,
+          "bank": 1,
+          "source_frame": 18,
+          "capture_ms": 283,
+          "timestamp_ps": 300006479000
+        },
+        {
+          "generation": 19,
+          "bank": 0,
+          "source_frame": 19,
+          "capture_ms": 300,
+          "timestamp_ps": 316673124000
+        },
+        {
+          "generation": 20,
+          "bank": 1,
+          "source_frame": 20,
+          "capture_ms": 316,
+          "timestamp_ps": 333339787000
+        },
+        {
+          "generation": 21,
+          "bank": 0,
+          "source_frame": 21,
+          "capture_ms": 333,
+          "timestamp_ps": 350006431000
+        },
+        {
+          "generation": 22,
+          "bank": 1,
+          "source_frame": 22,
+          "capture_ms": 350,
+          "timestamp_ps": 366673075000
+        },
+        {
+          "generation": 23,
+          "bank": 0,
+          "source_frame": 23,
+          "capture_ms": 366,
+          "timestamp_ps": 383339738000
+        },
+        {
+          "generation": 24,
+          "bank": 1,
+          "source_frame": 24,
+          "capture_ms": 383,
+          "timestamp_ps": 400006383000
+        },
+        {
+          "generation": 25,
+          "bank": 0,
+          "source_frame": 25,
+          "capture_ms": 400,
+          "timestamp_ps": 416673027000
+        },
+        {
+          "generation": 26,
+          "bank": 1,
+          "source_frame": 26,
+          "capture_ms": 416,
+          "timestamp_ps": 433339690000
+        },
+        {
+          "generation": 27,
+          "bank": 0,
+          "source_frame": 27,
+          "capture_ms": 433,
+          "timestamp_ps": 450006335000
+        },
+        {
+          "generation": 28,
+          "bank": 1,
+          "source_frame": 28,
+          "capture_ms": 450,
+          "timestamp_ps": 466672979000
+        },
+        {
+          "generation": 29,
+          "bank": 0,
+          "source_frame": 29,
+          "capture_ms": 466,
+          "timestamp_ps": 483339624000
+        },
+        {
+          "generation": 30,
+          "bank": 1,
+          "source_frame": 30,
+          "capture_ms": 483,
+          "timestamp_ps": 500006286000
+        },
+        {
+          "generation": 31,
+          "bank": 0,
+          "source_frame": 31,
+          "capture_ms": 500,
+          "timestamp_ps": 516672931000
+        },
+        {
+          "generation": 32,
+          "bank": 1,
+          "source_frame": 32,
+          "capture_ms": 516,
+          "timestamp_ps": 533339575000
+        },
+        {
+          "generation": 33,
+          "bank": 0,
+          "source_frame": 33,
+          "capture_ms": 533,
+          "timestamp_ps": 550006238000
+        },
+        {
+          "generation": 34,
+          "bank": 1,
+          "source_frame": 34,
+          "capture_ms": 550,
+          "timestamp_ps": 566672883000
+        },
+        {
+          "generation": 35,
+          "bank": 0,
+          "source_frame": 35,
+          "capture_ms": 566,
+          "timestamp_ps": 583339527000
+        },
+        {
+          "generation": 36,
+          "bank": 1,
+          "source_frame": 36,
+          "capture_ms": 583,
+          "timestamp_ps": 600006190000
+        },
+        {
+          "generation": 37,
+          "bank": 0,
+          "source_frame": 37,
+          "capture_ms": 600,
+          "timestamp_ps": 616672835000
+        },
+        {
+          "generation": 38,
+          "bank": 1,
+          "source_frame": 38,
+          "capture_ms": 616,
+          "timestamp_ps": 633339479000
+        },
+        {
+          "generation": 39,
+          "bank": 0,
+          "source_frame": 39,
+          "capture_ms": 633,
+          "timestamp_ps": 650006123000
+        },
+        {
+          "generation": 40,
+          "bank": 1,
+          "source_frame": 40,
+          "capture_ms": 650,
+          "timestamp_ps": 666672786000
+        },
+        {
+          "generation": 41,
+          "bank": 0,
+          "source_frame": 41,
+          "capture_ms": 666,
+          "timestamp_ps": 683339431000
+        },
+        {
+          "generation": 42,
+          "bank": 1,
+          "source_frame": 42,
+          "capture_ms": 683,
+          "timestamp_ps": 700006075000
+        },
+        {
+          "generation": 43,
+          "bank": 0,
+          "source_frame": 43,
+          "capture_ms": 700,
+          "timestamp_ps": 716672738000
+        },
+        {
+          "generation": 44,
+          "bank": 1,
+          "source_frame": 44,
+          "capture_ms": 716,
+          "timestamp_ps": 733339383000
+        },
+        {
+          "generation": 45,
+          "bank": 0,
+          "source_frame": 45,
+          "capture_ms": 733,
+          "timestamp_ps": 750006027000
+        },
+        {
+          "generation": 46,
+          "bank": 1,
+          "source_frame": 46,
+          "capture_ms": 750,
+          "timestamp_ps": 766672690000
+        },
+        {
+          "generation": 47,
+          "bank": 0,
+          "source_frame": 47,
+          "capture_ms": 766,
+          "timestamp_ps": 783339334000
+        },
+        {
+          "generation": 48,
+          "bank": 1,
+          "source_frame": 48,
+          "capture_ms": 783,
+          "timestamp_ps": 800005979000
+        },
+        {
+          "generation": 49,
+          "bank": 0,
+          "source_frame": 49,
+          "capture_ms": 800,
+          "timestamp_ps": 816672623000
+        },
+        {
+          "generation": 50,
+          "bank": 1,
+          "source_frame": 50,
+          "capture_ms": 816,
+          "timestamp_ps": 833339286000
+        },
+        {
+          "generation": 51,
+          "bank": 0,
+          "source_frame": 51,
+          "capture_ms": 833,
+          "timestamp_ps": 850005931000
+        },
+        {
+          "generation": 52,
+          "bank": 1,
+          "source_frame": 52,
+          "capture_ms": 850,
+          "timestamp_ps": 866672575000
+        },
+        {
+          "generation": 53,
+          "bank": 0,
+          "source_frame": 53,
+          "capture_ms": 866,
+          "timestamp_ps": 883339238000
+        },
+        {
+          "generation": 54,
+          "bank": 1,
+          "source_frame": 54,
+          "capture_ms": 883,
+          "timestamp_ps": 900005882000
+        },
+        {
+          "generation": 55,
+          "bank": 0,
+          "source_frame": 55,
+          "capture_ms": 900,
+          "timestamp_ps": 916672527000
+        },
+        {
+          "generation": 56,
+          "bank": 1,
+          "source_frame": 56,
+          "capture_ms": 916,
+          "timestamp_ps": 933339190000
+        },
+        {
+          "generation": 57,
+          "bank": 0,
+          "source_frame": 57,
+          "capture_ms": 933,
+          "timestamp_ps": 950005834000
+        },
+        {
+          "generation": 58,
+          "bank": 1,
+          "source_frame": 58,
+          "capture_ms": 950,
+          "timestamp_ps": 966672479000
+        },
+        {
+          "generation": 59,
+          "bank": 0,
+          "source_frame": 59,
+          "capture_ms": 966,
+          "timestamp_ps": 983339123000
+        },
+        {
+          "generation": 60,
+          "bank": 1,
+          "source_frame": 60,
+          "capture_ms": 983,
+          "timestamp_ps": 1000005823000
+        }
+      ],
+      "native_intervals_ns": {
+        "minimum": 16666644.0,
+        "maximum": 16666700.0,
+        "average": 16666650.711864406
+      }
+    },
+    "frozen_native6": {
+      "simulation_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_frozen_native6\\simulation.log",
+      "log_sha256": "912f5bc0eb1c1dd16400964f6c1806d9e1aadf867cdcea765ed2857b84c366ef",
+      "compile_log": "D:\\FPGA\\output\\c_continuous_capture_20261015_frozen_native6\\compile.log",
+      "compile_sha256": "3a4a5f2a8a2f35801e7436f13467d85ec18adb29682db0abad459e5e2f28cec1",
+      "compiled_source_snapshot": "D:\\FPGA\\output\\c_continuous_capture_20261015_frozen_native6\\source_snapshot",
+      "source_hashes": "D:\\FPGA\\output\\c_continuous_capture_20261015_frozen_native6\\source_hashes.txt",
+      "descriptors": [
+        {
+          "generation": 1,
+          "bank": 0,
+          "source_frame": 1,
+          "capture_ms": 0,
+          "timestamp_ps": 16673431000
+        },
+        {
+          "generation": 2,
+          "bank": 1,
+          "source_frame": 2,
+          "capture_ms": 16,
+          "timestamp_ps": 33340076000
+        },
+        {
+          "generation": 3,
+          "bank": 0,
+          "source_frame": 3,
+          "capture_ms": 33,
+          "timestamp_ps": 50006739000
+        },
+        {
+          "generation": 4,
+          "bank": 1,
+          "source_frame": 4,
+          "capture_ms": 50,
+          "timestamp_ps": 66673383000
+        },
+        {
+          "generation": 5,
+          "bank": 0,
+          "source_frame": 5,
+          "capture_ms": 66,
+          "timestamp_ps": 83340028000
+        },
+        {
+          "generation": 6,
+          "bank": 1,
+          "source_frame": 6,
+          "capture_ms": 83,
+          "timestamp_ps": 100006709000
+        }
+      ],
+      "native_intervals_ns": {
+        "minimum": 16666644.0,
+        "maximum": 16666681.0,
+        "average": 16666655.6
+      }
+    }
+  },
+  "caveats": [
+    "Native source bench uses mock processor release after1ms and a burst ACK memory model.",
+    "Root must verify full correction+HDMI under DDR contention and PDS timing.",
+    "Native60 run used same five frozen RTL sources; reduced-only bench cases were extended while it ran. Frozen_native6 rerun snapshots the exact final bench and RTL before compiling."
+  ]
+}

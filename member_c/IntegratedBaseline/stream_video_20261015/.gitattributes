@@ -2,3 +2,6 @@
 **/evidence/** -text -whitespace
 # Preserve the native generated vendor wrapper byte layout for clock binding.
 clock/video_pll_clock_test.v -text -whitespace
+
+clock57/video_pll_27m_148m5.v -text -whitespace
+result_burst/ddr_result_writer_burst64.v -text -whitespace

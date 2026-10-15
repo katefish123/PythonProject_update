@@ -1,0 +1,12 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:38:38 on Oct 15,2026
+vlog -sv "+define+DEFAULT_LINES" D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\cache_fill/ddr_quad_tile_cache.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\cache_fill/ddr_result_display_block64.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\cache_fill/tb_cache_fill.sv 
+-- Compiling module ddr_quad_tile_cache
+-- Compiling module ddr_result_display_block64
+-- Compiling module tb_cache_fill
+
+Top level modules:
+	ddr_result_display_block64
+	tb_cache_fill
+End time: 22:38:38 on Oct 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

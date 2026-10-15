@@ -1,0 +1,274 @@
+`timescale 1ns/1ps
+module tb_continuous_stream_system #(parameter BAD_FRAME=2, FULLHD=0,STRESS=0,OVERLAP=1,FRAMES=3,PREFETCH=0,LATE_CAPTURE=95,INLINE=1);
+ localparam SW=FULLHD?1920:128,SH=FULLHD?1080:48,OW=FULLHD?768:32,OH=FULLHD?1080:48,SRC_PIXELS=SW*SH,PIXELS=OW*OH;
+ localparam HS=FULLHD?44:4,HB=FULLHD?148:8,HF=FULLHD?88:256,VS=FULLHD?5:2,VB=FULLHD?36:4,VF=FULLHD?4:4;
+ localparam HX0=HS+HB,VY0=VS+VB,HT=HS+HB+SW+HF,VT=VS+VB+SH+VF;
+ localparam CAM_HT=(!FULLHD&&STRESS)?HS+HB+SW+8:HT;
+ localparam DX0=HX0+(SW-OW)/2,DY0=VY0+(SH-OH)/2;
+ localparam string FIXTURES=FULLHD?"D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/system_test/fixtures/fullhd":"D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/system_test/fixtures/reduced";
+ localparam [27:0] SRC1=28'h0800000,RES0=28'h0200000,RES1=28'h0400000,BIST=28'h0600000;
+ reg proc_clk=0,rx_clk=0,ui_clk=0,pix_clk=0;
+ always #8.754208754 proc_clk=~proc_clk;
+ always #3.3670035 rx_clk=~rx_clk;
+ always #4 ui_clk=~ui_clk;
+ always #3.3670035 pix_clk=~pix_clk;
+ reg rst_n=0,enabled=1,rx_vs=0,rx_de=0;reg [23:0] rx_rgb=0;
+ wire hs,vs,de,image_valid,working,frame_error,input_wait,underrun,bist_pass,bist_fail,engine_fault;
+ wire [23:0] rgb;wire [31:0] good,rejected;
+ wire cmd_v,cmd_r,cmd_w,rsp_v,rsp_w;wire [27:0] cmd_a;wire [255:0] cmd_data,rsp_data;wire [31:0] cmd_mask;
+ reg [23:0] source0[0:SRC_PIXELS-1],source1[0:SRC_PIXELS-1],source2[0:SRC_PIXELS-1],expected0[0:PIXELS-1],expected1[0:PIXELS-1],expected2[0:PIXELS-1];
+ reg [255:0] source_ram0[0:SRC_PIXELS/8-1],source_ram1[0:SRC_PIXELS/8-1];
+ reg [255:0] result_ram0[0:PIXELS/8-1],result_ram1[0:PIXELS/8-1],bist_ram[0:7];
+ reg [95:0] expected_geometry[0:2];
+ reg [1:0] source_kind[0:1],result_kind[0:1];time source_time[0:1];
+ reg[31:0]source_id[0:1],result_id[0:1];time result_time[0:1];
+ wire[31:0]capture_frame_id,processing_frame_id,published_frame_id,displayed_frame_id,display_age_ms,admitted_frames,dropped_frames;
+ wire[511:0]rejected_reason_counts;
+ reg[31:0]capture_generation_seen=0,active_source_id=0,last_published_id=0;
+ integer bad_captures=0,rejection_seen=0,camera_frames=0,display_scans=0;
+ reg[31:0]bad_generation=0;time interval_total_ns=0,min_interval_ns=64'hffffffffffffffff,max_interval_ns=0;
+ time min_age_ns=64'hffffffffffffffff,max_age_ns=0;
+ integer camera_x=0,camera_y=0,capture_seq=0,camera_kind=0;
+ reg capture_active_d=0;
+ integer ui_tick=0,commands=0,capture_beats=0,result_beats=0,overlap_beats=0,physical_reads=0;
+ integer processing_frame=0,current_kind=0,produced=0,published=0,display_frames=0,display_pixels=0;
+ reg seen_pub=0,previous_vs=0,check_display=0;integer display_kind=0,row_pixels=0,checked_generation=0,last_checked_generation=0;
+ reg [11:0] hd1=0,hd2=0,vd1=0,vd2=0;
+ integer proc_tick=0,last_start=0,interval_sum=0,interval_count=0,avg_interval=0;time previous_publish=0;
+ integer scan_cycles=0,solve_cycles=0,read_cycles=0,interp_cycles=0,write_cycles=0,other_cycles=0;
+ integer bridge_wait=0,max_bridge_wait=0;time active_source_time=0,process_started=0;
+ reg test_passed=0;
+ wire[2047:0]burst_payload,source_block_payload,result_block_payload;wire source_block_cmd,result_block_cmd;wire[3:0]engine_reason;
+ video_correct_ddr_continuous_core #(.PROC_CYCLES_PER_MS(57115),.H_SYNC(HS),.H_BACK(HB),.H_ACTIVE(SW),.H_FRONT(HF),.V_SYNC(VS),.V_BACK(VB),.V_ACTIVE(SH),.V_FRONT(VF),.CAPTURE_BURST_BEATS(8),.IN_W(SW),.IN_H(SH),.SRC_W(SW),.SRC_H(SH),.OUT_W(OW),.OUT_H(OH),.SCALE(1),
+  .FIFO_ADDR_BITS(10),.BIST_BEATS(8),.OVERLAP_CAPTURE(OVERLAP),.LATE_CAPTURE_PERCENT(LATE_CAPTURE),.ADAPTIVE_DISPLAY_GUARD(PREFETCH),.INLINE_GEOMETRY(INLINE),.BLACK_RMIN(0),.BLACK_RMAX(64),.BLACK_GMIN(0),.BLACK_GMAX(64),.BLACK_BMIN(0),.BLACK_BMAX(64),.P0_XMIN(FULLHD?580:27),.P0_XMAX(FULLHD?681:42),.P0_YMIN(FULLHD?86:0),.P0_YMAX(FULLHD?187:11),.P1_XMIN(FULLHD?1410:85),.P1_XMAX(FULLHD?1511:101),.P1_YMIN(FULLHD?174:0),.P1_YMAX(FULLHD?275:14),.P2_XMIN(FULLHD?1480:95),.P2_XMAX(FULLHD?1581:111),.P2_YMIN(FULLHD?920:34),.P2_YMAX(FULLHD?1021:47),.P3_XMIN(FULLHD?226:17),.P3_XMAX(FULLHD?327:33),.P3_YMIN(FULLHD?886:31),.P3_YMAX(FULLHD?987:47),.SOURCE_BASE1(SRC1),
+  .RESULT_BASE0(RES0),.RESULT_BASE1(RES1),.BIST_BASE(BIST),
+  .MARKER_MIN_PIXELS(FULLHD?64:16),.MARKER_MAX_PIXELS(16384),.MARKER_MAX_SPAN(FULLHD?256:16)) dut(.scan_x(),.scan_y(),.scan_de(),.scan_start(),.scan_reset_n(),.diagnostic_reason(),.diagnostic_phase(),.preview_valid(1'b0),.preview_rgb(24'd0),.overlay_on(1'b0),.overlay_rgb(24'd0),
+  .proc_clk(proc_clk),.proc_rst_n(rst_n),.rx_clk(rx_clk),.rx_rst_n(rst_n),
+  .pix_clk(pix_clk),.pix_rst_n(rst_n),.ui_clk(ui_clk),.ui_rst_n(rst_n),
+  .hdmi_ready(enabled),.ddr_ready(rst_n),.memory_fault(engine_fault),.rx_vs(rx_vs),.rx_de(rx_de),.rx_rgb(rx_rgb),
+  .nearest(1'b0),.force_pattern(1'b0),.hsync(hs),.vsync(vs),.de(de),.rgb(rgb),
+  .image_valid(image_valid),.working(working),.frame_error(frame_error),.input_wait(input_wait),.display_underrun(underrun),
+  .selftest_passed(bist_pass),.selftest_failed(bist_fail),.good_frames(good),.rejected_frames(rejected),
+  .capture_frame_id(capture_frame_id),.processing_frame_id(processing_frame_id),.published_frame_id(published_frame_id),.displayed_frame_id(displayed_frame_id),.display_age_ms(display_age_ms),.rejected_reason_counts(rejected_reason_counts),.admitted_frames(admitted_frames),.dropped_frames(dropped_frames),
+  .cmd_source_block(source_block_cmd),.cmd_result_block(result_block_cmd),.result_block_data(result_block_payload),.rsp_source_block(source_block_payload),.cmd_burst_data(burst_payload),.cmd_valid(cmd_v),.cmd_ready(cmd_r),.cmd_write(cmd_w),.cmd_addr(cmd_a),.cmd_wdata(cmd_data),.cmd_wstrb(cmd_mask),
+  .rsp_valid(rsp_v),.rsp_write(rsp_w),.rsp_rdata(rsp_data));
+ wire [27:0] awaddr,araddr;wire [3:0] awid,arid,awlen,arlen;
+ wire awap,arap,awvalid,arvalid;wire [255:0] wdata;wire [31:0] wmask;
+ reg rvalid=0,rlast=0;reg [255:0] rdata=0;
+ reg read_pending=0;reg [27:0] read_base=0;integer read_beat=0,read_total=0,read_delay=0;
+ reg write_pending=0;reg[27:0]write_base=0;integer write_index=0,write_total=0;
+ wire wready=rst_n&&(ui_tick%11!=0);
+ wire wlast=write_pending?(write_index==write_total-1):(awlen==0);
+ wire[27:0]physical_addr=write_pending?write_base+write_index*8:awaddr;
+ wire awready=rst_n&&(ui_tick%17>=2);
+ wire arready=rst_n&&!read_pending&&(ui_tick%7!=0);
+ ddr_word_engine_result_burst #(.CAPTURE_BURST_BEATS(8),.READ_AHEAD_ENABLE(1),.SOURCE_PREFETCH_ENABLE(PREFETCH),.SOURCE_WORDS(SRC_PIXELS),.SOURCE_BASE1(SRC1),.RESULT_WORDS(PIXELS),.RESULT_BASE0(RES0),.RESULT_BASE1(RES1)) engine(.cmd_source_block(source_block_cmd),.cmd_result_block(result_block_cmd),.result_block_data(result_block_payload),.rsp_source_block(source_block_payload),.capture_burst_data(burst_payload),.fault_reason(engine_reason),
+  .clk(ui_clk),.rst_n(rst_n),.init_done(rst_n),.cmd_valid(cmd_v),.cmd_ready(cmd_r),.cmd_write(cmd_w),.cmd_addr(cmd_a),
+  .cmd_wdata(cmd_data),.cmd_wstrb(cmd_mask),.rsp_valid(rsp_v),.rsp_write(rsp_w),.rsp_rdata(rsp_data),.fault(engine_fault),
+  .axi_awaddr(awaddr),.axi_awuser_ap(awap),.axi_awuser_id(awid),.axi_awlen(awlen),.axi_awvalid(awvalid),.axi_awready(awready),
+  .axi_wdata(wdata),.axi_wstrb(wmask),.axi_wready(wready),.axi_wusero_id(4'd0),.axi_wusero_last(wlast),
+  .axi_araddr(araddr),.axi_aruser_ap(arap),.axi_aruser_id(arid),.axi_arlen(arlen),.axi_arvalid(arvalid),.axi_arready(arready),
+  .axi_rdata(rdata),.axi_rid(4'd0),.axi_rlast(rlast),.axi_rvalid(rvalid));
+ function [23:0] source_pixel(input integer kind,input integer index);
+  source_pixel=(kind==3)?24'hcccccc:(kind==2)?source2[index]:(kind==1)?source1[index]:source0[index];
+ endfunction
+ function [23:0] expected_pixel(input integer kind,input integer index);
+  expected_pixel=(kind==2)?expected2[index]:(kind==1)?expected1[index]:expected0[index];
+ endfunction
+ function [255:0] memory_read(input [27:0] a);
+  begin
+   if(a<SRC_PIXELS)memory_read=source_ram0[a>>3];
+   else if(a>=SRC1&&a<SRC1+SRC_PIXELS)memory_read=source_ram1[(a-SRC1)>>3];
+   else if(a>=RES0&&a<RES0+PIXELS)memory_read=result_ram0[(a-RES0)>>3];
+   else if(a>=RES1&&a<RES1+PIXELS)memory_read=result_ram1[(a-RES1)>>3];
+   else if(a>=BIST&&a<BIST+64)memory_read=bist_ram[(a-BIST)>>3];
+   else begin memory_read=0;$fatal(1,"unmapped physical read %h",a);end
+  end
+ endfunction
+ // Free-running 1080p60 raster. RGB is only evaluated when the actual capture
+ // block is active; uncaptured frames still have the same VS/DE timing.
+ always @(negedge rx_clk)begin
+  if(!rst_n)begin camera_x=0;camera_y=0;rx_vs=0;rx_de=0;rx_rgb=0;capture_active_d=0;end
+  else begin
+   if(camera_x==0&&camera_y==0)camera_frames=camera_frames+1;
+   if(dut.continuous_sources.capture.active&&dut.continuous_sources.capture.generation!=capture_generation_seen)begin
+    capture_generation_seen=dut.continuous_sources.capture.generation;
+    camera_kind=(capture_generation_seen==BAD_FRAME)?3:capture_seq%3;capture_seq=capture_seq+1;
+    source_kind[dut.continuous_sources.capture.bank]=camera_kind;source_time[dut.continuous_sources.capture.bank]=$time;
+    source_id[dut.continuous_sources.capture.bank]=capture_generation_seen;
+    if(camera_kind==3)begin bad_captures=bad_captures+1;bad_generation=capture_generation_seen;end
+    $display("CONTINUOUS_CAPTURE_BEGIN gen=%0d bank=%0d kind=%0d physical_raster=%0d time_ns=%0d",capture_generation_seen,dut.continuous_sources.capture.bank,camera_kind,camera_frames,$time);
+   end
+   capture_active_d=dut.continuous_sources.capture.active;
+   rx_vs=(camera_y<VS);
+   rx_de=(camera_x>=HX0&&camera_x<HX0+SW&&camera_y>=VY0&&camera_y<VY0+SH);
+   if(rx_de&&dut.continuous_sources.capture.active)begin
+    rx_rgb=source_pixel(camera_kind,(camera_y-VY0)*SW+camera_x-HX0);
+   end else rx_rgb=0;
+   if(camera_x==CAM_HT-1)begin camera_x=0;if(camera_y==VT-1)camera_y=0;else camera_y=camera_y+1;end
+   else camera_x=camera_x+1;
+   if(dut.continuous_sources.capture.overflow||dut.continuous_sources.capture.fault)$fatal(1,"continuous capture overflow or ownership fault");
+  end
+ end
+ always @(posedge ui_clk)if(rst_n)begin
+  ui_tick<=ui_tick+1;
+  if(cmd_v&&cmd_r)commands=commands+1;
+  if(dut.stream_path.cmd_valid&&!dut.stream_path.cmd_ready)begin bridge_wait=bridge_wait+1;if(bridge_wait>max_bridge_wait)max_bridge_wait=bridge_wait;end
+  else bridge_wait=0;
+  if(engine_fault||bist_fail)$fatal(1,"native engine or BIST failed");
+  if(arvalid&&arready)begin
+   read_pending<=1;read_base<=araddr;read_total<=arlen+1;read_beat<=0;
+   read_delay<=((!FULLHD&&STRESS&&(araddr<SRC_PIXELS||(araddr>=SRC1&&araddr<SRC1+SRC_PIXELS)))?96:28)+((physical_reads%128==127)?100:0);physical_reads=physical_reads+1;
+  end
+  if(awvalid&&awready)begin
+   if(write_pending)$fatal(1,"overlapping physical AW");
+   if(awlen!=0&&awlen!=7)$fatal(1,"invalid AWLEN");
+   if(((awaddr>=RES0&&awaddr<RES0+PIXELS)||(awaddr>=RES1&&awaddr<RES1+PIXELS))&&(awlen!=7||awaddr[5:0]!=0))$fatal(1,"result command was not aligned64word burst");
+   write_pending<=1;write_base<=awaddr;write_index<=0;write_total<=awlen+1;
+  end
+  if(wready&&(write_pending||(awvalid&&awready)))begin: physical_write
+   integer rel,bank,kind;
+   if(physical_addr[2:0]!=0||wmask!==32'hffffffff)$fatal(1,"unaligned/masked physical write");
+   if(physical_addr<SRC_PIXELS||(physical_addr>=SRC1&&physical_addr<SRC1+SRC_PIXELS))begin
+    bank=(physical_addr>=SRC1);rel=physical_addr-(bank?SRC1:0);kind=source_kind[bank];
+    if(dut.p_busy)begin
+     if(bank==dut.source_bank)$fatal(1,"capture overwrote locked source bank");
+     overlap_beats=overlap_beats+1;
+    end
+    for(integer lane=0;lane<8;lane=lane+1)
+     if(wdata[lane*32+24+:8]!==0)$fatal(1,"capture word padding byte nonzero");
+    for(integer lane=0;lane<8;lane=lane+1)
+     if(wdata[lane*32+:24]!==source_pixel(kind,rel+lane))$fatal(1,"native capture RGB mismatch bank=%0d addr=%0d",bank,rel+lane);
+    if(bank)source_ram1[rel>>3]<=wdata;else source_ram0[rel>>3]<=wdata;
+    capture_beats=capture_beats+1;
+   end else if((physical_addr>=RES0&&physical_addr<RES0+PIXELS)||(physical_addr>=RES1&&physical_addr<RES1+PIXELS))begin
+    bank=(physical_addr>=RES1);rel=physical_addr-(bank?RES1:RES0);
+    if(image_valid&&bank==dut.display_reader.display_bank)$fatal(1,"native write to active display bank");
+    for(integer lane=0;lane<8;lane=lane+1)
+     if(wdata[lane*32+24+:8]!==0)$fatal(1,"result word padding byte nonzero");
+    for(integer lane=0;lane<8;lane=lane+1)
+     if(wdata[lane*32+:24]!==expected_pixel(current_kind,rel+lane))$fatal(1,"native result mismatch addr=%0d",rel+lane);
+    if(bank)result_ram1[rel>>3]<=wdata;else result_ram0[rel>>3]<=wdata;
+    result_beats=result_beats+1;
+   end else if(physical_addr>=BIST&&physical_addr<BIST+64)bist_ram[(physical_addr-BIST)>>3]<=wdata;
+   else $fatal(1,"unmapped physical write %h",physical_addr);
+   if(wlast)begin write_pending<=0;write_index<=0;end
+   else begin write_pending<=1;write_index<=write_pending?write_index+1:1;end
+  end
+ end
+ always @(negedge ui_clk)begin
+  rvalid<=0;rlast<=0;
+  if(!rst_n)read_pending<=0;
+  else if(read_pending)begin
+   if(read_delay>0)read_delay<=read_delay-1;
+   else begin
+    rvalid<=1;rdata<=memory_read(read_base+read_beat*8);rlast<=(read_beat==read_total-1);
+    read_beat<=read_beat+1;
+    if(read_beat==read_total-1)read_pending<=0;
+   end
+  end
+ end
+ always @(posedge proc_clk)if(rst_n)begin
+  proc_tick=proc_tick+1;
+  if(rejected>bad_captures)$fatal(1,"unexpected rejected frame count=%0d known_bad=%0d",rejected,bad_captures);
+  if(rejected!=rejection_seen)begin
+   rejection_seen=rejected;
+   if(rejected_reason_counts[3*32+:32]!=rejected)$fatal(1,"bad-marker rejection missing reason3 accounting");
+   if(published_frame_id==bad_generation||processing_frame_id==bad_generation)$fatal(1,"bad-marker generation was processed or published");
+   $display("CONTINUOUS_BAD_MARKER_REJECT gen=%0d rejected=%0d old_published_id=%0d displayed_id=%0d age_ms=%0d time_ns=%0d",bad_generation,rejected,published_frame_id,displayed_frame_id,display_age_ms,$time);
+  end
+  if(underrun&&image_valid)$fatal(1,"display underrun native=%0d hc=%0d vc=%0d frame=%0d generation=%0d",FULLHD,dut.display_reader.hc,dut.display_reader.vc,published,dut.display_reader.display_gen);
+  if(dut.start)begin
+   if(processing_frame>0)begin interval_sum=interval_sum+proc_tick-last_start;interval_count=interval_count+1;end
+   last_start=proc_tick;processing_frame=processing_frame+1;current_kind=source_kind[dut.source_bank];
+   active_source_id=source_id[dut.source_bank];
+   if(current_kind==3||active_source_id==bad_generation)$fatal(1,"bad-marker generation admitted to correction");
+   if(dut.continuous_sources.frame_generation!==active_source_id)$fatal(1,"source generation metadata does not match captured bank");
+   if(INLINE && (!dut.stream_path.processor.input_geometry_valid || dut.stream_path.processor.input_corners!==expected_geometry[current_kind]))$fatal(1,"source geometry generation mismatch");
+   result_kind[dut.write_bank]=current_kind;result_id[dut.write_bank]=active_source_id;result_time[dut.write_bank]=source_time[dut.source_bank];active_source_time=source_time[dut.source_bank];process_started=$time;
+   scan_cycles=0;solve_cycles=0;read_cycles=0;interp_cycles=0;write_cycles=0;other_cycles=0;produced=0;
+   $display("CONTINUOUS_FRAME_BEGIN frame=%0d capture_id=%0d source_bank=%0d kind=%0d time_ns=%0d source_age_ns=%0d",processing_frame,active_source_id,dut.source_bank,current_kind,$time,$time-active_source_time);
+  end
+  if(dut.p_busy)begin
+   case(dut.stream_path.processor.state)
+    1,2,3:solve_cycles=solve_cycles+1;
+    4:read_cycles=read_cycles+1;
+    default:other_cycles=other_cycles+1;
+   endcase
+  end
+  if(dut.stream_path.write_valid&&dut.stream_path.write_ready)begin
+   if(dut.stream_path.write_addr!==produced||dut.stream_path.write_rgb!==expected_pixel(current_kind,produced))$fatal(1,"full-HD output order/RGB mismatch addr=%0d frame=%0d",dut.stream_path.write_addr,processing_frame);
+   produced=produced+1;
+  end
+  if(dut.p_done)begin
+   if(produced!=PIXELS)$fatal(1,"incomplete corrected frame");
+   $display("STREAM_PHASE_PROFILE mode=%0d frame=%0d solver_commit=%0d streaming_run=%0d writer_drain=%0d processing_ns=%0d",OVERLAP,processing_frame,solve_cycles,read_cycles,other_cycles,$time-process_started);
+  end
+  if(dut.pub_toggle!=seen_pub)begin
+   seen_pub=dut.pub_toggle;published=published+1;
+   if(previous_publish!=0)begin
+    interval_total_ns=interval_total_ns+$time-previous_publish;
+    if($time-previous_publish<min_interval_ns)min_interval_ns=$time-previous_publish;
+    if($time-previous_publish>max_interval_ns)max_interval_ns=$time-previous_publish;
+    $display("CONTINUOUS_PUBLISH_INTERVAL frame=%0d id=%0d ns=%0d",published,published_frame_id,$time-previous_publish);
+   end
+   previous_publish=$time;
+   if(result_beats!=published*(PIXELS/8))$fatal(1,"published incomplete native result");
+   if(published_frame_id!==result_id[dut.pub_bank]||published_frame_id<=last_published_id||published_frame_id==bad_generation)$fatal(1,"publication ID stale/mismatched/bad");
+   last_published_id=published_frame_id;
+   if($time-result_time[dut.pub_bank]<min_age_ns)min_age_ns=$time-result_time[dut.pub_bank];
+   if($time-result_time[dut.pub_bank]>max_age_ns)max_age_ns=$time-result_time[dut.pub_bank];
+   $display("CONTINUOUS_FRAME_PUBLISH frame=%0d id=%0d time_ns=%0d image_age_ns=%0d captured=%0d admitted=%0d dropped=%0d rejected=%0d",published,published_frame_id,$time,$time-result_time[dut.pub_bank],capture_frame_id,admitted_frames,dropped_frames,rejected);
+  end
+ end
+ always @(posedge pix_clk)begin hd1<=dut.display_reader.hc;hd2<=hd1;vd1<=dut.display_reader.vc;vd2<=vd1;end
+ always @(negedge pix_clk)if(rst_n)begin
+  if(vs&&!previous_vs)begin
+   checked_generation=dut.display_reader.display_gen;
+   check_display=image_valid;row_pixels=0;
+   if(check_display&&checked_generation>last_checked_generation+1)$fatal(1,"display skipped a published generation");
+   display_kind=result_kind[dut.display_reader.display_bank];
+  end
+  if(check_display&&de&&hd2>=DX0&&hd2<DX0+OW&&vd2>=DY0&&vd2<DY0+OH)begin
+   if(dut.display_reader.display_gen!=checked_generation)$fatal(1,"display generation changed inside frame");
+   if(rgb!==expected_pixel(display_kind,(vd2-DY0)*OW+hd2-DX0))$fatal(1,"full-HD displayed RGB mismatch x=%0d y=%0d",hd2-DX0,vd2-DY0);
+   row_pixels=row_pixels+1;display_pixels=display_pixels+1;
+   if(hd2==DX0+OW-1&&vd2==DY0+OH-1)begin
+    if(row_pixels!=PIXELS)$fatal(1,"incomplete display check");
+    display_scans=display_scans+1;
+    if(displayed_frame_id!==result_id[dut.display_reader.display_bank]||displayed_frame_id==bad_generation)$fatal(1,"display ID stale/mismatched/bad");
+    if(checked_generation>last_checked_generation)begin display_frames=display_frames+1;last_checked_generation=checked_generation;end
+    $display("CONTINUOUS_HDMI_FRAME generation=%0d displayed_id=%0d pixels=%0d age_ms=%0d unique_frames=%0d scan_frames=%0d time_ns=%0d",checked_generation,displayed_frame_id,row_pixels,display_age_ms,display_frames,display_scans,$time);
+    check_display=0;
+   end
+  end
+  previous_vs=vs;
+ end
+ initial begin
+  $display("STREAM_SYSTEM_CONFIG native=%0d proc57p115MHz source%0dx%0d output%0dx%0d overlap=%0d prefetch=%0d late_percent=%0d inline=%0d",FULLHD,SW,SH,OW,OH,OVERLAP,PREFETCH,LATE_CAPTURE,INLINE);
+  $readmemh({FIXTURES,"/source0.hex"},source0);
+  $readmemh({FIXTURES,"/source1.hex"},source1);
+  $readmemh({FIXTURES,"/expected0.hex"},expected0);
+  $readmemh({FIXTURES,"/expected1.hex"},expected1);
+  $readmemh({FIXTURES,"/source2.hex"},source2);
+  $readmemh({FIXTURES,"/expected2.hex"},expected2);
+  $readmemh({FIXTURES,"/corners96.hex"},expected_geometry);
+  source_kind[0]=0;source_kind[1]=0;result_kind[0]=0;result_kind[1]=0;source_time[0]=0;source_time[1]=0;
+  source_id[0]=0;source_id[1]=0;result_id[0]=0;result_id[1]=0;result_time[0]=0;result_time[1]=0;
+  repeat(8)@(negedge ui_clk);rst_n=1;
+  wait(good>=FRAMES);enabled=0;wait(published==FRAMES);wait(display_frames==FRAMES);
+  avg_interval=interval_sum/interval_count;
+  if(interval_count!=FRAMES-1||processing_frame!=FRAMES||result_beats!=FRAMES*PIXELS/8)$fatal(1,"benchmark frame count mismatch");
+  if(OVERLAP&&LATE_CAPTURE==0&&overlap_beats==0)$fatal(1,"full-HD pipeline did not overlap capture");
+  if(max_bridge_wait>=4629000)$fatal(1,"bridge wait exceeded stage watchdog budget");
+  if(BAD_FRAME>0&&(bad_captures!=1||rejected!=1||bad_generation==0||last_published_id<=bad_generation))$fatal(1,"bad-marker rejection and later recovery not demonstrated");
+  test_passed=1;
+  $display("CONTINUOUS_SYSTEM_PASS mode=%0d frames=%0d corrected_pixels=%0d display_pixels=%0d average_start_interval_cycles=%0d max_ui_wait=%0d overlap_beats=%0d native_reads=%0d",OVERLAP,published,FRAMES*PIXELS,display_pixels,avg_interval,max_bridge_wait,overlap_beats,physical_reads);
+  $display("CONTINUOUS_TELEMETRY capture_id=%0d processing_id=%0d published_id=%0d displayed_id=%0d admitted=%0d dropped=%0d rejected=%0d reason3=%0d unique_outputs=%0d physical_rasters=%0d average_publish_ns=%0d min_publish_ns=%0d max_publish_ns=%0d min_source_age_ns=%0d max_source_age_ns=%0d",capture_frame_id,processing_frame_id,published_frame_id,displayed_frame_id,admitted_frames,dropped_frames,rejected,rejected_reason_counts[3*32+:32],published,camera_frames,interval_total_ns/(published-1),min_interval_ns,max_interval_ns,min_age_ns,max_age_ns);
+  $finish;
+ end
+ initial begin #(FULLHD?64'd10000000000:64'd100000000);$fatal(1,"full-HD multi-frame test timeout");end
+endmodule
+
+
+

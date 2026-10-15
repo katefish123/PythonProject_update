@@ -1,0 +1,7 @@
+# Approved result burst64 design
+
+Isolated ddr_result_writer_burst64 and ddr_word_engine_result_burst; old production RTL unchanged. Writer retains stream writer source/UI/reset ports and adds cmd_write_block,cmd_block_data2048. Defaults768x1080,BASE0/1=0x200000/0x400000,FIFO_ADDR_BITS4(min2); pixelcount must divisible64. Internal32bit epoch latches per drained frame_start and crosses command/ACK FIFOs. Store immutable {address,epoch,2048block}; source writes32bit lanes and final64thword concatenates directly to enqueue, avoiding wide barrelshift. Next64collect while older queued/inflight. UI oneblock outstanding reserves ACKFIFOcredit. Source retiresownedcount only actualresponse; abort drops onlypartial<64pixels and never owned queued/held/issued blocks. Commonhardreset mustcoordinateengine.
+
+Engine adds cmd_result_block/result_block_data2048; separate sourcecapture_burst_data retained. Sourceblock/resultblock mutuallyexclusive. Forcedresult mustwrite aligned64 safeinsideRESULTbank; lastindex7 independentCAPTURE_BURST_BEATS. CheckeachWID/WLAST, respondonlyaftereighthWREADY or explicitfault; preserve otherengine/cache/capture behavior.
+
+TDD redbaseline64pixels=>8commands expected1; forcedengineAWLEN0 expected7. Then randomclocks/stalls/ACKcreditfull/bankepoch/abortpartialownedlateACK/reset and native8beatfaulttimeout+3fullframes exact. Reduces103680commands/frame to12960 while unchanged103680nativeWbeats. Datapathcapacity only, not60newcaptureFPS proof. No git/board action.

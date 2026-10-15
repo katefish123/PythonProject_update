@@ -15,7 +15,8 @@ def read_hashes(path):
     assert records, path
     for name,digest in records.items():assert sha(name)==digest, 'stale evidence: '+name
     return records
-def main(root,evidence):
+def main(root,evidence,tag="v2"):
+    assert tag in ("v2","v2b"), tag
     manifest=json.loads((root/'stream_sources.json').read_text())
     for name,digest in manifest['files'].items():assert sha(root/name)==digest,name
     # Each currently authored module must equal the generated PDS input.
@@ -30,9 +31,9 @@ def main(root,evidence):
     bfiles=[p for p in baseline.rglob('*') if p.is_file()]
     for p in bfiles:assert p.read_bytes()==(root/'vendor/b'/p.relative_to(baseline)).read_bytes(),p
     cases={
-      'native_full_bilinear':('D:/FPGA/output/c_stream_native_integration_20261015_v2_full_solver_bilinear','PASS stream native integration complete publications=3'),
-      'system_full_eager':('D:/FPGA/output/c_stream_system_20261015_v2_fullhd_eager_bound','VERIFIED_PASS_BIT=1'),
-      'cache64':('D:/FPGA/output/c_quad_tile_unit_20261015_v2_orderedkeys','PASS invalid address and wrong response hard faults'),
+      'native_full_bilinear':('D:/FPGA/output/c_stream_native_integration_20261015_'+tag+'_full_solver_bilinear','PASS stream native integration complete publications=3'),
+      'system_full_eager':('D:/FPGA/output/c_stream_system_20261015_'+tag+'_fullhd_eager_bound','VERIFIED_PASS_BIT=1'),
+      'cache64':('D:/FPGA/output/c_quad_tile_unit_20261015_'+('v2_orderedkeys' if tag=='v2' else 'v2b_miss_stage'),'PASS invalid address and wrong response hard faults'),
       'bridge':('D:/FPGA/output/c_quad_bridge_unit_20261015_v2_pipeline','PASS quad bridge'),
       'preview_raster':('D:/FPGA/output/c_preview_row_20261015_row_verified','PASS preview registered row raster'),
     }
@@ -64,4 +65,4 @@ def main(root,evidence):
     (evidence/'qualification.json').write_text(json.dumps(report,indent=2)+'\n')
     print('SIMULATION_BINDING_PASS cases='+str(len(results))+' implementation_inputs='+str(len(binding)))
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--evidence',type=Path,default=HERE/'evidence/v2');a=p.parse_args();main(a.root.resolve(),a.evidence.resolve())
+    p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);p.add_argument('--evidence',type=Path,default=HERE/'evidence/v2');p.add_argument('--tag',choices=['v2','v2b'],default='v2');a=p.parse_args();main(a.root.resolve(),a.evidence.resolve(),a.tag)

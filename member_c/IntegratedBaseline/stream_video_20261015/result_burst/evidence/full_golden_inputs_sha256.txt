@@ -1,0 +1,13 @@
+
+Algorithm : SHA256
+Hash      : CF5DCE1E530704771A683E46B9C73C6203BC64B668359339DCF27FFF2CCFFBBE
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant0\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : 9B4FF0430EEEC6DD35736BBD8AB78EC94611E783FF6704605D2F861D1E1CAFD7
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant1\expected_bilinear.hex
+
+Algorithm : SHA256
+Hash      : 99444D9934DF605530E63B1A25E359CB6C0A01C6DAD661894D9A25D56A682FFC
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\fixtures\generated\fullhd\variant2\expected_bilinear.hex
+

@@ -1,0 +1,10 @@
+{
+  "status": "timing_failed",
+  "final_ui_wns_ns": -0.321,
+  "final_ui_failing_endpoints": 1,
+  "processing_wns_ns": 2.405,
+  "pixel_wns_ns": 0.154,
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "next_fix": "Register victim_found into miss-only PREP, removing tag-to-fill-row CE path."
+}

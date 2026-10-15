@@ -1,0 +1,12 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:24:06 on Oct 15,2026
+vlog -sv D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\display_block/ddr_word_engine_result_burst.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\display_block/ddr_result_display_block64.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\display_block/../result_burst/tb_ddr_word_engine.sv 
+-- Compiling module ddr_word_engine_result_burst
+-- Compiling module ddr_result_display_block64
+-- Compiling module tb_ddr_word_engine
+
+Top level modules:
+	ddr_result_display_block64
+	tb_ddr_word_engine
+End time: 22:24:06 on Oct 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

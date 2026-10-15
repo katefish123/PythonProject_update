@@ -21,7 +21,7 @@ module ddr_quad_tile_cache #(
  output reg fault
 );
  localparam WB=$clog2(LINES),AB=WB+5;
- localparam[1:0]F_IDLE=0,F_CMD=1,F_WAIT=2,F_WRITE=3;
+ localparam[2:0]F_IDLE=0,F_CMD=1,F_WAIT=2,F_WRITE=3,F_PREP=4;
  (* ram_style="block" *) reg[255:0]ram[0:LINES*32-1];
  reg[255:0]read_a,read_b;
  reg[LINES-1:0]line_valid;
@@ -32,7 +32,8 @@ module ddr_quad_tile_cache #(
  reg[59:0]frame_key;
  reg[WB-1:0]replace_way,fill_way;
  reg[75:0]fill_tag;
- reg[1:0]fill_state,fill_row;
+ reg fill_victim_found;
+ reg[2:0]fill_state;reg[1:0]fill_row;
  reg[2:0]fill_word;
  reg[2047:0]fill_data;
  reg[31:0]watchdog;
@@ -98,7 +99,7 @@ module ddr_quad_tile_cache #(
  end
  always @(posedge clk or negedge rst_n)begin
   if(!rst_n)begin
-   line_valid<=0;frame_key<=0;replace_way<=0;fill_way<=0;fill_tag<=0;fill_state<=F_IDLE;fill_row<=0;fill_word<=0;fill_data<=0;watchdog<=0;fault<=0;
+   line_valid<=0;frame_key<=0;replace_way<=0;fill_way<=0;fill_tag<=0;fill_state<=F_IDLE;fill_victim_found<=0;fill_row<=0;fill_word<=0;fill_data<=0;watchdog<=0;fault<=0;
    s_valid<=0;s_inside<=0;s_nearest<=0;s_base<=0;s_generation<=0;s_x<=0;s_y<=0;s_x1<=0;s_y1<=0;s_tag<=0;s_fx<=0;s_fy<=0;
    m_valid<=0;m_inside<=0;m_boundary<=0;m_phase<=0;m_tag<=0;m_generation<=0;m_fx<=0;m_fy<=0;m_left_offset<=0;m_right_offset<=0;m_right_a<=0;m_right_b<=0;left_top<=0;left_bot<=0;
    r_valid<=0;rsp_inside<=0;rsp_p00<=0;rsp_p10<=0;rsp_p01<=0;rsp_p11<=0;rsp_tag<=0;rsp_generation<=0;rsp_fx<=0;rsp_fy<=0;
@@ -124,14 +125,21 @@ module ddr_quad_tile_cache #(
     if(req_inside&&(req_x>=SRC_W||req_y>=SRC_H||req_base[5:0]!=0||{1'b0,req_base}+SRC_W*SRC_H>29'h10000000))fault<=1;
    end
    if(fill_start)begin
-    if(!victim_found)fault<=1;
-    else begin fill_way<=victim;fill_tag<=key[missing_corner];line_valid[victim]<=0;fill_row<=0;fill_state<=F_CMD;watchdog<=0;end
+    // Register replacement success as well as its index. The measured V2B
+    // critical path was tags -> protected ways -> victim_found -> fill-row CE.
+    // This check belongs to the following miss-only preparation stage.
+    fill_way<=victim;fill_victim_found<=victim_found;fill_tag<=key[missing_corner];
+    fill_row<=0;fill_state<=F_PREP;watchdog<=0;
    end
    if(fill_state==F_CMD||fill_state==F_WAIT)begin
     watchdog<=watchdog+1'b1;
     if(watchdog>=WATCHDOG_CYCLES-1)fault<=1;
    end
    case(fill_state)
+    F_PREP:begin
+     if(!fill_victim_found)fault<=1;
+     else begin line_valid[fill_way]<=0;fill_state<=F_CMD;watchdog<=0;end
+    end
     F_CMD:if(cmd_ready)begin fill_state<=F_WAIT;watchdog<=0;end
     F_WAIT:if(mem_rsp_valid)begin
      if(mem_rsp_write)fault<=1;

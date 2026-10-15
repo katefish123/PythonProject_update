@@ -1,0 +1,167 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do D:/FPGA/output/c_continuous_system_20261015_v4k_full12/case.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work work 
+# Copying D:/softwares/modelsim/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 22:40:03 on Oct 15,2026
+# vlog -sv -work work D:/FPGA/output/c_stream_board_v4k_20261015/rtl/top/video_correct_ddr_continuous_core.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/algo/marker_detector.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/common/reset_sync.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/memory/ddr_self_test.v D:/FPGA/output/c_stream_board_v4k_20261015/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_stream_board_v4k_20261015/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/async_packet_stream.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/c_stream_burst_correction_path.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/c_stream_correction_path.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/continuous_capture_geometry.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/continuous_capture_manager.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/continuous_capture_rx.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/continuous_capture_writer.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/continuous_source_path.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_arbiter3_fair.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_arbiter3_turnaround.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_quad_tile_cache.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_result_display_block64.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_result_writer_burst64.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_result_writer_stream.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/ddr_word_engine_result_burst.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/frame_processor_stream.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/frame_telemetry_overlay.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/quad_packet_bridge.v D:/FPGA/output/c_stream_board_v4k_20261015/rtl/stream/rx_preview_stream.v D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv 
+# -- Compiling module video_correct_ddr_continuous_core
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module c_corner_rectifier
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_self_test
+# -- Compiling module video_timing_vtc
+# -- Compiling module ddr_result_display
+# -- Compiling module async_packet_stream
+# -- Compiling module c_stream_burst_correction_path
+# -- Compiling module c_stream_correction_path
+# -- Compiling module continuous_capture_geometry
+# -- Compiling module continuous_capture_manager
+# -- Compiling module continuous_capture_rx
+# -- Compiling module continuous_capture_writer
+# -- Compiling module continuous_source_path
+# -- Compiling module ddr_arbiter3_fair
+# -- Compiling module ddr_arbiter3_turnaround
+# -- Compiling module ddr_quad_tile_cache
+# -- Compiling module ddr_result_display_block64
+# -- Compiling module ddr_result_writer_burst64
+# -- Compiling module burst64_async_fifo
+# -- Compiling module ddr_result_writer_stream
+# -- Compiling module stream_writer_async_fifo
+# -- Compiling module ddr_word_engine_result_burst
+# -- Compiling module frame_processor_stream
+# -- Compiling module frame_telemetry_overlay
+# -- Compiling module quad_packet_bridge
+# -- Compiling module rx_preview_stream
+# -- Compiling module tb_continuous_stream_system
+# 
+# Top level modules:
+# 	b_rectifier
+# 	reset_sync
+# 	ddr_result_display
+# 	c_stream_correction_path
+# 	ddr_arbiter3_fair
+# 	frame_telemetry_overlay
+# 	rx_preview_stream
+# 	tb_continuous_stream_system
+# End time: 22:40:03 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc=rnp+/tb_continuous_stream_system" -wlf D:/FPGA/output/c_continuous_system_20261015_v4k_full12/run.wlf work.tb_continuous_stream_system -gSTRESS=0 -gLATE_CAPTURE=0 -gPREFETCH=1 -gOVERLAP=1 -gBAD_FRAME=2 -gFRAMES=12 -gINLINE=1 -gFULLHD=1 
+# Start time: 22:40:03 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_continuous_stream_system(fast)
+# STREAM_SYSTEM_CONFIG native=1 proc57p115MHz source1920x1080 output768x1080 overlap=1 prefetch=1 late_percent=0 inline=1
+# CONTINUOUS_CAPTURE_BEGIN gen=1 bank=0 kind=0 physical_raster=2 time_ns=16666724
+# CONTINUOUS_CAPTURE_BEGIN gen=2 bank=1 kind=3 physical_raster=3 time_ns=33333374
+# CONTINUOUS_FRAME_BEGIN frame=1 capture_id=1 source_bank=0 kind=0 time_ns=33339618 source_age_ns=16672894
+# STREAM_PHASE_PROFILE mode=1 frame=1 solver_commit=543 streaming_run=858024 writer_drain=13 processing_ns=15032036
+# CONTINUOUS_FRAME_PUBLISH frame=1 id=1 time_ns=48371671 image_age_ns=31704947 captured=2 admitted=2 dropped=0 rejected=0
+# CONTINUOUS_CAPTURE_BEGIN gen=3 bank=0 kind=2 physical_raster=4 time_ns=50000024
+# CONTINUOUS_BAD_MARKER_REJECT gen=2 rejected=1 old_published_id=1 displayed_id=1 age_ms=34 time_ns=50000213
+# CONTINUOUS_HDMI_FRAME generation=1 displayed_id=1 pixels=829440 age_ms=50 unique_frames=1 scan_frames=1 time_ns=66602957
+# CONTINUOUS_CAPTURE_BEGIN gen=4 bank=1 kind=0 physical_raster=5 time_ns=66666674
+# CONTINUOUS_FRAME_BEGIN frame=2 capture_id=3 source_bank=0 kind=2 time_ns=66672906 source_age_ns=16672882
+# STREAM_PHASE_PROFILE mode=1 frame=2 solver_commit=543 streaming_run=938802 writer_drain=13 processing_ns=16446298
+# CONTINUOUS_PUBLISH_INTERVAL frame=2 id=3 ns=34747550
+# CONTINUOUS_FRAME_PUBLISH frame=2 id=3 time_ns=83119221 image_age_ns=33119197 captured=4 admitted=4 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=1 displayed_id=1 pixels=829440 age_ms=67 unique_frames=1 scan_frames=2 time_ns=83269607
+# CONTINUOUS_CAPTURE_BEGIN gen=5 bank=0 kind=1 physical_raster=6 time_ns=83333324
+# CONTINUOUS_FRAME_BEGIN frame=3 capture_id=4 source_bank=1 kind=0 time_ns=83339559 source_age_ns=16672885
+# STREAM_PHASE_PROFILE mode=1 frame=3 solver_commit=543 streaming_run=944515 writer_drain=15 processing_ns=16546356
+# CONTINUOUS_PUBLISH_INTERVAL frame=3 id=4 ns=16766712
+# CONTINUOUS_FRAME_PUBLISH frame=3 id=4 time_ns=99885933 image_age_ns=33219259 captured=5 admitted=5 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=2 displayed_id=3 pixels=829440 age_ms=49 unique_frames=2 scan_frames=3 time_ns=99936257
+# CONTINUOUS_CAPTURE_BEGIN gen=6 bank=1 kind=2 physical_raster=7 time_ns=99999974
+# CONTINUOUS_FRAME_BEGIN frame=4 capture_id=5 source_bank=0 kind=1 time_ns=100006212 source_age_ns=16672888
+# STREAM_PHASE_PROFILE mode=1 frame=4 solver_commit=543 streaming_run=939805 writer_drain=13 processing_ns=16463858
+# CONTINUOUS_PUBLISH_INTERVAL frame=4 id=5 ns=16584155
+# CONTINUOUS_FRAME_PUBLISH frame=4 id=5 time_ns=116470088 image_age_ns=33136764 captured=6 admitted=6 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=3 displayed_id=4 pixels=829440 age_ms=50 unique_frames=3 scan_frames=4 time_ns=116602907
+# CONTINUOUS_CAPTURE_BEGIN gen=7 bank=0 kind=0 physical_raster=8 time_ns=116666624
+# CONTINUOUS_FRAME_BEGIN frame=5 capture_id=6 source_bank=1 kind=2 time_ns=116672866 source_age_ns=16672892
+# STREAM_PHASE_PROFILE mode=1 frame=5 solver_commit=543 streaming_run=941655 writer_drain=16 processing_ns=16496300
+# CONTINUOUS_PUBLISH_INTERVAL frame=5 id=6 ns=16699095
+# CONTINUOUS_FRAME_PUBLISH frame=5 id=6 time_ns=133169183 image_age_ns=33169209 captured=7 admitted=7 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=4 displayed_id=5 pixels=829440 age_ms=50 unique_frames=4 scan_frames=5 time_ns=133269557
+# CONTINUOUS_CAPTURE_BEGIN gen=8 bank=1 kind=1 physical_raster=9 time_ns=133333274
+# CONTINUOUS_FRAME_BEGIN frame=6 capture_id=7 source_bank=0 kind=0 time_ns=133339519 source_age_ns=16672895
+# STREAM_PHASE_PROFILE mode=1 frame=6 solver_commit=543 streaming_run=944459 writer_drain=22 processing_ns=16545497
+# CONTINUOUS_PUBLISH_INTERVAL frame=6 id=7 ns=16715851
+# CONTINUOUS_FRAME_PUBLISH frame=6 id=7 time_ns=149885034 image_age_ns=33218410 captured=8 admitted=8 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=5 displayed_id=6 pixels=829440 age_ms=49 unique_frames=5 scan_frames=6 time_ns=149936207
+# CONTINUOUS_CAPTURE_BEGIN gen=9 bank=0 kind=2 physical_raster=10 time_ns=149999924
+# CONTINUOUS_FRAME_BEGIN frame=7 capture_id=8 source_bank=1 kind=1 time_ns=150006172 source_age_ns=16672898
+# STREAM_PHASE_PROFILE mode=1 frame=7 solver_commit=543 streaming_run=938111 writer_drain=13 processing_ns=16434199
+# CONTINUOUS_PUBLISH_INTERVAL frame=7 id=8 ns=16555355
+# CONTINUOUS_FRAME_PUBLISH frame=7 id=8 time_ns=166440389 image_age_ns=33107115 captured=9 admitted=9 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=6 displayed_id=7 pixels=829440 age_ms=50 unique_frames=6 scan_frames=7 time_ns=166602857
+# CONTINUOUS_CAPTURE_BEGIN gen=10 bank=1 kind=0 physical_raster=11 time_ns=166666574
+# CONTINUOUS_FRAME_BEGIN frame=8 capture_id=9 source_bank=0 kind=2 time_ns=166672807 source_age_ns=16672883
+# STREAM_PHASE_PROFILE mode=1 frame=8 solver_commit=543 streaming_run=941824 writer_drain=12 processing_ns=16499189
+# CONTINUOUS_PUBLISH_INTERVAL frame=8 id=9 ns=16731625
+# CONTINUOUS_FRAME_PUBLISH frame=8 id=9 time_ns=183172014 image_age_ns=33172090 captured=10 admitted=10 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=7 displayed_id=8 pixels=829440 age_ms=50 unique_frames=7 scan_frames=8 time_ns=183269507
+# CONTINUOUS_CAPTURE_BEGIN gen=11 bank=0 kind=1 physical_raster=12 time_ns=183333224
+# CONTINUOUS_FRAME_BEGIN frame=9 capture_id=10 source_bank=1 kind=0 time_ns=183339460 source_age_ns=16672886
+# STREAM_PHASE_PROFILE mode=1 frame=9 solver_commit=543 streaming_run=942772 writer_drain=17 processing_ns=16515874
+# CONTINUOUS_PUBLISH_INTERVAL frame=9 id=10 ns=16683338
+# CONTINUOUS_FRAME_PUBLISH frame=9 id=10 time_ns=199855352 image_age_ns=33188778 captured=11 admitted=11 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=8 displayed_id=9 pixels=829440 age_ms=49 unique_frames=8 scan_frames=9 time_ns=199936157
+# CONTINUOUS_CAPTURE_BEGIN gen=12 bank=1 kind=2 physical_raster=13 time_ns=199999874
+# CONTINUOUS_FRAME_BEGIN frame=10 capture_id=11 source_bank=0 kind=1 time_ns=200006113 source_age_ns=16672889
+# STREAM_PHASE_PROFILE mode=1 frame=10 solver_commit=543 streaming_run=939842 writer_drain=15 processing_ns=16464541
+# CONTINUOUS_PUBLISH_INTERVAL frame=10 id=11 ns=16615320
+# CONTINUOUS_FRAME_PUBLISH frame=10 id=11 time_ns=216470672 image_age_ns=33137448 captured=12 admitted=12 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=9 displayed_id=10 pixels=829440 age_ms=50 unique_frames=9 scan_frames=10 time_ns=216602807
+# CONTINUOUS_CAPTURE_BEGIN gen=13 bank=0 kind=0 physical_raster=14 time_ns=216666524
+# CONTINUOUS_FRAME_BEGIN frame=11 capture_id=12 source_bank=1 kind=2 time_ns=216672766 source_age_ns=16672892
+# STREAM_PHASE_PROFILE mode=1 frame=11 solver_commit=543 streaming_run=942694 writer_drain=39 processing_ns=16514894
+# CONTINUOUS_PUBLISH_INTERVAL frame=11 id=12 ns=16717006
+# CONTINUOUS_FRAME_PUBLISH frame=11 id=12 time_ns=233187678 image_age_ns=33187804 captured=13 admitted=13 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=10 displayed_id=11 pixels=829440 age_ms=50 unique_frames=10 scan_frames=11 time_ns=233269457
+# CONTINUOUS_CAPTURE_BEGIN gen=14 bank=1 kind=1 physical_raster=15 time_ns=233333174
+# CONTINUOUS_FRAME_BEGIN frame=12 capture_id=13 source_bank=0 kind=0 time_ns=233339419 source_age_ns=16672895
+# STREAM_PHASE_PROFILE mode=1 frame=12 solver_commit=543 streaming_run=943634 writer_drain=20 processing_ns=16531019
+# CONTINUOUS_PUBLISH_INTERVAL frame=12 id=13 ns=16682778
+# CONTINUOUS_FRAME_PUBLISH frame=12 id=13 time_ns=249870456 image_age_ns=33203932 captured=14 admitted=14 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=11 displayed_id=12 pixels=829440 age_ms=49 unique_frames=11 scan_frames=12 time_ns=249936107
+# CONTINUOUS_HDMI_FRAME generation=12 displayed_id=13 pixels=829440 age_ms=50 unique_frames=12 scan_frames=13 time_ns=266602757
+# CONTINUOUS_SYSTEM_PASS mode=1 frames=12 corrected_pixels=9953280 display_pixels=10782720 average_start_interval_cycles=1038485 max_ui_wait=189 overlap_beats=3066026 native_reads=330732
+# CONTINUOUS_TELEMETRY capture_id=14 processing_id=13 published_id=13 displayed_id=13 admitted=14 dropped=0 rejected=1 reason3=1 unique_outputs=12 physical_rasters=16 average_publish_ns=18318071 min_publish_ns=16555355 max_publish_ns=34747550 min_source_age_ns=31704947 max_source_age_ns=33219259
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv(268)
+#    Time: 266602756966 ps  Iteration: 2  Instance: /tb_continuous_stream_system
+# Break at D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv line 268
+# Stopped at D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv line 268
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 22:44:21 on Oct 15,2026, Elapsed time: 0:04:18
+# Errors: 0, Warnings: 0

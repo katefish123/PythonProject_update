@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:39:03 on Oct 15,2026
+vlog -sv D:/softwares/PDS/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_GPLL.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\clock57/video_pll_27m_148m5.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\clock57/tb_vendor_pll.sv 
+-- Compiling module GTP_GPLL
+-- Compiling module video_pll_27m_148m5
+-- Compiling module tb_vendor_pll
+
+Top level modules:
+	tb_vendor_pll
+End time: 22:39:03 on Oct 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

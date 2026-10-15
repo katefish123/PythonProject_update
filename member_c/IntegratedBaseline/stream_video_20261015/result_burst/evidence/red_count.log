@@ -1,0 +1,36 @@
+# do red_count.do
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 15:52:15 on Oct 15,2026
+# vlog -sv "+define+LEGACY" D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_result_writer.v D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/result_burst/tb_burst_count.sv 
+# -- Compiling module ddr_result_writer
+# -- Compiling module tb_burst_count
+# 
+# Top level modules:
+# 	tb_burst_count
+# End time: 15:52:15 on Oct 15,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work.tb_burst_count 
+# Start time: 15:52:15 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_burst_count(fast)
+# MEASURE64pixels sourceUIcommands=8 desired=1
+# ** Fatal: 64pixels must issue one8beat command
+#    Time: 1722174 ps  Scope: tb_burst_count File: D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/result_burst/tb_burst_count.sv Line: 21
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/result_burst/tb_burst_count.sv(21)
+#    Time: 1722174 ps  Iteration: 1  Instance: /tb_burst_count
+# End time: 15:52:16 on Oct 15,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0

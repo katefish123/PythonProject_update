@@ -1,0 +1,27 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 16:06:38 on Oct 15,2026
+vlog -sv "+define+FULL" "+define+SOLVER" D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_black_burst_merge_v3_20261015/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_black_burst_merge_v3_20261015/rtl/memory/async_packet_fifo.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\processor\frame_processor_stream.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\bridge\async_packet_stream.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\bridge\quad_packet_bridge.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\cache\ddr_quad_tile_cache.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst/ddr_result_writer_burst64.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst/ddr_word_engine_result_burst.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst/c_stream_burst_correction_path.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst/tb_stream_burst_path.sv 
+-- Compiling module unsigned_div_seq
+-- Compiling module signed_div_seq
+-- Compiling module scaled_div_pipe
+-- Compiling module homography_solver
+-- Compiling module perspective_coord
+-- Compiling module bilinear_interp
+-- Compiling module perspective_core
+-- Compiling module c_corner_rectifier
+-- Compiling module ddr_arbiter3
+-- Compiling module async_packet_fifo
+-- Compiling module frame_processor_stream
+-- Compiling module async_packet_stream
+-- Compiling module quad_packet_bridge
+-- Compiling module ddr_quad_tile_cache
+-- Compiling module ddr_result_writer_burst64
+-- Compiling module burst64_async_fifo
+-- Compiling module ddr_word_engine_result_burst
+-- Compiling module c_stream_burst_correction_path
+-- Compiling module tb_stream_burst_path
+
+Top level modules:
+	tb_stream_burst_path
+End time: 16:06:38 on Oct 15,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

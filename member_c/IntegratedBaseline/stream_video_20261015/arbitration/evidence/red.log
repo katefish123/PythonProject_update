@@ -1,0 +1,33 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -lib D:/FPGA/output/c_fair_arbiter_20261015/work -do "onfinish stop; run -all; quit -f" tb_fair 
+# Start time: 22:17:32 on Oct 15,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_fair(fast)
+# onfinish stop
+#  run -all
+# ** Fatal: FAIRNESS_REQUIRED c0=0 c1=16
+#    Time: 512 ns  Scope: tb_fair File: member_c/IntegratedBaseline/stream_video_20261015/arbitration/tb_fair.sv Line: 27
+# ** Note: $finish    : member_c/IntegratedBaseline/stream_video_20261015/arbitration/tb_fair.sv(27)
+#    Time: 512 ns  Iteration: 1  Instance: /tb_fair
+# Break at member_c/IntegratedBaseline/stream_video_20261015/arbitration/tb_fair.sv line 27
+# Stopped at member_c/IntegratedBaseline/stream_video_20261015/arbitration/tb_fair.sv line 27
+#  quit -f
+# End time: 22:17:34 on Oct 15,2026, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0

@@ -1,0 +1,209 @@
+
+Algorithm : SHA256
+Hash      : 2439AC84D394EB86661944DD27DFA0D2E16502F9B4E5F56194B4B21394CF8CA1
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\current_sources_sha256.txt
+
+Algorithm : SHA256
+Hash      : A5DCA94239FF7A69253BE5863080A8A01D7FBCEA09181F146616B0CF2153EBE9
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\full_golden_inputs_sha256.txt
+
+Algorithm : SHA256
+Hash      : E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\library.log
+
+Algorithm : SHA256
+Hash      : 9D5840F27A59EE4287C05EFAE4D574FD643EEBC2A61F2CE884AF7694533F06C5
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_golden_sha256.txt
+
+Algorithm : SHA256
+Hash      : 69C4A96EB238F99A48836ABE7B080D0C6F65A618868DDF37A6B95C10EBFAE6BD
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\red_count.log
+
+Algorithm : SHA256
+Hash      : B1E8B49EB87A17A552D4364ED47618E4BB608885020158C4E2E8B6EF6D450B3A
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\red_protocol.log
+
+Algorithm : SHA256
+Hash      : 6D1FBA3B524CD8719E75D74D6A4EDE6E44C060C2F2AB3EF8BBACD387F348E419
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\run.do
+
+Algorithm : SHA256
+Hash      : 8731F97EB9F9CF33B7C6F66CFD03775BBC475E126F9D4ECF6E46EC77ECC41536
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\source_hashes_after.txt
+
+Algorithm : SHA256
+Hash      : 8731F97EB9F9CF33B7C6F66CFD03775BBC475E126F9D4ECF6E46EC77ECC41536
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\source_hashes.txt
+
+Algorithm : SHA256
+Hash      : 3F928FB8DC9D864B35326ED10C29EDF4653E3BFDF1C9F11FB26167270F2D4EB7
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_burst_count.compile.log
+
+Algorithm : SHA256
+Hash      : 02D998FC95011CE2B1E524FEFFBBBE24EB9F6553C7CFB31C4E6CA64085A58E92
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_burst_count.log
+
+Algorithm : SHA256
+Hash      : 7D7ECDC918CE958B970346A20ED49865676ED175660DF111677EFFDBFB617A38
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_capture_burst_protocol.compile.log
+
+Algorithm : SHA256
+Hash      : CF76519AD5D4EF6A8B3B77673272017BB2456C6168F7F42AB438CAD1C9D9AC98
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_capture_burst_protocol.log
+
+Algorithm : SHA256
+Hash      : 0A6BF224481087EE1B2E91310DE5CE3EC0DEFE734706E54389CB88972030E472
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_ddr_read_ahead.compile.log
+
+Algorithm : SHA256
+Hash      : 23A33D8689F393C46AF8AF892D185C384B31163FD32CCE2CF6DF1B966FFAEC2D
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_ddr_read_ahead.log
+
+Algorithm : SHA256
+Hash      : EFB46B9F3A52735222068143D916D9F3BD477231E51C62874DF82A7FF00C75D9
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_ddr_word_engine.compile.log
+
+Algorithm : SHA256
+Hash      : D46C49C5FCC3F36D56D7A98560D22BED0FAA8F2630AEB0C8AC616AE08688231E
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_ddr_word_engine.log
+
+Algorithm : SHA256
+Hash      : 000A8D5FB14FB62ABD2ABD230FFFDD9412121636D94D512B0EDA0D0784524F17
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_engine_block.compile.log
+
+Algorithm : SHA256
+Hash      : 64415AD73208CC500AA1A309F3E8C7AA9A8F71B0FF3C270594D62A82AC9B89D4
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_engine_block.log
+
+Algorithm : SHA256
+Hash      : CADBE16D5BD743EA12F26ABBF15FFCA1FD10BDE5F579E7436DAE89D76067EC30
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_result_burst_native.compile.log
+
+Algorithm : SHA256
+Hash      : 9F5D41B5298CE2D2FDE37CCAB3FF60CE2DE8D3688460F21A970C447070015445
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_result_burst_native.log
+
+Algorithm : SHA256
+Hash      : B1770037A6B45B12DA4A1AFEC061E9411E9D7C714E690FCDBA4F6BAF46C8EB81
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_result_burst_protocol.compile.log
+
+Algorithm : SHA256
+Hash      : EAAED2A8521D0F62A15EE7863BB45EC3B82D99BBCAC2B8F3C58B1A767069F6B5
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_result_burst_protocol.log
+
+Algorithm : SHA256
+Hash      : 048D5070891F6F93DB5B8A82C4ACA0E96B454A80FCCD480D4424EB0AB575E6BB
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_source_prefetch.compile.log
+
+Algorithm : SHA256
+Hash      : 2E783351872FA3F74F416A8E2A5B73471AB88A757A2835FF13A42B3C6E686311
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_source_prefetch.log
+
+Algorithm : SHA256
+Hash      : 56DF8CD0AB45A54D537E7AB0724206B4DAD72895E45A82682311BCA90EC75074
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_writer_burst.compile.log
+
+Algorithm : SHA256
+Hash      : FD72791E9661AA0A43CB65E7353F5E68D5057D521F2D0249E530AEA3A6E40BAC
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\tb_writer_burst.log
+
+Algorithm : SHA256
+Hash      : 5E11A373DA07AC5E1597AF9E8D895F96368D150E46138A7ADB4DE2B2351DAFF7
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\untouched_production_sources_sha256.txt
+
+Algorithm : SHA256
+Hash      : 4716DBE3B7837944EC563DABD4F34DDC48D6B157358535691D13A5B95A8E4EDA
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_bilinear\compile.log
+
+Algorithm : SHA256
+Hash      : F4E7ADF8E7D4B342A89C0395C4341A5E589581B2EB618AD1CB964305B81577A0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_bilinear\run.do
+
+Algorithm : SHA256
+Hash      : C7396BC90A6C38752392D5E5B36A3EDF9331928A32C77CB2BEEF786DD219F9D8
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_bilinear\simulation.log
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_bilinear\source_hashes_after.txt
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_bilinear\source_hashes.txt
+
+Algorithm : SHA256
+Hash      : 4716DBE3B7837944EC563DABD4F34DDC48D6B157358535691D13A5B95A8E4EDA
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_nearest\compile.log
+
+Algorithm : SHA256
+Hash      : F4E7ADF8E7D4B342A89C0395C4341A5E589581B2EB618AD1CB964305B81577A0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_nearest\run.do
+
+Algorithm : SHA256
+Hash      : ECCD4B56756A113000FB2D87685C24210C3BB9BCDA9A5AFEC4DB7F51D1715C84
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_nearest\simulation.log
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_nearest\source_hashes_after.txt
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_full_nearest\source_hashes.txt
+
+Algorithm : SHA256
+Hash      : BC0D5F9C1C4B1CC70AF688F027F2D7A4AE2FF8AEDACE7C984AE82B881A55B4A1
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_bilinear\compile.log
+
+Algorithm : SHA256
+Hash      : F4E7ADF8E7D4B342A89C0395C4341A5E589581B2EB618AD1CB964305B81577A0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_bilinear\run.do
+
+Algorithm : SHA256
+Hash      : C9A94D5267CEEDE6485E9FDDC711C697EF68C04BA642A71634944CBB39C3AAB0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_bilinear\simulation.log
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_bilinear\source_hashes_after.txt
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_bilinear\source_hashes.txt
+
+Algorithm : SHA256
+Hash      : 58DF3E9BF297A6B1F78FE85228FFB8195D9B324956AB4D2723B11C8937BDF437
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_nearest\compile.log
+
+Algorithm : SHA256
+Hash      : F4E7ADF8E7D4B342A89C0395C4341A5E589581B2EB618AD1CB964305B81577A0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_nearest\run.do
+
+Algorithm : SHA256
+Hash      : 9B7E2CF7A4DDF86037977CD4819FD1ECF308E8B14C56BE88A275D26D65C4E19B
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_nearest\simulation.log
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_nearest\source_hashes_after.txt
+
+Algorithm : SHA256
+Hash      : 980438B253EDA0EDC97C94DA01E2D76C98BDA04885263F83D54BD23096BA598F
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_reduced_nearest\source_hashes.txt
+
+Algorithm : SHA256
+Hash      : 7AEF4F97491AE2654FCEFCA53D030193EF3876E2F5A561B08FA7D65F9AAF9B89
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_red_reduced\compile.log
+
+Algorithm : SHA256
+Hash      : F4E7ADF8E7D4B342A89C0395C4341A5E589581B2EB618AD1CB964305B81577A0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_red_reduced\run.do
+
+Algorithm : SHA256
+Hash      : 51E8D1C9A4FD690B86FB294182E76361648660DCDDA145AC7681680751963872
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_red_reduced\simulation.log
+
+Algorithm : SHA256
+Hash      : 8AB2B7345542BEFB0B26509D2630E5D154D9CB40339CD39F2617B403A42C67B0
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\result_burst\evidence\path_red_reduced\source_hashes.txt
+
