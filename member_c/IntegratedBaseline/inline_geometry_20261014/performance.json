@@ -1,0 +1,127 @@
+{
+  "evidence": "three_distinct_native_fullhd_frames_with_exact_black_reference",
+  "hardware_accepted": false,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "result_size": [
+    640,
+    904
+  ],
+  "display_size": [
+    1920,
+    1080
+  ],
+  "proc_clock_hz": 27000000,
+  "reduction_percent": 26.506047580515308,
+  "target_corrections_per_second": 60,
+  "sample_interval_within_60fps_budget": false,
+  "sustained_60fps_qualified": false,
+  "results": [
+    {
+      "mode": "ddr_scan",
+      "average_start_interval_ms": 691.6478888888889,
+      "three_frame_sample_rate_per_second": 1.4458223845755813,
+      "corrected_pixels": 1735680,
+      "display_pixels": 1735680,
+      "source_age_ms": [
+        16.667087,
+        33.333535,
+        33.333568
+      ],
+      "image_age_at_publish_ms": [
+        617.494634,
+        795.672207,
+        794.671362
+      ],
+      "max_ui_wait_cycles": 3556,
+      "overlap_beats": 777600,
+      "native_reads": 2036228,
+      "phase_profiles": [
+        {
+          "frame": 1,
+          "scan_cycles": 4152627,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 8591111,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 584461,
+          "other_cycles": 578584,
+          "processing_ms": 600.827177
+        },
+        {
+          "frame": 2,
+          "scan_cycles": 5379853,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 11372811,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 936222,
+          "other_cycles": 578584,
+          "processing_ms": 762.338302
+        },
+        {
+          "frame": 3,
+          "scan_cycles": 5379882,
+          "solve_cycles": 888,
+          "neighborhood_read_cycles": 11336474,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 945507,
+          "other_cycles": 578584,
+          "processing_ms": 761.337423
+        }
+      ]
+    },
+    {
+      "mode": "capture_geometry",
+      "average_start_interval_ms": 508.3193703703704,
+      "three_frame_sample_rate_per_second": 1.9672671518918954,
+      "corrected_pixels": 1735680,
+      "display_pixels": 1735680,
+      "source_age_ms": [
+        16.667346,
+        16.667348,
+        33.333557
+      ],
+      "image_age_at_publish_ms": [
+        462.514531,
+        579.90951,
+        595.271833
+      ],
+      "max_ui_wait_cycles": 3541,
+      "overlap_beats": 711303,
+      "native_reads": 1722068,
+      "phase_profiles": [
+        {
+          "frame": 1,
+          "scan_cycles": 0,
+          "solve_cycles": 542,
+          "neighborhood_read_cycles": 8561342,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 582834,
+          "other_cycles": 578584,
+          "processing_ms": 445.846518
+        },
+        {
+          "frame": 2,
+          "scan_cycles": 0,
+          "solve_cycles": 542,
+          "neighborhood_read_cycles": 11382843,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 930923,
+          "other_cycles": 578584,
+          "processing_ms": 563.241792
+        },
+        {
+          "frame": 3,
+          "scan_cycles": 0,
+          "solve_cycles": 542,
+          "neighborhood_read_cycles": 11340837,
+          "interpolation_cycles": 2314240,
+          "write_cycles": 937725,
+          "other_cycles": 578584,
+          "processing_ms": 561.937906
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+overrides/** -text -whitespace
+release/** -text -whitespace
+validation/** -text -whitespace
+performance.json -text whitespace=cr-at-eol
+gather_trace.json -text whitespace=cr-at-eol
