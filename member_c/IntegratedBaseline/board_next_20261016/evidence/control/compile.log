@@ -1,0 +1,13 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 21:49:19 on Oct 16,2026
+vlog -sv D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\control/c_frame_mode_controller.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\control/board_recovery_reset.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\control/tb_frame_modes.sv D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\control/tb_board_recovery.sv 
+-- Compiling module c_frame_mode_controller
+-- Compiling module board_recovery_reset
+-- Compiling module tb_frame_modes
+-- Compiling module tb_board_recovery
+
+Top level modules:
+	tb_frame_modes
+	tb_board_recovery
+End time: 21:49:19 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

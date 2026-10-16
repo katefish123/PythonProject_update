@@ -1,0 +1,446 @@
+{
+  "status": "application simulation milestone; board integration incomplete",
+  "physical_timing_qualified": false,
+  "hardware_accepted": false,
+  "new_bitstream_created": false,
+  "raw_unique_frame_60fps_achieved": false,
+  "tests": {
+    "raw_native": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_raw_20261016_final_raw_native",
+      "passes": [
+        "PASS RAW_PIPELINE corrected=0 native=1 pixels=22809600 unique_scans=5 published=5 reads=356409 writes=1296000 physical_frames=15 admitted=6 dropped=8"
+      ],
+      "logs_sha256": {
+        "compile.log": "e3bcdf98cd48b7f51c2ccff42beed58e1101f0206858e946b56e1428a5096c4e",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "1e0034c1fd46952eab8e4a5f24b9397a571700ec1fd75f42d111ad23b7aea890"
+      },
+      "compiled_source_sha256": {
+        "async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+        "async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
+        "color_marker_detector.v": "b3d8af2a050709c0df76921c7339cc6f8bbcad482b96e7d734cd21648de99340",
+        "continuous_capture_geometry.v": "25fee8c2715a1d16eb333ecccc9557cb84ba9d50c775abc6ba9370949d8540ce",
+        "continuous_capture_rx.v": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776",
+        "continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "continuous_source_path.v": "723700654720063850a01b13a60e2aa8eafacac2a032534bc4ec27b2f163175b",
+        "c_corner_rectifier.v": "eaffa95c6b1f277b4d2d6d36190e1dbaf5972d40932eb8865764941522714443",
+        "c_frame_mode_controller.v": "1a55c8fee3cd453d9a7bc0999b8d2a149c2bfcff6450ccd757965523efbb12bf",
+        "c_stream_burst_correction_path.v": "498fcd8e9a31df67a7fed04979609bed42120ca4edf301e0da32677584fa8be9",
+        "c_stream_correction_path.v": "41398a74a7d1d2e752362019b3efdd3214d51c2e27417bae52a54952e9557630",
+        "ddr_arbiter3.v": "cab398b830250fbbe27ab4b56776fa35dd6504ee58adeb254fcb796ab981c806",
+        "ddr_arbiter3_fair.v": "f812ac7b43287aa44e542fc18292bc9d0bbb4e96489e630659b75af4442295c1",
+        "ddr_arbiter3_turnaround.v": "7b2fb7df5f3ed493489dd7c05b4dedbda85e445b03ef316df233e61e23f184ee",
+        "ddr_quad_tile_cache.v": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+        "ddr_result_display_raw_corrected.v": "9c4ed63c65ca7595c56f73a209623f64ea8e3abe989eec85b448744ce6a43c73",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+        "ddr_result_writer_stream.v": "560890a3947b7ac37c616f8d350156027f87c4d8ae23bb5061b7096fd5c6f745",
+        "ddr_self_test.v": "23dbeab252130129cc5fc684dc9b6e8b55778a5df9271bf661564ab440c25e34",
+        "ddr_word_engine_result_burst.v": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187",
+        "frame_processor_stream.v": "238f3fe9883cd81de21493fc36c01cab61f6ba93802eaf5086585d63b770755d",
+        "frame_telemetry_overlay.v": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017",
+        "homography_solver.v": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9",
+        "manager_raw.v": "dd1b4aa1bb14b5d0539d5cd2a2be99ce321ffdb94514a8573e0418461aed9006",
+        "marker_color_classifier.v": "eeda1ed5408c00ddb75e8ce45836ca483292e0f283e72c360a903f83a6e4c1e8",
+        "marker_detector.v": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+        "perspective_coord.v": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3",
+        "perspective_core.v": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5",
+        "quad_geometry_guard.v": "fc9a1ceb8bd6c636d0ced1db237511eedb6300a698b92a76997d4ff41eac3257",
+        "quad_packet_bridge.v": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+        "reset_sync.v": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2",
+        "rx_preview_stream.v": "a357548e340806582ef55fd7fa7f25cec61bc0019f8193456854f1220c7e0750",
+        "scaled_div_pipe.v": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741",
+        "signed_div_seq.v": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d",
+        "tb_raw_pipeline.sv": "2af79f2a0c646487148e9d7ada9071a89660a27cc02d6bd30ed83f9a8b9b7a18",
+        "unsigned_div_seq.v": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3",
+        "video_correct_ddr_continuous_core.v": "4a46ce3026962e9c17700d0b2a5622af3426a66b91a7946966d7b7fb7c6c0f62",
+        "video_timing_vtc.v": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+      },
+      "publication_time_ps": [
+        33333595000,
+        50000248000,
+        100000207000,
+        150000149000,
+        200000108000
+      ],
+      "publication_intervals_ns": [
+        16666653.0,
+        49999959.0,
+        49999942.0,
+        49999959.0
+      ],
+      "steady_new_images_per_second": 20.00001866668409,
+      "checked_hdmi_pixels": 22809600
+    },
+    "corrected_native": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_raw_20261016_final_corrected_native",
+      "passes": [
+        "PASS RAW_PIPELINE corrected=1 native=1 pixels=4147200 unique_scans=3 published=3 reads=56901 writes=1036800 physical_frames=6 admitted=5 dropped=0"
+      ],
+      "logs_sha256": {
+        "compile.log": "93f8fe69ab7d75a51d13b710cf31c7feccb98044966d7568ef0b8a3429e0f3b0",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "264171dae8279f172ff0f58cb8b711988f4f2ddd8cbcc7e339e6081e3c0fc08c"
+      },
+      "compiled_source_sha256": {
+        "async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+        "async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
+        "color_marker_detector.v": "b3d8af2a050709c0df76921c7339cc6f8bbcad482b96e7d734cd21648de99340",
+        "continuous_capture_geometry.v": "25fee8c2715a1d16eb333ecccc9557cb84ba9d50c775abc6ba9370949d8540ce",
+        "continuous_capture_rx.v": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776",
+        "continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "continuous_source_path.v": "723700654720063850a01b13a60e2aa8eafacac2a032534bc4ec27b2f163175b",
+        "c_corner_rectifier.v": "eaffa95c6b1f277b4d2d6d36190e1dbaf5972d40932eb8865764941522714443",
+        "c_frame_mode_controller.v": "1a55c8fee3cd453d9a7bc0999b8d2a149c2bfcff6450ccd757965523efbb12bf",
+        "c_stream_burst_correction_path.v": "498fcd8e9a31df67a7fed04979609bed42120ca4edf301e0da32677584fa8be9",
+        "c_stream_correction_path.v": "41398a74a7d1d2e752362019b3efdd3214d51c2e27417bae52a54952e9557630",
+        "ddr_arbiter3.v": "cab398b830250fbbe27ab4b56776fa35dd6504ee58adeb254fcb796ab981c806",
+        "ddr_arbiter3_fair.v": "f812ac7b43287aa44e542fc18292bc9d0bbb4e96489e630659b75af4442295c1",
+        "ddr_arbiter3_turnaround.v": "7b2fb7df5f3ed493489dd7c05b4dedbda85e445b03ef316df233e61e23f184ee",
+        "ddr_quad_tile_cache.v": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+        "ddr_result_display_raw_corrected.v": "9c4ed63c65ca7595c56f73a209623f64ea8e3abe989eec85b448744ce6a43c73",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+        "ddr_result_writer_stream.v": "560890a3947b7ac37c616f8d350156027f87c4d8ae23bb5061b7096fd5c6f745",
+        "ddr_self_test.v": "23dbeab252130129cc5fc684dc9b6e8b55778a5df9271bf661564ab440c25e34",
+        "ddr_word_engine_result_burst.v": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187",
+        "frame_processor_stream.v": "238f3fe9883cd81de21493fc36c01cab61f6ba93802eaf5086585d63b770755d",
+        "frame_telemetry_overlay.v": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017",
+        "homography_solver.v": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9",
+        "manager_raw.v": "dd1b4aa1bb14b5d0539d5cd2a2be99ce321ffdb94514a8573e0418461aed9006",
+        "marker_color_classifier.v": "eeda1ed5408c00ddb75e8ce45836ca483292e0f283e72c360a903f83a6e4c1e8",
+        "marker_detector.v": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+        "perspective_coord.v": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3",
+        "perspective_core.v": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5",
+        "quad_geometry_guard.v": "fc9a1ceb8bd6c636d0ced1db237511eedb6300a698b92a76997d4ff41eac3257",
+        "quad_packet_bridge.v": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+        "reset_sync.v": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2",
+        "rx_preview_stream.v": "a357548e340806582ef55fd7fa7f25cec61bc0019f8193456854f1220c7e0750",
+        "scaled_div_pipe.v": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741",
+        "signed_div_seq.v": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d",
+        "tb_raw_pipeline.sv": "2af79f2a0c646487148e9d7ada9071a89660a27cc02d6bd30ed83f9a8b9b7a18",
+        "unsigned_div_seq.v": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3",
+        "video_correct_ddr_continuous_core.v": "4a46ce3026962e9c17700d0b2a5622af3426a66b91a7946966d7b7fb7c6c0f62",
+        "video_timing_vtc.v": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+      },
+      "publication_time_ps": [
+        47901757000,
+        65530719000,
+        82211817000
+      ],
+      "publication_intervals_ns": [
+        17628962.0,
+        16681098.0
+      ],
+      "checked_hdmi_pixels": 4147200
+    },
+    "raw_reduced": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_raw_20261016_reduced2",
+      "passes": [
+        "PASS RAW_PIPELINE native=0 pixels=22528 unique_scans=5 published=5 reads=361 writes=1280 physical_frames=15 admitted=6 dropped=8"
+      ],
+      "logs_sha256": {
+        "compile.log": "30aa6270948c20b60370bb20e5753287ba25490167051faf50f84661e6ce3599",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "d63eb70b9c9dbedb61493894abab21c135463300b45cc25605c6e37cc5741102"
+      }
+    },
+    "corrected_reduced": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_raw_20261016_corrected_reduced2",
+      "passes": [
+        "PASS RAW_PIPELINE corrected=1 native=0 pixels=12288 unique_scans=3 published=3 reads=333 writes=3072 physical_frames=6 admitted=5 dropped=0"
+      ],
+      "logs_sha256": {
+        "compile.log": "e214ac6e1138e249d6f47d1114a97a2648c7b9193919c16540bfa93561cbb665",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "b7071e4aeddb3e2a5db6c8d5f1aa2dae4d155a4fe788d9edac4437caa64ddefe"
+      }
+    },
+    "display_small": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_display_20261016_single_ack",
+      "passes": [
+        "PASS RAW_CORRECTED native=0 late=0 checked=5120 commands=176 responses=176 stalls=108 first=40 last=40 borders=1024 swaps=5 scans=16"
+      ],
+      "logs_sha256": {
+        "compile.log": "aab39d236a32bc00f98adda01cd09856cdb95bd2662a256d4c6d7f176edbf6d5",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "75179e7ed9003807b5be1431b02450caa8aeb31cb3623fabece3e12ea03fad24"
+      }
+    },
+    "display_late": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_display_20261016_single_ack_late",
+      "passes": [
+        "PASS RAW_CORRECTED native=0 late=1 checked=3072 commands=99 responses=98 stalls=71 first=24 last=24 borders=512 swaps=3 scans=13"
+      ],
+      "logs_sha256": {
+        "compile.log": "b07db0d790510a2d9877c39f8c458059c22ff681c2c72dad55ed23b989afd003",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "6211a5e55c87780ecac68b7e07f30d8b2839a497b964ba2eab5453ce68e32cf1"
+      }
+    },
+    "geometry_units": {
+      "output_directory": "D:\\FPGA\\output\\c_color_geometry_20261016_root_units",
+      "passes": [
+        "PASS color unit case=0 expect_valid=1 corners=650,70/1250,110/1320,1010/590,960",
+        "PASS color unit case=1 expect_valid=1 corners=1100,100/1700,160/1650,950/1150,900",
+        "PASS color unit case=2 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=3 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=4 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=5 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=6 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=7 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=8 expect_valid=0 corners=590,960/1250,110/1320,1010/650,70",
+        "PASS color unit case=9 expect_valid=0 corners=300,200/1400,200/700,400/500,800",
+        "PASS color unit case=10 expect_valid=0 corners=800,500/840,500/840,540/800,540",
+        "PASS color unit case=11 expect_valid=0 corners=800,500/840,500/840,540/800,540",
+        "PASS color unit12 cases canonical/dim/right-side/color-swap/missing/black/tiny/large/sparse/thin/nonconvex/small-area/outside"
+      ],
+      "logs_sha256": {
+        "compile.log": "6dfcb2d65ad11518ba34b2274623755b5617d138dcfd679cbdc319fa24d9f790",
+        "simulation.log": "6f08858e10dfa62ce5f75c97305ca004f9e5500a8c994f26184ed7d2784af9b8"
+      }
+    },
+    "geometry_cdc": {
+      "output_directory": "D:\\FPGA\\output\\c_color_geometry_20261016_root_cdc",
+      "passes": [
+        "PASS geometry CDC2 fullHD source rasters exact color corners/reject-black bank/gen held metadata and2 retained overflow terminals shared-reset"
+      ],
+      "logs_sha256": {
+        "compile.log": "5487599788bac14c9f1a760033ffb426ecdae4681c8dc324b03f662a723f0ddb",
+        "simulation.log": "6d87b9f42bc5ecb8c287bcaeeda13619e46527c5f159a8b2cbb17bb06c99f0da"
+      }
+    },
+    "geometry_h": {
+      "output_directory": "D:\\FPGA\\output\\c_color_geometry_20261016_root_h",
+      "passes": [
+        "PASS original B solver/perspective25 independent probes exact H direction D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/canonical",
+        "PASS original B solver/perspective25 independent probes exact H direction D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/right_side",
+        "PASS B math unmodified2 color quads H and50 grid probes with independent software oracle"
+      ],
+      "logs_sha256": {
+        "compile.log": "42aab3a8144667942e5de380af1f2c997bbd12ee8b61d1331485e373cdadcd37",
+        "simulation.log": "3aa96d0ec348ddcef3d9153e456b97e8ed0adb292f2c2e7329a8118e64ec4b4e"
+      }
+    },
+    "geometry_images": {
+      "output_directory": "D:\\FPGA\\output\\c_color_geometry_20261016_root_images",
+      "passes": [
+        "PASS RGB image regression valid=1 events=2874 corners96=28a0464e206e5283f224e3c0 file=                                                                                                                                        D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/canonical/events.hex",
+        "PASS RGB image regression valid=1 events=2096 corners96=44c0646a40a06723b647e384 file=                                                                                                                                       D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/right_side/events.hex",
+        "PASS RGB image regression valid=0 events=2874 corners96=24e3c04e206e5283f228a046 file=                                                                                                                                   D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/swapped_colors/events.hex",
+        "PASS RGB image regression valid=0 events=1948 corners96=28a0464e206e00000024e3c0 file=                                                                                                                                   D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/missing_yellow/events.hex",
+        "PASS RGB image regression valid=0 events=0 corners96=000000000000000000000000 file=                                                                                                                                    D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/unmarked_grid/events.hex"
+      ],
+      "logs_sha256": {
+        "compile.log": "ec60392cc65ccc40e5da2f4f66dd7bae71ad79c9202e0168a50f9ccd64e0a74f",
+        "simulation.log": "1c0a5b5fc13eff21f8f8c499222cc7ffc446d8bf7abc07c2550521e526d976b2"
+      }
+    },
+    "manager_raw": {
+      "output_directory": "D:\\FPGA\\output\\c_manager_raw_20261016_green",
+      "passes": [
+        "PASS MANAGER_RAW no-marker RAW, immutable descriptor, delayed metadata, lease release, CORRECTED join, writer rejection"
+      ],
+      "logs_sha256": {
+        "compile.log": "68d9bb9b0479ac1c8c646fda89fe20add160bf5e63cc57841cc33a544b62cc30",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "eeb8a2448d7fa9f5bcf0848b6509ae9fa9f384f3d0b0c961b07ca16a1c9d7ff0"
+      }
+    },
+    "control": {
+      "output_directory": "D:\\FPGA\\output\\c_board_next_control_20261016_guard_green",
+      "passes": [
+        "PASS FULL_RESET_HOLD_READY_FENCE_RETRY_BUDGET_TRAIN_TIMEOUT_MANUAL_RESET",
+        "PASS RAW_NO_GEOMETRY_FULL_SOURCE_LEASE_MODE_ACK_ABORT_DRAIN_HARD_RESET"
+      ],
+      "logs_sha256": {
+        "compile.log": "96d074699640bc6c7220139437f190a10c6ad15bc9a20dedd759dce93b82c4b8",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tb_board_recovery.log": "f3b6320c29b0fe3243f5ca6443656b4a818bfce8276dd542e84ac87251ca8aa8",
+        "tb_frame_modes.log": "a2f0e5676efa07e92e0d606a51969e563611b3e682ad4d9463e32247c8cbe18f"
+      }
+    },
+    "manager_expected_red": {
+      "expected_failure": "RAW_MUST_PUBLISH_WITHOUT_GEOMETRY",
+      "is_green_qualification": false
+    },
+    "ownership_guard_expected_red": {
+      "expected_failure": "LOCKED_RAW_BANK_LAUNCHED_CORRECTION",
+      "is_green_qualification": false
+    }
+  },
+  "upstream_heads_checked": {
+    "main-A": "256b5ea2b8bf4a559f19adfca7465161654b8226",
+    "main-B": "4106f3babb65096927d365bbab55f070b90325e2"
+  },
+  "diagnostics_existing_unit_evidence": {
+    "schema": "fault_diagnostics_candidate/v1",
+    "date_local": "2026-10-16",
+    "status": "FROZEN_LOCAL_INJECTION_TESTS_PASS_NOT_INTEGRATED",
+    "source": {
+      "module": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\board_next_20261016\\diagnostics\\fault_diagnostics_stream.v",
+      "sha256": "5789fa490b1c1cf75d573fb672241a059ade3c303285037071c37d60bf54abcb",
+      "tick_bits_default": 48,
+      "test_sha256": "7ad0ca2658b4f1d14f733cf7597af241eee1213a48918baebd6b4898d80cf63c",
+      "legacy_red_test_sha256": "bdb5764d501e3a518e650380f0c7c841ad0873c06003a49a79d5d37eac06d853",
+      "runner_sha256": "e64a03d0677ee22a555d20eb6b9de13c8fc8fd3165b668f8e53664a06ca0760b"
+    },
+    "scope": {
+      "new_directory": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\board_next_20261016\\diagnostics",
+      "frozen_production_RTL_modified": false,
+      "command_abort_credit_owner_or_reset_outputs": false,
+      "full_system_PDS_board_run_started": false
+    },
+    "interface": {
+      "source_input": "proc_source_fault[3:0], opaque raw proc-owned vector/code; never remapped to legacy ALIGN",
+      "UI_inputs": [
+        "ui_engine_fault",
+        "ui_engine_reason[3:0]",
+        "ui_phy_fail",
+        "ui_align_error",
+        "ui_self_fail",
+        "ui_stage[3:0]",
+        "ui_dqs_valid[3:0]"
+      ],
+      "current_mask_bits": {
+        "0": "SOURCE",
+        "1": "ENGINE",
+        "2": "PHY",
+        "3": "ALIGN",
+        "4": "SELF"
+      },
+      "kind_encoding": {
+        "0": "NONE",
+        "1": "SOURCE",
+        "2": "ENGINE",
+        "3": "PHY",
+        "4": "ALIGN",
+        "5": "SELF"
+      },
+      "current_kind_priority": [
+        "SOURCE",
+        "ENGINE",
+        "PHY",
+        "ALIGN",
+        "SELF"
+      ],
+      "raw_fields": "Current mask and independent source/engine raw codes preserve concurrent causes. History is never used in current selection."
+    },
+    "CDC": {
+      "scheme": "bundled held-payload toggle req/ack mailbox; each toggle uses two ASYNC_REG flops",
+      "payload_bits_at_default": 105,
+      "refresh": "every completed round trip",
+      "first_source_event": "captured in proc independently of mailbox busy, then held until common reset and carried in every later payload",
+      "current_source": "coherent last received sample, not instantaneous proc level",
+      "current_sample_proc_tick_and_received_UI_tick": true,
+      "later_short_source_transitions_may_coalesce": true,
+      "reset": "common asynchronous assertion across both domains, local synchronous deassertion; no one-sided reset API"
+    },
+    "time_semantics": {
+      "tick_bits_parameterized": true,
+      "default_UI_wrap_at125MHz_seconds": 2251799.813685248,
+      "first_record_order": "first observed in UI sampling order; not physical cross-clock cause order",
+      "UI_and_proc_ticks": "independent units/origins, modulo2^TICK_BITS; do not compare numerically across domains",
+      "source_first_tick": "true first nonzero proc sampling edge retained separately",
+      "UI_context_for_source_history": "context at UI observation, not reconstructed proc-event-time PHY state"
+    },
+    "tests": [
+      {
+        "log": "D:\\FPGA\\output\\c_fault_diagnostics_20261016_legacy_red\\simulation.log",
+        "sha256": "69d6d26a4a05760592ca71c59eb204503cab88c0a50e87c2c37c4243a94c7b33",
+        "expected_pass": false,
+        "observed_pass": false,
+        "findings": [
+          "** Fatal: HISTORY_OVERRIDES_CURRENT_SOURCE current_source=7 actual_display=26 historical_detail=26"
+        ]
+      },
+      {
+        "log": "D:\\FPGA\\output\\c_fault_diagnostics_20261016_green\\tick48.log",
+        "sha256": "dabc76266b496ee323703b671b319500a6c6b1c044a01aed658b80f01715c356",
+        "expected_pass": true,
+        "observed_pass": true,
+        "findings": [
+          "PASS history ALIGN clear then source-only raw7 current/source LED and immutable first UI event",
+          "PASS sustained ALIGN, secondary engine reason5, simultaneous PHY/ALIGN/SELF masks and current clearing",
+          "PASS all raw source bits/multi-bit codes coherent; simultaneous source+engine retain independent raw reasons",
+          "PASS stopped UI/backpressured CDC mailbox stable; one-proc-cycle first source pulse retained without fabricating current fault",
+          "PASS FAULT_DIAGNOSTICS TICK_BITS=48 updates=38 held_payload_checks=134 wraps=0 reset=1 first_observed_UI_order=1"
+        ]
+      },
+      {
+        "log": "D:\\FPGA\\output\\c_fault_diagnostics_20261016_green\\tick8.log",
+        "sha256": "821aa9a13550bc10eb79f5b62fa9d16fb5fa1ee12179df78ae6168bad1e8b93a",
+        "expected_pass": true,
+        "observed_pass": true,
+        "findings": [
+          "PASS history ALIGN clear then source-only raw7 current/source LED and immutable first UI event",
+          "PASS sustained ALIGN, secondary engine reason5, simultaneous PHY/ALIGN/SELF masks and current clearing",
+          "PASS all raw source bits/multi-bit codes coherent; simultaneous source+engine retain independent raw reasons",
+          "PASS stopped UI/backpressured CDC mailbox stable; one-proc-cycle first source pulse retained without fabricating current fault",
+          "PASS FAULT_DIAGNOSTICS TICK_BITS=8 updates=121 held_payload_checks=382 wraps=2 reset=1 first_observed_UI_order=1"
+        ]
+      }
+    ],
+    "compiled_source_hashes": {
+      "fault_diagnostics_stream.v": "5789fa490b1c1cf75d573fb672241a059ade3c303285037071c37d60bf54abcb",
+      "tb_fault_diagnostics.sv": "7ad0ca2658b4f1d14f733cf7597af241eee1213a48918baebd6b4898d80cf63c",
+      "tb_legacy_fault_red.sv": "bdb5764d501e3a518e650380f0c7c841ad0873c06003a49a79d5d37eac06d853"
+    },
+    "validation_summary": {
+      "legacy_red": "Minimal reproduction of frozen top selector fails HISTORY_OVERRIDES_CURRENT_SOURCE source7/history26. Not a full-board injection.",
+      "default_48bit": "38 coherent mailbox updates and134 held-payload checks pass;0 errors/warnings.",
+      "small_8bit": "121 updates,382 held-payload checks,2 UI timestamp wraps pass;0 errors/warnings.",
+      "cases": [
+        "historical ALIGN clear then source-only raw7",
+        "one-UI-cycle ALIGN with raw stage/DQS/time capture",
+        "sustained ALIGN then secondary engine reason5",
+        "concurrent SOURCE/ENGINE/PHY/ALIGN/SELF with independent raw codes",
+        "all source bits and multiple-bit values",
+        "UI stopped/mailbox busy; one-proc-cycle first-source pulse still retained in history while current remains clear",
+        "shared reset during in-flight mailbox with UI stopped; no replay",
+        "first history immutable across timestamp wrap"
+      ],
+      "clock_periods_ns": {
+        "proc": 14,
+        "UI": 8
+      }
+    },
+    "read_only_review": {
+      "source_hashes": {
+        "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\diagnostics\\ddr_camera_hires_prefetch_20261012\\results\\video_correct_ddr_top.v": "950b2430747d8888f834651cc462d520b42a281c53b57a07bc020bd87fcbc961",
+        "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\rtl\\top\\video_correct_ddr_continuous_core.v": "dc1d490c54303d2856d5e7ab738f6b5f3608f4d04f7db6bad5be940c92f02a62",
+        "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\rtl\\stream\\c_stream_burst_correction_path.v": "498fcd8e9a31df67a7fed04979609bed42120ca4edf301e0da32677584fa8be9",
+        "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\rtl\\stream\\ddr_arbiter3_turnaround.v": "7b2fb7df5f3ed493489dd7c05b4dedbda85e445b03ef316df233e61e23f184ee"
+      },
+      "confirmed": [
+        "historical memory_detail26 overrides later source-only generic7 in legacy screen_status",
+        "dedicated fault LED aggregate omits source, though another frame_error LED includes source"
+      ],
+      "unproven_protection_observations": [
+        "single-UI-cycle raw ALIGN can be shorter than proc clock and may be missed by level synchronizers; native phase-swept fault injection needed before any protection change",
+        "immediate source release on core abort/error relies on generation discard/drain contracts; no new system fault/late-ACK evidence generated here",
+        "hard sticky engine fault can prevent pending owned work from draining until coordinated hard reset; do not independently reset owners"
+      ],
+      "protection_modified": false
+    },
+    "remaining_limits": [
+      "Not integrated into any production core/top, HUD, LED or native engine; parent must wire a new candidate and document source-vector bit mapping.",
+      "No full60/PDS/board run. Synthesizable Verilog structure and ModelSim compilation are not physical implementation or CDC signoff.",
+      "UI inputs must be UI-owned/synchronously sampled; unclocked sub-UI pulses require a defined upstream capture circuit.",
+      "Stage/DQS context tied to zero means unconnected if recorded as such in the integration manifest; do not interpret as measured PHY state.",
+      "Later transient source levels can coalesce; this is current-plus-first-event diagnostics, not a complete event FIFO.",
+      "Any multi-bit display/export needs another coherent snapshot transfer. Do not reintroduce per-bit bus tearing.",
+      "The observer does not infer RAW motion, marker quality or causality of HELD video. Those measurements remain independent."
+    ]
+  },
+  "frozen_v4s_sbit_unchanged_sha256": "3e3475d30e6fa2488a57a084aa236353077b91d80969b7d1c412c89c064d1b50",
+  "remaining": [
+    "RAW throughput about20 new images/s, not60",
+    "Board top mode/status/point/H diagnostic wiring",
+    "Full-system memory recovery injection and real PHY fault root cause",
+    "PDS implementation/timing of new candidate",
+    "Camera geometry, optical clarity, long-running motion acceptance"
+  ]
+}

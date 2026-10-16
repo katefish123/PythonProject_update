@@ -1,0 +1,23 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 21:44:35 on Oct 16,2026
+vlog -sv "+define+DETECTOR_MODULE=color_marker_detector" D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\unsigned_div_seq.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\async_packet_fifo.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\async_packet_stream.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\marker_detector.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\homography_solver.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\signed_div_seq.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\perspective_coord.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\scaled_div_pipe.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\color_marker_detector.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\continuous_capture_geometry.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\marker_color_classifier.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\quad_geometry_guard.v D:\FPGA\output\c_color_geometry_20261016_root_h\source_snapshot\tb_geometry_h.sv 
+-- Compiling module unsigned_div_seq
+-- Compiling module async_packet_fifo
+-- Compiling module async_packet_stream
+-- Compiling module marker_detector
+-- Compiling module homography_solver
+-- Compiling module signed_div_seq
+-- Compiling module perspective_coord
+-- Compiling module scaled_div_pipe
+-- Compiling module color_marker_detector
+-- Compiling module continuous_capture_geometry
+-- Compiling module marker_color_classifier
+-- Compiling module quad_geometry_guard
+-- Compiling module tb_geometry_h
+
+Top level modules:
+	marker_detector
+	continuous_capture_geometry
+	tb_geometry_h
+End time: 21:44:36 on Oct 16,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

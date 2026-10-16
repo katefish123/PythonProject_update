@@ -1,0 +1,93 @@
+{
+  "status": "software_reference_only_not_board_acceptance",
+  "opencv_version": "5.0.0",
+  "materials": [
+    {
+      "archive": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\board_next_20261016\\review\\materials\\original_black_chart.jpg",
+      "original_path": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\codex-clipboard-4dbd4c15-fa66-48f1-8ae4-d6f4207d5c69.jpg",
+      "sha256": "9efd4b99fd10e32b899097ef52cdc53078be69c852d05c00e53c802f10c9caca",
+      "space": "original_test_file"
+    },
+    {
+      "archive": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\board_next_20261016\\review\\materials\\board_black_chart_output.png",
+      "original_path": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\codex-clipboard-7fc8fda7-25b2-49fb-87fe-07a0092173dd.png",
+      "sha256": "61aa74c974a5d05fee23803a75647e64ddc3970b13322c843fe723bb3b3c22c1",
+      "space": "board_output_screenshot_not_raw_camera_input"
+    },
+    {
+      "archive": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\board_next_20261016\\review\\materials\\board_colored_chart_output.png",
+      "original_path": "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\codex-clipboard-464238eb-ad39-4941-a8c1-a7bcea16f833.png",
+      "sha256": "24acaa024a6e4365e2300099ad5bd61378c0d25e994ce42f2293ca40d914246b",
+      "space": "board_output_screenshot_not_raw_camera_input"
+    }
+  ],
+  "original_jpg_size": [
+    1586,
+    992
+  ],
+  "corner_space": "original JPG1586x992 pixel coordinates, NEVER1920x1080 camera coordinates",
+  "source_black_component_centroids_TL_TR_BR_BL": [
+    [
+      488.5244445800781,
+      104.02322387695312
+    ],
+    [
+      1331.259521484375,
+      197.39376831054688
+    ],
+    [
+      1405.46240234375,
+      909.010986328125
+    ],
+    [
+      148.47547912597656,
+      874.5233154296875
+    ]
+  ],
+  "target_size": [
+    765,
+    1080
+  ],
+  "target_corners": [
+    [
+      0.0,
+      0.0
+    ],
+    [
+      764.0,
+      0.0
+    ],
+    [
+      764.0,
+      1079.0
+    ],
+    [
+      0.0,
+      1079.0
+    ]
+  ],
+  "forward_source_to_target_H": [
+    [
+      0.7685398984961096,
+      0.33918386286903573,
+      -410.73352595311684
+    ],
+    [
+      -0.21750610434164952,
+      1.9631461365193115,
+      -97.95574124604299
+    ],
+    [
+      -0.0001671994299917559,
+      0.000566285654962083,
+      1.0
+    ]
+  ],
+  "target_ratio_policy": "Existing765x1080 convention retained; the printed640x480 text is not a target-aspect measurement.",
+  "limitations": [
+    "No raw camera frame supplied; no real-camera selected centroids or H are inferred.",
+    "Output screenshots and original JPG are distinct coordinate spaces.",
+    "Four-point software warp does not prove printed grid is a metrically exact calibration chart.",
+    "The earlier black-only mismatch finding does not alone explain the black-marker board failure."
+  ]
+}

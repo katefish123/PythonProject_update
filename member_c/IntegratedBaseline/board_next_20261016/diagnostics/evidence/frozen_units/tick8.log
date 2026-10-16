@@ -1,0 +1,36 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "onfinish stop;run -all;quit -f" work.tb_fault_diagnostics -gTB=8 
+# Start time: 17:41:49 on Oct 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_fault_diagnostics(fast)
+# onfinish stop
+# run -all
+# PASS history ALIGN clear then source-only raw7 current/source LED and immutable first UI event
+# PASS sustained ALIGN, secondary engine reason5, simultaneous PHY/ALIGN/SELF masks and current clearing
+# PASS all raw source bits/multi-bit codes coherent; simultaneous source+engine retain independent raw reasons
+# PASS stopped UI/backpressured CDC mailbox stable; one-proc-cycle first source pulse retained without fabricating current fault
+# PASS FAULT_DIAGNOSTICS TICK_BITS=8 updates=121 held_payload_checks=382 wraps=2 reset=1 first_observed_UI_order=1
+# ** Note: $finish    : source_snapshot/tb_fault_diagnostics.sv(97)
+#    Time: 7425 ns  Iteration: 0  Instance: /tb_fault_diagnostics
+# Break at source_snapshot/tb_fault_diagnostics.sv line 97
+# Stopped at source_snapshot/tb_fault_diagnostics.sv line 97
+# quit -f
+# End time: 17:41:51 on Oct 16,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

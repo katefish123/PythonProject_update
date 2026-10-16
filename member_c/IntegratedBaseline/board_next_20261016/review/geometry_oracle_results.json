@@ -1,0 +1,276 @@
+{
+  "status": "mathematical_audit_only_not_board_acceptance",
+  "oracle": "independent Fraction Gaussian elimination, eight destination/source constraints",
+  "fixture": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\system_test\\fixtures\\fullhd\\metadata.json",
+  "fixture_sha256": "e694e136393e519b2af1acbf94ab29ac779dcef1207eb199db290d9235e29b82",
+  "frames": [
+    {
+      "variant": 0,
+      "endpoints": [
+        {
+          "logical_destination": [
+            0,
+            0
+          ],
+          "physical_result_destination": [
+            1,
+            0
+          ],
+          "source_corner": [
+            630,
+            136
+          ],
+          "q24_mapped": [
+            630.0,
+            136.0
+          ],
+          "max_axis_error_source_pixels": 0.0
+        },
+        {
+          "logical_destination": [
+            764,
+            0
+          ],
+          "physical_result_destination": [
+            765,
+            0
+          ],
+          "source_corner": [
+            1460,
+            224
+          ],
+          "q24_mapped": [
+            1460.0547617127545,
+            224.0084046338233
+          ],
+          "max_axis_error_source_pixels": 0.05476171275449695
+        },
+        {
+          "logical_destination": [
+            764,
+            1079
+          ],
+          "physical_result_destination": [
+            765,
+            1079
+          ],
+          "source_corner": [
+            1530,
+            970
+          ],
+          "q24_mapped": [
+            1529.9852386883163,
+            969.9906712216067
+          ],
+          "max_axis_error_source_pixels": 0.0147613116838469
+        },
+        {
+          "logical_destination": [
+            0,
+            1079
+          ],
+          "physical_result_destination": [
+            1,
+            1079
+          ],
+          "source_corner": [
+            276,
+            936
+          ],
+          "q24_mapped": [
+            275.97984969303474,
+            935.9315692436543
+          ],
+          "max_axis_error_source_pixels": 0.06843075634571599
+        }
+      ],
+      "max_endpoint_error_source_pixels": 0.06843075634571599
+    },
+    {
+      "variant": 1,
+      "endpoints": [
+        {
+          "logical_destination": [
+            0,
+            0
+          ],
+          "physical_result_destination": [
+            1,
+            0
+          ],
+          "source_corner": [
+            636,
+            132
+          ],
+          "q24_mapped": [
+            636.0,
+            132.0
+          ],
+          "max_axis_error_source_pixels": 0.0
+        },
+        {
+          "logical_destination": [
+            764,
+            0
+          ],
+          "physical_result_destination": [
+            765,
+            0
+          ],
+          "source_corner": [
+            1454,
+            228
+          ],
+          "q24_mapped": [
+            1454.0352481263942,
+            228.00549922969574
+          ],
+          "max_axis_error_source_pixels": 0.035248126394285026
+        },
+        {
+          "logical_destination": [
+            764,
+            1079
+          ],
+          "physical_result_destination": [
+            765,
+            1079
+          ],
+          "source_corner": [
+            1522,
+            964
+          ],
+          "q24_mapped": [
+            1521.95863805287,
+            963.9737569743658
+          ],
+          "max_axis_error_source_pixels": 0.04136194713010119
+        },
+        {
+          "logical_destination": [
+            0,
+            1079
+          ],
+          "physical_result_destination": [
+            1,
+            1079
+          ],
+          "source_corner": [
+            284,
+            942
+          ],
+          "q24_mapped": [
+            283.9793154902124,
+            941.9312718925097
+          ],
+          "max_axis_error_source_pixels": 0.06872810749025976
+        }
+      ],
+      "max_endpoint_error_source_pixels": 0.06872810749025976
+    },
+    {
+      "variant": 2,
+      "endpoints": [
+        {
+          "logical_destination": [
+            0,
+            0
+          ],
+          "physical_result_destination": [
+            1,
+            0
+          ],
+          "source_corner": [
+            642,
+            128
+          ],
+          "q24_mapped": [
+            642.0,
+            128.0
+          ],
+          "max_axis_error_source_pixels": 0.0
+        },
+        {
+          "logical_destination": [
+            764,
+            0
+          ],
+          "physical_result_destination": [
+            765,
+            0
+          ],
+          "source_corner": [
+            1448,
+            232
+          ],
+          "q24_mapped": [
+            1448.0304295809317,
+            232.00485430544873
+          ],
+          "max_axis_error_source_pixels": 0.030429580931738098
+        },
+        {
+          "logical_destination": [
+            764,
+            1079
+          ],
+          "physical_result_destination": [
+            765,
+            1079
+          ],
+          "source_corner": [
+            1516,
+            960
+          ],
+          "q24_mapped": [
+            1516.032809363928,
+            960.0207722688398
+          ],
+          "max_axis_error_source_pixels": 0.03280936392787441
+        },
+        {
+          "logical_destination": [
+            0,
+            1079
+          ],
+          "physical_result_destination": [
+            1,
+            1079
+          ],
+          "source_corner": [
+            290,
+            946
+          ],
+          "q24_mapped": [
+            289.99697667926995,
+            945.9899609800949
+          ],
+          "max_axis_error_source_pixels": 0.010039019905055995
+        }
+      ],
+      "max_endpoint_error_source_pixels": 0.03280936392787441
+    }
+  ],
+  "ideal_colored_markers_rejected_by_black_gate": {
+    "red": true,
+    "green": true,
+    "blue": true,
+    "yellow": true
+  },
+  "full_black_roi": {
+    "pixels": 10404,
+    "accepted_count_range": [
+      64,
+      16384
+    ],
+    "span": 101,
+    "accepted_max_span": 256,
+    "passes_count_and_span": true
+  },
+  "screenshot_is_raw_source_golden": false,
+  "limitations": [
+    "Display screenshot cannot recover the actual raw source RGB or selected source centroids.",
+    "Fixture corner checks validate inverse-map direction, not real-camera marker detection.",
+    "No physical timing, optics, complete-grid or per-frame hardware acceptance claim."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "unmarked_grid",
+  "synthetic_original_frame": true,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "valid": false,
+  "detected_color_order": [
+    "red TL",
+    "green TR",
+    "yellow BR",
+    "blue BL"
+  ],
+  "corners": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "corners96_hex": "000000000000000000000000",
+  "statistics": [
+    {
+      "n": 0
+    },
+    {
+      "n": 0
+    },
+    {
+      "n": 0
+    },
+    {
+      "n": 0
+    }
+  ],
+  "geometry": {
+    "turns": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "area2": 0
+  },
+  "events": 0
+}

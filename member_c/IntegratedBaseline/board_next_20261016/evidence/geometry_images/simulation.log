@@ -1,0 +1,33 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "run -all; quit -code 0" work.tb_image_regression 
+# Start time: 21:44:40 on Oct 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_image_regression(fast)
+# run -all
+# PASS RGB image regression valid=1 events=2874 corners96=28a0464e206e5283f224e3c0 file=                                                                                                                                        D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/canonical/events.hex
+# PASS RGB image regression valid=1 events=2096 corners96=44c0646a40a06723b647e384 file=                                                                                                                                       D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/right_side/events.hex
+# PASS RGB image regression valid=0 events=2874 corners96=24e3c04e206e5283f228a046 file=                                                                                                                                   D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/swapped_colors/events.hex
+# PASS RGB image regression valid=0 events=1948 corners96=28a0464e206e00000024e3c0 file=                                                                                                                                   D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/missing_yellow/events.hex
+# PASS RGB image regression valid=0 events=0 corners96=000000000000000000000000 file=                                                                                                                                    D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/unmarked_grid/events.hex
+# PASS5 synthetic original1920x1080 RGB image regressions exact independent color centroid/order
+# ** Note: $finish    : D:/FPGA/output/c_color_geometry_20261016_root_images/source_snapshot/tb_image_regression.sv(29)
+#    Time: 215470956 ps  Iteration: 1  Instance: /tb_image_regression
+# End time: 21:44:42 on Oct 16,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

@@ -1,0 +1,90 @@
+{
+  "name": "swapped_colors",
+  "synthetic_original_frame": true,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "valid": false,
+  "detected_color_order": [
+    "red TL",
+    "green TR",
+    "yellow BR",
+    "blue BL"
+  ],
+  "corners": [
+    [
+      590,
+      960
+    ],
+    [
+      1250,
+      110
+    ],
+    [
+      1320,
+      1010
+    ],
+    [
+      650,
+      70
+    ]
+  ],
+  "corners96_hex": "24e3c04e206e5283f228a046",
+  "statistics": [
+    {
+      "n": 923,
+      "bbox": [
+        575,
+        944,
+        605,
+        976
+      ],
+      "occupancy": 0.9022482893450635,
+      "good": true
+    },
+    {
+      "n": 514,
+      "bbox": [
+        1238,
+        99,
+        1263,
+        121
+      ],
+      "occupancy": 0.8595317725752508,
+      "good": true
+    },
+    {
+      "n": 926,
+      "bbox": [
+        1305,
+        994,
+        1336,
+        1026
+      ],
+      "occupancy": 0.8768939393939394,
+      "good": true
+    },
+    {
+      "n": 511,
+      "bbox": [
+        638,
+        59,
+        662,
+        81
+      ],
+      "occupancy": 0.888695652173913,
+      "good": true
+    }
+  ],
+  "geometry": {
+    "turns": [
+      653500,
+      537200,
+      -652700,
+      -536400
+    ],
+    "area2": 800
+  },
+  "events": 2874
+}

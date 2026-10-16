@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 21:40:44 on Oct 16,2026
+vlog -sv D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\control/manager_raw.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\control/tb_manager_raw.sv 
+-- Compiling module continuous_capture_manager
+-- Compiling module tb_manager_raw
+
+Top level modules:
+	tb_manager_raw
+End time: 21:40:44 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,38 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "run -all; quit -code 0" work.tb_geometry_h 
+# Start time: 21:44:37 on Oct 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_geometry_h(fast)
+# run -all
+# H_CORNER dst=0,0 source_UQ8=166400,17920
+# H_CORNER dst=764,0 source_UQ8=319987,28158
+# H_CORNER dst=0,1079 source_UQ8=151038,245757
+# H_CORNER dst=764,1079 source_UQ8=337899,258544
+# PASS original B solver/perspective25 independent probes exact H direction D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/canonical
+# H_CORNER dst=0,0 source_UQ8=281600,25600
+# H_CORNER dst=764,0 source_UQ8=435199,40959
+# H_CORNER dst=0,1079 source_UQ8=294412,230409
+# H_CORNER dst=764,1079 source_UQ8=422417,243210
+# PASS original B solver/perspective25 independent probes exact H direction D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/right_side
+# PASS B math unmodified2 color quads H and50 grid probes with independent software oracle
+# ** Note: $finish    : D:/FPGA/output/c_color_geometry_20261016_root_h/source_snapshot/tb_geometry_h.sv(29)
+#    Time: 20746980 ps  Iteration: 1  Instance: /tb_geometry_h
+# End time: 21:44:38 on Oct 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

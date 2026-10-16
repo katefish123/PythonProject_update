@@ -1,0 +1,5 @@
+D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/canonical/events.hex 1 28a0464e206e5283f224e3c0 2874
+D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/right_side/events.hex 1 44c0646a40a06723b647e384 2096
+D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/swapped_colors/events.hex 0 24e3c04e206e5283f228a046 2874
+D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/missing_yellow/events.hex 0 28a0464e206e00000024e3c0 1948
+D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/board_next_20261016/geometry/fixtures/unmarked_grid/events.hex 0 000000000000000000000000 0

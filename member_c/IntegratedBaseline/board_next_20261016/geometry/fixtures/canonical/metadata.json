@@ -1,0 +1,493 @@
+{
+  "name": "canonical",
+  "synthetic_original_frame": true,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "valid": true,
+  "detected_color_order": [
+    "red TL",
+    "green TR",
+    "yellow BR",
+    "blue BL"
+  ],
+  "corners": [
+    [
+      650,
+      70
+    ],
+    [
+      1250,
+      110
+    ],
+    [
+      1320,
+      1010
+    ],
+    [
+      590,
+      960
+    ]
+  ],
+  "corners96_hex": "28a0464e206e5283f224e3c0",
+  "statistics": [
+    {
+      "n": 511,
+      "bbox": [
+        638,
+        59,
+        662,
+        81
+      ],
+      "occupancy": 0.888695652173913,
+      "good": true
+    },
+    {
+      "n": 514,
+      "bbox": [
+        1238,
+        99,
+        1263,
+        121
+      ],
+      "occupancy": 0.8595317725752508,
+      "good": true
+    },
+    {
+      "n": 926,
+      "bbox": [
+        1305,
+        994,
+        1336,
+        1026
+      ],
+      "occupancy": 0.8768939393939394,
+      "good": true
+    },
+    {
+      "n": 923,
+      "bbox": [
+        575,
+        944,
+        605,
+        976
+      ],
+      "occupancy": 0.9022482893450635,
+      "good": true
+    }
+  ],
+  "geometry": {
+    "turns": [
+      537200,
+      653500,
+      652700,
+      536400
+    ],
+    "area2": 1189900
+  },
+  "events": 2874,
+  "H_q24_signed": [
+    13142221,
+    -2565548,
+    10905190400,
+    875431,
+    11182019,
+    1174405120,
+    -26,
+    -2767,
+    16777216
+  ],
+  "homography_probe_grid": [
+    {
+      "output": [
+        0,
+        0
+      ],
+      "source_UQ12_8": [
+        166400,
+        17920
+      ],
+      "source_float_from_original_grid": [
+        650.0,
+        70.0
+      ],
+      "error_source_pixels": 0.0
+    },
+    {
+      "output": [
+        191,
+        0
+      ],
+      "source_UQ12_8": [
+        204762,
+        20477
+      ],
+      "source_float_from_original_grid": [
+        799.8622378692789,
+        79.99081585795193
+      ],
+      "error_source_pixels": 0.010675369278942526
+    },
+    {
+      "output": [
+        382,
+        0
+      ],
+      "source_UQ12_8": [
+        243148,
+        23036
+      ],
+      "source_float_from_original_grid": [
+        949.8162609095085,
+        89.98775072730058
+      ],
+      "error_source_pixels": 0.019385909508514487
+    },
+    {
+      "output": [
+        573,
+        0
+      ],
+      "source_UQ12_8": [
+        281556,
+        25596
+      ],
+      "source_float_from_original_grid": [
+        1099.8621534691376,
+        99.99081023127584
+      ],
+      "error_source_pixels": 0.03402846913763824
+    },
+    {
+      "output": [
+        764,
+        0
+      ],
+      "source_UQ12_8": [
+        319987,
+        28158
+      ],
+      "source_float_from_original_grid": [
+        1250.0,
+        110.0
+      ],
+      "error_source_pixels": 0.05078125
+    },
+    {
+      "output": [
+        0,
+        270
+      ],
+      "source_UQ12_8": [
+        163092,
+        66970
+      ],
+      "source_float_from_original_grid": [
+        637.0828104324387,
+        261.6049785854921
+      ],
+      "error_source_pixels": 0.00468543243869135
+    },
+    {
+      "output": [
+        191,
+        270
+      ],
+      "source_UQ12_8": [
+        203242,
+        69662
+      ],
+      "source_float_from_original_grid": [
+        793.9279270959274,
+        272.1229879836919
+      ],
+      "error_source_pixels": 0.013864595927429946
+    },
+    {
+      "output": [
+        382,
+        270
+      ],
+      "source_UQ12_8": [
+        243417,
+        72356
+      ],
+      "source_float_from_original_grid": [
+        950.8735858144563,
+        282.64773971663783
+      ],
+      "error_source_pixels": 0.025929564456305343
+    },
+    {
+      "output": [
+        573,
+        270
+      ],
+      "source_UQ12_8": [
+        283617,
+        75051
+      ],
+      "source_float_from_original_grid": [
+        1107.9198832943755,
+        293.1792402694427
+      ],
+      "error_source_pixels": 0.0409770443754951
+    },
+    {
+      "output": [
+        764,
+        270
+      ],
+      "source_UQ12_8": [
+        323842,
+        77748
+      ],
+      "source_float_from_original_grid": [
+        1265.0669163660973,
+        303.71749613553914
+      ],
+      "error_source_pixels": 0.05910386609730267
+    },
+    {
+      "output": [
+        0,
+        540
+      ],
+      "source_UQ12_8": [
+        159462,
+        120816
+      ],
+      "source_float_from_original_grid": [
+        622.9026683553251,
+        471.9437527293447
+      ],
+      "error_source_pixels": 0.006252729344680574
+    },
+    {
+      "output": [
+        191,
+        540
+      ],
+      "source_UQ12_8": [
+        201574,
+        123657
+      ],
+      "source_float_from_original_grid": [
+        787.4132058948898,
+        483.0468143477887
+      ],
+      "error_source_pixels": 0.014768394889756564
+    },
+    {
+      "output": [
+        382,
+        540
+      ],
+      "source_UQ12_8": [
+        243714,
+        126500
+      ],
+      "source_float_from_original_grid": [
+        952.0343580681449,
+        494.1573415128909
+      ],
+      "error_source_pixels": 0.026545568144911158
+    },
+    {
+      "output": [
+        573,
+        540
+      ],
+      "source_UQ12_8": [
+        285881,
+        129345
+      ],
+      "source_float_from_original_grid": [
+        1116.7662364762587,
+        505.2753417567807
+      ],
+      "error_source_pixels": 0.043580226258654875
+    },
+    {
+      "output": [
+        764,
+        540
+      ],
+      "source_UQ12_8": [
+        328075,
+        132192
+      ],
+      "source_float_from_original_grid": [
+        1281.6089528705782,
+        516.4008226217231
+      ],
+      "error_source_pixels": 0.0659841205781504
+    },
+    {
+      "output": [
+        0,
+        810
+      ],
+      "source_UQ12_8": [
+        155458,
+        180198
+      ],
+      "source_float_from_original_grid": [
+        607.264829393533,
+        703.9050306625951
+      ],
+      "error_source_pixels": 0.0070168935329775195
+    },
+    {
+      "output": [
+        191,
+        810
+      ],
+      "source_UQ12_8": [
+        199734,
+        183205
+      ],
+      "source_float_from_original_grid": [
+        780.2285446867626,
+        715.6609487648508
+      ],
+      "error_source_pixels": 0.01760718676257511
+    },
+    {
+      "output": [
+        382,
+        810
+      ],
+      "source_UQ12_8": [
+        244040,
+        186214
+      ],
+      "source_float_from_original_grid": [
+        953.3145402911979,
+        727.425177958954
+      ],
+      "error_source_pixels": 0.03329029119788629
+    },
+    {
+      "output": [
+        573,
+        810
+      ],
+      "source_UQ12_8": [
+        288377,
+        189226
+      ],
+      "source_float_from_original_grid": [
+        1126.522945925623,
+        739.1977270615708
+      ],
+      "error_source_pixels": 0.05028967562293474
+    },
+    {
+      "output": [
+        764,
+        810
+      ],
+      "source_UQ12_8": [
+        332744,
+        192239
+      ],
+      "source_float_from_original_grid": [
+        1299.8538914923654,
+        750.9786049018431
+      ],
+      "error_source_pixels": 0.07264149236539197
+    },
+    {
+      "output": [
+        0,
+        1079
+      ],
+      "source_UQ12_8": [
+        151038,
+        245757
+      ],
+      "source_float_from_original_grid": [
+        590.0,
+        959.9999999999998
+      ],
+      "error_source_pixels": 0.011718749999772626
+    },
+    {
+      "output": [
+        191,
+        1079
+      ],
+      "source_UQ12_8": [
+        197703,
+        248950
+      ],
+      "source_float_from_original_grid": [
+        772.2960893854748,
+        972.4860335195528
+      ],
+      "error_source_pixels": 0.025096019552847793
+    },
+    {
+      "output": [
+        382,
+        1079
+      ],
+      "source_UQ12_8": [
+        244401,
+        252146
+      ],
+      "source_float_from_original_grid": [
+        954.7280178837555,
+        984.9813710879283
+      ],
+      "error_source_pixels": 0.03661163375545584
+    },
+    {
+      "output": [
+        573,
+        1079
+      ],
+      "source_UQ12_8": [
+        291133,
+        255344
+      ],
+      "source_float_from_original_grid": [
+        1137.2959373835258,
+        997.4860231084605
+      ],
+      "error_source_pixels": 0.05765613352582477
+    },
+    {
+      "output": [
+        764,
+        1079
+      ],
+      "source_UQ12_8": [
+        337899,
+        258544
+      ],
+      "source_float_from_original_grid": [
+        1319.9999999999998,
+        1009.9999999999997
+      ],
+      "error_source_pixels": 0.08203124999977263
+    }
+  ],
+  "max_grid_error_source_pixels": 0.08203124999977263,
+  "logical_output": [
+    765,
+    1080
+  ],
+  "storage_output": [
+    768,
+    1080
+  ],
+  "active_x": 1,
+  "black_padding": [
+    1,
+    2
+  ],
+  "independent_B_scalar_solver_match": true
+}
