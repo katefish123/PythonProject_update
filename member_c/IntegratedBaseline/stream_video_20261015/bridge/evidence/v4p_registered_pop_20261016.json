@@ -1,0 +1,143 @@
+{
+  "task": "V4P adapter registered output-credit retirement",
+  "old_path": {
+    "report": "D:\\FPGA\\output\\c_stream_board_v4p_20261016\\build_unqualified_20261016_1006\\report_timing\\video_correct_ddr_top.rtr",
+    "report_sha256": "f401ee624dba883f7f13f320c2945a649eaab823c0ffbbb7a80a86aee43fe1c4",
+    "report_line": 3031,
+    "start": "core/stream_path/cache/tags[37][2]",
+    "end": "core/stream_path/bridge/requests/reserved[1]/CE",
+    "clock_period_ns": 8.0,
+    "setup_slack_ns": -0.741,
+    "failing_endpoints": 13,
+    "logic_levels": 10,
+    "data_arrival_ns": 13.7,
+    "data_required_ns": 12.959,
+    "logic_delay_ns": 1.433,
+    "route_delay_ns": 6.735,
+    "pop_fanout": 111
+  },
+  "hypothesis": "Current downstream pop participates in reserved counter update/CE. Register output acceptance before retiring its credit, keeping the late cache-ready cone away from reserved counter arithmetic and its CE.",
+  "fifo_contract": {
+    "file": "D:\\FPGA\\output\\c_black_burst_merge_v3_20261015\\rtl\\memory\\async_packet_fifo.v",
+    "sha256": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+    "read": "rd_valid <= rd_take and rd_data <= RAM at read edge; adapter accepts prior-cycle rd_valid on the next edge",
+    "invariant": "reserved = count + rd_valid + pop_q",
+    "proof": "R_next=R+rd_en-pop_q; C_next=C+rd_valid-pop; V_next=rd_en; P_next=pop. Thus C_next+V_next+P_next=C+rd_valid+rd_en=R_next. Since rd_en requires R<4, 0<=C<=R<=4.",
+    "full_recovery_counts": [
+      4,
+      3,
+      2,
+      1,
+      1
+    ],
+    "read_acceptance_assumption": "rd_en already gates !empty; FIFO local reset makes empty true until read domain release"
+  },
+  "change": {
+    "file": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\async_packet_stream.v",
+    "register": "pop_q <= m_valid && m_ready; shared asynchronous reset clears pop_q",
+    "reserved_update": "case({rd_en,pop_q}) replaces case({rd_en,pop})",
+    "unchanged": [
+      "quad_packet_bridge.v",
+      "all external ports",
+      "rd_en=rst_n&&!empty&&reserved<4",
+      "current-cycle count/head update",
+      "skid RAM/tail update",
+      "original async_packet_fifo",
+      "timing constraints"
+    ],
+    "effect": "Credit retirement delayed one read clock; data acceptance and payload latency unchanged; sustained ready output remains one packet/read clock."
+  },
+  "tests": [
+    {
+      "name": "red_1040",
+      "expected_result": "FAIL delayed credit contract",
+      "simulation_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_red_1040\\simulation.log",
+      "simulation_sha256": "edc8e1ab82d55cf2e77e27436f442847fe5012bb894bfc2a7acb3bb9af70fbf5",
+      "compile_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_red_1040\\compile.log",
+      "compile_sha256": "6f0b6aceb2bbc6249a19d0e4a5afa89b4d4d36fef3350a15fafc18547b52c31a",
+      "source_snapshot": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_red_1040\\source_snapshot",
+      "stream_sha256": "de5f57d1480789954a20ce6ed2d9df220a5c2603dc42f0b33f8d4c71d6a99349",
+      "result_lines": [
+        "# ** Fatal: delayed-pop credit invariant MODE=0 R=3 C=3 V=0 P=1\r"
+      ]
+    },
+    {
+      "name": "green_credit_1030",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_credit_1030\\simulation.log",
+      "simulation_sha256": "669370b5778f11a3a97a15593606abd824bc79e71233526474c6d3565cd0915c",
+      "compile_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_credit_1030\\compile.log",
+      "compile_sha256": "5a02b9ff27c55951028ee34ae207dbd49c813394ef011acb73359918e9e368b1",
+      "source_snapshot": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_credit_1030\\source_snapshot",
+      "stream_sha256": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+      "result_lines": [
+        "# PASS packet credit mode=0 epoch=2 packets=4096 fullhits=394 stalls=5323 maxrun=3310\r",
+        "# PASS packet credit mode=2 epoch=2 packets=4096 fullhits=394 stalls=738 maxrun=3310\r",
+        "# PASS packet credit mode=1 epoch=2 packets=4096 fullhits=390 stalls=221 maxrun=99\r",
+        "# PASS packet credit mode=0 epoch=3 packets=4096 fullhits=394 stalls=5324 maxrun=3310\r",
+        "# PASS packet credit mode=2 epoch=3 packets=4096 fullhits=393 stalls=741 maxrun=3310\r",
+        "# PASS packet credit mode=1 epoch=3 packets=4096 fullhits=390 stalls=219 maxrun=101\r",
+        "# PASS packet registered-pop credit all3 async rate cases,24576 packets, full recovery/reset/capacity/order\r"
+      ]
+    },
+    {
+      "name": "green_fifo_1030",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_fifo_1030\\simulation.log",
+      "simulation_sha256": "5b2e3bb8546aadc32471f1f295fabfafac503d82f79fa5f12be2691cc96679e8",
+      "compile_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_fifo_1030\\compile.log",
+      "compile_sha256": "7d3809f64b0af432c9cb2e7feb6233cb19407a48a6a1a7ab8f121665751614d4",
+      "source_snapshot": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_fifo_1030\\source_snapshot",
+      "stream_sha256": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+      "result_lines": [
+        "# PASS packet stream async stall full reset throughput max_run=796\r"
+      ]
+    },
+    {
+      "name": "green_quad_1030",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_quad_1030\\simulation.log",
+      "simulation_sha256": "61a157a58d2e3b4c3ea8a13cd76f4d3ff877a5a55af2c521dc83340e510315f6",
+      "compile_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_quad_1030\\compile.log",
+      "compile_sha256": "71ebae166ac5990b57674a3591b45e1e5b807fd43620127f8edcf709eb5d4369",
+      "source_snapshot": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_quad_1030\\source_snapshot",
+      "stream_sha256": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+      "result_lines": [
+        "# PASS quad bridge async metadata/base/generation full/stalls faults max_run=1334\r"
+      ]
+    },
+    {
+      "name": "green_quad1920_1030",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_quad1920_1030\\simulation.log",
+      "simulation_sha256": "2d1c9ae4c121720f670195da7e3dcc8992857e3edd318ecbb38b38e3e185be72",
+      "compile_log": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_quad1920_1030\\compile.log",
+      "compile_sha256": "f9762302632261d4cb26ae9f10801c30ab4b8f623c61a091b3ccc322a362136d",
+      "source_snapshot": "D:\\FPGA\\output\\c_packet_credit_v4p_20261016_green_quad1920_1030\\source_snapshot",
+      "stream_sha256": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+      "result_lines": [
+        "# PASS quad bridge1920 32768packets edge/nearest/bypass/invalid/full/stall/base/generation-wrap/reset max_run=16119 q_run=16037 packet_run=16040\r"
+      ]
+    }
+  ],
+  "coverage": [
+    "Meaningful RED before implementation: delayed-pop capacity invariant fails after first output pop, not a missing-module or compilation error.",
+    "3 async rate cases: write faster/slower/near read;24576 complete scored packets over2 epochs each.",
+    "Conservative capacity invariant checked every read clock; pending FIFO read and popped-credit hard resets; live FIFO/full skid reset.",
+    "No output bubbles for full recovery at fast-write rate; max output runs3310 fast/near,99..101 slow.",
+    "Random source and destination stalls, FIFO full, data immutability/order/epoch, every accepted packet checked.",
+    "Original packet stream PASS796 consecutive; original bridge PASS1334;1920 bridge32768 packets PASS16119 returned clocks."
+  ],
+  "source_hashes": {
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\quad_packet_bridge.v": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\tb_packet_credit.sv": "a30f15922116e9a5d783dcbff0e82506f91dd4289fb4eb43404632430258106e",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\run_v4p_tests.ps1": "e3376e1f786f8302f143844660e09a09bf9729d9c6c13e6aeff5b13f248d264a"
+  },
+  "limits": [
+    "Post-change physical timing remains unverified pending root PDS.",
+    "No full60 integration run performed as requested.",
+    "Adapter is shared by multiple channels; local FIFO/quad regressions passed, root must revalidate full-system throughput."
+  ],
+  "frozen_for_root": true
+}

@@ -23,23 +23,36 @@ module rx_preview_stream #(
  end
  wire rx_local_rst_n=rx_reset_pipe[1],pix_local_rst_n=pix_reset_pipe[1];
  (* ASYNC_REG="TRUE" *)reg[2:0]ack_rx,pub_pix;
- reg pub_toggle,ack_toggle,display_bank;
+ reg pub_toggle,ack_toggle,display_bank,publish_pending;
  reg vs_d,de_d,active,bad;reg[12:0]x,y,max_width;
  reg[23:0]count;
  wire sample=active&&rx_de&&x<IN_W&&y<IN_H&&x%DECIMATE==0&&y%DECIMATE==0&&count<N;
- always @(posedge rx_clk)if(sample)begin
-  if(!pub_toggle)bank1[count]<=rx_rgb;else bank0[count]<=rx_rgb;
+ // Local BRAM write boundary: data, address, bank and enable all describe
+ // the same sampled pixel. Data/address/bank register every RX edge, avoiding
+ // the long shared input-RGB route directly to the dispersed preview RAMs.
+ reg[23:0]write_data,write_addr;reg write_bank,write_valid;
+ always @(posedge rx_clk)begin
+  write_data<=rx_rgb;write_addr<=count;write_bank<=!pub_toggle;
+  if(write_valid)begin
+   if(write_bank)bank1[write_addr]<=write_data;else bank0[write_addr]<=write_data;
+  end
  end
  always @(posedge rx_clk or negedge rx_local_rst_n)begin
-  if(!rx_local_rst_n)begin ack_rx<=0;pub_toggle<=0;vs_d<=0;de_d<=0;active<=0;bad<=0;x<=0;y<=0;count<=0;max_width<=0;observed_width<=0;observed_height<=0;bad_frame<=0;end
+  if(!rx_local_rst_n)write_valid<=0;else write_valid<=sample;
+ end
+ always @(posedge rx_clk or negedge rx_local_rst_n)begin
+  if(!rx_local_rst_n)begin ack_rx<=0;pub_toggle<=0;publish_pending<=0;vs_d<=0;de_d<=0;active<=0;bad<=0;x<=0;y<=0;count<=0;max_width<=0;observed_width<=0;observed_height<=0;bad_frame<=0;end
   else begin
    ack_rx<={ack_rx[1:0],ack_toggle};vs_d<=rx_vs;de_d<=rx_de;
+   // Publish only after the last delayed RAM write has retired. A pending
+   // publication also blocks re-admission before its toggle becomes visible.
+   if(publish_pending&&!write_valid)begin pub_toggle<=~pub_toggle;publish_pending<=0;end
    if(rx_vs&&!vs_d)begin
     if(active)begin
      active<=0;observed_width<=max_width;observed_height<=y;
      bad_frame<=bad||y!=IN_H||x!=0||rx_de||count!=N;
-     if(!bad&&y==IN_H&&x==0&&!rx_de&&count==N)begin pub_toggle<=~pub_toggle;end
-    end else if(pub_toggle==ack_rx[2])begin active<=1;bad<=0;x<=0;y<=0;count<=0;max_width<=0;end
+     if(!bad&&y==IN_H&&x==0&&!rx_de&&count==N)begin publish_pending<=1;end
+    end else if(!publish_pending&&!write_valid&&pub_toggle==ack_rx[2])begin active<=1;bad<=0;x<=0;y<=0;count<=0;max_width<=0;end
    end else if(active)begin
     if(rx_de)begin x<=x+1'b1;if(x>=IN_W||y>=IN_H)bad<=1;if(sample)count<=count+1'b1;end
     if(de_d&&!rx_de)begin if(x!=IN_W)bad<=1;if(x>max_width)max_width<=x;x<=0;y<=y+1'b1;end

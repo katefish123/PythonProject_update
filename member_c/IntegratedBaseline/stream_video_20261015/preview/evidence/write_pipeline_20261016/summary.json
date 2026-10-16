@@ -1,0 +1,132 @@
+{
+  "schema": "preview_write_timing_candidate/v1",
+  "status": "RTL_FROZEN_LOCAL_PIXEL_TESTS_PASS_PHYSICAL_TIMING_PENDING",
+  "date_local": "2026-10-16",
+  "source": {
+    "path": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\preview\\rx_preview_stream.v",
+    "sha256": "a357548e340806582ef55fd7fa7f25cec61bc0019f8193456854f1220c7e0750",
+    "old_sha256": "7e8669366ccc747356a3ce62fdd2b67e8bd41339d15370a4bb4bb6bd7ab6c028",
+    "test_sha256": "36e73baac54b14bcbee54d827fe0b6facd5750c3cf00698cdea286a39dbce203",
+    "runner_sha256": "a58105f2fc783956e2054dc756b17c51174504bf58aaa3731a4581bce6ca857f"
+  },
+  "scope": {
+    "only_modified_rtl": "preview/rx_preview_stream.v",
+    "dedicated_files": [
+      "preview/tb_preview_write_pipeline.sv",
+      "preview/run_write_pipeline.ps1"
+    ],
+    "other_rtl_or_constraints_modified": false
+  },
+  "measured_failure": {
+    "snapshot": "v4p",
+    "report_path": "D:\\FPGA\\output\\c_stream_board_v4p_20261016\\build_unqualified_20261016_1006\\report_timing\\video_correct_ddr_top.rtr",
+    "report_sha256": "f401ee624dba883f7f13f320c2945a649eaab823c0ffbbb7a80a86aee43fe1c4",
+    "worst_rx_path": {
+      "startpoint": "rx_rgb_q[15]/opit_0_inv/CLK",
+      "endpoint": "preview/bank1_15/gopdrm_36k/DA0[0]",
+      "slack_ns": -0.924,
+      "logic_levels": 0,
+      "logic_ns": 0.185,
+      "route_ns": 7.213,
+      "data_net_fanout": 19,
+      "data_net_route_ns": 7.213
+    }
+  },
+  "single_hypothesis": "Break the long shared input RGB route to preview BRAM data pins with one local aligned write-data/address/bank/enable stage.",
+  "implementation": {
+    "pixel_bits": 24,
+    "quantization_added": false,
+    "data_addr_bank": "unconditional same RX edge registers",
+    "write_enable": "sample registered alongside payload/address/bank",
+    "write_latency_rx_cycles": 1,
+    "publication": "valid frame close sets pending; toggle commits only on a later RX edge with write_valid=0",
+    "admission": "pending publication or occupied write stage blocks new frame admission",
+    "display": "unchanged pub/ack synchronization and scan_start-only bank swap",
+    "scaling": "unchanged DECIMATE/PW/PH and registered scan row base",
+    "reset": "either RX or pixel reset flushes shared link identity and write_valid before storage can be exposed"
+  },
+  "tests": [
+    {
+      "name": "unit_red",
+      "outcomes": [
+        {
+          "log": "D:\\FPGA\\output\\c_preview_write_20261016_red_v4p\\D1.log",
+          "log_sha256": "f75d7321b2152d108270d5a7966881edcd4060599488a6bde6597fadf2978fe1",
+          "pass": false,
+          "findings": [
+            "** Fatal: PUBLISH_AFTER_WRITE_DRAIN_REQUIRED publication must follow close and write retirement"
+          ]
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/rx_preview_stream.v": "7e8669366ccc747356a3ce62fdd2b67e8bd41339d15370a4bb4bb6bd7ab6c028",
+        "source_snapshot/tb_preview_write_pipeline.sv": "36e73baac54b14bcbee54d827fe0b6facd5750c3cf00698cdea286a39dbce203"
+      },
+      "source_hashes_file": "D:\\FPGA\\output\\c_preview_write_20261016_red_v4p\\source_hashes.txt"
+    },
+    {
+      "name": "unit_frozen",
+      "outcomes": [
+        {
+          "log": "D:\\FPGA\\output\\c_preview_write_20261016_frozen_v4p\\D1.log",
+          "log_sha256": "ac2e6ede0d5d3816d98f9f04e91a26b17cdfd485960c20521e0468b8413eef3e",
+          "pass": true,
+          "findings": [
+            "PASS PREVIEW_WRITE_PIPELINE D=1 checks=3584 publications=5 all_rgb24=1 last_sample=1 ACK_backpressure=1 cross_frame=1 invalid_frame=1 reset=1"
+          ]
+        },
+        {
+          "log": "D:\\FPGA\\output\\c_preview_write_20261016_frozen_v4p\\D2.log",
+          "log_sha256": "5c553eb174d561717b11a9381a277ceac91eaa105d8b1c156d8cf0ccef076888",
+          "pass": true,
+          "findings": [
+            "PASS PREVIEW_WRITE_PIPELINE D=2 checks=3584 publications=5 all_rgb24=1 last_sample=1 ACK_backpressure=1 cross_frame=1 invalid_frame=1 reset=1"
+          ]
+        },
+        {
+          "log": "D:\\FPGA\\output\\c_preview_write_20261016_frozen_v4p\\D8.log",
+          "log_sha256": "acef733ce4b7844df0ea890767f531130e011cd02213554eba9ad111a6a388a1",
+          "pass": true,
+          "findings": [
+            "PASS PREVIEW_WRITE_PIPELINE D=8 checks=3584 publications=5 all_rgb24=1 last_sample=1 ACK_backpressure=1 cross_frame=1 invalid_frame=1 reset=1"
+          ]
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/rx_preview_stream.v": "a357548e340806582ef55fd7fa7f25cec61bc0019f8193456854f1220c7e0750",
+        "source_snapshot/tb_preview_write_pipeline.sv": "36e73baac54b14bcbee54d827fe0b6facd5750c3cf00698cdea286a39dbce203"
+      },
+      "source_hashes_file": "D:\\FPGA\\output\\c_preview_write_20261016_frozen_v4p\\source_hashes.txt"
+    },
+    {
+      "name": "display_raster",
+      "outcomes": [
+        {
+          "log": "D:\\FPGA\\output\\c_preview_row_20261015_write_pipeline_frozen_v4p\\simulation.log",
+          "log_sha256": "6b50fd1312e26ddfdd612312867810a8d50710d4bcd893bdc97b7bfa499d104d",
+          "pass": true,
+          "findings": [
+            "PASS preview registered row raster checks=2496"
+          ]
+        }
+      ],
+      "compiled_sources_sha256": null,
+      "source_hashes_file": "D:\\FPGA\\output\\c_preview_row_20261015_write_pipeline_frozen_v4p\\source_hashes.txt"
+    }
+  ],
+  "verified_cases": [
+    "D=1,2,8 complete32x16 displayed rasters,3584 exact RGB24 pixels per case",
+    "last sample and minimally separated close/publication",
+    "two complete cross-frame bank swaps with old display immutable during new capture",
+    "no display boundary ACK: next capture ignored, published bank held",
+    "invalid short final line rejected, subsequent valid frame overwrites all samples",
+    "reset between sample and delayed write commit; shared and pixel-only reset; new frame recovery",
+    "existing real display+preview raster test2496 exact pixel checks"
+  ],
+  "remaining_limits": [
+    "No new PDS was started: physical route shortening and timing closure are not established.",
+    "No full60/native system simulation was started by this agent; root must bind the new preview source into the next snapshot.",
+    "Dedicated complete pixel tests use32x16 input and D1/2/8. Default1920x1080 memory size and physical BRAM placement require the root system/PDS run.",
+    "The publication toggle is intentionally one RX edge later than the old valid close; display exchange still occurs only at scan_start."
+  ]
+}

@@ -1,16 +1,57 @@
 {
   "candidate": "v4k_processing57p115",
-  "status": "running",
-  "process_exit_code": null,
+  "status": "timing_failed",
+  "process_exit_code": 0,
   "timing_passed": false,
   "hardware_accepted": false,
   "board_replacement_allowed": false,
   "root": "D:\\FPGA\\output\\c_stream_board_v4p_20261016",
   "build": "D:\\FPGA\\output\\c_stream_board_v4p_20261016\\build_unqualified_20261016_1006",
-  "slow_corner_same_clock_setup": {},
+  "slow_corner_same_clock_setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.712,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": -0.924,
+      "failing_endpoints": 1,
+      "total_endpoints": 15013
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 94.414,
+      "failing_endpoints": 0,
+      "total_endpoints": 1004
+    },
+    "processing_clock": {
+      "setup_wns_ns": 0.414,
+      "failing_endpoints": 0,
+      "total_endpoints": 47003
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.491,
+      "failing_endpoints": 0,
+      "total_endpoints": 2449
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.001,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 3.361,
+      "failing_endpoints": 0,
+      "total_endpoints": 419
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": -0.741,
+      "failing_endpoints": 13,
+      "total_endpoints": 72477
+    }
+  },
   "source_manifest_sha256": "848117ae8670ce41e9d121eee26b0922288710345274d91b8b59e54ac77d0e2f",
-  "build_log_sha256": "f2455ca29236fb379427a251b88fd73e8f5d54aba1933d9b68301d4e2bc47cf3",
-  "timing_report_sha256": null,
+  "build_log_sha256": "525eec0c2c0886c3e35fbc84d61e34794d3af4a58742e4fbac1ed983bdf7c581",
+  "timing_report_sha256": "f401ee624dba883f7f13f320c2945a649eaab823c0ffbbb7a80a86aee43fe1c4",
   "implementation_inputs": {
     "vendor\\b\\rtl\\b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
     "vendor\\b\\rtl\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",

@@ -1,0 +1,61 @@
+Startpoint  : rx_rgb_q[15]/opit_0_inv/CLK
+Endpoint    : preview/bank1_15/gopdrm_36k/DA0[0]
+Path Group  : rx_pixel
+Path Type   : max (slow corner)
+Path Class  : sequential timing path
+Clock Skew  :    -0.191  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+  Capture Clock Delay     :  2.981
+  Launch Clock Delay      :  3.466
+  Clock Pessimism Removal :  0.294
+
+ Location                          Delay Type             Incr        Path         Logical Resource 
+----------------------------------------------------------------------------------------------------
+
+ Clock rx_pixel (rising edge)                            0.000       0.000 r                        
+ K21                                                     0.000       0.000 r       hd_rx_pclk (port)
+                                   net (fanout=1)        0.094       0.094         hd_rx_pclk       
+ IOBD_0_774/DIN                    td                    0.855       0.949 r       hd_rx_pclk_ibuf/opit_0/O
+                                   net (fanout=1)        0.000       0.949         hd_rx_pclk_ibuf/ntD
+ IOLHR_16_774/DI_TO_CLK            td                    0.105       1.054 r       hd_rx_pclk_ibuf/opit_1/DI_TO_CLK
+                                   net (fanout=1)        0.876       1.930         nt_hd_rx_pclk    
+ USCM_215_624/CLKOUT               td                    0.168       2.098 r       clkbufg_1/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.602       2.700         ntclkbufg_1      
+ HCKB_213_514/CLKOUT               td                    0.287       2.987 r       HCKBROUTE_28/CLKOUT
+                                   net (fanout=1212)     0.479       3.466         ntR10783         
+ CLMA_21_865/CLK                                                           r       rx_rgb_q[15]/opit_0_inv/CLK
+
+ CLMA_21_865/Q2                    tco                   0.185       3.651 f       rx_rgb_q[15]/opit_0_inv/Q
+                                   net (fanout=19)       7.213      10.864         rx_rgb_q[15]     
+ DRM_40_60/DA0[0]                                                          f       preview/bank1_15/gopdrm_36k/DA0[0]
+
+ Data arrival time                                                  10.864         Logic Levels: 0  
+                                                                                   Logic: 0.185ns(2.501%), Route: 7.213ns(97.499%)
+----------------------------------------------------------------------------------------------------
+
+ Clock rx_pixel (rising edge)                            6.734       6.734 r                        
+ K21                                                     0.000       6.734 r       hd_rx_pclk (port)
+                                   net (fanout=1)        0.094       6.828         hd_rx_pclk       
+ IOBD_0_774/DIN                    td                    0.730       7.558 r       hd_rx_pclk_ibuf/opit_0/O
+                                   net (fanout=1)        0.000       7.558         hd_rx_pclk_ibuf/ntD
+ IOLHR_16_774/DI_TO_CLK            td                    0.091       7.649 r       hd_rx_pclk_ibuf/opit_1/DI_TO_CLK
+                                   net (fanout=1)        0.746       8.395         nt_hd_rx_pclk    
+ USCM_215_624/CLKOUT               td                    0.143       8.538 r       clkbufg_1/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.530       9.068         ntclkbufg_1      
+ HCKB_213_162/CLKOUT               td                    0.245       9.313 r       HCKBROUTE_34/CLKOUT
+                                   net (fanout=8)        0.402       9.715         ntR10789         
+ DRM_40_60/CLKA[0]                                                         r       preview/bank1_15/gopdrm_36k/CLKA[0]
+ clock pessimism                                         0.294      10.009                          
+ clock uncertainty                                      -0.050       9.959                          
+
+ Setup time                                             -0.019       9.940                          
+
+ Data required time                                                  9.940                          
+----------------------------------------------------------------------------------------------------
+ Data required time                                                  9.940                          
+ Data arrival time                                                  10.864                          
+----------------------------------------------------------------------------------------------------
+ Slack (VIOLATED)                                                   -0.924                          
+====================================================================================================
+
+====================================================================================================
+

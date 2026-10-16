@@ -3,7 +3,9 @@
   "authority": "Installed pds_shell.exe help pnr, executed once in D:/FPGA/output/c_pds_help_20261016",
   "options": {
     "optimize_multi_corner_timing": "Optimize Multi-Corner Timing",
-    "slack_prior_in_global_router TRUE": "Slack Prior In Global router"
+    "slack_prior_in_global_router TRUE": "Slack Prior In Global router",
+    "gplace_seed 17": "Global Random Seed(Placement)",
+    "groute_seed 17": "Global Random Seed(Route)"
   },
-  "purpose": "Prioritize original constrained setup/hold paths, including unchanged vendor DDR command paths. No clock periods, false paths or multicycle exceptions changed."
+  "purpose": "Try a reproducible alternate layout for the remaining unchanged vendor UI-to-PHY path (-0.109ns in V4P), alongside the measured user-logic pipeline repairs. No pins, clock periods, false paths or multicycle exceptions changed."
 }

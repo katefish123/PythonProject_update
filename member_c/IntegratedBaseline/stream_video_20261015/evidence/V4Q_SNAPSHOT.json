@@ -1,0 +1,13 @@
+{
+  "candidate": "V4Q",
+  "root": "D:\\FPGA\\output\\c_stream_board_v4q_20261016",
+  "authored_and_generated_sha256": {
+    "bridge/async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+    "preview/rx_preview_stream.v": "a357548e340806582ef55fd7fa7f25cec61bc0019f8193456854f1220c7e0750"
+  },
+  "reduced_pressure_frames": 6,
+  "reduced_pressure_passed": true,
+  "full60_status": "running",
+  "pds_status": "running",
+  "board_replacement_allowed": false
+}

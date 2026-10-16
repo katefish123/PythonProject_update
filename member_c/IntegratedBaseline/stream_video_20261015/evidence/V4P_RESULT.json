@@ -1,0 +1,93 @@
+{
+  "candidate": "V4P",
+  "source_commit": "d5cef83",
+  "source_manifest_sha256": "848117ae8670ce41e9d121eee26b0922288710345274d91b8b59e54ac77d0e2f",
+  "native_simulation_60fps_verified": true,
+  "native_frames": 60,
+  "corrected_pixels_checked": 49766400,
+  "display_pixels_checked": 50595840,
+  "steady_hdmi_new_images_per_second": 60.00006000006,
+  "source_dropped_frames": 0,
+  "processing_ns": {
+    "min": 15028115,
+    "max": 16545480
+  },
+  "capture_begin_to_publish_age_ns": {
+    "min": 31701043,
+    "max": 33218410
+  },
+  "timing_passed": false,
+  "setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.712,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": -0.924,
+      "failing_endpoints": 1,
+      "total_endpoints": 15013
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 94.414,
+      "failing_endpoints": 0,
+      "total_endpoints": 1004
+    },
+    "processing_clock": {
+      "setup_wns_ns": 0.414,
+      "failing_endpoints": 0,
+      "total_endpoints": 47003
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.491,
+      "failing_endpoints": 0,
+      "total_endpoints": 2449
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.001,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 3.361,
+      "failing_endpoints": 0,
+      "total_endpoints": 419
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": -0.741,
+      "failing_endpoints": 13,
+      "total_endpoints": 72477
+    }
+  },
+  "worst_failed_paths": {
+    "rx_pixel / max (slow corner)": {
+      "slack_ns": -0.924,
+      "Startpoint": "rx_rgb_q[15]/opit_0_inv/CLK",
+      "Endpoint": "preview/bank1_15/gopdrm_36k/DA0[0]",
+      "Path Group": "rx_pixel",
+      "Path Type": "max (slow corner)"
+    },
+    "ddrphy_sysclk / max (slow corner)": {
+      "slack_ns": -0.741,
+      "Startpoint": "core/stream_path/cache/tags[37][2]/opit_0/CLK",
+      "Endpoint": "core/stream_path/bridge/requests/reserved[1]/opit_0_inv_L6QL5Q_perm/CE",
+      "Path Group": "ddrphy_sysclk",
+      "Path Type": "max (slow corner)"
+    },
+    "phy_dq_sysclk_0 / max (slow corner)": {
+      "slack_ns": -0.109,
+      "Startpoint": "memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[0].ddrphy_data_slice/ddrphy_dqs_rddata_align/this_group_ca_dly/opit_0_inv/CLK",
+      "Endpoint": "memory_ip/u_ddrphy_top/ddrphy_slice_top/i_mem_addr_0[10].u_outbuft_addr0/opit_1/TX_DATA[0]",
+      "Path Group": "phy_dq_sysclk_0",
+      "Path Type": "max (slow corner)"
+    }
+  },
+  "pds_tool_wall_time": "0h:20m:0s",
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "next_action": "Repair only the newly reported physical failure paths",
+  "limits": [
+    "Three independent fixtures rotate for about 1.067s of simulated video.",
+    "No optical-sharpness or actual full camera-system60 acceptance."
+  ]
+}

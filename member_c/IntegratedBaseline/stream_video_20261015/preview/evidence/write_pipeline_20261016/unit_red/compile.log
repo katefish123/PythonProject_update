@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 10:30:23 on Oct 16,2026
+vlog -sv source_snapshot/rx_preview_stream.v source_snapshot/tb_preview_write_pipeline.sv 
+-- Compiling module rx_preview_stream
+-- Compiling module tb_preview_write_pipeline
+
+Top level modules:
+	tb_preview_write_pipeline
+End time: 10:30:23 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
