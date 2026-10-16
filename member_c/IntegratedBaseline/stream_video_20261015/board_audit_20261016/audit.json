@@ -1,0 +1,88 @@
+{
+  "frozen_program_sha256": "3e3475d30e6fa2488a57a084aa236353077b91d80969b7d1c412c89c064d1b50",
+  "frozen_rtl_modified": false,
+  "hardware_accepted": false,
+  "board_programmed_by_this_chat": false,
+  "startup_comparison": [
+    {
+      "path": "rtl/hdmi/hdmi_config.v",
+      "old_sha256": "4523bd78a7d1101f663b49749440f31e7e915426cb191e56dc52f151591b5cb3",
+      "v4s_sha256": "25bd7ccb841da20ceb437bd369f2344ebe4077e323348898911fb4bccfa58ba5",
+      "same_text_ignoring_line_endings": true
+    },
+    {
+      "path": "rtl/hdmi/ms7210_ctl.v",
+      "old_sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242",
+      "v4s_sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242",
+      "same_text_ignoring_line_endings": true
+    },
+    {
+      "path": "rtl/hdmi/iic_dri.v",
+      "old_sha256": "163749ecb015e200c1ba6f35b9413460e52e959b51a1d81bfe51aff5f0c16fdb",
+      "v4s_sha256": "163749ecb015e200c1ba6f35b9413460e52e959b51a1d81bfe51aff5f0c16fdb",
+      "same_text_ignoring_line_endings": true
+    },
+    {
+      "path": "rtl/common/reset_sync.v",
+      "old_sha256": "4484fc728f1d8789480ba16a13cd5ee1adf97c491df464ab188519fc3a120afe",
+      "v4s_sha256": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2",
+      "same_text_ignoring_line_endings": true
+    },
+    {
+      "path": "vendor/c_current/01_design_code/video_timing_vtc.v",
+      "old_sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577",
+      "v4s_sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577",
+      "same_text_ignoring_line_endings": true
+    },
+    {
+      "path": "vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v",
+      "old_sha256": "8f58c2266af621629e7f09cd6e309881ed7ee39eaad9535a99b023bc891714ea",
+      "v4s_sha256": "8f58c2266af621629e7f09cd6e309881ed7ee39eaad9535a99b023bc891714ea",
+      "same_text_ignoring_line_endings": true
+    },
+    {
+      "path": "vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v",
+      "old_sha256": "b74af59403683ea68f3e85d5cbcb08a288a822764d846785a4e72a4d30c85e48",
+      "v4s_sha256": "d06d9ecbfa8c973c2e52430fce6d457b6d7ec79ba6b9b15d51c1e76b788da8b3",
+      "same_text_ignoring_line_endings": false
+    },
+    {
+      "path": "constr/board_ddr.fdc",
+      "old_sha256": "f4c9023ff609082127024fdb228c67bac765cc71e70611a5bf8cdf7f048119fb",
+      "v4s_sha256": "948c00c720a44fbb5e280ec1e9e2254bc9e496662297022510876b5f318143cc",
+      "same_text_ignoring_line_endings": false
+    }
+  ],
+  "ddr_ip_files_compared": 74,
+  "ddr_ip_all_byte_identical_to_old_burst": true,
+  "top_source_sha256": "950b2430747d8888f834651cc462d520b42a281c53b57a07bc020bd87fcbc961",
+  "test": "tb_status_alias.sv contains exact memory_detail/detail CDC/status expression extracted from this frozen top; reason7 is driven to reproduce current source-fault alias, not a complete system model.",
+  "observed": [
+    "HDMI HUD visible; no longer a no-signal-only failure.",
+    "Frozen counts while HELD grows prove no new visible frames.",
+    "Full image labels present; earlier crop not font failure.",
+    "Raw combined memory-fault LED reportedly off; persistent PHY fault not proven.",
+    "Same-program reload restored WAIT INPUT then CORRECTED; hardware chat continues observation."
+  ],
+  "facts": [
+    "align_error originates from encrypted four-DQS-group read-data aligner, not application address alignment.",
+    "Generic reason7 also represents source_fault, which is excluded from current combined memory-fault LED.",
+    "Historical memory_detail26 overrides generic reason7; banner cannot identify current fault source.",
+    "Full60 bench uses direct ready/reset/clocks and native memory-array handshakes, without real board top/DDR PHY/DRAM refresh."
+  ],
+  "unproven": [
+    "First physical fault timing, duration and DQS group.",
+    "Causal order of overflow, PHY alignment and source ownership fault.",
+    "Whether actual DDR traffic exceeds sustainable service rate."
+  ],
+  "next": "Separate current raw-memory status, sticky first-memory event and four-source-fault vector in a new diagnostic candidate; preserve protection and frozen V4S. Test fault injection before board validation.",
+  "test_result": "PASS diagnostic alias; 0errors/0warnings",
+  "frozen_bitstream_current_sha256": "3e3475d30e6fa2488a57a084aa236353077b91d80969b7d1c412c89c064d1b50",
+  "latest_scope": {
+    "raw_native_source_comparison_required": true,
+    "fixed_roi_false_positive_risk_observed": true,
+    "b_algorithm_to_remain_unchanged": true,
+    "raw_mode_implemented": false,
+    "minimal_design_document": "README.md#\u539f\u56fe\u65c1\u8def\u548c\u9519\u8bef\u900f\u89c6\u6700\u5c0f\u53ef\u9a8c\u8bc1\u63a5\u7eed"
+  }
+}

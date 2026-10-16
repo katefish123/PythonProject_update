@@ -1,0 +1,9 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 17:26:16 on Oct 16,2026
+vlog -sv -work D:/FPGA/output/v4s_status_alias_20261016/work member_c/IntegratedBaseline/stream_video_20261015/board_audit_20261016/tb_status_alias.sv 
+-- Compiling module tb_status_alias
+
+Top level modules:
+	tb_status_alias
+End time: 17:26:16 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

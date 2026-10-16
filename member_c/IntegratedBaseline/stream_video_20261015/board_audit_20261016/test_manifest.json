@@ -1,0 +1,8 @@
+{
+  "files_sha256": {
+    "compile.log": "92f8715f613d4087d71d8da311e29101c968e76b19622dc83e4f34d6110aab2a",
+    "simulation.log": "047d9a6eac3759549a04446b59800f4bd4fadb5a64a566983ff743990f668e9c",
+    "tb_status_alias.sv": "976a080ea1504617b17df6ffb82158659853faf3c874acc252d6750ff20666f3"
+  },
+  "limits": "Exact top diagnostic excerpt only; current reason7 is injected, not a real PHY or complete system simulation."
+}
