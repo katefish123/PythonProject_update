@@ -75,7 +75,7 @@
       "Path Type": "max (slow corner)"
     }
   },
-  "pds_tool_wall_time": "0h:0m:31s",
+  "pds_tool_wall_time": "0h:22m:32s",
   "hardware_accepted": false,
   "board_replacement_allowed": false,
   "next_action": "Fixed seed29 physical implementation, identical RTL and constraints; reuse Q frozen full60 functional evidence only, evaluate new physical timing separately.",

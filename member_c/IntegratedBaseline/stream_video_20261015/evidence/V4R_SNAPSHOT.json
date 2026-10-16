@@ -6,8 +6,8 @@
     "turnaround/ddr_word_engine_result_burst.v": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187"
   },
   "reduced6_pressure": "passed",
-  "full60": "running",
-  "physical_timing": "running",
+  "full60": "passed",
+  "physical_timing": "failed",
   "hardware_accepted": false,
   "board_replacement_allowed": false
 }

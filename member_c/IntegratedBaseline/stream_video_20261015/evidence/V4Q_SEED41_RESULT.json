@@ -75,7 +75,7 @@
       "slack_ns": -0.472
     }
   },
-  "pds_tool_wall_time": "0h:0m:34s",
+  "pds_tool_wall_time": "0h:18m:21s",
   "hardware_accepted": false,
   "board_replacement_allowed": false,
   "next_action": "Repair measured residual timing paths; do not burn",

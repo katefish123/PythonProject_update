@@ -1,0 +1,93 @@
+{
+  "candidate": "V4R",
+  "source_commit": "f09a7c4",
+  "source_manifest_sha256": "e8116d9f12e0b6a9fa76ef0b41d99009ef1bde3767535c16405b6e1b28042a73",
+  "native_simulation_60fps_verified": true,
+  "native_frames": 60,
+  "corrected_pixels_checked": 49766400,
+  "display_pixels_checked": 50595840,
+  "steady_hdmi_new_images_per_second": 60.00006000006,
+  "source_dropped_frames": 0,
+  "processing_ns": {
+    "min": 15043819,
+    "max": 16569326
+  },
+  "capture_begin_to_publish_age_ns": {
+    "min_source_age_ns": 31716748,
+    "max_source_age_ns": 33242256
+  },
+  "timing_passed": false,
+  "setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.549,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": -0.25,
+      "failing_endpoints": 5,
+      "total_endpoints": 15085
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 94.131,
+      "failing_endpoints": 0,
+      "total_endpoints": 993
+    },
+    "processing_clock": {
+      "setup_wns_ns": 2.179,
+      "failing_endpoints": 0,
+      "total_endpoints": 46890
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.349,
+      "failing_endpoints": 0,
+      "total_endpoints": 2488
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.177,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 4.139,
+      "failing_endpoints": 0,
+      "total_endpoints": 419
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": -0.136,
+      "failing_endpoints": 6,
+      "total_endpoints": 72934
+    }
+  },
+  "worst_failed_paths": {
+    "rx_pixel / max (slow corner)": {
+      "Startpoint": "core/continuous_sources/capture/y_count[4]/opit_0_inv_AQ_perm/CLK",
+      "Endpoint": "core/continuous_sources/capture/queue[1][269]/opit_0_L6Q_perm/CE",
+      "Path Group": "rx_pixel",
+      "Path Type": "max (slow corner)",
+      "slack_ns": -0.25
+    },
+    "ddrphy_sysclk / max (slow corner)": {
+      "Startpoint": "core/stream_path/cache/fill_tag[10]/opit_0_inv/CLK",
+      "Endpoint": "engine/fault_reason_reg[3]/opit_0_inv_L6Q_perm/CE",
+      "Path Group": "ddrphy_sysclk",
+      "Path Type": "max (slow corner)",
+      "slack_ns": -0.136
+    },
+    "phy_dq_sysclk_0 / max (slow corner)": {
+      "Startpoint": "memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[2].ddrphy_data_slice/ddrphy_dqs_rddata_align/this_group_ca_dly/opit_0_inv/CLK",
+      "Endpoint": "memory_ip/u_ddrphy_top/ddrphy_slice_top/i_mem_addr_0[8].u_outbuft_addr0/opit_1/TX_DATA[0]",
+      "Path Group": "phy_dq_sysclk_0",
+      "Path Type": "max (slow corner)",
+      "slack_ns": -0.232
+    }
+  },
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "pds_tool_wall_time": "0h:15m:18s",
+  "next_action": "Repair measured residual timing paths; do not burn",
+  "limits": [
+    "About1.067s simulated video; three rotating independent image/corner fixtures.",
+    "No optical sharpness or actual camera60 acceptance."
+  ]
+}

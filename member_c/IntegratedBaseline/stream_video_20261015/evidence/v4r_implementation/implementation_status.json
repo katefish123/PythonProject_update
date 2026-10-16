@@ -1,16 +1,57 @@
 {
   "candidate": "v4k_processing57p115",
-  "status": "running",
-  "process_exit_code": null,
+  "status": "timing_failed",
+  "process_exit_code": 0,
   "timing_passed": false,
   "hardware_accepted": false,
   "board_replacement_allowed": false,
   "root": "D:\\FPGA\\output\\c_stream_board_v4r_20261016",
   "build": "D:\\FPGA\\output\\c_stream_board_v4r_20261016\\build_unqualified_20261016_1416",
-  "slow_corner_same_clock_setup": {},
+  "slow_corner_same_clock_setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.549,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": -0.25,
+      "failing_endpoints": 5,
+      "total_endpoints": 15085
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 94.131,
+      "failing_endpoints": 0,
+      "total_endpoints": 993
+    },
+    "processing_clock": {
+      "setup_wns_ns": 2.179,
+      "failing_endpoints": 0,
+      "total_endpoints": 46890
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.349,
+      "failing_endpoints": 0,
+      "total_endpoints": 2488
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.177,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 4.139,
+      "failing_endpoints": 0,
+      "total_endpoints": 419
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": -0.136,
+      "failing_endpoints": 6,
+      "total_endpoints": 72934
+    }
+  },
   "source_manifest_sha256": "e8116d9f12e0b6a9fa76ef0b41d99009ef1bde3767535c16405b6e1b28042a73",
-  "build_log_sha256": "51d2c6cf3f67b8271a03f3007e75e882fdd755f90c5e789339a47afc5d2fee93",
-  "timing_report_sha256": null,
+  "build_log_sha256": "e6294fa6d27843c3d1266265e59e870114e85919f2d0a93d230166a276650492",
+  "timing_report_sha256": "35b751dd51636b57ebf450259b455967e01e65d22b888d81b8b4f76153f0322b",
   "implementation_inputs": {
     "vendor\\b\\rtl\\b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
     "vendor\\b\\rtl\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
