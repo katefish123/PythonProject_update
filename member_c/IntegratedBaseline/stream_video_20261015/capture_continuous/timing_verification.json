@@ -1,0 +1,540 @@
+{
+  "candidate": "capture timing pipeline 2026-10-15 23:13",
+  "rtl_sha256": {
+    "continuous_capture_rx.v": "8910490f8d05eeb12654670d6044316cdcdc11e3c6df043ae57f1b1aae5ebded",
+    "continuous_capture_writer.v": "e8cdbd7a787fc3863795e2f35897f32cf97fa18b62da49160745d0ab1094e051",
+    "continuous_capture_geometry.v": "b8caf1ee598c91337c689af0b6e0c4a70b7ffc45da6434b6f5c3bc2c970a78a7",
+    "continuous_capture_manager.v": "f20fe031979489d8d5ae13b587e74411508596e5e17006b7a31d58995641fb90",
+    "continuous_source_path.v": "4d2232a7110b1419d24722439e2f83dbe101c587feba70ae82c4b5d0fd135687"
+  },
+  "baseline_physical_timing": {
+    "report": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4k_implementation\\final_timing.rtr",
+    "sha256": "ad26697622da6db45e707934e6d28eb0ea2ec1f85c9c76984e6af5fbf2cb8c1f",
+    "rx": {
+      "slack_ns": -0.62,
+      "logic_levels": 6,
+      "start": "credit_crossing/head[1]",
+      "end": "capture/queue[7][176]",
+      "report_line": 635
+    },
+    "proc": {
+      "slack_ns": -2.66,
+      "logic_levels": 23,
+      "start": "manager/generation[1][9]",
+      "end": "geometry/detector/snapx[0][14] CE",
+      "report_line": 1375
+    }
+  },
+  "changes": [
+    "RX fixed-bank generation validation registers credit_return0/1 before allocation/packet queue controls; in-flight duplicate suppression protects same-edge reallocation.",
+    "PROC clocks detector event data every cycle and valid from FIFO take; END fences event input immediately on handshake, before delayed detector consumption.",
+    "B detector and manager/writer/source-path interface unchanged; no timing exception changes."
+  ],
+  "runs": {
+    "timing_boundary_2315": {
+      "simulation_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_boundary_2315\\simulation.log",
+      "log_sha256": "7cc5ce45f0d9ef596d0b938ff1de1689dfbaf530f5b53e2b1c59553005362b22",
+      "compile_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_boundary_2315\\compile.log",
+      "compile_sha256": "fb6c8c9350338d9abe734f0fb98be43d243e97e83e34f0b417d2529e471e1341",
+      "source_hashes": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_boundary_2315\\source_hashes.txt",
+      "pass_lines": [
+        "# PASS timing boundaries: duplicate credit at VS/reallocation, stale/active credit, ordered END+BEGIN, RGB packing and shared reset\r"
+      ]
+    },
+    "timing_manager_2314": {
+      "simulation_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_manager_2314\\simulation.log",
+      "log_sha256": "768d66ec2d21e1992f515a5449db9349d05dc030bfa537b1d8310d4b982cda57",
+      "compile_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_manager_2314\\compile.log",
+      "compile_sha256": "0542902474ed0014d28b778141daca217c0ad3174032fc5cc2565ff82affeda1",
+      "source_hashes": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_manager_2314\\source_hashes.txt",
+      "pass_lines": [
+        "# PASS simultaneous joins and per-generation invalid frame credits\r",
+        "# PASS simultaneous same/different reason rejection counters\r",
+        "# PASS future metadata ordering, immutable descriptors, stale/duplicate release rejection\r",
+        "# PASS continuous manager tests\r"
+      ]
+    },
+    "timing_reduced_2314": {
+      "simulation_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_reduced_2314\\simulation.log",
+      "log_sha256": "e58632e4035e549883ba91caab258a43e131dba234c1d9b4ba5e1e632b8ed658",
+      "compile_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_reduced_2314\\compile.log",
+      "compile_sha256": "41d990bc8679392530b4f50100adde44f04fd61465664e7dd71d472983daf8d1",
+      "source_hashes": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_reduced_2314\\source_hashes.txt",
+      "pass_lines": [
+        "# PASS consecutive continuous source native=0 frames=6 commands=576 completed=576\r",
+        "# PASS invalid extraheight/shortwidth/shortheight rejected only after write drain\r",
+        "# PASS FIFO-full terminal retention, overrun drop, accepted burst retirement\r",
+        "# PASS selected marker FIFO overflow retains both terminal generations\r",
+        "# PASS RX clock stall/restart preserves partial source ownership\r",
+        "# PASS stale release rejected without source ownership corruption\r",
+        "# PASS shared hard reset flushes queued capture and metadata\r",
+        "# PASS continuous capture complete test suite native=0\r"
+      ]
+    },
+    "timing_reduced_57115_2317": {
+      "simulation_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_reduced_57115_2317\\simulation.log",
+      "log_sha256": "a66780279917500d1b15ed8b0e6b759a84e8ffd7401b4103f0ec33f289ec47b9",
+      "compile_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_reduced_57115_2317\\compile.log",
+      "compile_sha256": "6602ad14e9ade0e77c6067d4c2b2d5ecb9373b1c873d60e70bda96ec8115de8c",
+      "source_hashes": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_reduced_57115_2317\\source_hashes.txt",
+      "pass_lines": [
+        "# PASS consecutive continuous source native=0 frames=6 commands=576 completed=576\r",
+        "# PASS invalid extraheight/shortwidth/shortheight rejected only after write drain\r",
+        "# PASS FIFO-full terminal retention, overrun drop, accepted burst retirement\r",
+        "# PASS selected marker FIFO overflow retains both terminal generations\r",
+        "# PASS RX clock stall/restart preserves partial source ownership\r",
+        "# PASS stale release rejected without source ownership corruption\r",
+        "# PASS shared hard reset flushes queued capture and metadata\r",
+        "# PASS continuous capture complete test suite native=0\r"
+      ]
+    },
+    "timing_native60_57115_2315": {
+      "simulation_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_native60_57115_2315\\simulation.log",
+      "log_sha256": "4ef64f1281bc345d0ec76269bbe847a06c745bb4a954a1e583d90e0bba109a48",
+      "compile_log": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_native60_57115_2315\\compile.log",
+      "compile_sha256": "fe2f209082cc9ffaf10428a0c7b164cd89875ec4589a4dd473177d77b40be452",
+      "source_hashes": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\evidence\\timing_pipeline\\timing_native60_57115_2315\\source_hashes.txt",
+      "pass_lines": [
+        "# PASS consecutive continuous source native=1 frames=60 commands=1944000 completed=1944000\r",
+        "# PASS continuous capture complete test suite native=1\r"
+      ],
+      "descriptors": [
+        {
+          "generation": 1,
+          "bank": 0,
+          "source_frame": 1,
+          "capture_ms": 0,
+          "timestamp_ps": 16673087000
+        },
+        {
+          "generation": 2,
+          "bank": 1,
+          "source_frame": 2,
+          "capture_ms": 16,
+          "timestamp_ps": 33339740000
+        },
+        {
+          "generation": 3,
+          "bank": 0,
+          "source_frame": 3,
+          "capture_ms": 33,
+          "timestamp_ps": 50006393000
+        },
+        {
+          "generation": 4,
+          "bank": 1,
+          "source_frame": 4,
+          "capture_ms": 50,
+          "timestamp_ps": 66673046000
+        },
+        {
+          "generation": 5,
+          "bank": 0,
+          "source_frame": 5,
+          "capture_ms": 66,
+          "timestamp_ps": 83339682000
+        },
+        {
+          "generation": 6,
+          "bank": 1,
+          "source_frame": 6,
+          "capture_ms": 83,
+          "timestamp_ps": 100006335000
+        },
+        {
+          "generation": 7,
+          "bank": 0,
+          "source_frame": 7,
+          "capture_ms": 100,
+          "timestamp_ps": 116672988000
+        },
+        {
+          "generation": 8,
+          "bank": 1,
+          "source_frame": 8,
+          "capture_ms": 116,
+          "timestamp_ps": 133339641000
+        },
+        {
+          "generation": 9,
+          "bank": 0,
+          "source_frame": 9,
+          "capture_ms": 133,
+          "timestamp_ps": 150006294000
+        },
+        {
+          "generation": 10,
+          "bank": 1,
+          "source_frame": 10,
+          "capture_ms": 150,
+          "timestamp_ps": 166672947000
+        },
+        {
+          "generation": 11,
+          "bank": 0,
+          "source_frame": 11,
+          "capture_ms": 166,
+          "timestamp_ps": 183339583000
+        },
+        {
+          "generation": 12,
+          "bank": 1,
+          "source_frame": 12,
+          "capture_ms": 183,
+          "timestamp_ps": 200006236000
+        },
+        {
+          "generation": 13,
+          "bank": 0,
+          "source_frame": 13,
+          "capture_ms": 200,
+          "timestamp_ps": 216672889000
+        },
+        {
+          "generation": 14,
+          "bank": 1,
+          "source_frame": 14,
+          "capture_ms": 216,
+          "timestamp_ps": 233339542000
+        },
+        {
+          "generation": 15,
+          "bank": 0,
+          "source_frame": 15,
+          "capture_ms": 233,
+          "timestamp_ps": 250006195000
+        },
+        {
+          "generation": 16,
+          "bank": 1,
+          "source_frame": 16,
+          "capture_ms": 250,
+          "timestamp_ps": 266672848000
+        },
+        {
+          "generation": 17,
+          "bank": 0,
+          "source_frame": 17,
+          "capture_ms": 266,
+          "timestamp_ps": 283339484000
+        },
+        {
+          "generation": 18,
+          "bank": 1,
+          "source_frame": 18,
+          "capture_ms": 283,
+          "timestamp_ps": 300006137000
+        },
+        {
+          "generation": 19,
+          "bank": 0,
+          "source_frame": 19,
+          "capture_ms": 300,
+          "timestamp_ps": 316672790000
+        },
+        {
+          "generation": 20,
+          "bank": 1,
+          "source_frame": 20,
+          "capture_ms": 316,
+          "timestamp_ps": 333339443000
+        },
+        {
+          "generation": 21,
+          "bank": 0,
+          "source_frame": 21,
+          "capture_ms": 333,
+          "timestamp_ps": 350006096000
+        },
+        {
+          "generation": 22,
+          "bank": 1,
+          "source_frame": 22,
+          "capture_ms": 350,
+          "timestamp_ps": 366672749000
+        },
+        {
+          "generation": 23,
+          "bank": 0,
+          "source_frame": 23,
+          "capture_ms": 366,
+          "timestamp_ps": 383339385000
+        },
+        {
+          "generation": 24,
+          "bank": 1,
+          "source_frame": 24,
+          "capture_ms": 383,
+          "timestamp_ps": 400006038000
+        },
+        {
+          "generation": 25,
+          "bank": 0,
+          "source_frame": 25,
+          "capture_ms": 400,
+          "timestamp_ps": 416672691000
+        },
+        {
+          "generation": 26,
+          "bank": 1,
+          "source_frame": 26,
+          "capture_ms": 416,
+          "timestamp_ps": 433339344000
+        },
+        {
+          "generation": 27,
+          "bank": 0,
+          "source_frame": 27,
+          "capture_ms": 433,
+          "timestamp_ps": 450005997000
+        },
+        {
+          "generation": 28,
+          "bank": 1,
+          "source_frame": 28,
+          "capture_ms": 450,
+          "timestamp_ps": 466672632000
+        },
+        {
+          "generation": 29,
+          "bank": 0,
+          "source_frame": 29,
+          "capture_ms": 466,
+          "timestamp_ps": 483339285000
+        },
+        {
+          "generation": 30,
+          "bank": 1,
+          "source_frame": 30,
+          "capture_ms": 483,
+          "timestamp_ps": 500005938000
+        },
+        {
+          "generation": 31,
+          "bank": 0,
+          "source_frame": 31,
+          "capture_ms": 500,
+          "timestamp_ps": 516672592000
+        },
+        {
+          "generation": 32,
+          "bank": 1,
+          "source_frame": 32,
+          "capture_ms": 516,
+          "timestamp_ps": 533339245000
+        },
+        {
+          "generation": 33,
+          "bank": 0,
+          "source_frame": 33,
+          "capture_ms": 533,
+          "timestamp_ps": 550005898000
+        },
+        {
+          "generation": 34,
+          "bank": 1,
+          "source_frame": 34,
+          "capture_ms": 550,
+          "timestamp_ps": 566672533000
+        },
+        {
+          "generation": 35,
+          "bank": 0,
+          "source_frame": 35,
+          "capture_ms": 566,
+          "timestamp_ps": 583339186000
+        },
+        {
+          "generation": 36,
+          "bank": 1,
+          "source_frame": 36,
+          "capture_ms": 583,
+          "timestamp_ps": 600005839000
+        },
+        {
+          "generation": 37,
+          "bank": 0,
+          "source_frame": 37,
+          "capture_ms": 600,
+          "timestamp_ps": 616672492000
+        },
+        {
+          "generation": 38,
+          "bank": 1,
+          "source_frame": 38,
+          "capture_ms": 616,
+          "timestamp_ps": 633339145000
+        },
+        {
+          "generation": 39,
+          "bank": 0,
+          "source_frame": 39,
+          "capture_ms": 633,
+          "timestamp_ps": 650005798000
+        },
+        {
+          "generation": 40,
+          "bank": 1,
+          "source_frame": 40,
+          "capture_ms": 650,
+          "timestamp_ps": 666672434000
+        },
+        {
+          "generation": 41,
+          "bank": 0,
+          "source_frame": 41,
+          "capture_ms": 666,
+          "timestamp_ps": 683339087000
+        },
+        {
+          "generation": 42,
+          "bank": 1,
+          "source_frame": 42,
+          "capture_ms": 683,
+          "timestamp_ps": 700005740000
+        },
+        {
+          "generation": 43,
+          "bank": 0,
+          "source_frame": 43,
+          "capture_ms": 700,
+          "timestamp_ps": 716672393000
+        },
+        {
+          "generation": 44,
+          "bank": 1,
+          "source_frame": 44,
+          "capture_ms": 716,
+          "timestamp_ps": 733339046000
+        },
+        {
+          "generation": 45,
+          "bank": 0,
+          "source_frame": 45,
+          "capture_ms": 733,
+          "timestamp_ps": 750005682000
+        },
+        {
+          "generation": 46,
+          "bank": 1,
+          "source_frame": 46,
+          "capture_ms": 750,
+          "timestamp_ps": 766672335000
+        },
+        {
+          "generation": 47,
+          "bank": 0,
+          "source_frame": 47,
+          "capture_ms": 766,
+          "timestamp_ps": 783338988000
+        },
+        {
+          "generation": 48,
+          "bank": 1,
+          "source_frame": 48,
+          "capture_ms": 783,
+          "timestamp_ps": 800005641000
+        },
+        {
+          "generation": 49,
+          "bank": 0,
+          "source_frame": 49,
+          "capture_ms": 800,
+          "timestamp_ps": 816672294000
+        },
+        {
+          "generation": 50,
+          "bank": 1,
+          "source_frame": 50,
+          "capture_ms": 816,
+          "timestamp_ps": 833338947000
+        },
+        {
+          "generation": 51,
+          "bank": 0,
+          "source_frame": 51,
+          "capture_ms": 833,
+          "timestamp_ps": 850005583000
+        },
+        {
+          "generation": 52,
+          "bank": 1,
+          "source_frame": 52,
+          "capture_ms": 850,
+          "timestamp_ps": 866672236000
+        },
+        {
+          "generation": 53,
+          "bank": 0,
+          "source_frame": 53,
+          "capture_ms": 866,
+          "timestamp_ps": 883338889000
+        },
+        {
+          "generation": 54,
+          "bank": 1,
+          "source_frame": 54,
+          "capture_ms": 883,
+          "timestamp_ps": 900005542000
+        },
+        {
+          "generation": 55,
+          "bank": 0,
+          "source_frame": 55,
+          "capture_ms": 900,
+          "timestamp_ps": 916672195000
+        },
+        {
+          "generation": 56,
+          "bank": 1,
+          "source_frame": 56,
+          "capture_ms": 916,
+          "timestamp_ps": 933338848000
+        },
+        {
+          "generation": 57,
+          "bank": 0,
+          "source_frame": 57,
+          "capture_ms": 933,
+          "timestamp_ps": 950005484000
+        },
+        {
+          "generation": 58,
+          "bank": 1,
+          "source_frame": 58,
+          "capture_ms": 950,
+          "timestamp_ps": 966672137000
+        },
+        {
+          "generation": 59,
+          "bank": 0,
+          "source_frame": 59,
+          "capture_ms": 966,
+          "timestamp_ps": 983338790000
+        },
+        {
+          "generation": 60,
+          "bank": 1,
+          "source_frame": 60,
+          "capture_ms": 983,
+          "timestamp_ps": 1000005478000
+        }
+      ],
+      "descriptor_intervals_ns": {
+        "minimum": 16666635.0,
+        "maximum": 16666688.0,
+        "average": 16666650.694915254
+      }
+    }
+  },
+  "source_frames_checked": 60,
+  "source_pixels_checked": 124416000,
+  "native_source_proc_mhz": 57.115,
+  "native_source_rx_mhz": 148.5,
+  "end_to_end_corrected_hdmi_revalidated": false,
+  "post_change_pds_timing_verified": false,
+  "limitations": [
+    "Source bench uses burst ACK memory model and mock processor release after 1ms.",
+    "Parent integrates frozen sources for full corrected DDR/HDMI contention and physical PDS timing."
+  ]
+}

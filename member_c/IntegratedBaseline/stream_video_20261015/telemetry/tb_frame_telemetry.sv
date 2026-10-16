@@ -18,7 +18,10 @@ module tb_frame_telemetry;
  if(k==3000)$fatal(1,"mailbox snapshot never arrived");repeat(3)@(negedge pix_clk);end
  endtask
  task pixel(input integer px,py,input bit expected,input [23:0] color);
- begin x=px;y=py;#1;if(on!==expected)$fatal(1,"pixel %0d,%0d expected on=%0d got %0d",px,py,expected,on);
+ integer sx;
+ begin
+ for(sx=0;sx<=px;sx=sx+1)begin @(negedge pix_clk);x=sx;y=py;end
+ #1;if(on!==expected)$fatal(1,"pixel %0d,%0d expected on=%0d got %0d",px,py,expected,on);
  if(expected&&rgb!==color)$fatal(1,"wrong color %h",rgb);end
  endtask
  function [34:0] expected_font(input [7:0] c);
@@ -42,11 +45,15 @@ module tb_frame_telemetry;
  task age_line(input [127:0] text_line,input [23:0] color);
  integer xx,yy,cc,gx,gy;reg[34:0] bits;reg expected;
  begin
- for(yy=0;yy<32;yy=yy+1)for(xx=0;xx<256;xx=xx+1)begin
- cc=xx/16;gx=(xx%16)/2;gy=(yy%16)/2;
- bits=expected_font(text_line[(15-cc)*8+:8]);expected=0;
+ for(yy=0;yy<32;yy=yy+1)for(xx=0;xx<320;xx=xx+1)begin
+ @(negedge pix_clk);x=xx;y=80+yy;#1;
+ cc=(xx-16)/16;gx=((xx-16)%16)/2;gy=(yy%16)/2;
+ expected=0;bits=0;
+ if(xx>=16 && xx<272)begin
+ bits=expected_font(text_line[(15-cc)*8+:8]);
  if(yy<16&&gx<5&&gy<7)expected=bits[34-gy*5-gx];
- pixel(16+xx,80+yy,expected,color);
+ end
+ if(on!==expected || (expected&&rgb!==color))$fatal(1,"raster age pixel mismatch x=%0d y=%0d",xx,80+yy);
  end
  end
  endtask
@@ -70,7 +77,7 @@ module tb_frame_telemetry;
  age_line("HELD 023.2S     ",24'hffb040);
  wait_request();repeat(20)@(negedge pix_clk);
  if(dut.shown!==saved)$fatal(1,"display telemetry tore within frame");
- frame();#1;
+ frame();wait_request();frame();#1;
  if(dut.shown[39:0]!==40'h0000000032 || dut.shown[79:40]!==40'h0000000043 || dut.shown[360]!==0)$fatal(1,"fresh recovery incorrect");
  // AGE prefix: top of A has three center pixels.
  pixel(18,80,1,24'h40ff80);pixel(16,80,0,0);
@@ -103,5 +110,5 @@ module tb_frame_telemetry;
  display_age_ms=250;wait_request();frame();#1;if(dut.shown[39:0]!==40'h0000000250)$fatal(1,"reset recovery failed");
  $display("PASS frame telemetry held23.2 recovery32 saturation async mailbox frame consistency fullpixels gating reset randomizedACK24");$finish;
  end
- initial begin #3000000;$fatal(1,"timeout");end
+ initial begin #20000000;$fatal(1,"timeout");end
 endmodule

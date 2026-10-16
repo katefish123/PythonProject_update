@@ -11,7 +11,12 @@ module async_packet_stream #(parameter DATA_WIDTH=32,ADDR_BITS=9)(
  reg[DATA_WIDTH-1:0]skid[0:3];reg[1:0]head,tail;
  reg[2:0]count,reserved;
  wire pop=m_valid&&m_ready;
- wire rd_en=rst_n&&!empty&&(reserved<4||pop);
+ // Four reserved slots cover the registered FIFO read and skid write latency.
+ // Do not borrow a slot from this cycle's downstream pop: that lookahead
+ // feeds cache tag lookup through rd_ready into the FIFO Gray/empty cone.
+ // A full queue's first pop frees a slot for the next cycle; the remaining
+ // three entries cover the refill latency while sustaining one packet/clock.
+ wire rd_en=rst_n&&!empty&&reserved<4;
  assign s_ready=rst_n&&!full;
  assign m_valid=rst_n&&count!=0;
  assign m_data=skid[head];

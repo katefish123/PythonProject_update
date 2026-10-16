@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "archived_at": "2026-10-15T23:18:32.508515+08:00",
+  "current_rtl_sha256": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e",
+  "current_source_sha256": {
+    "frame_telemetry_overlay.v": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e",
+    "tb_frame_telemetry.sv": "9067e1d9242ff0da5ec0d70ecb9fd1a3d80b6314b36590c758b905e03d5e39a6",
+    "tb_frame_telemetry_raster.sv": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef",
+    "run_tests.ps1": "c22d1f190126897cfc6ff2fe74dee95f224d56c7379989b5f16413dadd64fb02",
+    "run_mutations.ps1": "9dee390c72d2d8afeee2c11218d17adebbe98b2b23407a12e9b8b015f73d3e6a",
+    "verify_timing_results.py": "acaf0ed7ee34ac68f016403ce413cd3de66336814686406321630deffc07e6e8"
+  },
+  "cases": [
+    {
+      "name": "raster_before",
+      "archive_directory": "raster_before",
+      "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_v4k_raster_before",
+      "outcome": "pass",
+      "expected_marker": "PASS fullHD telemetry raster frames=2 ink=16656 exactcoordinates noportraitoverlap allrows",
+      "sources": [
+        {
+          "archived_file": "sources/before/frame_telemetry_overlay.v",
+          "sha256": "e407d58f072146e438262a899ab5ab62b71ca0d79ef330bb6fa3b17ac1bce45e"
+        },
+        {
+          "archived_file": "sources/current/tb_frame_telemetry_raster.sv",
+          "sha256": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef"
+        }
+      ],
+      "binding": "Contemporaneous source_hashes.txt from the original successful run; verified against archived bytes."
+    },
+    {
+      "name": "raster_after",
+      "archive_directory": "raster_after",
+      "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_v4k_raster_after",
+      "outcome": "pass",
+      "expected_marker": "PASS fullHD telemetry raster frames=2 ink=16656 exactcoordinates noportraitoverlap allrows",
+      "sources": [
+        {
+          "archived_file": "sources/current/frame_telemetry_overlay.v",
+          "sha256": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e"
+        },
+        {
+          "archived_file": "sources/current/tb_frame_telemetry_raster.sv",
+          "sha256": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef"
+        }
+      ],
+      "binding": "Contemporaneous source_hashes.txt from the original successful run; verified against archived bytes."
+    },
+    {
+      "name": "unit_after2",
+      "archive_directory": "unit_after2",
+      "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_v4k_unit_after2",
+      "outcome": "pass",
+      "expected_marker": "PASS frame telemetry held23.2 recovery32 saturation async mailbox frame consistency fullpixels gating reset randomizedACK24",
+      "sources": [
+        {
+          "archived_file": "sources/current/frame_telemetry_overlay.v",
+          "sha256": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e"
+        },
+        {
+          "archived_file": "sources/current/tb_frame_telemetry.sv",
+          "sha256": "9067e1d9242ff0da5ec0d70ecb9fd1a3d80b6314b36590c758b905e03d5e39a6"
+        }
+      ],
+      "binding": "Contemporaneous source_hashes.txt from the original successful run; verified against archived bytes."
+    },
+    {
+      "name": "mutant_glyphoffset",
+      "mutation": "glyphoffset",
+      "archive_directory": "mutant_glyphoffset",
+      "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_mutant_glyphoffset",
+      "outcome": "expected_failure",
+      "expected_marker": "full raster mismatch fresh=0 x=16 y=80 expected=1 on=0 color=ffb040",
+      "failure_identification": "Glyph pixel lookup shifted one font bit (two display pixels); complete raster checker detects the first expected ink at x16,y80.",
+      "sources": [
+        {
+          "archived_file": "sources/mutant_glyphoffset/frame_telemetry_overlay.v",
+          "sha256": "5d9c96951e0b1efa8a1ab0452c5abcf87241fba5777553ec3730e240e3b1b4c2"
+        },
+        {
+          "archived_file": "sources/current/tb_frame_telemetry_raster.sv",
+          "sha256": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef"
+        }
+      ],
+      "binding": "Reexecuted with current frozen RTL, benches, and mutation runner bracketed by equal before/after SHA256; generated mutant bytes independently matched to the single documented text transformation. No claim that previous unbound mutant logs were runtime-hashed."
+    },
+    {
+      "name": "mutant_midframe",
+      "mutation": "midframe",
+      "archive_directory": "mutant_midframe",
+      "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_mutant_midframe",
+      "outcome": "expected_failure",
+      "expected_marker": "snapshot applied mid-frame",
+      "failure_identification": "Removing scan_start from mailbox acceptance changes shown_valid before a frame boundary; snapshot isolation assertion detects it.",
+      "sources": [
+        {
+          "archived_file": "sources/mutant_midframe/frame_telemetry_overlay.v",
+          "sha256": "9c338ae5c7a19ae9313e030208ee7b4cfe4ee31332d1b2f6670de1c435310089"
+        },
+        {
+          "archived_file": "sources/current/tb_frame_telemetry.sv",
+          "sha256": "9067e1d9242ff0da5ec0d70ecb9fd1a3d80b6314b36590c758b905e03d5e39a6"
+        }
+      ],
+      "binding": "Reexecuted with current frozen RTL, benches, and mutation runner bracketed by equal before/after SHA256; generated mutant bytes independently matched to the single documented text transformation. No claim that previous unbound mutant logs were runtime-hashed."
+    },
+    {
+      "name": "mutant_noack",
+      "mutation": "noack",
+      "archive_directory": "mutant_noack",
+      "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_mutant_noack",
+      "outcome": "expected_failure",
+      "expected_marker": "mailbox changed without ACK",
+      "failure_identification": "Removing returned-ACK gating permits mailbox overwrite while PIX is stopped; stable-mailbox assertion detects counter churn.",
+      "sources": [
+        {
+          "archived_file": "sources/mutant_noack/frame_telemetry_overlay.v",
+          "sha256": "ca83c05d280310449a3c9923695730ee8750ef98cb036b96fea562daa7e4b0d4"
+        },
+        {
+          "archived_file": "sources/current/tb_frame_telemetry.sv",
+          "sha256": "9067e1d9242ff0da5ec0d70ecb9fd1a3d80b6314b36590c758b905e03d5e39a6"
+        }
+      ],
+      "binding": "Reexecuted with current frozen RTL, benches, and mutation runner bracketed by equal before/after SHA256; generated mutant bytes independently matched to the single documented text transformation. No claim that previous unbound mutant logs were runtime-hashed."
+    }
+  ],
+  "runner_provenance": "Current runners are archived with SHA256. Positive-run runtime source hashes bind RTL and bench only; no assertion that current run_tests.ps1 bytes were recorded at the older positive run. Mutation runner and sources were hashed immediately before and after the rerun.",
+  "old_root_evidence": "Parent evidence/compile.log, simulation.log and source_hashes.txt are historical evidence, preserved untouched; they are excluded from this manifest and do not bind the repaired source.",
+  "physical_timing": {
+    "original_report": "D:\\FPGA\\output\\c_stream_board_v4k_20261015\\build_unqualified_20261015_2240\\report_timing\\video_correct_ddr_top.rtr",
+    "original_report_sha256": "ad26697622da6db45e707934e6d28eb0ea2ec1f85c9c76984e6af5fbf2cb8c1f",
+    "wns_ns": -3.558,
+    "failing_endpoints": 51,
+    "status": "old failing v4k physical report; repaired RTL physical timing pending root v4l build"
+  },
+  "archive_files_sha256": {
+    "mutant_glyphoffset/compile.log": "e48c2ced808db207b7b7819bb6f3d2e6079e307d848b4fad3e697589ff6341ae",
+    "mutant_glyphoffset/mutation_result.txt": "38b3adfa30dc3a65588def5c1427e59afd1a57b027304dfe00751029a5b7aca1",
+    "mutant_glyphoffset/simulation.log": "d32ae206af942337896ca9f13cdb71f36504692b952386e712c047553bd54ed9",
+    "mutant_midframe/compile.log": "fb20c28813475d48b60fc338aced1d15a6ef85c9086095447e9b8dc0cda26d52",
+    "mutant_midframe/mutation_result.txt": "15901da581d92764478881b6dc67c82ad18408bcc6ce0b6d38fd9a45d804d593",
+    "mutant_midframe/simulation.log": "ec0da58938c45dd1d2b354fd028122e1ba55267e1613c48e963b8b43ed6242b3",
+    "mutant_noack/compile.log": "308ebe05bae80f81228297b959638708524116bea897e28d511e8f9ffabb6608",
+    "mutant_noack/mutation_result.txt": "889a64e468de2ecff247740c56da5e6b1e37510a724dcbc240ff84762a3f599a",
+    "mutant_noack/simulation.log": "c4db7bf23edbddee843f0b736831ae6d08f74896905505d87e4517f142a49deb",
+    "mutation_source_hashes_after.json": "5b213ac3da21f28784ea850ff21dc105d944ed7013145b73b8971d8044134f1c",
+    "mutation_source_hashes_before.json": "5b213ac3da21f28784ea850ff21dc105d944ed7013145b73b8971d8044134f1c",
+    "old_routed_failure_excerpt.txt": "17351d50c5293494d5dfa3a2424619596eb7851f0efae34c266f61f135a4ba2f",
+    "raster_after/compile.log": "8316de435838d7f5ed2894f96c08215f636fdf4246826645eba26a23a7d86c76",
+    "raster_after/simulation.log": "8c43dab2300e03e10633a5d358f1f35bdbc62d09850db25e7c499611c1f744f9",
+    "raster_after/source_hashes.txt": "b3cd2cc622d825e32aeaeec98f01f532a50687af6fe54c12c97c3ed002e50df7",
+    "raster_before/compile.log": "1bd8dbaab00fdcf2a74be40438db97edaf8351135c3016ff3154c7c85d6a4b51",
+    "raster_before/simulation.log": "72deb3c7cc422238346ad6d168327ce8a2b8fa12b73081e3a5dd3f9148fb1371",
+    "raster_before/source_hashes.txt": "9fe4e4f0913e67bfaca1d990e00327047cfd350d3e91add389bbb71525675327",
+    "README.md": "979645ff2ae9820492f37ef1a021fb429e810d18f2bd48d6fbf57491548dac25",
+    "sources/before/frame_telemetry_overlay.v": "e407d58f072146e438262a899ab5ab62b71ca0d79ef330bb6fa3b17ac1bce45e",
+    "sources/current/frame_telemetry_overlay.v": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e",
+    "sources/current/run_mutations.ps1": "9dee390c72d2d8afeee2c11218d17adebbe98b2b23407a12e9b8b015f73d3e6a",
+    "sources/current/run_tests.ps1": "c22d1f190126897cfc6ff2fe74dee95f224d56c7379989b5f16413dadd64fb02",
+    "sources/current/tb_frame_telemetry.sv": "9067e1d9242ff0da5ec0d70ecb9fd1a3d80b6314b36590c758b905e03d5e39a6",
+    "sources/current/tb_frame_telemetry_raster.sv": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef",
+    "sources/current/verify_timing_results.py": "acaf0ed7ee34ac68f016403ce413cd3de66336814686406321630deffc07e6e8",
+    "sources/mutant_glyphoffset/frame_telemetry_overlay.v": "5d9c96951e0b1efa8a1ab0452c5abcf87241fba5777553ec3730e240e3b1b4c2",
+    "sources/mutant_midframe/frame_telemetry_overlay.v": "9c338ae5c7a19ae9313e030208ee7b4cfe4ee31332d1b2f6670de1c435310089",
+    "sources/mutant_noack/frame_telemetry_overlay.v": "ca83c05d280310449a3c9923695730ee8750ef98cb036b96fea562daa7e4b0d4",
+    "unit_after2/compile.log": "aa9e79363cd3dd3983882e64c7a8edca25513df7fc99d9f5a8881c359a6f32d2",
+    "unit_after2/simulation.log": "ef2d5cab7617e885916f5d126bb3cedd36f395af35611cf1d17a9f047c1ac92d",
+    "unit_after2/source_hashes.txt": "0517693c31bcee26beec387ddcef2667af19a8eea3dfb8f22ffb33c866225ea5"
+  }
+}

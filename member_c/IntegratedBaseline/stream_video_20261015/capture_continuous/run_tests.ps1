@@ -1,4 +1,4 @@
-param([string]$Suffix='legacy_red',[string]$Top='tb_legacy_boundary',[int]$Native=0,[int]$Frames=6)
+param([string]$Suffix='legacy_red',[string]$Top='tb_legacy_boundary',[int]$Native=0,[int]$Frames=6,[int]$ProcCyclesPerMs=54000)
 $ErrorActionPreference='Stop'
 $here=$PSScriptRoot
 $out="D:/FPGA/output/c_continuous_capture_20261015_$Suffix"
@@ -24,7 +24,7 @@ try{
 & 'D:/softwares/modelsim/win64/vlog.exe' -sv @compiledSources | Tee-Object compile.log
 if($LASTEXITCODE -ne 0){throw 'compile failure'}
 $generics=@("-gNATIVE=$Native")
-if($Top -eq 'tb_continuous_source'){$generics+="-gFRAMES=$Frames"}
+if($Top -eq 'tb_continuous_source'){$generics+="-gFRAMES=$Frames";$generics+="-gPROC_CYCLES_PER_MS=$ProcCyclesPerMs"}
 & 'D:/softwares/modelsim/win64/vsim.exe' -c -do 'run -all; quit -code 0' @generics "work.$Top" | Tee-Object simulation.log
 if($LASTEXITCODE -ne 0 -or (Select-String simulation.log -Pattern '\*\* Fatal:|\*\* Error:' -Quiet) -or -not(Select-String simulation.log -Pattern 'PASS ' -Quiet)){throw 'simulation failure'}
 }finally{Pop-Location}

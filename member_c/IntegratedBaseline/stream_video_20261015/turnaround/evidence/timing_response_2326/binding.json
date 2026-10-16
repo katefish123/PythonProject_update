@@ -1,0 +1,14 @@
+{
+  "scope": "engine response register-boundary refactor; not physical qualification",
+  "files": {
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\turnaround\\ddr_word_engine_result_burst.v": "6ed2fd8e61e7df295633b3b48c0b446e261f45c63d2fcac9325291a225111f7b",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\turnaround\\ddr_arbiter3_turnaround.v": "7b2fb7df5f3ed493489dd7c05b4dedbda85e445b03ef316df233e61e23f184ee",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\turnaround\\tb_turnaround_engine.sv": "048a47371b3db748b2bc7537d564f21d8de5f205393bf32b90677ce2330720c3",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\turnaround\\run_tests.ps1": "ba6b593fdceb2d17d81c5b3b7dbb5e9dc4cfd0d31cccf6709820638b0523ebce",
+    "D:\\FPGA\\output\\c_stream_board_v4k_20261015\\build_unqualified_20261015_2240\\report_timing\\video_correct_ddr_top.rtr": "ad26697622da6db45e707934e6d28eb0ea2ec1f85c9c76984e6af5fbf2cb8c1f"
+  },
+  "unit_output": "D:\\FPGA\\output\\c_turnaround_regression_20261015_timing_response_2326",
+  "tests": 7,
+  "errors": 0,
+  "warnings": 0
+}

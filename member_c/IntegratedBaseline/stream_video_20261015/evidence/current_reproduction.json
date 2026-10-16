@@ -1,0 +1,8 @@
+{
+  "entry": "prepare_current.py",
+  "snapshot": "D:\\FPGA\\output\\c_stream_board_v4k_20261015",
+  "reproduction": "D:\\FPGA\\output\\c_current_repro_20261015",
+  "identical_physical_design_constraint_inputs": 136,
+  "build_file_equal_after_root_path_substitution": true,
+  "board_accepted": false
+}

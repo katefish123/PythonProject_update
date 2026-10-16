@@ -16,6 +16,10 @@ def prepare(out):
    shutil.copyfile(src,dst);sources.append(dst)
  core=out/'rtl/top/video_correct_ddr_continuous_core.v'
  shutil.copyfile(HERE/core.name,core);sources.append(core)
+ selftest=out/'rtl/memory/ddr_self_test.v'
+ shutil.copyfile(ROOT/'selftest_timing/ddr_self_test.v',selftest)
+ status=out/'rtl/video/status_overlay.v'
+ shutil.copyfile(ROOT/'status_timing/status_overlay.v',status)
  top=out/CAND/'video_correct_ddr_top.v'
  s=top.read_text()
  s=once(s,'video_correct_ddr_stream_core #(','video_correct_ddr_continuous_core #(')
@@ -28,7 +32,7 @@ def prepare(out):
  s=once(build.read_text(),'compile -top_module',''.join('add_design {'+p.as_posix()+'}\n' for p in sources)+'compile -top_module')
  build.write_text(s)
  manifest=json.loads((out/'stream_sources.json').read_text())
- for p in [*sources,top,build]: manifest['files'][p.relative_to(out).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
+ for p in [*sources,selftest,status,top,build]: manifest['files'][p.relative_to(out).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
  manifest.update(candidate='v3_continuous_capture_result_burst',hardware_accepted=False,board_replacement_allowed=False,reset_contract='All domain resets and engine share asynchronous hard assertion; locally synchronized release.')
  (out/'stream_sources.json').write_text(json.dumps(manifest,indent=2)+'\n')
  from install_telemetry import install

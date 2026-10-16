@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
-module tb_continuous_source #(parameter NATIVE=0,FRAMES=6);
+module tb_continuous_source #(parameter NATIVE=0,FRAMES=6,PROC_CYCLES_PER_MS=54000);
 localparam W=NATIVE?1920:128,H=NATIVE?1080:48;
 localparam HS=NATIVE?44:4,HB=NATIVE?148:8,HF=NATIVE?88:64,VS=NATIVE?5:2,VB=NATIVE?36:4,VF=4;
 localparam BASE1=28'h0800000;
 reg rx_clk=0,proc_clk=0,ui_clk=0,rst_n=0,enabled=0,rx_vs=0,rx_de=0;reg[23:0]rx_rgb=0;
 reg rx_run=1,proc_run=1;
 always #3.367003367 if(rx_run)rx_clk=~rx_clk;else rx_clk=0;
-always #9.259259259 if(proc_run)proc_clk=~proc_clk;else proc_clk=0;
+always #(500000.0/PROC_CYCLES_PER_MS) if(proc_run)proc_clk=~proc_clk;else proc_clk=0;
 always #4 ui_clk=~ui_clk;
 wire frame_valid,frame_bank,frame_geometry_valid;reg frame_ready=1;
 wire[31:0]frame_generation,rejected_frames,dropped_frames;wire[95:0]frame_corners;wire[3:0]last_failure_reason;wire fault;
@@ -15,7 +15,7 @@ reg release_valid=0,release_bank=0;reg[31:0]release_generation=0;
 wire cmd_valid,cmd_write;wire[27:0]cmd_addr;wire[255:0]cmd_wdata;wire[31:0]cmd_wstrb;wire[2047:0]cmd_burst_data;
 reg rsp_valid=0,rsp_write=1;reg stall_ui=0;integer utick=0,ptick=0;
 reg pending_ui=0;reg pending_bank=0;integer ack_delay=0;wire cmd_ready=!stall_ui&&!pending_ui&&(utick%11!=0);
-continuous_source_path #(.IN_W(W),.IN_H(H),.SRC_W(W),.SRC_H(H),.DATA_FIFO_ADDR_BITS(NATIVE?10:4),.FIFO_ADDR_BITS(NATIVE?9:3),.MIN_PIXELS(16),.MAX_PIXELS(4096),.MAX_SPAN(32)) dut(.*);
+continuous_source_path #(.IN_W(W),.IN_H(H),.SRC_W(W),.SRC_H(H),.DATA_FIFO_ADDR_BITS(NATIVE?10:4),.FIFO_ADDR_BITS(NATIVE?9:3),.MIN_PIXELS(16),.MAX_PIXELS(4096),.MAX_SPAN(32),.PROC_CYCLES_PER_MS(PROC_CYCLES_PER_MS)) dut(.*);
 integer camera_frame=0,accepted=0,commands=0,completed=0;integer allocated_kind[0:255];integer written_pixels[0:255];
 integer processing_delay=0;reg processing=0,processing_bank=0,hold_release=0;reg[31:0]processing_generation=0;reg[1:0]locked=0;
 reg[1:0]bank_camera[0:1];integer checks=0;reg allow_fault=0;reg suppress_processing=0;
@@ -64,7 +64,7 @@ if(frame_capture_ms<previous_capture_ms||dut.manager.now_ms<frame_capture_ms||(N
 previous_capture_ms<=frame_capture_ms;
 if(processing&&!suppress_processing)$fatal(1,"test processor accepted two frames");
 accepted<=accepted+1;locked[frame_bank]<=1;
-if(!suppress_processing)begin processing<=1;processing_bank<=frame_bank;processing_generation<=frame_generation;processing_delay<=NATIVE?54000:100;end
+if(!suppress_processing)begin processing<=1;processing_bank<=frame_bank;processing_generation<=frame_generation;processing_delay<=NATIVE?PROC_CYCLES_PER_MS:100;end
 $display("CAPTURE_DESCRIPTOR native=%0d gen=%0d bank=%0d source_frame=%0d capture_ms=%0d time_ns=%0t",NATIVE,frame_generation,frame_bank,allocated_kind[frame_generation],frame_capture_ms,$time);
 end
 if(processing&&!hold_release)begin

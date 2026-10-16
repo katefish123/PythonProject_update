@@ -1,0 +1,18 @@
+{
+  "review": "independent read-only source review versus 290a5b2",
+  "result": "No proven P1/P2 found within listed timing changes",
+  "limitations": [
+    "Not physical timing closure",
+    "HUD requires sequential full raster; async snapshot may lag image by one display frame",
+    "Credit accepted exactly at VS cannot supply that VS after adding one RX register stage; if both banks occupied the frame is counted as dropped",
+    "No actual camera sharpness acceptance"
+  ],
+  "files": {
+    "telemetry/frame_telemetry_overlay.v": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e",
+    "turnaround/ddr_word_engine_result_burst.v": "6ed2fd8e61e7df295633b3b48c0b446e261f45c63d2fcac9325291a225111f7b",
+    "selftest_timing/ddr_self_test.v": "23dbeab252130129cc5fc684dc9b6e8b55778a5df9271bf661564ab440c25e34",
+    "continuous_integration/prepare_board.py": "04999b24bdbc60575d206729425d9d2acf14b3c6a13ffb0c7b621adfa66332b8",
+    "capture_continuous/continuous_capture_rx.v": "8910490f8d05eeb12654670d6044316cdcdc11e3c6df043ae57f1b1aae5ebded",
+    "capture_continuous/continuous_capture_geometry.v": "b8caf1ee598c91337c689af0b6e0c4a70b7ffc45da6434b6f5c3bc2c970a78a7"
+  }
+}

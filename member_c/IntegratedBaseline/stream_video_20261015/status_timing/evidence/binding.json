@@ -1,0 +1,24 @@
+{
+  "status": "functional_and_structural_passed",
+  "rtl_sha256": "77f6f15064dc91946ddd57facd734da9ac877ee84af8f9c6e2241c772306a6d1",
+  "original_sha256": "b732624e6c8ae9cacaf938fe4536aaa4783a03ad0667044f08ac2a6a5f9698ed",
+  "bench_sha256": "d86877d145ff7c5b368bf89d9d2a27d528043c164fa56dbdda140c55f770bc8e",
+  "logs": {
+    "compile.log": "6a2c0cb38be0ece85ab4b30edbc83079bc913b082724c079c9577b774b5c360d",
+    "simulation.log": "4592707f87b33e5c1a31ef8d8531d93a0e3bfe27c3eefaf06fd3bfd196558f7f",
+    "source_hashes_before.txt": "090e8c6595dfdc88a766c87a040d525b3fb92cabfc2b7737ad1fbee99b6ad18e",
+    "source_hashes_after.txt": "090e8c6595dfdc88a766c87a040d525b3fb92cabfc2b7737ad1fbee99b6ad18e",
+    "structure_green.log": "66cfc324ea52c8d2914aeb705e469b1b0dcf6b3e3303a14461b5287041f291b7",
+    "structure_old_red.log": "64d2196558121294458b14e4f412faa380283d88a965d4c5302136d3454f73bb",
+    "structure_negative_result.txt": "d0d547f31a5ba8537caa8936002de15a782571a65c7166b1c38a19f7597da3dc"
+  },
+  "states": 32,
+  "visible_pixels_compared": 3932160,
+  "blank_pixels_checked": 75267840,
+  "hardware_accepted": false,
+  "timing_passed": false,
+  "limitations": [
+    "Registered row requires the established VTC leading horizontal blank; arbitrary y changes during active video are unsupported.",
+    "RGB is compared only while status overlay on is true, matching original output contract."
+  ]
+}

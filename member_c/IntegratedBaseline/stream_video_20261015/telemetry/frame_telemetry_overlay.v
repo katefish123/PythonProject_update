@@ -139,47 +139,88 @@ module frame_telemetry_overlay #(
  label_char=label_text[(5-col)*8+:8];
  end
  endfunction
+
+ // Raster prefetch: prepare cell N while scanning the preceding 16 pixels.
+ // x=0..15 prepares glyph at x=16; x=16..31 prepares glyph at x=32, etc.
+ // The decoder is split into ordinary single-cycle register stages. No timing
+ // exceptions are needed, and the output still refers to current x/y.
  wire [11:0] dx=x-12'd16,dy=y-12'd80;
- wire [4:0] col=dx[8:4];
- wire [3:0] row=dy[8:5];
- reg [7:0] character;
- reg [3:0] digit;
- reg [34:0] glyph;
+ reg [4:0] fetch_col;
+ reg [3:0] fetch_row;
+ reg [2:0] fetch_glyph_y;
+ reg fetch_line_valid;
  reg [39:0] line_value;
+ reg [15:0] age_digits;
+ reg fetch_held;
+ reg [7:0] character;
+ reg [34:0] glyph;
+ reg [4:0] prefetched_row,active_row;
+ reg active_line_valid;
+ reg [7:0] next_character;
+ reg [3:0] digit;
  always @* begin
-  character=" ";digit=0;line_value=0;
-  if(row==0)begin
-   case(col)
-    0:character=shown[360]?"H":"A";
-    1:character=shown[360]?"E":"G";
-    2:character=shown[360]?"L":"E";
-    3:character=shown[360]?"D":" ";
-    5:character="0"+{4'b0,shown[23:20]};
-    6:character="0"+{4'b0,shown[19:16]};
-    7:character="0"+{4'b0,shown[15:12]};
-    8:character=".";
-    9:character="0"+{4'b0,shown[11:8]};
-    10:character="S";
-    default:character=" ";
+  next_character=" ";digit=0;
+  if(fetch_row==0)begin
+   case(fetch_col)
+    0:next_character=fetch_held?"H":"A";
+    1:next_character=fetch_held?"E":"G";
+    2:next_character=fetch_held?"L":"E";
+    3:next_character=fetch_held?"D":" ";
+    5:next_character="0"+{4'b0,age_digits[15:12]};
+    6:next_character="0"+{4'b0,age_digits[11:8]};
+    7:next_character="0"+{4'b0,age_digits[7:4]};
+    8:next_character=".";
+    9:next_character="0"+{4'b0,age_digits[3:0]};
+    10:next_character="S";
+    default:next_character=" ";
    endcase
-  end else if(row<=8)begin
-   if(col<6)character=label_char(row,col);
-   else if(col<16)begin
-    // Row selection is a small mux; only a nibble is selected for the glyph.
-    case(row)
-     1:line_value=shown[79:40];2:line_value=shown[119:80];3:line_value=shown[159:120];
-     4:line_value=shown[199:160];5:line_value=shown[239:200];6:line_value=shown[279:240];
-     7:line_value=shown[319:280];8:line_value=shown[359:320];default:line_value=0;
-    endcase
-    digit=line_value[(15-col)*4+:4];character="0"+{4'b0,digit};
+  end else if(fetch_row<=8)begin
+   if(fetch_col<6)next_character=label_char(fetch_row,fetch_col);
+   else if(fetch_col<16)begin
+    digit=line_value[(15-fetch_col)*4+:4];
+    next_character="0"+{4'b0,digit};
    end
   end
-  glyph=font(character);
+ end
+ always @(posedge pix_clk or negedge pix_rst_n)begin
+  if(!pix_rst_n)begin
+   fetch_col<=0;fetch_row<=0;fetch_glyph_y<=0;fetch_line_valid<=0;
+   line_value<=0;age_digits<=0;fetch_held<=0;character<=0;glyph<=0;
+   prefetched_row<=0;active_row<=0;active_line_valid<=0;
+  end else begin
+   case(x[3:0])
+    0:begin
+     fetch_col<=x[8:4];fetch_row<=dy[8:5];fetch_glyph_y<=dy[3:1];
+     fetch_line_valid<=y>=80 && y<350 && !dy[4] && dy[3:1]<7;
+    end
+    1:begin
+     case(fetch_row)
+      1:line_value<=shown[79:40];2:line_value<=shown[119:80];3:line_value<=shown[159:120];
+      4:line_value<=shown[199:160];5:line_value<=shown[239:200];6:line_value<=shown[279:240];
+      7:line_value<=shown[319:280];8:line_value<=shown[359:320];default:line_value<=0;
+     endcase
+     age_digits<=shown[23:8];fetch_held<=shown[360];
+    end
+    2:character<=next_character;
+    3:glyph<=font(character);
+    4:case(fetch_glyph_y)
+      0:prefetched_row<=glyph[34:30];1:prefetched_row<=glyph[29:25];
+      2:prefetched_row<=glyph[24:20];3:prefetched_row<=glyph[19:15];
+      4:prefetched_row<=glyph[14:10];5:prefetched_row<=glyph[9:5];
+      6:prefetched_row<=glyph[4:0];default:prefetched_row<=0;
+     endcase
+    15:begin active_row<=prefetched_row;active_line_valid<=fetch_line_valid;end
+    default:begin end
+   endcase
+  end
+ end
+ always @*begin
   rgb=shown[360]?24'hffb040:24'h40ff80;
   on=0;
-  // 16x16 glyph cell (10x14 ink), 32-pixel line pitch. No pixel divider.
-  if(scan_de && image_valid && shown_valid && x>=16 && x<272 && y>=80 && y<350 &&
-     !dy[4] && dx[3:1]<5 && dy[3:1]<7)
-   on=glyph[34-(dy[3:1]*5+dx[3:1])];
+  // Only a five-bit pixel mux and basic horizontal/valid gating remain here.
+  // All vertical decoding, counter selection and font lookup end at registers.
+  if(scan_de && image_valid && shown_valid && x>=16 && x<272 &&
+     active_line_valid && dx[3:1]<5)
+   on=active_row[4-dx[3:1]];
  end
 endmodule

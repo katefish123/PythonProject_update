@@ -141,3 +141,50 @@ printed time_ns label; verification.json normalizes interval numbers to ns.
 HDMI60fps verification false. `verify_results.py` rechecks these results.
 The runner now copies sources before compilation, so parallel test edits cannot
 change the recorded sources of a running verification.
+
+## Capture timing pipeline candidate (2026-10-15 23:13)
+
+The earlier frozen evidence above describes the pre-optimization baseline.
+Its `verify_results.py` intentionally binds that earlier source revision. Use
+`verify_timing_results.py` and `timing_verification.json` for this candidate.
+
+Actual v4k routed report, generated 23:07, located RX -0.620ns at report line635:
+credit FIFO head -> bank/generation validation -> allocation/packet queue write
+controls, with6 logic levels and queue-control fanout251. PROC -2.660ns at
+line1375 starts in manager generation, passes its signed metadata-ready subtract,
+and reaches the unchanged marker detector snapshot enables through23 levels.
+
+RX now validates returned credits independently for each fixed bank and registers
+the resulting credit flags. Only these flags can drive admission and the wide
+packet queue controls. This adds one RX edge to returned-credit availability.
+In-flight duplicate credits are rejected before reallocation can reuse the bank;
+a duplicate straddling VS must never clear the newly allocated generation.
+
+PROC now registers the marker event before entering the unchanged B detector.
+The event data clocks unconditionally, avoiding a wide ready-controlled enable.
+Only its valid bit depends on event acceptance. END fences the FIFO immediately
+when entering this stage, so the next frame cannot overtake terminal processing.
+This adds one processing clock to geometry latency and retains one event per
+clock for nonterminal traffic. No ports, B logic, timing exceptions, source
+packing, writer retirement, shared reset or published-result behavior changed.
+
+`-Top tb_timing_boundaries` checks duplicate credits coincident with VS/reuse,
+stale/active credits, same-VS END+BEGIN, packed RGB and shared hard reset.
+The source bench/runner also accept `-ProcCyclesPerMs 57115` to model the current
+57.115MHz processing clock and matching millisecond timestamp prescaler. The
+production default remains54000; root supplies the board-specific override.
+
+Post-change physical timing and complete corrected DDR/HDMI validation must use
+the parent's freshly generated snapshot. Source simulation alone cannot establish
+either timing closure or complete-system60fps.
+
+Current candidate fresh checks all PASS with zero compiler/simulator errors or
+warnings: timing_boundary_2315, timing_manager_2314, timing_reduced_2314,
+timing_reduced_57115_2317 and timing_native60_57115_2315. The native run completed
+2026-10-15 23:18:23 using RX148.5MHz and PROC57.115MHz:60 consecutive1920x1080
+frames,124416000 exact source RGB pixels and1944000 accepted/acknowledged8-beat
+capture commands. All60 source IDs and alternating bank descriptors matched;
+no source drops or rejection. This run retains the mock1ms processor release;
+the parent performs actual corrected-output/HDMI contention verification.
+`python verify_timing_results.py` validates each log plus all five RTL snapshot
+hashes and writes the candidate's `timing_verification.json`.

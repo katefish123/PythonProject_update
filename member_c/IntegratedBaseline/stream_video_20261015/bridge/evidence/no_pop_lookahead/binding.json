@@ -1,0 +1,44 @@
+{
+  "change": "remove downstream pop from FIFO rd_en lookahead; keep four reservation slots",
+  "original_report": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4m_implementation\\final_timing.rtr",
+  "original_report_sha256": "0b370bb5556c675dc38fb7dab9bc47da1be1a16668a75bd82a3bb8dd64535b2c",
+  "original_ui_setup_wns_ns": -1.339,
+  "source_sha256": {
+    "async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+    "async_packet_stream.v": "de5f57d1480789954a20ce6ed2d9df220a5c2603dc42f0b33f8d4c71d6a99349",
+    "async_packet_stream_before.v": "b46c4f53b4dfbcc11a9d1e3a01eddc18a1421598462437afd6f9a07b6c923361",
+    "quad_packet_bridge.v": "ec72e354e2dc36b23a7f6e1da28daea48d5f6154a19f5cd88b13c9fa0fb7b466"
+  },
+  "runs": {
+    "baseline_stream": {
+      "logs": {
+        "compile.log": "70df6246141be822731ccf25ccaa920f40e93016d09e11f345f58ed8c8fe9a70",
+        "simulation.log": "620a0540caeb52782add51274f97abc7b5e1332b129a57d27f902ea1fbf7ad7d",
+        "source_hashes.txt": "beffa2a183c6adc8a9127b8f86603d07c11b67fc7f8c298c2797d420088dc8ec"
+      }
+    },
+    "baseline_quad": {
+      "logs": {
+        "compile.log": "02ea817a0677ffbd576c1d644ae37cdbc821ac4bfb808173c42d58d6004c5822",
+        "simulation.log": "996cab54e508133414e32d0f4913ea3a4ede6f2637bad0e1abca52c1ddf31139",
+        "source_hashes.txt": "77ba26f3a24a9eef2ad01bdf45f7d69d68bb5d468cc1ac08b41e49188f82118d"
+      }
+    },
+    "candidate_stream": {
+      "logs": {
+        "compile.log": "18801648182c11f67e1fa60ac037ec06e0c5fd2cee34df886f0f609fe8e75a2a",
+        "simulation.log": "2987c4269f2cf5fa77ebc898ee5ace4fb76157061aa8a6aaf6d9cf6ef2431b61",
+        "source_hashes.txt": "75fff0827d3b7ab07bb72cc6c4a13d1f39a14d4b3e1db5355642743e5d04e13c"
+      }
+    },
+    "candidate_quad": {
+      "logs": {
+        "compile.log": "e3e56017e3cfd3b78f7765c98018eb42bdd4fa0979cb18fdff2f95167d3eb786",
+        "simulation.log": "b509074d3262ddaecf47e4167bbad1254aa67556d9344d7ff2fcb3f7e7c33e1b",
+        "source_hashes.txt": "cfb5584f1234a27321a13c2b1b4cd1c298ba99c469193fb92559eec35064a84d"
+      }
+    }
+  },
+  "post_change_physical_timing_verified": false,
+  "hardware_accepted": false
+}

@@ -10,15 +10,25 @@
 
 整机已接通连续采集、原始B校正、64像素结果突发写回、完整写入确认、帧边界HDMI切换。54MHz候选完成12张不同校正图：9953280个校正像素和19906560个HDMI窗口像素逐点匹配，坏角标帧不发布，之后恢复。处理时间从约19.1ms降至约16.84ms，实际新图发布仍约33.44ms，因此还没有达到60张不同校正图/秒。
 
-当前选用独立57.115MHz候选继续验证。原生Pango PLL模型确认像素时钟仍148.5MHz，处理时钟57.115385MHz；VCO、反馈及像素分频保持不变，启用原先空闲的整数输出。毫秒计数和约束同步调整。完整分辨率12图已通过：9953280个校正像素、10782720个HDMI窗口像素一致，采集丢帧0；排除故意插入的坏帧后，新结果进入相邻HDMI扫描帧。60图长回归及物理实现验证仍在运行，最终以绑定证据和时序报告为准。
+V4K选用独立57.115MHz处理时钟。原生Pango PLL模型确认像素时钟仍148.5MHz，处理时钟57.115385MHz；VCO、反馈及像素分频保持不变，启用原先空闲的整数输出。毫秒计数和约束同步调整。完整分辨率12图已通过：9953280个校正像素、10782720个HDMI窗口像素一致，采集丢帧0；排除故意插入的坏帧后，新结果进入相邻HDMI扫描帧。60图整机回归现已通过：49766400个校正像素、50595840个HDMI窗口像素逐点一致；排除故意插入的坏帧后，58对相邻有效帧均进入相邻HDMI扫描帧，约60张新结果/秒，采集丢帧0。测试覆盖约1.067秒仿真时间、3种循环的独立图像与角点，并非长时间实拍稳定性验收。
 
-屏幕侧栏加入实际显示源帧的年龄、帧代号、采集/发布/拒绝计数及拒绝原因。保留旧结果时显示HELD年龄；它不能把重复扫描的旧图计作新校正帧。23.2秒旧图、恢复、异步握手、整帧更新及逐像素字体检查已通过独立测试。
+V4L将RX信用归还、角点事件、DDR响应、开机自检和HUD文字分拍，完整60图整机回归通过，约4977万个校正存储像素和5060万个显示像素一致，采集丢帧0。最终物理时序中RX +0.176ns、PROC +0.994ns已通过；PIX -0.243ns（1端点）、UI -1.166ns（133端点）仍未通过。
+
+V4M继续修复响应索引和顶部状态字形，完整60图整机回归已通过，原始B算法未改。最终详细报告中RX +0.024ns、PROC +0.129ns、PIX +0.044ns通过；DDR UI仍-1.339ns（474端点），另有DDR UI到PHY -0.126ns（1端点）。因此仍不具备完整物理时序验收条件。
+
+当前V4N仅修改跨时钟队列适配器的读前瞻：不再把缓存命中后当拍的pop直接送进FIFO读指针/empty判断。四个预留槽保持容量安全，满队列恢复后仍可每拍传一笔。顺序/背压/复位/连续吞吐、四邻域元数据测试和缩小尺寸整机压力测试通过。V4N完整60图回归及新PDS正在运行，不能继承V4M的60图通过结论。源图、结果尺寸、B算法和运行时钟均保持。
+
+屏幕侧栏加入显示侧诊断快照：源帧年龄、帧代号、采集/发布/拒绝计数及拒绝原因。保留旧结果时显示HELD年龄；它不能把重复扫描的旧图计作新校正帧。23.2秒旧图、恢复、异步握手、整帧更新及逐像素字体检查已通过独立测试。
+
+独立代码审查未发现可证的严重事务所有权或银行复用问题；它不能代替长回归、时序和上板验收。
+
+HUD是按显示帧边界更新的异步诊断快照，不保证与当前图像逐帧对齐。连续60Hz换图时，FRAME/AGE通常对应上一显示帧；快照在帧开始时约滞后16ms，帧末可接近33ms。内部年龄计时粒度1ms，屏幕按0.1秒截断显示，不能用于逐帧端到端延迟测量。
 
 ## 已确认的限制
 
 - 尚未确认实拍画面模糊已解决。需要原始输入与原生尺寸输出对照，以及运动、故意调虚后恢复的板级测试。
 - 尚未确认相机整机60张新校正图/秒；原生DDR仿真与真实硬件验收分开记录。
-- V2B最终UI时序仍有-0.321ns、1个端点未通过。后续缓存拆开了替换结果与控制使能，新候选重新布局布线。所有交付允许标记保持false。
+- V4M仍有DDR UI和UI到PHY时序违例；V4N物理实现正在运行，所有交付允许标记保持false。
 - 所有时钟域及DDR引擎必须共享异步硬复位断言；软中止必须等待已接受事务退休。
 
 ## 复现与证据
@@ -27,6 +37,6 @@
 
 `continuous_system_test/prepare_test.py --baseline <生成目录> --bench clock57/tb_continuous_stream_system.sv` 绑定实际RTL，再运行 `continuous_system_test/run_tests.ps1 -FullHD 1 -Frames 60 -Suffix <唯一名称>`。测试检查全部源/结果/显示像素、银行/帧代号、原生AXI背压、坏帧保留与恢复，并比较仿真前后SHA。
 
-`continuous_system_test/verify_continuous.py` 将通过日志、文件SHA、实际实现输入及新图间隔绑定在一起，明确区分功能通过、仿真帧率与硬件验收。54MHz完整12图证据见 `continuous_system_test/evidence/v4f/qualification.json`。57.115MHz的12图证据见 `continuous_system_test/evidence/v4k/qualification.json`；长回归结束后更新最终记录。
+`continuous_system_test/verify_continuous.py` 将通过日志、文件SHA、实际实现输入及新图间隔绑定在一起，明确区分功能通过、仿真帧率与硬件验收。54MHz完整12图证据见 `continuous_system_test/evidence/v4f/qualification.json`。57.115MHz的12图及60图证据见 `continuous_system_test/evidence/v4k/qualification.json`。V4L/V4M完整60图证据分别见 `continuous_system_test/evidence/v4l/qualification.json` 和 `continuous_system_test/evidence/v4m/qualification.json`；物理时序失败证据分别见 `evidence/v4l_implementation/implementation_status.json` 和 `evidence/v4m_implementation/implementation_status.json`。
 
 各模块的测试和限制见 `capture_continuous/`、`result_burst/`、`display_block/`、`arbitration/`、`turnaround/`、`telemetry/` 和 `clock57/`。`cache_fill/` 保存未选入当前候选的调度实验，不能将其局部提速当作整机帧率完成。

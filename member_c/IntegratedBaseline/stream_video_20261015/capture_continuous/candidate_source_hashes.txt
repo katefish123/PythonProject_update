@@ -1,19 +1,19 @@
 
 Algorithm : SHA256
-Hash      : D65E1ADE9552740EE326531A0BCD9E74269EC9A55E15AA8265729512F65D809D
-Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\capture_continuous\continuous_capture_geometry.v
-
-Algorithm : SHA256
-Hash      : F20FE031979489D8D5AE13B587E74411508596E5E17006B7A31D58995641FB90
-Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\capture_continuous\continuous_capture_manager.v
-
-Algorithm : SHA256
-Hash      : CFBA030768C40BC76AA1AD21A1AB59FC41B91E180FC45D3A73343FF52F66C274
+Hash      : 8910490F8D05EEB12654670D6044316CDCDC11E3C6DF043AE57F1B1AAE5EBDED
 Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\capture_continuous\continuous_capture_rx.v
 
 Algorithm : SHA256
 Hash      : E8CDBD7A787FC3863795E2F35897F32CF97FA18B62DA49160745D0AB1094E051
 Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\capture_continuous\continuous_capture_writer.v
+
+Algorithm : SHA256
+Hash      : B8CAF1EE598C91337C689AF0B6E0C4A70B7FFC45DA6434B6F5C3BC2C970A78A7
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\capture_continuous\continuous_capture_geometry.v
+
+Algorithm : SHA256
+Hash      : F20FE031979489D8D5AE13B587E74411508596E5E17006B7A31D58995641FB90
+Path      : D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\capture_continuous\continuous_capture_manager.v
 
 Algorithm : SHA256
 Hash      : 4D2232A7110B1419D24722439E2F83DBE101C587FEBA70AE82C4B5D0FD135687

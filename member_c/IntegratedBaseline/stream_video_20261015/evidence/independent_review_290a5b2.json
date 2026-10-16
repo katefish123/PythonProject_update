@@ -1,0 +1,18 @@
+{
+  "reviewed_commit": "290a5b2",
+  "generated_candidate": "v4k_processing57p115",
+  "read_only": true,
+  "critical_or_important_rtl_findings": [],
+  "checks": [
+    "Old response/new acceptance ownership in both arbiters and engine",
+    "Abort retains owned writer FIFO and ACK until drain",
+    "DACK/late row generation/bank reuse",
+    "Generated manifest and actual PLL/prescaler/constraint bindings"
+  ],
+  "known_limitation": "HUD是按显示帧边界更新的异步诊断快照，不保证与当前图像逐帧对齐。连续60Hz换图时，FRAME/AGE通常对应上一显示帧；快照在帧开始时约滞后16ms，帧末可接近33ms。内部年龄计时粒度1ms，屏幕按0.1秒截断显示，不能用于逐帧端到端延迟测量。",
+  "does_not_establish": [
+    "60-image long regression pass",
+    "Physical timing closure",
+    "Board/camera acceptance"
+  ]
+}

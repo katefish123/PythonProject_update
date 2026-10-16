@@ -35,8 +35,8 @@ module ddr_word_engine_result_burst #(
 
     output wire          rsp_valid,
     output reg           rsp_write,
-    output reg  [255:0]  rsp_rdata,
-    output reg [2047:0] rsp_source_block,
+    output wire [255:0]  rsp_rdata,
+    output wire [2047:0] rsp_source_block,
     output reg           fault,
     output reg [3:0] fault_reason,
 
@@ -99,6 +99,23 @@ module ddr_word_engine_result_burst #(
     reg [21:0] source_cache_tag;
     reg [27:0] source_next_addr;
     reg [255:0] source_cache[0:7];
+    // Cache words already hold the final R beat on entry to ST_RSP. Select
+    // those registered words instead of copying/clearing 2048 bits under a
+    // live command address decode. Only these five response-control bits
+    // depend on cache hit/address selection; retirement latency is unchanged.
+    localparam [1:0] RESPONSE_ZERO=0, RESPONSE_NATIVE=1,
+                     RESPONSE_SOURCE=2, RESPONSE_RESULT=3;
+    reg [1:0] response_kind;
+    reg [2:0] response_word;
+    reg [255:0] native_response;
+    assign rsp_rdata = response_kind==RESPONSE_NATIVE ? native_response :
+                       response_kind==RESPONSE_SOURCE ? source_cache[response_word] :
+                       response_kind==RESPONSE_RESULT ? result_cache[response_word] : 256'd0;
+    assign rsp_source_block = response_kind==RESPONSE_SOURCE ?
+        {source_cache[7],source_cache[6],source_cache[5],source_cache[4],source_cache[3],source_cache[2],source_cache[1],source_cache[0]} :
+        response_kind==RESPONSE_RESULT ?
+        {result_cache[7],result_cache[6],result_cache[5],result_cache[4],result_cache[3],result_cache[2],result_cache[1],result_cache[0]} : 2048'd0;
+
     wire source_read=(SOURCE_PREFETCH_ENABLE || force_source_block) && !cmd_write &&
         ((cmd_addr>=SOURCE_BASE0 && cmd_addr<SOURCE_BASE0+SOURCE_WORDS) ||
          (cmd_addr>=SOURCE_BASE1 && cmd_addr<SOURCE_BASE1+SOURCE_WORDS));
@@ -121,26 +138,23 @@ module ddr_word_engine_result_burst #(
         begin
             if(read_burst)begin
                 if(axi_rid!==4'd0 || axi_rlast!==(read_index==3'd7))begin
-                    fault_reason<=3;fault<=1;cache_valid<=0;source_cache_valid<=0;rsp_rdata<=0;rsp_source_block<=0;state<=ST_RSP;
+                    fault_reason<=3;fault<=1;cache_valid<=0;source_cache_valid<=0;response_kind<=RESPONSE_ZERO;state<=ST_RSP;
                 end else begin
                     if(read_source)source_cache[read_index]<=axi_rdata;
                     else result_cache[read_index]<=axi_rdata;
                     if(read_index==3'd7)begin
                         if(read_source)begin
                             source_cache_tag<=addr_hold[27:6];source_cache_valid<=1;
-                            rsp_source_block<={axi_rdata,source_cache[6],source_cache[5],source_cache[4],source_cache[3],source_cache[2],source_cache[1],source_cache[0]};
-                        end
-                        else begin cache_tag<=addr_hold[27:6];cache_valid<=1;
-                            rsp_source_block<={axi_rdata,result_cache[6],result_cache[5],result_cache[4],result_cache[3],result_cache[2],result_cache[1],result_cache[0]};end
-                        rsp_rdata<=(addr_hold[5:3]==3'd7) ? axi_rdata :
-                            (read_source ? source_cache[addr_hold[5:3]] : result_cache[addr_hold[5:3]]);
+                        end else begin cache_tag<=addr_hold[27:6];cache_valid<=1;end
+                        response_kind<=read_source?RESPONSE_SOURCE:RESPONSE_RESULT;
                         state<=ST_RSP;
                     end else begin
                         read_index<=read_index+1'b1;watchdog_count<=0;state<=ST_R;
                     end
                 end
             end else begin
-                rsp_rdata<=axi_rdata;
+                native_response<=axi_rdata;
+                response_kind<=RESPONSE_NATIVE;
                 if(axi_rid!==4'd0 || axi_rlast!==1'b1)begin fault_reason<=3;fault<=1;cache_valid<=0;source_cache_valid<=0;end
                 state<=ST_RSP;
             end
@@ -186,11 +200,16 @@ module ddr_word_engine_result_burst #(
                         write_burst<=force_result_block||capture_command;write_index<=0;
                         write_last<=force_result_block?4'd7:CAPTURE_BURST_BEATS-1;
                         write_buffer<=force_result_block?result_block_data:capture_burst_data;
+                        // Single outstanding: capture the response word for
+                        // every command here, before hit/miss/legality decode.
+                        // A miss keeps it through the final R beat. An old
+                        // ST_RSP response is consumed before this NBA update.
+                        response_word<=cmd_addr[5:3];
                         addr_hold <= cmd_addr;
                         wdata_hold <= cmd_wdata;
                         wstrb_hold <= cmd_wstrb;
                         rsp_write <= cmd_write;
-                        rsp_rdata <= 256'd0; rsp_source_block<=0;
+                        response_kind<=RESPONSE_ZERO;
                         read_burst<=0;read_index<=0;read_source<=0;
                         if(source_read)begin source_next_valid<=1;source_next_addr<=cmd_addr+28'd8;end
                         if(cmd_write && source_cache_valid && source_cache_tag==cmd_addr[27:6])source_cache_valid<=0;
@@ -205,9 +224,7 @@ module ddr_word_engine_result_burst #(
                         end else if (cmd_write) begin
                             state <= ST_AW;
                         end else if(cache_hit)begin
-                            rsp_rdata<=source_hit ? source_cache[cmd_addr[5:3]] : result_cache[cmd_addr[5:3]];
-                            if(source_hit)rsp_source_block<={source_cache[7],source_cache[6],source_cache[5],source_cache[4],source_cache[3],source_cache[2],source_cache[1],source_cache[0]};
-                            if(result_hit)rsp_source_block<={result_cache[7],result_cache[6],result_cache[5],result_cache[4],result_cache[3],result_cache[2],result_cache[1],result_cache[0]};
+                            response_kind<=source_hit?RESPONSE_SOURCE:RESPONSE_RESULT;
                             state<=ST_RSP;
                         end else begin
                             read_burst<=result_read || source_prefetch;read_source<=source_prefetch;
@@ -226,7 +243,7 @@ module ddr_word_engine_result_burst #(
             wstrb_hold <= 32'd0;
             watchdog_count <= 32'd0;
             rsp_write <= 1'b0;
-            rsp_rdata <= 256'd0; rsp_source_block<=0;
+            response_kind<=RESPONSE_ZERO;response_word<=0;native_response<=0;
             source_cache_valid<=0;source_cache_tag<=0;source_next_valid<=0;source_next_addr<=0;read_source<=0;
             fault <= 1'b0;cache_valid<=0;cache_tag<=0;read_burst<=0;read_index<=0;
         end else begin
@@ -247,7 +264,7 @@ module ddr_word_engine_result_burst #(
                         end
                     end else if (watchdog_count >= WATCHDOG_CYCLES-1) begin
                         fault_reason<=4'd4;fault <= 1'b1;
-                        rsp_rdata <= 256'd0; rsp_source_block<=0;
+                        response_kind<=RESPONSE_ZERO;
                         state <= ST_RSP;
                     end else begin
                         watchdog_count <= watchdog_count + 1'b1;
@@ -259,7 +276,7 @@ module ddr_word_engine_result_burst #(
                         receive_write;
                     end else if (watchdog_count >= WATCHDOG_CYCLES-1) begin
                         fault_reason<=4'd5;fault <= 1'b1;
-                        rsp_rdata <= 256'd0; rsp_source_block<=0;
+                        response_kind<=RESPONSE_ZERO;
                         state <= ST_RSP;
                     end else begin
                         watchdog_count <= watchdog_count + 1'b1;
@@ -275,7 +292,7 @@ module ddr_word_engine_result_burst #(
                         end
                     end else if (watchdog_count >= WATCHDOG_CYCLES-1) begin
                         fault_reason<=4'd6;fault <= 1'b1;
-                        rsp_rdata <= 256'd0; rsp_source_block<=0;
+                        response_kind<=RESPONSE_ZERO;
                         state <= ST_RSP;
                     end else begin
                         watchdog_count <= watchdog_count + 1'b1;
@@ -288,7 +305,7 @@ module ddr_word_engine_result_burst #(
                         receive_read;
                     end else if (watchdog_count >= WATCHDOG_CYCLES-1) begin
                         fault_reason<=4'd7;fault <= 1'b1;
-                        rsp_rdata <= 256'd0; rsp_source_block<=0;
+                        response_kind<=RESPONSE_ZERO;
                         state <= ST_RSP;
                     end else begin
                         watchdog_count <= watchdog_count + 1'b1;
@@ -303,7 +320,7 @@ module ddr_word_engine_result_burst #(
 
                 default: begin
                     fault <= 1'b1;
-                    rsp_rdata <= 256'd0; rsp_source_block<=0;
+                    response_kind<=RESPONSE_ZERO;
                     rsp_write <= 1'b0;
                     state <= ST_RSP;
                 end

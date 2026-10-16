@@ -1,0 +1,297 @@
+Startpoint  : engine/rsp_rdata[255:0]_3_ret_17/opit_0_L6Q_perm/CLK
+Endpoint    : core/selftest/passed/opit_0_inv_L6Q_perm/I4
+Path Group  : ddrphy_sysclk
+Path Type   : max (slow corner)
+Path Class  : sequential timing path
+Clock Skew  :    -0.207  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+  Capture Clock Delay     :  4.139
+  Launch Clock Delay      :  5.541
+  Clock Pessimism Removal :  1.195
+
+ Location                          Delay Type             Incr        Path         Logical Resource 
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       0.000       0.000 r                        
+ N3                                                      0.000       0.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       0.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.970       1.080 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       1.080         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.105       1.185 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.294       1.479         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.148       1.627 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.432       2.059         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.177       2.236 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.450       2.686         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.037       2.723 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000       2.723         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.123       2.846 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000       2.846         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                    0.431       3.277 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.753       4.030         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.168       4.198 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.602       4.800         ui_clk           
+ HCKB_213_492/CLKOUT               td                    0.287       5.087 r       HCKBROUTE_42/CLKOUT
+                                   net (fanout=5719)     0.454       5.541         ntR11653         
+ CLMS_243_577/CLK                                                          r       engine/rsp_rdata[255:0]_3_ret_17/opit_0_L6Q_perm/CLK
+
+ CLMS_243_577/Q2                   tco                   0.203       5.744 r       engine/rsp_rdata[255:0]_3_ret_17/opit_0_L6Q_perm/L6Q
+                                   net (fanout=3)        0.611       6.355         engine/_N3596    
+ CLMA_243_576/Y0                   td                    0.074       6.429 r       engine/N1842_516/LUT6_inst_perm/L6
+                                   net (fanout=256)      1.126       7.555         engine/_N35153   
+ CLMA_315_595/Y0                   td                    0.074       7.629 r       engine/N1842_522[219]/LUT6_inst_perm/L6
+                                   net (fanout=1)        0.456       8.085         engine/_N54286   
+ CLMS_327_595/Y0                   td                    0.224       8.309 r       engine/N1842_523[219]/LUT6D_inst_perm/L6
+                                   net (fanout=1)        0.600       8.909         engine/_N54542   
+ CLMA_309_576/Y3                   td                    0.108       9.017 r       engine/rsp_rdata[255:0]_2[219]/opit_0_inv_L6Q_perm/L6
+                                   net (fanout=1)        0.395       9.412         engine/N1842_219 
+ CLMS_309_583/Y1                   td                    0.074       9.486 r       engine/rsp_rdata[255:0]_3_ret_12[219]/opit_0_L6Q_perm/L6
+                                   net (fanout=1)        1.480      10.966         rsp_data[219]    
+ CLMS_207_607/CR3                  td                    0.388      11.354 r       core/selftest/N212.eq_15/gateop_l6l5_perm/L5
+                                   net (fanout=1)        2.109      13.463         _N19             
+ CLMA_285_420/Y3                   td                    0.096      13.559 r       core/selftest/N180.eq_15/gateop_perm/Y
+                                   net (fanout=2)        2.278      15.837         core/selftest/_N134834
+ CLMA_231_666/A4                                                           r       core/selftest/passed/opit_0_inv_L6Q_perm/I4
+
+ Data arrival time                                                  15.837         Logic Levels: 7  
+                                                                                   Logic: 1.241ns(12.053%), Route: 9.055ns(87.947%)
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       8.000       8.000 r                        
+ N3                                                      0.000       8.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       8.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.829       8.939 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       8.939         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.091       9.030 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.247       9.277         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.126       9.403 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.367       9.770         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.149       9.919 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.383      10.302         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.026      10.328 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000      10.328         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.101      10.429 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000      10.429         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                   -0.211      10.218 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.642      10.860         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.143      11.003 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.515      11.518         ui_clk           
+ HCKB_213_529/CLKOUT               td                    0.245      11.763 r       HCKBROUTE_38/CLKOUT
+                                   net (fanout=4911)     0.376      12.139         ntR11649         
+ CLMA_231_666/CLK                                                          r       core/selftest/passed/opit_0_inv_L6Q_perm/CLK
+ clock pessimism                                         1.195      13.334                          
+ clock uncertainty                                      -0.150      13.184                          
+
+ Setup time                                             -0.139      13.045                          
+
+ Data required time                                                 13.045                          
+----------------------------------------------------------------------------------------------------
+ Data required time                                                 13.045                          
+ Data arrival time                                                  15.837                          
+----------------------------------------------------------------------------------------------------
+ Slack (VIOLATED)                                                   -2.792                          
+====================================================================================================
+
+====================================================================================================
+
+Startpoint  : core/stream_path/cache/fill_tag[7]/opit_0_inv_L6QL5Q_perm/CLK
+Endpoint    : engine/rsp_source_block[1127]/opit_0_inv_L6Q_perm/I3
+Path Group  : ddrphy_sysclk
+Path Type   : max (slow corner)
+Path Class  : sequential timing path
+Clock Skew  :    -0.201  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+  Capture Clock Delay     :  4.166
+  Launch Clock Delay      :  5.562
+  Clock Pessimism Removal :  1.195
+
+ Location                          Delay Type             Incr        Path         Logical Resource 
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       0.000       0.000 r                        
+ N3                                                      0.000       0.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       0.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.970       1.080 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       1.080         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.105       1.185 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.294       1.479         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.148       1.627 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.432       2.059         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.177       2.236 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.450       2.686         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.037       2.723 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000       2.723         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.123       2.846 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000       2.846         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                    0.431       3.277 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.753       4.030         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.168       4.198 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.620       4.818         ui_clk           
+ HCKB_213_187/CLKOUT               td                    0.287       5.105 r       HCKBROUTE_44/CLKOUT
+                                   net (fanout=2190)     0.457       5.562         ntR11654         
+ CLMA_231_301/CLK                                                          r       core/stream_path/cache/fill_tag[7]/opit_0_inv_L6QL5Q_perm/CLK
+
+ CLMA_231_301/CR0                  tco                   0.249       5.811 r       core/stream_path/cache/fill_tag[7]/opit_0_inv_L6QL5Q_perm/L5Q
+                                   net (fanout=67)       1.273       7.084         core/stream_path/cache/fill_tag [7]
+ CLMA_219_486/COUT                 td                    0.285       7.369 f       core/stream_path/cache/N3307_1.fsub_4/gateop_perm/COUT
+                                   net (fanout=1)        0.000       7.369         core/stream_path/cache/N3307_1.co [4]
+ CLMA_219_492/Y3                   td                    0.214       7.583 r       core/stream_path/cache/N3307_1.fsub_8/gateop_perm/Y
+                                   net (fanout=1)        0.477       8.060         core/stream_path/cache/N9230 [8]
+ CLMA_219_499/COUT                 td                    0.282       8.342 f       core/stream_path/cache/N3312_2_12/gateop_perm/COUT
+                                   net (fanout=1)        0.000       8.342         core/stream_path/cache/_N31356
+ CLMA_219_505/Y2                   td                    0.149       8.491 r       core/stream_path/cache/N3312_2_15/gateop_perm/Y
+                                   net (fanout=1)        0.748       9.239         core/stream_path/g_addr [21]
+ CLMA_225_576/CR1                  td                    0.224       9.463 r       core/stream_path/arbiter/cmd_addr_2[20]/LUT6D_inst_perm/L5
+                                   net (fanout=1)        0.912      10.375         core/br_a [21]   
+ CLMS_225_697/Y2                   td                    0.074      10.449 r       engine/addr_hold[21]/opit_0_inv_L6Q_perm/L6
+                                   net (fanout=7)        0.247      10.696         cmd_a[21]        
+ CLMA_225_696/CR0                  td                    0.195      10.891 f       core/display_reader/ui_state_reg[3]/opit_0_inv_L6Q_LUT6DQL5_perm/L5
+                                   net (fanout=2)        1.034      11.925         engine/_N131983  
+ CLMA_249_576/Y2                   td                    0.074      11.999 r       engine/N17_4/LUT6_inst_perm/L6
+                                   net (fanout=3)        0.120      12.119         engine/N17       
+ CLMA_249_577/Y1                   td                    0.336      12.455 r       engine/N229_6/gateop_perm/Y
+                                   net (fanout=12)       0.121      12.576         engine/N3529 [10]
+ CLMA_249_576/Y3                   td                    0.207      12.783 r       engine/N1963_24/LUT6_inst_perm/L6
+                                   net (fanout=2042)     2.720      15.503         engine/_N55108   
+ CLMS_45_547/A3                                                            r       engine/rsp_source_block[1127]/opit_0_inv_L6Q_perm/I3
+
+ Data arrival time                                                  15.503         Logic Levels: 10 
+                                                                                   Logic: 2.289ns(23.026%), Route: 7.652ns(76.974%)
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       8.000       8.000 r                        
+ N3                                                      0.000       8.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       8.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.829       8.939 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       8.939         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.091       9.030 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.247       9.277         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.126       9.403 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.367       9.770         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.149       9.919 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.383      10.302         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.026      10.328 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000      10.328         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.101      10.429 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000      10.429         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                   -0.211      10.218 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.642      10.860         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.143      11.003 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.515      11.518         ui_clk           
+ HCKB_213_472/CLKOUT               td                    0.245      11.763 r       HCKBROUTE_41/CLKOUT
+                                   net (fanout=2565)     0.403      12.166         ntR11648         
+ CLMS_45_547/CLK                                                           r       engine/rsp_source_block[1127]/opit_0_inv_L6Q_perm/CLK
+ clock pessimism                                         1.195      13.361                          
+ clock uncertainty                                      -0.150      13.211                          
+
+ Setup time                                             -0.150      13.061                          
+
+ Data required time                                                 13.061                          
+----------------------------------------------------------------------------------------------------
+ Data required time                                                 13.061                          
+ Data arrival time                                                  15.503                          
+----------------------------------------------------------------------------------------------------
+ Slack (VIOLATED)                                                   -2.442                          
+====================================================================================================
+
+====================================================================================================
+
+Startpoint  : core/stream_path/cache/fill_tag[7]/opit_0_inv_L6QL5Q_perm/CLK
+Endpoint    : engine/rsp_source_block[871]/opit_0_inv_L6Q_perm/I5
+Path Group  : ddrphy_sysclk
+Path Type   : max (slow corner)
+Path Class  : sequential timing path
+Clock Skew  :    -0.201  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+  Capture Clock Delay     :  4.166
+  Launch Clock Delay      :  5.562
+  Clock Pessimism Removal :  1.195
+
+ Location                          Delay Type             Incr        Path         Logical Resource 
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       0.000       0.000 r                        
+ N3                                                      0.000       0.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       0.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.970       1.080 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       1.080         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.105       1.185 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.294       1.479         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.148       1.627 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.432       2.059         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.177       2.236 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.450       2.686         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.037       2.723 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000       2.723         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.123       2.846 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000       2.846         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                    0.431       3.277 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.753       4.030         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.168       4.198 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.620       4.818         ui_clk           
+ HCKB_213_187/CLKOUT               td                    0.287       5.105 r       HCKBROUTE_44/CLKOUT
+                                   net (fanout=2190)     0.457       5.562         ntR11654         
+ CLMA_231_301/CLK                                                          r       core/stream_path/cache/fill_tag[7]/opit_0_inv_L6QL5Q_perm/CLK
+
+ CLMA_231_301/CR0                  tco                   0.249       5.811 r       core/stream_path/cache/fill_tag[7]/opit_0_inv_L6QL5Q_perm/L5Q
+                                   net (fanout=67)       1.273       7.084         core/stream_path/cache/fill_tag [7]
+ CLMA_219_486/COUT                 td                    0.285       7.369 f       core/stream_path/cache/N3307_1.fsub_4/gateop_perm/COUT
+                                   net (fanout=1)        0.000       7.369         core/stream_path/cache/N3307_1.co [4]
+ CLMA_219_492/Y3                   td                    0.214       7.583 r       core/stream_path/cache/N3307_1.fsub_8/gateop_perm/Y
+                                   net (fanout=1)        0.477       8.060         core/stream_path/cache/N9230 [8]
+ CLMA_219_499/COUT                 td                    0.282       8.342 f       core/stream_path/cache/N3312_2_12/gateop_perm/COUT
+                                   net (fanout=1)        0.000       8.342         core/stream_path/cache/_N31356
+ CLMA_219_505/Y2                   td                    0.149       8.491 r       core/stream_path/cache/N3312_2_15/gateop_perm/Y
+                                   net (fanout=1)        0.748       9.239         core/stream_path/g_addr [21]
+ CLMA_225_576/CR1                  td                    0.224       9.463 r       core/stream_path/arbiter/cmd_addr_2[20]/LUT6D_inst_perm/L5
+                                   net (fanout=1)        0.912      10.375         core/br_a [21]   
+ CLMS_225_697/Y2                   td                    0.074      10.449 r       engine/addr_hold[21]/opit_0_inv_L6Q_perm/L6
+                                   net (fanout=7)        0.247      10.696         cmd_a[21]        
+ CLMA_225_696/CR0                  td                    0.195      10.891 f       core/display_reader/ui_state_reg[3]/opit_0_inv_L6Q_LUT6DQL5_perm/L5
+                                   net (fanout=2)        1.034      11.925         engine/_N131983  
+ CLMA_249_576/Y2                   td                    0.074      11.999 r       engine/N17_4/LUT6_inst_perm/L6
+                                   net (fanout=3)        0.120      12.119         engine/N17       
+ CLMA_249_577/Y1                   td                    0.336      12.455 r       engine/N229_6/gateop_perm/Y
+                                   net (fanout=12)       0.121      12.576         engine/N3529 [10]
+ CLMA_249_576/Y3                   td                    0.207      12.783 r       engine/N1963_24/LUT6_inst_perm/L6
+                                   net (fanout=2042)     2.720      15.503         engine/_N55108   
+ CLMS_45_547/C5                                                            r       engine/rsp_source_block[871]/opit_0_inv_L6Q_perm/I5
+
+ Data arrival time                                                  15.503         Logic Levels: 10 
+                                                                                   Logic: 2.289ns(23.026%), Route: 7.652ns(76.974%)
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       8.000       8.000 r                        
+ N3                                                      0.000       8.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       8.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.829       8.939 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       8.939         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.091       9.030 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.247       9.277         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.126       9.403 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.367       9.770         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.149       9.919 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.383      10.302         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.026      10.328 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000      10.328         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.101      10.429 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000      10.429         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                   -0.211      10.218 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.642      10.860         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.143      11.003 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.515      11.518         ui_clk           
+ HCKB_213_472/CLKOUT               td                    0.245      11.763 r       HCKBROUTE_41/CLKOUT
+                                   net (fanout=2565)     0.403      12.166         ntR11648         
+ CLMS_45_547/CLK                                                           r       engine/rsp_source_block[871]/opit_0_inv_L6Q_perm/CLK
+ clock pessimism                                         1.195      13.361                          
+ clock uncertainty                                      -0.150      13.211                          
+
+ Setup time                                             -0.118      13.093                          
+
+ Data required time                                                 13.093                          
+----------------------------------------------------------------------------------------------------
+ Data required time                                                 13.093                          
+ Data arrival time                                                  15.503                          
+----------------------------------------------------------------------------------------------------
+ Slack (VIOLATED)                                                   -2.410                          
+====================================================================================================
+
+====================================================================================================
+

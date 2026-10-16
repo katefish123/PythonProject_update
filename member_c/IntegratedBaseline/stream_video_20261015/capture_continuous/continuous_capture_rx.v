@@ -24,9 +24,14 @@ module continuous_capture_rx #(
  reg[319:0]queue[0:7];reg[2:0]head,tail;reg[3:0]count;
  wire pop=packet_valid&&packet_ready;
  wire vs_rise=rx_vs&&!vs_d;
- wire release_good=release_valid&&used[release_bank]&&bank_generation[release_bank]==release_generation&&(!active||release_bank!=bank);
- wire free0=!used[0]||(release_good&&!release_bank);
- wire free1=!used[1]||(release_good&&release_bank);
+ // Validate credits before they can drive the wide packet queue controls.
+ // Suppress a duplicate while its accepted credit is still in this stage;
+ // otherwise a duplicate coincident with reallocation could free the new owner.
+ reg credit_return0,credit_return1,credit_bad;
+ wire match0=release_valid&&!release_bank&&used[0]&&!credit_return0&&bank_generation[0]==release_generation&&(!active||bank);
+ wire match1=release_valid&&release_bank&&used[1]&&!credit_return1&&bank_generation[1]==release_generation&&(!active||!bank);
+ wire free0=!used[0]||credit_return0;
+ wire free1=!used[1]||credit_return1;
  wire allocate=vs_rise&&enabled_sync[2]&&(free0||free1);
  wire next_bank=!free0;
  wire good_end=!frame_bad&&!overflow&&y_count==IN_H&&x_count==0&&!rx_de&&sampled==SRC_W*SRC_H&&pack_count==0;
@@ -47,10 +52,11 @@ module continuous_capture_rx #(
  wire[319:0]data_packet={PIXEL_DATA,bank,generation,word_addr,1'b1,4'd0,assembled};
  always @(posedge clk or negedge rst_n)begin
  if(!rst_n)begin
- vs_d<=0;de_d<=0;enabled_sync<=0;active<=0;bank<=0;frame_bad<=0;overflow<=0;generation<=0;bank_generation[0]<=0;bank_generation[1]<=0;used<=0;
+ credit_return0<=0;credit_return1<=0;credit_bad<=0;vs_d<=0;de_d<=0;enabled_sync<=0;active<=0;bank<=0;frame_bad<=0;overflow<=0;generation<=0;bank_generation[0]<=0;bank_generation[1]<=0;used<=0;
  x_count<=0;y_count<=0;sampled<=0;word_addr<=0;pack_count<=0;pixel_pack<=0;head<=0;tail<=0;count<=0;
  close_valid<=0;close_bank<=0;close_ok<=0;close_generation<=0;close_reason<=0;dropped_frames<=0;admitted_frames<=0;fault<=0;
  end else begin
+ credit_return0<=match0;credit_return1<=match1;credit_bad<=release_valid&&!(match0||match1);
  vs_d<=rx_vs;de_d<=rx_de;enabled_sync<={enabled_sync[1:0],enabled};close_valid<=0;
  if(pop)head<=head+1'b1;
  count<=count+push_count-(pop?1'b1:1'b0);
@@ -59,9 +65,9 @@ module continuous_capture_rx #(
  if(push_count==2)queue[tail+3'd1]<=begin_packet;
  tail<=tail+push_count;
  end
- if(release_valid)begin
- if(release_good)used[release_bank]<=0;else fault<=1;
- end
+ if(credit_return0)used[0]<=0;
+ if(credit_return1)used[1]<=0;
+ if(credit_bad)fault<=1;
  if(vs_rise)begin
  active<=0;
  if(active)begin close_valid<=1;close_bank<=bank;close_generation<=generation;close_ok<=good_end;close_reason<=end_reason;end

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\status_timing/test_structure.py", line 17, in <module>
+    p=argparse.ArgumentParser();p.add_argument('--rtl',type=Path,default=HERE/'status_overlay.v');verify(p.parse_args().rtl)
+                                                                                                  ~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\status_timing/test_structure.py", line 8, in verify
+    assert re.search(r'reg\s*\[159:0\]\s*row_bits\s*;',new),'missing independent 160-bit ROM row register'
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: missing independent 160-bit ROM row register

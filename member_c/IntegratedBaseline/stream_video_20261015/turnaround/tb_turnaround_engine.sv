@@ -8,6 +8,7 @@ module tb_turnaround_engine;
     reg cmd_valid = 0;
     wire cmd_ready;
     reg cmd_write = 0;
+    reg cmd_source_block=0;
     reg [27:0] cmd_addr = 0;
     reg [255:0] cmd_wdata = 0;
     reg [31:0] cmd_wstrb = 0;
@@ -51,7 +52,7 @@ module tb_turnaround_engine;
 
     ddr_word_engine_result_burst #(.WATCHDOG_CYCLES(80),.READ_AHEAD_ENABLE(1),.RESULT_WORDS(128)) dut (.fault_reason(),.capture_burst_data(2048'd0),
         .clk(clk), .rst_n(rst_n), .init_done(init_done),
-        .cmd_valid(cmd_valid), .cmd_ready(cmd_ready), .cmd_result_block(1'b0),.result_block_data(2048'b0),.cmd_source_block(1'b0),.rsp_source_block(full_result),.cmd_write(cmd_write),
+        .cmd_valid(cmd_valid), .cmd_ready(cmd_ready), .cmd_result_block(1'b0),.result_block_data(2048'b0),.cmd_source_block(cmd_source_block),.rsp_source_block(full_result),.cmd_write(cmd_write),
         .cmd_addr(cmd_addr), .cmd_wdata(cmd_wdata), .cmd_wstrb(cmd_wstrb),
         .rsp_valid(rsp_valid), .rsp_write(rsp_write), .rsp_rdata(rsp_rdata),
         .fault(fault),
@@ -68,6 +69,17 @@ module tb_turnaround_engine;
         .axi_rlast(axi_rlast), .axi_rvalid(axi_rvalid)
     );
 
+
+    // Timing boundary invariant: index ownership is captured on acceptance,
+    // independent of a cache lookup or completion. This removes the complete
+    // address/tag comparison cone from the three response-word register CEs.
+    reg [2:0] accepted_response_word;
+    always @(posedge clk) if(rst_n && cmd_valid && cmd_ready)begin
+        accepted_response_word=cmd_addr[5:3];
+        #0.1;
+        if(dut.response_word!==accepted_response_word)
+            $fatal(1,"RESPONSE_WORD_ACCEPT_BOUNDARY_REQUIRED expected=%0d actual=%0d",accepted_response_word,dut.response_word);
+    end
 
     localparam [27:0] B0=28'h0100000,B1=28'h0200000;
     reg [255:0] memory[0:511];
@@ -128,7 +140,7 @@ module tb_turnaround_engine;
             if(expect_fault)begin
                 if(rsp_rdata!==0)$fatal(1,"failed transaction exposed incomplete data");
             end else if(rsp_rdata!==expected)$fatal(1,"wrong/cache-stale data addr=%h got=%h expected=%h",address,rsp_rdata,expected);
-            if(!wr&&!expect_fault&&((address>=B0&&address<B0+128)||(address>=B1&&address<B1+128)))
+            if(!wr&&!expect_fault&&(cmd_source_block || (address>=B0&&address<B0+128)||(address>=B1&&address<B1+128)))
              for(integer block_beat=0;block_beat<8;block_beat=block_beat+1)
               if(full_result[block_beat*256+:256]!==memory[index_for({address[27:6],6'b0}+block_beat*8)])
                $fatal(1,"DISPLAY_BLOCK_REQUIRED beat=%0d address=%h",block_beat,address);
@@ -191,6 +203,28 @@ module tb_turnaround_engine;
         command(0,B0+1,0,0,1);
         if(ar_count!=physical_before)$fatal(1,"misaligned logical command reached IP");
         reset_engine;command(0,B0+24,0,0,0);
+        // Fill both physically separate caches, then alternate every response
+        // edge. This checks that the block mux and word select belong to the
+        // retiring command even when the next command uses the other cache.
+        cmd_source_block=1;command(0,28'd64,0,0,0);
+        cmd_source_block=0;command(0,B0,0,0,0);
+        physical_before=ar_count;
+        @(negedge clk);cmd_addr=B0;cmd_source_block=0;cmd_write=0;cmd_valid=1;
+        @(posedge clk);#0.1;
+        for(integer turn=0;turn<24;turn=turn+1)begin
+            if(!rsp_valid||!cmd_ready||rsp_write||fault)$fatal(1,"cache hit lost zero-bubble retirement turn=%0d",turn);
+            if(rsp_rdata!==memory[index_for(cmd_addr)])$fatal(1,"alternating cache word owner turn=%0d",turn);
+            for(integer bb=0;bb<8;bb=bb+1)
+                if(full_result[bb*256+:256]!==memory[index_for({cmd_addr[27:6],6'b0}+bb*8)])
+                    $fatal(1,"alternating cache block owner turn=%0d beat=%0d",turn,bb);
+            @(negedge clk);
+            cmd_source_block=!cmd_source_block;
+            cmd_addr=cmd_source_block?28'd64:(B0+((turn+1)%8)*8);
+            if(turn==23)cmd_valid=0;
+            @(posedge clk);#0.1;
+        end
+        if(rsp_valid||ar_count!=physical_before)$fatal(1,"cache hit turnaround generated extra response or AR");
+        $display("ALTERNATING_CACHE_RETIRE_PASS commands=24 one_per_ui_cycle=1 full_block_owner=1 source_result=1");
         test_passed=1;$display("DDR_READ_AHEAD_PASS hit=1 overlapping_masked_write=1 independent_bank=1 boundaries=1 same_AR_edge=1 adjacent_beats=1 premature_last=1 bad_id=1 missing_last=1 timeout=1 misalignment=1 reset_flush=1 ar=%0d",ar_count);$finish;
     end
     initial begin #3000000;$fatal(1,"read-ahead unit timeout");end

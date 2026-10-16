@@ -1,0 +1,80 @@
+1844: Endpoint    : core/display_reader/rgb[8]/opit_0_inv_L6Q_perm/I5
+1845: Path Group  : pixel_clock
+1846: Path Type   : max (slow corner)
+1847: Path Class  : sequential timing path
+1848: Clock Skew  :    -0.196  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+1849:   Capture Clock Delay     :  1.920
+1850:   Launch Clock Delay      :  2.252
+1851:   Clock Pessimism Removal :  0.136
+1852: 
+1853:  Location                          Delay Type             Incr        Path         Logical Resource 
+1854: ----------------------------------------------------------------------------------------------------
+1855: 
+1856:  Clock pixel_clock (rising edge)                         0.000       0.000 r                        
+1857:  GPLL_7_463/CLKOUT0                                      0.000       0.000 r       vp/u_gpll/gpll_inst/CLKOUT0
+1858:                                    net (fanout=2)        0.753       0.753         nt_hd_tx_pclk    
+1859:  USCM_215_582/CLKOUT               td                    0.168       0.921 r       clkbufg_2/gopclkbufg/CLKOUT
+1860:                                    net (fanout=7)        0.602       1.523         ntclkbufg_2      
+1861:  HCKB_213_515/CLKOUT               td                    0.287       1.810 r       HCKBROUTE_14/CLKOUT
+1862:                                    net (fanout=517)      0.442       2.252         ntR11624         
+1863:  CLMA_195_690/CLK                                                          r       core/display_reader/timing/v_cnt[4]/opit_0_inv_AQ_perm/CLK
+1864: 
+1865:  CLMA_195_690/Q2                   tco                   0.203       2.455 r       core/display_reader/timing/v_cnt[3]/opit_0_inv_AQ_perm/Q
+1866:                                    net (fanout=8)        0.605       3.060         core/display_reader/vc [3]
+1867:  CLMA_183_690/COUT                 td                    0.389       3.449 f       core/display_reader/N202_1.fsub_4/gateop_perm/COUT
+1868:                                    net (fanout=1)        0.000       3.449         core/display_reader/N202_1.co [4]
+1869:  CLMA_183_696/Y0                   td                    0.068       3.517 r       core/display_reader/N202_1.fsub_5/gateop_perm/Y
+1870:                                    net (fanout=560)      0.568       4.085         scan_y[5]        
+1871:  CLMA_177_672/Y3                   td                    0.096       4.181 r       core/stream_path/writer/expected_addr[0]/opit_0_inv_L6Q_LUT6DL5Q_perm/L6
+1872:                                    net (fanout=96)       0.789       4.970         telemetry_view/_N24844
+1873:  CLMS_189_733/Y0                   td                    0.108       5.078 r       telemetry_view/N1269_9[21]/LUT6_inst_perm/L6
+1874:                                    net (fanout=1)        1.341       6.419         telemetry_view/_N38277
+1875:  CLMA_165_859/CR1                  td                    0.407       6.826 r       telemetry_view/N1326_45[2]_muxf8_perm/L8
+1876:                                    net (fanout=1)        0.250       7.076         telemetry_view/_N62348
+1877:  CLMA_165_870/Y1                   td                    0.108       7.184 r       telemetry_view/N1326_51[2]/LUT6_inst_perm/L6
+1878:                                    net (fanout=1)        0.268       7.452         telemetry_view/_N62390
+1879:  CLMA_171_870/Y2                   td                    0.096       7.548 r       telemetry_view/N1329_36[2]_1/LUT6_inst_perm/L6
+1880:                                    net (fanout=70)       1.598       9.146         telemetry_view/N1329 [2]
+1881:  CLMS_189_769/CR2                  td                    0.407       9.553 r       telemetry_view/N1450_21_mux7_muxf7_perm/L7
+1882:                                    net (fanout=1)        0.434       9.987         telemetry_view/N1623 [21]
+1883:  CLMA_189_750/CR1                  td                    0.410      10.397 r       telemetry_view/N1503_41_muxf8_perm/L8
+1884:                                    net (fanout=1)        0.875      11.272         telemetry_view/_N43467
+1885:  CLMA_207_660/Y3                   td                    0.179      11.451 r       telemetry_view/N1503_43/LUT6_inst_perm/L6
+1886:                                    net (fanout=24)       0.630      12.081         telemetry_view/N1503
+1887:  CLMA_219_661/A5                                                           r       core/display_reader/rgb[8]/opit_0_inv_L6Q_perm/I5
+1888: 
+1889:  Data arrival time                                                  12.081         Logic Levels: 10 
+1890:                                                                                    Logic: 2.471ns(25.140%), Route: 7.358ns(74.860%)
+1891: ----------------------------------------------------------------------------------------------------
+1892: 
+1893:  Clock pixel_clock (rising edge)                         6.734       6.734 r                        
+1894:  GPLL_7_463/CLKOUT0                                      0.000       6.734 r       vp/u_gpll/gpll_inst/CLKOUT0
+1895:                                    net (fanout=2)        0.642       7.376         nt_hd_tx_pclk    
+1896:  USCM_215_582/CLKOUT               td                    0.143       7.519 r       clkbufg_2/gopclkbufg/CLKOUT
+1897:                                    net (fanout=7)        0.515       8.034         ntclkbufg_2      
+1898:  HCKB_213_535/CLKOUT               td                    0.245       8.279 r       HCKBROUTE_16/CLKOUT
+1899:                                    net (fanout=26)       0.375       8.654         ntR11627         
+1900:  CLMA_219_661/CLK                                                          r       core/display_reader/rgb[8]/opit_0_inv_L6Q_perm/CLK
+1901:  clock pessimism                                         0.136       8.790                          
+1902:  clock uncertainty                                      -0.150       8.640                          
+1903: 
+1904:  Setup time                                             -0.117       8.523                          
+1905: 
+1906:  Data required time                                                  8.523                          
+1907: ----------------------------------------------------------------------------------------------------
+1908:  Data required time                                                  8.523                          
+1909:  Data arrival time                                                  12.081                          
+1910: ----------------------------------------------------------------------------------------------------
+1911:  Slack (VIOLATED)                                                   -3.558                          
+1912: ====================================================================================================
+1913: 
+1914: ====================================================================================================
+1915: 
+1916: Startpoint  : core/display_reader/timing/v_cnt[4]/opit_0_inv_AQ_perm/CLK
+1917: Endpoint    : core/display_reader/rgb[2]/opit_0_inv_L6Q_perm/I5
+1918: Path Group  : pixel_clock
+1919: Path Type   : max (slow corner)
+1920: Path Class  : sequential timing path
+1921: Clock Skew  :    -0.196  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+1922:   Capture Clock Delay     :  1.920
+1923:   Launch Clock Delay      :  2.252

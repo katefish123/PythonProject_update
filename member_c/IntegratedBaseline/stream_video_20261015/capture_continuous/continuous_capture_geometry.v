@@ -85,23 +85,29 @@ module continuous_capture_geometry #(
  else overflow<=1;
  end
  end end
+ // Isolate the detector from the manager metadata_ready generation compare.
+ // Data clocks unconditionally; only the one-bit valid depends on ready.
+ reg detector_valid;reg[84:0]detector_data;
  reg waiting,frame_bad,held_bank;reg[31:0]held_generation;
  wire take=event_valid&&event_ready;
  assign event_ready=!waiting&&(!metadata_valid||metadata_ready);
  wire valid,reject_frame,dropped,busy;wire[11:0]x0,y0,x1,y1,x2,y2,x3,y3;
  marker_detector #(.SRC_W(SRC_W),.SRC_H(SRC_H),.MIN_PIXELS(MIN_PIXELS),.MAX_PIXELS(MAX_PIXELS),.MAX_SPAN(MAX_SPAN),.BLACK_RMIN(BLACK_RMIN),.BLACK_RMAX(BLACK_RMAX),.BLACK_GMIN(BLACK_GMIN),.BLACK_GMAX(BLACK_GMAX),.BLACK_BMIN(BLACK_BMIN),.BLACK_BMAX(BLACK_BMAX),.P0_XMIN(P0_XMIN),.P0_XMAX(P0_XMAX),.P0_YMIN(P0_YMIN),.P0_YMAX(P0_YMAX),.P1_XMIN(P1_XMIN),.P1_XMAX(P1_XMAX),.P1_YMIN(P1_YMIN),.P1_YMAX(P1_YMAX),.P2_XMIN(P2_XMIN),.P2_XMAX(P2_XMAX),.P2_YMIN(P2_YMIN),.P2_YMAX(P2_YMAX),.P3_XMIN(P3_XMIN),.P3_XMAX(P3_XMAX),.P3_YMIN(P3_YMIN),.P3_YMAX(P3_YMAX)) detector(
- .clk(proc_clk),.rst_n(rst_n),.pixel_valid(take&&event_data[84]),.frame_start(take&&event_data[82]),.frame_end(take&&event_data[81]),
- .pixel_x(event_data[47:36]),.pixel_y(event_data[35:24]),.rgb(event_data[23:0]),
+ .clk(proc_clk),.rst_n(rst_n),.pixel_valid(detector_valid&&detector_data[84]),.frame_start(detector_valid&&detector_data[82]),.frame_end(detector_valid&&detector_data[81]),
+ .pixel_x(detector_data[47:36]),.pixel_y(detector_data[35:24]),.rgb(detector_data[23:0]),
  .corners_valid(valid),.frame_reject(reject_frame),.frame_dropped(dropped),.busy(busy),
  .x0(x0),.y0(y0),.x1(x1),.y1(y1),.x2(x2),.y2(y2),.x3(x3),.y3(y3));
  always @(posedge proc_clk or negedge rst_n)begin
- if(!rst_n)begin waiting<=0;frame_bad<=0;held_bank<=0;held_generation<=0;metadata_valid<=0;metadata_data<=0;fault<=0;end
+ if(!rst_n)begin detector_valid<=0;detector_data<=0;waiting<=0;frame_bad<=0;held_bank<=0;held_generation<=0;metadata_valid<=0;metadata_data<=0;fault<=0;end
  else begin
+ detector_valid<=take;detector_data<=event_data;
  if(metadata_valid&&metadata_ready)metadata_valid<=0;
- if(take)begin
- if(event_data[82])begin held_bank<=event_data[80];held_generation<=event_data[79:48];frame_bad<=event_data[83];end
- else if(event_data[83]||held_bank!=event_data[80]||held_generation!=event_data[79:48])frame_bad<=1;
- if(event_data[81])waiting<=1;
+ // Fence the input as soon as END enters the register, before the detector
+ // consumes it. No next-frame START can overtake a pending terminal.
+ if(take&&event_data[81])waiting<=1;
+ if(detector_valid)begin
+ if(detector_data[82])begin held_bank<=detector_data[80];held_generation<=detector_data[79:48];frame_bad<=detector_data[83];end
+ else if(detector_data[83]||held_bank!=detector_data[80]||held_generation!=detector_data[79:48])frame_bad<=1;
  end
  if(waiting&&(valid||reject_frame||dropped))begin
  metadata_valid<=1;metadata_data<={held_bank,held_generation,valid&&!reject_frame&&!dropped&&!frame_bad,valid?{x0,y0,x1,y1,x2,y2,x3,y3}:96'd0};waiting<=0;
