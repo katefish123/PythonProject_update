@@ -1,0 +1,79 @@
+{
+  "candidate": "V4Q_seed29",
+  "source_commit": "03611e0",
+  "source_manifest_sha256": "555525341ed8f72e92aa1b17dc72a9c86b81574946d72db746a5b8d9a704c6f0",
+  "native_simulation_60fps_verified": true,
+  "native_frames": 60,
+  "corrected_pixels_checked": 49766400,
+  "display_pixels_checked": 50595840,
+  "steady_hdmi_new_images_per_second": 60.00006000006,
+  "source_dropped_frames": 0,
+  "processing_ns": {
+    "min": 15028115,
+    "max": 16545480
+  },
+  "capture_begin_to_publish_age_ns": {
+    "min_source_age_ns": 31701043,
+    "max_source_age_ns": 33218410
+  },
+  "timing_passed": false,
+  "setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.711,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": 0.314,
+      "failing_endpoints": 0,
+      "total_endpoints": 15116
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 93.387,
+      "failing_endpoints": 0,
+      "total_endpoints": 1007
+    },
+    "processing_clock": {
+      "setup_wns_ns": 2.544,
+      "failing_endpoints": 0,
+      "total_endpoints": 47031
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.4,
+      "failing_endpoints": 0,
+      "total_endpoints": 2487
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.169,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 5.145,
+      "failing_endpoints": 0,
+      "total_endpoints": 419
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": -0.155,
+      "failing_endpoints": 9,
+      "total_endpoints": 72482
+    }
+  },
+  "worst_failed_paths": {
+    "ddrphy_sysclk / max (slow corner)": {
+      "Startpoint": "core/continuous_sources/completion_crossing/fifo/wr_release[0]/opit_0_inv_srl/CLK",
+      "Endpoint": "engine/fault_reason_reg[1]/opit_0_inv_L6Q_perm/CE",
+      "Path Group": "ddrphy_sysclk",
+      "Path Type": "max (slow corner)",
+      "slack_ns": -0.155
+    }
+  },
+  "pds_tool_wall_time": "0h:0m:30s",
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "next_action": "Repair measured residual timing paths; do not burn",
+  "limits": [
+    "About1.067s simulated video and three rotating image/corner fixtures.",
+    "No optical sharpness or actual camera60 acceptance."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "exit_code": 1,
+  "reason": "Mapped DB shortcut did not import placement constraints into the fresh project; Place-0006 on DDR serializer. No completed timing result or bitstream.",
+  "next_action": "Use original full compile/synthesize/dev_map flow with unchanged RTL/constraints, seed41.",
+  "board_replacement_allowed": false
+}

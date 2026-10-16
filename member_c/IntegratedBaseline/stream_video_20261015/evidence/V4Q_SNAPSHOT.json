@@ -7,7 +7,7 @@
   },
   "reduced_pressure_frames": 6,
   "reduced_pressure_passed": true,
-  "full60_status": "running",
-  "pds_status": "running",
+  "full60_status": "passed",
+  "pds_status": "seed17/29/41_full_timing_failed; seed41_mapped_shortcut_placement_failed",
   "board_replacement_allowed": false
 }

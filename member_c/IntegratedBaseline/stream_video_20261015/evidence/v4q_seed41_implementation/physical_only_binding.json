@@ -1,0 +1,12 @@
+{
+  "status": "implementation_failed",
+  "source_manifest_sha256": "555525341ed8f72e92aa1b17dc72a9c86b81574946d72db746a5b8d9a704c6f0",
+  "actual_script_sha256": "8bf07c778dd301ebebd689b2bcfc64acfe16fa0cd19381b0dc274f3475501e37",
+  "mapped_db": "D:\\FPGA\\output\\c_stream_board_v4q_20261016\\build_seed29_20261016\\device_map\\video_correct_ddr_top_map.adf",
+  "mapped_db_sha256": "b88153f418fdc66e955cda5e76fb6e04f97f9dbbca0b1555ce1420637a900071",
+  "map_producer": "../v4q_seed29_implementation/implementation_status.json",
+  "functional_evidence": "../../continuous_system_test/evidence/v4q/qualification.json",
+  "source_commit": "03611e0",
+  "rtl_and_constraints_changed": false,
+  "board_replacement_allowed": false
+}
