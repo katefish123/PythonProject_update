@@ -8,8 +8,9 @@
   "local_tests": "passed; exact frozen evidence bound",
   "independent_review": "no provable P1/P2; cache address arithmetic/ownership and RX free-tail visibility contract reviewed",
   "reduced6_pressure": "passed",
-  "full60": "running",
-  "physical_timing": "running",
+  "full60": "passed",
+  "physical_timing": "passed",
   "hardware_accepted": false,
-  "board_replacement_allowed": false
+  "board_replacement_allowed": false,
+  "ready_for_controlled_board_validation": true
 }

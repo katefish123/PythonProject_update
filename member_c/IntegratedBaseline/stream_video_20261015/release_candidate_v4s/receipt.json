@@ -1,0 +1,43 @@
+{
+  "candidate": "V4S",
+  "source_commit": "a8c42b8",
+  "bitstream_file": "video_correct_ddr_top.sbit",
+  "bitstream_sha256": "3e3475d30e6fa2488a57a084aa236353077b91d80969b7d1c412c89c064d1b50",
+  "bitstream_bytes": 3791112,
+  "pds_project_on_build_host": "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\build_unqualified_20261016_1444\\build.pds",
+  "source_manifest_sha256": "16aad3e0e9050a29565f91e5b512f670a00f8f40d748b1572e1d0a20a66f06a0",
+  "timing_report_sha256": "48b9d24b15169cbec3f298b8734c5089ceb32990370ec4f4a82a16141b29e796",
+  "all_constrained_physical_timing_passed": true,
+  "native_simulation_60fps_verified": true,
+  "ready_for_controlled_board_validation": true,
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "current_board_untouched": true,
+  "b_original_algorithm_unchanged": true,
+  "source_size": [
+    1920,
+    1080
+  ],
+  "effective_result_size": [
+    765,
+    1080
+  ],
+  "stored_result_size": [
+    768,
+    1080
+  ],
+  "hdmi_canvas": [
+    1920,
+    1080
+  ],
+  "limits": [
+    "Simulation covers about1.067s and three rotating source/corner fixtures.",
+    "No actual camera sharpness/long stability acceptance.",
+    "No board programming performed by this development chat."
+  ],
+  "evidence": [
+    "../evidence/V4S_RESULT.json",
+    "../evidence/v4s_implementation/final_timing.rtr",
+    "../continuous_system_test/evidence/v4s/qualification.json"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "candidate": "V4S",
+  "source_commit": "a8c42b8",
+  "source_manifest_sha256": "16aad3e0e9050a29565f91e5b512f670a00f8f40d748b1572e1d0a20a66f06a0",
+  "native_simulation_60fps_verified": true,
+  "native_frames": 60,
+  "corrected_pixels_checked": 49766400,
+  "display_pixels_checked": 50595840,
+  "steady_hdmi_new_images_per_second": 60.00006000006,
+  "source_dropped_frames": 0,
+  "processing_ns": {
+    "min": 15043819,
+    "max": 16569326
+  },
+  "capture_begin_to_publish_age_ns": {
+    "min_source_age_ns": 31716748,
+    "max_source_age_ns": 33242256
+  },
+  "timing_passed": true,
+  "setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.589,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": 0.252,
+      "failing_endpoints": 0,
+      "total_endpoints": 14738
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 93.558,
+      "failing_endpoints": 0,
+      "total_endpoints": 1006
+    },
+    "processing_clock": {
+      "setup_wns_ns": 0.614,
+      "failing_endpoints": 0,
+      "total_endpoints": 46399
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.153,
+      "failing_endpoints": 0,
+      "total_endpoints": 2664
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.169,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 4.442,
+      "failing_endpoints": 0,
+      "total_endpoints": 415
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": 0.018,
+      "failing_endpoints": 0,
+      "total_endpoints": 73118
+    }
+  },
+  "worst_failed_paths": {},
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "pds_tool_wall_time": "0h:18m:59s",
+  "next_action": "Board camera acceptance required",
+  "limits": [
+    "About1.067s simulated video; three rotating independent image/corner fixtures.",
+    "No optical sharpness or actual camera60 acceptance."
+  ]
+}

@@ -1,16 +1,57 @@
 {
   "candidate": "v4k_processing57p115",
-  "status": "running",
-  "process_exit_code": null,
-  "timing_passed": false,
+  "status": "timing_passed",
+  "process_exit_code": 0,
+  "timing_passed": true,
   "hardware_accepted": false,
   "board_replacement_allowed": false,
   "root": "D:\\FPGA\\output\\c_stream_board_v4s_20261016",
   "build": "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\build_unqualified_20261016_1444",
-  "slow_corner_same_clock_setup": {},
+  "slow_corner_same_clock_setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.589,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": 0.252,
+      "failing_endpoints": 0,
+      "total_endpoints": 14738
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 93.558,
+      "failing_endpoints": 0,
+      "total_endpoints": 1006
+    },
+    "processing_clock": {
+      "setup_wns_ns": 0.614,
+      "failing_endpoints": 0,
+      "total_endpoints": 46399
+    },
+    "pixel_clock": {
+      "setup_wns_ns": 0.153,
+      "failing_endpoints": 0,
+      "total_endpoints": 2664
+    },
+    "ref_clk": {
+      "setup_wns_ns": 7.169,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 4.442,
+      "failing_endpoints": 0,
+      "total_endpoints": 415
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": 0.018,
+      "failing_endpoints": 0,
+      "total_endpoints": 73118
+    }
+  },
   "source_manifest_sha256": "16aad3e0e9050a29565f91e5b512f670a00f8f40d748b1572e1d0a20a66f06a0",
-  "build_log_sha256": "110ed96cb356c4ffcf4011b4cf023e22fd2ea61dcaedbe1a71e62c2401a132dc",
-  "timing_report_sha256": null,
+  "build_log_sha256": "2bf52f11ae9d6c8ef6f5614b6a3713f0f0842b8dc3a3390ecf0e45c17d5fc755",
+  "timing_report_sha256": "48b9d24b15169cbec3f298b8734c5089ceb32990370ec4f4a82a16141b29e796",
   "implementation_inputs": {
     "vendor\\b\\rtl\\b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
     "vendor\\b\\rtl\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",

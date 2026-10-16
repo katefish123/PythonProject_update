@@ -1,0 +1,130 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do D:/FPGA/output/c_continuous_system_20261015_v4s_reduced6_stress/case.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work work 
+# Copying D:/softwares/modelsim/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 14:43:52 on Oct 16,2026
+# vlog -sv -work work D:/FPGA/output/c_stream_board_v4s_20261016/rtl/top/video_correct_ddr_continuous_core.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/algo/marker_detector.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/common/reset_sync.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/memory/ddr_self_test.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_stream_board_v4s_20261016/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/async_packet_stream.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/c_stream_burst_correction_path.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/c_stream_correction_path.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/continuous_capture_geometry.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/continuous_capture_manager.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/continuous_capture_rx.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/continuous_capture_writer.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/continuous_source_path.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_arbiter3_fair.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_arbiter3_turnaround.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_quad_tile_cache.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_result_display_block64.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_result_writer_burst64.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_result_writer_stream.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/ddr_word_engine_result_burst.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/frame_processor_stream.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/frame_telemetry_overlay.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/quad_packet_bridge.v D:/FPGA/output/c_stream_board_v4s_20261016/rtl/stream/rx_preview_stream.v D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv 
+# -- Compiling module video_correct_ddr_continuous_core
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module c_corner_rectifier
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_self_test
+# -- Compiling module video_timing_vtc
+# -- Compiling module ddr_result_display
+# -- Compiling module async_packet_stream
+# -- Compiling module c_stream_burst_correction_path
+# -- Compiling module c_stream_correction_path
+# -- Compiling module continuous_capture_geometry
+# -- Compiling module continuous_capture_manager
+# -- Compiling module continuous_capture_rx
+# -- Compiling module continuous_capture_writer
+# -- Compiling module continuous_source_path
+# -- Compiling module ddr_arbiter3_fair
+# -- Compiling module ddr_arbiter3_turnaround
+# -- Compiling module ddr_quad_tile_cache
+# -- Compiling module ddr_result_display_block64
+# -- Compiling module ddr_result_writer_burst64
+# -- Compiling module burst64_async_fifo
+# -- Compiling module ddr_result_writer_stream
+# -- Compiling module stream_writer_async_fifo
+# -- Compiling module ddr_word_engine_result_burst
+# -- Compiling module frame_processor_stream
+# -- Compiling module frame_telemetry_overlay
+# -- Compiling module quad_packet_bridge
+# -- Compiling module rx_preview_stream
+# -- Compiling module tb_continuous_stream_system
+# 
+# Top level modules:
+# 	b_rectifier
+# 	reset_sync
+# 	ddr_result_display
+# 	c_stream_correction_path
+# 	ddr_arbiter3_fair
+# 	frame_telemetry_overlay
+# 	rx_preview_stream
+# 	tb_continuous_stream_system
+# End time: 14:43:52 on Oct 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc=rnp+/tb_continuous_stream_system" -wlf D:/FPGA/output/c_continuous_system_20261015_v4s_reduced6_stress/run.wlf work.tb_continuous_stream_system -gSTRESS=1 -gLATE_CAPTURE=0 -gPREFETCH=1 -gOVERLAP=1 -gBAD_FRAME=2 -gFRAMES=6 -gINLINE=1 -gFULLHD=0 
+# Start time: 14:43:52 on Oct 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_continuous_stream_system(fast)
+# STREAM_SYSTEM_CONFIG native=0 proc57p115MHz source128x48 output32x48 overlap=1 prefetch=1 late_percent=0 inline=1
+# CONTINUOUS_CAPTURE_BEGIN gen=1 bank=0 kind=0 physical_raster=2 time_ns=57879
+# CONTINUOUS_CAPTURE_BEGIN gen=2 bank=1 kind=3 physical_raster=3 time_ns=115683
+# CONTINUOUS_FRAME_BEGIN frame=1 capture_id=1 source_bank=0 kind=0 time_ns=121934 source_age_ns=64055
+# CONTINUOUS_BAD_MARKER_REJECT gen=2 rejected=1 old_published_id=0 displayed_id=0 age_ms=0 time_ns=173688
+# STREAM_PHASE_PROFILE mode=1 frame=1 solver_commit=543 streaming_run=5185 writer_drain=12 processing_ns=100514
+# CONTINUOUS_FRAME_PUBLISH frame=1 id=1 time_ns=222465 image_age_ns=164586 captured=2 admitted=2 dropped=1 rejected=1
+# CONTINUOUS_CAPTURE_BEGIN gen=3 bank=0 kind=2 physical_raster=5 time_ns=231293
+# CONTINUOUS_CAPTURE_BEGIN gen=4 bank=1 kind=0 physical_raster=6 time_ns=289097
+# CONTINUOUS_FRAME_BEGIN frame=2 capture_id=3 source_bank=0 kind=2 time_ns=309498 source_age_ns=78205
+# STREAM_PHASE_PROFILE mode=1 frame=2 solver_commit=543 streaming_run=5426 writer_drain=13 processing_ns=104750
+# CONTINUOUS_PUBLISH_INTERVAL frame=2 id=3 ns=191801
+# CONTINUOUS_FRAME_PUBLISH frame=2 id=3 time_ns=414266 image_age_ns=182973 captured=4 admitted=4 dropped=3 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=1 displayed_id=1 pixels=1536 age_ms=0 unique_frames=1 scan_frames=1 time_ns=451373
+# CONTINUOUS_CAPTURE_BEGIN gen=5 bank=0 kind=1 physical_raster=9 time_ns=462511
+# CONTINUOUS_FRAME_BEGIN frame=3 capture_id=4 source_bank=1 kind=0 time_ns=464163 source_age_ns=175066
+# STREAM_PHASE_PROFILE mode=1 frame=3 solver_commit=543 streaming_run=5464 writer_drain=13 processing_ns=105416
+# CONTINUOUS_PUBLISH_INTERVAL frame=3 id=4 ns=155331
+# CONTINUOUS_FRAME_PUBLISH frame=3 id=4 time_ns=569597 image_age_ns=280500 captured=5 admitted=5 dropped=4 rejected=1
+# CONTINUOUS_CAPTURE_BEGIN gen=6 bank=1 kind=2 physical_raster=11 time_ns=578121
+# CONTINUOUS_HDMI_FRAME generation=2 displayed_id=3 pixels=1536 age_ms=0 unique_frames=2 scan_frames=2 time_ns=606040
+# CONTINUOUS_FRAME_BEGIN frame=4 capture_id=5 source_bank=0 kind=1 time_ns=618829 source_age_ns=156318
+# STREAM_PHASE_PROFILE mode=1 frame=4 solver_commit=543 streaming_run=5316 writer_drain=13 processing_ns=102824
+# CONTINUOUS_PUBLISH_INTERVAL frame=4 id=5 ns=152074
+# CONTINUOUS_FRAME_PUBLISH frame=4 id=5 time_ns=721671 image_age_ns=259160 captured=6 admitted=6 dropped=6 rejected=1
+# CONTINUOUS_CAPTURE_BEGIN gen=7 bank=0 kind=0 physical_raster=14 time_ns=751535
+# CONTINUOUS_HDMI_FRAME generation=3 displayed_id=4 pixels=1536 age_ms=0 unique_frames=3 scan_frames=3 time_ns=760706
+# CONTINUOUS_FRAME_BEGIN frame=5 capture_id=6 source_bank=1 kind=2 time_ns=773495 source_age_ns=195374
+# STREAM_PHASE_PROFILE mode=1 frame=5 solver_commit=543 streaming_run=5346 writer_drain=12 processing_ns=103332
+# CONTINUOUS_PUBLISH_INTERVAL frame=5 id=6 ns=155173
+# CONTINUOUS_FRAME_PUBLISH frame=5 id=6 time_ns=876844 image_age_ns=298723 captured=7 admitted=7 dropped=8 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=4 displayed_id=5 pixels=1536 age_ms=0 unique_frames=4 scan_frames=4 time_ns=915373
+# CONTINUOUS_CAPTURE_BEGIN gen=8 bank=1 kind=1 physical_raster=17 time_ns=924949
+# CONTINUOUS_FRAME_BEGIN frame=6 capture_id=7 source_bank=0 kind=0 time_ns=928160 source_age_ns=176625
+# STREAM_PHASE_PROFILE mode=1 frame=6 solver_commit=543 streaming_run=5438 writer_drain=12 processing_ns=104943
+# CONTINUOUS_PUBLISH_INTERVAL frame=6 id=7 ns=156277
+# CONTINUOUS_FRAME_PUBLISH frame=6 id=7 time_ns=1033121 image_age_ns=281586 captured=8 admitted=8 dropped=9 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=5 displayed_id=6 pixels=1536 age_ms=1 unique_frames=5 scan_frames=5 time_ns=1070039
+# CONTINUOUS_HDMI_FRAME generation=6 displayed_id=7 pixels=1536 age_ms=1 unique_frames=6 scan_frames=6 time_ns=1224706
+# CONTINUOUS_SYSTEM_PASS mode=1 frames=6 corrected_pixels=9216 display_pixels=9216 average_start_interval_cycles=9209 max_ui_wait=118 overlap_beats=3584 native_reads=632
+# CONTINUOUS_TELEMETRY capture_id=8 processing_id=7 published_id=7 displayed_id=7 admitted=8 dropped=9 rejected=1 reason3=1 unique_outputs=6 physical_rasters=22 average_publish_ns=162131 min_publish_ns=152074 max_publish_ns=191801 min_source_age_ns=164586 max_source_age_ns=298723
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv(268)
+#    Time: 1224705846 ps  Iteration: 2  Instance: /tb_continuous_stream_system
+# Break at D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv line 268
+# Stopped at D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv line 268
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 14:43:54 on Oct 16,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
