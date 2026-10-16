@@ -1,16 +1,57 @@
 {
   "candidate": "v4k_processing57p115",
-  "status": "running",
-  "process_exit_code": null,
+  "status": "timing_failed",
+  "process_exit_code": 0,
   "timing_passed": false,
   "hardware_accepted": false,
   "board_replacement_allowed": false,
   "root": "D:\\FPGA\\output\\c_stream_board_v4n_20261016",
   "build": "D:\\FPGA\\output\\c_stream_board_v4n_20261016\\build_unqualified_20261016_0930",
-  "slow_corner_same_clock_setup": {},
+  "slow_corner_same_clock_setup": {
+    "sys_clk_27m": {
+      "setup_wns_ns": 35.631,
+      "failing_endpoints": 0,
+      "total_endpoints": 33
+    },
+    "rx_pixel": {
+      "setup_wns_ns": 0.137,
+      "failing_endpoints": 0,
+      "total_endpoints": 15020
+    },
+    "cfg_clock": {
+      "setup_wns_ns": 95.283,
+      "failing_endpoints": 0,
+      "total_endpoints": 999
+    },
+    "processing_clock": {
+      "setup_wns_ns": -0.611,
+      "failing_endpoints": 44,
+      "total_endpoints": 46252
+    },
+    "pixel_clock": {
+      "setup_wns_ns": -0.117,
+      "failing_endpoints": 2,
+      "total_endpoints": 2370
+    },
+    "ref_clk": {
+      "setup_wns_ns": 6.832,
+      "failing_endpoints": 0,
+      "total_endpoints": 1
+    },
+    "rst_clk": {
+      "setup_wns_ns": 4.857,
+      "failing_endpoints": 0,
+      "total_endpoints": 419
+    },
+    "ddrphy_sysclk": {
+      "setup_wns_ns": -1.12,
+      "failing_endpoints": 1837,
+      "total_endpoints": 76105
+    }
+  },
   "source_manifest_sha256": "155e05db4b987df41712532960aa99743ffeef5a7590444ee086deb089292b7c",
-  "build_log_sha256": "7e1dde4fa038c4dcecfba20d883032d8448759edc518dde1b9ef720e365f69ad",
-  "timing_report_sha256": null,
+  "build_log_sha256": "04f803498c06c6a288845dec0c5f784d5b709cc8e4f62dbb31631ecc1da396f2",
+  "timing_report_sha256": "60d5de90b37b5dc545cb3d6e26fe1f3bdd09880e666b9c38f306f1c600d5f064",
   "implementation_inputs": {
     "vendor\\b\\rtl\\b_rectifier.v": "ca8dedfbcdd7a69ad92fe49797481af38b09cb495f51df02e3361ecf260155f2",
     "vendor\\b\\rtl\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",

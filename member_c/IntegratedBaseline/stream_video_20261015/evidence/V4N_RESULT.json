@@ -1,0 +1,72 @@
+{
+  "candidate": "V4N",
+  "source_commit": "487c519",
+  "source_manifest_sha256": "155e05db4b987df41712532960aa99743ffeef5a7590444ee086deb089292b7c",
+  "qualification": "functional_60_frame_passed_but_physical_timing_failed",
+  "source_size": [
+    1920,
+    1080
+  ],
+  "effective_result_size": [
+    765,
+    1080
+  ],
+  "native_simulation_60fps_verified": true,
+  "native_frames": 60,
+  "corrected_pixels_checked": 49766400,
+  "display_pixels_checked": 50595840,
+  "steady_hdmi_new_images_per_second": 60.00006000006,
+  "source_dropped_frames": 0,
+  "processing_ns": {
+    "min": 15032019,
+    "max": 16548352
+  },
+  "capture_begin_to_publish_age_ns": {
+    "min": 31704947,
+    "max": 33221276
+  },
+  "timing_passed": false,
+  "worst_failed_paths": {
+    "processing_clock / max (slow corner)": {
+      "slack_ns": -0.611,
+      "Startpoint": "core/stream_path/bridge/raw_payload[137]/opit_0_L6Q_perm/CLK",
+      "Endpoint": "core/stream_path/bridge/packet_payload[42]/opit_0_L6Q_perm/I2",
+      "Path Group": "processing_clock",
+      "Path Type": "max (slow corner)"
+    },
+    "pixel_clock / max (slow corner)": {
+      "slack_ns": -0.117,
+      "Startpoint": "status_view/bits_6_concat_6_0/gopdrm_36k_inv/CLKB[0]",
+      "Endpoint": "status_view/rgb[0]/opit_0_inv_L6Q_perm/I0",
+      "Path Group": "pixel_clock",
+      "Path Type": "max (slow corner)"
+    },
+    "ddrphy_sysclk / max (slow corner)": {
+      "slack_ns": -1.12,
+      "Startpoint": "core/continuous_sources/data_crossing/head[1]/opit_0_L6QL5Q1_perm/CLK",
+      "Endpoint": "core/continuous_sources/writer/assembly[601]/opit_0_L6Q_perm/CE",
+      "Path Group": "ddrphy_sysclk",
+      "Path Type": "max (slow corner)"
+    },
+    "phy_dq_sysclk_0 / max (slow corner)": {
+      "slack_ns": -0.494,
+      "Startpoint": "memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_group[1].ddrphy_data_slice/ddrphy_dqs_rddata_align/this_group_ca_dly/opit_0_inv/CLK",
+      "Endpoint": "memory_ip/u_ddrphy_top/ddrphy_slice_top/u_outbuft_casn/opit_1/TX_DATA[0]",
+      "Path Group": "phy_dq_sysclk_0",
+      "Path Type": "max (slow corner)"
+    }
+  },
+  "pds_tool_wall_time": "0h:28m:20s",
+  "hardware_accepted": false,
+  "board_replacement_allowed": false,
+  "next_actions": [
+    "Split coordinate decode from packet verification in PROC bridge.",
+    "Register capture packet before the high-fanout assembly write decode.",
+    "Split synchronous glyph ROM output selection in both PIX renderers.",
+    "Recheck unchanged vendor DDR UI-to-PHY command paths in the next full physical build."
+  ],
+  "limits": [
+    "Three independent image/corner fixtures rotate; about 1.067 seconds of simulated video, not long-duration hardware stability.",
+    "No actual camera optical-sharpness or full-system camera60 acceptance."
+  ]
+}

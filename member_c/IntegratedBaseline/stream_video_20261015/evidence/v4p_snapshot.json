@@ -1,0 +1,24 @@
+{
+  "root": "D:\\FPGA\\output\\c_stream_board_v4p_20261016",
+  "design_constraint_input_count": 136,
+  "changed_inputs_vs_v4n": [
+    "rtl/video/status_overlay.v",
+    "rtl/stream/quad_packet_bridge.v",
+    "rtl/stream/continuous_capture_writer.v",
+    "rtl/stream/frame_telemetry_overlay.v"
+  ],
+  "authored_sha256": {
+    "bridge/quad_packet_bridge.v": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+    "capture_continuous/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+    "status_timing/status_overlay.v": "477035115b3e46303a4eece8ecdb49f9dc3e47da7b606cd09128cf00ec7fed0a",
+    "telemetry/frame_telemetry_overlay.v": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017"
+  },
+  "implementation_options": [
+    "optimize_multi_corner_timing",
+    "slack_prior_in_global_router TRUE"
+  ],
+  "source_manifest_sha256": "848117ae8670ce41e9d121eee26b0922288710345274d91b8b59e54ac77d0e2f",
+  "all_manifest_hashes_valid": true,
+  "hardware_accepted": false,
+  "board_replacement_allowed": false
+}

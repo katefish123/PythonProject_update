@@ -1,0 +1,25 @@
+{
+  "module": "telemetry",
+  "current_rtl_sha256": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017",
+  "current_source_sha256": {
+    "frame_telemetry_overlay.v": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017",
+    "tb_frame_telemetry_raster.sv": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef",
+    "run_tests.ps1": "c22d1f190126897cfc6ff2fe74dee95f224d56c7379989b5f16413dadd64fb02",
+    "test_rom_local.py": "e424cda0f315a61ed91f9a58952f0219a5083084a20893109121f93036a29eca"
+  },
+  "baseline_v4n_sha256": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e",
+  "original_output": "D:\\FPGA\\output\\c_frame_telemetry_20261015_v4n_drm_local",
+  "old_structure_expected_failure": "missing local register after inferred font DRM output",
+  "files_sha256": {
+    "compile.log": "6504186555934969e876299b761bcf30db5a69b3ffcb536adeebad7ebdaaa7ba",
+    "simulation.log": "eba76a3263357c75ac39e08017a295b2819515d88898933295329e878b80fb07",
+    "source_hashes.txt": "a6be91685a1f596f07486a39b2b4b311e94d440ad0dce9d457c8c1a2e51178e8",
+    "sources/frame_telemetry_overlay.v": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017",
+    "sources/run_tests.ps1": "c22d1f190126897cfc6ff2fe74dee95f224d56c7379989b5f16413dadd64fb02",
+    "sources/tb_frame_telemetry_raster.sv": "52038d7d8f6d235fb7b099fc26415129119f2fc4ea15a9be7dcfb454e9a6c7ef",
+    "sources/test_rom_local.py": "e424cda0f315a61ed91f9a58952f0219a5083084a20893109121f93036a29eca",
+    "sources/v4n_before.v": "b9c84822b38ab4cf6ad813733cc03ff41eb44c41882d65f33769eea513ecfc0e",
+    "structure_green_current.log": "92a3e800049cfbc21f5887b2248e56a4cb4d89f2abe9ba9b693d6f44db178fed",
+    "structure_v4n_red.log": "8c0ffad2397362c73ee9820c97be4499eb2c480d716fbbfad5c1569937be382e"
+  }
+}

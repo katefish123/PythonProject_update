@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "status": "RTL_frozen_simulation_passed_physical_timing_pending",
+  "scope": [
+    "telemetry",
+    "status_timing"
+  ],
+  "timing_exceptions_added": false,
+  "tests": [
+    {
+      "module": "status_timing",
+      "evidence": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\status_timing\\evidence\\drm_prefetch_v4n",
+      "manifest_sha256": "2daea17b38c0d3dd4924decc58e6beeb87b92849b926f67072ffcb9c84149471",
+      "rtl_sha256": "477035115b3e46303a4eece8ecdb49f9dc3e47da7b606cd09128cf00ec7fed0a",
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "simulation_errors": 0,
+      "simulation_warnings": 0,
+      "result": "# PASS status timing fullVTC states=32 visible=3932160 ink=110272 blank=75267840 allglyphrows exactcoordinates scanstart midframestatus reset",
+      "structural_negative_result": "V4N original rejected for: missing local register after inferred DRM output"
+    },
+    {
+      "module": "telemetry",
+      "evidence": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\telemetry\\evidence\\drm_prefetch_v4n",
+      "manifest_sha256": "8eef084c96d5ba6695d72b4c235253c0793c36169297ed13e6b9a24922cbdcf9",
+      "rtl_sha256": "4ff10601c9bfd45b61ced1e2b40ac67cdeb24ba919387eef01a6f97cee4c2017",
+      "compile_errors": 0,
+      "compile_warnings": 0,
+      "simulation_errors": 0,
+      "simulation_warnings": 0,
+      "result": "# PASS fullHD telemetry raster frames=2 ink=16656 exactcoordinates noportraitoverlap allrows",
+      "structural_negative_result": "V4N original rejected for: missing local register after inferred font DRM output"
+    }
+  ],
+  "interfaces": {
+    "status": "Original module/ports/RGB/on registers and all448 ROM constants preserved; continuous 2200x1125 fullHD raster; x=hc-192 and y=vc-41 modulo12bits. 192 leading blank cycles make local row and first8bit segment ready before active x0. y stable per line, status selected only at scan_start; reset outputs remain zero. RGB while on=0 is not image content and is not compared.",
+    "telemetry": "Original API and16pixel prefetch lead preserved; x advances1 per PIX, each line visits x0..15 before text starts x16; phase15 application unchanged; image_valid/scan_de remain combinational gates; coherent ID/AGE/mailbox unchanged."
+  },
+  "paths": [
+    {
+      "module": "status_view",
+      "startpoint": "status_view/bits_6_concat_6_0/gopdrm_36k_inv/CLKB[0]",
+      "endpoint": "status_view/rgb[0]/opit_0_inv_L6Q_perm/I0",
+      "slack_ns": -0.117,
+      "data_delay_ns": 6.216,
+      "logic_ns": 2.1,
+      "routing_ns": 4.116,
+      "root_cause": "inferred DRM row output traverses 160:1 bit-selection path and long row_bits routing",
+      "repair": "DRM row_bits -> independent local_row_bits[159:0] register -> 8-bit segment_prefetch at x mod32=1 for next group -> active_segment at x mod32=31 -> original RGB register using 8:1 bit mux"
+    },
+    {
+      "module": "telemetry_view",
+      "startpoint": "telemetry_view/N1476/gopdrm_18k_inv/CLKB",
+      "endpoint": "telemetry_view/prefetched_row[0]/opit_0_inv_L7Q_perm/A3",
+      "slack_ns": -0.009,
+      "data_delay_ns": 6.16,
+      "logic_ns": 1.565,
+      "routing_ns": 4.595,
+      "root_cause": "font inferred DRM glyph output routed directly to sparse row-selection flop",
+      "repair": "phase3 font DRM glyph -> phase4 independent 35-bit glyph_local register -> phase5 5-bit font-row selection -> original phase15 active-row load; no final pixel latency change"
+    }
+  ],
+  "physical_report": {
+    "path": "D:\\FPGA\\output\\c_stream_board_v4n_20261016\\build_unqualified_20261016_0930\\report_timing\\video_correct_ddr_top.rtr",
+    "sha256": "60d5de90b37b5dc545cb3d6e26fe1f3bdd09880e666b9c38f306f1c600d5f064",
+    "binding": "V4N pre-repair report only; no claim of repaired physical timing closure."
+  }
+}

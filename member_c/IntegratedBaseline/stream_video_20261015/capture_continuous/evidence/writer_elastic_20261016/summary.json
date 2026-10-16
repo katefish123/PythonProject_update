@@ -1,0 +1,146 @@
+{
+  "schema": "capture_writer_timing_candidate/v1",
+  "status": "RTL_FROZEN_FUNCTIONAL_TESTS_PASS_TIMING_PENDING",
+  "date_local": "2026-10-16",
+  "source": {
+    "candidate_path": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\continuous_capture_writer.v",
+    "candidate_sha256": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+    "old_writer_sha256": "e8cdbd7a787fc3863795e2f35897f32cf97fa18b62da49160745d0ab1094e051",
+    "dedicated_test_sha256": "41a5b9b7987ea539c789caaa5b38e15c48562fc746359fc15f4dc1de0995d4ab",
+    "dedicated_runner_sha256": "cb9803a7a6461c7d03653e5569e1bc2764ad37da37c0bc00a53171e820deb2dc"
+  },
+  "scope": {
+    "modified_rtl": [
+      "capture_continuous/continuous_capture_writer.v"
+    ],
+    "dedicated_files": [
+      "tb_capture_writer_timing.sv",
+      "run_writer_timing.ps1"
+    ],
+    "shared_other_rtl_modified": false,
+    "constraints_or_frequencies_changed": false
+  },
+  "measured_failure": {
+    "snapshot": "v4n",
+    "report_path": "D:\\FPGA\\output\\c_stream_board_v4n_20261016\\build_unqualified_20261016_0930\\report_timing\\video_correct_ddr_top.rtr",
+    "report_sha256": "60d5de90b37b5dc545cb3d6e26fe1f3bdd09880e666b9c38f306f1c600d5f064",
+    "ui_max_paths": [
+      {
+        "startpoint": "core/continuous_sources/data_crossing/head[1]/opit_0_L6QL5Q1_perm/CLK",
+        "endpoint": "core/continuous_sources/writer/assembly[601]/opit_0_L6Q_perm/CE",
+        "slack_ns": -1.12,
+        "logic_levels": 6,
+        "logic_ns": 1.256,
+        "route_ns": 7.314
+      },
+      {
+        "startpoint": "core/continuous_sources/data_crossing/head[1]/opit_0_L6QL5Q1_perm/CLK",
+        "endpoint": "core/continuous_sources/writer/assembly[867]/opit_0_L6Q_perm/CE",
+        "slack_ns": -1.104,
+        "logic_levels": 6,
+        "logic_ns": 1.256,
+        "route_ns": 7.298
+      },
+      {
+        "startpoint": "core/continuous_sources/data_crossing/head[1]/opit_0_L6QL5Q1_perm/CLK",
+        "endpoint": "core/continuous_sources/writer/assembly[1122]/opit_0_L6Q_perm/CE",
+        "slack_ns": -1.104,
+        "logic_levels": 6,
+        "logic_ns": 1.256,
+        "route_ns": 7.298
+      }
+    ],
+    "critical_control_net": {
+      "name": "core/continuous_sources/writer/N1032",
+      "fanout": 1705,
+      "route_delay_ns": 2.037
+    }
+  },
+  "single_hypothesis": "Break FIFO combinational/header-validation path to assembly CE with a local elastic packet boundary and assembly storage independent of header validity; preserve validation before ownership/SEND.",
+  "implementation": {
+    "elastic_records": 1,
+    "simultaneous_consume_refill": true,
+    "assembly_write_condition": "registered input_valid && COLLECT && registered kind==DATA; local fill selects lane",
+    "header_checks_control": [
+      "fill",
+      "SEND",
+      "frame_bad",
+      "terminal result"
+    ],
+    "assembly_cleared_only_on_common_hard_reset": true,
+    "extra_initial_record_latency_ui_cycles": 1,
+    "steady_packet_capacity_per_ui_cycle": 1,
+    "owned_burst_rule": "assembly/address immutable in SEND and WAIT_ACK; END is processed only after owned native response",
+    "reset_rule": "common hard reset flushes writer, input stage and native engine together"
+  },
+  "tests": [
+    {
+      "name": "unit_red",
+      "output": "D:\\FPGA\\output\\c_capture_writer_20261016_red_v4n",
+      "expected_pass": false,
+      "observed_pass": false,
+      "findings": [
+        "** Fatal: ELASTIC_PACKET_CAPACITY_REQUIRED blocked burst must retain one next record"
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/continuous_capture_writer.v": "e8cdbd7a787fc3863795e2f35897f32cf97fa18b62da49160745d0ab1094e051",
+        "source_snapshot/tb_capture_writer_timing.sv": "8daf706290a35ab8b68c941182a1a23ebdac62e6bed4e981573fd6fa6505cd5d"
+      },
+      "log_sha256": "4f8ffbd29c2b21a5c194e17300ec71542a18df4cc9d4171d3422c22ce400c72a"
+    },
+    {
+      "name": "unit_frozen",
+      "output": "D:\\FPGA\\output\\c_capture_writer_20261016_frozen_v4n",
+      "expected_pass": true,
+      "observed_pass": true,
+      "findings": [
+        "PASS elastic full, immutable command, delayed ACK, last DATA followed by END and terminal backpressure",
+        "PASS partial rejected frame cannot emit incomplete native burst",
+        "PASS generation mismatch cannot change owned burst or publish before late ACK",
+        "PASS common reset during SEND and WAIT_ACK flushes stage then bank/generation recovery",
+        "PASS CAPTURE_WRITER_TIMING commands=8 acks=7 terminals=5 stalled_packets=96 adjacent_data_end=5"
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "source_snapshot/tb_capture_writer_timing.sv": "41a5b9b7987ea539c789caaa5b38e15c48562fc746359fc15f4dc1de0995d4ab"
+      },
+      "log_sha256": "7d7189789a60357709747a4cbee28917713c5a4d727d9aa7dce85849693ae644"
+    },
+    {
+      "name": "reduced_source_6_frames",
+      "output": "D:\\FPGA\\output\\c_continuous_capture_20261015_writer_elastic_reduced_v4n",
+      "expected_pass": true,
+      "observed_pass": true,
+      "findings": [
+        "PASS consecutive continuous source native=0 frames=6 commands=576 completed=576",
+        "PASS invalid extraheight/shortwidth/shortheight rejected only after write drain",
+        "PASS FIFO-full terminal retention, overrun drop, accepted burst retirement",
+        "PASS selected marker FIFO overflow retains both terminal generations",
+        "PASS RX clock stall/restart preserves partial source ownership",
+        "PASS stale release rejected without source ownership corruption",
+        "PASS shared hard reset flushes queued capture and metadata",
+        "PASS continuous capture complete test suite native=0"
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+        "source_snapshot/async_packet_stream.v": "de5f57d1480789954a20ce6ed2d9df220a5c2603dc42f0b33f8d4c71d6a99349",
+        "source_snapshot/continuous_capture_geometry.v": "b8caf1ee598c91337c689af0b6e0c4a70b7ffc45da6434b6f5c3bc2c970a78a7",
+        "source_snapshot/continuous_capture_manager.v": "f20fe031979489d8d5ae13b587e74411508596e5e17006b7a31d58995641fb90",
+        "source_snapshot/continuous_capture_rx.v": "8910490f8d05eeb12654670d6044316cdcdc11e3c6df043ae57f1b1aae5ebded",
+        "source_snapshot/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "source_snapshot/continuous_source_path.v": "4d2232a7110b1419d24722439e2f83dbe101c587feba70ae82c4b5d0fd135687",
+        "source_snapshot/marker_detector.v": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+        "source_snapshot/tb_continuous_source.sv": "36cc67d8a8c84d8e61af5be9ab5b99a6b39cee0531dd5806c5f978d425518c91",
+        "source_snapshot/unsigned_div_seq.v": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3"
+      },
+      "log_sha256": "fff625644b6dff4f6e5b4a3c0d4fb3046998d4a506834f970e4f84511b507a73"
+    }
+  ],
+  "remaining_limits": [
+    "New routed timing result is pending; structural path removal does not establish timing closure.",
+    "No full60/system/PDS run was started by this agent. Root must generate and bind a new snapshot before system throughput and physical timing validation.",
+    "Unit geometry128x1 with complete64pixel bursts; reduced integration128x48 with six valid frames plus faults/recovery. These do not alone prove native full-frame throughput.",
+    "Unit intentionally cancels one accepted command with shared hard reset (8 command accepts,7 ACKs). Ordinary error/abort still drains owned writes.",
+    "Input may buffer one additional record while SEND/WAIT_ACK/REPORT; bank/generation/order checks occur only when that record is consumed."
+  ]
+}

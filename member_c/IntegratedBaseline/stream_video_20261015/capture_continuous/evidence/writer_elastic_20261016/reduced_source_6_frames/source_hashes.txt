@@ -1,0 +1,41 @@
+
+Algorithm : SHA256
+Hash      : 4AA3E03862F7755EB8138F60D4ED084EA878F181C2FA5CE0C1287F0BB5F1E42A
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\async_packet_fifo.v
+
+Algorithm : SHA256
+Hash      : DE5F57D1480789954A20CE6ED2D9DF220A5C2603DC42F0B33F8D4C71D6A99349
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\async_packet_stream.v
+
+Algorithm : SHA256
+Hash      : DC12588B771773A9D9492D84BEA826166C6AB5D4B3857A0A22949B3445EB05C3
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\unsigned_div_seq.v
+
+Algorithm : SHA256
+Hash      : 5AFA843629E4EA227A8DCD9E4690294A70D1A6C00CD27287703D4972DE1FDF2D
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\marker_detector.v
+
+Algorithm : SHA256
+Hash      : B8CAF1EE598C91337C689AF0B6E0C4A70B7FFC45DA6434B6F5C3BC2C970A78A7
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\continuous_capture_geometry.v
+
+Algorithm : SHA256
+Hash      : F20FE031979489D8D5AE13B587E74411508596E5E17006B7A31D58995641FB90
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\continuous_capture_manager.v
+
+Algorithm : SHA256
+Hash      : 8910490F8D05EEB12654670D6044316CDCDC11E3C6DF043AE57F1B1AAE5EBDED
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\continuous_capture_rx.v
+
+Algorithm : SHA256
+Hash      : 5DC3FAA561753B54569FE6B8689EE529AC927C51D9C1A24BD9AB3D637D045ED3
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\continuous_capture_writer.v
+
+Algorithm : SHA256
+Hash      : 4D2232A7110B1419D24722439E2F83DBE101C587FEBA70AE82C4B5D0FD135687
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\continuous_source_path.v
+
+Algorithm : SHA256
+Hash      : 36CC67D8A8C84D8E61AF5BE9AB5B99A6B39CEE0531DD5806C5F978D425518C91
+Path      : D:\FPGA\output\c_continuous_capture_20261015_writer_elastic_reduced_v4n\source_snapshot\tb_continuous_source.sv
+

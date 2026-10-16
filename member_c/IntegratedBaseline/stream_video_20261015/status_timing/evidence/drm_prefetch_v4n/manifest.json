@@ -1,0 +1,32 @@
+{
+  "module": "status_timing",
+  "current_rtl_sha256": "477035115b3e46303a4eece8ecdb49f9dc3e47da7b606cd09128cf00ec7fed0a",
+  "current_source_sha256": {
+    "status_overlay.v": "477035115b3e46303a4eece8ecdb49f9dc3e47da7b606cd09128cf00ec7fed0a",
+    "tb_status_timing.sv": "d86877d145ff7c5b368bf89d9d2a27d528043c164fa56dbdda140c55f770bc8e",
+    "run_tests.ps1": "0670f39b54e44c527f4eff7d6d80526f301a62bfcbad9b2bd9d14412302cddf7",
+    "test_structure.py": "2f9f1e942f56681e43a2bce8ecf889f679d00c078e6a1a696cd42182a514e062",
+    "status_overlay_original.v": "b732624e6c8ae9cacaf938fe4536aaa4783a03ad0667044f08ac2a6a5f9698ed"
+  },
+  "baseline_v4n_sha256": "77f6f15064dc91946ddd57facd734da9ac877ee84af8f9c6e2241c772306a6d1",
+  "original_output": "D:\\FPGA\\output\\c_status_timing_20261015_v4n_drm_local",
+  "old_structure_expected_failure": "missing local register after inferred DRM output",
+  "files_sha256": {
+    "compile.log": "694c37de2a001efcf2aaefbbfcfb93d127334743a59d27e224fe0df7872a881e",
+    "simulation.log": "46ca1cb1259ceac9c0e8543a8854baba34701e1a36038b952a22ba8b7a4f3ff9",
+    "source_hashes_after.txt": "e018ef73e6448464857c59887bcc221b050fbf90cc5f74d5a3437b3b1db79fbc",
+    "source_hashes_before.txt": "e018ef73e6448464857c59887bcc221b050fbf90cc5f74d5a3437b3b1db79fbc",
+    "sources/run_tests.ps1": "0670f39b54e44c527f4eff7d6d80526f301a62bfcbad9b2bd9d14412302cddf7",
+    "sources/status_overlay.v": "477035115b3e46303a4eece8ecdb49f9dc3e47da7b606cd09128cf00ec7fed0a",
+    "sources/status_overlay_golden.v": "5f90d655ccef4315bd2a6d304d52da2bc66263c4b35eb646a1c95c76d5befc0e",
+    "sources/status_overlay_original.v": "b732624e6c8ae9cacaf938fe4536aaa4783a03ad0667044f08ac2a6a5f9698ed",
+    "sources/tb_status_timing.sv": "d86877d145ff7c5b368bf89d9d2a27d528043c164fa56dbdda140c55f770bc8e",
+    "sources/test_structure.py": "2f9f1e942f56681e43a2bce8ecf889f679d00c078e6a1a696cd42182a514e062",
+    "sources/v4n_before.v": "77f6f15064dc91946ddd57facd734da9ac877ee84af8f9c6e2241c772306a6d1",
+    "structure_green.log": "66cfc324ea52c8d2914aeb705e469b1b0dcf6b3e3303a14461b5287041f291b7",
+    "structure_green_current.log": "66cfc324ea52c8d2914aeb705e469b1b0dcf6b3e3303a14461b5287041f291b7",
+    "structure_negative_result.txt": "d0d547f31a5ba8537caa8936002de15a782571a65c7166b1c38a19f7597da3dc",
+    "structure_old_red.log": "9a9776ec062bfc819e47f7cd887c3a771751d82c0372c79b7ec423ca4dafacab",
+    "structure_v4n_red.log": "fe88eff98625b80a0ea6f6a4ceb4c77b0ad5f1be4fdec9f4f2f12f9f6b219364"
+  }
+}

@@ -154,6 +154,7 @@ module frame_telemetry_overlay #(
  reg fetch_held;
  reg [7:0] character;
  reg [34:0] glyph;
+ reg [34:0] glyph_local;
  reg [4:0] prefetched_row,active_row;
  reg active_line_valid;
  reg [7:0] next_character;
@@ -185,7 +186,7 @@ module frame_telemetry_overlay #(
  always @(posedge pix_clk or negedge pix_rst_n)begin
   if(!pix_rst_n)begin
    fetch_col<=0;fetch_row<=0;fetch_glyph_y<=0;fetch_line_valid<=0;
-   line_value<=0;age_digits<=0;fetch_held<=0;character<=0;glyph<=0;
+   line_value<=0;age_digits<=0;fetch_held<=0;character<=0;glyph<=0;glyph_local<=0;
    prefetched_row<=0;active_row<=0;active_line_valid<=0;
   end else begin
    case(x[3:0])
@@ -203,11 +204,12 @@ module frame_telemetry_overlay #(
     end
     2:character<=next_character;
     3:glyph<=font(character);
-    4:case(fetch_glyph_y)
-      0:prefetched_row<=glyph[34:30];1:prefetched_row<=glyph[29:25];
-      2:prefetched_row<=glyph[24:20];3:prefetched_row<=glyph[19:15];
-      4:prefetched_row<=glyph[14:10];5:prefetched_row<=glyph[9:5];
-      6:prefetched_row<=glyph[4:0];default:prefetched_row<=0;
+    4:glyph_local<=glyph;
+    5:case(fetch_glyph_y)
+      0:prefetched_row<=glyph_local[34:30];1:prefetched_row<=glyph_local[29:25];
+      2:prefetched_row<=glyph_local[24:20];3:prefetched_row<=glyph_local[19:15];
+      4:prefetched_row<=glyph_local[14:10];5:prefetched_row<=glyph_local[9:5];
+      6:prefetched_row<=glyph_local[4:0];default:prefetched_row<=0;
      endcase
     15:begin active_row<=prefetched_row;active_line_valid<=fetch_line_valid;end
     default:begin end

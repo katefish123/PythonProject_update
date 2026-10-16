@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\stream_video_20261015\telemetry\test_rom_local.py", line 4, in <module>
+    assert '4:glyph_local<=glyph;' in s,'missing local register after inferred font DRM output'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: missing local register after inferred font DRM output

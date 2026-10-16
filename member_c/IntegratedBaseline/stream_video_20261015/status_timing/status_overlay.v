@@ -6,6 +6,23 @@ module status_overlay(input wire clk,rst_n,scan_de,scan_start,input wire[11:0]x,
  // y is stable for a VTC line, so the active x=0 pixel uses the same glyph
  // and the existing RGB/on output registers retain their original latency.
  reg[159:0]row_bits;
+ // Isolate the inferred DRM output from horizontal selection, then prefetch
+ // eight glyph bits (32 output pixels) during the preceding horizontal group.
+ reg[159:0]local_row_bits;
+ reg[4:0]next_group;
+ reg[7:0]segment_prefetch,active_segment;
+ always @(posedge clk or negedge rst_n)begin
+  if(!rst_n)begin local_row_bits<=0;next_group<=0;segment_prefetch<=0;active_segment<=0;end
+  else begin
+   local_row_bits<=row_bits;
+   if(x[4:0]==0)next_group<=x[9:5]+5'd1;
+   if(x[4:0]==1)begin
+    if(next_group<20)segment_prefetch<=local_row_bits[159-next_group*8-:8];
+    else segment_prefetch<=0;
+   end
+   if(x[4:0]==31)active_segment<=segment_prefetch;
+  end
+ end
  always @(posedge clk or negedge rst_n)begin
   if(!rst_n)row_bits<=0;
   else row_bits<=bits;
@@ -465,7 +482,7 @@ module status_overlay(input wire clk,rst_n,scan_de,scan_start,input wire[11:0]x,
   else begin
    if(scan_start)shown<=status;
    on<=scan_de&&y<64;
-   rgb<=(x<640&&row_bits[159-x[9:2]])?24'hffffff:24'h101010;
+   rgb<=(x<640&&active_segment[7-x[4:2]])?24'hffffff:24'h101010;
   end
  end
 endmodule

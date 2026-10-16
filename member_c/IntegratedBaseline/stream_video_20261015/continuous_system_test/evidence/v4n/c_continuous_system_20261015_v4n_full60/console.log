@@ -1,0 +1,455 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do D:/FPGA/output/c_continuous_system_20261015_v4n_full60/case.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work work 
+# Copying D:/softwares/modelsim/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 09:29:39 on Oct 16,2026
+# vlog -sv -work work D:/FPGA/output/c_stream_board_v4n_20261016/rtl/top/video_correct_ddr_continuous_core.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/b_rectifier.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/bilinear_interp.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/homography_solver.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/perspective_coord.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/perspective_core.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/scaled_div_pipe.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/signed_div_seq.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/b/rtl/unsigned_div_seq.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/algo/c_corner_rectifier.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/algo/marker_detector.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/common/reset_sync.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/memory/async_packet_fifo.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/memory/ddr_arbiter3.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/memory/ddr_self_test.v D:/FPGA/output/c_stream_board_v4n_20261016/vendor/c_current/01_design_code/video_timing_vtc.v D:/FPGA/output/c_stream_board_v4n_20261016/diagnostics/ddr_camera_hires_prefetch_20261012/results/ddr_result_display.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/async_packet_stream.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/c_stream_burst_correction_path.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/c_stream_correction_path.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/continuous_capture_geometry.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/continuous_capture_manager.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/continuous_capture_rx.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/continuous_capture_writer.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/continuous_source_path.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_arbiter3_fair.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_arbiter3_turnaround.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_quad_tile_cache.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_result_display_block64.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_result_writer_burst64.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_result_writer_stream.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/ddr_word_engine_result_burst.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/frame_processor_stream.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/frame_telemetry_overlay.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/quad_packet_bridge.v D:/FPGA/output/c_stream_board_v4n_20261016/rtl/stream/rx_preview_stream.v D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv 
+# -- Compiling module video_correct_ddr_continuous_core
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module c_corner_rectifier
+# -- Compiling module marker_detector
+# -- Compiling module reset_sync
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_self_test
+# -- Compiling module video_timing_vtc
+# -- Compiling module ddr_result_display
+# -- Compiling module async_packet_stream
+# -- Compiling module c_stream_burst_correction_path
+# -- Compiling module c_stream_correction_path
+# -- Compiling module continuous_capture_geometry
+# -- Compiling module continuous_capture_manager
+# -- Compiling module continuous_capture_rx
+# -- Compiling module continuous_capture_writer
+# -- Compiling module continuous_source_path
+# -- Compiling module ddr_arbiter3_fair
+# -- Compiling module ddr_arbiter3_turnaround
+# -- Compiling module ddr_quad_tile_cache
+# -- Compiling module ddr_result_display_block64
+# -- Compiling module ddr_result_writer_burst64
+# -- Compiling module burst64_async_fifo
+# -- Compiling module ddr_result_writer_stream
+# -- Compiling module stream_writer_async_fifo
+# -- Compiling module ddr_word_engine_result_burst
+# -- Compiling module frame_processor_stream
+# -- Compiling module frame_telemetry_overlay
+# -- Compiling module quad_packet_bridge
+# -- Compiling module rx_preview_stream
+# -- Compiling module tb_continuous_stream_system
+# 
+# Top level modules:
+# 	b_rectifier
+# 	reset_sync
+# 	ddr_result_display
+# 	c_stream_correction_path
+# 	ddr_arbiter3_fair
+# 	frame_telemetry_overlay
+# 	rx_preview_stream
+# 	tb_continuous_stream_system
+# End time: 09:29:40 on Oct 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc=rnp+/tb_continuous_stream_system" -wlf D:/FPGA/output/c_continuous_system_20261015_v4n_full60/run.wlf work.tb_continuous_stream_system -gSTRESS=0 -gLATE_CAPTURE=0 -gPREFETCH=1 -gOVERLAP=1 -gBAD_FRAME=2 -gFRAMES=60 -gINLINE=1 -gFULLHD=1 
+# Start time: 09:29:40 on Oct 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_continuous_stream_system(fast)
+# STREAM_SYSTEM_CONFIG native=1 proc57p115MHz source1920x1080 output768x1080 overlap=1 prefetch=1 late_percent=0 inline=1
+# CONTINUOUS_CAPTURE_BEGIN gen=1 bank=0 kind=0 physical_raster=2 time_ns=16666724
+# CONTINUOUS_CAPTURE_BEGIN gen=2 bank=1 kind=3 physical_raster=3 time_ns=33333374
+# CONTINUOUS_FRAME_BEGIN frame=1 capture_id=1 source_bank=0 kind=0 time_ns=33339635 source_age_ns=16672911
+# STREAM_PHASE_PROFILE mode=1 frame=1 solver_commit=543 streaming_run=858023 writer_drain=13 processing_ns=15032019
+# CONTINUOUS_FRAME_PUBLISH frame=1 id=1 time_ns=48371671 image_age_ns=31704947 captured=2 admitted=2 dropped=0 rejected=0
+# CONTINUOUS_CAPTURE_BEGIN gen=3 bank=0 kind=2 physical_raster=4 time_ns=50000024
+# CONTINUOUS_BAD_MARKER_REJECT gen=2 rejected=1 old_published_id=1 displayed_id=1 age_ms=34 time_ns=50000231
+# CONTINUOUS_HDMI_FRAME generation=1 displayed_id=1 pixels=829440 age_ms=50 unique_frames=1 scan_frames=1 time_ns=66602957
+# CONTINUOUS_CAPTURE_BEGIN gen=4 bank=1 kind=0 physical_raster=5 time_ns=66666674
+# CONTINUOUS_FRAME_BEGIN frame=2 capture_id=3 source_bank=0 kind=2 time_ns=66672924 source_age_ns=16672900
+# STREAM_PHASE_PROFILE mode=1 frame=2 solver_commit=543 streaming_run=938801 writer_drain=13 processing_ns=16446280
+# CONTINUOUS_PUBLISH_INTERVAL frame=2 id=3 ns=34747550
+# CONTINUOUS_FRAME_PUBLISH frame=2 id=3 time_ns=83119221 image_age_ns=33119197 captured=4 admitted=4 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=1 displayed_id=1 pixels=829440 age_ms=67 unique_frames=1 scan_frames=2 time_ns=83269607
+# CONTINUOUS_CAPTURE_BEGIN gen=5 bank=0 kind=1 physical_raster=6 time_ns=83333324
+# CONTINUOUS_FRAME_BEGIN frame=3 capture_id=4 source_bank=1 kind=0 time_ns=83339577 source_age_ns=16672903
+# STREAM_PHASE_PROFILE mode=1 frame=3 solver_commit=543 streaming_run=943635 writer_drain=18 processing_ns=16531001
+# CONTINUOUS_PUBLISH_INTERVAL frame=3 id=4 ns=16751375
+# CONTINUOUS_FRAME_PUBLISH frame=3 id=4 time_ns=99870596 image_age_ns=33203922 captured=5 admitted=5 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=2 displayed_id=3 pixels=829440 age_ms=49 unique_frames=2 scan_frames=3 time_ns=99936257
+# CONTINUOUS_CAPTURE_BEGIN gen=6 bank=1 kind=2 physical_raster=7 time_ns=99999974
+# CONTINUOUS_FRAME_BEGIN frame=4 capture_id=5 source_bank=0 kind=1 time_ns=100006230 source_age_ns=16672906
+# STREAM_PHASE_PROFILE mode=1 frame=4 solver_commit=543 streaming_run=939804 writer_drain=13 processing_ns=16463840
+# CONTINUOUS_PUBLISH_INTERVAL frame=4 id=5 ns=16599492
+# CONTINUOUS_FRAME_PUBLISH frame=4 id=5 time_ns=116470088 image_age_ns=33136764 captured=6 admitted=6 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=3 displayed_id=4 pixels=829440 age_ms=50 unique_frames=3 scan_frames=4 time_ns=116602907
+# CONTINUOUS_CAPTURE_BEGIN gen=7 bank=0 kind=0 physical_raster=8 time_ns=116666624
+# CONTINUOUS_FRAME_BEGIN frame=5 capture_id=6 source_bank=1 kind=2 time_ns=116672883 source_age_ns=16672909
+# STREAM_PHASE_PROFILE mode=1 frame=5 solver_commit=543 streaming_run=941654 writer_drain=16 processing_ns=16496283
+# CONTINUOUS_PUBLISH_INTERVAL frame=5 id=6 ns=16699095
+# CONTINUOUS_FRAME_PUBLISH frame=5 id=6 time_ns=133169183 image_age_ns=33169209 captured=7 admitted=7 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=4 displayed_id=5 pixels=829440 age_ms=50 unique_frames=4 scan_frames=5 time_ns=133269557
+# CONTINUOUS_CAPTURE_BEGIN gen=8 bank=1 kind=1 physical_raster=9 time_ns=133333274
+# CONTINUOUS_FRAME_BEGIN frame=6 capture_id=7 source_bank=0 kind=0 time_ns=133339536 source_age_ns=16672912
+# STREAM_PHASE_PROFILE mode=1 frame=6 solver_commit=543 streaming_run=944458 writer_drain=22 processing_ns=16545480
+# CONTINUOUS_PUBLISH_INTERVAL frame=6 id=7 ns=16715851
+# CONTINUOUS_FRAME_PUBLISH frame=6 id=7 time_ns=149885034 image_age_ns=33218410 captured=8 admitted=8 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=5 displayed_id=6 pixels=829440 age_ms=49 unique_frames=5 scan_frames=6 time_ns=149936207
+# CONTINUOUS_CAPTURE_BEGIN gen=9 bank=0 kind=2 physical_raster=10 time_ns=149999924
+# CONTINUOUS_FRAME_BEGIN frame=7 capture_id=8 source_bank=1 kind=1 time_ns=150006189 source_age_ns=16672915
+# STREAM_PHASE_PROFILE mode=1 frame=7 solver_commit=543 streaming_run=938110 writer_drain=13 processing_ns=16434182
+# CONTINUOUS_PUBLISH_INTERVAL frame=7 id=8 ns=16555355
+# CONTINUOUS_FRAME_PUBLISH frame=7 id=8 time_ns=166440389 image_age_ns=33107115 captured=9 admitted=9 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=6 displayed_id=7 pixels=829440 age_ms=50 unique_frames=6 scan_frames=7 time_ns=166602857
+# CONTINUOUS_CAPTURE_BEGIN gen=10 bank=1 kind=0 physical_raster=11 time_ns=166666574
+# CONTINUOUS_FRAME_BEGIN frame=8 capture_id=9 source_bank=0 kind=2 time_ns=166672825 source_age_ns=16672901
+# STREAM_PHASE_PROFILE mode=1 frame=8 solver_commit=543 streaming_run=941823 writer_drain=12 processing_ns=16499171
+# CONTINUOUS_PUBLISH_INTERVAL frame=8 id=9 ns=16731625
+# CONTINUOUS_FRAME_PUBLISH frame=8 id=9 time_ns=183172014 image_age_ns=33172090 captured=10 admitted=10 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=7 displayed_id=8 pixels=829440 age_ms=50 unique_frames=7 scan_frames=8 time_ns=183269507
+# CONTINUOUS_CAPTURE_BEGIN gen=11 bank=0 kind=1 physical_raster=12 time_ns=183333224
+# CONTINUOUS_FRAME_BEGIN frame=9 capture_id=10 source_bank=1 kind=0 time_ns=183339478 source_age_ns=16672904
+# STREAM_PHASE_PROFILE mode=1 frame=9 solver_commit=543 streaming_run=942771 writer_drain=17 processing_ns=16515856
+# CONTINUOUS_PUBLISH_INTERVAL frame=9 id=10 ns=16683338
+# CONTINUOUS_FRAME_PUBLISH frame=9 id=10 time_ns=199855352 image_age_ns=33188778 captured=11 admitted=11 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=8 displayed_id=9 pixels=829440 age_ms=49 unique_frames=8 scan_frames=9 time_ns=199936157
+# CONTINUOUS_CAPTURE_BEGIN gen=12 bank=1 kind=2 physical_raster=13 time_ns=199999874
+# CONTINUOUS_FRAME_BEGIN frame=10 capture_id=11 source_bank=0 kind=1 time_ns=200006131 source_age_ns=16672907
+# STREAM_PHASE_PROFILE mode=1 frame=10 solver_commit=543 streaming_run=939841 writer_drain=15 processing_ns=16464523
+# CONTINUOUS_PUBLISH_INTERVAL frame=10 id=11 ns=16615320
+# CONTINUOUS_FRAME_PUBLISH frame=10 id=11 time_ns=216470672 image_age_ns=33137448 captured=12 admitted=12 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=9 displayed_id=10 pixels=829440 age_ms=50 unique_frames=9 scan_frames=10 time_ns=216602807
+# CONTINUOUS_CAPTURE_BEGIN gen=13 bank=0 kind=0 physical_raster=14 time_ns=216666524
+# CONTINUOUS_FRAME_BEGIN frame=11 capture_id=12 source_bank=1 kind=2 time_ns=216672784 source_age_ns=16672910
+# STREAM_PHASE_PROFILE mode=1 frame=11 solver_commit=543 streaming_run=942693 writer_drain=39 processing_ns=16514876
+# CONTINUOUS_PUBLISH_INTERVAL frame=11 id=12 ns=16717006
+# CONTINUOUS_FRAME_PUBLISH frame=11 id=12 time_ns=233187678 image_age_ns=33187804 captured=13 admitted=13 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=10 displayed_id=11 pixels=829440 age_ms=50 unique_frames=10 scan_frames=11 time_ns=233269457
+# CONTINUOUS_CAPTURE_BEGIN gen=14 bank=1 kind=1 physical_raster=15 time_ns=233333174
+# CONTINUOUS_FRAME_BEGIN frame=12 capture_id=13 source_bank=0 kind=0 time_ns=233339437 source_age_ns=16672913
+# STREAM_PHASE_PROFILE mode=1 frame=12 solver_commit=543 streaming_run=943633 writer_drain=20 processing_ns=16531001
+# CONTINUOUS_PUBLISH_INTERVAL frame=12 id=13 ns=16682778
+# CONTINUOUS_FRAME_PUBLISH frame=12 id=13 time_ns=249870456 image_age_ns=33203932 captured=14 admitted=14 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=11 displayed_id=12 pixels=829440 age_ms=49 unique_frames=11 scan_frames=12 time_ns=249936107
+# CONTINUOUS_CAPTURE_BEGIN gen=15 bank=0 kind=2 physical_raster=16 time_ns=249999824
+# CONTINUOUS_FRAME_BEGIN frame=13 capture_id=14 source_bank=1 kind=1 time_ns=250006090 source_age_ns=16672916
+# STREAM_PHASE_PROFILE mode=1 frame=13 solver_commit=543 streaming_run=941304 writer_drain=14 processing_ns=16490120
+# CONTINUOUS_PUBLISH_INTERVAL frame=13 id=14 ns=16625771
+# CONTINUOUS_FRAME_PUBLISH frame=13 id=14 time_ns=266496227 image_age_ns=33163053 captured=15 admitted=15 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=12 displayed_id=13 pixels=829440 age_ms=50 unique_frames=12 scan_frames=13 time_ns=266602757
+# CONTINUOUS_CAPTURE_BEGIN gen=16 bank=1 kind=0 physical_raster=17 time_ns=266666474
+# CONTINUOUS_FRAME_BEGIN frame=14 capture_id=15 source_bank=0 kind=2 time_ns=266672726 source_age_ns=16672902
+# STREAM_PHASE_PROFILE mode=1 frame=14 solver_commit=543 streaming_run=940905 writer_drain=16 processing_ns=16483169
+# CONTINUOUS_PUBLISH_INTERVAL frame=14 id=15 ns=16659685
+# CONTINUOUS_FRAME_PUBLISH frame=14 id=15 time_ns=283155912 image_age_ns=33156088 captured=16 admitted=16 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=13 displayed_id=14 pixels=829440 age_ms=50 unique_frames=13 scan_frames=14 time_ns=283269407
+# CONTINUOUS_CAPTURE_BEGIN gen=17 bank=0 kind=1 physical_raster=18 time_ns=283333124
+# CONTINUOUS_FRAME_BEGIN frame=15 capture_id=16 source_bank=1 kind=0 time_ns=283339379 source_age_ns=16672905
+# STREAM_PHASE_PROFILE mode=1 frame=15 solver_commit=543 streaming_run=944479 writer_drain=20 processing_ns=16545812
+# CONTINUOUS_PUBLISH_INTERVAL frame=15 id=16 ns=16729297
+# CONTINUOUS_FRAME_PUBLISH frame=15 id=16 time_ns=299885209 image_age_ns=33218735 captured=17 admitted=17 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=14 displayed_id=15 pixels=829440 age_ms=49 unique_frames=14 scan_frames=15 time_ns=299936057
+# CONTINUOUS_CAPTURE_BEGIN gen=18 bank=1 kind=2 physical_raster=19 time_ns=299999774
+# CONTINUOUS_FRAME_BEGIN frame=16 capture_id=17 source_bank=0 kind=1 time_ns=300006032 source_age_ns=16672908
+# STREAM_PHASE_PROFILE mode=1 frame=16 solver_commit=543 streaming_run=938956 writer_drain=13 processing_ns=16448993
+# CONTINUOUS_PUBLISH_INTERVAL frame=16 id=17 ns=16569834
+# CONTINUOUS_FRAME_PUBLISH frame=16 id=17 time_ns=316455043 image_age_ns=33121919 captured=18 admitted=18 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=15 displayed_id=16 pixels=829440 age_ms=50 unique_frames=15 scan_frames=16 time_ns=316602707
+# CONTINUOUS_CAPTURE_BEGIN gen=19 bank=0 kind=0 physical_raster=20 time_ns=316666424
+# CONTINUOUS_FRAME_BEGIN frame=17 capture_id=18 source_bank=1 kind=2 time_ns=316672685 source_age_ns=16672911
+# STREAM_PHASE_PROFILE mode=1 frame=17 solver_commit=543 streaming_run=940057 writer_drain=18 processing_ns=16468357
+# CONTINUOUS_PUBLISH_INTERVAL frame=17 id=18 ns=16686017
+# CONTINUOUS_FRAME_PUBLISH frame=17 id=18 time_ns=333141060 image_age_ns=33141286 captured=19 admitted=19 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=16 displayed_id=17 pixels=829440 age_ms=50 unique_frames=16 scan_frames=17 time_ns=333269357
+# CONTINUOUS_CAPTURE_BEGIN gen=20 bank=1 kind=1 physical_raster=21 time_ns=333333074
+# CONTINUOUS_FRAME_BEGIN frame=18 capture_id=19 source_bank=0 kind=0 time_ns=333339338 source_age_ns=16672914
+# STREAM_PHASE_PROFILE mode=1 frame=18 solver_commit=543 streaming_run=942767 writer_drain=20 processing_ns=16515839
+# CONTINUOUS_PUBLISH_INTERVAL frame=18 id=19 ns=16714134
+# CONTINUOUS_FRAME_PUBLISH frame=18 id=19 time_ns=349855194 image_age_ns=33188770 captured=20 admitted=20 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=17 displayed_id=18 pixels=829440 age_ms=49 unique_frames=17 scan_frames=18 time_ns=349936007
+# CONTINUOUS_CAPTURE_BEGIN gen=21 bank=0 kind=2 physical_raster=22 time_ns=349999724
+# CONTINUOUS_FRAME_BEGIN frame=19 capture_id=20 source_bank=1 kind=1 time_ns=350005991 source_age_ns=16672917
+# STREAM_PHASE_PROFILE mode=1 frame=19 solver_commit=543 streaming_run=939847 writer_drain=12 processing_ns=16464576
+# CONTINUOUS_PUBLISH_INTERVAL frame=19 id=20 ns=16615390
+# CONTINUOUS_FRAME_PUBLISH frame=19 id=20 time_ns=366470584 image_age_ns=33137510 captured=21 admitted=21 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=18 displayed_id=19 pixels=829440 age_ms=50 unique_frames=18 scan_frames=19 time_ns=366602657
+# CONTINUOUS_CAPTURE_BEGIN gen=22 bank=1 kind=0 physical_raster=23 time_ns=366666374
+# CONTINUOUS_FRAME_BEGIN frame=20 capture_id=21 source_bank=0 kind=2 time_ns=366672626 source_age_ns=16672902
+# STREAM_PHASE_PROFILE mode=1 frame=20 solver_commit=543 streaming_run=940874 writer_drain=12 processing_ns=16482557
+# CONTINUOUS_PUBLISH_INTERVAL frame=20 id=21 ns=16684616
+# CONTINUOUS_FRAME_PUBLISH frame=20 id=21 time_ns=383155200 image_age_ns=33155476 captured=22 admitted=22 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=19 displayed_id=20 pixels=829440 age_ms=50 unique_frames=19 scan_frames=20 time_ns=383269307
+# CONTINUOUS_CAPTURE_BEGIN gen=23 bank=0 kind=1 physical_raster=24 time_ns=383333024
+# CONTINUOUS_FRAME_BEGIN frame=21 capture_id=22 source_bank=1 kind=0 time_ns=383339279 source_age_ns=16672905
+# STREAM_PHASE_PROFILE mode=1 frame=21 solver_commit=543 streaming_run=942772 writer_drain=15 processing_ns=16515840
+# CONTINUOUS_PUBLISH_INTERVAL frame=21 id=22 ns=16699936
+# CONTINUOUS_FRAME_PUBLISH frame=21 id=22 time_ns=399855136 image_age_ns=33188762 captured=23 admitted=23 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=20 displayed_id=21 pixels=829440 age_ms=49 unique_frames=20 scan_frames=21 time_ns=399935957
+# CONTINUOUS_CAPTURE_BEGIN gen=24 bank=1 kind=2 physical_raster=25 time_ns=399999674
+# CONTINUOUS_FRAME_BEGIN frame=22 capture_id=23 source_bank=0 kind=1 time_ns=400005933 source_age_ns=16672909
+# STREAM_PHASE_PROFILE mode=1 frame=22 solver_commit=543 streaming_run=940460 writer_drain=13 processing_ns=16475325
+# CONTINUOUS_PUBLISH_INTERVAL frame=22 id=23 ns=16626140
+# CONTINUOUS_FRAME_PUBLISH frame=22 id=23 time_ns=416481276 image_age_ns=33148252 captured=24 admitted=24 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=21 displayed_id=22 pixels=829440 age_ms=50 unique_frames=21 scan_frames=22 time_ns=416602607
+# CONTINUOUS_CAPTURE_BEGIN gen=25 bank=0 kind=0 physical_raster=26 time_ns=416666324
+# CONTINUOUS_FRAME_BEGIN frame=23 capture_id=24 source_bank=1 kind=2 time_ns=416672586 source_age_ns=16672912
+# STREAM_PHASE_PROFILE mode=1 frame=23 solver_commit=543 streaming_run=939308 writer_drain=39 processing_ns=16455611
+# CONTINUOUS_PUBLISH_INTERVAL frame=23 id=24 ns=16646939
+# CONTINUOUS_FRAME_PUBLISH frame=23 id=24 time_ns=433128215 image_age_ns=33128541 captured=25 admitted=25 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=22 displayed_id=23 pixels=829440 age_ms=50 unique_frames=22 scan_frames=23 time_ns=433269257
+# CONTINUOUS_CAPTURE_BEGIN gen=26 bank=1 kind=1 physical_raster=27 time_ns=433332974
+# CONTINUOUS_FRAME_BEGIN frame=24 capture_id=25 source_bank=0 kind=0 time_ns=433339239 source_age_ns=16672915
+# STREAM_PHASE_PROFILE mode=1 frame=24 solver_commit=543 streaming_run=943613 writer_drain=21 processing_ns=16530668
+# CONTINUOUS_PUBLISH_INTERVAL frame=24 id=25 ns=16741710
+# CONTINUOUS_FRAME_PUBLISH frame=24 id=25 time_ns=449869925 image_age_ns=33203601 captured=26 admitted=26 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=23 displayed_id=24 pixels=829440 age_ms=49 unique_frames=23 scan_frames=24 time_ns=449935907
+# CONTINUOUS_CAPTURE_BEGIN gen=27 bank=0 kind=2 physical_raster=28 time_ns=449999624
+# CONTINUOUS_FRAME_BEGIN frame=25 capture_id=26 source_bank=1 kind=1 time_ns=450005874 source_age_ns=16672900
+# STREAM_PHASE_PROFILE mode=1 frame=25 solver_commit=543 streaming_run=939798 writer_drain=12 processing_ns=16463718
+# CONTINUOUS_PUBLISH_INTERVAL frame=25 id=26 ns=16599685
+# CONTINUOUS_FRAME_PUBLISH frame=25 id=26 time_ns=466469610 image_age_ns=33136636 captured=27 admitted=27 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=24 displayed_id=25 pixels=829440 age_ms=50 unique_frames=24 scan_frames=25 time_ns=466602557
+# CONTINUOUS_CAPTURE_BEGIN gen=28 bank=1 kind=0 physical_raster=29 time_ns=466666274
+# CONTINUOUS_FRAME_BEGIN frame=26 capture_id=27 source_bank=0 kind=2 time_ns=466672527 source_age_ns=16672903
+# STREAM_PHASE_PROFILE mode=1 frame=26 solver_commit=543 streaming_run=940057 writer_drain=18 processing_ns=16468358
+# CONTINUOUS_PUBLISH_INTERVAL frame=26 id=27 ns=16671292
+# CONTINUOUS_FRAME_PUBLISH frame=26 id=27 time_ns=483140902 image_age_ns=33141278 captured=28 admitted=28 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=25 displayed_id=26 pixels=829440 age_ms=50 unique_frames=25 scan_frames=26 time_ns=483269207
+# CONTINUOUS_CAPTURE_BEGIN gen=29 bank=0 kind=1 physical_raster=30 time_ns=483332924
+# CONTINUOUS_FRAME_BEGIN frame=27 capture_id=28 source_bank=1 kind=0 time_ns=483339180 source_age_ns=16672906
+# STREAM_PHASE_PROFILE mode=1 frame=27 solver_commit=543 streaming_run=942769 writer_drain=19 processing_ns=16515857
+# CONTINUOUS_PUBLISH_INTERVAL frame=27 id=28 ns=16714153
+# CONTINUOUS_FRAME_PUBLISH frame=27 id=28 time_ns=499855055 image_age_ns=33188781 captured=29 admitted=29 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=26 displayed_id=27 pixels=829440 age_ms=49 unique_frames=26 scan_frames=27 time_ns=499935857
+# CONTINUOUS_CAPTURE_BEGIN gen=30 bank=1 kind=2 physical_raster=31 time_ns=499999574
+# CONTINUOUS_FRAME_BEGIN frame=28 capture_id=29 source_bank=0 kind=1 time_ns=500005833 source_age_ns=16672909
+# STREAM_PHASE_PROFILE mode=1 frame=28 solver_commit=543 streaming_run=938997 writer_drain=12 processing_ns=16449694
+# CONTINUOUS_PUBLISH_INTERVAL frame=28 id=29 ns=16600490
+# CONTINUOUS_FRAME_PUBLISH frame=28 id=29 time_ns=516455545 image_age_ns=33122621 captured=30 admitted=30 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=27 displayed_id=28 pixels=829440 age_ms=50 unique_frames=27 scan_frames=28 time_ns=516602507
+# CONTINUOUS_CAPTURE_BEGIN gen=31 bank=0 kind=0 physical_raster=32 time_ns=516666224
+# CONTINUOUS_FRAME_BEGIN frame=29 capture_id=30 source_bank=1 kind=2 time_ns=516672486 source_age_ns=16672912
+# STREAM_PHASE_PROFILE mode=1 frame=29 solver_commit=543 streaming_run=941386 writer_drain=14 processing_ns=16491556
+# CONTINUOUS_PUBLISH_INTERVAL frame=29 id=30 ns=16708515
+# CONTINUOUS_FRAME_PUBLISH frame=29 id=30 time_ns=533164060 image_age_ns=33164486 captured=31 admitted=31 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=28 displayed_id=29 pixels=829440 age_ms=50 unique_frames=28 scan_frames=29 time_ns=533269157
+# CONTINUOUS_CAPTURE_BEGIN gen=32 bank=1 kind=1 physical_raster=33 time_ns=533332874
+# CONTINUOUS_FRAME_BEGIN frame=30 capture_id=31 source_bank=0 kind=0 time_ns=533339140 source_age_ns=16672916
+# STREAM_PHASE_PROFILE mode=1 frame=30 solver_commit=543 streaming_run=941940 writer_drain=19 processing_ns=16501342
+# CONTINUOUS_PUBLISH_INTERVAL frame=30 id=31 ns=16676440
+# CONTINUOUS_FRAME_PUBLISH frame=30 id=31 time_ns=549840500 image_age_ns=33174276 captured=32 admitted=32 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=29 displayed_id=30 pixels=829440 age_ms=49 unique_frames=29 scan_frames=30 time_ns=549935807
+# CONTINUOUS_CAPTURE_BEGIN gen=33 bank=0 kind=2 physical_raster=34 time_ns=549999524
+# CONTINUOUS_FRAME_BEGIN frame=31 capture_id=32 source_bank=1 kind=1 time_ns=550005775 source_age_ns=16672901
+# STREAM_PHASE_PROFILE mode=1 frame=31 solver_commit=543 streaming_run=939724 writer_drain=12 processing_ns=16462422
+# CONTINUOUS_PUBLISH_INTERVAL frame=31 id=32 ns=16627715
+# CONTINUOUS_FRAME_PUBLISH frame=31 id=32 time_ns=566468215 image_age_ns=33135341 captured=33 admitted=33 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=30 displayed_id=31 pixels=829440 age_ms=50 unique_frames=30 scan_frames=31 time_ns=566602457
+# CONTINUOUS_CAPTURE_BEGIN gen=34 bank=1 kind=0 physical_raster=35 time_ns=566666174
+# CONTINUOUS_FRAME_BEGIN frame=32 capture_id=33 source_bank=0 kind=2 time_ns=566672428 source_age_ns=16672904
+# STREAM_PHASE_PROFILE mode=1 frame=32 solver_commit=543 streaming_run=940159 writer_drain=36 processing_ns=16470459
+# CONTINUOUS_PUBLISH_INTERVAL frame=32 id=33 ns=16674689
+# CONTINUOUS_FRAME_PUBLISH frame=32 id=33 time_ns=583142904 image_age_ns=33143380 captured=34 admitted=34 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=31 displayed_id=32 pixels=829440 age_ms=50 unique_frames=31 scan_frames=32 time_ns=583269107
+# CONTINUOUS_CAPTURE_BEGIN gen=35 bank=0 kind=1 physical_raster=36 time_ns=583332824
+# CONTINUOUS_FRAME_BEGIN frame=33 capture_id=34 source_bank=1 kind=0 time_ns=583339081 source_age_ns=16672907
+# STREAM_PHASE_PROFILE mode=1 frame=33 solver_commit=543 streaming_run=944630 writer_drain=14 processing_ns=16548352
+# CONTINUOUS_PUBLISH_INTERVAL frame=33 id=34 ns=16744546
+# CONTINUOUS_FRAME_PUBLISH frame=33 id=34 time_ns=599887450 image_age_ns=33221276 captured=35 admitted=35 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=32 displayed_id=33 pixels=829440 age_ms=49 unique_frames=32 scan_frames=33 time_ns=599935757
+# CONTINUOUS_CAPTURE_BEGIN gen=36 bank=1 kind=2 physical_raster=37 time_ns=599999474
+# CONTINUOUS_FRAME_BEGIN frame=34 capture_id=35 source_bank=0 kind=1 time_ns=600005734 source_age_ns=16672910
+# STREAM_PHASE_PROFILE mode=1 frame=34 solver_commit=543 streaming_run=938030 writer_drain=12 processing_ns=16432764
+# CONTINUOUS_PUBLISH_INTERVAL frame=34 id=35 ns=16551065
+# CONTINUOUS_FRAME_PUBLISH frame=34 id=35 time_ns=616438515 image_age_ns=33105691 captured=36 admitted=36 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=33 displayed_id=34 pixels=829440 age_ms=50 unique_frames=33 scan_frames=34 time_ns=616602407
+# CONTINUOUS_CAPTURE_BEGIN gen=37 bank=0 kind=0 physical_raster=38 time_ns=616666124
+# CONTINUOUS_FRAME_BEGIN frame=35 capture_id=36 source_bank=1 kind=2 time_ns=616672387 source_age_ns=16672913
+# STREAM_PHASE_PROFILE mode=1 frame=35 solver_commit=543 streaming_run=940687 writer_drain=14 processing_ns=16479318
+# CONTINUOUS_PUBLISH_INTERVAL frame=35 id=36 ns=16713207
+# CONTINUOUS_FRAME_PUBLISH frame=35 id=36 time_ns=633151722 image_age_ns=33152248 captured=37 admitted=37 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=34 displayed_id=35 pixels=829440 age_ms=50 unique_frames=34 scan_frames=35 time_ns=633269057
+# CONTINUOUS_CAPTURE_BEGIN gen=38 bank=1 kind=1 physical_raster=39 time_ns=633332774
+# CONTINUOUS_FRAME_BEGIN frame=36 capture_id=37 source_bank=0 kind=0 time_ns=633339040 source_age_ns=16672916
+# STREAM_PHASE_PROFILE mode=1 frame=36 solver_commit=543 streaming_run=941920 writer_drain=22 processing_ns=16501045
+# CONTINUOUS_PUBLISH_INTERVAL frame=36 id=37 ns=16688381
+# CONTINUOUS_FRAME_PUBLISH frame=36 id=37 time_ns=649840103 image_age_ns=33173979 captured=38 admitted=38 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=35 displayed_id=36 pixels=829440 age_ms=49 unique_frames=35 scan_frames=36 time_ns=649935707
+# CONTINUOUS_CAPTURE_BEGIN gen=39 bank=0 kind=2 physical_raster=40 time_ns=649999424
+# CONTINUOUS_FRAME_BEGIN frame=37 capture_id=38 source_bank=1 kind=1 time_ns=650005676 source_age_ns=16672902
+# STREAM_PHASE_PROFILE mode=1 frame=37 solver_commit=543 streaming_run=939847 writer_drain=13 processing_ns=16464593
+# CONTINUOUS_PUBLISH_INTERVAL frame=37 id=38 ns=16630184
+# CONTINUOUS_FRAME_PUBLISH frame=37 id=38 time_ns=666470287 image_age_ns=33137513 captured=39 admitted=39 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=36 displayed_id=37 pixels=829440 age_ms=50 unique_frames=36 scan_frames=37 time_ns=666602357
+# CONTINUOUS_CAPTURE_BEGIN gen=40 bank=1 kind=0 physical_raster=41 time_ns=666666074
+# CONTINUOUS_FRAME_BEGIN frame=38 capture_id=39 source_bank=0 kind=2 time_ns=666672329 source_age_ns=16672905
+# STREAM_PHASE_PROFILE mode=1 frame=38 solver_commit=543 streaming_run=941386 writer_drain=14 processing_ns=16491556
+# CONTINUOUS_PUBLISH_INTERVAL frame=38 id=39 ns=16693615
+# CONTINUOUS_FRAME_PUBLISH frame=38 id=39 time_ns=683163902 image_age_ns=33164478 captured=40 admitted=40 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=37 displayed_id=38 pixels=829440 age_ms=50 unique_frames=37 scan_frames=38 time_ns=683269007
+# CONTINUOUS_CAPTURE_BEGIN gen=41 bank=0 kind=1 physical_raster=42 time_ns=683332724
+# CONTINUOUS_FRAME_BEGIN frame=39 capture_id=40 source_bank=1 kind=0 time_ns=683338982 source_age_ns=16672908
+# STREAM_PHASE_PROFILE mode=1 frame=39 solver_commit=543 streaming_run=942821 writer_drain=16 processing_ns=16516715
+# CONTINUOUS_PUBLISH_INTERVAL frame=39 id=40 ns=16691812
+# CONTINUOUS_FRAME_PUBLISH frame=39 id=40 time_ns=699855714 image_age_ns=33189640 captured=41 admitted=41 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=38 displayed_id=39 pixels=829440 age_ms=49 unique_frames=38 scan_frames=39 time_ns=699935657
+# CONTINUOUS_CAPTURE_BEGIN gen=42 bank=1 kind=2 physical_raster=43 time_ns=699999374
+# CONTINUOUS_FRAME_BEGIN frame=40 capture_id=41 source_bank=0 kind=1 time_ns=700005635 source_age_ns=16672911
+# STREAM_PHASE_PROFILE mode=1 frame=40 solver_commit=543 streaming_run=940648 writer_drain=13 processing_ns=16478617
+# CONTINUOUS_PUBLISH_INTERVAL frame=40 id=41 ns=16628556
+# CONTINUOUS_FRAME_PUBLISH frame=40 id=41 time_ns=716484270 image_age_ns=33151546 captured=42 admitted=42 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=39 displayed_id=40 pixels=829440 age_ms=50 unique_frames=39 scan_frames=40 time_ns=716602307
+# CONTINUOUS_CAPTURE_BEGIN gen=43 bank=0 kind=0 physical_raster=44 time_ns=716666024
+# CONTINUOUS_FRAME_BEGIN frame=41 capture_id=42 source_bank=1 kind=2 time_ns=716672288 source_age_ns=16672914
+# STREAM_PHASE_PROFILE mode=1 frame=41 solver_commit=543 streaming_run=939283 writer_drain=13 processing_ns=16454719
+# CONTINUOUS_PUBLISH_INTERVAL frame=41 id=42 ns=16642754
+# CONTINUOUS_FRAME_PUBLISH frame=41 id=42 time_ns=733127024 image_age_ns=33127650 captured=43 admitted=43 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=40 displayed_id=41 pixels=829440 age_ms=50 unique_frames=40 scan_frames=41 time_ns=733268957
+# CONTINUOUS_CAPTURE_BEGIN gen=44 bank=1 kind=1 physical_raster=45 time_ns=733332674
+# CONTINUOUS_FRAME_BEGIN frame=42 capture_id=43 source_bank=0 kind=0 time_ns=733338941 source_age_ns=16672917
+# STREAM_PHASE_PROFILE mode=1 frame=42 solver_commit=543 streaming_run=944462 writer_drain=18 processing_ns=16545480
+# CONTINUOUS_PUBLISH_INTERVAL frame=42 id=43 ns=16757415
+# CONTINUOUS_FRAME_PUBLISH frame=42 id=43 time_ns=749884439 image_age_ns=33218415 captured=44 admitted=44 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=41 displayed_id=42 pixels=829440 age_ms=49 unique_frames=41 scan_frames=42 time_ns=749935607
+# CONTINUOUS_CAPTURE_BEGIN gen=45 bank=0 kind=2 physical_raster=46 time_ns=749999324
+# CONTINUOUS_FRAME_BEGIN frame=43 capture_id=44 source_bank=1 kind=1 time_ns=750005577 source_age_ns=16672903
+# STREAM_PHASE_PROFILE mode=1 frame=43 solver_commit=543 streaming_run=939847 writer_drain=13 processing_ns=16464593
+# CONTINUOUS_PUBLISH_INTERVAL frame=43 id=44 ns=16585749
+# CONTINUOUS_FRAME_PUBLISH frame=43 id=44 time_ns=766470188 image_age_ns=33137514 captured=45 admitted=45 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=42 displayed_id=43 pixels=829440 age_ms=50 unique_frames=42 scan_frames=43 time_ns=766602257
+# CONTINUOUS_CAPTURE_BEGIN gen=46 bank=1 kind=0 physical_raster=47 time_ns=766665974
+# CONTINUOUS_FRAME_BEGIN frame=44 capture_id=45 source_bank=0 kind=2 time_ns=766672230 source_age_ns=16672906
+# STREAM_PHASE_PROFILE mode=1 frame=44 solver_commit=543 streaming_run=940754 writer_drain=12 processing_ns=16480455
+# CONTINUOUS_PUBLISH_INTERVAL frame=44 id=45 ns=16682515
+# CONTINUOUS_FRAME_PUBLISH frame=44 id=45 time_ns=783152703 image_age_ns=33153379 captured=46 admitted=46 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=43 displayed_id=44 pixels=829440 age_ms=50 unique_frames=43 scan_frames=44 time_ns=783268907
+# CONTINUOUS_CAPTURE_BEGIN gen=47 bank=0 kind=1 physical_raster=48 time_ns=783332624
+# CONTINUOUS_FRAME_BEGIN frame=45 capture_id=46 source_bank=1 kind=0 time_ns=783338883 source_age_ns=16672909
+# STREAM_PHASE_PROFILE mode=1 frame=45 solver_commit=543 streaming_run=941940 writer_drain=22 processing_ns=16501395
+# CONTINUOUS_PUBLISH_INTERVAL frame=45 id=46 ns=16687592
+# CONTINUOUS_FRAME_PUBLISH frame=45 id=46 time_ns=799840295 image_age_ns=33174321 captured=47 admitted=47 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=44 displayed_id=45 pixels=829440 age_ms=49 unique_frames=44 scan_frames=45 time_ns=799935557
+# CONTINUOUS_CAPTURE_BEGIN gen=48 bank=1 kind=2 physical_raster=49 time_ns=799999274
+# CONTINUOUS_FRAME_BEGIN frame=46 capture_id=47 source_bank=0 kind=1 time_ns=800005536 source_age_ns=16672912
+# STREAM_PHASE_PROFILE mode=1 frame=46 solver_commit=543 streaming_run=939000 writer_drain=12 processing_ns=16449746
+# CONTINUOUS_PUBLISH_INTERVAL frame=46 id=47 ns=16615005
+# CONTINUOUS_FRAME_PUBLISH frame=46 id=47 time_ns=816455300 image_age_ns=33122676 captured=48 admitted=48 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=45 displayed_id=46 pixels=829440 age_ms=50 unique_frames=45 scan_frames=46 time_ns=816602207
+# CONTINUOUS_CAPTURE_BEGIN gen=49 bank=0 kind=0 physical_raster=50 time_ns=816665924
+# CONTINUOUS_FRAME_BEGIN frame=47 capture_id=48 source_bank=1 kind=2 time_ns=816672189 source_age_ns=16672915
+# STREAM_PHASE_PROFILE mode=1 frame=47 solver_commit=543 streaming_run=940775 writer_drain=12 processing_ns=16480823
+# CONTINUOUS_PUBLISH_INTERVAL frame=47 id=48 ns=16697730
+# CONTINUOUS_FRAME_PUBLISH frame=47 id=48 time_ns=833153030 image_age_ns=33153756 captured=49 admitted=49 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=46 displayed_id=47 pixels=829440 age_ms=50 unique_frames=46 scan_frames=47 time_ns=833268857
+# CONTINUOUS_CAPTURE_BEGIN gen=50 bank=1 kind=1 physical_raster=51 time_ns=833332574
+# CONTINUOUS_FRAME_BEGIN frame=48 capture_id=49 source_bank=0 kind=0 time_ns=833338825 source_age_ns=16672901
+# STREAM_PHASE_PROFILE mode=1 frame=48 solver_commit=543 streaming_run=942793 writer_drain=16 processing_ns=16516224
+# CONTINUOUS_PUBLISH_INTERVAL frame=48 id=49 ns=16702036
+# CONTINUOUS_FRAME_PUBLISH frame=48 id=49 time_ns=849855066 image_age_ns=33189142 captured=50 admitted=50 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=47 displayed_id=48 pixels=829440 age_ms=49 unique_frames=47 scan_frames=48 time_ns=849935507
+# CONTINUOUS_CAPTURE_BEGIN gen=51 bank=0 kind=2 physical_raster=52 time_ns=849999224
+# CONTINUOUS_FRAME_BEGIN frame=49 capture_id=50 source_bank=1 kind=1 time_ns=850005478 source_age_ns=16672904
+# STREAM_PHASE_PROFILE mode=1 frame=49 solver_commit=543 streaming_run=941442 writer_drain=12 processing_ns=16492501
+# CONTINUOUS_PUBLISH_INTERVAL frame=49 id=50 ns=16642930
+# CONTINUOUS_FRAME_PUBLISH frame=49 id=50 time_ns=866497996 image_age_ns=33165422 captured=51 admitted=51 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=48 displayed_id=49 pixels=829440 age_ms=50 unique_frames=48 scan_frames=49 time_ns=866602157
+# CONTINUOUS_CAPTURE_BEGIN gen=52 bank=1 kind=0 physical_raster=53 time_ns=866665874
+# CONTINUOUS_FRAME_BEGIN frame=50 capture_id=51 source_bank=0 kind=2 time_ns=866672131 source_age_ns=16672907
+# STREAM_PHASE_PROFILE mode=1 frame=50 solver_commit=543 streaming_run=939945 writer_drain=12 processing_ns=16466291
+# CONTINUOUS_PUBLISH_INTERVAL frame=50 id=51 ns=16640444
+# CONTINUOUS_FRAME_PUBLISH frame=50 id=51 time_ns=883138440 image_age_ns=33139216 captured=52 admitted=52 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=49 displayed_id=50 pixels=829440 age_ms=50 unique_frames=49 scan_frames=50 time_ns=883268807
+# CONTINUOUS_CAPTURE_BEGIN gen=53 bank=0 kind=1 physical_raster=54 time_ns=883332524
+# CONTINUOUS_FRAME_BEGIN frame=51 capture_id=52 source_bank=1 kind=0 time_ns=883338784 source_age_ns=16672910
+# STREAM_PHASE_PROFILE mode=1 frame=51 solver_commit=543 streaming_run=943613 writer_drain=20 processing_ns=16530651
+# CONTINUOUS_PUBLISH_INTERVAL frame=51 id=52 ns=16731012
+# CONTINUOUS_FRAME_PUBLISH frame=51 id=52 time_ns=899869452 image_age_ns=33203578 captured=53 admitted=53 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=50 displayed_id=51 pixels=829440 age_ms=49 unique_frames=50 scan_frames=51 time_ns=899935457
+# CONTINUOUS_CAPTURE_BEGIN gen=54 bank=1 kind=2 physical_raster=55 time_ns=899999174
+# CONTINUOUS_FRAME_BEGIN frame=52 capture_id=53 source_bank=0 kind=1 time_ns=900005437 source_age_ns=16672913
+# STREAM_PHASE_PROFILE mode=1 frame=52 solver_commit=543 streaming_run=937886 writer_drain=15 processing_ns=16430295
+# CONTINUOUS_PUBLISH_INTERVAL frame=52 id=53 ns=16566297
+# CONTINUOUS_FRAME_PUBLISH frame=52 id=53 time_ns=916435749 image_age_ns=33103225 captured=54 admitted=54 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=51 displayed_id=52 pixels=829440 age_ms=50 unique_frames=51 scan_frames=52 time_ns=916602107
+# CONTINUOUS_CAPTURE_BEGIN gen=55 bank=0 kind=0 physical_raster=56 time_ns=916665824
+# CONTINUOUS_FRAME_BEGIN frame=53 capture_id=54 source_bank=1 kind=2 time_ns=916672090 source_age_ns=16672916
+# STREAM_PHASE_PROFILE mode=1 frame=53 solver_commit=543 streaming_run=940904 writer_drain=16 processing_ns=16483152
+# CONTINUOUS_PUBLISH_INTERVAL frame=53 id=54 ns=16719510
+# CONTINUOUS_FRAME_PUBLISH frame=53 id=54 time_ns=933155259 image_age_ns=33156085 captured=55 admitted=55 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=52 displayed_id=53 pixels=829440 age_ms=50 unique_frames=52 scan_frames=53 time_ns=933268757
+# CONTINUOUS_CAPTURE_BEGIN gen=56 bank=1 kind=1 physical_raster=57 time_ns=933332474
+# CONTINUOUS_FRAME_BEGIN frame=54 capture_id=55 source_bank=0 kind=0 time_ns=933338725 source_age_ns=16672901
+# STREAM_PHASE_PROFILE mode=1 frame=54 solver_commit=543 streaming_run=941075 writer_drain=21 processing_ns=16486234
+# CONTINUOUS_PUBLISH_INTERVAL frame=54 id=55 ns=16669717
+# CONTINUOUS_FRAME_PUBLISH frame=54 id=55 time_ns=949824976 image_age_ns=33159152 captured=56 admitted=56 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=53 displayed_id=54 pixels=829440 age_ms=49 unique_frames=53 scan_frames=54 time_ns=949935407
+# CONTINUOUS_CAPTURE_BEGIN gen=57 bank=0 kind=2 physical_raster=58 time_ns=949999124
+# CONTINUOUS_FRAME_BEGIN frame=55 capture_id=56 source_bank=1 kind=1 time_ns=950005378 source_age_ns=16672904
+# STREAM_PHASE_PROFILE mode=1 frame=55 solver_commit=543 streaming_run=940646 writer_drain=12 processing_ns=16478565
+# CONTINUOUS_PUBLISH_INTERVAL frame=55 id=56 ns=16658985
+# CONTINUOUS_FRAME_PUBLISH frame=55 id=56 time_ns=966483961 image_age_ns=33151487 captured=57 admitted=57 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=54 displayed_id=55 pixels=829440 age_ms=50 unique_frames=54 scan_frames=55 time_ns=966602057
+# CONTINUOUS_CAPTURE_BEGIN gen=58 bank=1 kind=0 physical_raster=59 time_ns=966665774
+# CONTINUOUS_FRAME_BEGIN frame=56 capture_id=57 source_bank=0 kind=2 time_ns=966672032 source_age_ns=16672908
+# STREAM_PHASE_PROFILE mode=1 frame=56 solver_commit=543 streaming_run=940528 writer_drain=13 processing_ns=16476516
+# CONTINUOUS_PUBLISH_INTERVAL frame=56 id=57 ns=16664604
+# CONTINUOUS_FRAME_PUBLISH frame=56 id=57 time_ns=983148565 image_age_ns=33149441 captured=58 admitted=58 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=55 displayed_id=56 pixels=829440 age_ms=50 unique_frames=55 scan_frames=56 time_ns=983268707
+# CONTINUOUS_CAPTURE_BEGIN gen=59 bank=0 kind=1 physical_raster=60 time_ns=983332424
+# CONTINUOUS_FRAME_BEGIN frame=57 capture_id=58 source_bank=1 kind=0 time_ns=983338685 source_age_ns=16672911
+# STREAM_PHASE_PROFILE mode=1 frame=57 solver_commit=543 streaming_run=944293 writer_drain=13 processing_ns=16542433
+# CONTINUOUS_PUBLISH_INTERVAL frame=57 id=58 ns=16732571
+# CONTINUOUS_FRAME_PUBLISH frame=57 id=58 time_ns=999881136 image_age_ns=33215362 captured=59 admitted=59 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=56 displayed_id=57 pixels=829440 age_ms=49 unique_frames=56 scan_frames=57 time_ns=999935357
+# CONTINUOUS_CAPTURE_BEGIN gen=60 bank=1 kind=2 physical_raster=61 time_ns=999999074
+# CONTINUOUS_FRAME_BEGIN frame=58 capture_id=59 source_bank=0 kind=1 time_ns=1000005338 source_age_ns=16672914
+# STREAM_PHASE_PROFILE mode=1 frame=58 solver_commit=543 streaming_run=937262 writer_drain=12 processing_ns=16419317
+# CONTINUOUS_PUBLISH_INTERVAL frame=58 id=59 ns=16543537
+# CONTINUOUS_FRAME_PUBLISH frame=58 id=59 time_ns=1016424673 image_age_ns=33092249 captured=60 admitted=60 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=57 displayed_id=58 pixels=829440 age_ms=50 unique_frames=57 scan_frames=58 time_ns=1016602007
+# CONTINUOUS_CAPTURE_BEGIN gen=61 bank=0 kind=0 physical_raster=62 time_ns=1016665724
+# CONTINUOUS_FRAME_BEGIN frame=59 capture_id=60 source_bank=1 kind=2 time_ns=1016671991 source_age_ns=16672917
+# STREAM_PHASE_PROFILE mode=1 frame=59 solver_commit=543 streaming_run=940828 writer_drain=12 processing_ns=16481751
+# CONTINUOUS_PUBLISH_INTERVAL frame=59 id=60 ns=16729086
+# CONTINUOUS_FRAME_PUBLISH frame=59 id=60 time_ns=1033153759 image_age_ns=33154685 captured=61 admitted=61 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=58 displayed_id=59 pixels=829440 age_ms=50 unique_frames=58 scan_frames=59 time_ns=1033268657
+# CONTINUOUS_CAPTURE_BEGIN gen=62 bank=1 kind=1 physical_raster=63 time_ns=1033332374
+# CONTINUOUS_FRAME_BEGIN frame=60 capture_id=61 source_bank=0 kind=0 time_ns=1033338626 source_age_ns=16672902
+# STREAM_PHASE_PROFILE mode=1 frame=60 solver_commit=543 streaming_run=943633 writer_drain=21 processing_ns=16531019
+# CONTINUOUS_PUBLISH_INTERVAL frame=60 id=61 ns=16715903
+# CONTINUOUS_FRAME_PUBLISH frame=60 id=61 time_ns=1049869662 image_age_ns=33203938 captured=62 admitted=62 dropped=0 rejected=1
+# CONTINUOUS_HDMI_FRAME generation=59 displayed_id=60 pixels=829440 age_ms=49 unique_frames=59 scan_frames=60 time_ns=1049935307
+# CONTINUOUS_HDMI_FRAME generation=60 displayed_id=61 pixels=829440 age_ms=50 unique_frames=60 scan_frames=61 time_ns=1066601957
+# CONTINUOUS_SYSTEM_PASS mode=1 frames=60 corrected_pixels=49766400 display_pixels=50595840 average_start_interval_cycles=968079 max_ui_wait=189 overlap_beats=15417017 native_reads=1601196
+# CONTINUOUS_TELEMETRY capture_id=62 processing_id=61 published_id=61 displayed_id=61 admitted=62 dropped=0 rejected=1 reason3=1 unique_outputs=60 physical_rasters=64 average_publish_ns=16974542 min_publish_ns=16543537 max_publish_ns=34747550 min_source_age_ns=31704947 max_source_age_ns=33221276
+# ** Note: $finish    : D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv(268)
+#    Time: 1066601956966 ps  Iteration: 2  Instance: /tb_continuous_stream_system
+# Break at D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv line 268
+# Stopped at D:/FPGA/worktrees/c_pipeline_next/member_c/IntegratedBaseline/stream_video_20261015/clock57/tb_continuous_stream_system.sv line 268
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 09:49:41 on Oct 16,2026, Elapsed time: 0:20:01
+# Errors: 0, Warnings: 0

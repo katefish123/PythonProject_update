@@ -1,0 +1,9 @@
+{
+  "tool": "Pango Fabric Compiler 2022.2-SP6.4 build 146967",
+  "authority": "Installed pds_shell.exe help pnr, executed once in D:/FPGA/output/c_pds_help_20261016",
+  "options": {
+    "optimize_multi_corner_timing": "Optimize Multi-Corner Timing",
+    "slack_prior_in_global_router TRUE": "Slack Prior In Global router"
+  },
+  "purpose": "Prioritize original constrained setup/hold paths, including unchanged vendor DDR command paths. No clock periods, false paths or multicycle exceptions changed."
+}

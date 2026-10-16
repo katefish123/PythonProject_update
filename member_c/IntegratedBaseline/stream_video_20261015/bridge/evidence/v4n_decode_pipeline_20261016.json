@@ -1,0 +1,130 @@
+{
+  "task": "V4N quad bridge PROC timing pipeline",
+  "old_path": {
+    "report": "D:\\FPGA\\output\\c_stream_board_v4n_20261016\\build_unqualified_20261016_0930\\report_timing\\video_correct_ddr_top.rtr",
+    "report_sha256": "60d5de90b37b5dc545cb3d6e26fe1f3bdd09880e666b9c38f306f1c600d5f064",
+    "report_line": 1463,
+    "start": "core/stream_path/bridge/raw_payload[137]",
+    "end": [
+      "packet_payload[42]",
+      "packet_payload[48]",
+      "packet_payload[43]"
+    ],
+    "clock_period_ns": 17.508,
+    "setup_slack_ns": -0.611,
+    "failing_endpoints": 44,
+    "logic_levels": 27,
+    "data_arrival_ns": 19.821,
+    "data_required_ns": 19.21,
+    "logic_delay_ns": 4.972,
+    "route_delay_ns": 12.586,
+    "functional_red": false,
+    "timing_red": "actual routed setup failure; baseline functional stress passes"
+  },
+  "hypothesis": "The same cycle combines 24-bit constant division/modulo with clipped-neighbour address construction and descriptor equality checks. Registering decoded x/y separates this measured dependency without changing any arithmetic or descriptor legality rule.",
+  "change": {
+    "file": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\quad_packet_bridge.v",
+    "stages": [
+      "raw198 descriptor",
+      "decoded246 original descriptor plus24-bitx/24-bity",
+      "packet126 checked request"
+    ],
+    "added_latency_proc_cycles": 1,
+    "throughput": "each elastic stage can accept and transfer one descriptor per proc clock when downstream ready",
+    "backpressure": "packet_ready -> cooked_ready -> decoded_ready -> q_ready; each occupied stage holds its full payload while stalled",
+    "metadata": "base/bank selection, generation32, physical tag, inside/nearest and fractions travel with the decoded coordinates",
+    "fault": "original sticky fault rule evaluated when decoded descriptor advances into packet stage; hard shared reset clears every valid flag and payload",
+    "unchanged": [
+      "external ports",
+      "original B math",
+      "async_packet_stream.v",
+      "response bridge path",
+      "legality/bypass rules",
+      "timing constraints"
+    ]
+  },
+  "tests": [
+    {
+      "name": "baseline_pressure_1001",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_baseline_pressure_1001\\simulation.log",
+      "simulation_sha256": "a9a30057ff1770cc81fbbc1af7dfe70cdc81f971902072f6e02dd4c1c0545548",
+      "compile_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_baseline_pressure_1001\\compile.log",
+      "compile_sha256": "1d4a2c976d25232f5a2e02bb84f550a1b4350b8e9c903bc15823157aae7fe519",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_baseline_pressure_1001\\source_snapshot",
+      "rtl_sha256": "ec72e354e2dc36b23a7f6e1da28daea48d5f6154a19f5cd88b13c9fa0fb7b466",
+      "pass_lines": [
+        "# PASS quad bridge1920 32768packets edge/nearest/bypass/invalid/full/stall/base/generation-wrap/reset max_run=16119 q_run=16045 packet_run=16047\r"
+      ],
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "candidate_pressure_1002",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_pressure_1002\\simulation.log",
+      "simulation_sha256": "678c5cd83543cd82e5a4877ea02c821a9a538950788dd02382c7a62ba99c285d",
+      "compile_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_pressure_1002\\compile.log",
+      "compile_sha256": "e3324973628edbc72b0c708e09eb6237f49cec90ae7c4881f2b7499a18d3db67",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_pressure_1002\\source_snapshot",
+      "rtl_sha256": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+      "pass_lines": [
+        "# PASS quad bridge1920 32768packets edge/nearest/bypass/invalid/full/stall/base/generation-wrap/reset max_run=16119 q_run=16044 packet_run=16047\r"
+      ],
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "candidate_legacy_1002",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_legacy_1002\\simulation.log",
+      "simulation_sha256": "8eff50da94433f3ae46298cffeca480984b59da91c7bf48d8ea09a10240e1d82",
+      "compile_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_legacy_1002\\compile.log",
+      "compile_sha256": "009f283eebb60ce58a5924226ef1240aedabebb6238caee6ce194c860c2a00ec",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_legacy_1002\\source_snapshot",
+      "rtl_sha256": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+      "pass_lines": [
+        "# PASS quad bridge async metadata/base/generation full/stalls faults max_run=1334\r"
+      ],
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "name": "candidate_fifo_1002",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_fifo_1002\\simulation.log",
+      "simulation_sha256": "869e8edda752efb761f6fa39832781b145fad6256bca422d0871f0e5b12d1c06",
+      "compile_log": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_fifo_1002\\compile.log",
+      "compile_sha256": "053155c23162f97b41116ea6218e9c1fb20b79bcd10f9a5073849a48eb395d5a",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_bridge_v4n_20261016_candidate_fifo_1002\\source_snapshot",
+      "rtl_sha256": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+      "pass_lines": [
+        "# PASS packet stream async stall full reset throughput max_run=796\r"
+      ],
+      "exit_code": 0,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "source_hashes": {
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\quad_packet_bridge.v": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\async_packet_stream.v": "de5f57d1480789954a20ce6ed2d9df220a5c2603dc42f0b33f8d4c71d6a99349",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\tb_quad_bridge_1920.sv": "d27026f9f7bc81105116fa0b0eadb80b32dea321545023b94ca5793dbf350248",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\bridge\\run_v4n_tests.ps1": "ffe512fdd7f9f278fcf58065df71928cdba9522013d30e296c8ea01ffa53c54e"
+  },
+  "coverage": [
+    "SRC1920x1080 / OUT768x1080 nonpower-of-two decode",
+    "32768 complete request/response packets across two reset rounds plus live queued reset",
+    "zero/final/adjacent source coordinates, clipped and nearest neighbours",
+    "out-of-bounds inside=false address bypass",
+    "malformed neighbours, source range, physical column and row tag errors",
+    "request and response stability during stalls, FIFO full backpressure",
+    "alternating bank/base each packet, changing generations including32-bit wrap",
+    "16044 consecutive q accept clocks,16047 packet FIFO write clocks,16119 returned pixel accept clocks"
+  ],
+  "limitations": [
+    "New PDS timing closure is unverified; root must run synthesis/place/route on this frozen SHA.",
+    "No full60-frame integration run performed, as requested.",
+    "Added246-bit elastic payload register and ready stage; device utilization/remaining divider path depend on new physical implementation."
+  ],
+  "frozen_for_root": true
+}

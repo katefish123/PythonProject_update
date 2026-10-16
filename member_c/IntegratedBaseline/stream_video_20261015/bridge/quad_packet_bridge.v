@@ -19,17 +19,22 @@ module quad_packet_bridge #(
  output wire[23:0]r_p00,r_p10,r_p01,r_p11,r_tag,
  output wire[7:0]r_fx,r_fy,output wire[31:0]r_generation
 );
- // Elastic raw and decoded stages split descriptor read, constant-width
- // address division, and packet RAM input into separate clock periods.
- reg raw_valid,packet_valid;reg[197:0]raw_payload;reg[125:0]packet_payload;
+ // Three elastic stages separate descriptor capture, constant address decode,
+ // and neighbour validation/packet construction. All stages sustain one packet
+ // per proc clock; a stall holds the full descriptor with its decoded position.
+ reg raw_valid,decoded_valid,packet_valid;
+ reg[197:0]raw_payload;reg[245:0]decoded_payload;reg[125:0]packet_payload;
  wire packet_ready;
  wire cooked_ready=!packet_valid||packet_ready;
- assign q_ready=rst_n&&(!raw_valid||cooked_ready);
+ wire decoded_ready=!decoded_valid||cooked_ready;
+ assign q_ready=rst_n&&(!raw_valid||decoded_ready);
+ wire[23:0]raw_addr00=raw_payload[137:114];
+ wire[23:0]raw_x=raw_addr00%SRC_W,raw_y=raw_addr00/SRC_W;
  wire[27:0]h_base;wire[31:0]h_generation;
  wire[23:0]h_addr00,h_addr10,h_addr01,h_addr11,h_tag;
  wire[7:0]h_fx,h_fy;wire h_inside,h_nearest;
- assign {h_base,h_generation,h_addr00,h_addr10,h_addr01,h_addr11,h_tag,h_fx,h_fy,h_inside,h_nearest}=raw_payload;
- wire[23:0]source_x=h_addr00%SRC_W,source_y=h_addr00/SRC_W;
+ assign {h_base,h_generation,h_addr00,h_addr10,h_addr01,h_addr11,h_tag,h_fx,h_fy,h_inside,h_nearest}=decoded_payload[245:48];
+ wire[23:0]source_x=decoded_payload[47:24],source_y=decoded_payload[23:0];
  wire[23:0]next_x=!h_nearest&&source_x<SRC_W-1?source_x+1:source_x;
  wire[23:0]next_y=!h_nearest&&source_y<SRC_H-1?source_y+1:source_y;
  wire bad_tag=h_tag[11:0]>=OUT_W||h_tag[23:12]>=OUT_H;
@@ -39,14 +44,18 @@ module quad_packet_bridge #(
  wire[11:0]checked_x=inside_checked?source_x[11:0]:12'd0;
  wire[11:0]checked_y=inside_checked?source_y[11:0]:12'd0;
  always @(posedge proc_clk or negedge rst_n)begin
-  if(!rst_n)begin fault<=0;raw_valid<=0;packet_valid<=0;raw_payload<=0;packet_payload<=0;end
+  if(!rst_n)begin fault<=0;raw_valid<=0;decoded_valid<=0;packet_valid<=0;raw_payload<=0;decoded_payload<=0;packet_payload<=0;end
   else begin
    if(cooked_ready)begin
-    packet_valid<=raw_valid;
-    if(raw_valid)begin
+    packet_valid<=decoded_valid;
+    if(decoded_valid)begin
      packet_payload<={h_base,h_generation,checked_x,checked_y,h_nearest,inside_checked,h_tag,h_fx,h_fy};
      if(bad_tag||bad_address)fault<=1;
     end
+   end
+   if(decoded_ready)begin
+    decoded_valid<=raw_valid;
+    if(raw_valid)decoded_payload<={raw_payload,raw_x,raw_y};
    end
    if(q_ready)begin
     raw_valid<=q_valid;

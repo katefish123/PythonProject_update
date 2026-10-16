@@ -16,8 +16,17 @@ module continuous_capture_writer #(
  reg[2:0]state;reg bank,frame_bad,terminal_ok;reg[31:0]generation;
  reg[3:0]reason;reg[31:0]seen,written;reg[3:0]fill;
  reg[27:0]base,burst_addr;reg[2047:0]assembly;
- wire[1:0]kind=packet_data[319:318];wire pb=packet_data[317];wire[31:0]pg=packet_data[316:285];wire[23:0]pa=packet_data[284:261];wire pok=packet_data[260];wire[3:0]pr=packet_data[259:256];
- assign packet_ready=rst_n&&(state==IDLE||state==COLLECT);
+ // One-record elastic boundary breaks the async FIFO's combinational output
+ // from header validation and assembly. It can retain END/next DATA while an
+ // owned native burst waits for command acceptance or its final-beat ACK.
+ reg input_valid;reg[319:0]input_packet;
+ wire consume=input_valid&&(state==IDLE||state==COLLECT);
+ wire[1:0]kind=input_packet[319:318];wire pb=input_packet[317];wire[31:0]pg=input_packet[316:285];wire[23:0]pa=input_packet[284:261];wire pok=input_packet[260];wire[3:0]pr=input_packet[259:256];
+ assign packet_ready=rst_n&&(!input_valid||consume);
+ always @(posedge clk or negedge rst_n)begin
+ if(!rst_n)begin input_valid<=0;input_packet<=0;end
+ else if(packet_ready)begin input_valid<=packet_valid;input_packet<=packet_data;end
+ end
  assign cmd_valid=rst_n&&state==SEND;assign cmd_write=1'b1;
  assign cmd_addr=burst_addr;assign cmd_wdata=assembly[255:0];assign cmd_wstrb=32'hffffffff;assign cmd_burst_data=assembly;
  assign terminal_valid=rst_n&&state==REPORT;
@@ -25,33 +34,39 @@ module continuous_capture_writer #(
  always @(posedge clk or negedge rst_n)begin
  if(!rst_n)begin state<=IDLE;bank<=0;frame_bad<=0;terminal_ok<=0;generation<=0;reason<=0;seen<=0;written<=0;fill<=0;base<=0;burst_addr<=0;assembly<=0;fault<=0;end
  else begin
- if(packet_valid&&packet_ready)begin
+ // Data storage depends only on registered packet kind/valid and local
+ // collection position. Header errors still block fill/SEND below; writing
+ // a rejected partial lane is harmless because it never becomes owned.
+ // Every one of eight lanes is overwritten before SEND; clearing 2048 bits
+ // on BEGIN/END/ACK only adds a large shared enable cone and is unnecessary.
+ if(consume&&state==COLLECT&&kind==1)assembly[fill*256+:256]<=input_packet[255:0];
+ if(consume)begin
  if(state==IDLE)begin
  if(kind!=0)fault<=1;
- else begin bank<=pb;generation<=pg;base<=pb?SOURCE_BASE1:SOURCE_BASE0;frame_bad<=0;seen<=0;written<=0;fill<=0;assembly<=0;reason<=0;state<=COLLECT;end
+ else begin bank<=pb;generation<=pg;base<=pb?SOURCE_BASE1:SOURCE_BASE0;frame_bad<=0;seen<=0;written<=0;fill<=0;reason<=0;state<=COLLECT;end
  end else if(kind==1)begin
  seen<=seen+1'b1;
  if(pb!=bank||pg!=generation||pa!={seen[20:0],3'b0}||seen>=SRC_W*SRC_H/8)begin frame_bad<=1;reason<=14;fault<=1;end
  else if(!frame_bad)begin
  if(fill==0)burst_addr<=base+{4'd0,pa};
- assembly[fill*256+:256]<=packet_data[255:0];fill<=fill+1'b1;
+ fill<=fill+1'b1;
  if(fill==BURST_BEATS-1)state<=SEND;
  end
  end else if(kind==2)begin
  terminal_ok<=pok&&!frame_bad&&pb==bank&&pg==generation&&fill==0&&seen==SRC_W*SRC_H/8&&written==SRC_W*SRC_H/8;
  reason<=!pok?(pr!=0?pr:4'd12):frame_bad||pb!=bank||pg!=generation?4'd14:fill!=0||seen!=SRC_W*SRC_H/8||written!=SRC_W*SRC_H/8?4'd15:4'd0;
- fill<=0;assembly<=0;state<=REPORT;
+ fill<=0;state<=REPORT;
  end else begin fault<=1;frame_bad<=1;reason<=14;end
  end
  if(state==SEND&&cmd_ready)begin
  if(rsp_valid)begin
  if(!rsp_write)begin frame_bad<=1;reason<=14;fault<=1;end else written<=written+BURST_BEATS;
- fill<=0;assembly<=0;state<=COLLECT;
+ fill<=0;state<=COLLECT;
  end else state<=WAIT_ACK;
  end
  if(state==WAIT_ACK&&rsp_valid)begin
  if(!rsp_write)begin frame_bad<=1;reason<=14;fault<=1;end else written<=written+BURST_BEATS;
- fill<=0;assembly<=0;state<=COLLECT;
+ fill<=0;state<=COLLECT;
  end
  if(state==REPORT&&terminal_ready)state<=IDLE;
  end end
