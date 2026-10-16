@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 11:48:36 on Oct 16,2026
+vlog -sv source_snapshot/ddr_word_engine_result_burst.v source_snapshot/tb_block_region_decode.sv 
+-- Compiling module ddr_word_engine_result_burst
+-- Compiling module block_region_case
+-- Compiling module tb_block_region_decode
+
+Top level modules:
+	tb_block_region_decode
+End time: 11:48:36 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

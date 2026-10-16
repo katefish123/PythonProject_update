@@ -1,0 +1,18 @@
+{
+  "scope": "V4R cache and engine source review plus exact local evidence binding",
+  "cache_sha256": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+  "engine_sha256": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187",
+  "reviewer": "root; engine additionally independently reviewed",
+  "p1_p2_findings": [],
+  "reasoning": [
+    "S advances into L only with L capacity and matching frame key. Lookup results are registered before RAM issue.",
+    "L miss owns coordinates/generation while S may hold a future frame; S cannot invalidate until L read issues.",
+    "After fill, L cannot read/refill until relookup captures updated ways/protected victims.",
+    "Old M synchronous RAM data is latched before a subsequent fill; R is independently held under backpressure.",
+    "Warm hit allows concurrent S/L/M/R movement and preserves1/UI acceptance; shared reset flushes all control owners.",
+    "Engine block interval is mathematically identical over declared nonnegative integer word-count parameters; external response and fault FSM unchanged."
+  ],
+  "limits": [
+    "No new physical timing or system60 claim before V4R exact-source tests."
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "task": "V4R cache registered lookup/issue separation",
+  "baseline_paths": [
+    {
+      "report": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4q_implementation\\final_timing.rtr",
+      "sha256": "2652aa29114ff940ec3df94dadeb453b95a0722b85f4c4527100827b2491ad97",
+      "line": 3059,
+      "start": "s_y[5]",
+      "end": "line_valid[1]/CE",
+      "slack_ns": -0.04,
+      "logic_levels": 9,
+      "arrival_ns": 13.033,
+      "required_ns": 12.993
+    },
+    {
+      "report": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4q_seed41_full_implementation\\final_timing.rtr",
+      "sha256": "96762c96ba964d428858d4e15930935687281832a3f2a801c21ea703630e7691",
+      "line": 3045,
+      "start": "s_x[10]",
+      "end": "ram/.../CEB[0]",
+      "slack_ns": -0.65,
+      "logic_levels": 8,
+      "arrival_ns": 13.812,
+      "required_ns": 13.162
+    }
+  ],
+  "hypothesis": "Current S coordinates drive associative lookup, all-corner missing reduction and same-cycle advance. Advance feeds both RAM chip enables and req_ready/input frame invalidation. Register complete lookup results before issue; use only registered L hit/miss/addresses for RAM issue and upstream capacity.",
+  "changes": {
+    "production_file": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\ddr_quad_tile_cache.v",
+    "stages": "S descriptor -> L registered lookup -> M synchronous RAM return -> R held output",
+    "hit_throughput": "S/L/M/R accept concurrent moves; warmed512 consecutive input accepts verified with no req_ready bubbles. Warm64 costs72 total UI cycles versus previous71.",
+    "l_payload": [
+      "base/generation and original/clipped x/y",
+      "inside/tag/fractions and word offsets",
+      "four registered RAM addresses",
+      "missing flag plus victim/found/missing key snapshot"
+    ],
+    "miss_ownership": "L retains its descriptor throughout fills. After every final tile write, l_relookup fences further reads/fills while recapturing all ways, missing state and protected replacement selection against updated tags.",
+    "frame_key": "Only S processing with L space may change frame_key and invalidate all tags. A future S frame cannot invalidate a pending old-frame L miss. A prior L hit issues its last RAM read on the same edge as new-frame invalidation; subsequent fill waits until M drains.",
+    "boundary": "Read-right phase uses registered L boundary flag derived from unequal x word indices, equivalent to the original left/right RAM-address boundary for legal clipped/nearest coordinates.",
+    "memory": "Original two synchronous RAM read ports and one shared A-port fill write retained; RAM and read data have no reset. Read/write mutual exclusion asserted in tests.",
+    "unchanged": [
+      "external interface",
+      "64-way four-neighbour associative tags",
+      "source dimensions and resolution",
+      "B algorithms",
+      "constraints",
+      "fill packet/DDR command format",
+      "watchdog and sticky hard-fault behavior"
+    ]
+  },
+  "timing_isolation_red_green": "Between clock edges, changing lookup-valid tags must not change input capacity or RAM read enable. Original RTL fails this requirement; new registered lookup passes. Actual timing closure remains pending physical implementation.",
+  "tests": [
+    {
+      "name": "red_isolation_1150",
+      "expected_result": "FAIL lookup isolation contract",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_red_isolation_1150\\simulation.log",
+      "simulation_sha256": "17f37c11367cac03410ab514915e9da912a5754651f3ad64fe6d9f8671de482f",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_red_isolation_1150\\compile.log",
+      "compile_sha256": "4e9293a48b58a5fe1f1ab6c0b4004046cd0c765558ed2f7764eee7d940d84a5b",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_red_isolation_1150\\source_snapshot",
+      "rtl_sha256": "80e6f94fe46fd1842f9cd35dc73a56465e45450fbb9b47d9cf417271cccab8ff",
+      "result_lines": [
+        "# ** Fatal: LOOKUP_ISOLATION_REQUIRED current tags reach acceptance/RAM enable\r"
+      ],
+      "compile_errors": 0,
+      "compile_warnings": 0
+    },
+    {
+      "name": "frozen_pipeline_1154",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_pipeline_1154\\simulation.log",
+      "simulation_sha256": "d1a9ef0649bb9381cd475ffd98fac1ae9423e8455323a41916a1f9165c2cd902",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_pipeline_1154\\compile.log",
+      "compile_sha256": "9fd6da3be88988791f69d95e2a66a66a4d663782da2e2abfe6b7a08d8ec58a52",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_pipeline_1154\\source_snapshot",
+      "rtl_sha256": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS registered lookup old-frame/future-S=1434 fill-relookups=197 simultaneous-S/L/M=639 old-read+invalidate=17\r",
+        "# PASS quad pipeline64 native dimensions RGB/metadata/protection/eviction/generation/bank/edges 1029 packets 788 commands\r",
+        "# PASS shared reset flushes active partial fill and lookup pipeline\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ],
+      "compile_errors": 0,
+      "compile_warnings": 0
+    },
+    {
+      "name": "frozen_existing8_1155",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_existing8_1155\\simulation.log",
+      "simulation_sha256": "a6f441d9629d781893230a901f51659bfa4efa83d8f8e6290b7e41584ecbd6f5",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_existing8_1155\\compile.log",
+      "compile_sha256": "331d4b8fcc960c58fdb6e8834c29a4c61387f57ebc7944baf3ac69c90cafe697",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_existing8_1155\\source_snapshot",
+      "rtl_sha256": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS quad tile RGB metadata/backpressure/eviction/generation/bank/edges 413 packets 232 commands\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ],
+      "compile_errors": 0,
+      "compile_warnings": 0
+    },
+    {
+      "name": "frozen_existing64_1155",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_existing64_1155\\simulation.log",
+      "simulation_sha256": "5a2d59482c432cab26ec4e8351d8e3dac9043939b5f8e69ec02e602469a453cc",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_existing64_1155\\compile.log",
+      "compile_sha256": "402051c250c1757fd4206ee07947cf1748d384945adc93df31cbe5b9f7d1d718",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4r_20261016_frozen_existing64_1155\\source_snapshot",
+      "rtl_sha256": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS quad tile RGB metadata/backpressure/eviction/generation/bank/edges 413 packets 216 commands\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ],
+      "compile_errors": 0,
+      "compile_warnings": 0
+    }
+  ],
+  "coverage": {
+    "native_dimensions": "SRC1920x1080, LINES64",
+    "scored_main_packets": 1029,
+    "main_fill_commands": 788,
+    "warm_consecutive_accepts": 512,
+    "warm64_total_ui_cycles": 72,
+    "old_l_miss_while_future_s_frame_waits_cycles": 1434,
+    "post_fill_registered_relookups": 197,
+    "simultaneous_s_l_m_moves": 639,
+    "old_l_read_with_new_s_frame_invalidation_same_edge": 17,
+    "other": [
+      "cross8word/64word/4row and all four corner boundaries",
+      "replacement refuses every currently hit/protected corner way",
+      "every issued L way/tag checked against current matching tile after relookup",
+      "64-way filling/eviction under randomized command and output stalls",
+      "source gen/bank transitions and same-bank recapture epoch",
+      "response pixels/metadata stable while backpressured",
+      "partial active fill/shared reset, watchdog recovery, invalid coordinate and wrong DDR response faults",
+      "existing8-way and64-way suites pass413 scored packets each"
+    ]
+  },
+  "source_hashes": {
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\ddr_quad_tile_cache.v": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\tb_quad_pipeline.sv": "14ec65e01fc29d84a63bb6c68ca6b45c72f3cc9d914dcef6f9662b47df2080fd",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\run_v4r_tests.ps1": "20ed2fe3f9f2086f283133347256301326d821869c2737ae07efb191154d7ef8"
+  },
+  "latency_budget": {
+    "hit_extra_pipeline_cycles": 1,
+    "new_frame_key_extra_cycles": 1,
+    "miss_extra_cycles": "One L capture before first miss fill; one registered relookup edge after each installed tile. No additional DDR commands for a given descriptor trace.",
+    "integration_risk": "Native full-frame budget is tight (~16.545ms). Added miss-only cycles can affect publication interval and must be measured by root full60; this local result does not claim60fps."
+  },
+  "limits": [
+    "No full60, PDS or whole-project generation performed.",
+    "Placement/routing and BRAM inference of the new snapshot require root PDS.",
+    "Registered lookup adds control/descriptor storage and a lookup-input selector; physical slack improvement is unverified."
+  ],
+  "frozen_for_root": true
+}

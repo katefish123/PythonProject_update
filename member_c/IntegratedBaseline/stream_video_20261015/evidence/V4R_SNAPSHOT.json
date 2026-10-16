@@ -1,0 +1,13 @@
+{
+  "candidate": "V4R",
+  "root": "D:\\FPGA\\output\\c_stream_board_v4r_20261016",
+  "authored_generated_sha256": {
+    "cache/ddr_quad_tile_cache.v": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+    "turnaround/ddr_word_engine_result_burst.v": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187"
+  },
+  "reduced6_pressure": "passed",
+  "full60": "running",
+  "physical_timing": "running",
+  "hardware_accepted": false,
+  "board_replacement_allowed": false
+}

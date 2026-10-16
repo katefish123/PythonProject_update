@@ -1,0 +1,235 @@
+{
+  "schema": "engine_block_region_timing_candidate/v1",
+  "date_local": "2026-10-16",
+  "status": "FROZEN_EQUIVALENCE_AND_NATIVE_REGRESSIONS_PASS_PHYSICAL_TIMING_PENDING",
+  "source": {
+    "path": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\turnaround\\ddr_word_engine_result_burst.v",
+    "sha256": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187",
+    "old_sha256": "1c1018c60d12571a4f8478eb5f444a6a0e36266a984513e8436183bb83787805",
+    "new_test_sha256": "a5e04668f019b1cfecdd88c2304bc6208eaad3d554784b4de893c5fcec8d2164",
+    "guard_sha256": "0d23c2c4b3070b35bc850b9069e69a9dec6936d2e7aa3933b4aeef8db7976880",
+    "runner_sha256": "ec7b76a6661fff22e7d8ea2f6068e77f2fc33b8c028d614d0e246912bb39add8"
+  },
+  "scope": {
+    "only_modified_rtl": "turnaround/ddr_word_engine_result_burst.v",
+    "dedicated_files": [
+      "tb_block_region_decode.sv",
+      "check_block_decode.py",
+      "run_block_decode.ps1"
+    ],
+    "other_rtl_modified": false,
+    "constraints_or_clocks_modified": false
+  },
+  "measured_failure": {
+    "snapshot": "v4q_seed29",
+    "report_path": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4q_seed29_implementation\\final_timing.rtr",
+    "report_sha256": "1e2f3325c34283490c389ab69be1d3c6861601041ae08716d0447e6d9eaa150b",
+    "worst_ui_path": {
+      "startpoint": "core/continuous_sources/completion_crossing/fifo/wr_release[0]/opit_0_inv_srl/CLK",
+      "endpoint": "engine/fault_reason_reg[1]/opit_0_inv_L6Q_perm/CE",
+      "slack_ns": -0.155,
+      "logic_levels": 10,
+      "logic_ns": 1.61,
+      "route_ns": 5.972,
+      "cone": [
+        "completion_crossing/fifo/wr_release",
+        "writer w_valid",
+        "nested command ownership/address mux",
+        "cmd_a[11]",
+        "result_block_safe",
+        "illegal-command check",
+        "fault_reason[1]/CE"
+      ]
+    }
+  },
+  "single_hypothesis": "Replace complete-block per-request span comparisons with constant-predecoded tag bounds to shorten result_block_safe on the live illegal-command path.",
+  "equivalence": {
+    "old": "aligned_block>=BASE && aligned_block+63<BASE+WORDS",
+    "new": "cmd_addr[27:6]>=ceil(BASE/64) && cmd_addr[27:6]<floor((BASE+WORDS)/64)",
+    "constant_width_bits": 32,
+    "request_tag_bits": 22,
+    "supported_parameter_domain": "28-bit unsigned BASE and nonnegative integer WORDS (0..2147483647), including endpoints beyond the 28-bit command address domain",
+    "result_read_qualifiers_unchanged": [
+      "READ_AHEAD_ENABLE",
+      "!force_source_block",
+      "!cmd_write"
+    ],
+    "source_word_membership_unchanged": true
+  },
+  "behavior_unchanged": {
+    "interface": true,
+    "added_command_cycles": 0,
+    "native_response_cycles": true,
+    "illegal_command_fault_on_accept_no_native_AW_AR": true,
+    "sticky_fault_and_fault_reason": true,
+    "ST_RSP_simultaneous_retire_accept": true,
+    "no_RREADY_beat_consumption": true,
+    "cache_and_write_owner_semantics": true
+  },
+  "tests": [
+    {
+      "name": "structure_red",
+      "output": "D:\\FPGA\\output\\c_engine_block_decode_20261016_red_v4q",
+      "findings": [
+        {
+          "log": "structure.log",
+          "line": "FAIL LIVE_BLOCK_SPAN_ARITHMETIC: complete-block region bounds must be constant-predecoded, not derived from request_block arithmetic/comparisons"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/check_block_decode.py": "0d23c2c4b3070b35bc850b9069e69a9dec6936d2e7aa3933b4aeef8db7976880",
+        "source_snapshot/ddr_word_engine_result_burst.v": "1c1018c60d12571a4f8478eb5f444a6a0e36266a984513e8436183bb83787805",
+        "source_snapshot/tb_block_region_decode.sv": "9720ea04d194bce601f3557bcd01dec3a15b2150dfab5b86938391b8a7c82a21",
+        "source_snapshot/tb_result_burst_protocol.sv": "eaf56a617ef088fd1ebbbb41d708ff660ec511dfd374760294aa7467b8fed3a6"
+      },
+      "logs_sha256": {
+        "source_hashes.txt": "3df66ab93d07782dd7afb2bf77d3ce35b476105c3c7311bb5ddea10ada6efd78",
+        "structure.log": "994aac12837fe3824e6c2fa00724ae81d5fa080f8b913948aa4723c037008991"
+      }
+    },
+    {
+      "name": "semantic_baseline",
+      "output": "D:\\FPGA\\output\\c_engine_block_decode_20261016_semantic_baseline_clean_v4q",
+      "findings": [
+        {
+          "log": "tb_block_region_decode.log",
+          "line": "PASS BLOCK_REGION_EQUIVALENCE cases=12 checks=296064 unaligned_BASE_WORDS=1 empty_short=1 near28bit_end=1 crossing28bit=1 max_positive_integer_WORDS=1 write_source_flags=1"
+        },
+        {
+          "log": "tb_result_burst_protocol.log",
+          "line": "PASS RESULT_BURST_PROTOCOL_FAULT_RESET"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/check_block_decode.py": "0d23c2c4b3070b35bc850b9069e69a9dec6936d2e7aa3933b4aeef8db7976880",
+        "source_snapshot/ddr_word_engine_result_burst.v": "1c1018c60d12571a4f8478eb5f444a6a0e36266a984513e8436183bb83787805",
+        "source_snapshot/tb_block_region_decode.sv": "a5e04668f019b1cfecdd88c2304bc6208eaad3d554784b4de893c5fcec8d2164",
+        "source_snapshot/tb_result_burst_protocol.sv": "eaf56a617ef088fd1ebbbb41d708ff660ec511dfd374760294aa7467b8fed3a6"
+      },
+      "logs_sha256": {
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_hashes.txt": "066a12be7a5902b4b843248b527c6162b12404cac53022ba51dd35f28e17bbaf",
+        "source_hashes_after.txt": "066a12be7a5902b4b843248b527c6162b12404cac53022ba51dd35f28e17bbaf",
+        "tb_block_region_decode.compile.log": "dd9c5fba57ce28e9a04f042cfa3e8d5c68ff5b7009aed029218e1f8da934bfb0",
+        "tb_block_region_decode.log": "053c7167af29eac9e93975594173e3320abe50464265764aabb617376a0f082e",
+        "tb_result_burst_protocol.compile.log": "91512e7b851999fbfd6c17cd2023968f07ed80b6ae9678644863c7231ca95dde",
+        "tb_result_burst_protocol.log": "f7becab8f3d25e468a7a0a4e96b1d9965787dc231b0df4c5896ea15368f187fb"
+      }
+    },
+    {
+      "name": "frozen_decode_and_native",
+      "output": "D:\\FPGA\\output\\c_engine_block_decode_20261016_frozen_v4r",
+      "findings": [
+        {
+          "log": "structure.log",
+          "line": "PASS CONSTANT_BLOCK_REGION_DECODE: no per-request complete-span arithmetic"
+        },
+        {
+          "log": "tb_block_region_decode.log",
+          "line": "PASS BLOCK_REGION_EQUIVALENCE cases=12 checks=296064 unaligned_BASE_WORDS=1 empty_short=1 near28bit_end=1 crossing28bit=1 max_positive_integer_WORDS=1 write_source_flags=1"
+        },
+        {
+          "log": "tb_result_burst_protocol.log",
+          "line": "PASS RESULT_BURST_PROTOCOL_FAULT_RESET"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/check_block_decode.py": "0d23c2c4b3070b35bc850b9069e69a9dec6936d2e7aa3933b4aeef8db7976880",
+        "source_snapshot/ddr_word_engine_result_burst.v": "59f7042892311d9db454b3d8b2c1d4aab4a20954e05378b282f82327e26bc187",
+        "source_snapshot/tb_block_region_decode.sv": "a5e04668f019b1cfecdd88c2304bc6208eaad3d554784b4de893c5fcec8d2164",
+        "source_snapshot/tb_result_burst_protocol.sv": "eaf56a617ef088fd1ebbbb41d708ff660ec511dfd374760294aa7467b8fed3a6"
+      },
+      "logs_sha256": {
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_hashes.txt": "0a44ba1c8bdf72fa7ecaa0caa45b75b8c69667273d49a780a6cb7b58fb490cac",
+        "source_hashes_after.txt": "0a44ba1c8bdf72fa7ecaa0caa45b75b8c69667273d49a780a6cb7b58fb490cac",
+        "structure.log": "31b534b469a6a10f3715c0b1352db44dc3b1f041050c86895f8667e03d93f548",
+        "tb_block_region_decode.compile.log": "318a23da4f12ae4b1b7a35a67f2561f7ed1afd03c55f25b8d77b840389235a6b",
+        "tb_block_region_decode.log": "3e4ef2a0516e3e9c302f1814fcbb22e4ccd3cf810bf0b5881f5933d31a2c982f",
+        "tb_result_burst_protocol.compile.log": "d786180631946180471efac36652b7e99d2a55f82caaaf2f464fa17f7e14aa10",
+        "tb_result_burst_protocol.log": "9431f409b15d1b2d5007384ee892370f8819d22c82d5dce45389eb1fe36fbcfa"
+      }
+    },
+    {
+      "name": "frozen_original_regressions",
+      "output": "D:\\FPGA\\output\\c_turnaround_regression_20261015_region_decode_v4r_frozen",
+      "findings": [
+        {
+          "log": "tb_capture_burst_protocol.log",
+          "line": "CAPTURE_BURST_PROTOCOL_FAULT_RESET_PASS"
+        },
+        {
+          "log": "tb_ddr_read_ahead.log",
+          "line": "DDR_READ_AHEAD_PASS hit=1 overlapping_masked_write=1 independent_bank=1 boundaries=1 same_AR_edge=1 adjacent_beats=1 premature_last=1 bad_id=1 missing_last=1 timeout=1 misalignment=1 reset_flush=1 ar=12"
+        },
+        {
+          "log": "tb_ddr_word_engine.log",
+          "line": "DDR_WORD_ENGINE_PASS aw=2 w=2 ar=2"
+        },
+        {
+          "log": "tb_engine_block.log",
+          "line": "PASS random forced blocks with prefetch disabled, full last beat, hit, source invalidation"
+        },
+        {
+          "log": "tb_engine_block.log",
+          "line": "PASS forced illegal commands, wrong RID/early RLAST, AR/R timeouts, hard reset recovery"
+        },
+        {
+          "log": "tb_source_prefetch.log",
+          "line": "SOURCE_PREFETCH_PASS cache_reuse independent_scanout bounded_tail source_banks write_invalidation"
+        },
+        {
+          "log": "tb_turnaround_arbiter.log",
+          "line": "FAIR_ARBITER_PASS alternating=24 display_priority=4 response_owner=28"
+        },
+        {
+          "log": "tb_turnaround_engine.log",
+          "line": "FULL_RETIRE_ACCEPT_PASS old_read_next_read=1 response_owner=1"
+        },
+        {
+          "log": "tb_turnaround_engine.log",
+          "line": "ALTERNATING_CACHE_RETIRE_PASS commands=24 one_per_ui_cycle=1 full_block_owner=1 source_result=1"
+        },
+        {
+          "log": "tb_turnaround_engine.log",
+          "line": "DDR_READ_AHEAD_PASS hit=1 overlapping_masked_write=1 independent_bank=1 boundaries=1 same_AR_edge=1 adjacent_beats=1 premature_last=1 bad_id=1 missing_last=1 timeout=1 misalignment=1 reset_flush=1 ar=13"
+        }
+      ],
+      "compiled_sources_sha256": null,
+      "logs_sha256": {
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "source_hashes.txt": "a3f8d71fa6376320f7125ad40a116fcd5b81a2e1b270e7fa88388b6756373df8",
+        "source_hashes_after.txt": "a3f8d71fa6376320f7125ad40a116fcd5b81a2e1b270e7fa88388b6756373df8",
+        "tb_capture_burst_protocol.compile.log": "ad20fd2a58d4d279398c101d75aae4ae0a3ac8a67e18d692f87a808dfc6a64e7",
+        "tb_capture_burst_protocol.log": "ca975a7fbd133c89ceea1994886d8867c65f43f3164c14ecfe4f505953bdf6da",
+        "tb_ddr_read_ahead.compile.log": "552963a81bb4e47e898137a291ceaf3cf14110e0a7f903a3e02ba53b4a5a82f0",
+        "tb_ddr_read_ahead.log": "ca411fc291246207bcf4d0257cf4a81ea0f10ab13f165e38362fddde647590e3",
+        "tb_ddr_word_engine.compile.log": "13ec752ef08b5ee3f2064f69f03e83135ef3c437af48ae4b5327b9a6224de7d0",
+        "tb_ddr_word_engine.log": "db2788891d9d08d9329f5acd2bd778de7f5d123797a21170247695f9c93a2ae2",
+        "tb_engine_block.compile.log": "ae0bf2a78fe2bc7838bd3c7851f86143ec2e883b35eb30aa70f6ada3882bd77c",
+        "tb_engine_block.log": "cdb4d7bd336f8db502527558981ee1dcc9d5bcf75439ec48df071a621231e781",
+        "tb_source_prefetch.compile.log": "c679d793c5eb750f256132950f61ef6d9971386ff36dac284d67f256f1a9a4b4",
+        "tb_source_prefetch.log": "5e50707fb9f87a2ecead7a1d1c815b64feb3d9bd52741a38709dba05a08dc49b",
+        "tb_turnaround_arbiter.compile.log": "c1e9133594ddce639ab88ff16d5e63e2c0788a1ecae5f72b35af045d240a12b2",
+        "tb_turnaround_arbiter.log": "578bc4881da1bfba2d23183d45371bb6b2a71e3eb4ba5be3c9061948e7135b5f",
+        "tb_turnaround_engine.compile.log": "703056ef536018f5265840d96ab3491cf4e7f4ec5849452375e79200ca717e48",
+        "tb_turnaround_engine.log": "02673ac7ca118197374dcd9336bafe4633bd54550fc3157b1abd4d9ff441e841"
+      }
+    }
+  ],
+  "validation_summary": {
+    "static_guard_red": "Old expression fails LIVE_BLOCK_SPAN_ARITHMETIC; this is a structural timing guard, not a claim of old functional failure.",
+    "old_semantics_baseline": "12 parameter configurations/296064 directed+random address/flag checks plus native result burst protocol pass.",
+    "new_semantics": "Same296064 checks pass across unaligned BASE/WORDS,0/1/63/64/65,28bit boundary/crossing,maximum positive integer WORDS and all write/source flags.",
+    "native_cases": 9,
+    "errors": 0,
+    "warnings": 0
+  },
+  "remaining_limits": [
+    "No PDS/full60/system run started by this agent. Parent must generate the next snapshot and measure timing/throughput.",
+    "The rewrite removes explicit per-request span arithmetic and repeated result-read range expression, but a physical speed improvement is not established by functional equivalence tests.",
+    "Random/directed equivalence is296064 cases, not exhaustive formal enumeration. The interval identity and32bit constant arithmetic apply to the documented nonnegative parameter domain.",
+    "Negative WORDS parameter values are outside the supported domain.",
+    "fault_reason register and illegal-command acceptance logic were not delayed, masked or bypassed to remove a timing endpoint."
+  ]
+}

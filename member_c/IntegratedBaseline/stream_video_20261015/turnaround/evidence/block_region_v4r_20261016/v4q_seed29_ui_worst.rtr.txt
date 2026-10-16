@@ -1,0 +1,101 @@
+Startpoint  : core/continuous_sources/completion_crossing/fifo/wr_release[0]/opit_0_inv_srl/CLK
+Endpoint    : engine/fault_reason_reg[1]/opit_0_inv_L6Q_perm/CE
+Path Group  : ddrphy_sysclk
+Path Type   : max (slow corner)
+Path Class  : sequential timing path
+Clock Skew  :    -0.197  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+  Capture Clock Delay     :  4.139
+  Launch Clock Delay      :  5.531
+  Clock Pessimism Removal :  1.195
+
+ Location                          Delay Type             Incr        Path         Logical Resource 
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       0.000       0.000 r                        
+ N3                                                      0.000       0.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       0.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.970       1.080 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       1.080         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.105       1.185 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.294       1.479         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.148       1.627 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.432       2.059         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.177       2.236 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.450       2.686         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.037       2.723 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000       2.723         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.123       2.846 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000       2.846         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                    0.431       3.277 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.753       4.030         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.168       4.198 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.602       4.800         ui_clk           
+ HCKB_213_509/CLKOUT               td                    0.287       5.087 r       HCKBROUTE_33/CLKOUT
+                                   net (fanout=2399)     0.444       5.531         ntR10954         
+ CLMS_189_685/CLK                                                          r       core/continuous_sources/completion_crossing/fifo/wr_release[0]/opit_0_inv_srl/CLK
+
+ CLMS_189_685/CR0                  tco                   0.249       5.780 r       core/continuous_sources/completion_crossing/fifo/wr_release[0]/opit_0_inv_srl/CR0
+                                   net (fanout=1344)     1.060       6.840         core/continuous_sources/completion_crossing/fifo/wr_release [1]
+ CLMA_225_570/Y3                   td                    0.074       6.914 r       core/stream_path/writer/N194_5/gateop_perm/L6
+                                   net (fanout=2)        0.782       7.696         core/stream_path/w_valid
+ CLMA_249_511/Y2                   td                    0.074       7.770 r       core/continuous_sources/completion_crossing/N0_1/LUT6_inst_1_perm/L6
+                                   net (fanout=1)        0.246       8.016         _N7              
+ CLMA_249_511/Y0                   td                    0.096       8.112 r       core/ui_mux/N7_25/gateop_perm/Y
+                                   net (fanout=11)       0.645       8.757         core/_N54744     
+ CLMA_261_468/Y1                   td                    0.074       8.831 r       core/N419_56/LUT6_inst_perm/L6
+                                   net (fanout=29)       1.062       9.893         _N53820          
+ CLMA_225_534/CR1                  td                    0.227      10.120 r       CLKROUTE_744/CR  
+                                   net (fanout=1)        0.121      10.241         ntR10392         
+ CLMA_225_534/Y3                   td                    0.074      10.315 r       engine/addr_hold[11]/opit_0_inv_L6Q_perm/L6
+                                   net (fanout=7)        0.558      10.873         cmd_a[11]        
+ CLMS_225_559/Y1                   td                    0.336      11.209 r       engine/N35_mux4_1/gateop_perm/Y
+                                   net (fanout=1)        0.390      11.599         engine/_N17087   
+ CLMA_231_553/Y1                   td                    0.108      11.707 r       engine/N46_0_5/LUT6_inst_perm/L6
+                                   net (fanout=4)        0.428      12.135         engine/result_block_safe
+ CLMS_225_547/Y1                   td                    0.224      12.359 r       engine/N250_6/gateop_perm/Y
+                                   net (fanout=13)       0.424      12.783         engine/N3441 [10]
+ CLMA_225_552/Y3                   td                    0.074      12.857 r       engine/N1553_8/LUT6_inst_perm/L6
+                                   net (fanout=7)        0.256      13.113         engine/N1553     
+ CLMA_219_552/CE                                                           r       engine/fault_reason_reg[1]/opit_0_inv_L6Q_perm/CE
+
+ Data arrival time                                                  13.113         Logic Levels: 10 
+                                                                                   Logic: 1.610ns(21.235%), Route: 5.972ns(78.765%)
+----------------------------------------------------------------------------------------------------
+
+ Clock ddrphy_sysclk (rising edge)                       8.000       8.000 r                        
+ N3                                                      0.000       8.000 r       ddr_ref_clk_p (port)
+                                   net (fanout=1)        0.110       8.110         ddr_ref_clk_p    
+ IOBD_372_468/DIN                  td                    0.829       8.939 r       ref_input/opit_0/O
+                                   net (fanout=1)        0.000       8.939         ref_input/ntD    
+ IOLHR_364_468/DI_TO_CLK           td                    0.091       9.030 r       ref_input/opit_2/DI_TO_CLK
+                                   net (fanout=5)        0.247       9.277         ref_clk          
+ MRCKB_361_456/CLKOUT_U_P          td                    0.126       9.403 r       memory_ip/u_ddrphy_top/u_clkbufm/clkbufm_inst/CLKOUT_P
+                                   net (fanout=2)        0.367       9.770         memory_ip/u_ddrphy_top/pll_refclk
+ RCKB_363_456/CLKOUT               td                    0.149       9.919 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_clkbufr/goprclk/CLKOUT
+                                   net (fanout=1)        0.383      10.302         memory_ip/u_ddrphy_top/ddrphy_slice_top/ppll_clkin [0]
+ PPLL_367_307/CLKOUTPHY            td                    0.026      10.328 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].ddrphy_ppll/u_ppll/ppll_inst/CLKOUTPHY
+                                   net (fanout=36)       0.000      10.328         memory_ip/u_ddrphy_top/phy_ioclk_fb
+ DDRPHY_IOCLK_DIV_368_310/CLKOUT   td                    0.101      10.429 r       memory_ip/u_ddrphy_top/ddrphy_slice_top/i_dqs_bank[0].u_ddrphy_ioclkdiv/ddrphy_ioclk_div_inst/CLKOUT
+                                   net (fanout=35)       0.000      10.429         memory_ip/u_ddrphy_top/phy_sysclk_fb
+ GPLL_367_463/CLKOUT0                                   -0.211      10.218 r       memory_ip/u_ddrphy_top/ddrphy_gpll/u_gpll/gpll_inst/CLKOUT0
+                                   net (fanout=1)        0.642      10.860         memory_ip/u_ddrphy_top/gpll_clkout0
+ USCM_215_576/CLKOUT               td                    0.143      11.003 r       memory_ip/u_ddrphy_top/u_sysclk_bufg/gopclkbufg/CLKOUT
+                                   net (fanout=8)        0.515      11.518         ui_clk           
+ HCKB_213_493/CLKOUT               td                    0.245      11.763 r       HCKBROUTE_37/CLKOUT
+                                   net (fanout=5226)     0.376      12.139         ntR10959         
+ CLMA_219_552/CLK                                                          r       engine/fault_reason_reg[1]/opit_0_inv_L6Q_perm/CLK
+ clock pessimism                                         1.195      13.334                          
+ clock uncertainty                                      -0.150      13.184                          
+
+ Setup time                                             -0.226      12.958                          
+
+ Data required time                                                 12.958                          
+----------------------------------------------------------------------------------------------------
+ Data required time                                                 12.958                          
+ Data arrival time                                                  13.113                          
+----------------------------------------------------------------------------------------------------
+ Slack (VIOLATED)                                                   -0.155                          
+====================================================================================================
+
+====================================================================================================
+

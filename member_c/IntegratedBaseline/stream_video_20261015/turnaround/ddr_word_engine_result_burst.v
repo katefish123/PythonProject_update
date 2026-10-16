@@ -90,11 +90,22 @@ module ddr_word_engine_result_burst #(
     reg [21:0] cache_tag;
     reg [2:0] read_index;
     reg [255:0] result_cache[0:7];
-    wire [27:0] request_block={cmd_addr[27:6],6'b0};
+    // A complete aligned 64-word block fits [BASE, BASE+WORDS) exactly
+    // when its tag is in [ceil(BASE/64), floor((BASE+WORDS)/64)).
+    // Precompute both ends in 32 bits: BASE need not be aligned, WORDS may
+    // be zero/short, and BASE+WORDS may exceed the 28-bit address domain.
+    // WORDS parameters are nonnegative signed integers (0 through 2^31-1).
+    // Only 22 request tag bits now traverse the live command validation path.
+    localparam [31:0] RESULT_BLOCK_FIRST0=({4'd0,RESULT_BASE0}+32'd63)>>6;
+    localparam [31:0] RESULT_BLOCK_FIRST1=({4'd0,RESULT_BASE1}+32'd63)>>6;
+    localparam [31:0] RESULT_BLOCK_LIMIT0=({4'd0,RESULT_BASE0}+RESULT_WORDS)>>6;
+    localparam [31:0] RESULT_BLOCK_LIMIT1=({4'd0,RESULT_BASE1}+RESULT_WORDS)>>6;
+    localparam [31:0] SOURCE_BLOCK_FIRST0=({4'd0,SOURCE_BASE0}+32'd63)>>6;
+    localparam [31:0] SOURCE_BLOCK_FIRST1=({4'd0,SOURCE_BASE1}+32'd63)>>6;
+    localparam [31:0] SOURCE_BLOCK_LIMIT0=({4'd0,SOURCE_BASE0}+SOURCE_WORDS)>>6;
+    localparam [31:0] SOURCE_BLOCK_LIMIT1=({4'd0,SOURCE_BASE1}+SOURCE_WORDS)>>6;
+    wire [21:0] request_block_tag=cmd_addr[27:6];
     wire force_source_block=(cmd_source_block === 1'b1);
-    wire result_read=READ_AHEAD_ENABLE && !force_source_block && !cmd_write &&
-        ((request_block>=RESULT_BASE0 && request_block+28'd63<RESULT_BASE0+RESULT_WORDS) ||
-         (request_block>=RESULT_BASE1 && request_block+28'd63<RESULT_BASE1+RESULT_WORDS));
     reg source_cache_valid,read_source,source_next_valid;
     reg [21:0] source_cache_tag;
     reg [27:0] source_next_addr;
@@ -120,11 +131,12 @@ module ddr_word_engine_result_burst #(
         ((cmd_addr>=SOURCE_BASE0 && cmd_addr<SOURCE_BASE0+SOURCE_WORDS) ||
          (cmd_addr>=SOURCE_BASE1 && cmd_addr<SOURCE_BASE1+SOURCE_WORDS));
     wire result_block_safe=
-        ((request_block>=RESULT_BASE0 && request_block+28'd63<RESULT_BASE0+RESULT_WORDS) ||
-         (request_block>=RESULT_BASE1 && request_block+28'd63<RESULT_BASE1+RESULT_WORDS));
+        ((request_block_tag>=RESULT_BLOCK_FIRST0 && request_block_tag<RESULT_BLOCK_LIMIT0) ||
+         (request_block_tag>=RESULT_BLOCK_FIRST1 && request_block_tag<RESULT_BLOCK_LIMIT1));
     wire source_block_safe=
-        ((request_block>=SOURCE_BASE0 && request_block+28'd63<SOURCE_BASE0+SOURCE_WORDS) ||
-         (request_block>=SOURCE_BASE1 && request_block+28'd63<SOURCE_BASE1+SOURCE_WORDS));
+        ((request_block_tag>=SOURCE_BLOCK_FIRST0 && request_block_tag<SOURCE_BLOCK_LIMIT0) ||
+         (request_block_tag>=SOURCE_BLOCK_FIRST1 && request_block_tag<SOURCE_BLOCK_LIMIT1));
+    wire result_read=READ_AHEAD_ENABLE && !force_source_block && !cmd_write && result_block_safe;
     wire source_prefetch=source_read && source_block_safe &&
         (force_source_block || cmd_addr==SOURCE_BASE0 || cmd_addr==SOURCE_BASE1 ||
          (source_next_valid && cmd_addr==source_next_addr));

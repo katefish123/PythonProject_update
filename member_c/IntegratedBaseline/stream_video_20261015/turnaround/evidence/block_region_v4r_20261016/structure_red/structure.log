@@ -1,0 +1,1 @@
+FAIL LIVE_BLOCK_SPAN_ARITHMETIC: complete-block region bounds must be constant-predecoded, not derived from request_block arithmetic/comparisons
