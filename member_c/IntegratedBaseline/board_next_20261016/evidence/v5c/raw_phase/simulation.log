@@ -1,0 +1,37 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -do "onfinish stop; run -all; quit -f" work.tb_raw_pipeline -gCAMERA_START_LINE=24 -gREQUIRE_RAW30=1 
+# Start time: 22:28:42 on Oct 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_raw_pipeline(fast)
+# onfinish stop
+#  run -all
+# PIPELINE_PUBLICATION corrected=0 id=1 count=1 time=123248000
+# PIPELINE_PUBLICATION corrected=0 id=2 count=2 time=237400000
+# PIPELINE_PUBLICATION corrected=0 id=3 count=3 time=465704000
+# PIPELINE_PUBLICATION corrected=0 id=4 count=4 time=694008000
+# PIPELINE_PUBLICATION corrected=0 id=5 count=5 time=922330000
+# PASS RAW_PIPELINE corrected=0 native=0 pixels=16384 unique_scans=5 published=5 reads=272 writes=1280 physical_frames=9 admitted=5 dropped=4
+# ** Note: $finish    : D:/FPGA/output/c_board_next_raw_20261016_window_phase2/source_snapshot/tb_raw_pipeline.sv(174)
+#    Time: 1027570353 ps  Iteration: 0  Instance: /tb_raw_pipeline
+# Break at D:/FPGA/output/c_board_next_raw_20261016_window_phase2/source_snapshot/tb_raw_pipeline.sv line 174
+# Stopped at D:/FPGA/output/c_board_next_raw_20261016_window_phase2/source_snapshot/tb_raw_pipeline.sv line 174
+#  quit -f
+# End time: 22:28:44 on Oct 16,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

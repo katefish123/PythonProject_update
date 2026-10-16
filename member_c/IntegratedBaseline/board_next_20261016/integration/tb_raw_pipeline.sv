@@ -1,5 +1,5 @@
 `timescale 1ns/1ps
-module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
+module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0,REQUIRE_RAW30=0,BAD_FRAME=0,CAMERA_START_LINE=0,RGB_PATTERN=0);
  localparam SW=NATIVE?1920:128,SH=NATIVE?1080:(CORRECTED?48:16),OW=NATIVE?768:64;
  localparam HS=NATIVE?44:4,HB=NATIVE?148:8,HF=NATIVE?88:512;
  localparam VS=NATIVE?5:2,VB=NATIVE?36:4,VF=4;
@@ -14,6 +14,7 @@ module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
  wire[23:0]rgb;wire de,image_valid,underrun,bist_pass,bist_fail,engine_fault,display_raw;
  wire[31:0]good,rejected,published,displayed,admitted,dropped,raw_pubs,corr_pubs;
  wire[3:0]source_fault;
+ wire[511:0]rejected_reason_counts;
  wire cmd_v,cmd_r,cmd_w,rsp_v,rsp_w,source_block_cmd,result_block_cmd;
  wire[27:0]cmd_a;wire[255:0]cmd_data,rsp_data;wire[31:0]cmd_mask;
  wire[2047:0]burst_payload,source_block_payload,result_block_payload;
@@ -23,11 +24,12 @@ module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
  .proc_clk(proc_clk),.proc_rst_n(rst_n),.ui_clk(ui_clk),.ui_rst_n(rst_n),.rx_clk(rx_clk),.rx_rst_n(rst_n),.pix_clk(pix_clk),.pix_rst_n(rst_n),
  .hdmi_ready(1'b1),.ddr_ready(rst_n),.memory_fault(engine_fault),.rx_vs(rx_vs),.rx_de(rx_de),.rx_rgb(rx_rgb),
  .nearest(1'b0),.force_pattern(1'b0),.raw_requested(!CORRECTED),.display_raw(display_raw),.source_fault_components(source_fault),.raw_publications(raw_pubs),.corrected_publications(corr_pubs),
+ .debug_h(),.debug_corners(),.debug_frame_id(),.debug_source_base(),.debug_result_base(),.debug_display_bank(),.debug_display_id(),.data_fifo_peak(),
  .hsync(),.vsync(),.de(de),.rgb(rgb),.image_valid(image_valid),.working(),.frame_error(),.input_wait(),.display_underrun(underrun),
  .selftest_passed(bist_pass),.selftest_failed(bist_fail),.good_frames(good),.rejected_frames(rejected),.diagnostic_reason(),.diagnostic_phase(),
  .preview_valid(1'b0),.preview_rgb(24'd0),.overlay_on(1'b0),.overlay_rgb(24'd0),
  .scan_x(),.scan_y(),.scan_de(),.scan_start(),.scan_reset_n(),.capture_frame_id(),.processing_frame_id(),
- .published_frame_id(published),.displayed_frame_id(displayed),.display_age_ms(),.admitted_frames(admitted),.dropped_frames(dropped),.rejected_reason_counts(),
+ .published_frame_id(published),.displayed_frame_id(displayed),.display_age_ms(),.admitted_frames(admitted),.dropped_frames(dropped),.rejected_reason_counts(rejected_reason_counts),
  .cmd_source_block(source_block_cmd),.cmd_result_block(result_block_cmd),.result_block_data(result_block_payload),.rsp_source_block(source_block_payload),.cmd_burst_data(burst_payload),
  .cmd_valid(cmd_v),.cmd_ready(cmd_r),.cmd_write(cmd_w),.cmd_addr(cmd_a),.cmd_wdata(cmd_data),.cmd_wstrb(cmd_mask),.rsp_valid(rsp_v),.rsp_write(rsp_w),.rsp_rdata(rsp_data));
  wire[27:0]awaddr,araddr;wire[3:0]awid,arid,awlen,arlen;
@@ -48,10 +50,17 @@ module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
  reg[255:0]source_ram0[0:WORDS/8-1],source_ram1[0:WORDS/8-1],bist_ram[0:7];
  reg[255:0]result_ram0[0:OW*SH/8-1],result_ram1[0:OW*SH/8-1];
  reg[23:0]source_fixture[0:WORDS-1],expected_fixture[0:OW*SH-1];
+ reg[39:0]expected_h[0:8];
+ reg[23:0]source_alt[0:WORDS-1],expected_alt[0:OW*SH-1];reg[39:0]expected_h_alt[0:8];
  localparam[95:0]EXPECTED_CORNERS=NATIVE?96'h28a0464e206e5283f224e3c0:96'h01200506c009068029016025;
- integer camera_x=0,camera_y=0,physical_frames=0;integer bank_id[0:1];reg[31:0]seen_generation=0;
+ localparam[95:0]ALT_CORNERS=NATIVE?{12'd1100,12'd100,12'd1700,12'd160,12'd1650,12'd950,12'd1150,12'd900}:{12'd24,12'd7,12'd112,12'd5,12'd107,12'd38,12'd18,12'd42};
+ integer camera_x=0,camera_y=CAMERA_START_LINE,physical_frames=0;integer bank_id[0:1];reg[31:0]seen_generation=0;
  function[23:0]pattern(input integer g,x,y);
- reg[7:0]v;begin v=70+(g*19+x+3*y)%160;pattern=CORRECTED?source_fixture[y*SW+x]:{v,v,v};end endfunction
+ reg[7:0]v,r,gc,b;begin
+ v=70+(g*19+x+3*y)%160;
+ r=(g*31+x*3+y)%256;gc=(g*17+x+y*5)%256;b=(g*7+x*7+y*11)%256;
+ pattern=CORRECTED?(BAD_FRAME>0&&g==BAD_FRAME?24'hb0b0b0:g%2==0?source_alt[y*SW+x]:source_fixture[y*SW+x]):RGB_PATTERN?{r,gc,b}:{v,v,v};end endfunction
+ function[23:0]expected_pixel(input integer g,index);expected_pixel=g%2==0?expected_alt[index]:expected_fixture[index];endfunction
  function[255:0]memory_read(input[27:0]a);
  if(a<WORDS)memory_read=source_ram0[a>>3];
  else if(a>=SRC1&&a<SRC1+WORDS)memory_read=source_ram1[(a-SRC1)>>3];
@@ -96,7 +105,7 @@ module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
  else if(CORRECTED&&((physical_addr>=28'h0200000&&physical_addr<28'h0200000+OW*SH)||(physical_addr>=28'h0400000&&physical_addr<28'h0400000+OW*SH)))begin
  bank=physical_addr>=28'h0400000;rel=physical_addr-(bank?28'h0400000:28'h0200000);
  if(image_valid&&!display_raw&&bank==dut.display_reader.display_bank)$fatal(1,"overwrote active corrected bank");
- for(integer k=0;k<8;k++)if(wdata[k*32+:32]!=={8'd0,expected_fixture[rel+k]})$fatal(1,"corrected DDR pixel mismatch index=%0d actual=%h expected=%h",rel+k,wdata[k*32+:24],expected_fixture[rel+k]);
+ for(integer k=0;k<8;k++)if(wdata[k*32+:32]!=={8'd0,expected_pixel(dut.processing_frame_id,rel+k)})$fatal(1,"corrected DDR pixel mismatch index=%0d actual=%h expected=%h",rel+k,wdata[k*32+:24],expected_pixel(dut.processing_frame_id,rel+k));
  if(bank)result_ram1[rel>>3]<=wdata;else result_ram0[rel>>3]<=wdata;
  end else $fatal(1,"RAW wrote correction result bank");
  if(wlast)begin write_pending<=0;write_index<=0;end
@@ -111,23 +120,25 @@ module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
  read_beat<=read_beat+1;if(read_beat==read_total-1)read_pending<=0;end
  end end
  integer checked=0,scans=0,seen_pub=0,scan_id=0,last_scan_id=0,unique_scans=0;
+ time previous_publication=0,maximum_steady_interval=0;
  reg[11:0]px=0,py=0;reg check_scan=0;
  always @(posedge pix_clk)begin: scoreboard
  reg[11:0]nx,ny;reg ns;
  nx=dut.scan_x;ny=dut.scan_y;ns=dut.scan_start;#0.1;
  if(rst_n)begin
- if(ns)begin
- check_scan=image_valid;scans++;
+ if(ns||dut.display_reader.image_swap_pulse)begin
+ check_scan=image_valid;if(ns)scans++;
  if(image_valid)begin
  if(display_raw!==!CORRECTED)$fatal(1,"mode publication mismatch");
- scan_id=CORRECTED?dut.modes.published_generation:bank_id[dut.display_reader.display_bank];
+ scan_id=dut.debug_display_id;
+ if(!CORRECTED&&scan_id!=bank_id[dut.display_reader.display_bank])$fatal(1,"PIX display identity does not match actual source bank");
  if(scan_id<last_scan_id)$fatal(1,"RAW frame ID reversed");
  if(scan_id!=last_scan_id)begin unique_scans++;last_scan_id=scan_id;end
  end end
  if(de&&check_scan)begin
  if(CORRECTED)begin
  if(px<(SW-OW)/2||px>=(SW+OW)/2)begin if(rgb!==0)$fatal(1,"corrected margin stretched");end
- else if(rgb!==expected_fixture[py*OW+px-(SW-OW)/2])$fatal(1,"corrected HDMI pixel mismatch x=%0d y=%0d actual=%h",px,py,rgb);
+ else if(rgb!==expected_pixel(scan_id,py*OW+px-(SW-OW)/2))$fatal(1,"corrected HDMI pixel mismatch x=%0d y=%0d actual=%h",px,py,rgb);
  end else if(rgb!==pattern(scan_id,px,py))$fatal(1,"RAW pixel mismatch id=%0d x=%0d y=%0d actual=%h",scan_id,px,py,rgb);
  checked++;
  end
@@ -137,19 +148,33 @@ module tb_raw_pipeline #(parameter NATIVE=0,FRAMES=5,CORRECTED=0);
  // Path BUSY also covers the writer bridge's reset handshake, before any
  // image exists. A launch or processor activity indicates actual correction.
  if(!CORRECTED&&(dut.start||dut.stream_path.p_busy||corr_pubs!=0))$fatal(1,"RAW invoked B correction");
- if(CORRECTED&&dut.start&&(!dut.geometry_valid||dut.descriptor_corners!==EXPECTED_CORNERS))$fatal(1,"actual geometry/generation mismatch corners=%h",dut.descriptor_corners);
- if(rejected!=0)$fatal(1,"no-marker RAW rejected");
- if(good!=seen_pub)begin seen_pub=good;$display("PIPELINE_PUBLICATION corrected=%0d id=%0d count=%0d time=%0t",CORRECTED,published,good,$time);end
+ if(CORRECTED&&dut.start&&(!dut.geometry_valid||dut.descriptor_corners!==(dut.descriptor_generation%2==0?ALT_CORNERS:EXPECTED_CORNERS)))$fatal(1,"actual geometry/generation mismatch corners=%h",dut.descriptor_corners);
+ if(BAD_FRAME>0&&CORRECTED)begin
+ if(rejected>1||rejected_reason_counts[3*32+:32]!=rejected||published==BAD_FRAME||(dut.start&&dut.descriptor_generation==BAD_FRAME))$fatal(1,"bad-marker frame published/processed or wrong reject reason");
+ end else if(rejected!=0)$fatal(1,"unexpected rejected frame");
+ if(good!=seen_pub)begin
+ if(CORRECTED)begin
+ if(dut.debug_frame_id!==published||dut.debug_corners!==(published%2==0?ALT_CORNERS:EXPECTED_CORNERS)||dut.debug_h[8*40+:40]!==40'd16777216)$fatal(1,"trace snapshot did not preserve completed geometry/H/frame ID");
+ for(integer hi=0;hi<9;hi++)if(dut.debug_h[hi*40+:40]!==(published%2==0?expected_h_alt[hi]:expected_h[hi]))$fatal(1,"trace H coefficient mismatch index=%0d",hi);
+ $display("CORRECTED_SNAPSHOT id=%0d corners=%h H=%h source_base=%h result_base=%h",dut.debug_frame_id,dut.debug_corners,dut.debug_h,dut.debug_source_base,dut.debug_result_base);
+ end
+ if(good>2&&$time-previous_publication>maximum_steady_interval)maximum_steady_interval=$time-previous_publication;
+ previous_publication=$time;seen_pub=good;$display("PIPELINE_PUBLICATION corrected=%0d id=%0d count=%0d time=%0t",CORRECTED,published,good,$time);
+ end
  end
  initial begin
  if(CORRECTED)begin
- if(NATIVE)begin $readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native/source.hex",source_fixture);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native/expected.hex",expected_fixture);end
- else begin $readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced/source.hex",source_fixture);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced/expected.hex",expected_fixture);end
+ if(NATIVE)begin $readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native_alt/source.hex",source_alt);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native_alt/expected.hex",expected_alt);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native_alt/H40.hex",expected_h_alt);end
+ else begin $readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced_alt/source.hex",source_alt);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced_alt/expected.hex",expected_alt);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced_alt/H40.hex",expected_h_alt);end
+ if(NATIVE)begin $readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native/source.hex",source_fixture);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native/expected.hex",expected_fixture);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/native/H40.hex",expected_h);end
+ else begin $readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced/source.hex",source_fixture);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced/expected.hex",expected_fixture);$readmemh("D:/FPGA/output/c_board_next_pipeline_fixtures_20261016/reduced/H40.hex",expected_h);end
  end
  bank_id[0]=0;bank_id[1]=0;repeat(8)@(negedge ui_clk);rst_n=1;
  wait(unique_scans>=FRAMES);@(posedge dut.scan_start);#100;
  if(checked<FRAMES*WORDS||writes<FRAMES*WORDS/8||good<FRAMES)$fatal(1,"insufficient coverage");
+ if(CORRECTED&&BAD_FRAME>0&&rejected!=1)$fatal(1,"bad-marker rejection not exercised");
+ if(REQUIRE_RAW30&&!CORRECTED&&maximum_steady_interval>2*HT*VT*6.734008+1000)$fatal(1,"RAW30_DEADLINE_MISSED interval_ns=%0d",maximum_steady_interval);
  $display("PASS RAW_PIPELINE corrected=%0d native=%0d pixels=%0d unique_scans=%0d published=%0d reads=%0d writes=%0d physical_frames=%0d admitted=%0d dropped=%0d",CORRECTED,NATIVE,checked,unique_scans,good,reads,writes,physical_frames,admitted,dropped);$finish;
  end
- initial begin #(NATIVE?250000000:10000000);$fatal(1,"pipeline timeout");end
+ initial begin #(NATIVE?FRAMES*40000000+100000000:10000000);$fatal(1,"pipeline timeout");end
 endmodule

@@ -21,7 +21,7 @@ module video_correct_ddr_continuous_core #(
  input wire hdmi_ready,ddr_ready,memory_fault,
  input wire rx_vs,rx_de,input wire [23:0] rx_rgb,
  input wire nearest,force_pattern,raw_requested,
- output wire display_raw,output wire[3:0]source_fault_components,
+ output reg[359:0]debug_h,output reg[95:0]debug_corners,output reg[31:0]debug_frame_id,output reg[27:0]debug_source_base,debug_result_base,output wire[31:0]debug_display_id,output wire debug_display_bank,output wire[FIFO_ADDR_BITS:0]data_fifo_peak,output wire display_raw,output wire[3:0]source_fault_components,
  output wire[31:0]raw_publications,corrected_publications,
  output wire hsync,vsync,de,output wire [23:0] rgb,
  output wire image_valid,working,frame_error,input_wait,display_underrun,
@@ -77,11 +77,12 @@ module video_correct_ddr_continuous_core #(
  .MIN_PIXELS(MARKER_MIN_PIXELS),.MAX_PIXELS(MARKER_MAX_PIXELS),.MAX_SPAN(MARKER_MAX_SPAN),.DATA_FIFO_ADDR_BITS(FIFO_ADDR_BITS),.BURST_BEATS(CAPTURE_BURST_BEATS),.PROC_CYCLES_PER_MS(PROC_CYCLES_PER_MS),.SOURCE_BASE0(28'd0),.SOURCE_BASE1(SOURCE_BASE1),
  .BLACK_RMIN(BLACK_RMIN),.BLACK_RMAX(BLACK_RMAX),.BLACK_GMIN(BLACK_GMIN),.BLACK_GMAX(BLACK_GMAX),.BLACK_BMIN(BLACK_BMIN),.BLACK_BMAX(BLACK_BMAX),.P0_XMIN(P0_XMIN),.P0_XMAX(P0_XMAX),.P0_YMIN(P0_YMIN),.P0_YMAX(P0_YMAX),.P1_XMIN(P1_XMIN),.P1_XMAX(P1_XMAX),.P1_YMIN(P1_YMIN),.P1_YMAX(P1_YMAX),.P2_XMIN(P2_XMIN),.P2_XMAX(P2_XMAX),.P2_YMIN(P2_YMIN),.P2_YMAX(P2_YMAX),.P3_XMIN(P3_XMIN),.P3_XMAX(P3_XMAX),.P3_YMIN(P3_YMIN),.P3_YMAX(P3_YMAX)) continuous_sources(
  .rx_clk(rx_clk),.proc_clk(proc_clk),.ui_clk(ui_clk),.rst_n(common_rst_n),.enabled(enabled),.raw_requested(raw_requested),.rx_vs(rx_vs),.rx_de(rx_de),.rx_rgb(rx_rgb),
- .frame_valid(frame_valid),.frame_ready(frame_ready),.frame_bank(descriptor_bank),.frame_generation(descriptor_generation),.frame_corners(descriptor_corners),.frame_geometry_valid(geometry_valid),.frame_capture_ms(descriptor_capture_ms),
+ .frame_valid(frame_valid),.frame_ready(frame_ready),.frame_bank(descriptor_bank),.frame_generation(descriptor_generation),.frame_corners(descriptor_corners),.frame_geometry_valid(geometry_valid),.data_fifo_peak(data_fifo_peak),.frame_capture_ms(descriptor_capture_ms),
  .release_valid(release_valid),.release_bank(release_bank),.release_generation(release_generation),
  .rejected_frames(source_rejected),.dropped_frames(dropped_frames),.admitted_frames(admitted_frames),.reject_reason_counts(source_reason_counts),.last_failure_reason(source_reason),.fault(source_fault),.fault_components(source_fault_components),
  .cmd_valid(cap_v),.cmd_ready(cap_r),.cmd_write(cap_w),.cmd_addr(cap_a),.cmd_wdata(cap_data),.cmd_wstrb(cap_mask),.cmd_burst_data(cmd_burst_data),.rsp_valid(cap_rsp),.rsp_write(cap_rsp_write));
  assign capture_frame_id=admitted_frames;
+
  localparam WAIT_SOURCE=0,PROCESS=1,WAIT_DISPLAY=2;
  wire[2:0]state;wire write_bank,pub_toggle,pub_bank,pub_raw;
  wire source_bank,session_error;
@@ -89,7 +90,7 @@ module video_correct_ddr_continuous_core #(
  reg[511:0]processor_reason_counts;
  wire display_ack,p_done,p_error,p_busy,path_ready;
  wire[3:0]processor_reason,mode_reason;
- wire[31:0]p_pixels;
+ wire[31:0]p_pixels;wire[359:0]path_debug_h;reg[95:0]held_debug_corners;
  assign published_frame_id=published_generation;
  assign displayed_frame_id=displayed_generation;
  assign rejected_frames=source_rejected+processed_rejected;
@@ -148,16 +149,16 @@ module video_correct_ddr_continuous_core #(
  wire[27:0]br_a;wire[255:0]br_data,br_rdata;wire[31:0]br_mask;
  c_stream_burst_correction_path #(.SRC_W(SRC_W),.SRC_H(SRC_H),.OUT_W(OUT_W),.OUT_H(OUT_H),.ACTIVE_W(OUT_W-3),.ACTIVE_X(1),.RESULT_BASE0(RESULT_BASE0),.RESULT_BASE1(RESULT_BASE1)) stream_path(
  .proc_clk(proc_clk),.ui_clk(ui_clk),.rst_n(common_rst_n),.start(start),.abort(abort_path),.nearest(nearest),.input_geometry_valid(geometry_valid),.input_corners(descriptor_corners),.source_base(source_bank?SOURCE_BASE1:28'd0),.frame_bank(write_bank),
- .start_ready(path_ready),.busy(p_busy),.done(p_done),.error(p_error),.failure_reason(processor_reason),.completed_pixels(p_pixels),.processor_cycles(),
+ .start_ready(path_ready),.busy(p_busy),.done(p_done),.error(p_error),.failure_reason(processor_reason),.debug_h(path_debug_h),.completed_pixels(p_pixels),.processor_cycles(),
  .cmd_valid(br_v),.cmd_ready(br_r),.cmd_write(br_w),.cmd_source_block(br_source_block),.cmd_result_block(br_result_block),.result_block_data(result_block_data),.cmd_addr(br_a),.cmd_wdata(br_data),.cmd_wstrb(br_mask),
  .rsp_valid(br_rsp),.rsp_write(br_rsp_write),.rsp_rdata(br_rdata),.rsp_source_block(rsp_source_block),.engine_fault(memory_fault));
  wire display_v,display_r,display_rsp,display_prefetch_busy;wire [27:0] display_a;wire [255:0] display_rdata;
  wire display_source_block;
- ddr_result_display_raw_corrected #(.SRC_W(SRC_W),.SRC_H(SRC_H),.SOURCE_BASE0(28'd0),.SOURCE_BASE1(SOURCE_BASE1),.OUT_W(OUT_W),.OUT_H(OUT_H),.SCALE(SCALE),.BASE0(RESULT_BASE0),.BASE1(RESULT_BASE1),
+ ddr_result_display_raw_corrected #(.PUBLISH_LINE(V_SYNC),.SRC_W(SRC_W),.SRC_H(SRC_H),.SOURCE_BASE0(28'd0),.SOURCE_BASE1(SOURCE_BASE1),.OUT_W(OUT_W),.OUT_H(OUT_H),.SCALE(SCALE),.BASE0(RESULT_BASE0),.BASE1(RESULT_BASE1),
   .H_SYNC(H_SYNC),.H_BACK(H_BACK),.H_ACTIVE(H_ACTIVE),.H_FRONT(H_FRONT),
   .V_SYNC(V_SYNC),.V_BACK(V_BACK),.V_ACTIVE(V_ACTIVE),.V_FRONT(V_FRONT)) display_reader(
   .ui_clk(ui_clk),.ui_rst_n(ui_rst_n),.pix_clk(pix_clk),.pix_rst_n(pix_rst_n),
-  .publish_toggle(pub_toggle),.publish_bank(pub_bank),.publish_raw(pub_raw),.display_raw(display_raw),.scan_frame_pulse(),.image_swap_pulse(),.ack_toggle(display_ack),.preview_valid(preview_valid),.preview_rgb(preview_rgb),.overlay_on(overlay_on),.overlay_rgb(overlay_rgb),
+  .publish_toggle(pub_toggle),.publish_bank(pub_bank),.publish_raw(pub_raw),.publish_frame_id(published_generation),.display_frame_id(debug_display_id),.display_bank(debug_display_bank),.display_raw(display_raw),.scan_frame_pulse(),.image_swap_pulse(),.ack_toggle(display_ack),.preview_valid(preview_valid),.preview_rgb(preview_rgb),.overlay_on(overlay_on),.overlay_rgb(overlay_rgb),
   .scan_x(scan_x),.scan_y(scan_y),.scan_de(scan_de),.scan_start(scan_start),.scan_reset_n(scan_reset_n),
   .force_pattern(force_pattern),.capture_guard(1'b0),
   .cmd_valid(display_v),.cmd_source_block(display_source_block),.cmd_ready(display_r),.cmd_addr(display_a),.rsp_valid(display_rsp),.rsp_rdata(display_rdata),.rsp_block(rsp_source_block),
@@ -184,5 +185,12 @@ module video_correct_ddr_continuous_core #(
  assign app_r=selftest_passed&&cmd_valid&&cmd_ready;
  assign test_rsp=!selftest_passed&&rsp_valid;
  assign app_rsp=selftest_passed&&rsp_valid;
+ always @(posedge proc_clk or negedge common_rst_n)begin
+ if(!common_rst_n)begin debug_h<=0;debug_corners<=0;debug_frame_id<=0;debug_source_base<=0;debug_result_base<=0;held_debug_corners<=0;end
+ else begin
+ if(start)held_debug_corners<=descriptor_corners;
+ if(p_done)begin debug_h<=path_debug_h;debug_corners<=held_debug_corners;debug_frame_id<=processing_generation;
+ debug_source_base<=source_bank?SOURCE_BASE1:28'd0;debug_result_base<=write_bank?RESULT_BASE1:RESULT_BASE0;end
+ end end
 endmodule
 `default_nettype wire

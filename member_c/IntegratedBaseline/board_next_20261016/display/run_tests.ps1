@@ -1,4 +1,4 @@
-param([string]$Suffix='local',[switch]$Red,[switch]$Native,[switch]$Late)
+param([string]$Suffix='local',[switch]$Red,[switch]$Native,[switch]$Late,[int]$Publine=0)
 $ErrorActionPreference='Stop'
 $here=$PSScriptRoot
 $out="D:/FPGA/output/c_board_next_display_20261016_$Suffix"
@@ -17,6 +17,7 @@ try {
  & D:/softwares/modelsim/win64/vlog.exe -sv @defines @files | Out-File compile.log
  if($LASTEXITCODE -ne 0){throw 'compile failed'}
  $generics=@();if($Native){$generics+='-gNATIVE=1'};if($Late){$generics+='-gLATE=1'}
+ $generics+="-gPUBLINE=$Publine"
  & D:/softwares/modelsim/win64/vsim.exe -c @generics -do 'onfinish stop; run -all; quit -f' work.tb_raw_corrected | Out-File simulation.log
  $errorFound=Select-String simulation.log,compile.log -Pattern '\*\* (Fatal|Error|Warning):' -Quiet
  if($Red){if(-not(Select-String simulation.log -Pattern 'RAW_MODE_PUBLICATION_REQUIRED' -Quiet)){throw 'RED did not detect absent mode publication'}}

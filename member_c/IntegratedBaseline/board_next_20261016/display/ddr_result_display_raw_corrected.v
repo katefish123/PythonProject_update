@@ -8,6 +8,7 @@
 // The UI adapter returns64 RGB words per accepted aligned block request.
 // Pixel scanout and complete-row mailbox retain the existing implementation.
 module ddr_result_display_raw_corrected #(
+    parameter PUBLISH_LINE=0,
     parameter OUT_W=768, OUT_H=1080, SCALE=1,
     parameter SRC_W=1920,SRC_H=1080,
     parameter H_SYNC=44, H_BACK=148, H_ACTIVE=1920, H_FRONT=88,
@@ -23,6 +24,7 @@ module ddr_result_display_raw_corrected #(
     input  wire         publish_toggle,
     input  wire         publish_bank,
     input wire publish_raw,output reg display_raw,
+    input wire[31:0]publish_frame_id,output reg[31:0]display_frame_id,output reg display_bank,
     output wire scan_frame_pulse,output reg image_swap_pulse,
     output reg          ack_toggle,
     input wire preview_valid,overlay_on,input wire[23:0]preview_rgb,overlay_rgb,
@@ -92,7 +94,6 @@ module ddr_result_display_raw_corrected #(
     reg ui_ack_toggle;
     reg ack_seen_pix;
 
-    reg display_bank;
     reg [15:0] display_gen;
     reg [1:0] line_valid;
     reg [ROW_BITS-1:0] line_row0, line_row1;
@@ -185,13 +186,20 @@ module ddr_result_display_raw_corrected #(
     wire [23:0] pixel_q=line_word_q[line_lane_q*32 +: 24];
     reg pixel_hs,pixel_vs,pixel_de,pixel_window,pixel_pattern;
     reg [23:0] pixel_pattern_rgb;
+    (* ASYNC_REG="TRUE" *) reg [2:0] pub_toggle_sync, pub_bank_sync,pub_raw_sync;
     wire frame_start=(hc==0 && vc==0);
+    reg swapped_this_scan;
+    // Accept a completed frame anywhere in this bounded leading blank. The
+    // final two lines are reserved for row0 prefetch. Never accept two images
+    // for one active scan, even if multiple complete descriptors are queued.
+    wire publication_window=vc>=PUBLISH_LINE && vc+2<Y0;
+    wire publication_boundary=(hc==0 && vc==PUBLISH_LINE)||
+        (publication_window&&!swapped_this_scan&&pub_toggle_sync[2]!=ack_toggle);
     wire first_dest_line=(vc>=Y0 && vc<Y0+OUT_H*SCALE && ((vc-Y0)%SCALE)==0);
     wire [ROW_BITS-1:0] dest_row=(vc-Y0)/SCALE;
     wire [ROW_BITS-1:0] request_row_next=dest_row+1'b1;
 
     // CDC synchronizers for frame publication and completed-line response.
-    (* ASYNC_REG="TRUE" *) reg [2:0] pub_toggle_sync, pub_bank_sync,pub_raw_sync;
     (* ASYNC_REG="TRUE" *) reg [2:0] ui_ack_sync;
     always @(posedge pix_clk or negedge pix_local_rst_n) begin
         if(!pix_local_rst_n) begin
@@ -220,10 +228,10 @@ module ddr_result_display_raw_corrected #(
 
     always @(posedge pix_clk or negedge pix_local_rst_n) begin
         if(!pix_local_rst_n) begin
-            ack_toggle<=0; display_bank<=0;display_raw<=0;image_swap_pulse<=0; display_gen<=0; image_valid<=0; underrun<=0;
+            ack_toggle<=0;display_frame_id<=0; display_bank<=0;display_raw<=0;image_swap_pulse<=0; display_gen<=0; image_valid<=0; underrun<=0;
             req_toggle<=0; req_bank<=0;req_raw<=0; req_gen<=0; req_row<=0;
             want_valid<=0; want_bank<=0;want_raw<=0; want_gen<=0; want_row<=0;
-            ack_seen_pix<=0;
+            ack_seen_pix<=0;swapped_this_scan<=0;
             line_valid<=0; line_row0<=0; line_row1<=0; line_bank0<=0; line_bank1<=0;line_raw0<=0;line_raw1<=0;
             line_gen0<=0; line_gen1<=0;scan_active_pix<=0;scan_row_pix<=0;
             line_ok<=0; line_word_q<=0;line_lane_q<=0;
@@ -231,6 +239,7 @@ module ddr_result_display_raw_corrected #(
             hsync<=0;vsync<=0;de<=0;rgb<=0;
         end else begin
             image_swap_pulse<=0;
+            if(frame_start)swapped_this_scan<=0;
 
             // A completed UI write makes the whole row atomically visible.
             if(ui_ack_sync[2]!=ack_seen_pix) begin
@@ -242,9 +251,10 @@ module ddr_result_display_raw_corrected #(
                 end
             end
 
-            if(frame_start) begin
-                if(pub_toggle_sync[2]!=ack_toggle) begin
-                    display_bank<=pub_bank_sync[2];display_raw<=pub_raw_sync[2];image_swap_pulse<=1;display_gen<=display_gen+1'b1;
+            if(publication_boundary) begin
+                if(pub_toggle_sync[2]!=ack_toggle&&(!swapped_this_scan||frame_start)) begin
+                    swapped_this_scan<=1;
+                    display_frame_id<=publish_frame_id;display_bank<=pub_bank_sync[2];display_raw<=pub_raw_sync[2];image_swap_pulse<=1;display_gen<=display_gen+1'b1;
                     image_valid<=1;ack_toggle<=pub_toggle_sync[2];
                     line_valid<=0;
                     want_valid<=1;want_row<=0;want_bank<=pub_bank_sync[2];want_raw<=pub_raw_sync[2];want_gen<=display_gen+1'b1;
@@ -268,7 +278,7 @@ module ddr_result_display_raw_corrected #(
 
             // Coalesce requests while a slow/old request drains. The newest
             // requested row/frame is launched as soon as the mailbox is free.
-            if(!(frame_start || (hc==0 && first_dest_line)) && want_valid && req_toggle==ui_ack_sync[2]) begin
+            if(!(publication_boundary || (hc==0 && first_dest_line)) && want_valid && req_toggle==ui_ack_sync[2]) begin
                 req_row<=want_row;req_bank<=want_bank;req_raw<=want_raw;req_gen<=want_gen;
                 req_toggle<=~req_toggle;want_valid<=0;
             end
@@ -307,6 +317,7 @@ module ddr_result_display_raw_corrected #(
 // synthesis translate_off
     initial begin
         if(SCALE!=1 || SRC_H!=OUT_H)$fatal(1,"RAW/CORRECTED requires SCALE1 and equal heights");
+        if(PUBLISH_LINE<0 || PUBLISH_LINE>=V_SYNC+V_BACK)$fatal(1,"publication must be inside leading vertical blank");
         if(SRC_W%64!=0 || OUT_W%64!=0 || SRC_W<64 || OUT_W<64)$fatal(1,"row widths must be positive multiples64");
         if(SRC_W>H_ACTIVE || OUT_W>H_ACTIVE || OUT_H>V_ACTIVE || OUT_H<1)$fatal(1,"window exceeds canvas");
     end

@@ -15,7 +15,7 @@ module continuous_source_path #(
  input wire rx_clk,proc_clk,ui_clk,rst_n,enabled,raw_requested,rx_vs,rx_de,input wire[23:0]rx_rgb,
  output wire frame_valid,input wire frame_ready,output wire frame_bank,
  output wire[31:0]frame_generation,output wire[95:0]frame_corners,output wire frame_geometry_valid,
- output wire[31:0]frame_capture_ms,output wire[511:0]reject_reason_counts,output wire[31:0]admitted_frames,
+ output wire[DATA_FIFO_ADDR_BITS:0]data_fifo_peak,output wire[31:0]frame_capture_ms,output wire[511:0]reject_reason_counts,output wire[31:0]admitted_frames,
  input wire release_valid,release_bank,input wire[31:0]release_generation,
  output wire[31:0]rejected_frames,dropped_frames,output wire[3:0]last_failure_reason,output wire fault,output wire[3:0]fault_components,
  output wire cmd_valid,input wire cmd_ready,output wire cmd_write,output wire[27:0]cmd_addr,
@@ -57,12 +57,13 @@ module continuous_source_path #(
  assign credit_ready=1'b1;
  wire alloc_valid,alloc_ready;wire[32:0]alloc_data;
  wire ui_packet_valid,ui_packet_ready;wire[319:0]ui_packet;
- wire queue_ready,alloc_source_ready;
+ wire queue_ready,alloc_source_ready;wire[DATA_FIFO_ADDR_BITS:0]rx_fifo_peak;
+ snapshot_cdc #(.WIDTH(DATA_FIFO_ADDR_BITS+1)) fifo_peak_crossing(.s_clk(rx_clk),.d_clk(proc_clk),.rst_n(rst_n),.s_data(rx_fifo_peak),.d_data(data_fifo_peak),.d_valid());
  wire is_begin=packet[319:318]==0;
  assign packet_ready=queue_ready&&(!is_begin||alloc_source_ready);
- async_packet_stream #(.DATA_WIDTH(320),.ADDR_BITS(DATA_FIFO_ADDR_BITS)) data_crossing(
+ async_packet_stream_monitored #(.DATA_WIDTH(320),.ADDR_BITS(DATA_FIFO_ADDR_BITS)) data_crossing(
  .wr_clk(rx_clk),.rd_clk(ui_clk),.rst_n(rst_n),
- .s_valid(packet_valid&&(!is_begin||alloc_source_ready)),.s_ready(queue_ready),.s_data(packet),
+ .wr_peak(rx_fifo_peak),.s_valid(packet_valid&&(!is_begin||alloc_source_ready)),.s_ready(queue_ready),.s_data(packet),
  .m_valid(ui_packet_valid),.m_ready(ui_packet_ready),.m_data(ui_packet));
  async_packet_stream #(.DATA_WIDTH(33),.ADDR_BITS(2)) allocation_crossing(
  .wr_clk(rx_clk),.rd_clk(proc_clk),.rst_n(rst_n),

@@ -1,4 +1,4 @@
-param([string]$Suffix='local',[switch]$Native,[switch]$Corrected)
+param([string]$Suffix='local',[switch]$Native,[switch]$Corrected,[switch]$Raw30,[switch]$RgbPattern,[int]$Frames=0,[int]$BadFrame=0,[int]$CameraLine=0)
 $ErrorActionPreference='Stop'
 $out="D:/FPGA/output/c_board_next_raw_20261016_$Suffix"
 if(Test-Path -LiteralPath $out){throw 'Use a fresh suffix'}
@@ -20,7 +20,12 @@ try{
  & D:/softwares/modelsim/win64/vlog.exe -sv @compiled|Out-File compile.log
  if($LASTEXITCODE -ne 0){throw 'compile failed'}
  $generics=@();if($Native){$generics+='-gNATIVE=1'}
- if($Corrected){$generics+='-gCORRECTED=1';$generics+='-gFRAMES=2'}
+ if($Corrected){$generics+='-gCORRECTED=1';if($Frames -le 0){$generics+='-gFRAMES=2'}}
+ if($Raw30){$generics+='-gREQUIRE_RAW30=1'}
+ if($RgbPattern){$generics+='-gRGB_PATTERN=1'}
+ if($Frames -gt 0){$generics+="-gFRAMES=$Frames"}
+ if($BadFrame -gt 0){$generics+="-gBAD_FRAME=$BadFrame"}
+ if($CameraLine -gt 0){$generics+="-gCAMERA_START_LINE=$CameraLine"}
  & D:/softwares/modelsim/win64/vsim.exe -c @generics -do 'onfinish stop; run -all; quit -f' work.tb_raw_pipeline|Out-File simulation.log
  if((Select-String compile.log,simulation.log -Pattern '\*\* (Fatal|Error|Warning):' -Quiet) -or -not(Select-String simulation.log -Pattern 'PASS RAW_PIPELINE' -Quiet)){throw 'integration failed'}
  Get-Content simulation.log|Select-String 'PASS|PUBLICATION|Errors:'

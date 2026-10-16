@@ -1,6 +1,6 @@
 `timescale 1ns/1ps
 module tb_raw_corrected #(
- parameter NATIVE=0,LATE=0
+ parameter NATIVE=0,LATE=0,PUBLINE=0
 );
  localparam SW=NATIVE?1920:128,OW=NATIVE?768:64,SH=NATIVE?1080:8;
  localparam HS=NATIVE?44:4,HB=NATIVE?148:124,HA=SW,HF=NATIVE?88:16;
@@ -10,6 +10,7 @@ module tb_raw_corrected #(
  always #4 ui_clk=~ui_clk;
  always #(NATIVE?3.3670035:5)pix_clk=~pix_clk;
  reg pub_toggle=0,pub_bank=0,pub_raw=0;
+ reg[31:0]pub_id=0;wire[31:0]display_id;
  wire ack,cmd_valid,cmd_raw,hs,vs,de,image_valid,underrun,busy,display_raw,swap_pulse,scan_pulse;
  wire[27:0]cmd_addr;wire[23:0]rgb;wire[11:0]sx,sy;wire sd,ss,srn;
  reg cmd_ready=0,rsp_valid=0;reg[2047:0]rsp_block=0;
@@ -17,14 +18,14 @@ module tb_raw_corrected #(
  assign cmd_raw=0;assign display_raw=0;assign swap_pulse=0;assign scan_pulse=ss;
  ddr_result_display_block64 #(.OUT_W(OW),.OUT_H(SH),.SCALE(1),.BASE0(C0),.BASE1(C1),
 `else
- ddr_result_display_raw_corrected #(.OUT_W(OW),.OUT_H(SH),.SRC_W(SW),.SRC_H(SH),.SCALE(1),
+ ddr_result_display_raw_corrected #(.PUBLISH_LINE(PUBLINE),.OUT_W(OW),.OUT_H(SH),.SRC_W(SW),.SRC_H(SH),.SCALE(1),
  .BASE0(C0),.BASE1(C1),.SOURCE_BASE0(S0),.SOURCE_BASE1(S1),
 `endif
  .H_SYNC(HS),.H_BACK(HB),.H_ACTIVE(HA),.H_FRONT(HF),.V_SYNC(VS),.V_BACK(VB),.V_ACTIVE(VA),.V_FRONT(VF)) dut(
  .ui_clk(ui_clk),.ui_rst_n(rst_n),.pix_clk(pix_clk),.pix_rst_n(rst_n),
  .publish_toggle(pub_toggle),.publish_bank(pub_bank),.ack_toggle(ack),
 `ifndef RED_BASELINE
- .publish_raw(pub_raw),.display_raw(display_raw),.cmd_source_block(cmd_raw),
+ .publish_raw(pub_raw),.publish_frame_id(pub_id),.display_frame_id(display_id),.display_bank(),.display_raw(display_raw),.cmd_source_block(cmd_raw),
  .scan_frame_pulse(scan_pulse),.image_swap_pulse(swap_pulse),
 `endif
  .preview_valid(1'b0),.preview_rgb(24'd0),.overlay_on(1'b0),.overlay_rgb(24'd0),
@@ -48,6 +49,7 @@ module tb_raw_corrected #(
  reg[27:0]pending_addr,stall_addr;reg pending_raw,pending_bank,stall_raw,stalled=0;
  reg[2047:0]pending_data;
  integer stalled_cycles=0,first_pixels=0,last_pixels=0,checked=0,black_border=0,swaps=0,scans=0;
+ integer accepted_this_scan=0;
  always @(negedge ui_clk)begin
   if(!rst_n)cmd_ready=0;else cmd_ready=(ui_tick%11)<8&&!pending;
  end
@@ -88,15 +90,22 @@ module tb_raw_corrected #(
  reg[11:0]px=0,py=0;reg pde=0;bit pstart=0;reg prev_mode=0;
  integer cx,expected_width;reg[23:0]expected;
  always @(posedge pix_clk)begin: pixel_score
-  reg[11:0]now_x,now_y;reg now_de,now_start;
-  now_x=sx;now_y=sy;now_de=sd;now_start=ss;
+  reg[11:0]now_x,now_y;reg now_de,now_start,now_frame_start;
+  now_x=sx;now_y=sy;now_de=sd;now_frame_start=ss;
+`ifdef RED_BASELINE
+  now_start=(dut.hc==0&&dut.vc==PUBLINE);
+`else
+  now_start=dut.publication_boundary;
+`endif
   #0.1;
   if(!rst_n||!srn)begin pde=0;prev_mode=display_raw;end
   else begin
+   if(now_frame_start)accepted_this_scan=0;
    if(display_raw!=prev_mode&&!now_start)$fatal(1,"mode changed outside scan_start");
    prev_mode=display_raw;
    if(scan_pulse)scans=scans+1;
    if(swap_pulse)begin
+    accepted_this_scan++;if(accepted_this_scan>1)$fatal(1,"multiple new images accepted for one active scan");
     swaps=swaps+1;
     if(!now_start)$fatal(1,"swap pulse outside scan_start");
     if(display_raw!==pub_raw)$fatal(1,"RAW_MODE_PUBLICATION_REQUIRED actual=%b expected=%b",display_raw,pub_raw);
@@ -121,9 +130,12 @@ module tb_raw_corrected #(
  begin
   wait(ack==pub_toggle);@(negedge pix_clk);
   if(raw_mode)seq_raw[bank_mode]=sequence_number;else seq_corr[bank_mode]=sequence_number;
-  pub_raw=raw_mode;pub_bank=bank_mode;pub_toggle=~pub_toggle;
+  pub_raw=raw_mode;pub_bank=bank_mode;pub_id=sequence_number;pub_toggle=~pub_toggle;
   wait(ack==pub_toggle);#1;
   if(display_raw!==raw_mode)$fatal(1,"RAW_MODE_PUBLICATION_REQUIRED actual=%b expected=%b",display_raw,raw_mode);
+`ifndef RED_BASELINE
+  if(display_id!==sequence_number)$fatal(1,"actual PIX identity payload mismatch");
+`endif
   active_raw=raw_mode;active_bank=bank_mode;active_seq=sequence_number;
  end endtask
  task automatic whole_scan(input bit strict_mode);

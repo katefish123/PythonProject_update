@@ -1,0 +1,70 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:46:23 on Oct 16,2026
+vlog -sv D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\video_correct_ddr_continuous_core.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\b_rectifier.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\bilinear_interp.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\homography_solver.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\perspective_coord.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\perspective_core.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\scaled_div_pipe.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\signed_div_seq.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\unsigned_div_seq.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\c_corner_rectifier.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\marker_detector.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\reset_sync.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\async_packet_fifo.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_arbiter3.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_self_test.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\video_timing_vtc.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\async_packet_stream.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\c_stream_burst_correction_path.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\c_stream_correction_path.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\continuous_capture_geometry.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\manager_raw.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\continuous_capture_rx.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\continuous_capture_writer.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\continuous_source_path.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_arbiter3_fair.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_arbiter3_turnaround.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_quad_tile_cache.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_result_display_raw_corrected.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_result_writer_burst64.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_result_writer_stream.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\ddr_word_engine_result_burst.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\frame_processor_stream.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\frame_telemetry_overlay.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\quad_packet_bridge.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\rx_preview_stream.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\async_packet_fifo_monitored.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\async_packet_stream_monitored.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\snapshot_cdc.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\c_frame_mode_controller.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\color_marker_detector.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\marker_color_classifier.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\quad_geometry_guard.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\video_correct_ddr_top.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\status_overlay.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\test_stubs.sv D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\tb_board_recovery_integration.sv D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\fault_diagnostics_stream.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\native_service_monitor.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\debug_hex_overlay.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\board_recovery_reset.v D:\FPGA\output\c_board_recovery_integration_20261016_v5c_source_recovery\source_snapshot\hdmi_vs_recover.v 
+-- Compiling module video_correct_ddr_continuous_core
+-- Compiling module b_rectifier
+-- Compiling module bilinear_interp
+-- Compiling module homography_solver
+-- Compiling module perspective_coord
+-- Compiling module perspective_core
+-- Compiling module scaled_div_pipe
+-- Compiling module signed_div_seq
+-- Compiling module unsigned_div_seq
+-- Compiling module c_corner_rectifier
+-- Compiling module marker_detector
+-- Compiling module reset_sync
+-- Compiling module async_packet_fifo
+-- Compiling module ddr_arbiter3
+-- Compiling module ddr_self_test
+-- Compiling module video_timing_vtc
+-- Compiling module async_packet_stream
+-- Compiling module c_stream_burst_correction_path
+-- Compiling module c_stream_correction_path
+-- Compiling module continuous_capture_geometry
+-- Compiling module continuous_capture_manager
+-- Compiling module continuous_capture_rx
+-- Compiling module continuous_capture_writer
+-- Compiling module continuous_source_path
+-- Compiling module ddr_arbiter3_fair
+-- Compiling module ddr_arbiter3_turnaround
+-- Compiling module ddr_quad_tile_cache
+-- Compiling module ddr_result_display_raw_corrected
+-- Compiling module ddr_result_writer_burst64
+-- Compiling module burst64_async_fifo
+-- Compiling module ddr_result_writer_stream
+-- Compiling module stream_writer_async_fifo
+-- Compiling module ddr_word_engine_result_burst
+-- Compiling module frame_processor_stream
+-- Compiling module frame_telemetry_overlay
+-- Compiling module quad_packet_bridge
+-- Compiling module rx_preview_stream
+-- Compiling module async_packet_fifo_monitored
+-- Compiling module async_packet_stream_monitored
+-- Compiling module snapshot_cdc
+-- Compiling module c_frame_mode_controller
+-- Compiling module color_marker_detector
+-- Compiling module marker_color_classifier
+-- Compiling module quad_geometry_guard
+-- Compiling module video_correct_ddr_top
+-- Compiling module status_overlay
+-- Compiling module ddr3_ip
+-- Compiling module GTP_INBUFDS
+-- Compiling module video_pll_27m_148m5
+-- Compiling module config_pll_27m_10m
+-- Compiling module hdmi_config
+-- Compiling module tb_board_recovery_integration
+-- Compiling module fault_diagnostics_stream
+-- Compiling module native_service_monitor
+-- Compiling module debug_hex_overlay
+-- Compiling module board_recovery_reset
+-- Compiling module hdmi_vs_recover
+
+Top level modules:
+	b_rectifier
+	c_stream_correction_path
+	ddr_arbiter3_fair
+	frame_telemetry_overlay
+	rx_preview_stream
+	tb_board_recovery_integration
+End time: 22:46:24 on Oct 16,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

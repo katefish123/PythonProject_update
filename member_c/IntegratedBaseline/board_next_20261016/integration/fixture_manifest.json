@@ -1,6 +1,7 @@
 [
   {
     "native": false,
+    "alternate": false,
     "corners": [
       [
         18,
@@ -31,12 +32,52 @@
     "files": {
       "expected.hex": "712cfe232e26a99d062000614cf8c329cf937011f26da9381dc697d9dc261d88",
       "expected.png": "c51443304cbb4033666f66244d27a48a1564c7116dedb4398aa72496d17af9dc",
+      "H40.hex": "e1c3cc73ff3dfd4392c94d96b2056cd88890cb84a3e0027effd08a2333c145a4",
       "source.hex": "98e0529edfa958b3a4b197903133a7fef7f0d5ce704c45348ae21cfeb16ab38b",
       "source.png": "c10e1aa2808e321c4e0972a6f20b41ff3f826bde49a3da6842fb503b6aac7b43"
     }
   },
   {
+    "native": false,
+    "alternate": true,
+    "corners": [
+      [
+        24,
+        7
+      ],
+      [
+        112,
+        5
+      ],
+      [
+        107,
+        38
+      ],
+      [
+        18,
+        42
+      ]
+    ],
+    "corners96": "01800707000506b02601202a",
+    "source_dimensions": [
+      128,
+      48
+    ],
+    "result_dimensions": [
+      64,
+      48
+    ],
+    "files": {
+      "expected.hex": "282389e16e85fe6fd0428eb9d3214cbdaacbbf1075af8c3e5e33ef4e6ca3269e",
+      "expected.png": "58c384b738a698443ebe0475e45c9c4ec94416840b39334c79450b04f5ef79a7",
+      "H40.hex": "5499f61b1f21504147521696b8658b87649e7610a33dc84e85337fa88eee14fe",
+      "source.hex": "45e68ca89363a541be4553c9191aebcb6160b63453cbf2e7aece555de5df2fa1",
+      "source.png": "06bc964a9e8e2311397878e1dd917fd8988870de0f9945ebbef93bf7020887be"
+    }
+  },
+  {
     "native": true,
+    "alternate": false,
     "corners": [
       [
         650,
@@ -67,8 +108,47 @@
     "files": {
       "expected.hex": "904efcf0138d01fcf72fd3e8fc7b8b977a685658a46a9c0cbc67ce7c5cf4a343",
       "expected.png": "4dceaeea68306f12e35611cd501637c16aa4ac380cdf5bed670fab1407888077",
+      "H40.hex": "ae45b65faa2d1192bcc452dba0f01c9e9485f31a12fdeab61b53025ac81e6523",
       "source.hex": "3813e9a8a1667b47b3081e08e57359bf9e692ba502162ae75cba04f180b299da",
       "source.png": "182c6b0624fbb007894eebec014c0b069565e66720e87ca72575fa53577a97d7"
+    }
+  },
+  {
+    "native": true,
+    "alternate": true,
+    "corners": [
+      [
+        1100,
+        100
+      ],
+      [
+        1700,
+        160
+      ],
+      [
+        1650,
+        950
+      ],
+      [
+        1150,
+        900
+      ]
+    ],
+    "corners96": "44c0646a40a06723b647e384",
+    "source_dimensions": [
+      1920,
+      1080
+    ],
+    "result_dimensions": [
+      768,
+      1080
+    ],
+    "files": {
+      "expected.hex": "83719d676cec9746fa328e9128924385eaab4ae4a80d6ffe1c63d4c6fefb84e4",
+      "expected.png": "b4bbb0ba04d5aa2539b519436e788ad8954e9f7fd006829c9161abc4ae6b3144",
+      "H40.hex": "e1c35d705f6c5f6b711f259acaf226ac458f0f488a0b2405b7d74942a1c559ac",
+      "source.hex": "e4337f97679aaa5d75e444e67e7dfd3b40b7ee27b1c06b0f186a80b3646e6724",
+      "source.png": "5dfc745d25c02aac4cdd1357b247a880cd116041dc7e516fcb25087dcfb045ec"
     }
   }
 ]

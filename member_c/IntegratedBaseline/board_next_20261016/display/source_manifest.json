@@ -2,7 +2,7 @@
   "source": "D:\\FPGA\\output\\c_stream_board_v4s_20261016\\rtl\\stream\\ddr_result_display_block64.v",
   "source_sha256": "bf2c7c301c1e6393afd59461c072cc4d48b07ac4c2bddb2fda6547f0bb375ee8",
   "candidate": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\board_next_20261016\\display\\ddr_result_display_raw_corrected.v",
-  "candidate_sha256": "9c4ed63c65ca7595c56f73a209623f64ea8e3abe989eec85b448744ce6a43c73",
+  "candidate_sha256": "e1204b6cbd2c7bd53b10c42cff2e01bf39fbfdea69d9de94d5d8ed13e7f67ceb",
   "physical_timing_qualified": false,
   "hardware_accepted": false
 }

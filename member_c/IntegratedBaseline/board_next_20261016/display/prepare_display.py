@@ -13,11 +13,15 @@ def build():
         assert text.count(old)==count,(old,text.count(old),count)
         text=text.replace(old,new)
     replace('module ddr_result_display_block64 #(', 'module ddr_result_display_raw_corrected #(')
+    replace('parameter OUT_W=320, OUT_H=452, SCALE=2,', 'parameter PUBLISH_LINE=0,\n    parameter OUT_W=320, OUT_H=452, SCALE=2,')
     replace('parameter OUT_W=320, OUT_H=452, SCALE=2,',
             'parameter OUT_W=768, OUT_H=1080, SCALE=1,\n    parameter SRC_W=1920,SRC_H=1080,')
     replace("parameter [27:0] BASE1=28'h0200000", "parameter [27:0] BASE1=28'h0400000,\n    parameter [27:0] SOURCE_BASE0=28'd0,SOURCE_BASE1=28'h0800000")
     replace("parameter [27:0] BASE0=28'h0100000", "parameter [27:0] BASE0=28'h0200000")
     replace('input  wire         publish_bank,', 'input  wire         publish_bank,\n    input wire publish_raw,output reg display_raw,\n    output wire scan_frame_pulse,output reg image_swap_pulse,')
+    replace('input wire publish_raw,output reg display_raw,', 'input wire publish_raw,output reg display_raw,\n    input wire[31:0]publish_frame_id,output reg[31:0]display_frame_id,')
+    replace('    reg display_bank;\n','')
+    replace('output reg[31:0]display_frame_id,', 'output reg[31:0]display_frame_id,output reg display_bank,')
     replace('output wire         cmd_valid,', 'output wire         cmd_valid,\n    output wire cmd_source_block,')
     replace('localparam WIN_X=(H_ACTIVE-OUT_W*SCALE)/2;',
             'wire [11:0] visible_width=display_raw?SRC_W:OUT_W;\n    wire [11:0] WIN_X=(H_ACTIVE-visible_width)/2;')
@@ -44,6 +48,16 @@ def build():
     replace('line_gen0==display_gen;', 'line_gen0==display_gen && line_raw0==display_raw;',2)
     replace('line_gen1==display_gen;', 'line_gen1==display_gen && line_raw1==display_raw;',2)
     replace('hc<X0+OUT_W*SCALE', 'hc<X0+visible_width')
+    replace('wire frame_start=(hc==0 && vc==0);','''wire frame_start=(hc==0 && vc==0);
+    reg swapped_this_scan;
+    // Accept a completed frame anywhere in this bounded leading blank. The
+    // final two lines are reserved for row0 prefetch. Never accept two images
+    // for one active scan, even if multiple complete descriptors are queued.
+    wire publication_window=vc>=PUBLISH_LINE && vc+2<Y0;
+    wire publication_boundary=(hc==0 && vc==PUBLISH_LINE)||
+        (publication_window&&!swapped_this_scan&&pub_toggle_sync[2]!=ack_toggle);''')
+    replace('if(frame_start) begin','if(publication_boundary) begin')
+    replace('if(!(frame_start || (hc==0 && first_dest_line))', 'if(!(publication_boundary || (hc==0 && first_dest_line))')
     replace('ack_toggle<=0; display_bank<=0; display_gen<=0; image_valid<=0; underrun<=0;',
             'ack_toggle<=0; display_bank<=0;display_raw<=0;image_swap_pulse<=0; display_gen<=0; image_valid<=0; underrun<=0;')
     replace('req_toggle<=0; req_bank<=0; req_gen<=0; req_row<=0;', 'req_toggle<=0; req_bank<=0;req_raw<=0; req_gen<=0; req_row<=0;')
@@ -52,10 +66,15 @@ def build():
             'line_valid<=0; line_row0<=0; line_row1<=0; line_bank0<=0; line_bank1<=0;line_raw0<=0;line_raw1<=0;')
     replace('ack_sync_pix<={ack_sync_pix[1:0],ui_ack_toggle};',
             'image_swap_pulse<=0;\n            ack_sync_pix<={ack_sync_pix[1:0],ui_ack_toggle};')
+    replace('ack_toggle<=0; display_bank<=0;display_raw<=0;', 'ack_toggle<=0;display_frame_id<=0; display_bank<=0;display_raw<=0;')
+    replace('ack_seen_pix<=0;', 'ack_seen_pix<=0;swapped_this_scan<=0;')
+    replace('image_swap_pulse<=0;\n            ack_sync_pix', 'image_swap_pulse<=0;\n            if(frame_start)swapped_this_scan<=0;\n            ack_sync_pix')
     replace('line_gen1<=req_gen;', 'line_gen1<=req_gen;line_raw1<=req_raw;')
     replace('line_gen0<=req_gen;', 'line_gen0<=req_gen;line_raw0<=req_raw;')
     replace('display_bank<=pub_bank_sync[2];display_gen<=display_gen+1\'b1;',
             'display_bank<=pub_bank_sync[2];display_raw<=pub_raw_sync[2];image_swap_pulse<=1;display_gen<=display_gen+1\'b1;')
+    replace('display_bank<=pub_bank_sync[2];display_raw<=pub_raw_sync[2];', 'display_frame_id<=publish_frame_id;display_bank<=pub_bank_sync[2];display_raw<=pub_raw_sync[2];')
+    replace('if(pub_toggle_sync[2]!=ack_toggle) begin', 'if(pub_toggle_sync[2]!=ack_toggle&&(!swapped_this_scan||frame_start)) begin\n                    swapped_this_scan<=1;')
     replace('want_bank<=pub_bank_sync[2];want_gen', 'want_bank<=pub_bank_sync[2];want_raw<=pub_raw_sync[2];want_gen')
     replace('line_gen0==display_gen) &&', 'line_gen0==display_gen && line_raw0==display_raw) &&')
     replace('line_gen1==display_gen)) begin', 'line_gen1==display_gen && line_raw1==display_raw)) begin')
@@ -67,6 +86,7 @@ def build():
     replace('endmodule\n\n`default_nettype wire', '''// synthesis translate_off
     initial begin
         if(SCALE!=1 || SRC_H!=OUT_H)$fatal(1,"RAW/CORRECTED requires SCALE1 and equal heights");
+        if(PUBLISH_LINE<0 || PUBLISH_LINE>=V_SYNC+V_BACK)$fatal(1,"publication must be inside leading vertical blank");
         if(SRC_W%64!=0 || OUT_W%64!=0 || SRC_W<64 || OUT_W<64)$fatal(1,"row widths must be positive multiples64");
         if(SRC_W>H_ACTIVE || OUT_W>H_ACTIVE || OUT_H>V_ACTIVE || OUT_H<1)$fatal(1,"window exceeds canvas");
     end
@@ -80,6 +100,9 @@ endmodule
     replace('ack_sync_pix<=0; ack_seen_pix<=0;','ack_seen_pix<=0;')
     replace('            ack_sync_pix<={ack_sync_pix[1:0],ui_ack_toggle};\n','')
     replace('req_toggle==ack_sync_pix[2]', 'req_toggle==ui_ack_sync[2]')
+    publication_declaration='    (* ASYNC_REG="TRUE" *) reg [2:0] pub_toggle_sync, pub_bank_sync,pub_raw_sync;'
+    replace(publication_declaration+'\n','')
+    replace('    wire frame_start=',publication_declaration+'\n    wire frame_start=')
     header='''// Isolated board_next candidate, derived from frozen S. One VTC, RAW1:1 and
 // CORRECTED1:1. Root owns source/result leases and grant-qualified sidebands.
 // Mode is a held payload on both toggle mailboxes. All resets share assertion.

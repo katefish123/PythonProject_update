@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:29:14 on Oct 16,2026
+vlog -sv D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\display/ddr_result_display_raw_corrected.v D:/FPGA/output/c_stream_board_v4s_20261016/vendor/c_current/01_design_code/video_timing_vtc.v D:\FPGA\worktrees\c_pipeline_next\member_c\IntegratedBaseline\board_next_20261016\display/tb_raw_corrected.sv 
+-- Compiling module ddr_result_display_raw_corrected
+-- Compiling module video_timing_vtc
+-- Compiling module tb_raw_corrected
+
+Top level modules:
+	tb_raw_corrected
+End time: 22:29:14 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
