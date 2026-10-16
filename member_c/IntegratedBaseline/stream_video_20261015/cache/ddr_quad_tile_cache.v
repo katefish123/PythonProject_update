@@ -32,7 +32,7 @@ module ddr_quad_tile_cache #(
  reg[15:0]tags[0:LINES-1];
  reg[59:0]frame_key;
  reg[WB-1:0]replace_way,fill_way;
- reg[75:0]fill_tag;
+ reg[75:0]fill_tag;reg[27:0]fill_addr;
  reg fill_victim_found;
  reg[2:0]fill_state;reg[1:0]fill_row;
  reg[2:0]fill_word;
@@ -100,7 +100,9 @@ module ddr_quad_tile_cache #(
  assign rsp_valid=rst_n&&!fault&&r_valid;
  assign cmd_valid=rst_n&&!fault&&fill_state==F_CMD;
  assign cmd_block=1'b1;
- assign cmd_addr=fill_tag[43:16]+((fill_tag[15:6]*4+fill_row)*SRC_W)+{fill_tag[5:0],6'b0};
+ // Prepare row0 during the existing miss-only F_PREP cycle. Later rows
+ // advance at the final RAM write, keeping command arithmetic local to cache.
+ assign cmd_addr=fill_addr;
  wire[AB-1:0]left_a={ways[0],yy[0][1:0],xx[0][5:3]};
  wire[AB-1:0]left_b={ways[2],yy[2][1:0],xx[2][5:3]};
  wire[AB-1:0]right_a={ways[1],yy[1][1:0],xx[1][5:3]};
@@ -118,7 +120,7 @@ module ddr_quad_tile_cache #(
  end
  always @(posedge clk or negedge rst_n)begin
   if(!rst_n)begin
-   line_valid<=0;frame_key<=0;replace_way<=0;fill_way<=0;fill_tag<=0;fill_state<=F_IDLE;fill_victim_found<=0;fill_row<=0;fill_word<=0;fill_data<=0;watchdog<=0;fault<=0;
+   line_valid<=0;frame_key<=0;replace_way<=0;fill_way<=0;fill_tag<=0;fill_addr<=0;fill_state<=F_IDLE;fill_victim_found<=0;fill_row<=0;fill_word<=0;fill_data<=0;watchdog<=0;fault<=0;
    s_valid<=0;s_inside<=0;s_nearest<=0;s_base<=0;s_generation<=0;s_x<=0;s_y<=0;s_x1<=0;s_y1<=0;s_tag<=0;s_fx<=0;s_fy<=0;
    l_valid<=0;l_inside<=0;l_missing<=0;l_relookup<=0;l_boundary<=0;l_victim_found<=0;
    l_base<=0;l_generation<=0;l_x<=0;l_y<=0;l_x1<=0;l_y1<=0;l_tag<=0;l_fx<=0;l_fy<=0;l_left_offset<=0;l_right_offset<=0;
@@ -174,7 +176,10 @@ module ddr_quad_tile_cache #(
    case(fill_state)
     F_PREP:begin
      if(!fill_victim_found)fault<=1;
-     else begin line_valid[fill_way]<=0;fill_state<=F_CMD;watchdog<=0;end
+     else begin
+      fill_addr<=fill_tag[43:16]+(fill_tag[15:6]*4*SRC_W)+{fill_tag[5:0],6'b0};
+      line_valid[fill_way]<=0;fill_state<=F_CMD;watchdog<=0;
+     end
     end
     F_CMD:if(cmd_ready)begin fill_state<=F_WAIT;watchdog<=0;end
     F_WAIT:if(mem_rsp_valid)begin
@@ -183,7 +188,7 @@ module ddr_quad_tile_cache #(
     end
     F_WRITE:if(fill_word==7)begin
      if(fill_row==3)begin tags[fill_way]<=fill_tag[15:0];line_valid[fill_way]<=1;replace_way<=fill_way+1'b1;fill_state<=F_IDLE;l_relookup<=1;end
-     else begin fill_row<=fill_row+1'b1;fill_state<=F_CMD;watchdog<=0;end
+     else begin fill_addr<=fill_addr+SRC_W;fill_row<=fill_row+1'b1;fill_state<=F_CMD;watchdog<=0;end
     end else fill_word<=fill_word+1'b1;
     default:begin end
    endcase

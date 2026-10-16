@@ -60,11 +60,14 @@ module continuous_capture_rx #(
  vs_d<=rx_vs;de_d<=rx_de;enabled_sync<={enabled_sync[1:0],enabled};close_valid<=0;
  if(pop)head<=head+1'b1;
  count<=count+push_count-(pop?1'b1:1'b0);
- if(push_count!=0)begin
- queue[tail]<=vs_rise?(active?end_packet:begin_packet):data_packet;
+ // Queue storage and ownership are separate. A free tail may be filled
+ // speculatively even when this clock has no enqueue event; only count/tail
+ // advancing exposes it. In a full ring head==tail, pop consumes the old word
+ // before the NBA reuses that slot. A full stalled ring must never be written.
+ // This keeps sample bounds/data_due off the wide queue storage enables.
+ if(count<8||pop)queue[tail]<=vs_rise?(active?end_packet:begin_packet):data_packet;
  if(push_count==2)queue[tail+3'd1]<=begin_packet;
- tail<=tail+push_count;
- end
+ if(push_count!=0)tail<=tail+push_count;
  if(credit_return0)used[0]<=0;
  if(credit_return1)used[1]<=0;
  if(credit_bad)fault<=1;

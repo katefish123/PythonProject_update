@@ -1,0 +1,18 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 14:41:55 on Oct 16,2026
+vlog -sv D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\async_packet_fifo.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\async_packet_stream.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\unsigned_div_seq.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\marker_detector.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\continuous_capture_geometry.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\continuous_capture_manager.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\continuous_capture_rx.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\continuous_capture_writer.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\continuous_source_path.v D:\FPGA\output\c_continuous_capture_20261015_rx_free_tail_reduced_v4s\source_snapshot\tb_continuous_source.sv 
+-- Compiling module async_packet_fifo
+-- Compiling module async_packet_stream
+-- Compiling module unsigned_div_seq
+-- Compiling module marker_detector
+-- Compiling module continuous_capture_geometry
+-- Compiling module continuous_capture_manager
+-- Compiling module continuous_capture_rx
+-- Compiling module continuous_capture_writer
+-- Compiling module continuous_source_path
+-- Compiling module tb_continuous_source
+
+Top level modules:
+	tb_continuous_source
+End time: 14:41:55 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

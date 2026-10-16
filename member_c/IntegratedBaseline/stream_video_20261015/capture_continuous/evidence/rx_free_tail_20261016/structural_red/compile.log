@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 14:42:48 on Oct 16,2026
+vlog -sv source_snapshot/continuous_capture_rx.v source_snapshot/continuous_capture_rx_queue_reference.sv source_snapshot/tb_rx_queue_storage.sv 
+-- Compiling module continuous_capture_rx
+-- Compiling module continuous_capture_rx_queue_reference
+-- Compiling module tb_rx_queue_storage
+
+Top level modules:
+	tb_rx_queue_storage
+End time: 14:42:48 on Oct 16,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

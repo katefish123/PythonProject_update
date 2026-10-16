@@ -1,0 +1,174 @@
+{
+  "task": "V4S cache local registered command address",
+  "old_path": {
+    "report": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4r_implementation\\final_timing.rtr",
+    "sha256": "35b751dd51636b57ebf450259b455967e01e65d22b888d81b8b4f76153f0322b",
+    "line": 3099,
+    "start": "cache/fill_tag[10]",
+    "end": "engine/fault_reason_reg[3]/CE",
+    "clock_period_ns": 8.0,
+    "slack_ns": -0.136,
+    "failing_endpoints": 6,
+    "logic_levels": 10,
+    "arrival_ns": 13.096,
+    "required_ns": 12.96,
+    "logic_delay_ns": 1.514,
+    "route_delay_ns": 6.021
+  },
+  "hypothesis": "The cache command address arithmetic is combinational through top arbitration into engine address fault checking. Capture the cache address before command valid using the already allocated preparation cycle, keeping both arithmetic and row increment local.",
+  "changes": {
+    "file": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\ddr_quad_tile_cache.v",
+    "new_register": "fill_addr[27:0], reset0",
+    "F_PREP": "capture row0 = base + tile_y*4*SRC_W + tile_x*64, then enter existing F_CMD",
+    "F_WRITE": "At word7 of each nonfinal row, fill_addr<=fill_addr+SRC_W together with fill_row++ and existing F_CMD transition. No final-row increment.",
+    "cmd_addr": "directly driven from fill_addr; unchanged through F_CMD backpressure and F_WAIT",
+    "added_fsm_or_command_cycles": 0,
+    "unchanged": [
+      "external ports",
+      "S/L/M/R lookup pipeline and owner/relookup rules",
+      "64words x4rows fill format",
+      "two-port synchronous RAM",
+      "all DDR command handshakes and watchdogs",
+      "source dimensions",
+      "B algorithms",
+      "constraints"
+    ]
+  },
+  "tests": [
+    {
+      "name": "red_command_1230",
+      "expected_result": "FAIL registered command isolation contract",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_red_command_1230\\simulation.log",
+      "simulation_sha256": "fe6d56a540948dc323cae59cbbc8620b3a666ada7e9a6ce1f72991612e30fea9",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_red_command_1230\\compile.log",
+      "compile_sha256": "94f8be603e50722341f7a0fd319feaffa647bccc954cf6b1a4ce72bc5bb2ba4d",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_red_command_1230\\source_snapshot",
+      "rtl_sha256": "21dc0a7de3e72028c67915b41098ebdcee9469ec6436baeeeb0d28532550cf90",
+      "result_lines": [
+        "# ** Fatal: CMD_ADDR_ISOLATION_REQUIRED fill_tag changes visible command address\r"
+      ]
+    },
+    {
+      "name": "green_command_1439",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_command_1439\\simulation.log",
+      "simulation_sha256": "160a0f0c1a8c259a9de2824955684cc726005b8edd85a064a112486c902e4f13",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_command_1439\\compile.log",
+      "compile_sha256": "598cbe2f1d9762a20bdef5538b62f8e983336866d546ee277d4829eeb21e7413",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_command_1439\\source_snapshot",
+      "rtl_sha256": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS registered command isolation and64-bit address golden checks=1041\r",
+        "# PASS registered lookup old-frame/future-S=1434 fill-relookups=205 simultaneous-S/L/M=639 old-read+invalidate=17\r",
+        "# PASS quad pipeline64 native dimensions RGB/metadata/protection/eviction/generation/bank/edges 1032 packets 820 commands\r",
+        "# PASS shared reset flushes active partial fill and lookup pipeline\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ]
+    },
+    {
+      "name": "green_pipeline_1439",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_pipeline_1439\\simulation.log",
+      "simulation_sha256": "ad92e50045fe5a20b2346bc300e0a5ee72628c2d209fe6616e272d4437913045",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_pipeline_1439\\compile.log",
+      "compile_sha256": "e37776688b56c22b83155ab952b13878912471ccf12d6916052e4c7200bcc76b",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_pipeline_1439\\source_snapshot",
+      "rtl_sha256": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS registered lookup old-frame/future-S=1434 fill-relookups=197 simultaneous-S/L/M=639 old-read+invalidate=17\r",
+        "# PASS quad pipeline64 native dimensions RGB/metadata/protection/eviction/generation/bank/edges 1029 packets 788 commands\r",
+        "# PASS shared reset flushes active partial fill and lookup pipeline\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ]
+    },
+    {
+      "name": "green_existing8_1439",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_existing8_1439\\simulation.log",
+      "simulation_sha256": "6497d2d8819611677a831f309a2d7b4f7954396d6bda8bba769fbad039b344e4",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_existing8_1439\\compile.log",
+      "compile_sha256": "eddbc6b266c9a480c3d67b778867bdf5d2b79778419f2001d3b5cbd06a5ae8e6",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_existing8_1439\\source_snapshot",
+      "rtl_sha256": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS quad tile RGB metadata/backpressure/eviction/generation/bank/edges 413 packets 232 commands\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ]
+    },
+    {
+      "name": "green_existing64_1439",
+      "expected_result": "PASS",
+      "simulation_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_existing64_1439\\simulation.log",
+      "simulation_sha256": "3c917ed4955c0fade9974a550419944237ef3d90b38cc2805b53cd3afdb8db3c",
+      "compile_log": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_existing64_1439\\compile.log",
+      "compile_sha256": "0724dd162f1b96f89429bb46dd47feb4341e4a8ebf2196616cfc2a359b9c5aa9",
+      "source_snapshot": "D:\\FPGA\\output\\c_quad_cache_v4s_20261016_green_existing64_1439\\source_snapshot",
+      "rtl_sha256": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+      "result_lines": [
+        "# NEW warm 64 quads cycles=72\r",
+        "# PASS quad tile RGB metadata/backpressure/eviction/generation/bank/edges 413 packets 216 commands\r",
+        "# PASS watchdog and common reset recovery\r",
+        "# PASS invalid address and wrong response hard faults\r"
+      ]
+    }
+  ],
+  "cycle_equivalence_vs_v4r": [
+    {
+      "test": "green_pipeline_1439",
+      "v4r_total_ns": 130704,
+      "v4s_total_ns": 130704,
+      "same_command_and_packet_counts": true
+    },
+    {
+      "test": "green_existing8_1439",
+      "v4r_total_ns": 42008,
+      "v4s_total_ns": 42008,
+      "same_command_and_packet_counts": true
+    },
+    {
+      "test": "green_existing64_1439",
+      "v4r_total_ns": 39640,
+      "v4s_total_ns": 39640,
+      "same_command_and_packet_counts": true
+    }
+  ],
+  "coverage": {
+    "red_green": "Before RTL change, perturbing fill_tag between edges changes visible cmd_addr and fails CMD_ADDR_ISOLATION_REQUIRED; after registering address, the same test passes.",
+    "command_address_golden_checks": 1041,
+    "golden": "independent64-bit expression per valid command; four-row sequence, fixed tile identity and WAIT stability checked",
+    "boundary_base_hex": "0xFE05C00",
+    "boundary_source_pixels": 2073600,
+    "boundary_last_source_word_hex": "0x0FFFFFFF",
+    "boundary_last64word_command_hex": "0x0FFFFFC0",
+    "source_generation_wrap": "0xFFFFFFFF to0",
+    "main_scored_packets": 1032,
+    "main_fill_commands": 820,
+    "warm64_total_ui_cycles": 72,
+    "continued_pipeline_coverage": [
+      "512 consecutive warm accepts",
+      "old-frame L miss with future-frame S waiting1434 clocks",
+      "205 postfill relookups",
+      "639 simultaneous S/L/M moves",
+      "17 old-frame RAM reads concurrent with new frame invalidation",
+      "protected-way replacement, randomized command/response stalls",
+      "partial-fill shared hard reset, watchdog recovery, invalid source and wrong DDR response faults"
+    ]
+  },
+  "source_hashes": {
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\ddr_quad_tile_cache.v": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\tb_quad_command.sv": "8573354a18ffcc38b89fbec8a616fba441bd3cac3ddc4016a1d5fb1607d7b196",
+    "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\cache\\run_v4s_tests.ps1": "27a16fe3d08aa2b679b6dbeb5d28fd3218a34a4adee399283af6ef2293fed9bd"
+  },
+  "limitations": [
+    "New physical slack and complete-system behavior require root fresh PDS/full60.",
+    "No whole-project generation, PDS, full60, hardware or external module edits performed.",
+    "First-row arithmetic now ends at local fill_addr register; root physical implementation must verify that new endpoint as well."
+  ],
+  "frozen_for_root": true
+}

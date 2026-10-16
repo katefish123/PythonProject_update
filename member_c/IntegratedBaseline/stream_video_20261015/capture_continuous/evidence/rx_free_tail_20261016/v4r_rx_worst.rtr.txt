@@ -1,0 +1,101 @@
+Startpoint  : core/continuous_sources/capture/y_count[4]/opit_0_inv_AQ_perm/CLK
+Endpoint    : core/continuous_sources/capture/queue[1][269]/opit_0_L6Q_perm/CE
+Path Group  : rx_pixel
+Path Type   : max (slow corner)
+Path Class  : sequential timing path
+Clock Skew  :    -0.200  (Capture Clock Delay - Launch Clock Delay + Clock Pessimism Removal)
+  Capture Clock Delay     :  2.965
+  Launch Clock Delay      :  3.459
+  Clock Pessimism Removal :  0.294
+
+ Location                          Delay Type             Incr        Path         Logical Resource 
+----------------------------------------------------------------------------------------------------
+
+ Clock rx_pixel (rising edge)                            0.000       0.000 r                        
+ K21                                                     0.000       0.000 r       hd_rx_pclk (port)
+                                   net (fanout=1)        0.094       0.094         hd_rx_pclk       
+ IOBD_0_774/DIN                    td                    0.855       0.949 r       hd_rx_pclk_ibuf/opit_0/O
+                                   net (fanout=1)        0.000       0.949         hd_rx_pclk_ibuf/ntD
+ IOLHR_16_774/DI_TO_CLK            td                    0.105       1.054 r       hd_rx_pclk_ibuf/opit_1/DI_TO_CLK
+                                   net (fanout=1)        0.876       1.930         nt_hd_rx_pclk    
+ USCM_215_624/CLKOUT               td                    0.168       2.098 r       clkbufg_1/gopclkbufg/CLKOUT
+                                   net (fanout=7)        0.602       2.700         ntclkbufg_1      
+ HCKB_213_470/CLKOUT               td                    0.287       2.987 r       HCKBROUTE_16/CLKOUT
+                                   net (fanout=555)      0.472       3.459         ntR10936         
+ CLMA_57_553/CLK                                                           r       core/continuous_sources/capture/y_count[4]/opit_0_inv_AQ_perm/CLK
+
+ CLMA_57_553/Q2                    tco                   0.203       3.662 r       core/continuous_sources/capture/y_count[3]/opit_0_inv_AQ_perm/Q
+                                   net (fanout=4)        0.911       4.573         core/continuous_sources/sample_y [3]
+ CLMA_81_655/Y0                    td                    0.229       4.802 r       core/continuous_sources/capture/N435_5/gateop_perm/L6
+                                   net (fanout=2)        0.119       4.921         core/continuous_sources/capture/_N131288
+ CLMA_81_655/Y2                    td                    0.224       5.145 r       core/continuous_sources/capture/N78_mux9/gateop_perm/L6
+                                   net (fanout=3)        0.244       5.389         core/continuous_sources/capture/N78
+ CLMA_81_654/Y1                    td                    0.219       5.608 r       core/continuous_sources/capture/N80_10/gateop_perm/Y
+                                   net (fanout=2)        0.859       6.467         core/continuous_sources/capture/data_due
+ CLMA_81_780/Y3                    td                    0.074       6.541 r       core/continuous_sources/capture/N112_1/LUT6_inst_perm/L6
+                                   net (fanout=3)        0.269       6.810         core/continuous_sources/capture/N112
+ CLMA_81_786/Y2                    td                    0.108       6.918 r       core/continuous_sources/capture/N562_1/LUT6_inst_perm/L6
+                                   net (fanout=1648)     1.009       7.927         core/continuous_sources/capture/N562
+ CLMA_27_726/CECO                  td                    0.136       8.063 r       core/continuous_sources/capture/queue[1][281]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       8.063         ntR247           
+ CLMA_27_732/CECO                  td                    0.136       8.199 r       core/continuous_sources/capture/queue[4][281]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       8.199         ntR246           
+ CLMA_27_738/CECO                  td                    0.136       8.335 r       core/continuous_sources/capture/queue[7][282]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       8.335         ntR245           
+ CLMA_27_744/CECO                  td                    0.136       8.471 r       core/continuous_sources/capture/queue[4][284]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       8.471         ntR244           
+ CLMA_27_750/CECO                  td                    0.136       8.607 r       core/continuous_sources/capture/queue[3][264]/opit_0_L6Q_perm/CECO
+                                   net (fanout=1)        0.000       8.607         ntR243           
+ CLMA_27_756/CECO                  td                    0.136       8.743 r       core/continuous_sources/capture/queue[5][311]/opit_0_L6Q_perm/CECO
+                                   net (fanout=3)        0.000       8.743         ntR242           
+ CLMA_27_768/CECO                  td                    0.136       8.879 r       core/continuous_sources/capture/queue[7][275]/opit_0_L6Q_perm/CECO
+                                   net (fanout=3)        0.000       8.879         ntR241           
+ CLMA_27_774/CECO                  td                    0.136       9.015 r       core/continuous_sources/capture/queue[6][276]/opit_0_L6Q_perm/CECO
+                                   net (fanout=1)        0.000       9.015         ntR240           
+ CLMA_27_780/CECO                  td                    0.136       9.151 r       core/continuous_sources/capture/queue[7][278]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       9.151         ntR239           
+ CLMA_27_786/CECO                  td                    0.136       9.287 r       core/continuous_sources/capture/queue[7][266]/opit_0_L6Q_perm/CECO
+                                   net (fanout=4)        0.000       9.287         ntR238           
+ CLMA_27_792/CECO                  td                    0.136       9.423 r       core/continuous_sources/capture/queue[4][266]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       9.423         ntR237           
+ CLMA_27_798/CECO                  td                    0.136       9.559 r       core/continuous_sources/capture/queue[6][265]/opit_0_L6Q_perm/CECO
+                                   net (fanout=2)        0.000       9.559         ntR236           
+ CLMA_27_804/CECO                  td                    0.136       9.695 r       core/continuous_sources/capture/queue[7][297]/opit_0_L6Q_perm/CECO
+                                   net (fanout=3)        0.000       9.695         ntR235           
+ CLMA_27_810/CECO                  td                    0.136       9.831 r       core/continuous_sources/capture/queue[4][268]/opit_0_L6Q_perm/CECO
+                                   net (fanout=1)        0.000       9.831         ntR234           
+ CLMA_27_816/CECO                  td                    0.136       9.967 r       core/continuous_sources/capture/queue[7][268]/opit_0_L6Q_perm/CECO
+                                   net (fanout=4)        0.000       9.967         ntR233           
+ CLMA_27_822/CECI                                                          r       core/continuous_sources/capture/queue[1][269]/opit_0_L6Q_perm/CE
+
+ Data arrival time                                                   9.967         Logic Levels: 20 
+                                                                                   Logic: 3.097ns(47.588%), Route: 3.411ns(52.412%)
+----------------------------------------------------------------------------------------------------
+
+ Clock rx_pixel (rising edge)                            6.734       6.734 r                        
+ K21                                                     0.000       6.734 r       hd_rx_pclk (port)
+                                   net (fanout=1)        0.094       6.828         hd_rx_pclk       
+ IOBD_0_774/DIN                    td                    0.730       7.558 r       hd_rx_pclk_ibuf/opit_0/O
+                                   net (fanout=1)        0.000       7.558         hd_rx_pclk_ibuf/ntD
+ IOLHR_16_774/DI_TO_CLK            td                    0.091       7.649 r       hd_rx_pclk_ibuf/opit_1/DI_TO_CLK
+                                   net (fanout=1)        0.746       8.395         nt_hd_rx_pclk    
+ USCM_215_624/CLKOUT               td                    0.143       8.538 r       clkbufg_1/gopclkbufg/CLKOUT
+                                   net (fanout=7)        0.515       9.053         ntclkbufg_1      
+ HCKB_213_516/CLKOUT               td                    0.245       9.298 r       HCKBROUTE_17/CLKOUT
+                                   net (fanout=1188)     0.401       9.699         ntR10938         
+ CLMA_27_822/CLK                                                           r       core/continuous_sources/capture/queue[1][269]/opit_0_L6Q_perm/CLK
+ clock pessimism                                         0.294       9.993                          
+ clock uncertainty                                      -0.050       9.943                          
+
+ Setup time                                             -0.226       9.717                          
+
+ Data required time                                                  9.717                          
+----------------------------------------------------------------------------------------------------
+ Data required time                                                  9.717                          
+ Data arrival time                                                   9.967                          
+----------------------------------------------------------------------------------------------------
+ Slack (VIOLATED)                                                   -0.250                          
+====================================================================================================
+
+====================================================================================================
+

@@ -1,0 +1,15 @@
+{
+  "candidate": "V4S",
+  "root": "D:\\FPGA\\output\\c_stream_board_v4s_20261016",
+  "authored_generated_sha256": {
+    "cache/ddr_quad_tile_cache.v": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+    "capture_continuous/continuous_capture_rx.v": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776"
+  },
+  "local_tests": "passed; exact frozen evidence bound",
+  "independent_review": "no provable P1/P2; cache address arithmetic/ownership and RX free-tail visibility contract reviewed",
+  "reduced6_pressure": "passed",
+  "full60": "running",
+  "physical_timing": "running",
+  "hardware_accepted": false,
+  "board_replacement_allowed": false
+}

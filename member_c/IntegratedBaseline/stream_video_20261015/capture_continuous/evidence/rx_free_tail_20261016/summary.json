@@ -1,0 +1,209 @@
+{
+  "schema": "rx_free_tail_timing_candidate/v1",
+  "status": "FROZEN_CYCLE_EQUIVALENCE_AND_LOCAL_INTEGRATION_PASS_PHYSICAL_TIMING_PENDING",
+  "date_local": "2026-10-16",
+  "source": {
+    "path": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\capture_continuous\\continuous_capture_rx.v",
+    "sha256": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776",
+    "old_sha256": "8910490f8d05eeb12654670d6044316cdcdc11e3c6df043ae57f1b1aae5ebded",
+    "reference_sha256": "963872c6e763a8ef56385184ded60c6e979e6603aee44d48c3252bcf767788e9",
+    "reference_matches_old_except_module_name": true,
+    "test_sha256": "76d43bed7a5084f55e01f427c199edb8eb79d313e335558cf2daab08a97b599e",
+    "runner_sha256": "4056e4a2064a2b5b1c3b84dabaf9648a7c6ca5461f3389d219cea69519c8918b"
+  },
+  "scope": {
+    "only_modified_rtl": "capture_continuous/continuous_capture_rx.v",
+    "dedicated_files": [
+      "continuous_capture_rx_queue_reference.sv",
+      "tb_rx_queue_storage.sv",
+      "run_rx_queue_storage.ps1"
+    ],
+    "other_production_rtl_modified": false,
+    "constraints_or_clocks_changed": false
+  },
+  "measured_failure": {
+    "snapshot": "v4r",
+    "report_path": "D:\\FPGA\\worktrees\\c_pipeline_next\\member_c\\IntegratedBaseline\\stream_video_20261015\\evidence\\v4r_implementation\\final_timing.rtr",
+    "report_sha256": "35b751dd51636b57ebf450259b455967e01e65d22b888d81b8b4f76153f0322b",
+    "worst_rx_path": {
+      "startpoint": "core/continuous_sources/capture/y_count[4]/opit_0_inv_AQ_perm/CLK",
+      "endpoint": "core/continuous_sources/capture/queue[1][269]/opit_0_L6Q_perm/CE",
+      "slack_ns": -0.25,
+      "logic_levels": 20,
+      "logic_ns": 3.097,
+      "route_ns": 3.411,
+      "CECO_cascade_steps": 15,
+      "wide_enable_fanout": 1648,
+      "cone": [
+        "y_count/sample bounds",
+        "data_due",
+        "push_count",
+        "wide packet storage CE",
+        "15 CECO cascade steps"
+      ]
+    }
+  },
+  "single_hypothesis": "Decouple free-tail packet storage writes from enqueue ownership validity, removing sample-bound/data_due/push_count logic from wide storage enables.",
+  "implementation": {
+    "primary_storage_write": "count<8 || pop",
+    "primary_payload": "same current DATA or VS-selected END/BEGIN as old RX",
+    "second_storage_write": "push_count==2, unchanged payload BEGIN",
+    "head_tail_count_push_credit_logic": "unchanged",
+    "data_control_reservation": "original data_space(count-pop<4) and eight-entry ring unchanged",
+    "extra_queue_entries": 0,
+    "extra_register_stages": 0,
+    "added_packet_latency_cycles": 0
+  },
+  "ownership_proof": [
+    "When count<8, tail lies outside the owned ring; speculative write cannot alter a queued packet. If no enqueue occurs, tail/count do not advance and the write remains invisible.",
+    "count==0 may expose changing packet_data with packet_valid==0; no valid packet is exposed until a real enqueue overwrites that slot on the same edge.",
+    "When count==8&&!pop, the primary write is disabled. Existing count+push-pop<=8 invariant forbids any second control write in a full stalled ring.",
+    "When count==8&&pop, head==tail. Consumers sample the old head before the NBA reuses that slot. With no push it becomes free; with one push the new record is at the logical end.",
+    "The second control write remains push_count==2. Original capacity invariant requires two free/retires slots, including count7/pop1 where tail+1 is the just-retired head across wrap.",
+    "Because push_count, head,tail,count and all credits are unchanged, DATA enqueue threshold and four-entry terminal reserve are unchanged. No pending last DATA or new END/BEGIN ordering stage was introduced."
+  ],
+  "tests": [
+    {
+      "name": "structural_red",
+      "output": "D:\\FPGA\\output\\c_rx_queue_storage_20261016_frozen_red_v4s",
+      "findings": [
+        {
+          "log": "simulation.log",
+          "line": "** Fatal: UNOWNED_QUEUE_STORAGE_BOUNDARY_REQUIRED free storage must not depend on enqueue validity"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/continuous_capture_rx.v": "8910490f8d05eeb12654670d6044316cdcdc11e3c6df043ae57f1b1aae5ebded",
+        "source_snapshot/continuous_capture_rx_queue_reference.sv": "963872c6e763a8ef56385184ded60c6e979e6603aee44d48c3252bcf767788e9",
+        "source_snapshot/tb_rx_queue_storage.sv": "76d43bed7a5084f55e01f427c199edb8eb79d313e335558cf2daab08a97b599e"
+      },
+      "logs_sha256": {
+        "compile.log": "0b241cb18a6aa3cecf6617526ce2227fa46454596c953184c441ebe5c116b58e",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "65c8c1c746a3ba02e99bcbccb21e91d0db8699341ea8141cfc336ac80e95c8b4",
+        "source_hashes.txt": "b5e2aef8a88ff8537b8ec6b316a1feb8ed2f653d35cd6cac0886d4bf0846841f"
+      }
+    },
+    {
+      "name": "frozen_reference_equivalence",
+      "output": "D:\\FPGA\\output\\c_rx_queue_storage_20261016_frozen_green_v4s",
+      "findings": [
+        {
+          "log": "simulation.log",
+          "line": "PASS RX_QUEUE_STORAGE_EQUIVALENCE cycles=3079 retired=406 stalls=389 full_hold=41 full_pop=1 END_BEGIN_pop_wrap=3 DATA_END=41 partial_reset=1"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/continuous_capture_rx.v": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776",
+        "source_snapshot/continuous_capture_rx_queue_reference.sv": "963872c6e763a8ef56385184ded60c6e979e6603aee44d48c3252bcf767788e9",
+        "source_snapshot/tb_rx_queue_storage.sv": "76d43bed7a5084f55e01f427c199edb8eb79d313e335558cf2daab08a97b599e"
+      },
+      "logs_sha256": {
+        "compile.log": "6cf00559110da4dfa15bb2da2315e60a6f62ecfa2473a61e052d66067bb3b500",
+        "library.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "simulation.log": "a448dabb6441b2e691a5c36deb0f0214f3975b81566f0c0aa7c102d64a9f298c",
+        "source_hashes.txt": "1c8542328022a07cdf19e61355708df6440d4c935dbbb69169880d57b61b9ba2",
+        "source_hashes_after.txt": "1c8542328022a07cdf19e61355708df6440d4c935dbbb69169880d57b61b9ba2"
+      }
+    },
+    {
+      "name": "credit_VS_boundaries",
+      "output": "D:\\FPGA\\output\\c_continuous_capture_20261015_rx_free_tail_boundaries_v4s",
+      "findings": [
+        {
+          "log": "simulation.log",
+          "line": "PASS timing boundaries: duplicate credit at VS/reallocation, stale/active credit, ordered END+BEGIN, RGB packing and shared reset"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+        "source_snapshot/async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+        "source_snapshot/continuous_capture_geometry.v": "b8caf1ee598c91337c689af0b6e0c4a70b7ffc45da6434b6f5c3bc2c970a78a7",
+        "source_snapshot/continuous_capture_manager.v": "f20fe031979489d8d5ae13b587e74411508596e5e17006b7a31d58995641fb90",
+        "source_snapshot/continuous_capture_rx.v": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776",
+        "source_snapshot/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "source_snapshot/continuous_source_path.v": "4d2232a7110b1419d24722439e2f83dbe101c587feba70ae82c4b5d0fd135687",
+        "source_snapshot/marker_detector.v": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+        "source_snapshot/tb_timing_boundaries.sv": "7f862e52cf91cad37af0f32f72a9a78c7e6550f42e2cf26c5931b72cbc4a854e",
+        "source_snapshot/unsigned_div_seq.v": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3"
+      },
+      "logs_sha256": {
+        "compile.log": "d051d5df83934ed2c669ad71f1346acc32f9fa57d99f09621c01411d293c4fa0",
+        "simulation.log": "5ce1ec8627e36b53199fba77c6ddc2202fbc25d0cbd9865ff6c1923c7917a5f6",
+        "source_hashes.txt": "bd52f34f85bd7ddad4b42f83715b37f192a8a4190fb20bbc7df170460727af4d"
+      }
+    },
+    {
+      "name": "reduced_source_6_frames",
+      "output": "D:\\FPGA\\output\\c_continuous_capture_20261015_rx_free_tail_reduced_v4s",
+      "findings": [
+        {
+          "log": "simulation.log",
+          "line": "PASS consecutive continuous source native=0 frames=6 commands=576 completed=576"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS invalid extraheight/shortwidth/shortheight rejected only after write drain"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS FIFO-full terminal retention, overrun drop, accepted burst retirement"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS selected marker FIFO overflow retains both terminal generations"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS RX clock stall/restart preserves partial source ownership"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS stale release rejected without source ownership corruption"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS shared hard reset flushes queued capture and metadata"
+        },
+        {
+          "log": "simulation.log",
+          "line": "PASS continuous capture complete test suite native=0"
+        }
+      ],
+      "compiled_sources_sha256": {
+        "source_snapshot/async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a",
+        "source_snapshot/async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+        "source_snapshot/continuous_capture_geometry.v": "b8caf1ee598c91337c689af0b6e0c4a70b7ffc45da6434b6f5c3bc2c970a78a7",
+        "source_snapshot/continuous_capture_manager.v": "f20fe031979489d8d5ae13b587e74411508596e5e17006b7a31d58995641fb90",
+        "source_snapshot/continuous_capture_rx.v": "f66f59312b14de8acc90bd7f0820c3c7dac48a73ac5cfa0dc7f741bd63f57776",
+        "source_snapshot/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "source_snapshot/continuous_source_path.v": "4d2232a7110b1419d24722439e2f83dbe101c587feba70ae82c4b5d0fd135687",
+        "source_snapshot/marker_detector.v": "5afa843629e4ea227a8dcd9e4690294a70d1a6c00cd27287703d4972de1fdf2d",
+        "source_snapshot/tb_continuous_source.sv": "36cc67d8a8c84d8e61af5be9ab5b99a6b39cee0531dd5806c5f978d425518c91",
+        "source_snapshot/unsigned_div_seq.v": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3"
+      },
+      "logs_sha256": {
+        "compile.log": "d710b9ca11d5401cc3783a8f3d1d5b4767d88ee832dbce8317cb82044ddb68d4",
+        "simulation.log": "c8941b35fb08b9aa087e6e64fb8e6c5dcf2596eab3162d81a216990b15fb9232",
+        "source_hashes.txt": "a2a389c7cecef9be3654f4bcb6530816500d671d83fd807fc1941ef602326f97"
+      }
+    }
+  ],
+  "validation_summary": {
+    "structural_red": "Old code fails UNOWNED_QUEUE_STORAGE_BOUNDARY_REQUIRED with the same final test; this is a storage-boundary assertion, not a claim of old packet protocol failure.",
+    "frozen_reference_comparison": "3079 cycles,406 record retirements,389 stalled cycles,full_hold41/full_pop1,END+BEGIN+pop tail-wrap3,DATA-to-END41; all valid/stalled outputs and every owned queue slot equal the frozen old RX.",
+    "natural_pressure": "Two frames with downstream blocked retain all terminal/control records at count7, reject overflowed data and drop later admissions until credits return.",
+    "full_count_boundary": "count7/pop1/push2 wrap and count8 hold/pop are directly seeded boundary states and compared against old RX; they are not claimed to arise naturally in that trace.",
+    "boundary_regression": "duplicate/stale/active credit,VS reallocation,ordered END+BEGIN,RGB packing,reset pass.",
+    "reduced_source": "Six consecutive128x48 frames,576 commands/576 ACKs plus malformed dimensions,real async FIFO full,geometry overflow,RX clock stall/restart,stale release and shared reset pass.",
+    "errors": 0,
+    "warnings": 0
+  },
+  "remaining_limits": [
+    "No full60/PDS/system/board run was started; root must generate and validate a new snapshot bound to the frozen source.",
+    "The storage-enable cone changes structurally, but physical timing closure requires a new routed report.",
+    "Cycle equivalence is bounded simulation, not formal proof over every input sequence. The free-slot ownership argument explains indefinite backpressure preservation.",
+    "The count8 and simultaneous dual-control wrap boundaries use explicit state seeding; real reduced integration separately exercises natural FIFO-full and terminal retention.",
+    "Speculative writes intentionally change unowned storage and packet_data when valid=0; clients must use packet_valid as before."
+  ]
+}
