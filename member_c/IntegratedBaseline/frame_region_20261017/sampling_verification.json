@@ -1,0 +1,103 @@
+{
+  "status": "synthetic_single_sample_integration_pass",
+  "enterprise_acceptance": false,
+  "hardware_acceptance": false,
+  "board_integrated": false,
+  "PDS_timing_qualified": false,
+  "full_video_throughput_qualified": false,
+  "real_calibration": "blocked_by_missing_calibration",
+  "scope": "Descriptor executor with actual exact fast H/Brown RTL,original B interpolation and a behavioral four-neighbor memory responder",
+  "tests": {
+    "release_final": {
+      "expected_failure": false,
+      "expected_message": "PASS REGION_SAMPLE",
+      "compiled_source_sha256": {
+        "region_sample.v": "7f372e87e15615245f14bc1fae162b1e394a6b59dc6a4ca76f47d6beb0a1cbb1",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "tb_region_sample.sv": "f4dab62ccda280d18c015dab1b619de5b10b5a47cebd322276882da6c0b55b75",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea"
+      },
+      "simulation_log_sha256": "0342c5f4fba0053e9f95ca3fa11f9d590f16abe3260f552112117e23e19bb8e1",
+      "compile_log_sha256": "7d308e4852a147ada035c0585f5fefb66143cc4b6625d33f344f1718d27760e5",
+      "statistics": {
+        "composed_vectors": 1024,
+        "valid_vector_sampled_pixels": 972,
+        "accepted_memory_requests_total": 1000,
+        "B_interpolations_total": 992
+      }
+    },
+    "release_negative_ignore_response_bank": {
+      "expected_failure": true,
+      "expected_message": "OUTPUT_MISMATCH",
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "region_sample.v": "df8795d9726c4c5dbd5c9300e45ffbcf9c79a6ef7189c58e5f6f98e2423a7922",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "tb_region_sample.sv": "f4dab62ccda280d18c015dab1b619de5b10b5a47cebd322276882da6c0b55b75"
+      },
+      "simulation_log_sha256": "01490ff4268e5836675f96b99264a2b43fc6bf70bd72cc190c38d16c817962b3",
+      "compile_log_sha256": "4e8ee4cbe0a88ed1bc2cb3bbbdcffef9528d60780d9f0faf5c55a68cdf298fd8"
+    },
+    "release_negative_skip_marker_cleanup": {
+      "expected_failure": true,
+      "expected_message": "OUTPUT_MISMATCH",
+      "compiled_source_sha256": {
+        "region_sample.v": "fd29927144747293748a91dcd29fce5f4b1e9698700fd22821b47bbaa20ad137",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "tb_region_sample.sv": "f4dab62ccda280d18c015dab1b619de5b10b5a47cebd322276882da6c0b55b75",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea"
+      },
+      "simulation_log_sha256": "cc22677bbbc80af9c3bc99f7129fc7e566bbaa83251c2c19f66aac72cbe44132",
+      "compile_log_sha256": "20d0eb1e519fa272749db1c334cb056c1a06652715d475facc81e32068f5a111"
+    },
+    "release_negative_live_profile": {
+      "expected_failure": true,
+      "expected_message": "ADDRESS_ASSOCIATION",
+      "compiled_source_sha256": {
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "region_sample.v": "f6885862a214423146f4c644658a5f2a0b77c8b9ae8c18a761e824a8d04c0d85",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "tb_region_sample.sv": "f4dab62ccda280d18c015dab1b619de5b10b5a47cebd322276882da6c0b55b75"
+      },
+      "simulation_log_sha256": "e6568ffe3e786f3c29d52c7a28640b04cd8186433436f7c8cd01ecd550f949fc",
+      "compile_log_sha256": "585de261742051da732165cff20081ad10bf212af0e53722dd4d588ab8f69199"
+    }
+  },
+  "dependency_sha256": {
+    "frame_region_20261017/region_sample.v": "7f372e87e15615245f14bc1fae162b1e394a6b59dc6a4ca76f47d6beb0a1cbb1",
+    "frame_region_20261017/source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+    "frame_region_20261017/tb_region_sample.sv": "f4dab62ccda280d18c015dab1b619de5b10b5a47cebd322276882da6c0b55b75",
+    "lens_throughput_20261017/q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+    "lens_throughput_20261017/generated/lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+    "lens_throughput_20261017/generated/lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+    "a_sync_20261013/hires_candidate/vendor/b/rtl/bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+  },
+  "support_sha256": {
+    "run_sampling.ps1": "eb2516c36622fbbe4fa8d622a3fc102f2c399e8d3f9f05b386879f4c7a7f5e71",
+    "mutate_sampling.py": "97150a5384b3d5efc05ad133c07562cee5a0783017ad2df95f816b0143c1f22d",
+    "collect_sampling_evidence.py": "05e79421ad5dc08152981b41fcb8394f20becb73c33048081f3e76987b2c6fca"
+  },
+  "fixture_manifest_sha256": "ca4ec82b5cc7c802b60ff0fc516eec3399548ecea903a918d65ea56a54fc2130",
+  "evidence_zip_sha256": "86b95a23d8b610eeb40311e7249019107c5432ad00683d4f817174369062b3cb",
+  "reset_contract": "External producer cancels/drains accepted old memory work during reset; uncoordinated reset/late-response recovery not implemented",
+  "remaining": [
+    "actual paper/pad and per-frame exact mask generation",
+    "region configuration/profile/mask atomic system ownership",
+    "physical DDR adapter and complete region stream connection",
+    "whole-frame error aggregation and corrected-result publication",
+    "pipelined throughput,final changed-board PDS timing",
+    "real calibration,held-out MTF/SFR and hardware acceptance"
+  ]
+}
