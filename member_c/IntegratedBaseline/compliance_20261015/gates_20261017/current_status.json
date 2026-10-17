@@ -6,27 +6,33 @@
     "SOFTWARE_REFERENCE": {
       "status": "PASS",
       "scope": "synthetic_software_only",
-      "receipt_sha256": "4d9b378a61ade61312dfbf8b5251fcdfd1d5f21a92d815cbd113226e0944a773",
+      "receipt_sha256": "b230fe55d8a04c03c392e1cba29bf5bc060e326e487e153ef4903ca9ad39e9c9",
       "maximum_sample_error_source_px": 0.00753098925907,
       "note": "Sampled numerical model only; 0.125 source px is an engineering target, not an enterprise threshold."
     },
     "LENS_RTL": {
-      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "status": "PARTIAL_SYNTHETIC",
       "required_evidence": "lens_model_next/rtl_qualification.json",
       "requirement": "Nonzero k1/k2/p1/p2 individually; independent float/fixed/RTL coordinates and sampled pixels; H-only negative controls.",
-      "external_data_required": false
+      "external_data_required": false,
+      "development_receipt_sha256": "162b5de1b83d28f55b97099f84c66dfbd9f1e6620d6ef10c0b67b2ba1df8c135",
+      "note": "Independent sequential numeric baseline; no real calibration,board integration,video throughput or changed PDS timing qualification."
     },
     "PARAM_COMMIT": {
-      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "status": "PARTIAL_SYNTHETIC",
       "required_evidence": "lens_model_next/profile_commit_qualification.json",
       "requirement": "Complete K and lens bank validation; dimensions/mode/version/H association; atomic frame-boundary commit, reset/collision/in-flight ownership.",
-      "external_data_required": false
+      "external_data_required": false,
+      "development_receipt_sha256": "162b5de1b83d28f55b97099f84c66dfbd9f1e6620d6ef10c0b67b2ba1df8c135",
+      "note": "Independent sequential numeric baseline; no real calibration,board integration,video throughput or changed PDS timing qualification."
     },
     "H_LENS_COMPOSITION": {
-      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "status": "PARTIAL_SYNTHETIC",
       "required_evidence": "lens_model_next/composition_qualification.json",
       "requirement": "Undistort raw corners before H fitting; target through ideal H then forward lens distortion; one final image sample.",
-      "external_data_required": false
+      "external_data_required": false,
+      "development_receipt_sha256": "162b5de1b83d28f55b97099f84c66dfbd9f1e6620d6ef10c0b67b2ba1df8c135",
+      "note": "Independent sequential numeric baseline; no real calibration,board integration,video throughput or changed PDS timing qualification."
     },
     "REAL_CALIBRATION": {
       "status": "MISSING_DATA",
@@ -66,6 +72,6 @@
   "V5C_preserved_timing_receipt_sha256": "4bed577f06951ea6b763f6ba6dd0888a68e425bf1a50f37ca11ad5aba1d7bbc7",
   "V5C_scope": "H-only/RAW board candidate; cannot qualify lens-inclusive RTL or real lens quality",
   "policy": "Missing or unreviewed evidence blocks acceptance; arbitrary JSON pass flags do not grant release. No enterprise numeric thresholds invented.",
-  "generated_utc": "2026-10-17T00:40:37.043242+00:00",
+  "generated_utc": "2026-10-17T00:51:42.642226+00:00",
   "fresh_model_process_exit_code": 0
 }

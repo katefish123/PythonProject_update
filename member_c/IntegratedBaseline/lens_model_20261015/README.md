@@ -1,5 +1,7 @@
 # Synthetic lens-model infrastructure
 
+2026-10-17: these original independent Python models are reused unchanged by [the separate numeric RTL baseline](../lens_model_next/README.md). That new directory adds synthetic coordinate/parameter/H-composition tests; it is not integrated into V5C and has no real-camera/video-throughput/PDS acceptance. Historical scope statements below refer to this20261015 software directory.
+
 **Synthetic only. No real camera calibration, RTL lens implementation, or hardware acceptance. Existing B files are untouched.**
 
 `lens_golden.py` is a scalar standard-library float64 reference for normalized Brown radial k1/k2 and tangential p1/p2 distortion. Explicit fx/fy/cx/cy are mandatory. `FrameMap` captures an immutable profile/H snapshot; optional H maps destination pixels to the undistorted camera plane before forward distortion maps to raw source pixels. `Mapped.inside` uses strict source pixel-center bounds, including negative outputs. Resampling is a separate concern.

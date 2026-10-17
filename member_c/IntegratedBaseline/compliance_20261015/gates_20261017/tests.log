@@ -5,6 +5,6 @@ test_missing_calibration_file_remains_explicit_data_gap (test_acceptance_gate.Ac
 test_synthetic_pass_and_V5C_timing_never_grant_lens_qualification (test_acceptance_gate.AcceptanceGateTests.test_synthetic_pass_and_V5C_timing_never_grant_lens_qualification) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.013s
+Ran 5 tests in 0.035s
 
 OK

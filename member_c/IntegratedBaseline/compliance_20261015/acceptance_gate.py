@@ -47,6 +47,20 @@ def evaluate(root,model_receipt=None):
    'external_data_required':key in ('REAL_CALIBRATION','HELD_OUT_QUALITY','REALTIME_RESOURCES')}
   if key=='REAL_CALIBRATION' and not p.exists():checks[key]['blocker']='blocked_by_missing_calibration'
   if p.is_file():checks[key]['unreviewed_file_sha256']=sha(p)
+ # A source-bound development baseline documents progress, never release.
+ baseline_path=root/'lens_model_next/verification.json'
+ if baseline_path.exists():
+  try:
+   b=json.loads(baseline_path.read_text())
+   bound=(b['status']=='synthetic_numeric_baseline_pass' and b['enterprise_acceptance'] is False
+    and b['hardware_acceptance'] is False and b['PDS_timing_qualified'] is False
+    and all(sha(root/'lens_model_next'/n)==d for n,d in b['source_sha256'].items()))
+   for key in ('LENS_RTL','PARAM_COMMIT','H_LENS_COMPOSITION'):
+    checks[key]['status']='PARTIAL_SYNTHETIC' if bound else 'DEVELOPMENT_EVIDENCE_FAILED'
+    checks[key]['development_receipt_sha256']=sha(baseline_path)
+    checks[key]['note']='Independent sequential numeric baseline; no real calibration,board integration,video throughput or changed PDS timing qualification.'
+  except (OSError,ValueError,KeyError,TypeError):
+   checks['LENS_RTL']['status']='DEVELOPMENT_EVIDENCE_FAILED'
  v5=root/'board_next_20261016/evidence/v5c/implementation.json'
  return {'gate_version':0,'decision':'NOT_READY','enterprise_acceptance':False,
   'checks':checks,'unmet':[k for k,c in checks.items() if c['status']!='PASS'],

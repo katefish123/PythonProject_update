@@ -1,0 +1,10 @@
+test_bad_or_singular_inverse_is_rejected (test_corner_preparation.CornerPreparationTests.test_bad_or_singular_inverse_is_rejected) ... ok
+test_each_nonzero_coefficient_and_combination_roundtrip (test_corner_preparation.CornerPreparationTests.test_each_nonzero_coefficient_and_combination_roundtrip) ... ok
+test_ideal_corner_H_is_distinct_from_raw_corner_H (test_corner_preparation.CornerPreparationTests.test_ideal_corner_H_is_distinct_from_raw_corner_H) ... ok
+test_invalid_target_geometry_rejected (test_corner_preparation.CornerPreparationTests.test_invalid_target_geometry_rejected) ... ok
+test_zero_lens_exact_identity (test_corner_preparation.CornerPreparationTests.test_zero_lens_exact_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+OK

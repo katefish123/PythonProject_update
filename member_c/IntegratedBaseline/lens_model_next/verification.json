@@ -1,0 +1,244 @@
+{
+  "status": "synthetic_numeric_baseline_pass",
+  "enterprise_acceptance": false,
+  "hardware_acceptance": false,
+  "real_calibration": "blocked_by_missing_calibration",
+  "PDS_timing_qualified": false,
+  "board_integrated": false,
+  "tests": {
+    "alu": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_alu_final",
+      "expected_failure": false,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_q30_alu.sv": "0b011e44906722ed82e833b4de3ebf47394f3b393a924c2ab8f150aace705755"
+      },
+      "simulation_log_sha256": "16a203e37601a1878d603b6d31d52a4339b1f3a25c57c93db2b66a217833944d",
+      "reported_pass": [
+        "PASS Q30_ALU signed nearest-even, overflow, zero divisor, in-flight reset"
+      ]
+    },
+    "profile_bank": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_bank_final",
+      "expected_failure": false,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_profile_bank.sv": "0b8146024ac7e0033dd06cef14effc654598335acdd599e98f95989a7175ad5b"
+      },
+      "simulation_log_sha256": "f6e25019d7231f88fdd1211c3b9249eba66421ed17ba2159a84fd3a74b1bca20",
+      "reported_pass": [
+        "PASS LENS_PROFILE_BANK 15 invalid profiles,partial,pending immutability,atomic boundary,seal collision,reset"
+      ]
+    },
+    "brown_pixels": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_brown_final",
+      "expected_failure": false,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_map.sv": "2d93896027bead89c2bf835060a3da34202ddba300f5b8d7a7bce650db5fd0ab"
+      },
+      "simulation_log_sha256": "fc76a21bd4e3ad2b20747cb05756d40ec1802738765f200535302ec0e937894f",
+      "reported_pass": [
+        "PASS LENS_MAP composed=0 vectors=1024 pixels=1024 max_cycles=350 independent coefficient cases,signed bounds,numeric reject,profile snapshot,backpressure,reset"
+      ],
+      "maximum_cycles": 350
+    },
+    "composed_pixels": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_composed_final",
+      "expected_failure": false,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_map.sv": "432c5dcd4a1705ddc852792152a85e9807cc16e411c4c95f3e9e7fbc1775ff87"
+      },
+      "simulation_log_sha256": "f6310c46c633ef9663886dc367d679c38dfd3f00a0f021ebb70c3f4cb731ca72",
+      "reported_pass": [
+        "PASS LENS_MAP composed=1 vectors=1024 pixels=1024 max_cycles=652 independent coefficient cases,signed bounds,numeric reject,profile snapshot,backpressure,reset"
+      ],
+      "maximum_cycles": 652
+    },
+    "missing_term_1": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_final_missing_term_1",
+      "expected_failure": true,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_map.sv": "8c0599533d5358fccfebea8b2fc1cfe0ab33631c127ec70bfa96a64898ddfd15"
+      },
+      "simulation_log_sha256": "f7a5cd211f7b5463423cc81b9ed2e69a0d1ad18bc5504e38d5c461bd3eed1ce7",
+      "reported_pass": []
+    },
+    "missing_term_2": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_final_missing_term_2",
+      "expected_failure": true,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_map.sv": "dd81abaa7afffc9ca64f66c755dee464c3c76d0381c5f70093563802660bdb80"
+      },
+      "simulation_log_sha256": "eff5d5ca9bcc816e029c6970a6b591880e3abb27748a95537c1f44c515c1f655",
+      "reported_pass": []
+    },
+    "missing_term_3": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_final_missing_term_3",
+      "expected_failure": true,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_map.sv": "26e763f956b694c920d3a8d9cc6491c1dd32948cf9dc96426629b4cc6a19c161"
+      },
+      "simulation_log_sha256": "53b64de7205c0498c562a1d021fab71c9cf6a08af0fa151896b1701989e79957",
+      "reported_pass": []
+    },
+    "missing_term_4": {
+      "source_directory": "D:/FPGA/output/lens_rtl_20261017_final_missing_term_4",
+      "expected_failure": true,
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+        "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+        "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "tb_lens_map.sv": "cdb673ad2c72a2772dad4261afca2b5828f662bb11ea46da5a4b929295aa3965"
+      },
+      "simulation_log_sha256": "472b128e0167b1aabcc0ba35f87eae892eb2902bf3db75219e7711cc5600f6bf",
+      "reported_pass": []
+    }
+  },
+  "vectors": {
+    "scope": "synthetic vectors for Brown-only and destination-H-Brown RTL; no DDR/HDMI or physical optics",
+    "vectors": 1024,
+    "maximum_float_vs_fixed_source_pixel_error": 0.0005226414286880754,
+    "H_only_negative_controls_detected": {
+      "k1": 145,
+      "k2": 126,
+      "p1": 142,
+      "p2": 139
+    },
+    "real_calibration": false,
+    "vectors_sha256": "27864aa9f835e6900aed6cac614cc340cbdae56cab663ba13ffbad25b34c54b7",
+    "expected_pixels_sha256": "44b85734f70054f81800e311fbea0b9768e7aa8a369cc5fb344bb30a8ab18612",
+    "composed_vectors_sha256": "5109b090084ec3568146be30f076c7239d9894e0d2f73c5abf706a69c7a568ed",
+    "B_fixed_sampling_reference_sha256": "5f4114f814e6105c4e1801785ad661431b07d3d37bb7113445beda070fca49a5",
+    "reference_sha256": {
+      "lens_golden.py": "cf034463592e1067a0dab2293d41865b9cdaa31d8edf40158dd3bacff4ab8904",
+      "lens_fixed.py": "1de61f65ee6bcf9520d1a48c317ebf1c674dd9a685a78ec9df8a163772b12e75"
+    },
+    "generator_sha256": "8f3a6d1cbb370bdd09895b01d12b3fb1aba1c5dbbbad78ceceffdb18290b2d97",
+    "synthetic_inverse_corner_H_case": {
+      "synthetic": true,
+      "raw_corners": [
+        [
+          305.41347285102006,
+          166.17471154487117
+        ],
+        [
+          1589.705327136808,
+          222.1700254743343
+        ],
+        [
+          1550.2695486675418,
+          903.2408881669548
+        ],
+        [
+          272.8326847816222,
+          876.1426769711018
+        ]
+      ],
+      "recovered_ideal_corners": [
+        [
+          250.0000000000001,
+          130.0
+        ],
+        [
+          1649.9999999999998,
+          190.0
+        ],
+        [
+          1600.0,
+          930.0
+        ],
+        [
+          219.9999999999999,
+          900.0
+        ]
+      ],
+      "known_ideal_corners": [
+        [
+          250.0,
+          130.0
+        ],
+        [
+          1650.0,
+          190.0
+        ],
+        [
+          1600.0,
+          930.0
+        ],
+        [
+          220.0,
+          900.0
+        ]
+      ],
+      "ideal_H": [
+        0.7638487521383407,
+        -0.024553841876520977,
+        250.0000000000001,
+        0.03521622483842926,
+        0.7269178707292555,
+        130.0,
+        2.078915955389523e-05,
+        1.4771272285930092e-05,
+        1.0
+      ]
+    },
+    "corner_preparation_sha256": "66488975c4183102d472ec2c5f12ecabe2f284eba6d4fb1e7429dd20b30a1e08"
+  },
+  "archive_sha256": "3dffcd20ada67a8bf96cdc71fd24cd51ee151998a32a7f4848cee985464b1635",
+  "source_sha256": {
+    "collect_evidence.py": "d2bc11d549ae232e18e597e29bd7064978048fdf17f760fe354148c4b8bedadb",
+    "corner_preparation.py": "66488975c4183102d472ec2c5f12ecabe2f284eba6d4fb1e7429dd20b30a1e08",
+    "lens_composed_map.v": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+    "lens_map.v": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+    "lens_profile_bank.v": "13635830391f64db32b7fa702f092c8cf0c2288e669ba066b407794884ba5b6d",
+    "prepare_vectors.py": "8f3a6d1cbb370bdd09895b01d12b3fb1aba1c5dbbbad78ceceffdb18290b2d97",
+    "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+    "run_tests.ps1": "321f9f4bb9d8f129cf2436471a95d13475c751148be96843ff067b3883ab74bf",
+    "tb_lens_map.sv": "0ec6829b2a109c6c6b5bb2aba9957dc5c5dfb42dab77600ea812f2c6adeab8cc",
+    "tb_lens_profile_bank.sv": "0b8146024ac7e0033dd06cef14effc654598335acdd599e98f95989a7175ad5b",
+    "tb_q30_alu.sv": "0b011e44906722ed82e833b4de3ebf47394f3b393a924c2ab8f150aace705755",
+    "test_corner_preparation.py": "4e718437f2b6d00bbf64e5ae8f21ea64878d48e5a7ab279baa523fe2d8ddab14"
+  },
+  "scope": "Independent sequential H/Brown coordinates,complete synthetic parameter bank,original B sampling; no live video,physical optics or resource/timing qualification",
+  "remaining": [
+    "Pipelined full-resolution throughput and resource/timing implementation.",
+    "Integrated request/DDR/display ownership regression on changed board RTL.",
+    "Measured camera calibration and disjoint held-out MTF/SFR/geometry/edge tests.",
+    "Real calibration loader/provenance,global inverse-domain/monotonicity validation."
+  ]
+}
