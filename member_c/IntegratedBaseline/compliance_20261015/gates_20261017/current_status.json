@@ -1,0 +1,71 @@
+{
+  "gate_version": 0,
+  "decision": "NOT_READY",
+  "enterprise_acceptance": false,
+  "checks": {
+    "SOFTWARE_REFERENCE": {
+      "status": "PASS",
+      "scope": "synthetic_software_only",
+      "receipt_sha256": "4d9b378a61ade61312dfbf8b5251fcdfd1d5f21a92d815cbd113226e0944a773",
+      "maximum_sample_error_source_px": 0.00753098925907,
+      "note": "Sampled numerical model only; 0.125 source px is an engineering target, not an enterprise threshold."
+    },
+    "LENS_RTL": {
+      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "required_evidence": "lens_model_next/rtl_qualification.json",
+      "requirement": "Nonzero k1/k2/p1/p2 individually; independent float/fixed/RTL coordinates and sampled pixels; H-only negative controls.",
+      "external_data_required": false
+    },
+    "PARAM_COMMIT": {
+      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "required_evidence": "lens_model_next/profile_commit_qualification.json",
+      "requirement": "Complete K and lens bank validation; dimensions/mode/version/H association; atomic frame-boundary commit, reset/collision/in-flight ownership.",
+      "external_data_required": false
+    },
+    "H_LENS_COMPOSITION": {
+      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "required_evidence": "lens_model_next/composition_qualification.json",
+      "requirement": "Undistort raw corners before H fitting; target through ideal H then forward lens distortion; one final image sample.",
+      "external_data_required": false
+    },
+    "REAL_CALIBRATION": {
+      "status": "MISSING_DATA",
+      "required_evidence": "calibration_20261017/calibration_manifest.json",
+      "requirement": "Traceable real raw images, camera/lens/mode/settings, K/k1/k2/p1/p2, target geometry, estimator/options, view hashes and errors; disjoint calibration/test captures.",
+      "external_data_required": true,
+      "blocker": "blocked_by_missing_calibration"
+    },
+    "HELD_OUT_QUALITY": {
+      "status": "MISSING_DATA",
+      "required_evidence": "calibration_20261017/held_out_quality.json",
+      "requirement": "Independent black/white target captures; MTF50 or SFR, straightness, edge stretch/breaks, physical aspect evidence, declared measurement methods and uncertainty.",
+      "external_data_required": true
+    },
+    "REALTIME_RESOURCES": {
+      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "required_evidence": "lens_board_next/video_qualification.json",
+      "requirement": "Actual corrected new-image rate, end-to-end hardware latency, LUT/register/DSP use, native16:9 source, real movement/angle changes and persistent stability.",
+      "external_data_required": true
+    },
+    "LENS_PDS": {
+      "status": "UNVERIFIED",
+      "required_evidence": "lens_board_next/implementation.json",
+      "requirement": "Final changed lens-inclusive RTL exact source SHA, all final timing constraints, bit/mask and actual hardware acceptance evidence.",
+      "external_data_required": false
+    }
+  },
+  "unmet": [
+    "LENS_RTL",
+    "PARAM_COMMIT",
+    "H_LENS_COMPOSITION",
+    "REAL_CALIBRATION",
+    "HELD_OUT_QUALITY",
+    "REALTIME_RESOURCES",
+    "LENS_PDS"
+  ],
+  "V5C_preserved_timing_receipt_sha256": "4bed577f06951ea6b763f6ba6dd0888a68e425bf1a50f37ca11ad5aba1d7bbc7",
+  "V5C_scope": "H-only/RAW board candidate; cannot qualify lens-inclusive RTL or real lens quality",
+  "policy": "Missing or unreviewed evidence blocks acceptance; arbitrary JSON pass flags do not grant release. No enterprise numeric thresholds invented.",
+  "generated_utc": "2026-10-17T00:40:37.043242+00:00",
+  "fresh_model_process_exit_code": 0
+}

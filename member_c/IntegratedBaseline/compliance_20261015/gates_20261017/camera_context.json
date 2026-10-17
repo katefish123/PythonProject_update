@@ -1,0 +1,15 @@
+{
+  "camera_body": "Canon EOS R50",
+  "camera_body_provenance": "User statement relayed by hardware chat on 2026-10-17; not inferred calibration",
+  "calibration_state": "blocked_by_missing_calibration",
+  "lens_model": null,
+  "focal_length": null,
+  "focus_distance": null,
+  "lens_compensation": null,
+  "stabilization": null,
+  "HDMI_crop": null,
+  "actual_output_mode": null,
+  "K": null,
+  "k1_k2_p1_p2": null,
+  "policy": "Do not infer camera intrinsics/distortion from body model or an online R50 profile. Synthetic development may continue; measured camera acceptance stays blocked."
+}

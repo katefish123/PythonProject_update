@@ -1,0 +1,10 @@
+test_changed_reference_hash_rejects_software_evidence (test_acceptance_gate.AcceptanceGateTests.test_changed_reference_hash_rejects_software_evidence) ... ok
+test_current_H_only_release_cannot_satisfy_enterprise_lens_acceptance (test_acceptance_gate.AcceptanceGateTests.test_current_H_only_release_cannot_satisfy_enterprise_lens_acceptance) ... ok
+test_fresh_model_evidence_is_only_software_evidence (test_acceptance_gate.AcceptanceGateTests.test_fresh_model_evidence_is_only_software_evidence) ... ok
+test_missing_calibration_file_remains_explicit_data_gap (test_acceptance_gate.AcceptanceGateTests.test_missing_calibration_file_remains_explicit_data_gap) ... ok
+test_synthetic_pass_and_V5C_timing_never_grant_lens_qualification (test_acceptance_gate.AcceptanceGateTests.test_synthetic_pass_and_V5C_timing_never_grant_lens_qualification) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.013s
+
+OK
