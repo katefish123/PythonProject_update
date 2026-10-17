@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tables>
+    <table id="compile_source_files" title="Design Files Read" column_number="2">
+        <column_headers>
+            <data>File Name</data>
+            <data>File Type</data>
+        </column_headers>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7200_ctl.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7210_ctl.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/iic_dri.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v</data>
+            <data>Verilog</data>
+        </row>
+        <row>
+            <data>C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v</data>
+            <data>Verilog</data>
+        </row>
+    </table>
+    <table id="compile_runtime" title="Compile Runtime &amp; Memory" column_number="7">
+        <column_headers>
+            <data>Cpu Time</data>
+            <data>Process Cpu Time</data>
+            <data>Real Time</data>
+            <data>Peak Memory (MB)</data>
+            <data>Operation System</data>
+            <data>CPU</data>
+            <data>RAM(GB)</data>
+        </column_headers>
+        <row>
+            <data>0h:0m:1s</data>
+            <data>0h:0m:1s</data>
+            <data>0h:0m:3s</data>
+            <data>138</data>
+            <data>WINDOWS 10 x86_64</data>
+            <data>Unknown</data>
+            <data>15</data>
+        </row>
+    </table>
+    <table id="compile_messages" title="Compile Messages" column_number="1">
+        <column_headers/>
+        <row>
+            <data message="4">Enable Verilog2k features and keywords</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 6)] Analyzing module hdmi_link_probe_top (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v(line number: 2)] Analyzing module reset_sync (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v(line number: 6)] Analyzing module hdmi_config (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7200_ctl.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7200_ctl.v(line number: 43)] Analyzing module ms7200_ctl (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7210_ctl.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7210_ctl.v(line number: 22)] Analyzing module ms7210_ctl (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/iic_dri.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/iic_dri.v(line number: 23)] Analyzing module iic_dri (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v(line number: 5)] Analyzing module video_timing_vtc (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v(line number: 18)] Analyzing module video_pll_27m_148m5 (library work)</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0001: Analyzing file C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0002: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v(line number: 18)] Analyzing module config_pll_27m_10m (library work)</data>
+        </row>
+        <row>
+            <data message="4">Module &quot;hdmi_link_probe_top&quot; is set as top module.</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 6)] Elaborating module hdmi_link_probe_top</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 25)] Elaborating instance vp</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v(line number: 18)] Elaborating module video_pll_27m_148m5</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v(line number: 300)] Elaborating instance u_gpll</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 26)] Elaborating instance cp</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v(line number: 18)] Elaborating module config_pll_27m_10m</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v(line number: 300)] Elaborating instance u_gpll</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 30)] Elaborating instance cfg_reset</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v(line number: 2)] Elaborating module reset_sync</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 31)] Elaborating instance pix_reset</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v(line number: 2)] Elaborating module reset_sync</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 32)] Elaborating instance rx_reset</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v(line number: 2)] Elaborating module reset_sync</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 33)] Elaborating instance sys_reset</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v(line number: 2)] Elaborating module reset_sync</data>
+        </row>
+        <row>
+            <data message="5">Sdm-2008: The attribute named ASYNC_REG is not legal, then it has no effect, ignore its value.</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 43)] Elaborating instance config_bus</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v(line number: 6)] Elaborating module hdmi_config</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_link_probe_top/config_bus} parameter value:
+    TX_FIRST = 1'b1
+    CLK_FRE = 27'b000100110001001011010000000
+    IIC_FREQ = 20'b01100001101010000000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v(line number: 43)] Elaborating instance u_ms7200_rx</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7200_ctl.v(line number: 43)] Elaborating module ms7200_ctl</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_link_probe_top/config_bus/u_ms7200_rx} parameter value:
+    IDLE = 7'b0000001
+    CONECT = 7'b0000010
+    INIT = 7'b0000100
+    WAIT = 7'b0001000
+    STA_RD = 7'b0010000
+    SETING = 7'b0100000
+    RD_BAK = 7'b1000000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v(line number: 57)] Elaborating instance u_ms7210_tx</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/ms7210_ctl.v(line number: 22)] Elaborating module ms7210_ctl</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_link_probe_top/config_bus/u_ms7210_tx} parameter value:
+    IDLE = 6'b000001
+    CONECT = 6'b000010
+    INIT = 6'b000100
+    WAIT = 6'b001000
+    SETING = 6'b010000
+    STA_RD = 6'b100000</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/hdmi_config.v(line number: 78)] Elaborating instance u_iic_dri</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/rtl/hdmi/iic_dri.v(line number: 23)] Elaborating module iic_dri</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_link_probe_top/config_bus/u_iic_dri} parameter value:
+    CLK_FRE = 27'b000100110001001011010000000
+    IIC_FREQ = 20'b01100001101010000000
+    T_WR = 10'b0000000001
+    ADDR_BYTE = 2'b10
+    LEN_WIDTH = 8'b00000011
+    DATA_BYTE = 2'b01</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0004: [C:/D/FPGA/video_correct_integrated_20261008/rtl/top/hdmi_link_probe_top.v(line number: 182)] Elaborating instance timing</data>
+        </row>
+        <row>
+            <data message="4">Verilog-0003: [C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v(line number: 5)] Elaborating module video_timing_vtc</data>
+        </row>
+        <row>
+            <data message="4">Module instance {hdmi_link_probe_top/timing} parameter value:
+    H_SYNC = 12'b000000101100
+    H_BACK = 12'b000010010100
+    H_ACTIVE = 12'b011110000000
+    H_FRONT = 12'b000001011000
+    V_SYNC = 12'b000000000101
+    V_BACK = 12'b000000100100
+    V_ACTIVE = 12'b010000111000
+    V_FRONT = 12'b000000000100
+    HSYNC_ACTIVE = 1'b1
+    VSYNC_ACTIVE = 1'b1</data>
+        </row>
+        <row>
+            <data message="4">FSM state_fsm[6:0] inferred.</data>
+        </row>
+        <row>
+            <data message="4">FSM state_fsm[5:0] inferred.</data>
+        </row>
+        <row>
+            <data message="4">FSM state_fsm[2:0] inferred.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N57 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N64 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N70 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N78 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N85 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N92 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N150 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N24 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N27 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="4">Constant propagation done on N14 (bmsWIDEMUX).</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+        <row>
+            <data message="5">Loop was found during constant probe.</data>
+        </row>
+    </table>
+    <general_container id="compile_settings">
+        <table_container>
+            <table id="compile_settings" title="Compile Settings" column_number="2">
+                <column_headers>
+                    <data>Name</data>
+                    <data>Value</data>
+                </column_headers>
+                <row>
+                    <data>Part</data>
+                    <data>PG2L100H-6FBG676</data>
+                </row>
+                <row>
+                    <data>Top Module</data>
+                    <data>hdmi_link_probe_top</data>
+                </row>
+            </table>
+        </table_container>
+        <general_container align="3">
+            <table_container>
+                <data>Verilog</data>
+                <table id="" title="" column_number="2">
+                    <column_headers>
+                        <data>Name</data>
+                        <data>Value</data>
+                    </column_headers>
+                    <row>
+                        <data>SystemVerilog</data>
+                        <data>false</data>
+                    </row>
+                    <row>
+                        <data>Allow Duplicate Modules</data>
+                        <data>false</data>
+                    </row>
+                    <row>
+                        <data>Multiple File Compilation Unit</data>
+                        <data>true</data>
+                    </row>
+                    <row>
+                        <data>Include Path Order: 
+ (Relative to Verilog File)</data>
+                        <data>C:/D/FPGA/video_correct_integrated_20261008/results/hdmi_link_probe	</data>
+                    </row>
+                    <row>
+                        <data>Parameters/Generics</data>
+                        <data></data>
+                    </row>
+                    <row>
+                        <data>Compiler Directives</data>
+                        <data></data>
+                    </row>
+                    <row>
+                        <data>Loop Limit</data>
+                        <data>2000</data>
+                    </row>
+                </table>
+            </table_container>
+            <table_container>
+                <data>Options</data>
+                <table id="" title="" column_number="2">
+                    <column_headers>
+                        <data>Name</data>
+                        <data>Value</data>
+                    </column_headers>
+                    <row>
+                        <data>FSM Compiler</data>
+                        <data>auto</data>
+                    </row>
+                </table>
+            </table_container>
+        </general_container>
+    </general_container>
+</tables>

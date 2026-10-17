@@ -1,0 +1,8 @@
+Build result: PASS
+PDS exit code: 0
+Timing: C:\D\FPGA\video_correct_integrated_20261008\results\hdmi_link_i2c_probe\place_route\hdmi_link_i2c_probe_top_timing_summary_after_hold_fix.txt
+Bitstream: C:\D\FPGA\video_correct_integrated_20261008\results\hdmi_link_i2c_probe\generate_bitstream\hdmi_link_i2c_probe_top.sbit
+Bitstream SHA256: 6eca54c4693f9fe691ee2e34bab245d3f33642bc6fd4fb183d1ef1f0b4f4adae
+Matching mask: C:\D\FPGA\video_correct_integrated_20261008\results\hdmi_link_i2c_probe\generate_bitstream\hdmi_link_i2c_probe_top.smsk
+Mask SHA256: 019c4e1e3520e1132cef9f21c7d70d1ff472e72750a8cbb32c9679a68bd0c139
+PDS log: C:\D\FPGA\video_correct_integrated_20261008\results\hdmi_link_i2c_probe\build.log

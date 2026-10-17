@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-10-11T13:20:39.295517+00:00",
+  "original_video": "C:\\Users\\夏菲\\Videos\\2026-10-11 21-13-09.mp4",
+  "video_copy": "results\\hardware_20261009\\hires_corrected_camera_20261011_211309.mp4",
+  "video_sha256": "dbc1e36ed7a2433e071bc0b3f7210e296c681085dba804dffcdb78da7956c946",
+  "image": "release/ddr_camera_hires_20261011/video_correct_ddr_top.sbit",
+  "image_sha256": "7aed1ed5af2d32994a620f7bd3f198253365ceeccd967528daa6694e52dac2e0",
+  "decoded_frames": 1327,
+  "decode_succeeded": true,
+  "white_page_candidate_frames": 0,
+  "black_like_window_frames": 1019,
+  "first_white_page_frame": null,
+  "last_white_page_frame": null,
+  "non_page_frames_after_first_page": null,
+  "black_like_frames_after_first_page": null,
+  "minimum_outside_window_dark_ratio_during_page": null,
+  "largest_successive_roi_mean_difference": 88.16944444444445,
+  "frames_requiring_visual_check": [],
+  "full_page_visually_checked": false,
+  "continuous_real_correction_update_accepted": false,
+  "algorithm_update_fps_measured": false,
+  "limit": "Candidate detection on actual OBS video, requiring visual review of the full prescribed rectangle. Stable held frame is allowed and cannot establish live update FPS. Encoded recording rate is not algorithm throughput."
+}

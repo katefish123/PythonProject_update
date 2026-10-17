@@ -1,0 +1,70 @@
+{
+  "utc": "2026-10-10T14:41:10.171953+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "tests": {
+    "utc": "2026-10-10T14:38:27.8927360Z",
+    "tests": {
+      "pixels_normal": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "PASS_NATIVE_ALL_PIXELS"
+        ]
+      },
+      "pixels_missing_vs": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "PASS_NATIVE_ALL_PIXELS"
+        ]
+      },
+      "real_config": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_CONFIG",
+          "TEST_PASS_OPEN_DRAIN",
+          "TEST_PASS_BOOTSTRAP_NACK_RECOVERY",
+          "TEST_PASS_POSTPROBE_NACK_FATAL",
+          "TEST_PASS_NO_DEVICE"
+        ]
+      },
+      "real_reconnect": {
+        "passed": true,
+        "exit_code": 0,
+        "completion": [
+          "TEST_PASS_INITIAL_LOCK",
+          "TEST_PASS_NO_SIGNAL_NO_WRITES",
+          "TEST_PASS_RELOCK",
+          "TEST_PASS_LOCKED_MODE_BIT_CHANGE_NO_WRITES",
+          "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+        ]
+      }
+    },
+    "hardware_accepted": false
+  },
+  "native_rgb888_every_pixel": true,
+  "downsample_or_upscale": false,
+  "frame_buffer_or_ddr": false,
+  "input_format_target": "1920x1080 progressive at 59.94/60 Hz",
+  "output_clock": "Actual receiver pixel clock forwarded to transmitter",
+  "config_order": "TX first; preserve receiver polling after initialization",
+  "hardware_programmed": false,
+  "actual_camera_display_accepted": false,
+  "flash_modified": false,
+  "files": {
+    "build_run.log": "3ab9e54348406d2e94658e94f13f056da54721e2c7abcd6fb44be3e481234ac0",
+    "camera_live_native_top.sbit": "00e696c084513c48465ad22662585d862a7d30cc76efb0c998d70a98bb388b53",
+    "camera_live_native_top.smsk": "c08c571dbfc9366925b6828101d6a2da5b2d32754cf9b8d2afdb854dae984b7f",
+    "camera_live_native_top_timing_summary_after_hold_fix.txt": "fb8fff3f66fc54c9a2aad0dd3a92362065781aa03d3a1383d9b072ac78ae10fb",
+    "pixels_missing_vs.run.log": "3a8058fd7082eb6eea273028f7d4cbedea719243e47a8c28e4dbcf3fb3e449f9",
+    "pixels_normal.run.log": "aa4e25bae86767b137936f00d47e96f72fd60de4f12fa5395b99e0b01a439e79",
+    "provenance.json": "92f59915fbfe773c5a31afc78e3c56858504b09d55bc4b1f9177ca2b95e3b3bf",
+    "real_config.run.log": "bb36ae63f633c925b0c8ea7c4a1214103e3fc55dafd38ad8019779a77abd2feb",
+    "real_reconnect.run.log": "9424f38ed05c5cbfc8e8af352fd8ad501a497fa16277d09388f3dca133d93f32",
+    "simulation_qualification.json": "2bf508f88f28b3e3b3bc5fbb50af5a3eceac09e628a707077de356c9eb7d87fd",
+    "source_hashes.json": "a2801d53112e76dadf3d766e34d9c34bb9ead1275ab9a99fbc96bc695f8fff66",
+    "source_snapshot.zip": "14e49c32e5c3e869ff82369e5107b341905afde826cb992b15bd589c29e08545"
+  }
+}

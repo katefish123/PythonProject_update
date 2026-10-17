@@ -1,0 +1,68 @@
+Executing : cfg_help
+List all support commands as below:
+cfg_help
+cfg_connect
+cfg_disconnect
+cfg_set_delay_time
+cfg_close
+cfg_set_cable_property
+cfg_set_tcl_break
+cfg_set_options
+cfg_set_device_property
+cfg_scan_chain
+cfg_assign_file
+cfg_program
+cfg_program_key_file
+cfg_readback
+cfg_verify
+cfg_read_device_property
+cfg_reset_fpga
+cfg_operate_ctl
+cfg_operate_eflash
+cfg_read_register
+cfg_write_register
+cfg_debug_operate
+cfg_efuse_lock
+cfg_program_user_efuse
+cfg_jtag_flash_scan_device
+cfg_jtag_flash_assign_file
+cfg_jtag_flash_program
+cfg_jtag_flash_erase
+cfg_jtag_flash_readback
+cfg_jtag_flash_verify
+cfg_add_device
+cfg_remove_device
+cfg_remove_devices
+cfg_remove_all_devices
+cfg_flash_scan_device
+cfg_flash_assign_file
+cfg_flash_program
+cfg_flash_erase
+cfg_flash_readback
+cfg_flash_verify
+cfg_flash_remove_device
+cfg_flash_read_register
+cfg_flash_write_register
+cfg_flash_special_operate
+cfg_load_excite
+cfg_load_dir
+cfg_write_all_tcl_file
+cfg_write_all_report_file
+cfg_write_auto_test
+cfg_gen_sfc
+cfg_gen_chain_file
+cfg_gen_multi_file
+cfg_svf_to_pef
+cfg_modify_sbit
+cfg_one_step_create_svf
+cfg_execute_svf
+cfg_create_chain_svf
+cfg_pef_to_svf
+cfg_switch_flatten_svf
+cfg_gen_backup_sfc
+cfg_gen_remote_backup_sfc
+to get usage of each command, 
+ please input the command name in the tcl console.
+Executing : cfg_help successfully.
+Executing : cfg_close
+Executing : cfg_close successfully.

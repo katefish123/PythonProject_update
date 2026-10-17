@@ -1,0 +1,57 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261014_black\black_camera_2026-10-14 01-14-46.mp4':
+  Metadata:
+    major_brand     : iso4
+    minor_version   : 0
+    compatible_brands: iso4isomobs1iso2avc1mp41
+    creation_time   : 2026-10-13T17:14:46.000000Z
+    encoder         : OBS Studio (32.2.2)
+  Duration: 00:00:40.97, start: 0.000000, bitrate: 6011 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 6000 kb/s, 30 fps, 30 tbr, 30 tbn (default)
+      Metadata:
+        creation_time   : 2026-10-13T17:14:46.000000Z
+        handler_name    : OBS Video Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : obs_nvenc_h264_tex
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+      Metadata:
+        creation_time   : 2026-10-13T17:14:46.000000Z
+        handler_name    : OBS Audio Handler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+[libx264 @ 00000258da22ce80] using SAR=1/1
+[libx264 @ 00000258da22ce80] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2 AVX512
+[libx264 @ 00000258da22ce80] profile High, level 3.1, 4:2:0, 8-bit
+[libx264 @ 00000258da22ce80] 264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.videolan.org/x264.html - options: cabac=1 ref=1 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=2 psy=1 psy_rd=1.00:0.00 mixed_ref=0 me_range=16 chroma_me=1 trellis=0 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=0 threads=28 lookahead_threads=7 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=1 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=10 rc=crf mbtree=1 crf=18.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'C:\D\FPGA\video_correct_integrated_20261008\results\成果展示_20261014\黑标校正_旧版真实上板演示.mp4':
+  Metadata:
+    major_brand     : iso4
+    minor_version   : 0
+    compatible_brands: iso4isomobs1iso2avc1mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 640x904 [SAR 1:1 DAR 80:113], q=2-31, 30 fps, 15360 tbn (default)
+      Metadata:
+        creation_time   : 2026-10-13T17:14:46.000000Z
+        handler_name    : OBS Video Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 libx264
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=  349 fps=0.0 q=24.0 size=    1024KiB time=00:00:11.56 bitrate= 725.3kbits/s speed=22.7x    frame=  921 fps=900 q=24.0 size=    1792KiB time=00:00:30.63 bitrate= 479.2kbits/s speed=29.9x    [mp4 @ 00000258da204dc0] Starting second pass: moving the moov atom to the beginning of the file
+[out#0/mp4 @ 00000258da221c80] video:1946KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.635426%
+frame=  981 fps=933 q=-1.0 Lsize=    1958KiB time=00:00:32.63 bitrate= 491.6kbits/s speed=  31x    
+[libx264 @ 00000258da22ce80] frame I:4     Avg QP:13.59  size: 85430
+[libx264 @ 00000258da22ce80] frame P:308   Avg QP:14.45  size:  5208
+[libx264 @ 00000258da22ce80] frame B:669   Avg QP:21.48  size:    69
+[libx264 @ 00000258da22ce80] consecutive B-frames:  0.7% 24.7%  1.2% 73.4%
+[libx264 @ 00000258da22ce80] mb I  I16..4: 21.2% 15.6% 63.2%
+[libx264 @ 00000258da22ce80] mb P  I16..4:  0.7%  1.6%  1.2%  P16..4: 13.3%  1.1%  1.1%  0.0%  0.0%    skip:81.0%
+[libx264 @ 00000258da22ce80] mb B  I16..4:  0.0%  0.0%  0.0%  B16..8:  0.1%  0.0%  0.0%  direct: 0.9%  skip:99.0%  L0: 5.5% L1:94.2% BI: 0.2%
+[libx264 @ 00000258da22ce80] 8x8 transform intra:37.0% inter:29.4%
+[libx264 @ 00000258da22ce80] coded y,uvDC,uvAC intra: 96.4% 76.8% 59.7% inter: 1.9% 2.8% 0.2%
+[libx264 @ 00000258da22ce80] i16 v,h,dc,p: 26% 10% 53% 11%
+[libx264 @ 00000258da22ce80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 33% 10% 29%  4%  3%  5%  2%  8%  6%
+[libx264 @ 00000258da22ce80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 35% 16% 17%  6%  4%  6%  3%  6%  6%
+[libx264 @ 00000258da22ce80] i8c dc,h,v,p: 51% 12% 33%  4%
+[libx264 @ 00000258da22ce80] Weighted P-Frames: Y:1.6% UV:1.0%
+[libx264 @ 00000258da22ce80] kb/s:487.38

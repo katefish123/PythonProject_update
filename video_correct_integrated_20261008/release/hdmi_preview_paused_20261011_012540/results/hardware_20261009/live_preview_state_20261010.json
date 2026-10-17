@@ -1,0 +1,21 @@
+{
+  "utc": "2026-10-10T11:29:12.669291+00:00",
+  "priority": "Camera live view through FPGA before correction",
+  "last_verified_programmed_image": "diagnostics/camera_passthrough_rx_first/results/generate_bitstream/hdmi_camera_passthrough_rx_first_top.sbit",
+  "last_verified_programmed_sha256": "cf1ddcbdb7a8dbd1c81671d111c711e2527fa03a2b9c8524c476744327b68299",
+  "program_verify_passed": true,
+  "program_log": "results\\hardware_20261009\\program_camera_live_retry_20261010.log",
+  "capture_device_present": false,
+  "capture_evidence": "OBS 19:15:35 GetDevice failed; two read-only ProcAmp enumerations found=false; all DirectShow video devices list only ASUS FHD webcam",
+  "key0_after_latest_program_confirmation_pending": true,
+  "raw_bram_preview_release": "release/camera_live_bram_20261010",
+  "raw_bram_preview_simulations_passed": true,
+  "raw_bram_preview_timing_passed": true,
+  "raw_bram_preview_sha256": "00f3a1aec7c75893ba2ecccb09578379512f8f8d92b6a2d765bc53cea3cc1816",
+  "raw_bram_preview_programmed": false,
+  "actual_camera_display_accepted": false,
+  "actual_camera_correction_accepted": false,
+  "esc_behavior_modified": false,
+  "flash_modified": false,
+  "pending": "User reconnect capture USB and confirm KEY0; inspect native passthrough; then qualified fixed-clock BRAM preview if needed"
+}

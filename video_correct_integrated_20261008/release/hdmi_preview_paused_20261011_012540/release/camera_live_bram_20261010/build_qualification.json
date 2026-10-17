@@ -1,0 +1,25 @@
+{
+  "utc": "2026-10-10T11:26:40.824517+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "actual_camera_display_accepted": false,
+  "capture_size": [
+    320,
+    180
+  ],
+  "output_size": [
+    1920,
+    1080
+  ],
+  "output_hz": 60,
+  "flash_modified": false,
+  "files": {
+    "build_registered_output.log": "d5b4a62fe3038311d73abb7e7b82c477ad48aa712713d2a3ea9aef0d149198d8",
+    "camera_live_bram_top.sbit": "00f3a1aec7c75893ba2ecccb09578379512f8f8d92b6a2d765bc53cea3cc1816",
+    "camera_live_bram_top.smsk": "ccd45cc64c1443b2f1e3f745b5d053bc78c92882eab94d1988551bd063dda61c",
+    "camera_live_bram_top_timing_summary_after_hold_fix.txt": "f17ded276ad2cf053612c0f5d5da8cdadc46fbed0f782ceedd8345423f9d2387",
+    "simulation_qualification.json": "efd070f4b305676c5d0bc3a6a9a85396ce3283697f9df09d7eec5a637fe3c58f",
+    "source_hashes.json": "a7e7408bec4366ed8a4c127744b1f2809cf2cbcd0a799e02142b8ba1755a624c",
+    "source_snapshot.zip": "f204e1c9175a5c7d548824ed200c0352fec4b438c713015ebb826d0cfbaa4e9d"
+  }
+}

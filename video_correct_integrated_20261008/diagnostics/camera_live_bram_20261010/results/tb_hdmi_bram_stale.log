@@ -1,0 +1,37 @@
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_tb_hdmi_bram_stale work_tb_hdmi_bram_stale 
+# Modifying C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_live_bram_20261010\results\modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 19:23:27 on Oct 10,2026
+# vlog -sv -work work_tb_hdmi_bram_stale hdmi_bram_probe.v tb_hdmi_bram_stale.v 
+# -- Compiling module hdmi_bram_probe
+# -- Compiling module tb_hdmi_bram_stale
+# 
+# Top level modules:
+# 	tb_hdmi_bram_stale
+# End time: 19:23:27 on Oct 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf tb_hdmi_bram_stale.wlf work_tb_hdmi_bram_stale.tb_hdmi_bram_stale 
+# Start time: 19:23:27 on Oct 10,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_hdmi_bram_stale(fast)
+# Loading work.hdmi_bram_probe(fast)
+# PASS_BRAM_STALE_TIMEOUT_AND_RECOVERY
+# ** Note: $finish    : tb_hdmi_bram_stale.v(43)
+#    Time: 1004 ns  Iteration: 0  Instance: /tb_hdmi_bram_stale
+# End time: 19:23:28 on Oct 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

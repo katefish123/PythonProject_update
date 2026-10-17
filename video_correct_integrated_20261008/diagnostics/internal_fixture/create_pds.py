@@ -1,0 +1,10 @@
+from pathlib import Path
+root=Path(r'C:\D\FPGA\video_correct_integrated_20261008')
+base=(root/'pds/build_board_ddr.tcl').read_text()
+base=base.replace('/rtl/hdmi/hdmi_config.v','/reference/baselines/ddr_before_hdmi_startup_fix/rtl/hdmi/hdmi_config.v')
+base=base.replace('/rtl/hdmi/iic_dri.v','/reference/baselines/ddr_before_hdmi_startup_fix/rtl/hdmi/iic_dri.v')
+base=base.replace('/rtl/hdmi/ms7200_ctl.v','/reference/baselines/ddr_before_hdmi_startup_fix/rtl/hdmi/ms7200_ctl.v')
+base=base.replace('/rtl/hdmi/ms7210_ctl.v','/reference/baselines/ddr_before_hdmi_startup_fix/rtl/hdmi/ms7210_ctl.v')
+base=base.replace('/rtl/top/video_correct_ddr_top.v','/diagnostics/internal_fixture/video_correct_ddr_internal_fixture_top.v')
+base=base.replace('compile -top_module video_correct_ddr_top','add_design {C:/D/FPGA/video_correct_integrated_20261008/diagnostics/internal_fixture/internal_fixture_video.v}\ncompile -top_module video_correct_ddr_internal_fixture_top')
+(root/'diagnostics/internal_fixture/pds/build_internal_fixture.tcl').write_text(base)

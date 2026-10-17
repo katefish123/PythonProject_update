@@ -1,0 +1,3 @@
+Prepared isolated first-NACK build with 9 HDL sources and 69 pins.
+FDC: C:\D\FPGA\video_correct_integrated_20261008\results\hdmi_link_i2c_probe_v2\hdmi_link_i2c_probe_v2.fdc
+PDS flow: C:\D\FPGA\video_correct_integrated_20261008\results\hdmi_link_i2c_probe_v2\build_hdmi_link_i2c_probe_v2.tcl

@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-10-14T02:48:04.9048721Z",
+  "user_reported_fan_present": false,
+  "user_reported_heatsink_present": true,
+  "current_temperature_measured": false,
+  "temperature_tool_check": "TEMPERATURE_TOOL_CHECK_PASS",
+  "sealed_release_check": "BLACK_RELEASE_CHECK_PASS",
+  "gui_opened_by_assistant": false,
+  "jtag_scan_performed": false,
+  "new_program_downloaded": false,
+  "thermal_cause_confirmed": false,
+  "helper_sha256": "4d2b4f675510391c0aac1139800969e06044972b83545e48748cdf3b92667170"
+}

@@ -1,0 +1,1799 @@
+[Info] [2026-10-9 10:46:00] /***************************Start Configuration***************************/
+[Info] [2026-10-9 10:46:00] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-9 10:46:00] Version: 146967
+[Info] [2026-10-9 10:46:02] Current Path: C:/D/FPGA/video_correct_integrated_20261008/results/hardware_20261009
+[Info] [2026-10-9 10:46:02] PDS Dir Path: C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009
+[Debug] [2026-10-9 10:46:02] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-9 10:46:02] end to check the cfg_connect exec condition.
+[Debug] [2026-10-9 10:46:02] Client Local host name:???????
+[Debug] [2026-10-9 10:46:02] Client Local Address:100.120.230.10
+[Debug] [2026-10-9 10:46:02] Client Local Address:10.70.26.139
+[Debug] [2026-10-9 10:46:02] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-9 10:46:02] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-9 10:46:02] Finish.
+[Info] [2026-10-9 10:46:02] Connect server succeeded
+[Debug] [2026-10-9 10:46:02] Send RPC:1
+[Debug] [2026-10-9 10:46:02] Send cmd [check version information:40004] OK
+[Debug] [2026-10-9 10:46:02] Send RPC:2
+[Debug] [2026-10-9 10:46:02] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-9 10:46:02] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-9 10:46:03] COMMAND[get_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-9 10:46:04] cfg_connect succeed.
+[Debug] [2026-10-9 10:46:04] Send RPC:3
+[Debug] [2026-10-9 10:46:04] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-9 10:46:05] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-9 10:46:05] cfg_set_cable_property succeed.
+[Debug] [2026-10-9 10:46:06] Send RPC:4
+[Debug] [2026-10-9 10:46:06] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-9 10:46:06] begin the exec of open cable cmd...
+[Debug] [2026-10-9 10:46:06] Begin to deal with chain from server...
+[Debug] [2026-10-9 10:46:06] Begin to set user chain...
+[Debug] [2026-10-9 10:46:06] End to set user chain.
+[Debug] [2026-10-9 10:46:06] end the exec of open cable cmd.
+[Debug] [2026-10-9 10:46:06] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-9 10:46:07] cfg_scan_chain succeed.
+[Debug] [2026-10-9 10:46:07] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-9 10:46:07] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-9 10:46:07] begin to get device info from CFG file...
+[Debug] [2026-10-9 10:46:07] end to get device info from CFG file...
+[Debug] [2026-10-9 10:46:07] cfg_assign_file succeed.
+[Debug] [2026-10-9 10:46:08] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-9 10:46:08] Begin to check mask file.
+[Debug] [2026-10-9 10:46:08] End to check mask file.
+[Debug] [2026-10-9 10:46:08] end to check the cfg_verify exec condition.
+[Debug] [2026-10-9 10:46:08] Send RPC:5
+[Debug] [2026-10-9 10:46:08] Begin to send verify data.
+[Debug] [2026-10-9 10:46:08] End to send verify data.
+[Debug] [2026-10-9 10:46:08] Send cmd [Verify:20004] OK
+[Debug] [2026-10-9 10:46:08] The value of Progress is 6
+[Debug] [2026-10-9 10:46:09] The value of Progress is 10
+[Debug] [2026-10-9 10:46:09] The value of Progress is 15
+[Debug] [2026-10-9 10:46:10] The value of Progress is 20
+[Debug] [2026-10-9 10:46:10] The value of Progress is 25
+[Debug] [2026-10-9 10:46:10] The value of Progress is 30
+[Debug] [2026-10-9 10:46:11] The value of Progress is 35
+[Debug] [2026-10-9 10:46:11] The value of Progress is 40
+[Debug] [2026-10-9 10:46:11] The value of Progress is 45
+[Debug] [2026-10-9 10:46:12] The value of Progress is 50
+[Debug] [2026-10-9 10:46:12] The value of Progress is 55
+[Debug] [2026-10-9 10:46:12] The value of Progress is 60
+[Debug] [2026-10-9 10:46:13] The value of Progress is 65
+[Debug] [2026-10-9 10:46:13] The value of Progress is 70
+[Debug] [2026-10-9 10:46:14] The value of Progress is 75
+[Debug] [2026-10-9 10:46:14] The value of Progress is 80
+[Debug] [2026-10-9 10:46:14] The value of Progress is 85
+[Debug] [2026-10-9 10:46:15] The value of Progress is 90
+[Debug] [2026-10-9 10:46:15] The value of Progress is 95
+[Error] [2026-10-9 10:46:16] fail to exec Verify cmd...
+[Error] [2026-10-9 10:46:17] cfg_verify failed.
+[Info] [2026-10-9 10:46:17] /***************************End Configration***************************/
+[Info] [2026-10-9 10:49:07] /***************************Start Configuration***************************/
+[Info] [2026-10-9 10:49:07] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-9 10:49:07] Version: 146967
+[Info] [2026-10-9 10:49:08] Current Path: C:/D/FPGA/video_correct_integrated_20261008/results/hardware_20261009
+[Info] [2026-10-9 10:49:08] PDS Dir Path: C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009
+[Debug] [2026-10-9 10:49:08] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-9 10:49:08] end to check the cfg_connect exec condition.
+[Debug] [2026-10-9 10:49:08] Client Local host name:???????
+[Debug] [2026-10-9 10:49:08] Client Local Address:100.120.230.10
+[Debug] [2026-10-9 10:49:08] Client Local Address:10.70.26.139
+[Debug] [2026-10-9 10:49:08] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-9 10:49:08] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-9 10:49:08] Finish.
+[Info] [2026-10-9 10:49:08] Connect server succeeded
+[Debug] [2026-10-9 10:49:08] Send RPC:1
+[Debug] [2026-10-9 10:49:08] Send cmd [check version information:40004] OK
+[Debug] [2026-10-9 10:49:08] Send RPC:2
+[Debug] [2026-10-9 10:49:08] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-9 10:49:08] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-9 10:49:09] COMMAND[get_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-9 10:49:10] cfg_connect succeed.
+[Debug] [2026-10-9 10:49:10] Send RPC:3
+[Debug] [2026-10-9 10:49:10] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-9 10:49:11] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-9 10:49:11] cfg_set_cable_property succeed.
+[Debug] [2026-10-9 10:49:12] Send RPC:4
+[Debug] [2026-10-9 10:49:12] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-9 10:49:13] begin the exec of open cable cmd...
+[Debug] [2026-10-9 10:49:13] Begin to deal with chain from server...
+[Debug] [2026-10-9 10:49:13] Begin to set user chain...
+[Debug] [2026-10-9 10:49:13] End to set user chain.
+[Debug] [2026-10-9 10:49:13] end the exec of open cable cmd.
+[Debug] [2026-10-9 10:49:13] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-9 10:49:13] cfg_scan_chain succeed.
+[Debug] [2026-10-9 10:49:13] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-9 10:49:13] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-9 10:49:13] begin to get device info from CFG file...
+[Debug] [2026-10-9 10:49:13] end to get device info from CFG file...
+[Debug] [2026-10-9 10:49:13] cfg_assign_file succeed.
+[Debug] [2026-10-9 10:49:14] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-9 10:49:14] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-9 10:49:14] cfg_set_device_property succeed.
+[Debug] [2026-10-9 10:49:14] begin to check the cfg_program exec condition.
+[Debug] [2026-10-9 10:49:14] end to check the cfg_program exec condition.
+[Debug] [2026-10-9 10:49:14] Send RPC:5
+[Debug] [2026-10-9 10:49:14] Begin to send program data.
+[Debug] [2026-10-9 10:49:14] End to send program data.
+[Debug] [2026-10-9 10:49:14] Send cmd [Program:20002] OK
+[Debug] [2026-10-9 10:49:15] The value of Progress is 6
+[Debug] [2026-10-9 10:49:15] The value of Progress is 10
+[Debug] [2026-10-9 10:49:15] The value of Progress is 15
+[Debug] [2026-10-9 10:49:16] The value of Progress is 20
+[Debug] [2026-10-9 10:49:16] The value of Progress is 25
+[Debug] [2026-10-9 10:49:16] The value of Progress is 30
+[Debug] [2026-10-9 10:49:16] The value of Progress is 35
+[Debug] [2026-10-9 10:49:17] The value of Progress is 40
+[Debug] [2026-10-9 10:49:17] The value of Progress is 45
+[Debug] [2026-10-9 10:49:17] The value of Progress is 50
+[Debug] [2026-10-9 10:49:18] The value of Progress is 55
+[Debug] [2026-10-9 10:49:18] The value of Progress is 60
+[Debug] [2026-10-9 10:49:18] The value of Progress is 65
+[Debug] [2026-10-9 10:49:19] The value of Progress is 70
+[Debug] [2026-10-9 10:49:19] The value of Progress is 75
+[Debug] [2026-10-9 10:49:19] The value of Progress is 80
+[Debug] [2026-10-9 10:49:20] The value of Progress is 85
+[Debug] [2026-10-9 10:49:20] The value of Progress is 90
+[Debug] [2026-10-9 10:49:20] The value of Progress is 95
+[Debug] [2026-10-9 10:49:21] The value of Progress is 100
+[Debug] [2026-10-9 10:49:21] COMMAND[Program] execute successfully, takes 6.9 secs.
+[Debug] [2026-10-9 10:49:21] cfg_program succeed.
+[Debug] [2026-10-9 10:49:21] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-9 10:49:21] Begin to check mask file.
+[Debug] [2026-10-9 10:49:21] End to check mask file.
+[Debug] [2026-10-9 10:49:21] end to check the cfg_verify exec condition.
+[Debug] [2026-10-9 10:49:21] Send RPC:6
+[Debug] [2026-10-9 10:49:21] Begin to send verify data.
+[Debug] [2026-10-9 10:49:21] End to send verify data.
+[Debug] [2026-10-9 10:49:21] Send cmd [Verify:20004] OK
+[Debug] [2026-10-9 10:49:22] The value of Progress is 6
+[Debug] [2026-10-9 10:49:23] The value of Progress is 10
+[Debug] [2026-10-9 10:49:23] The value of Progress is 15
+[Debug] [2026-10-9 10:49:23] The value of Progress is 20
+[Debug] [2026-10-9 10:49:24] The value of Progress is 25
+[Debug] [2026-10-9 10:49:24] The value of Progress is 30
+[Debug] [2026-10-9 10:49:24] The value of Progress is 35
+[Debug] [2026-10-9 10:49:25] The value of Progress is 40
+[Debug] [2026-10-9 10:49:25] The value of Progress is 45
+[Debug] [2026-10-9 10:49:26] The value of Progress is 50
+[Debug] [2026-10-9 10:49:26] The value of Progress is 55
+[Debug] [2026-10-9 10:49:26] The value of Progress is 60
+[Debug] [2026-10-9 10:49:27] The value of Progress is 65
+[Debug] [2026-10-9 10:49:27] The value of Progress is 70
+[Debug] [2026-10-9 10:49:27] The value of Progress is 75
+[Debug] [2026-10-9 10:49:28] The value of Progress is 80
+[Debug] [2026-10-9 10:49:28] The value of Progress is 85
+[Debug] [2026-10-9 10:49:29] The value of Progress is 90
+[Debug] [2026-10-9 10:49:29] The value of Progress is 95
+[Debug] [2026-10-9 10:49:30] COMMAND[Verify] execute successfully, takes 8.1 secs.
+[Debug] [2026-10-9 10:49:31] cfg_verify succeed.
+[Debug] [2026-10-9 10:49:31] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-9 10:49:31] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-9 10:49:31] Send RPC:7
+[Debug] [2026-10-9 10:49:31] Send cmd [Read status:20005] OK
+[Debug] [2026-10-9 10:49:32] begin the exec of get device property cmd...
+[Debug] [2026-10-9 10:49:32] read status exec:
+[Debug] [2026-10-9 10:49:32] Begin to show read status register result...
+[Debug] [2026-10-9 10:49:32] End to show read status register result.
+[Debug] [2026-10-9 10:49:32] end the exec of get device property cmd.
+[Debug] [2026-10-9 10:49:32] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-9 10:49:32] cfg_read_device_property succeed.
+[Info] [2026-10-9 10:49:33] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-9 10:49:33] Server is disconnected
+[Debug] [2026-10-9 10:49:33] end to connect server
+[Debug] [2026-10-9 10:49:33] cfg_disconnect succeed.
+[Info] [2026-10-9 10:49:33] /***************************End Configration***************************/
+[Info] [2026-10-9 11:11:16] /***************************Start Configuration***************************/
+[Info] [2026-10-9 11:11:16] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-9 11:11:16] Version: 146967
+[Info] [2026-10-9 11:11:17] Current Path: C:/D/FPGA/video_correct_integrated_20261008/results/hardware_20261009
+[Info] [2026-10-9 11:11:17] PDS Dir Path: C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009
+[Debug] [2026-10-9 11:11:17] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-9 11:11:17] end to check the cfg_connect exec condition.
+[Debug] [2026-10-9 11:11:17] Client Local host name:???????
+[Debug] [2026-10-9 11:11:17] Client Local Address:100.120.230.10
+[Debug] [2026-10-9 11:11:17] Client Local Address:10.70.26.139
+[Debug] [2026-10-9 11:11:17] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-9 11:11:17] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-9 11:11:17] Finish.
+[Info] [2026-10-9 11:11:17] Connect server succeeded
+[Debug] [2026-10-9 11:11:17] Send RPC:1
+[Debug] [2026-10-9 11:11:17] Send cmd [check version information:40004] OK
+[Debug] [2026-10-9 11:11:17] Send RPC:2
+[Debug] [2026-10-9 11:11:17] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-9 11:11:17] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-9 11:11:19] COMMAND[get_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-9 11:11:19] cfg_connect succeed.
+[Debug] [2026-10-9 11:11:20] Send RPC:3
+[Debug] [2026-10-9 11:11:20] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-9 11:11:21] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-9 11:11:21] cfg_set_cable_property succeed.
+[Debug] [2026-10-9 11:11:21] Send RPC:4
+[Debug] [2026-10-9 11:11:21] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-9 11:11:22] begin the exec of open cable cmd...
+[Debug] [2026-10-9 11:11:22] Begin to deal with chain from server...
+[Debug] [2026-10-9 11:11:22] Begin to set user chain...
+[Debug] [2026-10-9 11:11:22] End to set user chain.
+[Debug] [2026-10-9 11:11:22] end the exec of open cable cmd.
+[Debug] [2026-10-9 11:11:22] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-9 11:11:22] cfg_scan_chain succeed.
+[Debug] [2026-10-9 11:11:23] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-9 11:11:23] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-9 11:11:23] begin to get device info from CFG file...
+[Debug] [2026-10-9 11:11:23] end to get device info from CFG file...
+[Debug] [2026-10-9 11:11:23] cfg_assign_file succeed.
+[Debug] [2026-10-9 11:11:23] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-9 11:11:23] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-9 11:11:23] cfg_set_device_property succeed.
+[Debug] [2026-10-9 11:11:23] begin to check the cfg_program exec condition.
+[Debug] [2026-10-9 11:11:23] end to check the cfg_program exec condition.
+[Debug] [2026-10-9 11:11:23] Send RPC:5
+[Debug] [2026-10-9 11:11:23] Begin to send program data.
+[Debug] [2026-10-9 11:11:23] End to send program data.
+[Debug] [2026-10-9 11:11:23] Send cmd [Program:20002] OK
+[Debug] [2026-10-9 11:11:24] The value of Progress is 6
+[Debug] [2026-10-9 11:11:24] The value of Progress is 10
+[Debug] [2026-10-9 11:11:25] The value of Progress is 15
+[Debug] [2026-10-9 11:11:25] The value of Progress is 20
+[Debug] [2026-10-9 11:11:25] The value of Progress is 25
+[Debug] [2026-10-9 11:11:26] The value of Progress is 30
+[Debug] [2026-10-9 11:11:26] The value of Progress is 35
+[Debug] [2026-10-9 11:11:26] The value of Progress is 40
+[Debug] [2026-10-9 11:11:27] The value of Progress is 45
+[Debug] [2026-10-9 11:11:27] The value of Progress is 50
+[Debug] [2026-10-9 11:11:27] The value of Progress is 55
+[Debug] [2026-10-9 11:11:28] The value of Progress is 60
+[Debug] [2026-10-9 11:11:28] The value of Progress is 65
+[Debug] [2026-10-9 11:11:28] The value of Progress is 70
+[Debug] [2026-10-9 11:11:28] The value of Progress is 75
+[Debug] [2026-10-9 11:11:29] The value of Progress is 80
+[Debug] [2026-10-9 11:11:29] The value of Progress is 85
+[Debug] [2026-10-9 11:11:29] The value of Progress is 90
+[Debug] [2026-10-9 11:11:30] The value of Progress is 95
+[Debug] [2026-10-9 11:11:30] The value of Progress is 100
+[Debug] [2026-10-9 11:11:30] COMMAND[Program] execute successfully, takes 6.9 secs.
+[Debug] [2026-10-9 11:11:30] cfg_program succeed.
+[Debug] [2026-10-9 11:11:31] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-9 11:11:31] Begin to check mask file.
+[Debug] [2026-10-9 11:11:31] End to check mask file.
+[Debug] [2026-10-9 11:11:31] end to check the cfg_verify exec condition.
+[Debug] [2026-10-9 11:11:31] Send RPC:6
+[Debug] [2026-10-9 11:11:31] Begin to send verify data.
+[Debug] [2026-10-9 11:11:31] End to send verify data.
+[Debug] [2026-10-9 11:11:31] Send cmd [Verify:20004] OK
+[Debug] [2026-10-9 11:11:32] The value of Progress is 6
+[Debug] [2026-10-9 11:11:32] The value of Progress is 10
+[Debug] [2026-10-9 11:11:32] The value of Progress is 15
+[Debug] [2026-10-9 11:11:33] The value of Progress is 20
+[Debug] [2026-10-9 11:11:33] The value of Progress is 25
+[Debug] [2026-10-9 11:11:34] The value of Progress is 30
+[Debug] [2026-10-9 11:11:34] The value of Progress is 35
+[Debug] [2026-10-9 11:11:34] The value of Progress is 40
+[Debug] [2026-10-9 11:11:35] The value of Progress is 45
+[Debug] [2026-10-9 11:11:35] The value of Progress is 50
+[Debug] [2026-10-9 11:11:35] The value of Progress is 55
+[Debug] [2026-10-9 11:11:36] The value of Progress is 60
+[Debug] [2026-10-9 11:11:36] The value of Progress is 65
+[Debug] [2026-10-9 11:11:37] The value of Progress is 70
+[Debug] [2026-10-9 11:11:37] The value of Progress is 75
+[Debug] [2026-10-9 11:11:37] The value of Progress is 80
+[Debug] [2026-10-9 11:11:38] The value of Progress is 85
+[Debug] [2026-10-9 11:11:38] The value of Progress is 90
+[Debug] [2026-10-9 11:11:38] The value of Progress is 95
+[Debug] [2026-10-9 11:11:39] COMMAND[Verify] execute successfully, takes 8.2 secs.
+[Debug] [2026-10-9 11:11:40] cfg_verify succeed.
+[Debug] [2026-10-9 11:11:41] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-9 11:11:41] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-9 11:11:41] Send RPC:7
+[Debug] [2026-10-9 11:11:41] Send cmd [Read status:20005] OK
+[Debug] [2026-10-9 11:11:41] begin the exec of get device property cmd...
+[Debug] [2026-10-9 11:11:41] read status exec:
+[Debug] [2026-10-9 11:11:41] Begin to show read status register result...
+[Debug] [2026-10-9 11:11:41] End to show read status register result.
+[Debug] [2026-10-9 11:11:41] end the exec of get device property cmd.
+[Debug] [2026-10-9 11:11:41] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-9 11:11:42] cfg_read_device_property succeed.
+[Info] [2026-10-9 11:11:42] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-9 11:11:42] Server is disconnected
+[Debug] [2026-10-9 11:11:42] end to connect server
+[Debug] [2026-10-9 11:11:42] cfg_disconnect succeed.
+[Info] [2026-10-9 11:11:43] /***************************End Configration***************************/
+[Info] [2026-10-10 19:52:35] /***************************Start Configuration***************************/
+[Info] [2026-10-10 19:52:35] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-10 19:52:35] Version: 146967
+[Info] [2026-10-10 19:52:36] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-10 19:52:36] PDS Dir Path: 
+[Debug] [2026-10-10 19:52:36] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-10 19:52:36] end to check the cfg_connect exec condition.
+[Debug] [2026-10-10 19:52:36] Client Local host name:???????
+[Debug] [2026-10-10 19:52:36] Client Local Address:100.120.230.10
+[Debug] [2026-10-10 19:52:36] Client Local Address:10.70.104.122
+[Debug] [2026-10-10 19:52:36] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-10 19:52:36] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-10 19:52:36] Finish.
+[Info] [2026-10-10 19:52:36] Connect server succeeded
+[Debug] [2026-10-10 19:52:36] Send RPC:1
+[Debug] [2026-10-10 19:52:36] Send cmd [check version information:40004] OK
+[Debug] [2026-10-10 19:52:36] Send RPC:2
+[Debug] [2026-10-10 19:52:36] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-10 19:52:36] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-10 19:52:38] COMMAND[get_cable_paras] execute successfully, takes 2.1 secs.
+[Debug] [2026-10-10 19:52:39] cfg_connect succeed.
+[Debug] [2026-10-10 19:52:39] Send RPC:3
+[Debug] [2026-10-10 19:52:39] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-10 19:52:41] COMMAND[set_cable_paras] execute successfully, takes 1.6 secs.
+[Debug] [2026-10-10 19:52:41] cfg_set_cable_property succeed.
+[Debug] [2026-10-10 19:52:42] Send RPC:4
+[Debug] [2026-10-10 19:52:42] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-10 19:52:43] begin the exec of open cable cmd...
+[Debug] [2026-10-10 19:52:43] Begin to deal with chain from server...
+[Debug] [2026-10-10 19:52:43] Begin to set user chain...
+[Debug] [2026-10-10 19:52:43] End to set user chain.
+[Debug] [2026-10-10 19:52:43] end the exec of open cable cmd.
+[Debug] [2026-10-10 19:52:43] COMMAND[Open config cable] execute successfully, takes 1.0 secs.
+[Debug] [2026-10-10 19:52:44] cfg_scan_chain succeed.
+[Debug] [2026-10-10 19:52:45] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 19:52:45] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 19:52:45] begin to get device info from CFG file...
+[Debug] [2026-10-10 19:52:45] end to get device info from CFG file...
+[Debug] [2026-10-10 19:52:45] cfg_assign_file succeed.
+[Debug] [2026-10-10 19:52:45] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 19:52:45] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 19:52:45] cfg_set_device_property succeed.
+[Debug] [2026-10-10 19:52:45] begin to check the cfg_program exec condition.
+[Debug] [2026-10-10 19:52:45] end to check the cfg_program exec condition.
+[Debug] [2026-10-10 19:52:45] Send RPC:5
+[Debug] [2026-10-10 19:52:45] Begin to send program data.
+[Debug] [2026-10-10 19:52:45] End to send program data.
+[Debug] [2026-10-10 19:52:45] Send cmd [Program:20002] OK
+[Debug] [2026-10-10 19:52:47] The value of Progress is 6
+[Debug] [2026-10-10 19:52:48] The value of Progress is 10
+[Debug] [2026-10-10 19:52:50] The value of Progress is 15
+[Debug] [2026-10-10 19:52:52] The value of Progress is 20
+[Debug] [2026-10-10 19:52:53] The value of Progress is 25
+[Debug] [2026-10-10 19:52:55] The value of Progress is 30
+[Debug] [2026-10-10 19:52:56] The value of Progress is 35
+[Debug] [2026-10-10 19:52:58] The value of Progress is 40
+[Debug] [2026-10-10 19:52:59] The value of Progress is 45
+[Debug] [2026-10-10 19:53:01] The value of Progress is 50
+[Debug] [2026-10-10 19:53:02] The value of Progress is 55
+[Debug] [2026-10-10 19:53:04] The value of Progress is 60
+[Debug] [2026-10-10 19:53:05] The value of Progress is 65
+[Debug] [2026-10-10 19:53:07] The value of Progress is 70
+[Debug] [2026-10-10 19:53:08] The value of Progress is 75
+[Debug] [2026-10-10 19:53:10] The value of Progress is 80
+[Debug] [2026-10-10 19:53:11] The value of Progress is 85
+[Debug] [2026-10-10 19:53:13] The value of Progress is 90
+[Debug] [2026-10-10 19:53:14] The value of Progress is 95
+[Debug] [2026-10-10 19:53:16] The value of Progress is 100
+[Debug] [2026-10-10 19:53:16] COMMAND[Program] execute successfully, takes 31.2 secs.
+[Debug] [2026-10-10 19:53:16] cfg_program succeed.
+[Debug] [2026-10-10 19:53:17] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-10 19:53:17] Begin to check mask file.
+[Debug] [2026-10-10 19:53:17] End to check mask file.
+[Debug] [2026-10-10 19:53:17] end to check the cfg_verify exec condition.
+[Debug] [2026-10-10 19:53:17] Send RPC:6
+[Debug] [2026-10-10 19:53:17] Begin to send verify data.
+[Debug] [2026-10-10 19:53:17] End to send verify data.
+[Debug] [2026-10-10 19:53:17] Send cmd [Verify:20004] OK
+[Debug] [2026-10-10 19:53:19] The value of Progress is 6
+[Debug] [2026-10-10 19:53:20] The value of Progress is 10
+[Debug] [2026-10-10 19:53:22] The value of Progress is 15
+[Debug] [2026-10-10 19:53:24] The value of Progress is 20
+[Debug] [2026-10-10 19:53:25] The value of Progress is 25
+[Debug] [2026-10-10 19:53:27] The value of Progress is 30
+[Debug] [2026-10-10 19:53:28] The value of Progress is 35
+[Debug] [2026-10-10 19:53:30] The value of Progress is 40
+[Debug] [2026-10-10 19:53:31] The value of Progress is 45
+[Debug] [2026-10-10 19:53:33] The value of Progress is 50
+[Debug] [2026-10-10 19:53:35] The value of Progress is 55
+[Debug] [2026-10-10 19:53:36] The value of Progress is 60
+[Debug] [2026-10-10 19:53:38] The value of Progress is 65
+[Debug] [2026-10-10 19:53:39] The value of Progress is 70
+[Debug] [2026-10-10 19:53:41] The value of Progress is 75
+[Debug] [2026-10-10 19:53:42] The value of Progress is 80
+[Debug] [2026-10-10 19:53:44] The value of Progress is 85
+[Debug] [2026-10-10 19:53:46] The value of Progress is 90
+[Debug] [2026-10-10 19:53:47] The value of Progress is 95
+[Debug] [2026-10-10 19:53:49] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-10 19:53:49] cfg_verify succeed.
+[Debug] [2026-10-10 19:53:50] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 19:53:50] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 19:53:50] Send RPC:7
+[Debug] [2026-10-10 19:53:50] Send cmd [Read status:20005] OK
+[Debug] [2026-10-10 19:53:50] begin the exec of get device property cmd...
+[Debug] [2026-10-10 19:53:50] read status exec:
+[Debug] [2026-10-10 19:53:50] Begin to show read status register result...
+[Debug] [2026-10-10 19:53:50] End to show read status register result.
+[Debug] [2026-10-10 19:53:50] end the exec of get device property cmd.
+[Debug] [2026-10-10 19:53:50] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-10 19:53:51] cfg_read_device_property succeed.
+[Info] [2026-10-10 19:53:51] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-10 19:53:51] Server is disconnected
+[Debug] [2026-10-10 19:53:51] end to connect server
+[Debug] [2026-10-10 19:53:51] cfg_disconnect succeed.
+[Info] [2026-10-10 19:53:52] /***************************End Configration***************************/
+[Info] [2026-10-10 21:04:18] /***************************Start Configuration***************************/
+[Info] [2026-10-10 21:04:18] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-10 21:04:18] Version: 146967
+[Info] [2026-10-10 21:04:19] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-10 21:04:19] PDS Dir Path: 
+[Debug] [2026-10-10 21:04:19] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-10 21:04:19] end to check the cfg_connect exec condition.
+[Debug] [2026-10-10 21:04:19] Client Local host name:???????
+[Debug] [2026-10-10 21:04:19] Client Local Address:100.120.230.10
+[Debug] [2026-10-10 21:04:19] Client Local Address:10.70.104.122
+[Debug] [2026-10-10 21:04:19] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-10 21:04:19] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-10 21:04:19] Finish.
+[Info] [2026-10-10 21:04:19] Connect server succeeded
+[Debug] [2026-10-10 21:04:19] Send RPC:1
+[Debug] [2026-10-10 21:04:19] Send cmd [check version information:40004] OK
+[Debug] [2026-10-10 21:04:19] Send RPC:2
+[Debug] [2026-10-10 21:04:19] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-10 21:04:19] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-10 21:04:21] COMMAND[get_cable_paras] execute successfully, takes 1.5 secs.
+[Debug] [2026-10-10 21:04:21] cfg_connect succeed.
+[Debug] [2026-10-10 21:04:22] Send RPC:3
+[Debug] [2026-10-10 21:04:22] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-10 21:04:23] COMMAND[set_cable_paras] execute successfully, takes 1.0 secs.
+[Debug] [2026-10-10 21:04:23] cfg_set_cable_property succeed.
+[Debug] [2026-10-10 21:04:23] Send RPC:4
+[Debug] [2026-10-10 21:04:23] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-10 21:04:24] begin the exec of open cable cmd...
+[Debug] [2026-10-10 21:04:24] Begin to deal with chain from server...
+[Debug] [2026-10-10 21:04:24] Begin to set user chain...
+[Debug] [2026-10-10 21:04:24] End to set user chain.
+[Debug] [2026-10-10 21:04:24] end the exec of open cable cmd.
+[Debug] [2026-10-10 21:04:24] COMMAND[Open config cable] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-10 21:04:24] cfg_scan_chain succeed.
+[Debug] [2026-10-10 21:04:25] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 21:04:25] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 21:04:25] begin to get device info from CFG file...
+[Debug] [2026-10-10 21:04:25] end to get device info from CFG file...
+[Debug] [2026-10-10 21:04:25] cfg_assign_file succeed.
+[Debug] [2026-10-10 21:04:25] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 21:04:25] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 21:04:25] cfg_set_device_property succeed.
+[Debug] [2026-10-10 21:04:25] begin to check the cfg_program exec condition.
+[Debug] [2026-10-10 21:04:25] end to check the cfg_program exec condition.
+[Debug] [2026-10-10 21:04:25] Send RPC:5
+[Debug] [2026-10-10 21:04:25] Begin to send program data.
+[Debug] [2026-10-10 21:04:25] End to send program data.
+[Debug] [2026-10-10 21:04:25] Send cmd [Program:20002] OK
+[Debug] [2026-10-10 21:04:28] The value of Progress is 6
+[Debug] [2026-10-10 21:04:29] The value of Progress is 10
+[Debug] [2026-10-10 21:04:30] The value of Progress is 15
+[Debug] [2026-10-10 21:04:32] The value of Progress is 20
+[Debug] [2026-10-10 21:04:33] The value of Progress is 25
+[Debug] [2026-10-10 21:04:35] The value of Progress is 30
+[Debug] [2026-10-10 21:04:37] The value of Progress is 35
+[Debug] [2026-10-10 21:04:38] The value of Progress is 40
+[Debug] [2026-10-10 21:04:40] The value of Progress is 45
+[Debug] [2026-10-10 21:04:41] The value of Progress is 50
+[Debug] [2026-10-10 21:04:43] The value of Progress is 55
+[Debug] [2026-10-10 21:04:44] The value of Progress is 60
+[Debug] [2026-10-10 21:04:46] The value of Progress is 65
+[Debug] [2026-10-10 21:04:47] The value of Progress is 70
+[Debug] [2026-10-10 21:04:49] The value of Progress is 75
+[Debug] [2026-10-10 21:04:50] The value of Progress is 80
+[Debug] [2026-10-10 21:04:52] The value of Progress is 85
+[Debug] [2026-10-10 21:04:53] The value of Progress is 90
+[Debug] [2026-10-10 21:04:55] The value of Progress is 95
+[Debug] [2026-10-10 21:04:56] The value of Progress is 100
+[Debug] [2026-10-10 21:04:57] COMMAND[Program] execute successfully, takes 31.1 secs.
+[Debug] [2026-10-10 21:04:57] cfg_program succeed.
+[Debug] [2026-10-10 21:04:57] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-10 21:04:57] Begin to check mask file.
+[Debug] [2026-10-10 21:04:57] End to check mask file.
+[Debug] [2026-10-10 21:04:57] end to check the cfg_verify exec condition.
+[Debug] [2026-10-10 21:04:57] Send RPC:6
+[Debug] [2026-10-10 21:04:57] Begin to send verify data.
+[Debug] [2026-10-10 21:04:57] End to send verify data.
+[Debug] [2026-10-10 21:04:57] Send cmd [Verify:20004] OK
+[Debug] [2026-10-10 21:05:00] The value of Progress is 6
+[Debug] [2026-10-10 21:05:01] The value of Progress is 10
+[Debug] [2026-10-10 21:05:02] The value of Progress is 15
+[Debug] [2026-10-10 21:05:04] The value of Progress is 20
+[Debug] [2026-10-10 21:05:06] The value of Progress is 25
+[Debug] [2026-10-10 21:05:07] The value of Progress is 30
+[Debug] [2026-10-10 21:05:09] The value of Progress is 35
+[Debug] [2026-10-10 21:05:10] The value of Progress is 40
+[Debug] [2026-10-10 21:05:12] The value of Progress is 45
+[Debug] [2026-10-10 21:05:13] The value of Progress is 50
+[Debug] [2026-10-10 21:05:15] The value of Progress is 55
+[Debug] [2026-10-10 21:05:17] The value of Progress is 60
+[Debug] [2026-10-10 21:05:18] The value of Progress is 65
+[Debug] [2026-10-10 21:05:20] The value of Progress is 70
+[Debug] [2026-10-10 21:05:21] The value of Progress is 75
+[Debug] [2026-10-10 21:05:23] The value of Progress is 80
+[Debug] [2026-10-10 21:05:24] The value of Progress is 85
+[Debug] [2026-10-10 21:05:26] The value of Progress is 90
+[Debug] [2026-10-10 21:05:28] The value of Progress is 95
+[Debug] [2026-10-10 21:05:29] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-10 21:05:30] cfg_verify succeed.
+[Debug] [2026-10-10 21:05:30] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 21:05:30] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 21:05:30] Send RPC:7
+[Debug] [2026-10-10 21:05:30] Send cmd [Read status:20005] OK
+[Debug] [2026-10-10 21:05:31] begin the exec of get device property cmd...
+[Debug] [2026-10-10 21:05:31] read status exec:
+[Debug] [2026-10-10 21:05:31] Begin to show read status register result...
+[Debug] [2026-10-10 21:05:31] End to show read status register result.
+[Debug] [2026-10-10 21:05:31] end the exec of get device property cmd.
+[Debug] [2026-10-10 21:05:31] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-10 21:05:31] cfg_read_device_property succeed.
+[Info] [2026-10-10 21:05:32] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-10 21:05:32] Server is disconnected
+[Debug] [2026-10-10 21:05:32] end to connect server
+[Debug] [2026-10-10 21:05:32] cfg_disconnect succeed.
+[Info] [2026-10-10 21:05:32] /***************************End Configration***************************/
+[Info] [2026-10-10 22:41:14] /***************************Start Configuration***************************/
+[Info] [2026-10-10 22:41:14] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-10 22:41:14] Version: 146967
+[Info] [2026-10-10 22:41:15] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-10 22:41:15] PDS Dir Path: 
+[Debug] [2026-10-10 22:41:15] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-10 22:41:15] end to check the cfg_connect exec condition.
+[Debug] [2026-10-10 22:41:15] Client Local host name:???????
+[Debug] [2026-10-10 22:41:15] Client Local Address:100.120.230.10
+[Debug] [2026-10-10 22:41:15] Client Local Address:10.70.104.122
+[Debug] [2026-10-10 22:41:15] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-10 22:41:15] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-10 22:41:15] Finish.
+[Info] [2026-10-10 22:41:15] Connect server succeeded
+[Debug] [2026-10-10 22:41:15] Send RPC:1
+[Debug] [2026-10-10 22:41:15] Send cmd [check version information:40004] OK
+[Debug] [2026-10-10 22:41:15] Send RPC:2
+[Debug] [2026-10-10 22:41:15] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-10 22:41:15] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-10 22:41:17] COMMAND[get_cable_paras] execute successfully, takes 2.1 secs.
+[Debug] [2026-10-10 22:41:18] cfg_connect succeed.
+[Debug] [2026-10-10 22:41:18] Send RPC:3
+[Debug] [2026-10-10 22:41:18] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-10 22:41:20] COMMAND[set_cable_paras] execute successfully, takes 1.5 secs.
+[Debug] [2026-10-10 22:41:20] cfg_set_cable_property succeed.
+[Debug] [2026-10-10 22:41:21] Send RPC:4
+[Debug] [2026-10-10 22:41:21] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-10 22:41:22] begin the exec of open cable cmd...
+[Debug] [2026-10-10 22:41:22] Begin to deal with chain from server...
+[Debug] [2026-10-10 22:41:22] Begin to set user chain...
+[Debug] [2026-10-10 22:41:22] End to set user chain.
+[Debug] [2026-10-10 22:41:22] end the exec of open cable cmd.
+[Debug] [2026-10-10 22:41:22] COMMAND[Open config cable] execute successfully, takes 1.0 secs.
+[Debug] [2026-10-10 22:41:23] cfg_scan_chain succeed.
+[Debug] [2026-10-10 22:41:23] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 22:41:23] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 22:41:23] begin to get device info from CFG file...
+[Debug] [2026-10-10 22:41:23] end to get device info from CFG file...
+[Debug] [2026-10-10 22:41:23] cfg_assign_file succeed.
+[Debug] [2026-10-10 22:41:24] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 22:41:24] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 22:41:24] cfg_set_device_property succeed.
+[Debug] [2026-10-10 22:41:24] begin to check the cfg_program exec condition.
+[Debug] [2026-10-10 22:41:24] end to check the cfg_program exec condition.
+[Debug] [2026-10-10 22:41:24] Send RPC:5
+[Debug] [2026-10-10 22:41:24] Begin to send program data.
+[Debug] [2026-10-10 22:41:24] End to send program data.
+[Debug] [2026-10-10 22:41:24] Send cmd [Program:20002] OK
+[Debug] [2026-10-10 22:41:26] The value of Progress is 6
+[Debug] [2026-10-10 22:41:27] The value of Progress is 10
+[Debug] [2026-10-10 22:41:29] The value of Progress is 15
+[Debug] [2026-10-10 22:41:31] The value of Progress is 20
+[Debug] [2026-10-10 22:41:32] The value of Progress is 25
+[Debug] [2026-10-10 22:41:34] The value of Progress is 30
+[Debug] [2026-10-10 22:41:35] The value of Progress is 35
+[Debug] [2026-10-10 22:41:37] The value of Progress is 40
+[Debug] [2026-10-10 22:41:38] The value of Progress is 45
+[Debug] [2026-10-10 22:41:40] The value of Progress is 50
+[Debug] [2026-10-10 22:41:41] The value of Progress is 55
+[Debug] [2026-10-10 22:41:43] The value of Progress is 60
+[Debug] [2026-10-10 22:41:44] The value of Progress is 65
+[Debug] [2026-10-10 22:41:46] The value of Progress is 70
+[Debug] [2026-10-10 22:41:47] The value of Progress is 75
+[Debug] [2026-10-10 22:41:49] The value of Progress is 80
+[Debug] [2026-10-10 22:41:50] The value of Progress is 85
+[Debug] [2026-10-10 22:41:52] The value of Progress is 90
+[Debug] [2026-10-10 22:41:53] The value of Progress is 95
+[Debug] [2026-10-10 22:41:55] The value of Progress is 100
+[Debug] [2026-10-10 22:41:55] COMMAND[Program] execute successfully, takes 31.1 secs.
+[Debug] [2026-10-10 22:41:55] cfg_program succeed.
+[Debug] [2026-10-10 22:41:56] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-10 22:41:56] Begin to check mask file.
+[Debug] [2026-10-10 22:41:56] End to check mask file.
+[Debug] [2026-10-10 22:41:56] end to check the cfg_verify exec condition.
+[Debug] [2026-10-10 22:41:56] Send RPC:6
+[Debug] [2026-10-10 22:41:56] Begin to send verify data.
+[Debug] [2026-10-10 22:41:56] End to send verify data.
+[Debug] [2026-10-10 22:41:56] Send cmd [Verify:20004] OK
+[Debug] [2026-10-10 22:41:58] The value of Progress is 6
+[Debug] [2026-10-10 22:41:59] The value of Progress is 10
+[Debug] [2026-10-10 22:42:01] The value of Progress is 15
+[Debug] [2026-10-10 22:42:02] The value of Progress is 20
+[Debug] [2026-10-10 22:42:04] The value of Progress is 25
+[Debug] [2026-10-10 22:42:06] The value of Progress is 30
+[Debug] [2026-10-10 22:42:07] The value of Progress is 35
+[Debug] [2026-10-10 22:42:09] The value of Progress is 40
+[Debug] [2026-10-10 22:42:10] The value of Progress is 45
+[Debug] [2026-10-10 22:42:12] The value of Progress is 50
+[Debug] [2026-10-10 22:42:14] The value of Progress is 55
+[Debug] [2026-10-10 22:42:15] The value of Progress is 60
+[Debug] [2026-10-10 22:42:17] The value of Progress is 65
+[Debug] [2026-10-10 22:42:18] The value of Progress is 70
+[Debug] [2026-10-10 22:42:20] The value of Progress is 75
+[Debug] [2026-10-10 22:42:21] The value of Progress is 80
+[Debug] [2026-10-10 22:42:23] The value of Progress is 85
+[Debug] [2026-10-10 22:42:25] The value of Progress is 90
+[Debug] [2026-10-10 22:42:26] The value of Progress is 95
+[Debug] [2026-10-10 22:42:28] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-10 22:42:28] cfg_verify succeed.
+[Debug] [2026-10-10 22:42:29] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 22:42:29] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 22:42:29] Send RPC:7
+[Debug] [2026-10-10 22:42:29] Send cmd [Read status:20005] OK
+[Debug] [2026-10-10 22:42:29] begin the exec of get device property cmd...
+[Debug] [2026-10-10 22:42:29] read status exec:
+[Debug] [2026-10-10 22:42:29] Begin to show read status register result...
+[Debug] [2026-10-10 22:42:29] End to show read status register result.
+[Debug] [2026-10-10 22:42:29] end the exec of get device property cmd.
+[Debug] [2026-10-10 22:42:29] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-10 22:42:30] cfg_read_device_property succeed.
+[Info] [2026-10-10 22:42:30] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-10 22:42:30] Server is disconnected
+[Debug] [2026-10-10 22:42:30] end to connect server
+[Debug] [2026-10-10 22:42:30] cfg_disconnect succeed.
+[Info] [2026-10-10 22:42:31] /***************************End Configration***************************/
+[Info] [2026-10-10 22:53:05] /***************************Start Configuration***************************/
+[Info] [2026-10-10 22:53:05] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-10 22:53:05] Version: 146967
+[Info] [2026-10-10 22:53:06] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-10 22:53:06] PDS Dir Path: 
+[Debug] [2026-10-10 22:53:06] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-10 22:53:06] end to check the cfg_connect exec condition.
+[Debug] [2026-10-10 22:53:06] Client Local host name:???????
+[Debug] [2026-10-10 22:53:06] Client Local Address:100.120.230.10
+[Debug] [2026-10-10 22:53:06] Client Local Address:10.70.104.122
+[Debug] [2026-10-10 22:53:06] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-10 22:53:06] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-10 22:53:06] Finish.
+[Info] [2026-10-10 22:53:06] Connect server succeeded
+[Debug] [2026-10-10 22:53:06] Send RPC:1
+[Debug] [2026-10-10 22:53:06] Send cmd [check version information:40004] OK
+[Debug] [2026-10-10 22:53:06] Send RPC:2
+[Debug] [2026-10-10 22:53:06] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-10 22:53:06] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-10 22:53:07] COMMAND[get_cable_paras] execute successfully, takes 1.4 secs.
+[Debug] [2026-10-10 22:53:08] cfg_connect succeed.
+[Debug] [2026-10-10 22:53:09] Send RPC:3
+[Debug] [2026-10-10 22:53:09] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-10 22:53:09] COMMAND[set_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-10-10 22:53:10] cfg_set_cable_property succeed.
+[Debug] [2026-10-10 22:53:10] Send RPC:4
+[Debug] [2026-10-10 22:53:10] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-10 22:53:11] begin the exec of open cable cmd...
+[Debug] [2026-10-10 22:53:11] Begin to deal with chain from server...
+[Debug] [2026-10-10 22:53:11] Begin to set user chain...
+[Debug] [2026-10-10 22:53:11] End to set user chain.
+[Debug] [2026-10-10 22:53:11] end the exec of open cable cmd.
+[Debug] [2026-10-10 22:53:11] COMMAND[Open config cable] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-10 22:53:11] cfg_scan_chain succeed.
+[Debug] [2026-10-10 22:53:12] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 22:53:12] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-10 22:53:12] begin to get device info from CFG file...
+[Debug] [2026-10-10 22:53:12] end to get device info from CFG file...
+[Debug] [2026-10-10 22:53:12] cfg_assign_file succeed.
+[Debug] [2026-10-10 22:53:12] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 22:53:12] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-10 22:53:12] cfg_set_device_property succeed.
+[Debug] [2026-10-10 22:53:12] begin to check the cfg_program exec condition.
+[Debug] [2026-10-10 22:53:12] end to check the cfg_program exec condition.
+[Debug] [2026-10-10 22:53:12] Send RPC:5
+[Debug] [2026-10-10 22:53:12] Begin to send program data.
+[Debug] [2026-10-10 22:53:12] End to send program data.
+[Debug] [2026-10-10 22:53:12] Send cmd [Program:20002] OK
+[Debug] [2026-10-10 22:53:14] The value of Progress is 6
+[Debug] [2026-10-10 22:53:16] The value of Progress is 10
+[Debug] [2026-10-10 22:53:17] The value of Progress is 15
+[Debug] [2026-10-10 22:53:19] The value of Progress is 20
+[Debug] [2026-10-10 22:53:20] The value of Progress is 25
+[Debug] [2026-10-10 22:53:22] The value of Progress is 30
+[Debug] [2026-10-10 22:53:23] The value of Progress is 35
+[Debug] [2026-10-10 22:53:25] The value of Progress is 40
+[Debug] [2026-10-10 22:53:26] The value of Progress is 45
+[Debug] [2026-10-10 22:53:28] The value of Progress is 50
+[Debug] [2026-10-10 22:53:29] The value of Progress is 55
+[Debug] [2026-10-10 22:53:31] The value of Progress is 60
+[Debug] [2026-10-10 22:53:32] The value of Progress is 65
+[Debug] [2026-10-10 22:53:34] The value of Progress is 70
+[Debug] [2026-10-10 22:53:35] The value of Progress is 75
+[Debug] [2026-10-10 22:53:37] The value of Progress is 80
+[Debug] [2026-10-10 22:53:38] The value of Progress is 85
+[Debug] [2026-10-10 22:53:40] The value of Progress is 90
+[Debug] [2026-10-10 22:53:41] The value of Progress is 95
+[Debug] [2026-10-10 22:53:43] The value of Progress is 100
+[Debug] [2026-10-10 22:53:43] COMMAND[Program] execute successfully, takes 31.1 secs.
+[Debug] [2026-10-10 22:53:43] cfg_program succeed.
+[Debug] [2026-10-10 22:53:44] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-10 22:53:44] Begin to check mask file.
+[Debug] [2026-10-10 22:53:44] End to check mask file.
+[Debug] [2026-10-10 22:53:44] end to check the cfg_verify exec condition.
+[Debug] [2026-10-10 22:53:44] Send RPC:6
+[Debug] [2026-10-10 22:53:44] Begin to send verify data.
+[Debug] [2026-10-10 22:53:44] End to send verify data.
+[Debug] [2026-10-10 22:53:44] Send cmd [Verify:20004] OK
+[Debug] [2026-10-10 22:53:46] The value of Progress is 6
+[Debug] [2026-10-10 22:53:48] The value of Progress is 10
+[Debug] [2026-10-10 22:53:49] The value of Progress is 15
+[Debug] [2026-10-10 22:53:51] The value of Progress is 20
+[Debug] [2026-10-10 22:53:52] The value of Progress is 25
+[Debug] [2026-10-10 22:53:54] The value of Progress is 30
+[Debug] [2026-10-10 22:53:55] The value of Progress is 35
+[Debug] [2026-10-10 22:53:57] The value of Progress is 40
+[Debug] [2026-10-10 22:53:59] The value of Progress is 45
+[Debug] [2026-10-10 22:54:00] The value of Progress is 50
+[Debug] [2026-10-10 22:54:02] The value of Progress is 55
+[Debug] [2026-10-10 22:54:03] The value of Progress is 60
+[Debug] [2026-10-10 22:54:05] The value of Progress is 65
+[Debug] [2026-10-10 22:54:06] The value of Progress is 70
+[Debug] [2026-10-10 22:54:08] The value of Progress is 75
+[Debug] [2026-10-10 22:54:10] The value of Progress is 80
+[Debug] [2026-10-10 22:54:11] The value of Progress is 85
+[Debug] [2026-10-10 22:54:13] The value of Progress is 90
+[Debug] [2026-10-10 22:54:14] The value of Progress is 95
+[Debug] [2026-10-10 22:54:16] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-10 22:54:16] cfg_verify succeed.
+[Debug] [2026-10-10 22:54:17] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 22:54:17] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-10 22:54:17] Send RPC:7
+[Debug] [2026-10-10 22:54:17] Send cmd [Read status:20005] OK
+[Debug] [2026-10-10 22:54:18] begin the exec of get device property cmd...
+[Debug] [2026-10-10 22:54:18] read status exec:
+[Debug] [2026-10-10 22:54:18] Begin to show read status register result...
+[Debug] [2026-10-10 22:54:18] End to show read status register result.
+[Debug] [2026-10-10 22:54:18] end the exec of get device property cmd.
+[Debug] [2026-10-10 22:54:18] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-10 22:54:18] cfg_read_device_property succeed.
+[Info] [2026-10-10 22:54:18] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-10 22:54:18] Server is disconnected
+[Debug] [2026-10-10 22:54:18] end to connect server
+[Debug] [2026-10-10 22:54:18] cfg_disconnect succeed.
+[Info] [2026-10-10 22:54:19] /***************************End Configration***************************/
+[Info] [2026-10-11 00:36:56] /***************************Start Configuration***************************/
+[Info] [2026-10-11 00:36:56] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 00:36:56] Version: 146967
+[Info] [2026-10-11 00:36:57] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 00:36:57] PDS Dir Path: 
+[Debug] [2026-10-11 00:36:57] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 00:36:57] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 00:36:57] Client Local host name:???????
+[Debug] [2026-10-11 00:36:57] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 00:36:57] Client Local Address:10.70.104.122
+[Debug] [2026-10-11 00:36:57] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 00:36:57] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 00:36:57] Finish.
+[Info] [2026-10-11 00:36:57] Connect server succeeded
+[Debug] [2026-10-11 00:36:57] Send RPC:1
+[Debug] [2026-10-11 00:36:57] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 00:36:57] Send RPC:2
+[Debug] [2026-10-11 00:36:57] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 00:36:57] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 00:36:58] COMMAND[get_cable_paras] execute successfully, takes 1.4 secs.
+[Debug] [2026-10-11 00:36:59] cfg_connect succeed.
+[Debug] [2026-10-11 00:37:00] Send RPC:3
+[Debug] [2026-10-11 00:37:00] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 00:37:00] COMMAND[set_cable_paras] execute successfully, takes 0.9 secs.
+[Debug] [2026-10-11 00:37:01] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 00:37:01] Send RPC:4
+[Debug] [2026-10-11 00:37:01] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 00:37:02] begin the exec of open cable cmd...
+[Debug] [2026-10-11 00:37:02] Begin to deal with chain from server...
+[Debug] [2026-10-11 00:37:02] Begin to set user chain...
+[Debug] [2026-10-11 00:37:02] End to set user chain.
+[Debug] [2026-10-11 00:37:02] end the exec of open cable cmd.
+[Debug] [2026-10-11 00:37:02] COMMAND[Open config cable] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 00:37:02] cfg_scan_chain succeed.
+[Debug] [2026-10-11 00:37:03] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 00:37:03] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 00:37:03] begin to get device info from CFG file...
+[Debug] [2026-10-11 00:37:03] end to get device info from CFG file...
+[Debug] [2026-10-11 00:37:03] cfg_assign_file succeed.
+[Debug] [2026-10-11 00:37:03] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 00:37:03] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 00:37:03] cfg_set_device_property succeed.
+[Debug] [2026-10-11 00:37:03] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 00:37:03] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 00:37:03] Send RPC:5
+[Debug] [2026-10-11 00:37:03] Begin to send program data.
+[Debug] [2026-10-11 00:37:03] End to send program data.
+[Debug] [2026-10-11 00:37:03] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 00:37:05] The value of Progress is 6
+[Debug] [2026-10-11 00:37:07] The value of Progress is 10
+[Debug] [2026-10-11 00:37:08] The value of Progress is 15
+[Debug] [2026-10-11 00:37:10] The value of Progress is 20
+[Debug] [2026-10-11 00:37:11] The value of Progress is 25
+[Debug] [2026-10-11 00:37:13] The value of Progress is 30
+[Debug] [2026-10-11 00:37:14] The value of Progress is 35
+[Debug] [2026-10-11 00:37:16] The value of Progress is 40
+[Debug] [2026-10-11 00:37:17] The value of Progress is 45
+[Debug] [2026-10-11 00:37:19] The value of Progress is 50
+[Debug] [2026-10-11 00:37:20] The value of Progress is 55
+[Debug] [2026-10-11 00:37:22] The value of Progress is 60
+[Debug] [2026-10-11 00:37:23] The value of Progress is 65
+[Debug] [2026-10-11 00:37:25] The value of Progress is 70
+[Debug] [2026-10-11 00:37:26] The value of Progress is 75
+[Debug] [2026-10-11 00:37:28] The value of Progress is 80
+[Debug] [2026-10-11 00:37:29] The value of Progress is 85
+[Debug] [2026-10-11 00:37:31] The value of Progress is 90
+[Debug] [2026-10-11 00:37:32] The value of Progress is 95
+[Debug] [2026-10-11 00:37:34] The value of Progress is 100
+[Debug] [2026-10-11 00:37:34] COMMAND[Program] execute successfully, takes 31.1 secs.
+[Debug] [2026-10-11 00:37:34] cfg_program succeed.
+[Debug] [2026-10-11 00:37:35] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 00:37:35] Begin to check mask file.
+[Debug] [2026-10-11 00:37:35] End to check mask file.
+[Debug] [2026-10-11 00:37:35] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 00:37:35] Send RPC:6
+[Debug] [2026-10-11 00:37:35] Begin to send verify data.
+[Debug] [2026-10-11 00:37:35] End to send verify data.
+[Debug] [2026-10-11 00:37:35] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 00:37:37] The value of Progress is 6
+[Debug] [2026-10-11 00:37:39] The value of Progress is 10
+[Debug] [2026-10-11 00:37:40] The value of Progress is 15
+[Debug] [2026-10-11 00:37:42] The value of Progress is 20
+[Debug] [2026-10-11 00:37:43] The value of Progress is 25
+[Debug] [2026-10-11 00:37:45] The value of Progress is 30
+[Debug] [2026-10-11 00:37:46] The value of Progress is 35
+[Debug] [2026-10-11 00:37:48] The value of Progress is 40
+[Debug] [2026-10-11 00:37:50] The value of Progress is 45
+[Debug] [2026-10-11 00:37:51] The value of Progress is 50
+[Debug] [2026-10-11 00:37:53] The value of Progress is 55
+[Debug] [2026-10-11 00:37:54] The value of Progress is 60
+[Debug] [2026-10-11 00:37:56] The value of Progress is 65
+[Debug] [2026-10-11 00:37:57] The value of Progress is 70
+[Debug] [2026-10-11 00:37:59] The value of Progress is 75
+[Debug] [2026-10-11 00:38:01] The value of Progress is 80
+[Debug] [2026-10-11 00:38:02] The value of Progress is 85
+[Debug] [2026-10-11 00:38:04] The value of Progress is 90
+[Debug] [2026-10-11 00:38:05] The value of Progress is 95
+[Debug] [2026-10-11 00:38:07] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 00:38:07] cfg_verify succeed.
+[Debug] [2026-10-11 00:38:08] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 00:38:08] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 00:38:08] Send RPC:7
+[Debug] [2026-10-11 00:38:08] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 00:38:08] begin the exec of get device property cmd...
+[Debug] [2026-10-11 00:38:08] read status exec:
+[Debug] [2026-10-11 00:38:08] Begin to show read status register result...
+[Debug] [2026-10-11 00:38:08] End to show read status register result.
+[Debug] [2026-10-11 00:38:08] end the exec of get device property cmd.
+[Debug] [2026-10-11 00:38:08] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 00:38:09] cfg_read_device_property succeed.
+[Info] [2026-10-11 00:38:09] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 00:38:09] Server is disconnected
+[Debug] [2026-10-11 00:38:09] end to connect server
+[Debug] [2026-10-11 00:38:09] cfg_disconnect succeed.
+[Info] [2026-10-11 00:38:10] /***************************End Configration***************************/
+[Info] [2026-10-11 14:08:15] /***************************Start Configuration***************************/
+[Info] [2026-10-11 14:08:15] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 14:08:15] Version: 146967
+[Info] [2026-10-11 14:08:16] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 14:08:16] PDS Dir Path: 
+[Debug] [2026-10-11 14:08:16] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 14:08:16] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 14:08:16] Client Local host name:???????
+[Debug] [2026-10-11 14:08:16] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 14:08:16] Client Local Address:10.70.104.122
+[Debug] [2026-10-11 14:08:16] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 14:08:16] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 14:08:16] Finish.
+[Info] [2026-10-11 14:08:16] Connect server succeeded
+[Debug] [2026-10-11 14:08:16] Send RPC:1
+[Debug] [2026-10-11 14:08:16] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 14:08:16] Send RPC:2
+[Debug] [2026-10-11 14:08:16] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 14:08:16] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 14:08:18] COMMAND[get_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-11 14:08:18] cfg_connect succeed.
+[Debug] [2026-10-11 14:08:19] Send RPC:3
+[Debug] [2026-10-11 14:08:19] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 14:08:20] COMMAND[set_cable_paras] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 14:08:20] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 14:08:20] Send RPC:4
+[Debug] [2026-10-11 14:08:20] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 14:08:21] begin the exec of open cable cmd...
+[Debug] [2026-10-11 14:08:21] Begin to deal with chain from server...
+[Debug] [2026-10-11 14:08:21] Begin to set user chain...
+[Debug] [2026-10-11 14:08:21] End to set user chain.
+[Debug] [2026-10-11 14:08:21] end the exec of open cable cmd.
+[Debug] [2026-10-11 14:08:21] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 14:08:21] cfg_scan_chain succeed.
+[Debug] [2026-10-11 14:08:22] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 14:08:22] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 14:08:22] begin to get device info from CFG file...
+[Debug] [2026-10-11 14:08:22] end to get device info from CFG file...
+[Debug] [2026-10-11 14:08:22] cfg_assign_file succeed.
+[Debug] [2026-10-11 14:08:22] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 14:08:22] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 14:08:22] cfg_set_device_property succeed.
+[Debug] [2026-10-11 14:08:22] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 14:08:22] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 14:08:22] Send RPC:5
+[Debug] [2026-10-11 14:08:22] Begin to send program data.
+[Debug] [2026-10-11 14:08:22] End to send program data.
+[Debug] [2026-10-11 14:08:22] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 14:08:25] The value of Progress is 6
+[Debug] [2026-10-11 14:08:26] The value of Progress is 10
+[Debug] [2026-10-11 14:08:27] The value of Progress is 15
+[Debug] [2026-10-11 14:08:29] The value of Progress is 20
+[Debug] [2026-10-11 14:08:30] The value of Progress is 25
+[Debug] [2026-10-11 14:08:32] The value of Progress is 30
+[Debug] [2026-10-11 14:08:33] The value of Progress is 35
+[Debug] [2026-10-11 14:08:35] The value of Progress is 40
+[Debug] [2026-10-11 14:08:36] The value of Progress is 45
+[Debug] [2026-10-11 14:08:38] The value of Progress is 50
+[Debug] [2026-10-11 14:08:40] The value of Progress is 55
+[Debug] [2026-10-11 14:08:41] The value of Progress is 60
+[Debug] [2026-10-11 14:08:43] The value of Progress is 65
+[Debug] [2026-10-11 14:08:44] The value of Progress is 70
+[Debug] [2026-10-11 14:08:46] The value of Progress is 75
+[Debug] [2026-10-11 14:08:47] The value of Progress is 80
+[Debug] [2026-10-11 14:08:49] The value of Progress is 85
+[Debug] [2026-10-11 14:08:50] The value of Progress is 90
+[Debug] [2026-10-11 14:08:52] The value of Progress is 95
+[Debug] [2026-10-11 14:08:53] The value of Progress is 100
+[Debug] [2026-10-11 14:08:54] COMMAND[Program] execute successfully, takes 31.2 secs.
+[Debug] [2026-10-11 14:08:54] cfg_program succeed.
+[Debug] [2026-10-11 14:08:54] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 14:08:54] Begin to check mask file.
+[Debug] [2026-10-11 14:08:54] End to check mask file.
+[Debug] [2026-10-11 14:08:54] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 14:08:54] Send RPC:6
+[Debug] [2026-10-11 14:08:54] Begin to send verify data.
+[Debug] [2026-10-11 14:08:54] End to send verify data.
+[Debug] [2026-10-11 14:08:54] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 14:08:56] The value of Progress is 6
+[Debug] [2026-10-11 14:08:58] The value of Progress is 10
+[Debug] [2026-10-11 14:08:59] The value of Progress is 15
+[Debug] [2026-10-11 14:09:01] The value of Progress is 20
+[Debug] [2026-10-11 14:09:02] The value of Progress is 25
+[Debug] [2026-10-11 14:09:04] The value of Progress is 30
+[Debug] [2026-10-11 14:09:06] The value of Progress is 35
+[Debug] [2026-10-11 14:09:07] The value of Progress is 40
+[Debug] [2026-10-11 14:09:09] The value of Progress is 45
+[Debug] [2026-10-11 14:09:10] The value of Progress is 50
+[Debug] [2026-10-11 14:09:12] The value of Progress is 55
+[Debug] [2026-10-11 14:09:13] The value of Progress is 60
+[Debug] [2026-10-11 14:09:15] The value of Progress is 65
+[Debug] [2026-10-11 14:09:17] The value of Progress is 70
+[Debug] [2026-10-11 14:09:18] The value of Progress is 75
+[Debug] [2026-10-11 14:09:20] The value of Progress is 80
+[Debug] [2026-10-11 14:09:21] The value of Progress is 85
+[Debug] [2026-10-11 14:09:23] The value of Progress is 90
+[Debug] [2026-10-11 14:09:24] The value of Progress is 95
+[Debug] [2026-10-11 14:09:26] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 14:09:26] cfg_verify succeed.
+[Debug] [2026-10-11 14:09:27] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 14:09:27] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 14:09:27] Send RPC:7
+[Debug] [2026-10-11 14:09:27] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 14:09:27] begin the exec of get device property cmd...
+[Debug] [2026-10-11 14:09:27] read status exec:
+[Debug] [2026-10-11 14:09:27] Begin to show read status register result...
+[Debug] [2026-10-11 14:09:27] End to show read status register result.
+[Debug] [2026-10-11 14:09:27] end the exec of get device property cmd.
+[Debug] [2026-10-11 14:09:27] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 14:09:28] cfg_read_device_property succeed.
+[Info] [2026-10-11 14:09:28] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 14:09:28] Server is disconnected
+[Debug] [2026-10-11 14:09:28] end to connect server
+[Debug] [2026-10-11 14:09:28] cfg_disconnect succeed.
+[Info] [2026-10-11 14:09:29] /***************************End Configration***************************/
+[Info] [2026-10-11 14:33:15] /***************************Start Configuration***************************/
+[Info] [2026-10-11 14:33:15] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 14:33:15] Version: 146967
+[Info] [2026-10-11 14:33:16] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 14:33:16] PDS Dir Path: 
+[Debug] [2026-10-11 14:33:16] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 14:33:16] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 14:33:16] Client Local host name:???????
+[Debug] [2026-10-11 14:33:16] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 14:33:16] Client Local Address:10.70.104.122
+[Debug] [2026-10-11 14:33:16] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 14:33:16] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 14:33:16] Finish.
+[Info] [2026-10-11 14:33:16] Connect server succeeded
+[Debug] [2026-10-11 14:33:16] Send RPC:1
+[Debug] [2026-10-11 14:33:16] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 14:33:16] Send RPC:2
+[Debug] [2026-10-11 14:33:16] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 14:33:16] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 14:33:17] COMMAND[get_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-11 14:33:18] cfg_connect succeed.
+[Debug] [2026-10-11 14:33:18] Send RPC:3
+[Debug] [2026-10-11 14:33:18] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 14:33:19] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-11 14:33:19] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 14:33:20] Send RPC:4
+[Debug] [2026-10-11 14:33:20] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 14:33:20] begin the exec of open cable cmd...
+[Debug] [2026-10-11 14:33:20] Begin to deal with chain from server...
+[Debug] [2026-10-11 14:33:20] Begin to set user chain...
+[Debug] [2026-10-11 14:33:20] End to set user chain.
+[Debug] [2026-10-11 14:33:20] end the exec of open cable cmd.
+[Debug] [2026-10-11 14:33:20] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 14:33:21] cfg_scan_chain succeed.
+[Debug] [2026-10-11 14:33:21] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 14:33:21] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 14:33:21] begin to get device info from CFG file...
+[Debug] [2026-10-11 14:33:21] end to get device info from CFG file...
+[Debug] [2026-10-11 14:33:21] cfg_assign_file succeed.
+[Debug] [2026-10-11 14:33:22] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 14:33:22] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 14:33:22] cfg_set_device_property succeed.
+[Debug] [2026-10-11 14:33:22] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 14:33:22] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 14:33:22] Send RPC:5
+[Debug] [2026-10-11 14:33:22] Begin to send program data.
+[Debug] [2026-10-11 14:33:22] End to send program data.
+[Debug] [2026-10-11 14:33:22] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 14:33:24] The value of Progress is 6
+[Debug] [2026-10-11 14:33:25] The value of Progress is 10
+[Debug] [2026-10-11 14:33:27] The value of Progress is 15
+[Debug] [2026-10-11 14:33:28] The value of Progress is 20
+[Debug] [2026-10-11 14:33:30] The value of Progress is 25
+[Debug] [2026-10-11 14:33:31] The value of Progress is 30
+[Debug] [2026-10-11 14:33:33] The value of Progress is 35
+[Debug] [2026-10-11 14:33:34] The value of Progress is 40
+[Debug] [2026-10-11 14:33:36] The value of Progress is 45
+[Debug] [2026-10-11 14:33:37] The value of Progress is 50
+[Debug] [2026-10-11 14:33:39] The value of Progress is 55
+[Debug] [2026-10-11 14:33:40] The value of Progress is 60
+[Debug] [2026-10-11 14:33:42] The value of Progress is 65
+[Debug] [2026-10-11 14:33:43] The value of Progress is 70
+[Debug] [2026-10-11 14:33:45] The value of Progress is 75
+[Debug] [2026-10-11 14:33:46] The value of Progress is 80
+[Debug] [2026-10-11 14:33:48] The value of Progress is 85
+[Debug] [2026-10-11 14:33:49] The value of Progress is 90
+[Debug] [2026-10-11 14:33:51] The value of Progress is 95
+[Debug] [2026-10-11 14:33:53] The value of Progress is 100
+[Debug] [2026-10-11 14:33:53] COMMAND[Program] execute successfully, takes 31.0 secs.
+[Debug] [2026-10-11 14:33:53] cfg_program succeed.
+[Debug] [2026-10-11 14:33:53] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 14:33:53] Begin to check mask file.
+[Debug] [2026-10-11 14:33:53] End to check mask file.
+[Debug] [2026-10-11 14:33:53] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 14:33:53] Send RPC:6
+[Debug] [2026-10-11 14:33:53] Begin to send verify data.
+[Debug] [2026-10-11 14:33:53] End to send verify data.
+[Debug] [2026-10-11 14:33:53] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 14:33:56] The value of Progress is 6
+[Debug] [2026-10-11 14:33:57] The value of Progress is 10
+[Debug] [2026-10-11 14:33:59] The value of Progress is 15
+[Debug] [2026-10-11 14:34:00] The value of Progress is 20
+[Debug] [2026-10-11 14:34:02] The value of Progress is 25
+[Debug] [2026-10-11 14:34:03] The value of Progress is 30
+[Debug] [2026-10-11 14:34:05] The value of Progress is 35
+[Debug] [2026-10-11 14:34:06] The value of Progress is 40
+[Debug] [2026-10-11 14:34:08] The value of Progress is 45
+[Debug] [2026-10-11 14:34:10] The value of Progress is 50
+[Debug] [2026-10-11 14:34:11] The value of Progress is 55
+[Debug] [2026-10-11 14:34:13] The value of Progress is 60
+[Debug] [2026-10-11 14:34:14] The value of Progress is 65
+[Debug] [2026-10-11 14:34:16] The value of Progress is 70
+[Debug] [2026-10-11 14:34:17] The value of Progress is 75
+[Debug] [2026-10-11 14:34:19] The value of Progress is 80
+[Debug] [2026-10-11 14:34:21] The value of Progress is 85
+[Debug] [2026-10-11 14:34:22] The value of Progress is 90
+[Debug] [2026-10-11 14:34:24] The value of Progress is 95
+[Debug] [2026-10-11 14:34:26] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 14:34:26] cfg_verify succeed.
+[Debug] [2026-10-11 14:34:26] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 14:34:26] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 14:34:26] Send RPC:7
+[Debug] [2026-10-11 14:34:26] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 14:34:27] begin the exec of get device property cmd...
+[Debug] [2026-10-11 14:34:27] read status exec:
+[Debug] [2026-10-11 14:34:27] Begin to show read status register result...
+[Debug] [2026-10-11 14:34:27] End to show read status register result.
+[Debug] [2026-10-11 14:34:27] end the exec of get device property cmd.
+[Debug] [2026-10-11 14:34:27] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 14:34:27] cfg_read_device_property succeed.
+[Info] [2026-10-11 14:34:28] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 14:34:28] Server is disconnected
+[Debug] [2026-10-11 14:34:28] end to connect server
+[Debug] [2026-10-11 14:34:28] cfg_disconnect succeed.
+[Info] [2026-10-11 14:34:28] /***************************End Configration***************************/
+[Info] [2026-10-11 17:29:52] /***************************Start Configuration***************************/
+[Info] [2026-10-11 17:29:52] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 17:29:52] Version: 146967
+[Info] [2026-10-11 17:29:53] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 17:29:53] PDS Dir Path: 
+[Debug] [2026-10-11 17:29:53] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 17:29:53] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 17:29:53] Client Local host name:???????
+[Debug] [2026-10-11 17:29:53] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 17:29:53] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 17:29:53] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 17:29:53] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 17:29:53] Finish.
+[Info] [2026-10-11 17:29:53] Connect server succeeded
+[Debug] [2026-10-11 17:29:53] Send RPC:1
+[Debug] [2026-10-11 17:29:53] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 17:29:53] Send RPC:2
+[Debug] [2026-10-11 17:29:53] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 17:29:53] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 17:29:55] COMMAND[get_cable_paras] execute successfully, takes 1.9 secs.
+[Debug] [2026-10-11 17:29:55] cfg_connect succeed.
+[Debug] [2026-10-11 17:29:56] Send RPC:3
+[Debug] [2026-10-11 17:29:56] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 17:29:57] COMMAND[set_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-11 17:29:58] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 17:29:58] Send RPC:4
+[Debug] [2026-10-11 17:29:58] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 17:29:59] begin the exec of open cable cmd...
+[Debug] [2026-10-11 17:29:59] Begin to deal with chain from server...
+[Debug] [2026-10-11 17:29:59] Begin to set user chain...
+[Debug] [2026-10-11 17:29:59] End to set user chain.
+[Debug] [2026-10-11 17:29:59] end the exec of open cable cmd.
+[Debug] [2026-10-11 17:29:59] COMMAND[Open config cable] execute successfully, takes 1.0 secs.
+[Debug] [2026-10-11 17:29:59] cfg_scan_chain succeed.
+[Debug] [2026-10-11 17:30:00] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:30:00] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:30:00] Send RPC:5
+[Debug] [2026-10-11 17:30:00] Send cmd [Get device id:20006] OK
+[Debug] [2026-10-11 17:30:01] begin the exec of get device property cmd...
+[Debug] [2026-10-11 17:30:01] Begin to show device id result...
+[Debug] [2026-10-11 17:30:01] End to show device id result...
+[Debug] [2026-10-11 17:30:01] end the exec of get device property cmd.
+[Debug] [2026-10-11 17:30:01] COMMAND[Get device id] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 17:30:01] cfg_read_device_property succeed.
+[Debug] [2026-10-11 17:30:01] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:30:01] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:30:01] Send RPC:6
+[Debug] [2026-10-11 17:30:01] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 17:30:02] begin the exec of get device property cmd...
+[Debug] [2026-10-11 17:30:02] read status exec:
+[Debug] [2026-10-11 17:30:02] Begin to show read status register result...
+[Debug] [2026-10-11 17:30:02] End to show read status register result.
+[Debug] [2026-10-11 17:30:02] end the exec of get device property cmd.
+[Debug] [2026-10-11 17:30:02] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 17:30:02] cfg_read_device_property succeed.
+[Info] [2026-10-11 17:30:03] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 17:30:03] Server is disconnected
+[Debug] [2026-10-11 17:30:03] end to connect server
+[Debug] [2026-10-11 17:30:03] cfg_disconnect succeed.
+[Info] [2026-10-11 17:30:04] /***************************End Configration***************************/
+[Info] [2026-10-11 17:31:13] /***************************Start Configuration***************************/
+[Info] [2026-10-11 17:31:13] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 17:31:13] Version: 146967
+[Info] [2026-10-11 17:31:14] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 17:31:14] PDS Dir Path: 
+[Debug] [2026-10-11 17:31:14] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 17:31:14] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 17:31:14] Client Local host name:???????
+[Debug] [2026-10-11 17:31:14] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 17:31:14] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 17:31:14] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 17:31:14] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 17:31:14] Finish.
+[Info] [2026-10-11 17:31:14] Connect server succeeded
+[Debug] [2026-10-11 17:31:14] Send RPC:1
+[Debug] [2026-10-11 17:31:14] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 17:31:14] Send RPC:2
+[Debug] [2026-10-11 17:31:14] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 17:31:14] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 17:31:16] COMMAND[get_cable_paras] execute successfully, takes 1.2 secs.
+[Debug] [2026-10-11 17:31:16] cfg_connect succeed.
+[Debug] [2026-10-11 17:31:17] Send RPC:3
+[Debug] [2026-10-11 17:31:17] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 17:31:18] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-11 17:31:18] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 17:31:18] Send RPC:4
+[Debug] [2026-10-11 17:31:18] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 17:31:19] begin the exec of open cable cmd...
+[Debug] [2026-10-11 17:31:19] Begin to deal with chain from server...
+[Debug] [2026-10-11 17:31:19] Begin to set user chain...
+[Debug] [2026-10-11 17:31:19] End to set user chain.
+[Debug] [2026-10-11 17:31:19] end the exec of open cable cmd.
+[Debug] [2026-10-11 17:31:19] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 17:31:19] cfg_scan_chain succeed.
+[Debug] [2026-10-11 17:31:20] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 17:31:20] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 17:31:20] begin to get device info from CFG file...
+[Debug] [2026-10-11 17:31:20] end to get device info from CFG file...
+[Debug] [2026-10-11 17:31:20] cfg_assign_file succeed.
+[Debug] [2026-10-11 17:31:20] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 17:31:20] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 17:31:20] cfg_set_device_property succeed.
+[Debug] [2026-10-11 17:31:20] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 17:31:20] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 17:31:20] Send RPC:5
+[Debug] [2026-10-11 17:31:20] Begin to send program data.
+[Debug] [2026-10-11 17:31:20] End to send program data.
+[Debug] [2026-10-11 17:31:20] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 17:31:23] The value of Progress is 6
+[Debug] [2026-10-11 17:31:24] The value of Progress is 10
+[Debug] [2026-10-11 17:31:25] The value of Progress is 15
+[Debug] [2026-10-11 17:31:27] The value of Progress is 20
+[Debug] [2026-10-11 17:31:28] The value of Progress is 25
+[Debug] [2026-10-11 17:31:30] The value of Progress is 30
+[Debug] [2026-10-11 17:31:31] The value of Progress is 35
+[Debug] [2026-10-11 17:31:33] The value of Progress is 40
+[Debug] [2026-10-11 17:31:34] The value of Progress is 45
+[Debug] [2026-10-11 17:31:36] The value of Progress is 50
+[Debug] [2026-10-11 17:31:37] The value of Progress is 55
+[Debug] [2026-10-11 17:31:39] The value of Progress is 60
+[Debug] [2026-10-11 17:31:40] The value of Progress is 65
+[Debug] [2026-10-11 17:31:42] The value of Progress is 70
+[Debug] [2026-10-11 17:31:44] The value of Progress is 75
+[Debug] [2026-10-11 17:31:45] The value of Progress is 80
+[Debug] [2026-10-11 17:31:47] The value of Progress is 85
+[Debug] [2026-10-11 17:31:48] The value of Progress is 90
+[Debug] [2026-10-11 17:31:50] The value of Progress is 95
+[Debug] [2026-10-11 17:31:51] The value of Progress is 100
+[Debug] [2026-10-11 17:31:52] COMMAND[Program] execute successfully, takes 31.2 secs.
+[Debug] [2026-10-11 17:31:53] cfg_program succeed.
+[Debug] [2026-10-11 17:31:53] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 17:31:53] Begin to check mask file.
+[Debug] [2026-10-11 17:31:53] End to check mask file.
+[Debug] [2026-10-11 17:31:53] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 17:31:53] Send RPC:6
+[Debug] [2026-10-11 17:31:53] Begin to send verify data.
+[Debug] [2026-10-11 17:31:53] End to send verify data.
+[Debug] [2026-10-11 17:31:53] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 17:31:55] The value of Progress is 6
+[Debug] [2026-10-11 17:31:57] The value of Progress is 10
+[Debug] [2026-10-11 17:31:58] The value of Progress is 15
+[Debug] [2026-10-11 17:32:00] The value of Progress is 20
+[Debug] [2026-10-11 17:32:01] The value of Progress is 25
+[Debug] [2026-10-11 17:32:03] The value of Progress is 30
+[Debug] [2026-10-11 17:32:04] The value of Progress is 35
+[Debug] [2026-10-11 17:32:06] The value of Progress is 40
+[Debug] [2026-10-11 17:32:08] The value of Progress is 45
+[Debug] [2026-10-11 17:32:09] The value of Progress is 50
+[Debug] [2026-10-11 17:32:11] The value of Progress is 55
+[Debug] [2026-10-11 17:32:12] The value of Progress is 60
+[Debug] [2026-10-11 17:32:14] The value of Progress is 65
+[Debug] [2026-10-11 17:32:15] The value of Progress is 70
+[Debug] [2026-10-11 17:32:17] The value of Progress is 75
+[Debug] [2026-10-11 17:32:19] The value of Progress is 80
+[Debug] [2026-10-11 17:32:20] The value of Progress is 85
+[Debug] [2026-10-11 17:32:22] The value of Progress is 90
+[Debug] [2026-10-11 17:32:23] The value of Progress is 95
+[Debug] [2026-10-11 17:32:25] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 17:32:26] cfg_verify succeed.
+[Debug] [2026-10-11 17:32:27] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:32:27] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:32:27] Send RPC:7
+[Debug] [2026-10-11 17:32:27] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 17:32:27] begin the exec of get device property cmd...
+[Debug] [2026-10-11 17:32:27] read status exec:
+[Debug] [2026-10-11 17:32:27] Begin to show read status register result...
+[Debug] [2026-10-11 17:32:27] End to show read status register result.
+[Debug] [2026-10-11 17:32:27] end the exec of get device property cmd.
+[Debug] [2026-10-11 17:32:27] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 17:32:28] cfg_read_device_property succeed.
+[Info] [2026-10-11 17:32:28] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 17:32:28] Server is disconnected
+[Debug] [2026-10-11 17:32:28] end to connect server
+[Debug] [2026-10-11 17:32:28] cfg_disconnect succeed.
+[Info] [2026-10-11 17:32:29] /***************************End Configration***************************/
+[Info] [2026-10-11 17:50:32] /***************************Start Configuration***************************/
+[Info] [2026-10-11 17:50:32] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 17:50:32] Version: 146967
+[Info] [2026-10-11 17:50:33] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 17:50:33] PDS Dir Path: 
+[Debug] [2026-10-11 17:50:33] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 17:50:33] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 17:50:33] Client Local host name:???????
+[Debug] [2026-10-11 17:50:33] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 17:50:33] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 17:50:33] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 17:50:33] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 17:50:33] Finish.
+[Info] [2026-10-11 17:50:33] Connect server succeeded
+[Debug] [2026-10-11 17:50:33] Send RPC:1
+[Debug] [2026-10-11 17:50:33] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 17:50:33] Send RPC:2
+[Debug] [2026-10-11 17:50:33] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 17:50:33] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 17:50:34] COMMAND[get_cable_paras] execute successfully, takes 1.2 secs.
+[Debug] [2026-10-11 17:50:35] cfg_connect succeed.
+[Debug] [2026-10-11 17:50:35] Send RPC:3
+[Debug] [2026-10-11 17:50:35] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 17:50:36] COMMAND[set_cable_paras] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 17:50:36] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 17:50:37] Send RPC:4
+[Debug] [2026-10-11 17:50:37] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 17:50:38] begin the exec of open cable cmd...
+[Debug] [2026-10-11 17:50:38] Begin to deal with chain from server...
+[Debug] [2026-10-11 17:50:38] Begin to set user chain...
+[Debug] [2026-10-11 17:50:38] End to set user chain.
+[Debug] [2026-10-11 17:50:38] end the exec of open cable cmd.
+[Debug] [2026-10-11 17:50:38] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 17:50:38] cfg_scan_chain succeed.
+[Debug] [2026-10-11 17:50:38] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 17:50:38] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 17:50:38] begin to get device info from CFG file...
+[Debug] [2026-10-11 17:50:38] end to get device info from CFG file...
+[Debug] [2026-10-11 17:50:38] cfg_assign_file succeed.
+[Debug] [2026-10-11 17:50:39] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 17:50:39] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 17:50:39] cfg_set_device_property succeed.
+[Debug] [2026-10-11 17:50:39] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 17:50:39] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 17:50:39] Send RPC:5
+[Debug] [2026-10-11 17:50:39] Begin to send program data.
+[Debug] [2026-10-11 17:50:39] End to send program data.
+[Debug] [2026-10-11 17:50:39] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 17:50:41] The value of Progress is 6
+[Debug] [2026-10-11 17:50:42] The value of Progress is 10
+[Debug] [2026-10-11 17:50:44] The value of Progress is 15
+[Debug] [2026-10-11 17:50:45] The value of Progress is 20
+[Debug] [2026-10-11 17:50:47] The value of Progress is 25
+[Debug] [2026-10-11 17:50:48] The value of Progress is 30
+[Debug] [2026-10-11 17:50:50] The value of Progress is 35
+[Debug] [2026-10-11 17:50:52] The value of Progress is 40
+[Debug] [2026-10-11 17:50:53] The value of Progress is 45
+[Debug] [2026-10-11 17:50:55] The value of Progress is 50
+[Debug] [2026-10-11 17:50:56] The value of Progress is 55
+[Debug] [2026-10-11 17:50:58] The value of Progress is 60
+[Debug] [2026-10-11 17:50:59] The value of Progress is 65
+[Debug] [2026-10-11 17:51:01] The value of Progress is 70
+[Debug] [2026-10-11 17:51:02] The value of Progress is 75
+[Debug] [2026-10-11 17:51:04] The value of Progress is 80
+[Debug] [2026-10-11 17:51:05] The value of Progress is 85
+[Debug] [2026-10-11 17:51:07] The value of Progress is 90
+[Debug] [2026-10-11 17:51:08] The value of Progress is 95
+[Debug] [2026-10-11 17:51:10] The value of Progress is 100
+[Debug] [2026-10-11 17:51:10] COMMAND[Program] execute successfully, takes 31.1 secs.
+[Debug] [2026-10-11 17:51:10] cfg_program succeed.
+[Debug] [2026-10-11 17:51:11] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 17:51:11] Begin to check mask file.
+[Debug] [2026-10-11 17:51:11] End to check mask file.
+[Debug] [2026-10-11 17:51:11] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 17:51:11] Send RPC:6
+[Debug] [2026-10-11 17:51:11] Begin to send verify data.
+[Debug] [2026-10-11 17:51:11] End to send verify data.
+[Debug] [2026-10-11 17:51:11] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 17:51:13] The value of Progress is 6
+[Debug] [2026-10-11 17:51:14] The value of Progress is 10
+[Debug] [2026-10-11 17:51:16] The value of Progress is 15
+[Debug] [2026-10-11 17:51:17] The value of Progress is 20
+[Debug] [2026-10-11 17:51:19] The value of Progress is 25
+[Debug] [2026-10-11 17:51:21] The value of Progress is 30
+[Debug] [2026-10-11 17:51:22] The value of Progress is 35
+[Debug] [2026-10-11 17:51:24] The value of Progress is 40
+[Debug] [2026-10-11 17:51:25] The value of Progress is 45
+[Debug] [2026-10-11 17:51:27] The value of Progress is 50
+[Debug] [2026-10-11 17:51:28] The value of Progress is 55
+[Debug] [2026-10-11 17:51:30] The value of Progress is 60
+[Debug] [2026-10-11 17:51:32] The value of Progress is 65
+[Debug] [2026-10-11 17:51:33] The value of Progress is 70
+[Debug] [2026-10-11 17:51:35] The value of Progress is 75
+[Debug] [2026-10-11 17:51:36] The value of Progress is 80
+[Debug] [2026-10-11 17:51:38] The value of Progress is 85
+[Debug] [2026-10-11 17:51:39] The value of Progress is 90
+[Debug] [2026-10-11 17:51:41] The value of Progress is 95
+[Debug] [2026-10-11 17:51:43] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 17:51:44] cfg_verify succeed.
+[Debug] [2026-10-11 17:51:44] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:51:44] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 17:51:44] Send RPC:7
+[Debug] [2026-10-11 17:51:44] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 17:51:45] begin the exec of get device property cmd...
+[Debug] [2026-10-11 17:51:45] read status exec:
+[Debug] [2026-10-11 17:51:45] Begin to show read status register result...
+[Debug] [2026-10-11 17:51:45] End to show read status register result.
+[Debug] [2026-10-11 17:51:45] end the exec of get device property cmd.
+[Debug] [2026-10-11 17:51:45] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 17:51:45] cfg_read_device_property succeed.
+[Info] [2026-10-11 17:51:46] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 17:51:46] Server is disconnected
+[Debug] [2026-10-11 17:51:46] end to connect server
+[Debug] [2026-10-11 17:51:46] cfg_disconnect succeed.
+[Info] [2026-10-11 17:51:46] /***************************End Configration***************************/
+[Info] [2026-10-11 19:04:02] /***************************Start Configuration***************************/
+[Info] [2026-10-11 19:04:02] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 19:04:02] Version: 146967
+[Info] [2026-10-11 19:04:03] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 19:04:03] PDS Dir Path: 
+[Debug] [2026-10-11 19:04:03] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 19:04:03] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 19:04:03] Client Local host name:???????
+[Debug] [2026-10-11 19:04:03] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 19:04:03] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 19:04:03] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 19:04:03] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 19:04:03] Finish.
+[Info] [2026-10-11 19:04:03] Connect server succeeded
+[Debug] [2026-10-11 19:04:03] Send RPC:1
+[Debug] [2026-10-11 19:04:03] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 19:04:03] Send RPC:2
+[Debug] [2026-10-11 19:04:03] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 19:04:03] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 19:04:04] COMMAND[get_cable_paras] execute successfully, takes 1.2 secs.
+[Debug] [2026-10-11 19:04:05] cfg_connect succeed.
+[Debug] [2026-10-11 19:04:05] Send RPC:3
+[Debug] [2026-10-11 19:04:05] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 19:04:06] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-11 19:04:06] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 19:04:07] Send RPC:4
+[Debug] [2026-10-11 19:04:07] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 19:04:08] begin the exec of open cable cmd...
+[Debug] [2026-10-11 19:04:08] Begin to deal with chain from server...
+[Debug] [2026-10-11 19:04:08] Begin to set user chain...
+[Debug] [2026-10-11 19:04:08] End to set user chain.
+[Debug] [2026-10-11 19:04:08] end the exec of open cable cmd.
+[Debug] [2026-10-11 19:04:08] COMMAND[Open config cable] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 19:04:08] cfg_scan_chain succeed.
+[Debug] [2026-10-11 19:04:08] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 19:04:08] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 19:04:08] begin to get device info from CFG file...
+[Debug] [2026-10-11 19:04:08] end to get device info from CFG file...
+[Debug] [2026-10-11 19:04:08] cfg_assign_file succeed.
+[Debug] [2026-10-11 19:04:09] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 19:04:09] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 19:04:09] cfg_set_device_property succeed.
+[Debug] [2026-10-11 19:04:09] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 19:04:09] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 19:04:09] Send RPC:5
+[Debug] [2026-10-11 19:04:09] Begin to send program data.
+[Debug] [2026-10-11 19:04:09] End to send program data.
+[Debug] [2026-10-11 19:04:09] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 19:04:11] The value of Progress is 6
+[Debug] [2026-10-11 19:04:12] The value of Progress is 10
+[Debug] [2026-10-11 19:04:14] The value of Progress is 15
+[Debug] [2026-10-11 19:04:15] The value of Progress is 20
+[Debug] [2026-10-11 19:04:17] The value of Progress is 25
+[Debug] [2026-10-11 19:04:18] The value of Progress is 30
+[Debug] [2026-10-11 19:04:20] The value of Progress is 35
+[Debug] [2026-10-11 19:04:22] The value of Progress is 40
+[Debug] [2026-10-11 19:04:23] The value of Progress is 45
+[Debug] [2026-10-11 19:04:25] The value of Progress is 50
+[Debug] [2026-10-11 19:04:26] The value of Progress is 55
+[Debug] [2026-10-11 19:04:28] The value of Progress is 60
+[Debug] [2026-10-11 19:04:29] The value of Progress is 65
+[Debug] [2026-10-11 19:04:31] The value of Progress is 70
+[Debug] [2026-10-11 19:04:32] The value of Progress is 75
+[Debug] [2026-10-11 19:04:34] The value of Progress is 80
+[Debug] [2026-10-11 19:04:35] The value of Progress is 85
+[Debug] [2026-10-11 19:04:37] The value of Progress is 90
+[Debug] [2026-10-11 19:04:38] The value of Progress is 95
+[Debug] [2026-10-11 19:04:40] The value of Progress is 100
+[Debug] [2026-10-11 19:04:40] COMMAND[Program] execute successfully, takes 31.2 secs.
+[Debug] [2026-10-11 19:04:41] cfg_program succeed.
+[Debug] [2026-10-11 19:04:42] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 19:04:42] Begin to check mask file.
+[Debug] [2026-10-11 19:04:42] End to check mask file.
+[Debug] [2026-10-11 19:04:42] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 19:04:42] Send RPC:6
+[Debug] [2026-10-11 19:04:42] Begin to send verify data.
+[Debug] [2026-10-11 19:04:42] End to send verify data.
+[Debug] [2026-10-11 19:04:42] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 19:04:44] The value of Progress is 6
+[Debug] [2026-10-11 19:04:45] The value of Progress is 10
+[Debug] [2026-10-11 19:04:47] The value of Progress is 15
+[Debug] [2026-10-11 19:04:48] The value of Progress is 20
+[Debug] [2026-10-11 19:04:50] The value of Progress is 25
+[Debug] [2026-10-11 19:04:51] The value of Progress is 30
+[Debug] [2026-10-11 19:04:53] The value of Progress is 35
+[Debug] [2026-10-11 19:04:55] The value of Progress is 40
+[Debug] [2026-10-11 19:04:56] The value of Progress is 45
+[Debug] [2026-10-11 19:04:58] The value of Progress is 50
+[Debug] [2026-10-11 19:04:59] The value of Progress is 55
+[Debug] [2026-10-11 19:05:01] The value of Progress is 60
+[Debug] [2026-10-11 19:05:03] The value of Progress is 65
+[Debug] [2026-10-11 19:05:04] The value of Progress is 70
+[Debug] [2026-10-11 19:05:06] The value of Progress is 75
+[Debug] [2026-10-11 19:05:07] The value of Progress is 80
+[Debug] [2026-10-11 19:05:09] The value of Progress is 85
+[Debug] [2026-10-11 19:05:10] The value of Progress is 90
+[Debug] [2026-10-11 19:05:12] The value of Progress is 95
+[Debug] [2026-10-11 19:05:14] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 19:05:14] cfg_verify succeed.
+[Debug] [2026-10-11 19:05:14] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 19:05:14] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 19:05:14] Send RPC:7
+[Debug] [2026-10-11 19:05:14] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 19:05:15] begin the exec of get device property cmd...
+[Debug] [2026-10-11 19:05:15] read status exec:
+[Debug] [2026-10-11 19:05:15] Begin to show read status register result...
+[Debug] [2026-10-11 19:05:15] End to show read status register result.
+[Debug] [2026-10-11 19:05:15] end the exec of get device property cmd.
+[Debug] [2026-10-11 19:05:15] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 19:05:15] cfg_read_device_property succeed.
+[Info] [2026-10-11 19:05:16] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 19:05:16] Server is disconnected
+[Debug] [2026-10-11 19:05:16] end to connect server
+[Debug] [2026-10-11 19:05:16] cfg_disconnect succeed.
+[Info] [2026-10-11 19:05:17] /***************************End Configration***************************/
+[Info] [2026-10-11 21:52:15] /***************************Start Configuration***************************/
+[Info] [2026-10-11 21:52:15] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 21:52:15] Version: 146967
+[Info] [2026-10-11 21:52:16] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 21:52:16] PDS Dir Path: 
+[Debug] [2026-10-11 21:52:16] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 21:52:16] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 21:52:16] Client Local host name:???????
+[Debug] [2026-10-11 21:52:16] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 21:52:16] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 21:52:16] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 21:52:16] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 21:52:16] Finish.
+[Info] [2026-10-11 21:52:16] Connect server succeeded
+[Debug] [2026-10-11 21:52:16] Send RPC:1
+[Debug] [2026-10-11 21:52:16] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 21:52:16] Send RPC:2
+[Debug] [2026-10-11 21:52:16] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 21:52:16] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 21:52:18] COMMAND[get_cable_paras] execute successfully, takes 1.2 secs.
+[Debug] [2026-10-11 21:52:18] cfg_connect succeed.
+[Debug] [2026-10-11 21:52:19] Send RPC:3
+[Debug] [2026-10-11 21:52:19] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 21:52:20] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-11 21:52:20] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 21:52:20] Send RPC:4
+[Debug] [2026-10-11 21:52:20] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 21:52:21] begin the exec of open cable cmd...
+[Debug] [2026-10-11 21:52:21] Begin to deal with chain from server...
+[Debug] [2026-10-11 21:52:21] Begin to set user chain...
+[Debug] [2026-10-11 21:52:21] End to set user chain.
+[Debug] [2026-10-11 21:52:21] end the exec of open cable cmd.
+[Debug] [2026-10-11 21:52:21] COMMAND[Open config cable] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 21:52:21] cfg_scan_chain succeed.
+[Debug] [2026-10-11 21:52:22] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 21:52:22] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 21:52:22] begin to get device info from CFG file...
+[Debug] [2026-10-11 21:52:22] end to get device info from CFG file...
+[Debug] [2026-10-11 21:52:22] cfg_assign_file succeed.
+[Debug] [2026-10-11 21:52:22] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 21:52:22] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 21:52:22] cfg_set_device_property succeed.
+[Debug] [2026-10-11 21:52:22] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 21:52:22] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 21:52:22] Send RPC:5
+[Debug] [2026-10-11 21:52:22] Begin to send program data.
+[Debug] [2026-10-11 21:52:22] End to send program data.
+[Debug] [2026-10-11 21:52:22] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 21:52:25] The value of Progress is 6
+[Debug] [2026-10-11 21:52:26] The value of Progress is 10
+[Debug] [2026-10-11 21:52:27] The value of Progress is 15
+[Debug] [2026-10-11 21:52:29] The value of Progress is 20
+[Debug] [2026-10-11 21:52:30] The value of Progress is 25
+[Debug] [2026-10-11 21:52:32] The value of Progress is 30
+[Debug] [2026-10-11 21:52:33] The value of Progress is 35
+[Debug] [2026-10-11 21:52:35] The value of Progress is 40
+[Debug] [2026-10-11 21:52:37] The value of Progress is 45
+[Debug] [2026-10-11 21:52:38] The value of Progress is 50
+[Debug] [2026-10-11 21:52:40] The value of Progress is 55
+[Debug] [2026-10-11 21:52:41] The value of Progress is 60
+[Debug] [2026-10-11 21:52:43] The value of Progress is 65
+[Debug] [2026-10-11 21:52:44] The value of Progress is 70
+[Debug] [2026-10-11 21:52:46] The value of Progress is 75
+[Debug] [2026-10-11 21:52:47] The value of Progress is 80
+[Debug] [2026-10-11 21:52:49] The value of Progress is 85
+[Debug] [2026-10-11 21:52:50] The value of Progress is 90
+[Debug] [2026-10-11 21:52:52] The value of Progress is 95
+[Debug] [2026-10-11 21:52:53] The value of Progress is 100
+[Debug] [2026-10-11 21:52:54] COMMAND[Program] execute successfully, takes 31.2 secs.
+[Debug] [2026-10-11 21:52:55] cfg_program succeed.
+[Debug] [2026-10-11 21:52:55] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 21:52:55] Begin to check mask file.
+[Debug] [2026-10-11 21:52:55] End to check mask file.
+[Debug] [2026-10-11 21:52:55] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 21:52:55] Send RPC:6
+[Debug] [2026-10-11 21:52:55] Begin to send verify data.
+[Debug] [2026-10-11 21:52:55] End to send verify data.
+[Debug] [2026-10-11 21:52:55] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 21:52:57] The value of Progress is 6
+[Debug] [2026-10-11 21:52:59] The value of Progress is 10
+[Debug] [2026-10-11 21:53:00] The value of Progress is 15
+[Debug] [2026-10-11 21:53:02] The value of Progress is 20
+[Debug] [2026-10-11 21:53:03] The value of Progress is 25
+[Debug] [2026-10-11 21:53:05] The value of Progress is 30
+[Debug] [2026-10-11 21:53:06] The value of Progress is 35
+[Debug] [2026-10-11 21:53:08] The value of Progress is 40
+[Debug] [2026-10-11 21:53:10] The value of Progress is 45
+[Debug] [2026-10-11 21:53:11] The value of Progress is 50
+[Debug] [2026-10-11 21:53:13] The value of Progress is 55
+[Debug] [2026-10-11 21:53:14] The value of Progress is 60
+[Debug] [2026-10-11 21:53:16] The value of Progress is 65
+[Debug] [2026-10-11 21:53:17] The value of Progress is 70
+[Debug] [2026-10-11 21:53:19] The value of Progress is 75
+[Debug] [2026-10-11 21:53:21] The value of Progress is 80
+[Debug] [2026-10-11 21:53:22] The value of Progress is 85
+[Debug] [2026-10-11 21:53:24] The value of Progress is 90
+[Debug] [2026-10-11 21:53:25] The value of Progress is 95
+[Debug] [2026-10-11 21:53:27] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 21:53:28] cfg_verify succeed.
+[Debug] [2026-10-11 21:53:29] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 21:53:29] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 21:53:29] Send RPC:7
+[Debug] [2026-10-11 21:53:29] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 21:53:29] begin the exec of get device property cmd...
+[Debug] [2026-10-11 21:53:29] read status exec:
+[Debug] [2026-10-11 21:53:29] Begin to show read status register result...
+[Debug] [2026-10-11 21:53:29] End to show read status register result.
+[Debug] [2026-10-11 21:53:29] end the exec of get device property cmd.
+[Debug] [2026-10-11 21:53:29] COMMAND[Read status] execute successfully, takes 0.6 secs.
+[Debug] [2026-10-11 21:53:30] cfg_read_device_property succeed.
+[Info] [2026-10-11 21:53:30] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 21:53:30] Server is disconnected
+[Debug] [2026-10-11 21:53:30] end to connect server
+[Debug] [2026-10-11 21:53:30] cfg_disconnect succeed.
+[Info] [2026-10-11 21:53:31] /***************************End Configration***************************/
+[Info] [2026-10-11 23:42:06] /***************************Start Configuration***************************/
+[Info] [2026-10-11 23:42:06] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 23:42:06] Version: 146967
+[Info] [2026-10-11 23:42:07] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 23:42:07] PDS Dir Path: 
+[Debug] [2026-10-11 23:42:07] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 23:42:07] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 23:42:07] Client Local host name:???????
+[Debug] [2026-10-11 23:42:07] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 23:42:07] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 23:42:07] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 23:42:07] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 23:42:07] Finish.
+[Info] [2026-10-11 23:42:07] Connect server succeeded
+[Debug] [2026-10-11 23:42:07] Send RPC:1
+[Debug] [2026-10-11 23:42:07] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 23:42:07] Send RPC:2
+[Debug] [2026-10-11 23:42:07] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 23:42:07] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 23:42:09] COMMAND[get_cable_paras] execute successfully, takes 2.0 secs.
+[Debug] [2026-10-11 23:42:10] cfg_connect succeed.
+[Debug] [2026-10-11 23:42:11] Send RPC:3
+[Debug] [2026-10-11 23:42:11] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 23:42:12] COMMAND[set_cable_paras] execute successfully, takes 1.6 secs.
+[Debug] [2026-10-11 23:42:13] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 23:42:13] Send RPC:4
+[Debug] [2026-10-11 23:42:13] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 23:42:14] begin the exec of open cable cmd...
+[Debug] [2026-10-11 23:42:14] Begin to deal with chain from server...
+[Debug] [2026-10-11 23:42:14] Begin to set user chain...
+[Debug] [2026-10-11 23:42:14] End to set user chain.
+[Debug] [2026-10-11 23:42:14] end the exec of open cable cmd.
+[Debug] [2026-10-11 23:42:14] COMMAND[Open config cable] execute successfully, takes 1.0 secs.
+[Debug] [2026-10-11 23:42:15] cfg_scan_chain succeed.
+[Debug] [2026-10-11 23:42:16] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 23:42:16] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 23:42:16] Send RPC:5
+[Debug] [2026-10-11 23:42:16] Send cmd [Get device id:20006] OK
+[Debug] [2026-10-11 23:42:16] begin the exec of get device property cmd...
+[Debug] [2026-10-11 23:42:16] Begin to show device id result...
+[Debug] [2026-10-11 23:42:16] End to show device id result...
+[Debug] [2026-10-11 23:42:16] end the exec of get device property cmd.
+[Debug] [2026-10-11 23:42:16] COMMAND[Get device id] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 23:42:17] cfg_read_device_property succeed.
+[Debug] [2026-10-11 23:42:17] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 23:42:17] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 23:42:17] Send RPC:6
+[Debug] [2026-10-11 23:42:17] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 23:42:18] begin the exec of get device property cmd...
+[Debug] [2026-10-11 23:42:18] read status exec:
+[Debug] [2026-10-11 23:42:18] Begin to show read status register result...
+[Debug] [2026-10-11 23:42:18] End to show read status register result.
+[Debug] [2026-10-11 23:42:18] end the exec of get device property cmd.
+[Debug] [2026-10-11 23:42:18] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 23:42:18] cfg_read_device_property succeed.
+[Info] [2026-10-11 23:42:19] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 23:42:19] Server is disconnected
+[Debug] [2026-10-11 23:42:19] end to connect server
+[Debug] [2026-10-11 23:42:19] cfg_disconnect succeed.
+[Info] [2026-10-11 23:42:19] /***************************End Configration***************************/
+[Info] [2026-10-11 23:51:44] /***************************Start Configuration***************************/
+[Info] [2026-10-11 23:51:44] Path: C:/pango/PDS_2022.2-SP6.4/bin
+[Info] [2026-10-11 23:51:44] Version: 146967
+[Info] [2026-10-11 23:51:45] Current Path: C:/D/FPGA/video_correct_integrated_20261008
+[Info] [2026-10-11 23:51:45] PDS Dir Path: 
+[Debug] [2026-10-11 23:51:45] begin to check the cfg_connect exec condition.
+[Debug] [2026-10-11 23:51:45] end to check the cfg_connect exec condition.
+[Debug] [2026-10-11 23:51:45] Client Local host name:???????
+[Debug] [2026-10-11 23:51:45] Client Local Address:100.120.230.10
+[Debug] [2026-10-11 23:51:45] Client Local Address:10.70.205.50
+[Debug] [2026-10-11 23:51:45] Server Address:127.0.0.1, Port:65420
+[Info] [2026-10-11 23:51:45] Connect OK, Server: 127.0.0.1  Port: 65420
+[Debug] [2026-10-11 23:51:45] Finish.
+[Info] [2026-10-11 23:51:45] Connect server succeeded
+[Debug] [2026-10-11 23:51:45] Send RPC:1
+[Debug] [2026-10-11 23:51:45] Send cmd [check version information:40004] OK
+[Debug] [2026-10-11 23:51:45] Send RPC:2
+[Debug] [2026-10-11 23:51:45] Send cmd [get_cable_paras:40010] OK
+[Debug] [2026-10-11 23:51:45] COMMAND[check version information] execute successfully, takes 0.0 secs.
+[Debug] [2026-10-11 23:51:46] COMMAND[get_cable_paras] execute successfully, takes 1.3 secs.
+[Debug] [2026-10-11 23:51:47] cfg_connect succeed.
+[Debug] [2026-10-11 23:51:47] Send RPC:3
+[Debug] [2026-10-11 23:51:47] Send cmd [set_cable_paras:40011] OK
+[Debug] [2026-10-11 23:51:48] COMMAND[set_cable_paras] execute successfully, takes 0.8 secs.
+[Debug] [2026-10-11 23:51:48] cfg_set_cable_property succeed.
+[Debug] [2026-10-11 23:51:49] Send RPC:4
+[Debug] [2026-10-11 23:51:49] Send cmd [Open config cable:20001] OK
+[Debug] [2026-10-11 23:51:49] begin the exec of open cable cmd...
+[Debug] [2026-10-11 23:51:49] Begin to deal with chain from server...
+[Debug] [2026-10-11 23:51:49] Begin to set user chain...
+[Debug] [2026-10-11 23:51:49] End to set user chain.
+[Debug] [2026-10-11 23:51:49] end the exec of open cable cmd.
+[Debug] [2026-10-11 23:51:49] COMMAND[Open config cable] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 23:51:50] cfg_scan_chain succeed.
+[Debug] [2026-10-11 23:51:50] begin to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 23:51:50] end to check the cfg_assign_file exec condition.
+[Debug] [2026-10-11 23:51:50] begin to get device info from CFG file...
+[Debug] [2026-10-11 23:51:50] end to get device info from CFG file...
+[Debug] [2026-10-11 23:51:50] cfg_assign_file succeed.
+[Debug] [2026-10-11 23:51:51] begin to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 23:51:51] end to check the cfg_set_device_property exec condition.
+[Debug] [2026-10-11 23:51:51] cfg_set_device_property succeed.
+[Debug] [2026-10-11 23:51:51] begin to check the cfg_program exec condition.
+[Debug] [2026-10-11 23:51:51] end to check the cfg_program exec condition.
+[Debug] [2026-10-11 23:51:51] Send RPC:5
+[Debug] [2026-10-11 23:51:51] Begin to send program data.
+[Debug] [2026-10-11 23:51:51] End to send program data.
+[Debug] [2026-10-11 23:51:51] Send cmd [Program:20002] OK
+[Debug] [2026-10-11 23:51:53] The value of Progress is 6
+[Debug] [2026-10-11 23:51:54] The value of Progress is 10
+[Debug] [2026-10-11 23:51:56] The value of Progress is 15
+[Debug] [2026-10-11 23:51:57] The value of Progress is 20
+[Debug] [2026-10-11 23:51:59] The value of Progress is 25
+[Debug] [2026-10-11 23:52:00] The value of Progress is 30
+[Debug] [2026-10-11 23:52:02] The value of Progress is 35
+[Debug] [2026-10-11 23:52:03] The value of Progress is 40
+[Debug] [2026-10-11 23:52:05] The value of Progress is 45
+[Debug] [2026-10-11 23:52:06] The value of Progress is 50
+[Debug] [2026-10-11 23:52:08] The value of Progress is 55
+[Debug] [2026-10-11 23:52:10] The value of Progress is 60
+[Debug] [2026-10-11 23:52:11] The value of Progress is 65
+[Debug] [2026-10-11 23:52:13] The value of Progress is 70
+[Debug] [2026-10-11 23:52:14] The value of Progress is 75
+[Debug] [2026-10-11 23:52:16] The value of Progress is 80
+[Debug] [2026-10-11 23:52:17] The value of Progress is 85
+[Debug] [2026-10-11 23:52:19] The value of Progress is 90
+[Debug] [2026-10-11 23:52:20] The value of Progress is 95
+[Debug] [2026-10-11 23:52:22] The value of Progress is 100
+[Debug] [2026-10-11 23:52:22] COMMAND[Program] execute successfully, takes 31.1 secs.
+[Debug] [2026-10-11 23:52:22] cfg_program succeed.
+[Debug] [2026-10-11 23:52:23] begin to check the cfg_verify exec condition.
+[Debug] [2026-10-11 23:52:23] Begin to check mask file.
+[Debug] [2026-10-11 23:52:23] End to check mask file.
+[Debug] [2026-10-11 23:52:23] end to check the cfg_verify exec condition.
+[Debug] [2026-10-11 23:52:23] Send RPC:6
+[Debug] [2026-10-11 23:52:23] Begin to send verify data.
+[Debug] [2026-10-11 23:52:23] End to send verify data.
+[Debug] [2026-10-11 23:52:23] Send cmd [Verify:20004] OK
+[Debug] [2026-10-11 23:52:25] The value of Progress is 6
+[Debug] [2026-10-11 23:52:26] The value of Progress is 10
+[Debug] [2026-10-11 23:52:28] The value of Progress is 15
+[Debug] [2026-10-11 23:52:29] The value of Progress is 20
+[Debug] [2026-10-11 23:52:31] The value of Progress is 25
+[Debug] [2026-10-11 23:52:32] The value of Progress is 30
+[Debug] [2026-10-11 23:52:34] The value of Progress is 35
+[Debug] [2026-10-11 23:52:36] The value of Progress is 40
+[Debug] [2026-10-11 23:52:37] The value of Progress is 45
+[Debug] [2026-10-11 23:52:39] The value of Progress is 50
+[Debug] [2026-10-11 23:52:40] The value of Progress is 55
+[Debug] [2026-10-11 23:52:42] The value of Progress is 60
+[Debug] [2026-10-11 23:52:43] The value of Progress is 65
+[Debug] [2026-10-11 23:52:45] The value of Progress is 70
+[Debug] [2026-10-11 23:52:47] The value of Progress is 75
+[Debug] [2026-10-11 23:52:48] The value of Progress is 80
+[Debug] [2026-10-11 23:52:50] The value of Progress is 85
+[Debug] [2026-10-11 23:52:51] The value of Progress is 90
+[Debug] [2026-10-11 23:52:53] The value of Progress is 95
+[Debug] [2026-10-11 23:52:55] COMMAND[Verify] execute successfully, takes 32.2 secs.
+[Debug] [2026-10-11 23:52:55] cfg_verify succeed.
+[Debug] [2026-10-11 23:52:55] begin to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 23:52:55] end to check the cfg_read_device_property exec condition.
+[Debug] [2026-10-11 23:52:55] Send RPC:7
+[Debug] [2026-10-11 23:52:55] Send cmd [Read status:20005] OK
+[Debug] [2026-10-11 23:52:56] begin the exec of get device property cmd...
+[Debug] [2026-10-11 23:52:56] read status exec:
+[Debug] [2026-10-11 23:52:56] Begin to show read status register result...
+[Debug] [2026-10-11 23:52:56] End to show read status register result.
+[Debug] [2026-10-11 23:52:56] end the exec of get device property cmd.
+[Debug] [2026-10-11 23:52:56] COMMAND[Read status] execute successfully, takes 0.7 secs.
+[Debug] [2026-10-11 23:52:56] cfg_read_device_property succeed.
+[Info] [2026-10-11 23:52:57] Disconnect from Server: 127.0.0.1  Port: 65420
+[Warn] [2026-10-11 23:52:57] Server is disconnected
+[Debug] [2026-10-11 23:52:57] end to connect server
+[Debug] [2026-10-11 23:52:57] cfg_disconnect succeed.
+[Info] [2026-10-11 23:52:58] /***************************End Configration***************************/

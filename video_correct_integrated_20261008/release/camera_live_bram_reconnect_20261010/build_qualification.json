@@ -1,0 +1,53 @@
+{
+  "utc": "2026-10-10T13:03:59.642682+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "unchanged_video_pipeline_qualification": "release/camera_live_bram_20261010/simulation_qualification.json",
+  "receiver_reconnect_tests": {
+    "utc": "2026-10-10T12:56:57.2805024Z",
+    "baseline_failure_reproduced": true,
+    "tests": {
+      "fixed_hdmi": {
+        "exit_code": 0,
+        "passed": true
+      },
+      "fixed_dvi": {
+        "exit_code": 0,
+        "passed": true
+      },
+      "config_tx_first": {
+        "exit_code": 0,
+        "passed": true
+      },
+      "config_rx_first": {
+        "exit_code": 0,
+        "passed": true
+      }
+    },
+    "hardware_programmed": false
+  },
+  "hardware_programmed": false,
+  "actual_camera_display_accepted": false,
+  "capture_size": [
+    320,
+    180
+  ],
+  "output_size": [
+    1920,
+    1080
+  ],
+  "output_hz": 60,
+  "flash_modified": false,
+  "files": {
+    "baseline.run.log": "d24c6072e7b33dbd1d921e91e2cfe9dd74bc952b7c3d7c138fe31ad5d766090e",
+    "build_run.log": "876358eff0bee1fce8136a85c5d05c44f69d3adefae91af713a29a06211c918a",
+    "camera_live_bram_top.sbit": "be1a72cade3008e25cff3f6925bf6347fea8211da6e5447fdd82ef137e7f5212",
+    "camera_live_bram_top.smsk": "93c7d577a5524ad32a1c3468d9502b6b8a2a09ae6bbb4273ccdd7daeeb894148",
+    "camera_live_bram_top_timing_summary_after_hold_fix.txt": "29c153919fa23c5b6cd8f3bdbacea7395b45195d97595fb4b9d7a0b9a33967fb",
+    "fixed_dvi.run.log": "58622c77c32bfd587e9e5c5a04f12c12f786f951f25cbaad614157c40776faab",
+    "fixed_hdmi.run.log": "f6c5395d3a8696f6fa8aeb7506f23f2f6f0d66f3cb1b24efa0262b564695a7ef",
+    "simulation_qualification.json": "3f54762d967195c8538e8470fda197e8f7fe3f90a5e960d21b6c7dbcc520d85c",
+    "source_hashes.json": "3711f5005b98c1bdc627aa8694efa091e88581723edd0c7f5958bbf275b72ea7",
+    "source_snapshot.zip": "83793a4e02081fcfdc6855ccbd2c7e2c379f973e95d992598975e8e4a68e8355"
+  }
+}

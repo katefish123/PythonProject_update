@@ -1,0 +1,84 @@
+{
+  "recorded_at_utc": "2026-10-11T06:33:10.652970+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "tests": {
+    "qualified_at_utc": "2026-10-11T06:25:12.8060203Z",
+    "tests": {
+      "tb_ddr_status_overlay": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "DDR_STATUS_OVERLAY_PASS",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_ddr_status_overlay.run.log",
+        "log_sha256": "fef44cbb6328719ce49e3911f7c35af426307fc9b7d02657ebafaf13a525d2dd"
+      },
+      "tb_marker_detector": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "MARKER_STATUS_PASS",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_marker_detector.run.log",
+        "log_sha256": "2c2811405d4c817c4f6fa7e878b8b884bc8587c201acb0f2d7598ec88c0526ea"
+      },
+      "tb_ddr_capture": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "DDR_CAPTURE_PASS",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_ddr_capture.run.log",
+        "log_sha256": "d513b79f7248dce82d13d657d98313a8a0d898bcbbe54b05beb24e7a0f89a61c"
+      },
+      "tb_video_correct_ddr_core": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "DDR_CORE_STATUS_PASS",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_video_correct_ddr_core.run.log",
+        "log_sha256": "c88acc07daa356f1eca093ce1b7881abe113f18e8eaea8de45b35fecbb19fd93"
+      }
+    },
+    "hardware_accepted": false
+  },
+  "part": "PG2L100H -6 FBG676",
+  "top": "video_correct_ddr_top",
+  "base_release": "release/ddr_camera_reconnect_20261011",
+  "base_image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "instrumented_modules": [
+    "b_rectifier.v",
+    "ddr_capture_writer.v",
+    "ddr_snapshot_capture.v",
+    "frame_processor.v",
+    "frame_session.v",
+    "marker_detector.v",
+    "video_correct_ddr_core.v",
+    "video_correct_ddr_top.v"
+  ],
+  "unchanged_compiled_source_count": 101,
+  "source_sampling": [
+    640,
+    480
+  ],
+  "processed_output": [
+    320,
+    452
+  ],
+  "display": [
+    1920,
+    1080
+  ],
+  "change": "Expose actual capture outcomes, DDR drain progress, processor state/errors and inclusive marker counts/spans; coherently snapshot by clock domain and overlay D205 at y720..1039. Thresholds and processing behavior retained.",
+  "hardware_programmed": false,
+  "actual_camera_correction_accepted": false,
+  "flash_modified": false,
+  "timing_limit": "Vendor DDR and provisional external HDMI IO models; current real-camera DDR correction not accepted by simulation/timing alone.",
+  "files": {
+    "build_run.log": "0b046180871f6c1c03c0a440c1cb366d2c3f3ffa435236f322116369bc0cf0c9",
+    "simulation_qualification.json": "6ee8001b6d2fb6b408c1df5fa51977e8ad52ec6577149c75c3f0bbf463e82d91",
+    "source_hashes.json": "7535d09c7fb435b0005ffec4ecb06d9c39b7b8ad7e6b7d75c2841dfecb2670db",
+    "source_snapshot.zip": "460fcec7a772383e8acdc483eed903032013e826896ee202ec98e39e16af827d",
+    "tb_ddr_capture.run.log": "d513b79f7248dce82d13d657d98313a8a0d898bcbbe54b05beb24e7a0f89a61c",
+    "tb_ddr_status_overlay.run.log": "fef44cbb6328719ce49e3911f7c35af426307fc9b7d02657ebafaf13a525d2dd",
+    "tb_marker_detector.run.log": "2c2811405d4c817c4f6fa7e878b8b884bc8587c201acb0f2d7598ec88c0526ea",
+    "tb_video_correct_ddr_core.run.log": "c88acc07daa356f1eca093ce1b7881abe113f18e8eaea8de45b35fecbb19fd93",
+    "video_correct_ddr_top.rtr": "2a4ddbda08bf4c42d7cad1ef19a10b68bef5c0e3f116d7afaff96f1fba490faa",
+    "video_correct_ddr_top.sbit": "79edec3bb9730776f75ee204832b8884c69e74700c297046bde7cff9d5c2397b",
+    "video_correct_ddr_top.smsk": "348f30b7d6bbb74becd43313fdbed68ae81e0c9faa781e19fb01cbb1931424a4"
+  }
+}

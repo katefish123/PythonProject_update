@@ -1,0 +1,17 @@
+{
+  "ddr_lock": true,
+  "ddr_ready": true,
+  "phy_fail": false,
+  "align_error": false,
+  "self_pass": true,
+  "self_fail": false,
+  "engine_fault": false,
+  "rx_done": false,
+  "tx_done": true,
+  "ack_error": true,
+  "image_valid": false,
+  "working": false,
+  "frame_error": false,
+  "input_wait": false,
+  "underrun": false
+}

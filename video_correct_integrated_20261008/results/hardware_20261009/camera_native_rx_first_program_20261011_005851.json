@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-10T17:00:09.5221046Z",
+  "bitstream_sha256": "b918087a2ec5179e78f1a3f78e903538e401abbc120ba40201abb45a9fb5cbc2",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\program_camera_native_rx_first_20261011_005851.log",
+  "actual_camera_display_accepted": false
+}

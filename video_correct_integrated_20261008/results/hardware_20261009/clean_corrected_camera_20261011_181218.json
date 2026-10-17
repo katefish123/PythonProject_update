@@ -1,0 +1,33 @@
+{
+  "recorded_at_utc": "2026-10-11T10:25:18.723633+00:00",
+  "original_video": "C:\\Users\\夏菲\\Videos\\2026-10-11 18-12-18.mp4",
+  "video_copy": "results\\hardware_20261009\\clean_corrected_camera_20261011_181218.mp4",
+  "video_sha256": "ac6d570d21707ee5d1c14a678ce73ccef80acc2f8e2a5933ca748b24e867e264",
+  "image": "release/ddr_camera_reconnect_20261011/video_correct_ddr_top.sbit",
+  "image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "decoded_frames": 1709,
+  "decode_succeeded": true,
+  "white_page_candidate_frames": 1404,
+  "black_like_window_frames": 0,
+  "first_white_page_frame": 305,
+  "last_white_page_frame": 1708,
+  "non_page_frames_after_first_page": 0,
+  "black_like_frames_after_first_page": 0,
+  "minimum_outside_window_dark_ratio_during_page": 1.0,
+  "largest_successive_roi_mean_difference": 135.26788194444444,
+  "frames_requiring_visual_check": [
+    "results\\hardware_20261009\\clean_corrected_camera_20261011_181218_first.png",
+    "results\\hardware_20261009\\clean_corrected_camera_20261011_181218_middle.png",
+    "results\\hardware_20261009\\clean_corrected_camera_20261011_181218_last.png"
+  ],
+  "full_page_visually_checked": true,
+  "continuous_real_correction_update_accepted": false,
+  "algorithm_update_fps_measured": false,
+  "limit": "Candidate detection on actual OBS video, requiring visual review of the full prescribed rectangle. Stable held frame is allowed and cannot establish live update FPS. Encoded recording rate is not algorithm throughput.",
+  "diagnostic_grid_absent_visually_checked": true,
+  "user_verbatim": "整校正录像已保存 ，有完整矩形图 ，没有别的异样，但是好像字迹有点模糊？",
+  "continuous_clean_page_display_observed_seconds_approx": 46.8,
+  "clarity_accepted": false,
+  "working_baseline_preserved": true,
+  "qualification_limit": "Real full clean rectification and short stable/held display accepted. Optical/processing sharpness still needs improvement. Continuous update rate and long-run behavior are not accepted by a static or held frame."
+}

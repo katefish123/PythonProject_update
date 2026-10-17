@@ -1,0 +1,11 @@
+[
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\hdmi_runtime\\hdmi_runtime_probe_top.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\hdmi_runtime\\results\\hdmi_config_runtime_diag.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\common\\reset_sync.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\hdmi\\iic_dri.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\hdmi\\ms7200_ctl.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\rtl\\hdmi\\ms7210_ctl.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\vendor\\c_current\\01_design_code\\video_timing_vtc.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\vendor\\c_current\\01_design_code\\ip\\video_pll_27m_148m5\\video_pll_27m_148m5.v",
+  "C:\\D\\FPGA\\video_correct_integrated_20261008\\vendor\\c_current\\01_design_code\\ip\\config_pll_27m_10m\\config_pll_27m_10m.v"
+]

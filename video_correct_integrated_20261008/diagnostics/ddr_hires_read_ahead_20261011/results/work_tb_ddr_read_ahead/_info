@@ -1,0 +1,71 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results
+T_opt
+!s110 1791731531
+VX36`RQVfen1Va@KF6?0kP3
+04 17 4 work tb_ddr_read_ahead fast 0
+=1-f83dc625ce34-6acba74b-201-9848
+o-quiet -auto_acc_if_foreign -work work_tb_ddr_read_ahead +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vddr_word_engine
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791734503
+!i10b 1
+!s100 RLJlWHR^F10]WY4G>VJ_?1
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I?fj[2zF^OR:2UhTE8L5592
+S1
+R0
+Z5 w1791734501
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v
+!i122 1
+L0 6 234
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791734503.000000
+!s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_ddr_read_ahead.sv|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v|
+Z9 !s90 -sv|-work|work_tb_ddr_read_ahead|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_ddr_read_ahead.sv|
+!i113 0
+Z10 o-sv -work work_tb_ddr_read_ahead -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_ddr_read_ahead
+R2
+R3
+!i10b 1
+!s100 [=kcViUD@QI`jeZUSh78W0
+R4
+ISZ1Q0PF@4U8GK0]kI_8hY2
+S1
+R0
+R5
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_ddr_read_ahead.sv
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_ddr_read_ahead.sv
+!i122 1
+L0 2 179
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z11 !s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_ddr_read_ahead.sv|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v|
+R9
+!i113 0
+R10
+R1

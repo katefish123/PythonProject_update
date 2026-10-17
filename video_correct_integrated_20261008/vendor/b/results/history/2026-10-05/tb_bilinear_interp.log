@@ -1,0 +1,2 @@
+INTERP_PASS 1000
+sim/tb_bilinear_interp.sv:31: $finish called at 10630000 (1ps)

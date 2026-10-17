@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-11T13:41:34.065487+00:00",
+  "programmed": false,
+  "rejected": true,
+  "reason": "One fast-corner hold violation -0.001ns from display beat_data[144] to inferred distributed line RAM data input; no timing exception added.",
+  "repair": "Use the documented Pango syn_ramstyle=block_ram attribute for packed line buffers; retain constraints and rerun qualification.",
+  "files": {
+    "build.tcl": "f1ab242fa6929e5ce62f990cd3614cfa4235088b0abeaef41d9c7a3db4283711",
+    "build_run.log": "2ce47c1725c8e4ac37f0c85716f494dff98a56aba3419d3f60fdec87ae27cc5f",
+    "ddr_camera_hires_status.pds": "f5fa08161cca72c729a448fbe41601c92ffe4a96dc2cfb64f55164273a973ade",
+    "simulation_qualification.json": "787c23fb0942608ca276683bc7575d4b39ba28ab741c736b33f73ef30470b334",
+    "source_hashes.json": "f15f403be4e9616f0a955179cf4887694888ce1200e574721ba57c937b2d46b3",
+    "source_snapshot_rejected.zip": "17796c8122244c4e8a96c414ffd9da1a0dae3934c013e5777cd4ab67b0e7f72e",
+    "video_correct_ddr_top.rtr": "b3f07a9b9309d355fcb3f7e9f857a0fcd5b1d817160c6bebf47d73f4b596927f",
+    "video_correct_ddr_top.sbit": "91261ae9b38854fb2ce664940031aee86a32fcc6285f0f114d32e7a46aaf1743",
+    "video_correct_ddr_top.smsk": "b3c0bf6335fb3ea8f741c2fb4dcb79a39412a8de65cfc4a1f921cdd007abad52"
+  }
+}

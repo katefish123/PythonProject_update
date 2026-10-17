@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_native_rx_first_20261010/results
+T_opt
+Z1 !s110 1791643829
+V<lHfA8VNE5Rzc>zZ_AQ8@1
+04 21 4 work tb_hdmi_camera_native fast 0
+=1-bcfce7c3c068-6aca50b5-c2-a8ac
+o-quiet -auto_acc_if_foreign -work work_pixels_missing_vs -g H_FRONT=90 -g MISSING_VS=1 +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vcamera_native_rx_first_top
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
+!i10b 1
+!s100 `FmYPYk4S`DCE?5_JYfWi3
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IIe?Oi>oOWJ;lcj3^kblOk2
+S1
+R0
+Z5 w1791643797
+8camera_native_rx_first_top.v
+Fcamera_native_rx_first_top.v
+!i122 0
+L0 6 45
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791643828.000000
+Z9 !s107 tb_native_pixels.sv|video_timing_vtc.v|hdmi_vs_recover.v|reset_sync.v|camera_native_rx_first_top.v|
+Z10 !s90 -sv|-work|work_pixels_missing_vs|camera_native_rx_first_top.v|reset_sync.v|hdmi_vs_recover.v|video_timing_vtc.v|tb_native_pixels.sv|
+!i113 0
+Z11 o-sv -work work_pixels_missing_vs -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vconfig_pll_27m_10m
+R3
+R1
+!i10b 1
+!s100 Z>0`OdlbRg2>KKUV=>08m1
+R4
+IEU65n;Zb:2XPF5?OVECS63
+S1
+R0
+R5
+Z12 8tb_native_pixels.sv
+Z13 Ftb_native_pixels.sv
+!i122 0
+L0 2 4
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vhdmi_config
+R3
+R1
+!i10b 1
+!s100 59nCEiC;Hi7>SEKi]bXbY0
+R4
+I1C580^KeW:[E9<?9Kg[RL1
+S1
+R0
+R5
+R12
+R13
+!i122 0
+L0 6 1
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vhdmi_vs_recover
+R3
+R1
+!i10b 1
+!s100 cJ:K]<M0nhd6P095UDDRH2
+R4
+IfI86RXJiJhOzf@^_LX?U13
+S1
+R0
+R5
+8hdmi_vs_recover.v
+Fhdmi_vs_recover.v
+!i122 0
+L0 3 31
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vreset_sync
+R3
+R1
+!i10b 1
+!s100 >L@QLA@n^9=cQ_2oGzlGB3
+R4
+Id3l26ZYa8bbJn?c0XhnlR2
+S1
+R0
+R5
+8reset_sync.v
+Freset_sync.v
+!i122 0
+L0 2 7
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vtb_hdmi_camera_native
+R3
+R1
+!i10b 1
+!s100 U[>lB2=kV<b8lJW[3mk3i1
+R4
+I2l1Y7H5M301lE5OWXETCo1
+S1
+R0
+R5
+R12
+R13
+!i122 0
+L0 7 42
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2
+vvideo_timing_vtc
+R3
+R1
+!i10b 1
+!s100 >bN_?_:BQEijb7?^:jc3O0
+R4
+IZPke?HB<YmfaHJ7b`]JQ>3
+S1
+R0
+R5
+8video_timing_vtc.v
+Fvideo_timing_vtc.v
+!i122 0
+L0 5 57
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R2

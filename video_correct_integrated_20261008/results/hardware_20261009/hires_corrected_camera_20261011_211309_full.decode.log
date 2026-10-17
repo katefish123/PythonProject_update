@@ -1,0 +1,36 @@
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\hires_corrected_camera_20261011_211309.mp4':
+  Metadata:
+    major_brand     : iso4
+    minor_version   : 0
+    compatible_brands: iso4isomobs1iso2avc1mp41
+    creation_time   : 2026-10-11T13:13:10.000000Z
+    encoder         : OBS Studio (32.2.2)
+  Duration: 00:00:44.27, start: 0.000000, bitrate: 6010 kb/s
+  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1920x1080 [SAR 1:1 DAR 16:9], 6000 kb/s, 30 fps, 30 tbr, 30 tbn (default)
+      Metadata:
+        creation_time   : 2026-10-11T13:13:10.000000Z
+        handler_name    : OBS Video Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : obs_nvenc_h264_tex
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)
+      Metadata:
+        creation_time   : 2026-10-11T13:13:10.000000Z
+        handler_name    : OBS Audio Handler
+        vendor_id       : [0][0][0][0]
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> rawvideo (native))
+Press [q] to stop, [?] for help
+Output #0, rawvideo, to 'pipe:1':
+  Metadata:
+    major_brand     : iso4
+    minor_version   : 0
+    compatible_brands: iso4isomobs1iso2avc1mp41
+    encoder         : Lavf61.7.100
+  Stream #0:0(und): Video: rawvideo (RGB[24] / 0x18424752), rgb24(pc, gbr/bt709/bt709, progressive), 192x108 [SAR 1:1 DAR 16:9], q=2-31, 14929 kb/s, 30 fps, 30 tbn (default)
+      Metadata:
+        creation_time   : 2026-10-11T13:13:10.000000Z
+        handler_name    : OBS Video Handler
+        vendor_id       : [0][0][0][0]
+        encoder         : Lavc61.19.100 rawvideo
+frame=  793 fps=0.0 q=-0.0 size=   48114KiB time=00:00:26.70 bitrate=14762.2kbits/s speed=50.9x    [out#0/rawvideo @ 00000277f0864600] video:80615KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.000000%
+frame= 1327 fps=0.0 q=-0.0 Lsize=   80615KiB time=00:00:44.23 bitrate=14929.9kbits/s speed=52.2x    

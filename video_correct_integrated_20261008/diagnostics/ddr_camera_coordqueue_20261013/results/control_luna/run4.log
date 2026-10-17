@@ -1,0 +1,59 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do run.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work work 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 17:05:16 on Oct 13,2026
+# vlog -sv -work work C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/b_rectifier.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/bilinear_interp.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/homography_solver.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/perspective_coord.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/perspective_core.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/scaled_div_pipe.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/signed_div_seq.v C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/unsigned_div_seq.v C:/D/FPGA/video_correct_integrated_20261008/rtl/algo/marker_detector.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_coordqueue_20261013/results/frame_processor.v C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_coordqueue_20261013/tb_coord_queue_control.sv 
+# -- Compiling module b_rectifier
+# -- Compiling module bilinear_interp
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module frame_processor
+# -- Compiling module tb_coord_queue_control
+# 
+# Top level modules:
+# 	tb_coord_queue_control
+# End time: 17:05:16 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf control_luna.wlf work.tb_coord_queue_control 
+# Start time: 17:05:16 on Oct 13,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_coord_queue_control(fast)
+# Loading work.frame_processor(fast)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# CONTROL_PASS frames=5 pixels=1920 reads=2115 black=960 resets=3 timeout_queue=flushed
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_coordqueue_20261013/tb_coord_queue_control.sv(125)
+#    Time: 247800 ns  Iteration: 0  Instance: /tb_coord_queue_control
+# Break in Module tb_coord_queue_control at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_coordqueue_20261013/tb_coord_queue_control.sv line 125
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_coordqueue_20261013/tb_coord_queue_control.sv line 125
+# 1
+VERIFIED_PASS_BIT=1
+# End time: 17:05:17 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

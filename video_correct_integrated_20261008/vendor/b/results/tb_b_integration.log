@@ -1,0 +1,5 @@
+B_INTEGRATION_COLLISION old_pending=H1 active=H1 new_pending=H0
+B_INTEGRATION_RESET coord=22 cache=75 interp=2
+B_INTEGRATION_PASS accepted=3427 requests=3405 responses=3330 outputs=3328 cancelled=99 commits=3 collision=1 corners=3 solves=3
+B_INTEGRATION_COVERAGE input_burst=99 request_burst=77 queue_peak=217 response_latency=3..250 source_overlap=1634/1634/1595 mixed_banks=148
+sim/tb_b_integration.sv:402: $finish called at 142650000 (1ps)

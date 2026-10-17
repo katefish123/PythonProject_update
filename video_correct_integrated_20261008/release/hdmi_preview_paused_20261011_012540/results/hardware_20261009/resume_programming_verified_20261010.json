@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-10T06:54:39.234536+00:00",
+  "verified_logs": {
+    "program_runtime_after_reseat_20261010.log": {
+      "program_and_verify_passed": true,
+      "sha256": "058c84f92ca61dbfbdc5c2bd578e53be948ec78b295684fa11943894f62d2e08"
+    },
+    "program_rx_first_shutdown_1mhz_20261010.log": {
+      "program_and_verify_passed": true,
+      "sha256": "f8b488ae8240d527bbd4c3b5fda51547b4718c2d0e6e1bb9402d7d2e78d3857d"
+    },
+    "program_ddr_shutdown_1mhz_20261010.log": {
+      "program_and_verify_passed": true,
+      "sha256": "0038cb75759e7b409f501a35425144f2f340cfd50d7c274967e8c30f95766c59"
+    }
+  },
+  "jtag_frequency": "1MHz",
+  "program_property": 1,
+  "readback_property": 1,
+  "current_board_image": "release/ddr_startup_fixed_20261009/video_correct_ddr_top.sbit",
+  "current_board_sha256": "85c11bebe47b97621619daf1fbf0f04e33fa270f5444e481c8280ee2d5ac2875",
+  "actual_camera_correction_accepted": false,
+  "current_boot_ddr_bist_observed": false,
+  "target_display_visually_verified": false,
+  "obs_device_id_refreshed": true,
+  "pending": "User screen/unlock confirmation, KEY0 logic restart and camera view; then real four-marker capture test"
+}

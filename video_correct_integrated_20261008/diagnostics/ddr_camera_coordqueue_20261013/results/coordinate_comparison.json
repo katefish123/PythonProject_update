@@ -1,0 +1,57 @@
+{
+  "recorded_at_utc": "2026-10-13T13:52:03.784054+00:00",
+  "same_native_golden_pixels": 578560,
+  "same_full_native_rgb": true,
+  "geometry_and_pixel_math_unchanged": true,
+  "host_memory_model_only": true,
+  "hardware_programmed": false,
+  "hardware_speedup_accepted": false,
+  "variants": {
+    "baseline": {
+      "total_cycles": 25094025,
+      "stages": {
+        "0": 0,
+        "1": 518400,
+        "2": 962877,
+        "3": 887,
+        "4": 1,
+        "5": 578560,
+        "6": 13306880,
+        "7": 2314240,
+        "8": 4519380,
+        "9": 578560,
+        "10": 1735680,
+        "11": 578560
+      },
+      "modeled_27mhz_seconds": 0.9294083333333333,
+      "source_reads": 385848,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_frame_profile.run.log",
+      "log_sha256": "26021fdf032cf45afb600a2c745a20bd79035c112e7b72633f3c78dc5eb2ac8f"
+    },
+    "coordinate_lookahead": {
+      "total_cycles": 12365414,
+      "stages": {
+        "0": 0,
+        "1": 518400,
+        "2": 962877,
+        "3": 887,
+        "4": 1,
+        "5": 578560,
+        "6": 578583,
+        "7": 2314240,
+        "8": 4519065,
+        "9": 578560,
+        "10": 1735680,
+        "11": 578561
+      },
+      "modeled_27mhz_seconds": 0.45797829629629627,
+      "source_reads": 385848,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_ddr_full_frame.run.log",
+      "log_sha256": "c290ce57d69bdbf826baa0c1d2e06f865066717c97cb0bf38dc1b5b1444bdde9"
+    }
+  },
+  "modeled_cycle_speed_ratio": 2.0293720048515964,
+  "actual_working_baseline_observed_hz": 0.85,
+  "baseline_hardware_receipt": "results/hardware_20261009/rowtrain_actual_update_rate_verified_20261013.json",
+  "note": "Old WAIT_REQ stage waits23 clocks per pixel; lookahead reserves16 credits and overlaps coordinate work while one pixel samples/interpolates. Full native golden unchanged, max16reserved/15queued. Clock and DDR interface unchanged. Synthetic memory model gains are not a measured new board FPS."
+}

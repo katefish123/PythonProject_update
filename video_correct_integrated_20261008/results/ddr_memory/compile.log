@@ -1,0 +1,19 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 07:37:05 on Oct 09,2026
+vlog -sv -work ddr_memory_tests C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_word_engine.v C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_pixel_cache.v C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_command_bridge.v C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_arbiter3.v C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_result_writer.v C:\D\FPGA\video_correct_integrated_20261008\rtl\memory\ddr_self_test.v C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_word_engine.sv C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_pixel_cache.sv C:\D\FPGA\video_correct_integrated_20261008\sim\tb_ddr_helpers.sv 
+-- Compiling module ddr_word_engine
+-- Compiling module ddr_pixel_cache
+-- Compiling module ddr_command_bridge
+-- Compiling module ddr_arbiter3
+-- Compiling module ddr_result_writer
+-- Compiling module ddr_self_test
+-- Compiling module tb_ddr_word_engine
+-- Compiling module tb_ddr_pixel_cache
+-- Compiling module tb_ddr_helpers
+
+Top level modules:
+	tb_ddr_word_engine
+	tb_ddr_pixel_cache
+	tb_ddr_helpers
+End time: 07:37:05 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

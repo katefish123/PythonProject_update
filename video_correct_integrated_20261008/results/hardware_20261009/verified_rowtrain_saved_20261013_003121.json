@@ -1,0 +1,14 @@
+{
+  "saved_at_utc": "2026-10-12T16:39:02.738521+00:00",
+  "package": "release\\verified_rowtrain_camera_20261013_003121.zip",
+  "package_bytes": 31955453,
+  "package_sha256": "0b8864a1936f413e0ee1b65f4a341843d8ca0951e1e7955f23f99892a860f900",
+  "file_count": 224,
+  "zip_crc_and_hashes_verified": true,
+  "current_image_sha256": "eb06c8f9645665111b339e2ea305549a107830275d50f7625245b163b371d987",
+  "actual_evidence": "results\\hardware_20261009\\rowtrain_camera_verified_20261013_003121.json",
+  "preserved_video": "results\\hardware_20261009\\rowtrain_corrected_camera_20261013_003121.mp4",
+  "original_A_B_C_modified": false,
+  "original_video_modified": false,
+  "paused_by_user": false
+}

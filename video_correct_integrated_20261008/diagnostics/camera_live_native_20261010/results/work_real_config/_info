@@ -1,0 +1,170 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_native_20261010/results
+T_opt
+!s110 1791643099
+VA[S8iP0_7NGW:i<=K?U2=2
+04 14 4 work tb_hdmi_config fast 0
+=1-bcfce7c3c068-6aca4dda-386-9984
+o-quiet -auto_acc_if_foreign -work work_real_config -g TX_FIRST=1 +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vhdmi_config
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791643098
+!i10b 1
+!s100 1eO5XmCek:XoeH<a_JhY61
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IAhO@5jI2eWPHPU3V<SJfK3
+S1
+R0
+Z5 w1791643084
+8hdmi_config.v
+Fhdmi_config.v
+!i122 0
+L0 7 151
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791643098.000000
+Z9 !s107 tb_hdmi_config.sv|iic_dri.v|ms7210_ctl.v|ms7200_ctl.v|hdmi_config.v|
+Z10 !s90 -sv|-work|work_real_config|hdmi_config.v|ms7200_ctl.v|ms7210_ctl.v|iic_dri.v|tb_hdmi_config.sv|
+!i113 0
+Z11 o-sv -work work_real_config -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+viic_dri
+R2
+R3
+!i10b 1
+!s100 oUiM`i69d9ozUQNJAoN?`1
+R4
+I36NzSLZNn7gJMz[BkET0F0
+S1
+R0
+R5
+8iic_dri.v
+Fiic_dri.v
+!i122 0
+L0 23 520
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vms7200_ctl
+R2
+R3
+!i10b 1
+!s100 B72_1`=B2V`]:CB=LHb>e0
+R4
+I;lZN9?oK9kcB^XX8ga>Z50
+S1
+R0
+R5
+8ms7200_ctl.v
+Fms7200_ctl.v
+!i122 0
+L0 43 1580
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vms7210_ctl
+R2
+R3
+!i10b 1
+!s100 =j3BH?BX`=7LWEXkJE9gE0
+R4
+I_o02RkIUF8JXa8@5:MLg91
+S1
+R0
+R5
+8ms7210_ctl.v
+Fms7210_ctl.v
+!i122 0
+L0 22 344
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vms72xx_i2c_test_device
+R2
+R3
+!i10b 1
+!s100 i`3aOcM;jd?lD>VZcmdh]3
+R4
+IKoWL6TnAY2`^iO__Xo=T62
+S1
+R0
+R5
+Z12 8tb_hdmi_config.sv
+Z13 Ftb_hdmi_config.sv
+!i122 0
+L0 110 136
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vtb_hdmi_config
+R2
+R3
+!i10b 1
+!s100 5=A40^iegzOPW`h<DchWL3
+R4
+IF<E0TEcMoT3NSfWKD]:3K3
+S1
+R0
+R5
+R12
+R13
+!i122 0
+L0 2 108
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1

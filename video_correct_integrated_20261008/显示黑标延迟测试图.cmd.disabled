@@ -1,0 +1,2 @@
+@echo off
+start "" "C:\Users\夏菲\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\pythonw.exe" -X utf8 -B "%~dp0diagnostics\ddr_camera_black_fast_20261014\show_latency_target.py"

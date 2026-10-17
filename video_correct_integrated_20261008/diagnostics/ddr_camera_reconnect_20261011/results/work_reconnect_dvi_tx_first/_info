@@ -1,0 +1,171 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_reconnect_20261011/results
+T_opt
+!s110 1791691742
+VCaCJ38CAJl46;S8Q@Q4[S3
+04 15 4 work tb_rx_reconnect fast 0
+=1-bcfce7c3c068-6acb0bde-122-8b24
+o-quiet -auto_acc_if_foreign -work work_reconnect_dvi_tx_first -g INITIAL_STATUS=2 -g TX_FIRST=1 +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vhdmi_config
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791692118
+!i10b 1
+!s100 1eO5XmCek:XoeH<a_JhY61
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IQSfALF8LP@RVIPkKH]lQY1
+S1
+R0
+Z5 w1791692113
+8hdmi_config.v
+Fhdmi_config.v
+!i122 1
+L0 7 151
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791692118.000000
+!s107 tb_rx_reconnect.sv|ms72xx_i2c_test_device.sv|iic_dri.v|ms7210_ctl.v|ms7200_ctl.v|hdmi_config.v|
+Z9 !s90 -sv|-work|work_reconnect_dvi_tx_first|hdmi_config.v|ms7200_ctl.v|ms7210_ctl.v|iic_dri.v|ms72xx_i2c_test_device.sv|tb_rx_reconnect.sv|
+!i113 0
+Z10 o-sv -work work_reconnect_dvi_tx_first -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+viic_dri
+R2
+R3
+!i10b 1
+!s100 oUiM`i69d9ozUQNJAoN?`1
+R4
+IPmA`X^kQQdEh4b@VMfBzD1
+S1
+R0
+R5
+8iic_dri.v
+Fiic_dri.v
+!i122 1
+L0 23 520
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z11 !s107 tb_rx_reconnect.sv|ms72xx_i2c_test_device.sv|iic_dri.v|ms7210_ctl.v|ms7200_ctl.v|hdmi_config.v|
+R9
+!i113 0
+R10
+R1
+vms7200_ctl
+R2
+R3
+!i10b 1
+!s100 B72_1`=B2V`]:CB=LHb>e0
+R4
+IM^o0C>gYBQD_1S@O0VQMa2
+S1
+R0
+R5
+8ms7200_ctl.v
+Fms7200_ctl.v
+!i122 1
+L0 43 1580
+R6
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1
+vms7210_ctl
+R2
+R3
+!i10b 1
+!s100 =j3BH?BX`=7LWEXkJE9gE0
+R4
+IXhMjn>eDjE4bQB>0C9ke]0
+S1
+R0
+R5
+8ms7210_ctl.v
+Fms7210_ctl.v
+!i122 1
+L0 22 344
+R6
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1
+vms72xx_i2c_test_device
+R2
+R3
+!i10b 1
+!s100 YdDX9VAkjKPA3FJcUe@ZS1
+R4
+IXFhQ4d=7E:2lO[4i`XIG_2
+S1
+R0
+R5
+8ms72xx_i2c_test_device.sv
+Fms72xx_i2c_test_device.sv
+!i122 1
+L0 2 136
+R6
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1
+vtb_rx_reconnect
+R2
+R3
+!i10b 1
+!s100 `l^I1j7Sjc]hafflNW]bE2
+R4
+IJaQ@zOTe@aendBnhnHQh51
+S1
+R0
+R5
+8tb_rx_reconnect.sv
+Ftb_rx_reconnect.sv
+!i122 1
+L0 2 69
+R6
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1

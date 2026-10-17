@@ -1,0 +1,24 @@
+{
+  "recorded_at_utc": "2026-10-14T03:36:26.4798488Z",
+  "observations": [
+    {
+      "screenshot": "adc_57_2c.png",
+      "present_c": 57.2,
+      "min_c": 53.2,
+      "max_c": 57.3
+    },
+    {
+      "screenshot": "adc_57_6c.png",
+      "present_c": 57.6,
+      "min_c": 53.2,
+      "max_c": 57.7
+    }
+  ],
+  "user_reported_fan_present": false,
+  "late_history_slope": "slow increase; not a long-term thermal qualification",
+  "last_visible_history_timestamp": "2026-10-14 11:14:27 Asia/Shanghai",
+  "hardware_comparison_explicitly_authorized_by_latest_user_message": true,
+  "fast_release_programmed": false,
+  "baseline_reload_attempt": "scan failed before Program; no devices detected",
+  "flash_modified": false
+}

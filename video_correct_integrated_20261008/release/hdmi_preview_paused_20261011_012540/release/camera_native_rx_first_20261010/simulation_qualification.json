@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-10T14:50:35.5507835Z",
+  "baseline_polling_failure_reproduced": true,
+  "tests": {
+    "fixed_rx_reconnect": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+      ]
+    },
+    "fixed_rx_dvi": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+      ]
+    },
+    "fixed_tx_reconnect": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+      ]
+    },
+    "config_rx": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_CONFIG",
+        "TEST_PASS_OPEN_DRAIN",
+        "TEST_PASS_BOOTSTRAP_NACK_RECOVERY",
+        "TEST_PASS_POSTPROBE_NACK_FATAL",
+        "TEST_PASS_NO_DEVICE"
+      ]
+    },
+    "config_tx": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_CONFIG",
+        "TEST_PASS_OPEN_DRAIN",
+        "TEST_PASS_BOOTSTRAP_NACK_RECOVERY",
+        "TEST_PASS_POSTPROBE_NACK_FATAL",
+        "TEST_PASS_NO_DEVICE"
+      ]
+    },
+    "pixels": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "PASS_NATIVE_ALL_PIXELS"
+      ]
+    },
+    "pixels_missing_vs": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "PASS_NATIVE_ALL_PIXELS"
+      ]
+    }
+  },
+  "hardware_accepted": false
+}

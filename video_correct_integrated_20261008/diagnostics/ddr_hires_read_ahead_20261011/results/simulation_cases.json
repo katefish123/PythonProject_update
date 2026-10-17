@@ -1,0 +1,6 @@
+{
+  "tb_ddr_word_engine": "DDR_WORD_ENGINE_PASS",
+  "tb_ddr_read_ahead": "DDR_READ_AHEAD_PASS",
+  "tb_hires_read_ahead_display": "HIRES_ENGINE_DISPLAY_PASS",
+  "tb_hires_read_ahead_control": "HIRES_ENGINE_DISPLAY_PASS"
+}

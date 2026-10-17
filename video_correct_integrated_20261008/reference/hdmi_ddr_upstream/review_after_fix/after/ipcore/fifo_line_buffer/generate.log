@@ -1,0 +1,65 @@
+IP Generator (Version 2022.2-SP6.4 build 146967)
+Check out license ...
+Start generating at 2026-07-12 18:31
+Instance: fifo_line_buffer (D:\Myproject\Work\HDMI_IN_DDR3_YCbCr\ipcore\fifo_line_buffer\fifo_line_buffer.idf)
+IP: Pango DRM Based FIFO (1.10)
+Part: Logos2-PG2L200H-FBB676--6
+Interface (12):
+    wr_clk, input
+    wr_rst, input
+    wr_en, input
+    wr_data[7:0], input
+    wr_full, output
+    almost_full, output
+    rd_clk, input
+    rd_rst, input
+    rd_en, input
+    rd_data[7:0], output
+    rd_empty, output
+    almost_empty, output
+Parameter (25):
+    ALMOST_EMPTY_NUM=4
+    ALMOST_FULL_NUM=1020
+    ASYN_FIFO_EN=true
+    BE_WIDTH=1
+    BYTE_SIZE=8
+    CAS_MODE=18K
+    CAS_MODE_SEL=AUTO
+    EMPTY_WL_EN=false
+    FAB_REG=false
+    FIFO_TYPE=ASYN_FIFO
+    FULL_WL_EN=false
+    OUTPUT_REG=false
+    POWER_OPT=false
+    RD_BE_WIDTH=1
+    RD_CLK_OR_POL_INV=false
+    RD_DATA_WIDTH=8
+    RD_DEPTH_WIDTH=11
+    RD_OCE_EN=false
+    RESET_TYPE=ASYNC
+    RST_VAL=0
+    RST_VAL_EN=false
+    SAMEWIDTH_EN=true
+    WR_BYTE_EN=false
+    WR_DATA_WIDTH=8
+    WR_DEPTH_WIDTH=11
+Create directory 'rtl' ...
+Copy 'rtl\ipm2l_fifo_ctrl_v1_1.v.xml' to 'rtl' ...
+Copy 'rtl\ipm2l_fifo_v1_10.v.xml' to 'rtl' ...
+Copy 'rtl\ipm2l_sdpram_v1_10.v.xml' to 'rtl' ...
+Compile file 'rtl\ipm2l_sdpram_v1_10.v.xml' to 'rtl\ipm2l_sdpram_v1_10_fifo_line_buffer.v' ...
+Compile file 'rtl\ipm2l_fifo_v1_10.v.xml' to 'rtl\ipm2l_fifo_v1_10_fifo_line_buffer.v' ...
+Compile file 'rtl\ipm2l_fifo_ctrl_v1_1.v.xml' to 'rtl\ipm2l_fifo_ctrl_v1_1_fifo_line_buffer.v' ...
+Copy 'ipm2l_fifo_wrapper_v1_10.v.xml' ...
+Compile file 'ipm2l_fifo_wrapper_v1_10.v.xml' to 'fifo_line_buffer.v' ...
+Found top module 'fifo_line_buffer' in file 'fifo_line_buffer.v'.
+Copy 'ipm2l_fifo_wrapper_v1_0_tb.v.xml' ...
+Compile file 'ipm2l_fifo_wrapper_v1_0_tb.v.xml' to 'fifo_line_buffer_tb.v' ...
+Run file 'creatResetValue.tcl' ...
+Create template file 'fifo_line_buffer_tmpl.v' ...
+Create template file 'fifo_line_buffer_tmpl.vhdl' ...
+There are 4 source files to synthesize.
+Synthesize ...
+Invoke 'pds_shell.exe'
+Action 'synthesize': finished normally
+Done: 0 error(s), 0 warning(s)

@@ -1,0 +1,23 @@
+{
+  "recorded_at_utc": "2026-10-13T09:26:01.607852+00:00",
+  "user_report": "Board center/heatsink region and two nearby black chips felt hot; exact location and measured temperature unknown. User confirmed board power off.",
+  "board_power_reported_off": true,
+  "reason": "User observed heat, cooling before more board testing",
+  "current_chip_or_surface_temperature_measured": false,
+  "current_temperature_c": null,
+  "historical_adc_temperature_c": 54.4,
+  "historical_adc_temperature_date": "2026-10-09",
+  "historical_adc_temperature_is_current": false,
+  "working_image_before_poweroff": "release/ddr_camera_hires_rowtrain_20261013/video_correct_ddr_top.sbit",
+  "new_coordinate_queue_programmed": false,
+  "host_simulation_uses_board": false,
+  "hardware_testing_on_hold": true,
+  "software_work_continues": true,
+  "status_source": "Logos2 UG040005 table3-14",
+  "status_definition_url": "https://www.pangomicro.com/en/uploads/69345021_1729131793.pdf",
+  "status_bit27_label": "over_temp",
+  "status_bit29_label": "prcfg_over",
+  "status_effective_polarity_and_adc_threshold_verified": false,
+  "wrong_family_guide_not_applicable": "UG020005 Logos bit29/27 definitions are not those of PG2L100H Logos2.",
+  "scope": "No current sensor read, no power/heat measurement, no diagnosis of damage. Local hardware manual supports FPGA with2 DDR3 chips; location inferred from earlier photo."
+}

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-10T13:05:33.0254496Z",
+  "bitstream_sha256": "be1a72cade3008e25cff3f6925bf6347fea8211da6e5447fdd82ef137e7f5212",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\program_camera_live_bram_reconnect_20261010_210414.log",
+  "actual_camera_display_accepted": false
+}

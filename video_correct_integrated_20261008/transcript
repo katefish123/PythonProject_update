@@ -1,0 +1,4 @@
+# ** Error: (vsim-7) Failed to open -modelsimini file "{sim\modelsim.ini}" in read mode.
+# No such file or directory. (errno = ENOENT)
+# Error loading design
+# Errors: 1, Warnings: 0

@@ -1,0 +1,2 @@
+MARKER_CONFIG_PASS odd_roi_frames=2 custom_roi_frames=1 lower_threshold=32 lower_31_rejected=1 illegal_configs=22 frames_without_black=2 shared_edge_pairs=6
+sim/tb_marker_config.sv:125: $finish called at 12670000 (1ps)

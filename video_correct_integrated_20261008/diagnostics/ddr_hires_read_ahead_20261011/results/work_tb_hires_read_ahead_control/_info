@@ -1,0 +1,145 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results
+T_opt
+Z1 !s110 1791734515
+VYfUI8AOWBa[8YA3D6]hgB3
+04 27 4 work tb_hires_read_ahead_display fast 0
+=1-f83dc625ce34-6acbb2f3-176-2c88
+o-quiet -auto_acc_if_foreign -work work_tb_hires_read_ahead_control -g READ_AHEAD=0 -g EXPECT_UNDERRUN=1 +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vddr_arbiter3
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R1
+!i10b 1
+!s100 ;XjDCgO78h4m7Y4J6FQL?2
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IRW[C5GMj15z@UQPkB0F8`0
+S1
+R0
+w1791502431
+8C:/D/FPGA/video_correct_integrated_20261008/rtl/memory/ddr_arbiter3.v
+FC:/D/FPGA/video_correct_integrated_20261008/rtl/memory/ddr_arbiter3.v
+!i122 0
+L0 6 38
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1791734515.000000
+Z8 !s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_hires_read_ahead_display.sv|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v|C:/D/FPGA/video_correct_integrated_20261008/rtl/memory/ddr_arbiter3.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_status_20261011/results/ddr_result_display.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v|
+Z9 !s90 -sv|-work|work_tb_hires_read_ahead_control|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_status_20261011/results/ddr_result_display.v|C:/D/FPGA/video_correct_integrated_20261008/rtl/memory/ddr_arbiter3.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_hires_read_ahead_display.sv|
+!i113 0
+Z10 o-sv -work work_tb_hires_read_ahead_control -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vddr_result_display
+R3
+R1
+!i10b 1
+!s100 bXMX1B9bLi<FHLnmjcCle0
+R4
+IAMiWI7M21R8Q=ITIZ^[2f0
+S1
+R0
+w1791726094
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_status_20261011/results/ddr_result_display.v
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_hires_status_20261011/results/ddr_result_display.v
+!i122 0
+L0 7 302
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2
+vddr_word_engine
+R3
+R1
+!i10b 1
+!s100 RLJlWHR^F10]WY4G>VJ_?1
+R4
+IE2N98;Bg=3T@Bnj_]C9T;0
+S1
+R0
+Z11 w1791734501
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/ddr_word_engine.v
+!i122 0
+L0 6 234
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2
+vtb_hires_read_ahead_display
+R3
+R1
+!i10b 1
+!s100 QgR1k>hW@7VPH=<Y@9E7^0
+R4
+IXo^0nS@n5n_Z^`URj0kMM3
+S1
+R0
+R11
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_hires_read_ahead_display.sv
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_hires_read_ahead_20261011/results/tb_hires_read_ahead_display.sv
+!i122 0
+L0 2 105
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2
+vvideo_timing_vtc
+R3
+R1
+!i10b 1
+!s100 >bN_?_:BQEijb7?^:jc3O0
+R4
+IWU?hPklbA_d[M<[lSLlgV2
+S1
+R0
+w1791476583
+8C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v
+FC:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v
+!i122 0
+L0 5 57
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R2

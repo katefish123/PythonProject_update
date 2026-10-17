@@ -1,0 +1,14 @@
+{
+  "source_log": "results/modelsim_user_coord.log",
+  "sha256": "568c8f695d4015e0f12f81227a44e50bb61dd54d4f856d021f04ca6eb2179e67",
+  "native_simulator": "ModelSim SE-64 2020.4",
+  "compiled_rtl_modules": 9,
+  "compiled_testbenches": 5,
+  "latest_compilation_errors": 0,
+  "latest_compilation_warnings": 0,
+  "native_coordinate_result": "COORD_PASS 4329",
+  "other_four_testbenches": "not_yet_observed_in_native_log",
+  "remaining_error_in_supplied_log": "Script decimal test_passed comparison rejected a successful coordinate test",
+  "raw_decimal_flag": "not_printed_in_log; signed one-bit -1 interpretation is an inference",
+  "fix": "Binary single-value extraction, strict 1 test, flag diagnostic output"
+}

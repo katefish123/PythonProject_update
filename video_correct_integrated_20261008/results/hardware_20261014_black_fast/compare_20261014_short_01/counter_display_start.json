@@ -1,0 +1,7 @@
+{
+  "utc": "2026-10-14T04:38:36.0941119Z",
+  "pid": 24996,
+  "purpose": "visible optical stimulus for authorized short comparison",
+  "letterbox_background": "same gray as baseline target",
+  "period_ms": 100
+}

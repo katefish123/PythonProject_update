@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-10T14:38:27.8927360Z",
+  "tests": {
+    "pixels_normal": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "PASS_NATIVE_ALL_PIXELS"
+      ]
+    },
+    "pixels_missing_vs": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "PASS_NATIVE_ALL_PIXELS"
+      ]
+    },
+    "real_config": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_CONFIG",
+        "TEST_PASS_OPEN_DRAIN",
+        "TEST_PASS_BOOTSTRAP_NACK_RECOVERY",
+        "TEST_PASS_POSTPROBE_NACK_FATAL",
+        "TEST_PASS_NO_DEVICE"
+      ]
+    },
+    "real_reconnect": {
+      "passed": true,
+      "exit_code": 0,
+      "completion": [
+        "TEST_PASS_INITIAL_LOCK",
+        "TEST_PASS_NO_SIGNAL_NO_WRITES",
+        "TEST_PASS_RELOCK",
+        "TEST_PASS_LOCKED_MODE_BIT_CHANGE_NO_WRITES",
+        "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+      ]
+    }
+  },
+  "hardware_accepted": false
+}

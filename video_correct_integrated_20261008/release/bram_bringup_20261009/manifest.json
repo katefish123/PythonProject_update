@@ -1,0 +1,317 @@
+{
+  "utc": "2026-10-08T16:44:48.431566+00:00",
+  "client_date": "2026-10-09",
+  "status": "current_stage_verified_paused_at_user_request",
+  "c_commit": "1ba75f5130efed3719c99c1ff9dcc3046dd0f69d",
+  "board": "MES2L676-100HP",
+  "part": "PG2L100H-6 FBG676",
+  "source_hdmi": [
+    1920,
+    1080
+  ],
+  "source_snapshot": [
+    320,
+    180
+  ],
+  "result": [
+    160,
+    226
+  ],
+  "output_hdmi": "1920x1080 @ 60 nominal, 148.5 MHz",
+  "hardware_tested": false,
+  "ddr_connected_to_top": false,
+  "timing": "All Constraints Met under current provisional IO model",
+  "pixel_setup_slack_ns": 2.35,
+  "resources": {
+    "lut": 6740,
+    "ff": 8291,
+    "drm_used": 145,
+    "drm_total": 155,
+    "apm": 53,
+    "io": 71
+  },
+  "bitstream_files": [
+    {
+      "path": "release\\bram_bringup_20261009\\video_correct_board_top.sbit",
+      "bytes": 3791112,
+      "sha256": "f43daae6e94737b2e35f13f507eac0cf0efa1c96e1c003950e48e014d7726531"
+    },
+    {
+      "path": "release\\bram_bringup_20261009\\video_correct_board_top.smsk",
+      "bytes": 3791112,
+      "sha256": "7b7c8eeeba0b7e4afe28cd67871c2c630154667957b66e94a7a3c19c112350f3"
+    }
+  ],
+  "compiled_sources": [
+    {
+      "path": "vendor\\b\\rtl\\b_rectifier.v",
+      "sha256": "3bf7632448ddf91c0a4c100c534576a52dd2d100fb69f4ecefab04cdeb8681fc"
+    },
+    {
+      "path": "vendor\\b\\rtl\\bilinear_interp.v",
+      "sha256": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+    },
+    {
+      "path": "vendor\\b\\rtl\\homography_solver.v",
+      "sha256": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9"
+    },
+    {
+      "path": "vendor\\b\\rtl\\perspective_coord.v",
+      "sha256": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3"
+    },
+    {
+      "path": "vendor\\b\\rtl\\perspective_core.v",
+      "sha256": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5"
+    },
+    {
+      "path": "vendor\\b\\rtl\\scaled_div_pipe.v",
+      "sha256": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741"
+    },
+    {
+      "path": "vendor\\b\\rtl\\signed_div_seq.v",
+      "sha256": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d"
+    },
+    {
+      "path": "vendor\\b\\rtl\\unsigned_div_seq.v",
+      "sha256": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3"
+    },
+    {
+      "path": "rtl\\algo\\marker_detector.v",
+      "sha256": "f3625b37800bcb276c7d763e9022b4d7018c9471db0f8c00a3222807116b1cd0"
+    },
+    {
+      "path": "rtl\\common\\reset_sync.v",
+      "sha256": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2"
+    },
+    {
+      "path": "rtl\\video\\result_display.v",
+      "sha256": "461f6100edf4ecb073b83fab9dc0472d6e6df1c15fb88029c8b7ddbbcb7872e9"
+    },
+    {
+      "path": "rtl\\video\\snapshot_capture.v",
+      "sha256": "ee2ee9ff0fe56e1ac63556230e56f979a88701f9fa726dd8abaf6ac11e19b51f"
+    },
+    {
+      "path": "rtl\\top\\frame_processor.v",
+      "sha256": "5aa858283f5b8e7824a2caf90c2526823f7fe171d3767469330607cba86b4bc5"
+    },
+    {
+      "path": "rtl\\top\\frame_session.v",
+      "sha256": "78b4dc1044bb72e202d013ca308aa42b6548d209b88ea1f47c82681d5f1a6bad"
+    },
+    {
+      "path": "rtl\\top\\video_correct_board_top.v",
+      "sha256": "55da1932f610268b5a5ddb0a1de4b3fbcec800cd3e84ab939bfc18a399c13d49"
+    },
+    {
+      "path": "rtl\\top\\video_correct_core.v",
+      "sha256": "6fae32a3cf50efa48e53d5fd3a10f2daba85694282dadbbf436229a64d93e0f1"
+    },
+    {
+      "path": "rtl\\hdmi\\hdmi_config.v",
+      "sha256": "19f7c45c437914a772405a2f9d1f082a505b2d911f774f11c257abe57528452c"
+    },
+    {
+      "path": "rtl\\hdmi\\iic_dri.v",
+      "sha256": "b61dd57ec5a618505dcb1571ba3d1923f4ab20c4f312ea60f4f65ba9db7d1dda"
+    },
+    {
+      "path": "rtl\\hdmi\\ms7200_ctl.v",
+      "sha256": "2e3a975a3a2fb4553dfba8cfa5f9da9daedbd7cdb002f834ea59d713c7a4abf0"
+    },
+    {
+      "path": "rtl\\hdmi\\ms7210_ctl.v",
+      "sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242"
+    },
+    {
+      "path": "vendor\\c_current\\01_design_code\\video_timing_vtc.v",
+      "sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+    },
+    {
+      "path": "vendor\\c_current\\01_design_code\\hdmi_vs_recover.v",
+      "sha256": "2dca5fd7131ed43786648b9c28dd351088947a722418aebc890a1ba3389c1b51"
+    },
+    {
+      "path": "vendor\\c_current\\01_design_code\\ip\\video_pll_27m_148m5\\video_pll_27m_148m5.v",
+      "sha256": "b74af59403683ea68f3e85d5cbcb08a288a822764d846785a4e72a4d30c85e48"
+    },
+    {
+      "path": "vendor\\c_current\\01_design_code\\ip\\config_pll_27m_10m\\config_pll_27m_10m.v",
+      "sha256": "8f58c2266af621629e7f09cd6e309881ed7ee39eaad9535a99b023bc891714ea"
+    }
+  ],
+  "tests": [
+    {
+      "log": "results/b_native/verification.json",
+      "status": "pass",
+      "sha256": "19a782160d3aa2c5cbcde28f94fdb8460e8b14ce1f195b8fc7a2b70f10898a0c"
+    },
+    {
+      "log": "results/integration/simulation.log",
+      "status": "pass",
+      "sha256": "d6fa386eda83f62d8de9670ec16b079cd8f422cb56890fcd9770a049d2933b48"
+    },
+    {
+      "log": "results/video_tests/simulation_snapshot.log",
+      "status": "pass",
+      "sha256": "1b434fbb5d6e0b0d2246ac3b293297e2e2bbef558295d295f15425154d39601c"
+    },
+    {
+      "log": "results/video_tests/simulation_display.log",
+      "status": "pass",
+      "sha256": "e9c9bb777b5d2adcc8b7f163866a07274347d065ed6cca817353816b83d99578"
+    },
+    {
+      "log": "results/core_tests/simulation.log",
+      "status": "pass",
+      "sha256": "bf39c00e568b81fba2601256415cddc19d261d180a05ce7696dfd8fb1128c69f"
+    },
+    {
+      "log": "results/board_fixture/simulation/simulation.log",
+      "status": "pass",
+      "sha256": "9a876754b95ae9ed709d9685a0314be18b318c28289434cebcd76e707bdc2bc2"
+    },
+    {
+      "log": "results/hdmi_config.log",
+      "status": "pass",
+      "sha256": "16f85ae1278ff3bc207bf6e44ffc22120ce18fc42c65572cc9c9ef923832a3bb"
+    }
+  ],
+  "originals_verified": [
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\rtl\\algo\\marker_detector.v",
+      "sha256": "f3625b37800bcb276c7d763e9022b4d7018c9471db0f8c00a3222807116b1cd0",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\rtl\\top\\video_correct_top.v",
+      "sha256": "2b22b8cd51430e0a26b8cac654e9fb4b73729cb5451bec4d6d9aa51c13734ae0",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\rtl\\video\\frame_store_stub.v",
+      "sha256": "f5661b643a60f1d499b22499615de4a3811b17f0b30cf4bc2305414969592923",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\development_environment.md",
+      "sha256": "4d17b5499fbf051cbb3421e9795c487020881916a6848d0a4ef8abc39185a978",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\directory_guide.md",
+      "sha256": "41fe51e9d0b5df841b9139b838fbb8c7e71ce0f21766f405773de4030bad3064",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\模块清单.md",
+      "sha256": "23a861c2eacedb7594a965f458c868469175c8ce499f663fa08db3c1f6f01b8b",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\空顶层使用说明.md",
+      "sha256": "d9e1ae978fd5af8d8ed02481050e30bde4222f0558a239ac9f5dfa3412c808b3",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\images\\空顶层仿真.png",
+      "sha256": "a4b9cfd331203b4214c8f1c9f1d09649a5686ba9c2cb0395c083c72dcee4ae64",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\接口约定\\接口约定_v0_草案.md",
+      "sha256": "07ace0b533c8b923048d5a025cb07a801624d2521d8d24ea26c4b5c360be1741",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\docs\\接口约定\\接口约定_v1.md",
+      "sha256": "7e8e86e4a988fc5b927d15db62058feb4ebc3dd57f0518123920036c597e1bf4",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\baseline_sha256.json",
+      "sha256": "bebd160b788ac70658d1bc6d02e4f449fa517e4fd6d7e375ec2f170c08cf5408",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\interfaces.md",
+      "sha256": "abf39dc7066c4fa0bd9e4807051b14fff07b7348624573c887a657ff571ed616",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\tb_marker_detector.sv",
+      "sha256": "54f4cfb3b682e6d828ec68e0383f7cfab863ba87a1814c8c1fc6d2057b128690",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\bilinear_interp.v",
+      "sha256": "137812d33b6cf3bdd231de4811506c81945ee003c386afcedfafb0e20c9beace",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\b_rectifier.v",
+      "sha256": "bcd7f56ac50a757fa48c65ef406393539acca401a1ee4dcd3158c35d789a51b0",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\homography_solver.v",
+      "sha256": "1f7cf500b85c9cbe641d9af291ac24876a20234814271290fe5490ae4016fd58",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\marker_detector.v",
+      "sha256": "1b08dc98b8e06f60ba91294812bda8b597fb9dbf61173b626eefb32db251d208",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\perspective_coord.v",
+      "sha256": "582f2075203c4c17cbfa7e0d3be5980e8d07fe46f043aa645063363a5210f083",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\perspective_core.v",
+      "sha256": "60729b6f214ff5b0ce0461773f3c906dc21d48cdf7df470734d043c22554f8ec",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\scaled_div_pipe.v",
+      "sha256": "3d1cde132dea36050f877b27330af4871739ba73460e4cbfcfdcedb202853d19",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\signed_div_seq.v",
+      "sha256": "a4597bd7e014c51d4cd8c3a4994cbdffd9ba035ea402f7a1bd2befacb0874d2c",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\b_baseline\\rtl\\unsigned_div_seq.v",
+      "sha256": "c66c5832ccd1c31e6977d1879828a7ea3d393ace9ee1087f36c7224e6fb956f0",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\c_baseline\\rtl\\test_pattern_generator_tpg.v",
+      "sha256": "66497a15ec101ccb35ab55a7a07d9ce591d1043e9279c87614cfa99b861bb213",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\c_baseline\\rtl\\video_timing_vtc.v",
+      "sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\video_correct_fpga\\reference\\c_baseline\\rtl\\video_top.v",
+      "sha256": "38c9fce4d2a79e9283a205fa17f1d13944b325dce99c4b1bb3e91e057817507f",
+      "unchanged": true
+    },
+    {
+      "source": "C:\\D\\FPGA\\PythonProject_update_B\\member_b_perspective_final.zip",
+      "sha256": "7f27eeddf795569727f285b59042abe7db15c370b2df564676d70f9c978da851",
+      "unchanged": true
+    }
+  ],
+  "next": [
+    "USB/JTAG bring-up and HDMI end-to-end physical test",
+    "Implement DDR transaction/cache/capture/display adapters and integrate generated IP",
+    "Verify DDR calibration, full-resolution geometry and actual throughput"
+  ]
+}
