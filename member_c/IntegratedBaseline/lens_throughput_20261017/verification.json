@@ -1,0 +1,85 @@
+{
+  "scope": "synthetic exact scheduling optimization,not board/physical optics/video qualification",
+  "enterprise_acceptance": false,
+  "hardware_acceptance": false,
+  "board_integrated": false,
+  "board_timing_qualified": false,
+  "real_calibration": "blocked_by_missing_calibration",
+  "tests": {
+    "equivalence": {
+      "output_directory": "D:/FPGA/output/lens_fast_20261017_equivalence_v2",
+      "expected_failure": false,
+      "compile_log_sha256": "5eb7231daa50c81dcc483109c56e80e6528bf66badf31dde2765484d3db41d27",
+      "simulation_log_sha256": "4dc1999933fc64a97c91926f3fa684d52b4d90b910b0701a1ee5a276a5dbd3c1",
+      "compiled_source_sha256": {
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "tb_div_equivalence.sv": "66676b3f65353d1e151359e3a833128e6340a022c2268f030142b63d4165e580"
+      },
+      "statistics": {
+        "cases": 2573,
+        "max_fast_div_cycles": 66,
+        "old_div_cycles_sum": 263680,
+        "fast_div_cycles_sum": 71593
+      }
+    },
+    "brown": {
+      "output_directory": "D:/FPGA/output/lens_fast_20261017_brown_v2",
+      "expected_failure": false,
+      "compile_log_sha256": "1705b29c7b16e4de986dd683e23b984d0d7b6dabb173211798e66ff6e2784e9f",
+      "simulation_log_sha256": "b47c207bbf938686825c229380f67f05d80fd7a597c32f2c3c4a73806f946352",
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "tb_lens_map.sv": "a3810205057cf567c6a225efd9d36f77f23bfe0156707529ec7c47004d05a678"
+      },
+      "max_cycles": 158
+    },
+    "composed": {
+      "output_directory": "D:/FPGA/output/lens_fast_20261017_composed_v2",
+      "expected_failure": false,
+      "compile_log_sha256": "83b8f5684839017ff3ba2b8a6361c3e516a94b73e559495ea4a0b903e4dbc4bf",
+      "simulation_log_sha256": "5f65d36b1a5c54d8b3c92066bdff20fa6c9c05fbd05f76cc6c363a2c36ab06b8",
+      "compiled_source_sha256": {
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "tb_lens_map.sv": "bff9ad6d33d8cfee3cfed0bbe671cbdc703eb13fbf4aa85104177e094e8b36aa"
+      },
+      "max_cycles": 288
+    },
+    "old_schedule_negative": {
+      "output_directory": "D:/FPGA/output/lens_fast_20261017_old_schedule_v2_red",
+      "expected_failure": true,
+      "compile_log_sha256": "83c8c54bde902de45e29ba11ab2a5d4824dd312b53a657d8eeb9a60e78bc96dc",
+      "simulation_log_sha256": "772fe6c1c13fbca39f033eead69215620f90a79bfa61db7b0a17e6f25980e5fc",
+      "compiled_source_sha256": {
+        "q30_alu.v": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+        "q30_alu_fast.v": "02a397e88ff993ae21e13b86c9183f38a74d807d440833ddb6e5131ee28726a5",
+        "tb_div_equivalence.sv": "66676b3f65353d1e151359e3a833128e6340a022c2268f030142b63d4165e580"
+      }
+    }
+  },
+  "comparison": {
+    "brown_old_max_cycles": 350,
+    "brown_new_max_cycles": 158,
+    "composed_old_max_cycles": 652,
+    "composed_new_max_cycles": 288,
+    "note": "Maximum observed cycles on identical1024 synthetic vectors; no conversion to hardware frames/s."
+  },
+  "original_numeric_baseline_receipt_sha256": "162b5de1b83d28f55b97099f84c66dfbd9f1e6620d6ef10c0b67b2ba1df8c135",
+  "source_sha256": {
+    "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+    "tb_div_equivalence.sv": "66676b3f65353d1e151359e3a833128e6340a022c2268f030142b63d4165e580",
+    "build_fast.py": "d797baeb6f4375d99cc880d8abd72a552add67be8d7c23fecc4270ac8ed0f4c0",
+    "run_tests.ps1": "84bf425bf838b64bd8b42f6cedd008a042fe4c9571adeb6a37b242f15fbb9bdc",
+    "generated/lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+    "generated/lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5"
+  },
+  "archive_sha256": "28824e7176c741cbdf42cf241e344ba35005db3fd84f24f8aa8aef3c41ad734e"
+}

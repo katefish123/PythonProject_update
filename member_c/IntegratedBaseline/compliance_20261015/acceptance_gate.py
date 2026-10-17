@@ -36,6 +36,7 @@ def evaluate(root,model_receipt=None):
   'H_LENS_COMPOSITION':('lens_model_next/composition_qualification.json','Undistort raw corners before H fitting; target through ideal H then forward lens distortion; one final image sample.'),
   'REAL_CALIBRATION':('calibration_20261017/calibration_manifest.json','Traceable real raw images, camera/lens/mode/settings, K/k1/k2/p1/p2, target geometry, estimator/options, view hashes and errors; disjoint calibration/test captures.'),
   'HELD_OUT_QUALITY':('calibration_20261017/held_out_quality.json','Independent black/white target captures; MTF50 or SFR, straightness, edge stretch/breaks, physical aspect evidence, declared measurement methods and uncertainty.'),
+  'LOCAL_FRAME_COMPOSITION':('lens_board_next/local_frame_qualification.json','Same input/output dimensions; actual paper/pad outer boundary; unchanged outside pixels except complete old-marker cleanup; justified target aspect,background fill,actual text-baseline checks and single final sampling with coherent source-frame metadata.'),
   'REALTIME_RESOURCES':('lens_board_next/video_qualification.json','Actual corrected new-image rate, end-to-end hardware latency, LUT/register/DSP use, native16:9 source, real movement/angle changes and persistent stability.'),
   'LENS_PDS':('lens_board_next/implementation.json','Final changed lens-inclusive RTL exact source SHA, all final timing constraints, bit/mask and actual hardware acceptance evidence.'),
  }

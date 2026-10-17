@@ -1,0 +1,146 @@
+{
+  "board_timing_qualified": false,
+  "enterprise_acceptance": false,
+  "hardware_acceptance": false,
+  "scope": "Isolated ALU reg-to-reg timing and synthesis resource comparison only. No board pins,external IO delay,DDR,HDMI,video rate or bitstream qualification.",
+  "results": {
+    "v1_reference": {
+      "scope": "isolated registered-input/output wrapper,external IO unconstrained; not board timing",
+      "period_ns": 17.508,
+      "source_sha256": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+      "timing": {
+        "Setup_Slow": {
+          "slack_ns": 1.746,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        },
+        "Setup_Fast": {
+          "slack_ns": 7.247,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        },
+        "Hold_Slow": {
+          "slack_ns": 0.226,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        },
+        "Hold_Fast": {
+          "slack_ns": 0.151,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        }
+      },
+      "resources": {
+        "synthesis_LUTs": 1834,
+        "synthesis_registers": 691,
+        "synthesis_APMs": 12.0
+      },
+      "report_sha256": "a3d8a8d9dceae97694e56102c0a1a1d0aea488486cad0c13dc010eeacd990dc7",
+      "log_sha256": "128905bcd9017e3b7c022d8c163c694de838a39094b61cd8cf6c1e529226f654"
+    },
+    "v1_fast": {
+      "scope": "isolated registered-input/output wrapper,external IO unconstrained; not board timing",
+      "period_ns": 17.508,
+      "source_sha256": "09002164d3d5f2849109c5284cd2e7a7f1b478e3680456f5487a0e5cdda67b98",
+      "timing": {
+        "Setup_Slow": {
+          "slack_ns": 0.023,
+          "failing_endpoints": 0,
+          "total_endpoints": 3024
+        },
+        "Setup_Fast": {
+          "slack_ns": 6.191,
+          "failing_endpoints": 0,
+          "total_endpoints": 3024
+        },
+        "Hold_Slow": {
+          "slack_ns": 0.247,
+          "failing_endpoints": 0,
+          "total_endpoints": 3024
+        },
+        "Hold_Fast": {
+          "slack_ns": 0.168,
+          "failing_endpoints": 0,
+          "total_endpoints": 3024
+        }
+      },
+      "resources": {
+        "synthesis_LUTs": 2517,
+        "synthesis_registers": 721,
+        "synthesis_APMs": 12.0
+      },
+      "report_sha256": "66d8dfdbcd2257e3fabd373c0d560caf2731f0ea57d8725a61712bdc5925d199",
+      "log_sha256": "d37e9b1739d08980e6e3c0b70c22194bdef8f85443608396fad74073d00ca617"
+    },
+    "v2_reference": {
+      "scope": "isolated registered-input/output wrapper,external IO unconstrained; not board timing",
+      "period_ns": 17.508,
+      "source_sha256": "119515646e8755fdfb63f03f23ada112ccb80dd30fcecfe0ca9a50e5af0a9de9",
+      "timing": {
+        "Setup_Slow": {
+          "slack_ns": 1.746,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        },
+        "Setup_Fast": {
+          "slack_ns": 7.247,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        },
+        "Hold_Slow": {
+          "slack_ns": 0.226,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        },
+        "Hold_Fast": {
+          "slack_ns": 0.151,
+          "failing_endpoints": 0,
+          "total_endpoints": 1695
+        }
+      },
+      "resources": {
+        "synthesis_LUTs": 1834,
+        "synthesis_registers": 691,
+        "synthesis_APMs": 12.0
+      },
+      "report_sha256": "8557896641de65c917e778187177c05949ec7d57d807eb48c2749213fd7da937",
+      "log_sha256": "85850e5347f2e23ed6e1d8846dafffd465a23d9ae138937c765d2ca082635f9d"
+    },
+    "v2_fast": {
+      "scope": "isolated registered-input/output wrapper,external IO unconstrained; not board timing",
+      "period_ns": 17.508,
+      "source_sha256": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+      "timing": {
+        "Setup_Slow": {
+          "slack_ns": 3.723,
+          "failing_endpoints": 0,
+          "total_endpoints": 2251
+        },
+        "Setup_Fast": {
+          "slack_ns": 8.322,
+          "failing_endpoints": 0,
+          "total_endpoints": 2251
+        },
+        "Hold_Slow": {
+          "slack_ns": 0.249,
+          "failing_endpoints": 0,
+          "total_endpoints": 2251
+        },
+        "Hold_Fast": {
+          "slack_ns": 0.164,
+          "failing_endpoints": 0,
+          "total_endpoints": 2251
+        }
+      },
+      "resources": {
+        "synthesis_LUTs": 2183,
+        "synthesis_registers": 591,
+        "synthesis_APMs": 12.0
+      },
+      "report_sha256": "17ac2e7e75a953dd59903d2e97de8b81489a4eb5df7e495da62e2e20069af2c5",
+      "log_sha256": "b63d8756f859e59251bcaaded1c09346b4400c4a9541a1dee1a8e7946f3603bb"
+    }
+  },
+  "archive_sha256": "b7008a32c7f693afdfbbc2b78d6d7bf9eaeec0860ae9a7f43295ce123fdd2cbf",
+  "v1_note": "Minimum observed slow setup margin0.023ns motivated94-bit remainder/single subtract and separate rounding cycle in v2."
+}

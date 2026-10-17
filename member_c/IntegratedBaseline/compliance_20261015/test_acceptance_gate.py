@@ -35,5 +35,9 @@ class AcceptanceGateTests(unittest.TestCase):
   r=evaluate(ROOT)
   self.assertEqual(r['checks']['REAL_CALIBRATION']['status'],'MISSING_DATA')
   self.assertTrue(r['checks']['REAL_CALIBRATION']['external_data_required'])
+ def test_local_frame_rules_are_a_separate_unqualified_gate(self):
+  r=evaluate(ROOT)
+  self.assertIn('LOCAL_FRAME_COMPOSITION',r['unmet'])
+  self.assertNotEqual(r['checks']['LOCAL_FRAME_COMPOSITION']['status'],'PASS')
 
 if __name__=='__main__':unittest.main()

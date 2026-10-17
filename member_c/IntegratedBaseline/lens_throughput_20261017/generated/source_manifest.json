@@ -1,0 +1,10 @@
+{
+  "lens_map.v": {
+    "baseline_sha256": "da4c9dbd7f01952140651b034ae4065f0bec318e6d2b1367c2d270e3b99d8563",
+    "derived_sha256": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5"
+  },
+  "lens_composed_map.v": {
+    "baseline_sha256": "a53f9beeea9714abd5b9e715bc17465646a5c5ff5b7b80340b93a2bb699f0f86",
+    "derived_sha256": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff"
+  }
+}

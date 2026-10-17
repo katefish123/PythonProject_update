@@ -1,0 +1,7 @@
+# Read-only independent review
+
+Reviewed actual q30_alu_fast.v, derived wrappers and test evidence. No Critical/Important issue found. The absolute scaled numerator needs at most94 bits; divisor shifted by64 fits128 including signed minimum input. Early quotient >=2^64 rejection is valid. A possible leading zero quotient bit64 fits the7-bit index and128-bit trial. Final remainder nearest-even rounding and signed64 overflow are retained.
+
+Derived wrappers differ from the original baseline only in module names/ALU instantiation, preserving request snapshots, backpressure and resets. Reviewer confirmed current source hashes match three final tests:2573 equivalence cases, Brown156cycles and composition284cycles. Dynamic priority detection/barrel shift resource and frequency need implementation evidence; cycles do not prove1080p or board throughput. Latest local-paper composition remains an interface requirement, not implemented by this optimization.
+
+V2 follow-up review found no Critical/Important functional defect. It checked94-bit trial/remainder bounds,95-bit subtraction borrow,65-bit quotient/rounding and round_pending/reset ownership. Current v2 snapshots have2573 equivalent cases and1024 Brown/composed points, zeroerrors/warnings, maximum66/158/288cycles respectively. Read-only review did not rerun tests or touch hardware. Final isolated registered-input PDS results are recorded separately in probe_results.json; they do not qualify the board.

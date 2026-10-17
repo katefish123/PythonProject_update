@@ -6,7 +6,7 @@
     "SOFTWARE_REFERENCE": {
       "status": "PASS",
       "scope": "synthetic_software_only",
-      "receipt_sha256": "b230fe55d8a04c03c392e1cba29bf5bc060e326e487e153ef4903ca9ad39e9c9",
+      "receipt_sha256": "b1febf8a17f943c8e7df5738b68df3fdabcfff015486a2c8727173d7a0080d24",
       "maximum_sample_error_source_px": 0.00753098925907,
       "note": "Sampled numerical model only; 0.125 source px is an engineering target, not an enterprise threshold."
     },
@@ -47,6 +47,12 @@
       "requirement": "Independent black/white target captures; MTF50 or SFR, straightness, edge stretch/breaks, physical aspect evidence, declared measurement methods and uncertainty.",
       "external_data_required": true
     },
+    "LOCAL_FRAME_COMPOSITION": {
+      "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
+      "required_evidence": "lens_board_next/local_frame_qualification.json",
+      "requirement": "Same input/output dimensions; actual paper/pad outer boundary; unchanged outside pixels except complete old-marker cleanup; justified target aspect,background fill,actual text-baseline checks and single final sampling with coherent source-frame metadata.",
+      "external_data_required": false
+    },
     "REALTIME_RESOURCES": {
       "status": "NOT_IMPLEMENTED_OR_NOT_EVIDENCED",
       "required_evidence": "lens_board_next/video_qualification.json",
@@ -66,12 +72,13 @@
     "H_LENS_COMPOSITION",
     "REAL_CALIBRATION",
     "HELD_OUT_QUALITY",
+    "LOCAL_FRAME_COMPOSITION",
     "REALTIME_RESOURCES",
     "LENS_PDS"
   ],
   "V5C_preserved_timing_receipt_sha256": "4bed577f06951ea6b763f6ba6dd0888a68e425bf1a50f37ca11ad5aba1d7bbc7",
   "V5C_scope": "H-only/RAW board candidate; cannot qualify lens-inclusive RTL or real lens quality",
   "policy": "Missing or unreviewed evidence blocks acceptance; arbitrary JSON pass flags do not grant release. No enterprise numeric thresholds invented.",
-  "generated_utc": "2026-10-17T00:51:42.642226+00:00",
+  "generated_utc": "2026-10-17T02:24:53.634708+00:00",
   "fresh_model_process_exit_code": 0
 }
