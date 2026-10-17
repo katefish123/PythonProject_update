@@ -23,6 +23,8 @@
 
 旧 `evidence/summary.json` 只记录9ff9629应用层阶段，不能作为本轮证明。模型包含AW/W/AR/R等待，但不包含真实DDR训练、DQS或DRAM刷新；仿真不代替实板验收。
 
+2026-10-17补充：[黑标原图离线B RTL对照](review/offline_black_20261017/README.md)。电脑给定正确四角后，826200个实际RTL输出像素与定点参考一致；7个B源文件SHA与V5C相同。外框拉正但内部网格仍有偏斜；该实验绕过板端检测、DDR及HDMI，不改变本版硬件未验收状态。
+
 ## 复现与交接
 
 本机依赖冻结基线 `D:/FPGA/output/c_stream_board_v4s_20261016`、ModelSim及仓库Python软件参考。依次生成 display/prepare_display.py、build_integration.py、prepare_pipeline_fixtures.py、build_board.py。

@@ -1,0 +1,31 @@
+{
+  "input_sha256": "9efd4b99fd10e32b899097ef52cdc53078be69c852d05c00e53c802f10c9caca",
+  "source_dimensions": [
+    1586,
+    992
+  ],
+  "output_dimensions": [
+    765,
+    1080
+  ],
+  "actual_pixels_checked": 826200,
+  "different_pixels": 0,
+  "B_sources_match_V5C": true,
+  "hardware_accepted": false,
+  "archive_sha256": "ac9dc355ff2f2efc24dc08d443cc2a34e5e4b76676ddbc2c2e572c222fce18b1",
+  "archived_files_sha256": {
+    "result.json": "5eb3be3a55ab73ca8e2be668b5992750873d8710cca6cfb7eb6b280459eb7c38",
+    "manifest.json": "18c44483f015d7ea5ed2715f5be97a6b47996af7299740f5bc82aca875106e17",
+    "comparison.png": "0cc5e59f55a6fe94b4c79d8186183631a3b93a3b08e726f1edb55e8006b1c9fa",
+    "input.png": "a0f3a616bafe4c1b061bfd71e68bcc0333490ec308d522f9706a50058d3690c2",
+    "rtl_corrected.png": "63e860f04ed520359022ff425cba7db4441c0933b91dfeba4a2b17921cba455e",
+    "software_fixed_reference.png": "63e860f04ed520359022ff425cba7db4441c0933b91dfeba4a2b17921cba455e",
+    "compile.log": "d9797d8b5ed515c71fec6b496d880e6e03936f874e5f8159e00b09c48b84af11",
+    "simulation.log": "1aac17886f1e8b15eba96228ae5ceeac2917e7a57f4eaf7173de8848e43da182",
+    "H40.hex": "08485d3823ca0ca9704ce1e43d346dc9c5ef63da9c49f406e08d9799b12c7046",
+    "prepare_demo.py": "8047da296039002f8557e64b72d3ba19aed265747d526ee78c9c4158ef97c2c6",
+    "tb_offline_demo.sv": "69925c5e02575f3312a96e2893062c1f4177b73aad1e6dc542149f30b4ee9abc",
+    "rtl_output.hex": "3fe5edd91f3e47c426db280703b5281f17a40cce3019f20ec211516ec862e451"
+  },
+  "scope": "Imported hardware-chat offline experiment; inspected stored actual RTL pixels without rerunning simulation. No board detector, DDR or HDMI qualification."
+}
