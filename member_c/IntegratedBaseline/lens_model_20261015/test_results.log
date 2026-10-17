@@ -17,7 +17,7 @@ test_synthetic_operating_set_error (test_lens_fixed.FixedLensTests.test_syntheti
 test_zero_distortion_exact_identity_edges (test_lens_fixed.FixedLensTests.test_zero_distortion_exact_identity_edges) ... ok
 
 ----------------------------------------------------------------------
-Ran 17 tests in 0.116s
+Ran 17 tests in 0.107s
 
 OK
 FIXED_SYNTHETIC_ERROR samples=5000 maximum_source_pixel_error=0.00753098925907

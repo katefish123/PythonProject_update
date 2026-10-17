@@ -1,0 +1,118 @@
+{
+  "status": "synthetic_supplied_geometry_routing_pass",
+  "scope": "supplied convex boundary and exact marker masks; routing and pre-interpolation neighbor cleanup only",
+  "enterprise_acceptance": false,
+  "hardware_acceptance": false,
+  "board_integrated": false,
+  "PDS_timing_qualified": false,
+  "real_calibration": "blocked_by_missing_calibration",
+  "corrected_RGB_implemented": false,
+  "tests": {
+    "cleanup_final": {
+      "expected_failure": false,
+      "expected_message": "PASS SOURCE_MARKER_CLEAN",
+      "compiled_source_sha256": {
+        "tb_source_marker_clean.sv": "258ae2687631180b12076dedec6fca3212e6641695ec7ed4cdef750cefdc9d4e",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "frame_region.v": "50a07513e0ad68170cb273641274cdbb47a0b5fdd9fe149e4f84c6ccca042c53"
+      },
+      "compile_log_sha256": "2ba268453151f92ef4c43210747eae6bc8f969fda2a6eeb65d191f2b1c6d2b7e",
+      "simulation_log_sha256": "186857fad453b8add23e236fe63f071b77b512001eac6725939a759212129a21"
+    },
+    "region_controls_final": {
+      "expected_failure": false,
+      "expected_message": "PASS FRAME_REGION native=0",
+      "compiled_source_sha256": {
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "frame_region.v": "50a07513e0ad68170cb273641274cdbb47a0b5fdd9fe149e4f84c6ccca042c53",
+        "tb_frame_region.sv": "11de1cfdf81936210801024bc45753e5d1dbca64c0ae6f302cac4e827c857b3d"
+      },
+      "compile_log_sha256": "bf7b491864cedcacd3474d0200d02a7e6774395cb0c08e0fa2fad4f97d0000d5",
+      "simulation_log_sha256": "83846c4cbd8094768586c566757f88aacff81edaa0e150852dcde313e9189c33"
+    },
+    "region_native_final": {
+      "expected_failure": false,
+      "expected_message": "PASS FRAME_REGION native=1",
+      "compiled_source_sha256": {
+        "frame_region.v": "50a07513e0ad68170cb273641274cdbb47a0b5fdd9fe149e4f84c6ccca042c53",
+        "tb_frame_region.sv": "11de1cfdf81936210801024bc45753e5d1dbca64c0ae6f302cac4e827c857b3d",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea"
+      },
+      "compile_log_sha256": "910428d1f3e8de0e0913e16b8691ab9b7c3edcad0146281c8b123369e6bf9292",
+      "simulation_log_sha256": "c5b56eeb9787f846a0ed44bca4d372911ef7e028c7f3526d26bf5c63af9c1a14",
+      "statistics": {
+        "pixels": 2073600,
+        "outside_identity": 725208,
+        "raw": 725208,
+        "fill": 829992,
+        "warp": 518400,
+        "accepted_cycles": 2073600,
+        "admission_span_cycles": 2073600
+      }
+    },
+    "geometry_final": {
+      "expected_failure": false,
+      "expected_message": "PASS REGION_GEOMETRY cases=10",
+      "compiled_source_sha256": {
+        "tb_region_geometry.sv": "6b2219600c788eabaa6af67e078e517589a77e2936c282edbf0810d925e54fb1",
+        "frame_region.v": "50a07513e0ad68170cb273641274cdbb47a0b5fdd9fe149e4f84c6ccca042c53",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea"
+      },
+      "compile_log_sha256": "ecc42fefa7ce49fcf9cc908f735b3e46d243cc1f4130a651d3e0b3604b1b2200",
+      "simulation_log_sha256": "ca70b8bc75f5c26d77a7b6a9432eb17aa0cf35a4f9376a28481bdbe2963981bf"
+    },
+    "negative_erase_all_neighbors": {
+      "expected_failure": true,
+      "expected_message": "mask cleaner mismatch",
+      "compiled_source_sha256": {
+        "frame_region.v": "50a07513e0ad68170cb273641274cdbb47a0b5fdd9fe149e4f84c6ccca042c53",
+        "source_marker_clean.v": "15299b1a13ab165b3e94ca3cb4bcd281426b66f10b7e5096dd42a59b61b2fb37",
+        "tb_source_marker_clean.sv": "258ae2687631180b12076dedec6fca3212e6641695ec7ed4cdef750cefdc9d4e"
+      },
+      "compile_log_sha256": "73a7d8cc47a241459eb8783097037e8063965347b732627cf49631e2bc799dd6",
+      "simulation_log_sha256": "ca6ae44be980ef19683c72d0f81f061121cdd7bf8bea3f056a5892bcc39e798e"
+    },
+    "negative_outside_fill": {
+      "expected_failure": true,
+      "expected_message": "region pixel",
+      "compiled_source_sha256": {
+        "tb_frame_region.sv": "11de1cfdf81936210801024bc45753e5d1dbca64c0ae6f302cac4e827c857b3d",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "frame_region.v": "c8f93e9d69d03d644f9a469348d56d7e6f7eba2fb942e23a5af9b800ac4e1f02"
+      },
+      "compile_log_sha256": "13f0bfdd70f87ce73b8aaf09a4c0e3f3a73a9d45331a869fdeb203bd6afb8bcd",
+      "simulation_log_sha256": "bccf15aadd75a65c3aaee379c5335ff617b27a641162651e9c844f0e21364e4e"
+    },
+    "negative_commit_busy": {
+      "expected_failure": true,
+      "expected_message": "STALLED_PACKET_CHANGED_ON_FRAME_COMMIT",
+      "compiled_source_sha256": {
+        "tb_frame_region.sv": "11de1cfdf81936210801024bc45753e5d1dbca64c0ae6f302cac4e827c857b3d",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "frame_region.v": "4887d84ba310f2ac0bed4a77508684f21719694a1bd2eb3ed28d5cc8bd391b57"
+      },
+      "compile_log_sha256": "c63474d6a9ec02431c4df05c65cbc28a4e5ca319f655c6d594f6220fc7d128e3",
+      "simulation_log_sha256": "4fbbd0e134f523d47c1bea728182a3911f37581a7750d2f9893987e9cf25d933"
+    }
+  },
+  "source_sha256": {
+    "collect_evidence.py": "ca063f832798e3d8ee2eda4cab53446ee9ba88b566c0d08eb2eda63647e3070c",
+    "frame_region.v": "50a07513e0ad68170cb273641274cdbb47a0b5fdd9fe149e4f84c6ccca042c53",
+    "mutate_for_test.py": "e6acd7539c9f62de75ca69fa8798c3289a5e92900a2df3835f564705608eb97b",
+    "run_tests.ps1": "e5d39b867697183964a7890f9257a1385832946ac2dbd7f63fbd16f2c44ad1d0",
+    "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+    "tb_frame_region.sv": "11de1cfdf81936210801024bc45753e5d1dbca64c0ae6f302cac4e827c857b3d",
+    "tb_region_geometry.sv": "6b2219600c788eabaa6af67e078e517589a77e2936c282edbf0810d925e54fb1",
+    "tb_source_marker_clean.sv": "258ae2687631180b12076dedec6fca3212e6641695ec7ed4cdef750cefdc9d4e"
+  },
+  "evidence_zip_sha256": "c47dd6ad186dea2aa116365f08d080a3e6337ceb2b93e0e139eb95ee5e4064e2",
+  "remaining": [
+    "real paper/pad boundary detection",
+    "exact per-frame marker-mask generation",
+    "mapping and original-B single sampling with DDR integration",
+    "whole-frame corrected publication protection",
+    "physical aspect and real calibration provenance",
+    "full mapping throughput and final PDS timing",
+    "held-out MTF/SFR and hardware acceptance"
+  ]
+}
