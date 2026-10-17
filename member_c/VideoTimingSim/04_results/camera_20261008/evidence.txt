@@ -1,0 +1,11 @@
+Current accepted handoff: hdmi_native_rx_first_20261008
+Top: hdmi_camera_loop_top; TX_FIRST=0; RGB888; 2 pixel-clock stages; no DDR.
+Original native_check.log: PASS_NATIVE_ALL_PIXELS frames=2 pixels_per_frame=2073600; Errors=0 Warnings=0.
+Original i2c_check.log: TEST_PASS_SHARED_CONFIG writes=359 reads=48; Errors=0 Warnings=0.
+Original PDS: Design Summary: All Constraints Met.
+Minimum across corners: setup RX->RX=1.802ns RX->TX=1.943ns; hold RX->RX=0.252ns RX->TX=0.309ns.
+Original program.log: COMMAND[Program] execute successfully; COMMAND[Verify] execute successfully.
+Bitstream SHA256=04F1AFEDE1365889978A5BE512BDA5C7C8594C3A88D7E08FE7F985BE0F5B9177.
+Hardware result: user provided camera picture after last programming and accepted display quality.
+Physical route was not independently reconfirmed after that picture. No long-duration test completed.
+Original full logs and reference-derived bitstream remain local; this file is an evidence extract.
