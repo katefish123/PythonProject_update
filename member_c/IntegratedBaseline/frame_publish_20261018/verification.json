@@ -1,0 +1,143 @@
+{
+  "status": "synthetic_frame_publication_guard_pass",
+  "scope": "Existing asynchronous burst writer plus behavioral native endpoint; reduced actual mapper/sampler-to-writer path; native full canvas writer/publication guard only",
+  "enterprise_acceptance": false,
+  "hardware_acceptance": false,
+  "board_integrated": false,
+  "PDS_timing_qualified": false,
+  "full_composed_native_throughput_qualified": false,
+  "real_calibration": "blocked_by_missing_calibration",
+  "tests": {
+    "controls_final": {
+      "expected_failure": false,
+      "expected_message": "PASS FRAME_PUBLISH native=0 sampler=0",
+      "compiled_source_sha256": {
+        "corrected_frame_guard.v": "4965e90cf37ffd14c43ccc15f24831329b702ec2541959ce0f84382f0965e241",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00"
+      },
+      "compile_log_sha256": "7de021d5598f506d0277586d00e618ba3be9de7205436e4f14ed44d3468175cb",
+      "simulation_log_sha256": "3d5848e6dad999bde1cbfee2124d02ed874e754aafe93e0215452ca9f88a6bf5",
+      "statistics": {
+        "publishes": 1,
+        "failures": 16,
+        "command_stalls": 8
+      }
+    },
+    "native_full": {
+      "expected_failure": false,
+      "expected_message": "PASS FRAME_PUBLISH native=1",
+      "compiled_source_sha256": {
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+        "corrected_frame_guard.v": "4965e90cf37ffd14c43ccc15f24831329b702ec2541959ce0f84382f0965e241",
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00"
+      },
+      "compile_log_sha256": "817a51d7cb009e0d6df6c26419ca9c1ee6c0d0df00e0b429b15a5f1105ecb083",
+      "simulation_log_sha256": "5fb6bcfc9e2464f24de9e57f55c454a4155aa80faf6031fdcca5e6ad943dcb04",
+      "statistics": {
+        "pixels": 2073600,
+        "blocks": 32400,
+        "acknowledged": 32400,
+        "publishes": 1,
+        "command_stalls": 28589
+      }
+    },
+    "sampler1": {
+      "expected_failure": false,
+      "expected_message": "PASS FRAME_PUBLISH native=0 sampler=1",
+      "compiled_source_sha256": {
+        "corrected_frame_guard.v": "4965e90cf37ffd14c43ccc15f24831329b702ec2541959ce0f84382f0965e241",
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00",
+        "lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+        "q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+        "lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+        "region_sample.v": "7f372e87e15615245f14bc1fae162b1e394a6b59dc6a4ca76f47d6beb0a1cbb1",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+        "source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+        "bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+      },
+      "compile_log_sha256": "499e3662a04dd0b7e84e029977cd19ec46424cabf2d6cf67a41ebec3d0e7fc35",
+      "simulation_log_sha256": "437f3c65b562304480220f4364108c806d05f9f75f8d2d156887e0fcf2212f90",
+      "statistics": {
+        "publishes": 1,
+        "failures": 16,
+        "command_stalls": 16
+      }
+    },
+    "release_negative_publish_early": {
+      "expected_failure": true,
+      "expected_message": "PUBLISHED_BEFORE_DDR_DRAIN",
+      "compiled_source_sha256": {
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00",
+        "corrected_frame_guard.v": "279073d53c119356bf88108e7bb945d7e54bb3afa4783c86b2e114a65b780767",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94"
+      },
+      "compile_log_sha256": "2455254684cd86a54bacbbdbe08bceb7d4439e44bd5b4e7698118b5513ef8ca8",
+      "simulation_log_sha256": "bdb00addda7d25d56ef3c311f9b0ffece197bfa30f1e9ebb711c805dce93820a"
+    },
+    "release_negative_ignore_scene": {
+      "expected_failure": true,
+      "expected_message": "FAILURE_TIMEOUT",
+      "compiled_source_sha256": {
+        "corrected_frame_guard.v": "1ce4f881f013e72952eb2a37793b01b8cb35d948ccf6f5f786c1752646b7af8c",
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94"
+      },
+      "compile_log_sha256": "a95fa05cb9535338ba391c0f275a53c838f822820839a12d8d9223baa2b32f82",
+      "simulation_log_sha256": "2e29d52862c2c1b1cb7189481e41d6b131b8c915bc47e3534f0d61a6cd4d549e"
+    },
+    "release_negative_ignore_source_bank": {
+      "expected_failure": true,
+      "expected_message": "FAILURE_TIMEOUT",
+      "compiled_source_sha256": {
+        "corrected_frame_guard.v": "f8b79b6268a0d78a1dd27185fc645365598dfe691f8d05adbdb6d6bf534f6a10",
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94"
+      },
+      "compile_log_sha256": "9c3e4e77421c20c999b514072cca883a9490df980ce0656fa17d144450c177c3",
+      "simulation_log_sha256": "107070743d1d17ee46af116e27dd315401b40e40a74e0a1fea2fb3d32df586d4"
+    },
+    "release_negative_ignore_upstream": {
+      "expected_failure": true,
+      "expected_message": "ABORT_LOST_UPSTREAM_OWNERSHIP",
+      "compiled_source_sha256": {
+        "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00",
+        "ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+        "corrected_frame_guard.v": "234dbe38dbe13e78f8548d5fa44470111eb4981191e5cbc57adf5aa221d40d82"
+      },
+      "compile_log_sha256": "aed7b65813c5535a6cbc02e06d07c46eb021c925661a071f3c366b75515f9894",
+      "simulation_log_sha256": "3674532a73357e29fbdb967f3783b1c2673f8700093764eaa515e56252667a2c"
+    }
+  },
+  "source_sha256": {
+    "collect_evidence.py": "dd35638b74399094b0b132dc6659c39a90a44cb1a2d18772f33f944a1c285549",
+    "corrected_frame_guard.v": "4965e90cf37ffd14c43ccc15f24831329b702ec2541959ce0f84382f0965e241",
+    "mutate_for_test.py": "760dbaaec03f6fc24207de6a0fb12f3d517d42935f48cd7bfed5dcbde2181b85",
+    "run_tests.ps1": "be429748a65a9ee5a5fb77441d5fc9175e83d78c18bbc33cdf26b5685eb6ccb6",
+    "tb_publish.sv": "fc19be8805e32a2a5a10aedac1fb15ac1e7a9c66ae279496e69baec80438ee00"
+  },
+  "dependency_sha256": {
+    "stream_video_20261015/result_burst/ddr_result_writer_burst64.v": "3827259bdbeff76b861725c46773673489eb15f094c581e2fa5ee12b0b9adf94",
+    "frame_region_20261017/region_sample.v": "7f372e87e15615245f14bc1fae162b1e394a6b59dc6a4ca76f47d6beb0a1cbb1",
+    "frame_region_20261017/source_marker_clean.v": "0be03517d16d4207724e2cf07ceb3f88e814f2adec495a2dac0b8350fd244dea",
+    "lens_throughput_20261017/q30_alu_fast.v": "5439ea9484fc1b253fe3cb0a85edeb19e33b14e386e88567f917f594ac33d507",
+    "lens_throughput_20261017/generated/lens_map_fast.v": "543ffa9e0d1b0a141636731b7ed622fa72173a523d0f333c6f290ea0a62f0ce5",
+    "lens_throughput_20261017/generated/lens_composed_map_fast.v": "5f1437ba71e0f2047e909fe45543a21bf3d0f0fb1e190f0dfdd80facc52414ff",
+    "a_sync_20261013/hires_candidate/vendor/b/rtl/bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+  },
+  "evidence_zip_sha256": "a64013fd461976cc64b856b3d90c5b2b16c7c30218e1a42415f6fabc19bd8cf8",
+  "remaining": [
+    "actual paper/pad and exact marker mask generation",
+    "physical source-read DDR adapter and complete camera-to-result ownership integration",
+    "real cross-clock HDMI pending/front bank selector and reservation allocator",
+    "full native composed mapping throughput and final PDS timing",
+    "real calibration and held-out MTF/SFR/geometry/hardware acceptance"
+  ],
+  "integration_contract": [
+    "upstream_idle covers physical source reads,mapper,sampler and held outputs",
+    "stop new upstream work during cancellation; late outputs are drained and discarded",
+    "hold source/result bank reservations across abort and display-descriptor ownership transfer",
+    "guard/writer/UI/native-engine resets must cancel/drain all old physical transactions together",
+    "truncated source requires explicit abort; no new timeout policy"
+  ]
+}

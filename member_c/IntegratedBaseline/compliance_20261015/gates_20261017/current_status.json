@@ -6,7 +6,7 @@
     "SOFTWARE_REFERENCE": {
       "status": "PASS",
       "scope": "synthetic_software_only",
-      "receipt_sha256": "a007ee91fc6ece901afa50d9355282123454946e8cb109a392f02de28e702eb0",
+      "receipt_sha256": "f41029583e3f18c3987adafb6f4ab3dc94b6508e8616744784c7966d5eb9d602",
       "maximum_sample_error_source_px": 0.00753098925907,
       "note": "Sampled numerical model only; 0.125 source px is an engineering target, not an enterprise threshold."
     },
@@ -79,6 +79,6 @@
   "V5C_preserved_timing_receipt_sha256": "4bed577f06951ea6b763f6ba6dd0888a68e425bf1a50f37ca11ad5aba1d7bbc7",
   "V5C_scope": "H-only/RAW board candidate; cannot qualify lens-inclusive RTL or real lens quality",
   "policy": "Missing or unreviewed evidence blocks acceptance; arbitrary JSON pass flags do not grant release. No enterprise numeric thresholds invented.",
-  "generated_utc": "2026-10-17T14:15:41.049810+00:00",
+  "generated_utc": "2026-10-18T02:19:34.489289+00:00",
   "fresh_model_process_exit_code": 0
 }
