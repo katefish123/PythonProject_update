@@ -1,0 +1,2 @@
+COORD_PASS 4329
+sim/tb_perspective_coord.sv:43: $finish called at 46510000 (1ps)

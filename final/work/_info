@@ -1,0 +1,372 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Mac/Home/Documents/FPGA/PythonProject_local/1/member_b_perspective
+T_opt
+!s110 1791172016
+Vo;70=dURE;aS_^@YV2:=b2
+04 18 4 work tb_marker_detector fast 0
+=1-001c42698889-6ac31daf-37a-1a44
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1791172019
+VM38E=U<HmNmZfO>9SzM]G1
+04 14 4 work tb_b_rectifier fast 0
+=1-001c42698889-6ac31db2-393-1bcc
+R1
+R2
+n@_opt1
+R3
+T_opt2
+!s110 1791172012
+V=c_5F]Gz@hLO9Bi?VabEJ2
+04 18 4 work tb_bilinear_interp fast 0
+=1-001c42698889-6ac31dac-18d-1380
+R1
+R2
+n@_opt2
+R3
+R0
+vb_rectifier
+Z4 !s110 1791172005
+!i10b 1
+!s100 6;00hX51LB?[QYf:gHb803
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IPYTMmG<LLEMUAi:Yame:F3
+R0
+Z6 w1791168762
+8rtl/b_rectifier.v
+Frtl/b_rectifier.v
+!i122 14
+L0 3 77
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z9 !s108 1791172005.000000
+!s107 rtl/b_rectifier.v|
+!s90 -reportprogress|300|-work|work|rtl/b_rectifier.v|
+!i113 0
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vbilinear_interp
+R4
+!i10b 1
+!s100 DYh;Je5kAK^G;m>Lfi;aP0
+R5
+I[dOP7NVX:eNbfY:@>?co:2
+R0
+Z11 w1791168779
+8rtl/bilinear_interp.v
+Frtl/bilinear_interp.v
+!i122 15
+Z12 L0 2 31
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 rtl/bilinear_interp.v|
+!s90 -reportprogress|300|-work|work|rtl/bilinear_interp.v|
+!i113 0
+R10
+R2
+vhomography_solver
+R4
+!i10b 1
+!s100 _hf4]GKOadXno7BZNL7Y@2
+R5
+IVZPlfJO5DO<WQJg6WcM_`0
+R0
+R11
+8rtl/homography_solver.v
+Frtl/homography_solver.v
+!i122 16
+L0 3 100
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 rtl/homography_solver.v|
+!s90 -reportprogress|300|-work|work|rtl/homography_solver.v|
+!i113 0
+R10
+R2
+vmarker_detector
+R4
+!i10b 1
+!s100 4SaJMFFzJ>gJiPK4=aN8F2
+R5
+IchJPjm46Q8WoAEX:6eDN@1
+R0
+R11
+8rtl/marker_detector.v
+Frtl/marker_detector.v
+!i122 17
+L0 3 106
+R7
+R8
+r1
+!s85 0
+31
+R9
+!s107 rtl/marker_detector.v|
+!s90 -reportprogress|300|-work|work|rtl/marker_detector.v|
+!i113 0
+R10
+R2
+vperspective_coord
+Z13 !s110 1791172006
+!i10b 1
+!s100 bCb3I[GIh94do;8hNkl?^2
+R5
+IdlRW:`S:hc]54^O9eDXGX3
+R0
+w1791168688
+8rtl/perspective_coord.v
+Frtl/perspective_coord.v
+!i122 18
+L0 3 32
+R7
+R8
+r1
+!s85 0
+31
+Z14 !s108 1791172006.000000
+!s107 rtl/perspective_coord.v|
+!s90 -reportprogress|300|-work|work|rtl/perspective_coord.v|
+!i113 0
+R10
+R2
+vperspective_core
+R13
+!i10b 1
+!s100 OZ[>eHNjG?QFI1Th=_=mM0
+R5
+IRK[^ol[Lk<R?Y`BDb[8H21
+R0
+R6
+8rtl/perspective_core.v
+Frtl/perspective_core.v
+!i122 19
+L0 4 31
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 rtl/perspective_core.v|
+!s90 -reportprogress|300|-work|work|rtl/perspective_core.v|
+!i113 0
+R10
+R2
+vscaled_div_pipe
+R13
+!i10b 1
+!s100 cAfzEiI2]C^_UmJo`YRnS3
+R5
+IkML4dW@cXKlXocWj8QIh03
+R0
+Z15 w1791168554
+8rtl/scaled_div_pipe.v
+Frtl/scaled_div_pipe.v
+!i122 20
+L0 4 49
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 rtl/scaled_div_pipe.v|
+!s90 -reportprogress|300|-work|work|rtl/scaled_div_pipe.v|
+!i113 0
+R10
+R2
+vsigned_div_seq
+R13
+!i10b 1
+!s100 @b@96z@bn9jU_IAeiFj^Y3
+R5
+I9`i5R7H`hhbf5CS_eZ8@l2
+R0
+R15
+8rtl/signed_div_seq.v
+Frtl/signed_div_seq.v
+!i122 21
+L0 2 21
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 rtl/signed_div_seq.v|
+!s90 -reportprogress|300|-work|work|rtl/signed_div_seq.v|
+!i113 0
+R10
+R2
+vtb_b_rectifier
+Z16 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R13
+!i10b 1
+!s100 =`ckH9k1EC<6dNohl80Cd3
+R5
+I`e<h?WE0oMjWdeQV2h71@1
+S1
+R0
+Z17 w1791169247
+8sim/tb_b_rectifier.sv
+Fsim/tb_b_rectifier.sv
+!i122 23
+L0 2 114
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 sim/tb_b_rectifier.sv|
+!s90 -reportprogress|300|-sv|-work|work|sim/tb_b_rectifier.sv|
+!i113 0
+Z18 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vtb_bilinear_interp
+R16
+R13
+!i10b 1
+!s100 aM[KQd:bJd3O135Coe>ng2
+R5
+IW_=Q>`>9M5V:8ofJ;Y@X01
+S1
+R0
+Z19 w1791169059
+8sim/tb_bilinear_interp.sv
+Fsim/tb_bilinear_interp.sv
+!i122 24
+L0 2 33
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 sim/tb_bilinear_interp.sv|
+!s90 -reportprogress|300|-sv|-work|work|sim/tb_bilinear_interp.sv|
+!i113 0
+R18
+R2
+vtb_homography_solver
+R16
+R13
+!i10b 1
+!s100 ?;[]=lUiQH@HZ2?CbSMKU0
+R5
+IjKffdfn0VIkcA4Yoi_3Vo2
+S1
+R0
+R19
+8sim/tb_homography_solver.sv
+Fsim/tb_homography_solver.sv
+!i122 25
+L0 2 36
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 sim/tb_homography_solver.sv|
+!s90 -reportprogress|300|-sv|-work|work|sim/tb_homography_solver.sv|
+!i113 0
+R18
+R2
+vtb_marker_detector
+R16
+Z20 !s110 1791172007
+!i10b 1
+!s100 n3W@gT`=0?2KD`BC>Z>aD0
+R5
+IE6_bCnOZ;8[zD^MQKGB@_3
+S1
+R0
+R17
+8sim/tb_marker_detector.sv
+Fsim/tb_marker_detector.sv
+!i122 26
+L0 2 56
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 sim/tb_marker_detector.sv|
+!s90 -reportprogress|300|-sv|-work|work|sim/tb_marker_detector.sv|
+!i113 0
+R18
+R2
+vtb_perspective_coord
+R16
+R20
+!i10b 1
+!s100 ]C[W3Dj0:QSG[i1G5Z2;Q0
+R5
+ICUE[VEX1b1b1JO=PolOT80
+S1
+R0
+R19
+8sim/tb_perspective_coord.sv
+Fsim/tb_perspective_coord.sv
+!i122 27
+L0 2 45
+R7
+R8
+r1
+!s85 0
+31
+!s108 1791172007.000000
+!s107 sim/tb_perspective_coord.sv|
+!s90 -reportprogress|300|-sv|-work|work|sim/tb_perspective_coord.sv|
+!i113 0
+R18
+R2
+vunsigned_div_seq
+R13
+!i10b 1
+!s100 J[_4>Y7]HRQBVZ<3mj;JS3
+R5
+IY;CIPE;hz8=^5<B;hD<XP0
+R0
+R15
+8rtl/unsigned_div_seq.v
+Frtl/unsigned_div_seq.v
+!i122 22
+R12
+R7
+R8
+r1
+!s85 0
+31
+R14
+!s107 rtl/unsigned_div_seq.v|
+!s90 -reportprogress|300|-work|work|rtl/unsigned_div_seq.v|
+!i113 0
+R10
+R2

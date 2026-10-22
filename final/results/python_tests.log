@@ -1,0 +1,15 @@
+test_bad_denominator_and_ranges (__main__.Models.test_bad_denominator_and_ranges) ... ok
+test_border_and_nearest (__main__.Models.test_border_and_nearest) ... ok
+test_corners_and_interior (__main__.Models.test_corners_and_interior) ... ok
+test_hd_corner_precision (__main__.Models.test_hd_corner_precision) ... ok
+test_identity_both_samplers (__main__.Models.test_identity_both_samplers) ... ok
+test_interpolation_weights (__main__.Models.test_interpolation_weights) ... ok
+test_invalid_geometry (__main__.Models.test_invalid_geometry) ... ok
+test_invalid_rgb_and_ambiguous_thresholds (__main__.Models.test_invalid_rgb_and_ambiguous_thresholds) ... ok
+test_markers_reject_and_threshold_boundary (__main__.Models.test_markers_reject_and_threshold_boundary) ... ok
+test_signed_division (__main__.Models.test_signed_division) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.042s
+
+OK
