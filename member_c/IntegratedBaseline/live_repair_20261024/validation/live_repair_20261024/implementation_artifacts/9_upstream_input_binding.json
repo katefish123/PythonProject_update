@@ -1,0 +1,20 @@
+{
+  "candidate_manifest_sha256": "cc21c3e14d1d98a66176774da125c7bc07ee927240bf92aaf58a60589e45eb60",
+  "upstream_build_tcl_sha256": "5c00a193bd00372d5f1412851ab6f59458d51ef6671d519b40c4f70d38762a84",
+  "route_tcl_sha256": "f5fd07da519765b23cd13c6357da73e352f5861b66f4b9a6bbb59ceebdd9ac68",
+  "inputs": {
+    "D:\\FPGA\\output\\live_repair_20261024\\candidate_repair\\performance\\inputs\\video_correct_ddr_top_map.adf": {
+      "sha256": "81fe90e4aa34299d7b7dcae0ccd2d4e14be8e243fb804f2930fc213be3dfcd23",
+      "upstream": "D:\\FPGA\\output\\live_repair_20261024\\candidate_repair\\build\\device_map\\video_correct_ddr_top_map.adf"
+    },
+    "D:\\FPGA\\output\\live_repair_20261024\\candidate_repair\\performance\\inputs\\video_correct_ddr_top.pcf": {
+      "sha256": "08f3bea3e545b5399b92747a0532604e34ea2a8030c3f102263de8c5c88dcc41",
+      "upstream": "D:\\FPGA\\output\\live_repair_20261024\\candidate_repair\\build\\device_map\\video_correct_ddr_top.pcf"
+    },
+    "D:\\FPGA\\output\\live_repair_20261024\\candidate_repair\\performance\\inputs\\video_correct_ddr_top_plc.adf": {
+      "sha256": "40524d079a11aedde1941a2fe82cf7ccd16198d55a9ab8f316047424728cce34",
+      "upstream": "D:\\FPGA\\output\\live_repair_20261024\\candidate_repair\\build\\place_route\\video_correct_ddr_top_plc.adf"
+    }
+  },
+  "scope": "Same mapped design and constraints; same placed design; new route seed only"
+}

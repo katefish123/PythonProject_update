@@ -1,0 +1,45 @@
+{
+  "scope": "Repair current full-HD pipeline white/gray, stopped publication and display underrun",
+  "hardware_owner_thread": "01a138e8-582f-7090-8ece-6119c3df7598",
+  "baseline_bit_sha256": "c12913626e11352f5fbeefe468c63bfd52718209212561d4ca727ad741f65c22",
+  "hardware_failure_confirmed": true,
+  "live_root_cause_confirmed": false,
+  "independent_capture_also_abnormal": true,
+  "service_contention_counterexample": {
+    "scope": "128x1080 RAW, unchanged production modules; hypothetical clustered service distribution",
+    "control": "3 actual publications, 552960 correct pixels, zero rejects",
+    "adverse": "1 publication then no new image, 3 overflow reason13 rejects, FIFO peak1024, underrun1; engine/source sticky fault0",
+    "proves_physical_service_distribution": false
+  },
+  "diagnostic_v1": "Stopped unfinished PDS after independent review found scan_start counts each cycle while pixel VTC held reset; logs preserved",
+  "diagnostic_v2": {
+    "directory": "candidate_v2",
+    "scope": "Top-only read-only observers and always-visible HUD; functional modules and FDC unchanged",
+    "red": "observer_reset_red",
+    "green": "observer_sim_v3",
+    "pds_session": null,
+    "pds_status": "two implementations failed final DDRPHY hold; preserved and not released",
+    "qualified": false,
+    "released": false
+  },
+  "writer_overlap_experiment": "Frozen3c2a4113;9 positive/4 expected negative;native RAW8294400 and CORRECTED14515200 pixel checks passed; integrated candidate_repair full PDS running",
+  "fixed": false,
+  "next": "Complete current repair PDS, then independent same-DB STA/bitgen and packaging only if all timing passes; hand qualified package to hardware owner for cause measurements and real-image verification",
+  "release_gate_review": "Independent review gaps addressed: -O refusal, exact top transform, complete same-DB source/STA/bitgen chain, nested evidence recheck, ancestor/current separation",
+  "repair_candidate": {
+    "directory": "candidate_repair",
+    "pds_session": 42552,
+    "status": "build failed slow setup -0.115/-0.039ns; holds all pass; same-placement performance route137 running",
+    "qualified": false,
+    "native_raw_pixels": 8294400,
+    "native_corrected_pixels": 14515200,
+    "implementation": "performance"
+  },
+  "phy_hold_audit": {
+    "report": "timing_hold_audit/REPORT.md",
+    "scope": "Earlier candidate_v2 only, not current repair result",
+    "finding": "DQS TS_CTRL short control hold paths; prior tool already executed six hold-fix iterations",
+    "baseline_fdc_unchanged": true,
+    "minimum_previous_fast_ns": -0.273
+  }
+}

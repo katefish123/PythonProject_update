@@ -1,0 +1,75 @@
+[
+  {
+    "argv": [
+      "D:/softwares/modelsim/win64/vlib.exe",
+      "work"
+    ],
+    "exit_code": 0,
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "D:/softwares/modelsim/win64/vlog.exe",
+      "-sv",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\async_packet_fifo.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\async_packet_fifo_monitored.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\async_packet_stream.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\async_packet_stream_monitored.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\b_rectifier.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\bilinear_interp.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\c_corner_rectifier.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\c_frame_mode_controller.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\c_stream_burst_correction_path.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\c_stream_correction_path.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\color_marker_detector.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\continuous_capture_geometry.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\continuous_capture_rx.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\continuous_capture_writer.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\continuous_source_path.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_arbiter3.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_arbiter3_fair.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_arbiter3_turnaround.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_quad_tile_cache.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_result_display_raw_corrected.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_result_writer_burst64.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_result_writer_stream.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_self_test.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\ddr_word_engine_result_burst.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\frame_processor_stream.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\frame_telemetry_overlay.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\hdmi_vs_recover.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\homography_solver.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\lens_autocrop_instance.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\lens_distort_coord.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\manager_raw.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\marker_color_classifier.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\marker_detector.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\perspective_coord.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\perspective_core.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\quad_geometry_guard.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\quad_packet_bridge.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\reset_sync.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\rx_preview_stream.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\scaled_div_pipe.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\signed_div_seq.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\snapshot_cdc.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\tb_lens_board.sv",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\unsigned_div_seq.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\video_correct_ddr_continuous_core.v",
+      "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_corrected\\source_snapshot\\video_timing_vtc.v"
+    ],
+    "exit_code": 0,
+    "log_sha256": "f92f2a05c542b99a664dc30872002fae44258e8364e381af62cf7f2b339c8536"
+  },
+  {
+    "argv": [
+      "D:/softwares/modelsim/win64/vsim.exe",
+      "-c",
+      "-do",
+      "onfinish stop;run -all;quit -f",
+      "work.tb_raw_pipeline"
+    ],
+    "exit_code": 0,
+    "log_sha256": "45546d5a4600b776fb5e35bda233f9d45c5cecb2ab8a20c8136c2a2342c0e7d9"
+  }
+]

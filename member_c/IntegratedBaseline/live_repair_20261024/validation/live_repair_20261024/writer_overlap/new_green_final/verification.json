@@ -1,0 +1,39 @@
+{
+  "expected": "pass",
+  "matched": true,
+  "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+  "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+  "commands": [
+    {
+      "argv": [
+        "vlib.exe",
+        "work"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "vlog.exe",
+        "-sv",
+        "continuous_capture_writer.v",
+        "tb_writer_overlap.sv"
+      ],
+      "exit_code": 0,
+      "log_sha256": "68e171695e7db0355724c37456fbfb902254b64b46a6f94a15d73c9520902ca0"
+    },
+    {
+      "argv": [
+        "vsim.exe",
+        "-c",
+        "tb_writer_overlap",
+        "+DELAY=20",
+        "+PERIOD=3",
+        "-do",
+        "run -all; quit -f"
+      ],
+      "exit_code": 0,
+      "log_sha256": "d51df22b9cdfab38c89fa6835aad532014ade9dbaaea2e8612815a892dd2d4b3"
+    }
+  ]
+}

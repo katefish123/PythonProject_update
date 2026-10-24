@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 08:42:46 on Oct 24,2026
+vlog -sv D:\FPGA\output\live_repair_20261024\candidate_v2\sources\snapshot_cdc.v tb.sv 
+-- Compiling module snapshot_cdc
+-- Compiling module tb
+
+Top level modules:
+	tb
+End time: 08:42:46 on Oct 24,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

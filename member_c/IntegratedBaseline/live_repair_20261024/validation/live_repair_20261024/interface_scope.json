@@ -1,0 +1,8 @@
+{
+  "top_ports_and_fdc_unchanged_from_parent": true,
+  "physical_port_bits": 144,
+  "source_manifest_sha256": "cc21c3e14d1d98a66176774da125c7bc07ee927240bf92aaf58a60589e45eb60",
+  "functional_change": true,
+  "parent_report": "parent/interface_audit.json",
+  "actual_pds_project_sha256": "86130252104001c943c57ccd0ee9f4d56c039fd88ac00bdd9bf655c991ceeac0"
+}

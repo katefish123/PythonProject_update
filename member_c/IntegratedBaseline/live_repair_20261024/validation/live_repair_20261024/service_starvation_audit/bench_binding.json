@@ -1,0 +1,7 @@
+{
+  "parent_bench": "D:\\FPGA\\deliveries\\FullHD_Lens_IntegratedRepair_20261023\\validation\\baseline_test\\source_snapshot\\tb_lens_board.sv",
+  "parent_bench_sha256": "c358d32772ffc47af80d8fda2b9bb8e34393f23ede2cabe6d15cfea69cfe00c8",
+  "generated_bench_sha256": "075c272ce1099e5fcfab02373a416fb1313866b23574d7818769829dc763a3f2",
+  "generator_sha256": "a9b362e7fc9fd9e30198b0342ebf33cb9532960d93e8f96008525c75520533c6",
+  "scope": "Reduced 128x1080 RAW, real 1024 FIFO/8beat writer/display priority, clustered max320 UI-cycle first-beat service; not measured board latency or production fullHD throughput"
+}

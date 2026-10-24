@@ -1,0 +1,2 @@
+# Frozen evidence: keep byte hashes and original tool whitespace.
+* -text -whitespace

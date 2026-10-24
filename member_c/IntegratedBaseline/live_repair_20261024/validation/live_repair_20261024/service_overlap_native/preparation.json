@@ -1,0 +1,33 @@
+{
+  "status": "prepared, no simulator yet",
+  "bench": {
+    "parent_bench": "D:\\FPGA\\output\\live_repair_20261024\\service_overlap_review\\tb_service_starvation.sv",
+    "parent_bench_sha256": "075c272ce1099e5fcfab02373a416fb1313866b23574d7818769829dc763a3f2",
+    "generated_bench_sha256": "eadf1a49ff9feb0c27806c5e2d0271499cb330f1bd55654bf2a91dbcd0da8814",
+    "changes": [
+      [
+        "localparam NATIVE=0,",
+        "localparam NATIVE=1,"
+      ],
+      [
+        "localparam SW=128,SH=1080,OW=128;",
+        "localparam SW=1920,SH=1080,OW=1920;"
+      ],
+      [
+        "localparam HS=4,HB=8,HF=16;",
+        "localparam HS=44,HB=148,HF=88;"
+      ],
+      [
+        "localparam VS=2,VB=4,VF=4;",
+        "localparam VS=5,VB=36,VF=4;"
+      ],
+      [
+        "#50000000;summary();",
+        "#250000000;summary();"
+      ]
+    ],
+    "scope": "native1920x1080 RAW 2200x1125 timing, three publications/full display pixel golden; production c129 45 RTL with only frozen overlap writer replacement"
+  },
+  "writer_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+  "runner_sha256": "ed0f069517f99ce33b380930bb6b0336bb7a2db5819431e9efa27d404a5b8626"
+}

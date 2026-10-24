@@ -1,0 +1,51 @@
+{
+  "status": "NOT_READY_FOR_COMPETITION_SUBMISSION",
+  "dimensions": [
+    1920,
+    1080
+  ],
+  "required_corrected_pixels_per_second": 124416000,
+  "current_processing_clock_hz": 57115384.615384616,
+  "current_single_lane_ideal_max_fps": 27.544070512820515,
+  "required_pixels_per_current_processing_cycle": 2.1783272727272727,
+  "two_lanes_at_current_clock_ideal_fps": 55.08814102564103,
+  "minimum_clock_hz_for_two_lanes_without_stalls": 62208000.0,
+  "candidate_clock_hz": 74250000,
+  "candidate_lanes": 2,
+  "candidate_ideal_pixels_per_second": 148500000,
+  "maximum_fraction_of_idle_cycles_at_candidate_rate": 0.1621818181818182,
+  "current_simulated_fps_sample": 10.08680350054446,
+  "source_capture_plus_result_write_plus_display_plus_ideal_source_read_bytes_per_sec": 1990656000,
+  "same_with_four_uncached_neighbor_reads_bytes_per_sec": 3483648000,
+  "mapped_resources": {
+    "LUT": [
+      29450,
+      66600
+    ],
+    "APM": [
+      67,
+      240
+    ],
+    "DRM": [
+      77,
+      155
+    ]
+  },
+  "source_sha256": {
+    "frame_processor_stream.v": "0d3af6970d013fd706a1391260c7d10ac0f4f32bcc1890eb20188a14fdc3fe80",
+    "ddr_quad_tile_cache.v": "af687f4ac477bc3a7c451c55599339137cc41ac1fe2b852e5578153a0027fcd8",
+    "video_correct_ddr_continuous_core.v": "4d0a8f5ccbdec8ef25b5600f6df3123c00b7532cd632d27f9c5dbd48d528036a",
+    "video_pll_27m_148m5.v": "d06d9ecbfa8c973c2e52430fce6d457b6d7ec79ba6b9b15d51c1e76b788da8b3",
+    "board_ddr.fdc": "948c00c720a44fbb5e280ec1e9e2254bc9e496662297022510876b5f318143cc"
+  },
+  "limitations": [
+    "Analytical ceilings are not implementation or frame-rate proof.",
+    "Two lanes at unchanged57.1MHz still cannot reach60fps.",
+    "74.25MHz and dual-lane cache are proposed, not routed or validated.",
+    "All real camera/DDR/quality/latency acceptance requires reconnection."
+  ],
+  "original_target_new_corrected_fps": 60,
+  "required_minimum_new_corrected_fps": null,
+  "user_accepts_less_than_60_fps": true,
+  "selected_direction": "Preserve qualified single-lane integration; measure sustained throughput and correctness; defer dual-lane architecture."
+}

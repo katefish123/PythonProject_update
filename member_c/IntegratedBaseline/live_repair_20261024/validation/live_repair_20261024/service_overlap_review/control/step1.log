@@ -1,0 +1,63 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 08:50:36 on Oct 24,2026
+vlog -sv async_packet_fifo.v async_packet_fifo_monitored.v async_packet_stream.v async_packet_stream_monitored.v bilinear_interp.v b_rectifier.v color_marker_detector.v continuous_capture_geometry.v continuous_capture_rx.v continuous_capture_writer.v continuous_source_path.v c_corner_rectifier.v c_frame_mode_controller.v c_stream_burst_correction_path.v c_stream_correction_path.v ddr_arbiter3.v ddr_arbiter3_fair.v ddr_arbiter3_turnaround.v ddr_quad_tile_cache.v ddr_result_display_raw_corrected.v ddr_result_writer_burst64.v ddr_result_writer_stream.v ddr_self_test.v ddr_word_engine_result_burst.v frame_processor_stream.v frame_telemetry_overlay.v hdmi_vs_recover.v homography_solver.v lens_autocrop_instance.v lens_distort_coord.v manager_raw.v marker_color_classifier.v marker_detector.v perspective_coord.v perspective_core.v quad_geometry_guard.v quad_packet_bridge.v reset_sync.v rx_preview_stream.v scaled_div_pipe.v signed_div_seq.v snapshot_cdc.v unsigned_div_seq.v video_correct_ddr_continuous_core.v video_timing_vtc.v tb_service_starvation.sv 
+-- Compiling module async_packet_fifo
+-- Compiling module async_packet_fifo_monitored
+-- Compiling module async_packet_stream
+-- Compiling module async_packet_stream_monitored
+-- Compiling module bilinear_interp
+-- Compiling module b_rectifier
+-- Compiling module color_marker_detector
+-- Compiling module continuous_capture_geometry
+-- Compiling module continuous_capture_rx
+-- Compiling module continuous_capture_writer
+-- Compiling module continuous_source_path
+-- Compiling module c_corner_rectifier
+-- Compiling module c_frame_mode_controller
+-- Compiling module c_stream_burst_correction_path
+-- Compiling module c_stream_correction_path
+-- Compiling module ddr_arbiter3
+-- Compiling module ddr_arbiter3_fair
+-- Compiling module ddr_arbiter3_turnaround
+-- Compiling module ddr_quad_tile_cache
+-- Compiling module ddr_result_display_raw_corrected
+-- Compiling module ddr_result_writer_burst64
+-- Compiling module burst64_async_fifo
+-- Compiling module ddr_result_writer_stream
+-- Compiling module stream_writer_async_fifo
+-- Compiling module ddr_self_test
+-- Compiling module ddr_word_engine_result_burst
+-- Compiling module frame_processor_stream
+-- Compiling module frame_telemetry_overlay
+-- Compiling module hdmi_vs_recover
+-- Compiling module homography_solver
+-- Compiling module lens_autocrop_instance
+-- Compiling module lens_distort_coord
+-- Compiling module continuous_capture_manager
+-- Compiling module marker_color_classifier
+-- Compiling module marker_detector
+-- Compiling module perspective_coord
+-- Compiling module perspective_core
+-- Compiling module quad_geometry_guard
+-- Compiling module quad_packet_bridge
+-- Compiling module reset_sync
+-- Compiling module rx_preview_stream
+-- Compiling module scaled_div_pipe
+-- Compiling module signed_div_seq
+-- Compiling module snapshot_cdc
+-- Compiling module unsigned_div_seq
+-- Compiling module video_correct_ddr_continuous_core
+-- Compiling module video_timing_vtc
+-- Compiling module tb_service_starvation
+
+Top level modules:
+	b_rectifier
+	continuous_capture_geometry
+	c_stream_correction_path
+	ddr_arbiter3_fair
+	frame_telemetry_overlay
+	reset_sync
+	rx_preview_stream
+	tb_service_starvation
+End time: 08:50:36 on Oct 24,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

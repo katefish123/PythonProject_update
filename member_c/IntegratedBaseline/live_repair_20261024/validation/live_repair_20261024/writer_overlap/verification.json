@@ -1,0 +1,696 @@
+{
+  "scope": "Isolated writer client contract; not physical/native engine integration qualification",
+  "old_source": "D:\\FPGA\\deliveries\\FullHD_Lens_IntegratedRepair_20261023\\sources\\continuous_capture_writer.v",
+  "old_sha256": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+  "new_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+  "positive_runs": 9,
+  "expected_bounded_queue_failures": 4,
+  "runs": {
+    "old_red_final": {
+      "expected_negative": true,
+      "record": {
+        "expected": "bounded queue overflow",
+        "matched": true,
+        "rtl_sha256": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "6b7f16db4d7b52b3b5e84805980f726331bf60fd0236522005e7e10b8281b40a"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=3",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "7ff1521117b4cb5b07ed187be764d13600bcb7e8c7173fad2f7c645d2eedf98a"
+          }
+        ]
+      },
+      "summary": [
+        "# ** Fatal: BOUNDED_QUEUE_OVERFLOW delay=20 cyc=198 produced=66 commands=6 acks=5 peak=16"
+      ]
+    },
+    "new_green_final": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "68e171695e7db0355724c37456fbfb902254b64b46a6f94a15d73c9520902ca0"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=3",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "d51df22b9cdfab38c89fa6835aad532014ade9dbaaea2e8612815a892dd2d4b3"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=3 bad=0 frames=1 reset=0 commands=128 acks=128 native_beats=1024 peak=1 stalls=0 terminal_stalls=9 overlap_input=890 final_wait=21 cycles=3107"
+      ]
+    },
+    "old_limit_final": {
+      "expected_negative": true,
+      "record": {
+        "expected": "bounded queue overflow",
+        "matched": true,
+        "rtl_sha256": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "69df4ddc045b77057405f605fafd116f38ab9649348eb1f7d03aaee3143961cc"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=40",
+              "+PERIOD=3",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "9c6fd9110f09f61b9194bd382571ffcc6919ce4ce2d0fb22b2780249f51c28d7"
+          }
+        ]
+      },
+      "summary": [
+        "# ** Fatal: BOUNDED_QUEUE_OVERFLOW delay=40 cyc=102 produced=34 commands=2 acks=1 peak=16"
+      ]
+    },
+    "new_limit_final": {
+      "expected_negative": true,
+      "record": {
+        "expected": "bounded queue overflow",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "8aa63e447c4e24a64e5055d8fe559dc2d2a61cb0abb1b44fd826879862c1eb23"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=40",
+              "+PERIOD=3",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "a2171624fb4b071e1a7f598686626c22e716f743ba1c6d73822194970a57b14b"
+          }
+        ]
+      },
+      "summary": [
+        "# ** Fatal: BOUNDED_QUEUE_OVERFLOW delay=40 cyc=150 produced=50 commands=3 acks=2 peak=16"
+      ]
+    },
+    "rate_old_final": {
+      "expected_negative": true,
+      "record": {
+        "expected": "bounded queue overflow",
+        "matched": true,
+        "rtl_sha256": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3045001d92625cdf35614ac615a04f2ab0d27ba9ae94be2a113dfa9d9ba4ae9"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=50",
+              "+PERIOD=7",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "64b959af0c29b8cf3433e2b02984f1278742d58b9f9857cc2e4a82b92a91e607"
+          }
+        ]
+      },
+      "summary": [
+        "# ** Fatal: BOUNDED_QUEUE_OVERFLOW delay=50 cyc=1190 produced=170 commands=19 acks=18 peak=16"
+      ]
+    },
+    "rate_new_final": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "8df8735a60d9ad15435426a7501218dae7fb56d1a31b912adb87ff358abb54a9"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=50",
+              "+PERIOD=7",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "47d45c7761078df730818a37be4e344d4d66a19924b673e2719e96eb68382469"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=50 period=7 bad=0 frames=1 reset=0 commands=128 acks=128 native_beats=1024 peak=1 stalls=0 terminal_stalls=4 overlap_input=890 final_wait=47 cycles=7228"
+      ]
+    },
+    "control0_final2": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "b177082f5fcc18204afefd9b100cbe3d35a6225ae0ece476f94078295d27fda6"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=5",
+              "+CONTROL=1",
+              "+BAD=0",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "1001d5a5c56d8f0a191cbfe46d5fb949786bcb9ffeb5e1f5dbeb93181c7a05b9"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=5 bad=0 frames=1 reset=0 commands=128 acks=128 native_beats=1024 peak=1 stalls=248 terminal_stalls=12 overlap_input=520 final_wait=21 cycles=5161"
+      ]
+    },
+    "control1_final2": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "154a9254a0730e1ba01f3c06bb2d1071d6131fbf7bf9313cfa9f8b9cfc799247"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=5",
+              "+CONTROL=1",
+              "+BAD=1",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e68d2c08d5d9aa1db6496ba5eeda666b13202c5fd20e543dfe9c5bb0bd379d20"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=5 bad=1 frames=1 reset=0 commands=127 acks=127 native_beats=1016 peak=1 stalls=245 terminal_stalls=7 overlap_input=520 final_wait=0 cycles=5135"
+      ]
+    },
+    "control2_final2": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "319b1363ff551e5d70a244562489de0eade554ce73e352c55752f25a9747db02"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=5",
+              "+CONTROL=1",
+              "+BAD=2",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "4f42706c71e332f149ee53a914c975fd768d1a92c3f6ad54d10ea4974eb19ab8"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=5 bad=2 frames=1 reset=0 commands=128 acks=128 native_beats=1024 peak=1 stalls=248 terminal_stalls=12 overlap_input=520 final_wait=21 cycles=5161"
+      ]
+    },
+    "control3_final2": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "a5e62ae82155e64d869f5cb655375f4620e5c9e1835801a644bba0c7df741bf3"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=5",
+              "+CONTROL=1",
+              "+BAD=3",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "b743620d246ca49d6afe73dc266d41d4479ff4976823d8e85bde994370de38b1"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=5 bad=3 frames=1 reset=0 commands=5 acks=5 native_beats=40 peak=1 stalls=14 terminal_stalls=7 overlap_input=21 final_wait=0 cycles=5135"
+      ]
+    },
+    "multi_final2": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "0b32e5fd08305c6df74367edb47ec8981bbe025dc8ddb68339ec185d2ef40633"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=5",
+              "+CONTROL=1",
+              "+FRAMES=3",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "ee948f8d71133b764234e20b4cd5bc72f5f7134f3ce5c9e3a80ce7c424b1a989"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=5 bad=0 frames=3 reset=0 commands=384 acks=384 native_beats=3072 peak=6 stalls=742 terminal_stalls=25 overlap_input=1561 final_wait=21 cycles=15418"
+      ]
+    },
+    "reset_final2": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_overlap.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "9d7e8709e9509f1e219a28766974d930112f1d0c944a7d17590d9a50bf54767c"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_overlap",
+              "+DELAY=20",
+              "+PERIOD=5",
+              "+CONTROL=1",
+              "+RESET=1",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "fbc21e8c06b41b9c13e68b349b020b496518ae02b1a2d485d6f4849c047f424c"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS writer bounded16 delay=20 period=5 bad=0 frames=1 reset=1 commands=128 acks=128 native_beats=1024 peak=1 stalls=269 terminal_stalls=12 overlap_input=557 final_wait=21 cycles=5161"
+      ]
+    },
+    "lifecycle_final": {
+      "expected_negative": false,
+      "record": {
+        "expected": "pass",
+        "matched": true,
+        "rtl_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+        "bench_sha256": "4fa9333d7a6a42629421df1151588f708eb5ef0784383e36589a21a906d7d227",
+        "commands": [
+          {
+            "argv": [
+              "vlib.exe",
+              "work"
+            ],
+            "exit_code": 0,
+            "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "argv": [
+              "vlog.exe",
+              "-sv",
+              "continuous_capture_writer.v",
+              "tb_writer_lifecycle.sv"
+            ],
+            "exit_code": 0,
+            "log_sha256": "0bec36b8ce68548be639703c4a84d05f4b86895110bd17583d86cf2e469c3ac5"
+          },
+          {
+            "argv": [
+              "vsim.exe",
+              "-c",
+              "tb_writer_lifecycle",
+              "-do",
+              "run -all; quit -f"
+            ],
+            "exit_code": 0,
+            "log_sha256": "b4154c3445cd25faa970053d91844ebf6111668e1835aec7779444f21363c6c5"
+          }
+        ]
+      },
+      "summary": [
+        "# PASS lifecycle commands=6 acks=6 native_beats=48 enqueue_retire_same_edge=1 bad_two_owned=1 terminal_stalls=15 sticky_fault=1"
+      ]
+    }
+  },
+  "files_sha256": {
+    "old_red_final/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+    "old_red_final/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "old_red_final/verification.json": "24b389cc9442897df492d32aea95112ffe1100d4342ad5bf98565387c6a466e6",
+    "old_red_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "old_red_final/step1.log": "6b7f16db4d7b52b3b5e84805980f726331bf60fd0236522005e7e10b8281b40a",
+    "old_red_final/step2.log": "7ff1521117b4cb5b07ed187be764d13600bcb7e8c7173fad2f7c645d2eedf98a",
+    "new_green_final/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "new_green_final/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "new_green_final/verification.json": "cba110edb1366a7dc66f1f08d40b2c0065cbacf945f2fef65a42440ba2a991e0",
+    "new_green_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "new_green_final/step1.log": "68e171695e7db0355724c37456fbfb902254b64b46a6f94a15d73c9520902ca0",
+    "new_green_final/step2.log": "d51df22b9cdfab38c89fa6835aad532014ade9dbaaea2e8612815a892dd2d4b3",
+    "old_limit_final/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+    "old_limit_final/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "old_limit_final/verification.json": "481345e26c041c1bb3c9e185f3bf09c6732eecf40011e19984b399aa708b2235",
+    "old_limit_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "old_limit_final/step1.log": "69df4ddc045b77057405f605fafd116f38ab9649348eb1f7d03aaee3143961cc",
+    "old_limit_final/step2.log": "9c6fd9110f09f61b9194bd382571ffcc6919ce4ce2d0fb22b2780249f51c28d7",
+    "new_limit_final/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "new_limit_final/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "new_limit_final/verification.json": "823a1bcd0040e1d47d412df5650a52ffbc480b3e8c34e0c615827d23bb39060a",
+    "new_limit_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "new_limit_final/step1.log": "8aa63e447c4e24a64e5055d8fe559dc2d2a61cb0abb1b44fd826879862c1eb23",
+    "new_limit_final/step2.log": "a2171624fb4b071e1a7f598686626c22e716f743ba1c6d73822194970a57b14b",
+    "rate_old_final/continuous_capture_writer.v": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+    "rate_old_final/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "rate_old_final/verification.json": "5ed20d38ef000cf4ff1c1413486add041e09aa983d1aeb24a62a4ae1b21b9ee9",
+    "rate_old_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rate_old_final/step1.log": "e3045001d92625cdf35614ac615a04f2ab0d27ba9ae94be2a113dfa9d9ba4ae9",
+    "rate_old_final/step2.log": "64b959af0c29b8cf3433e2b02984f1278742d58b9f9857cc2e4a82b92a91e607",
+    "rate_new_final/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "rate_new_final/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "rate_new_final/verification.json": "719bab79e31a8f2dc8018aa0e79a43b374a427d0847561656286fe51ec68d87c",
+    "rate_new_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rate_new_final/step1.log": "8df8735a60d9ad15435426a7501218dae7fb56d1a31b912adb87ff358abb54a9",
+    "rate_new_final/step2.log": "47d45c7761078df730818a37be4e344d4d66a19924b673e2719e96eb68382469",
+    "control0_final2/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "control0_final2/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "control0_final2/verification.json": "7c897ff5e1b6a40c8856af39bd7561089b25422534f5da698116927713a3054f",
+    "control0_final2/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control0_final2/step1.log": "b177082f5fcc18204afefd9b100cbe3d35a6225ae0ece476f94078295d27fda6",
+    "control0_final2/step2.log": "1001d5a5c56d8f0a191cbfe46d5fb949786bcb9ffeb5e1f5dbeb93181c7a05b9",
+    "control1_final2/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "control1_final2/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "control1_final2/verification.json": "d7a031de27b57e884cddd86431f8a36ccec267c5b38629634368b20cb2c81d5c",
+    "control1_final2/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control1_final2/step1.log": "154a9254a0730e1ba01f3c06bb2d1071d6131fbf7bf9313cfa9f8b9cfc799247",
+    "control1_final2/step2.log": "e68d2c08d5d9aa1db6496ba5eeda666b13202c5fd20e543dfe9c5bb0bd379d20",
+    "control2_final2/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "control2_final2/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "control2_final2/verification.json": "2fb286c56e9b4be0c7bbdada19debda83b16ba06c5ff17fd2b4df985f74807da",
+    "control2_final2/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control2_final2/step1.log": "319b1363ff551e5d70a244562489de0eade554ce73e352c55752f25a9747db02",
+    "control2_final2/step2.log": "4f42706c71e332f149ee53a914c975fd768d1a92c3f6ad54d10ea4974eb19ab8",
+    "control3_final2/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "control3_final2/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "control3_final2/verification.json": "daa105da434b2ce298053c81edaa44683b66a0c054f36fef4bdbbf462f16dca8",
+    "control3_final2/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "control3_final2/step1.log": "a5e62ae82155e64d869f5cb655375f4620e5c9e1835801a644bba0c7df741bf3",
+    "control3_final2/step2.log": "b743620d246ca49d6afe73dc266d41d4479ff4976823d8e85bde994370de38b1",
+    "multi_final2/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "multi_final2/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "multi_final2/verification.json": "60f0ddd839c365a2f311992a516e8d6bf5df578083edcf5463252798740f33f2",
+    "multi_final2/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "multi_final2/step1.log": "0b32e5fd08305c6df74367edb47ec8981bbe025dc8ddb68339ec185d2ef40633",
+    "multi_final2/step2.log": "ee948f8d71133b764234e20b4cd5bc72f5f7134f3ce5c9e3a80ce7c424b1a989",
+    "reset_final2/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "reset_final2/tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "reset_final2/verification.json": "9117727cfdf684624f1c53d53c3bb1e8ee7058d9a2a9e260fe5f85e272d30431",
+    "reset_final2/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reset_final2/step1.log": "9d7e8709e9509f1e219a28766974d930112f1d0c944a7d17590d9a50bf54767c",
+    "reset_final2/step2.log": "fbc21e8c06b41b9c13e68b349b020b496518ae02b1a2d485d6f4849c047f424c",
+    "lifecycle_final/continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "lifecycle_final/tb_writer_lifecycle.sv": "4fa9333d7a6a42629421df1151588f708eb5ef0784383e36589a21a906d7d227",
+    "lifecycle_final/verification.json": "bc3bdcd4740721400125df79558b803f0268c8cab1fe748d41967be9d0695650",
+    "lifecycle_final/step0.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "lifecycle_final/step1.log": "0bec36b8ce68548be639703c4a84d05f4b86895110bd17583d86cf2e469c3ac5",
+    "lifecycle_final/step2.log": "b4154c3445cd25faa970053d91844ebf6111668e1835aec7779444f21363c6c5",
+    "continuous_capture_writer.v": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+    "tb_writer_overlap.sv": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+    "tb_writer_lifecycle.sv": "4fa9333d7a6a42629421df1151588f708eb5ef0784383e36589a21a906d7d227",
+    "run.py": "33463e97466295161aa929b688ed59b5e5e5cb1aad1f30930de2ba123ed54493",
+    "finalize.py": "43beb58761c40dfdf79f0d7a78d92b214363709b2b15fb1f4060c65ab4439113",
+    "DESIGN.md": "2deba87a2ffac4fe4926ca5682890c09573671456d69e8da0a9cd459815c7a7a",
+    "rtl.diff": "68c7b871edee285986e55b9a114c76cf5a279a6d24deb278a7a3ab954aa5e6c0"
+  },
+  "prototype_failures_excluded": [
+    "control1: final-ACK coverage invalid for discarded last partial burst"
+  ],
+  "unchanged_production_candidate": "D:/FPGA/output/live_repair_20261024/candidate_v2"
+}

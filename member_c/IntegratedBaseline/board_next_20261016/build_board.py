@@ -152,13 +152,20 @@ s=rep(s,' wire memory_release_n,', ' wire ddr_lock,ddr_ready,phy_fail,align_erro
 s=(F/'rtl/video/status_overlay.v').read_text()
 font=ImageFont.truetype('C:/Windows/Fonts/consola.ttf',12)
 rows=[]
-for code,label in {12:'RAW 1920X1080',13:'HELD LAST FRAME',15:'RECOVERING DDR',28:'SOURCE FAULT',29:'RETRY LIMIT'}.items():
+status_labels={12:'RAW 1920X1080',13:'HELD LAST FRAME',15:'RECOVERING DDR',28:'SOURCE FAULT',29:'RETRY LIMIT'}
+# Verilog case selects the first matching item. Remove replaced addresses
+# before installing labels; appending duplicate items retains the old glyphs.
+s=re.sub(r"^9'h([0-9a-f]+): bits=160'h[0-9a-f]+;\s*$",
+         lambda m:'' if int(m[1],16)//16 in status_labels else m[0],s,flags=re.M)
+for code,label in status_labels.items():
  im=Image.new('1',(160,16));ImageDraw.Draw(im).text((0,0),label,font=font,fill=1)
  for y in range(16):
   bits=0
   for x in range(160):bits=(bits<<1)|int(im.getpixel((x,y))!=0)
   rows.append(f"9'h{code*16+y:03x}: bits=160'h{bits:040x};")
 s=rep(s,' default:bits=0;', '\n'.join(rows)+'\n default:bits=0;')
+rom_addresses=re.findall(r"9'h([0-9a-f]+): bits=",s)
+assert len(rom_addresses)==len(set(rom_addresses)),'Duplicate status ROM addresses'
 (O/'status_overlay.v').write_text(s)
 
 sources=json.loads((H/'integration/sources.json').read_text())

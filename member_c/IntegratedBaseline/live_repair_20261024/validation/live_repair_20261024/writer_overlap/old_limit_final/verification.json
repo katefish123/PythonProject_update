@@ -1,0 +1,39 @@
+{
+  "expected": "bounded queue overflow",
+  "matched": true,
+  "rtl_sha256": "5dc3faa561753b54569fe6b8689ee529ac927c51d9c1a24bd9ab3d637d045ed3",
+  "bench_sha256": "af4e37d041270569a26533f8dcbe4c0df7d0471bfd547cfdb8608af7ba754212",
+  "commands": [
+    {
+      "argv": [
+        "vlib.exe",
+        "work"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "vlog.exe",
+        "-sv",
+        "continuous_capture_writer.v",
+        "tb_writer_overlap.sv"
+      ],
+      "exit_code": 0,
+      "log_sha256": "69df4ddc045b77057405f605fafd116f38ab9649348eb1f7d03aaee3143961cc"
+    },
+    {
+      "argv": [
+        "vsim.exe",
+        "-c",
+        "tb_writer_overlap",
+        "+DELAY=40",
+        "+PERIOD=3",
+        "-do",
+        "run -all; quit -f"
+      ],
+      "exit_code": 0,
+      "log_sha256": "9c6fd9110f09f61b9194bd382571ffcc6919ce4ce2d0fb22b2780249f51c28d7"
+    }
+  ]
+}

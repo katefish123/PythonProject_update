@@ -1,0 +1,8 @@
+{
+  "parent_fixture": "D:\\FPGA\\output\\live_repair_20261024\\service_starvation_audit",
+  "bench_sha256": "075c272ce1099e5fcfab02373a416fb1313866b23574d7818769829dc763a3f2",
+  "writer_sha256": "3c2a41136b9729a7a19df52158bfa5e942b0cf677a2bf0a1e035e04fd5f94ff0",
+  "runner_sha256": "ed0f069517f99ce33b380930bb6b0336bb7a2db5819431e9efa27d404a5b8626",
+  "only_production_change": "continuous_capture_writer.v",
+  "status": "prepared; no simulator run"
+}
