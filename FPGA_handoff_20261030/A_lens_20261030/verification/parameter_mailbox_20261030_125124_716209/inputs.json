@@ -1,0 +1,21 @@
+{
+  "source": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\lens_parameter_mailbox.v",
+  "rtl_sha256": "58a5b5673f4ca50b3438174dd0acfc97a3c01c2e35d559ea41df2cad6fc39be1",
+  "testbench_sha256": "dde41141e2ebaf02d1f9b07566491d723fcb8fe735daf1646b570468611465e9",
+  "checker_sha256": "7ce46046ab06a4cd3dba8fac4454635fa479a47c8f076160eb597107fa7da81e",
+  "fixture_sha256": {
+    "payload.hex": "18f8bcd9635b876e42df1d8c90be76e35f6cedd393e23d0e6f3a54234a00eaea",
+    "sequence.hex": "5cd7b9a555be46cc0c6e2a15dbeeee7d53f935107475c1cc4d7020c1858cf001"
+  },
+  "clock_period_ps": {
+    "source": 37036,
+    "destination": 13468
+  },
+  "destination_phase_ps": [
+    0,
+    1733,
+    11789
+  ],
+  "seed": 20261030,
+  "hardware_accessed": false
+}

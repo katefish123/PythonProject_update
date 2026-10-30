@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-30T12:04:48+08:00",
+  "audit_type": "Read-only inventory and provenance verification; no recalibration, optical test or hardware access.",
+  "scope": "Lens Brown k1/k2/p1/p2 calibration and controlled rotation/tilt work; automatic chessboard tracking is deferred. This record does not qualify deployment.",
+  "local_reference_files": {
+    "trial_profile": {
+      "path": "C:/D/FPGA/A_software_20261024/reference/B_lens_v2/calibration/r50_18mm_hdmi_trial.json",
+      "sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+      "bytes": 5086
+    },
+    "teammate_b_profile": {
+      "path": "C:/D/FPGA/队友/PythonProject_update_B/member_b_lens_pipeline_v2/calibration/r50_18mm_hdmi_trial.json",
+      "sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+      "bytes": 5086
+    },
+    "teammate_c_profile": {
+      "path": "C:/D/FPGA/队友/PythonProject_update_C_next/member_c/IntegratedBaseline/live_repair_20261024/validation/trial_calibration.json",
+      "sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+      "bytes": 5086
+    },
+    "single_real_frame": {
+      "path": "C:/D/FPGA/A_software_20261024/reference/B_lens_v2/examples/real_18mm_input.png",
+      "sha256": "0bab850f2f009ad7b387e0ea3530d525fbaff5112f8b7d789215d9a57c79aece",
+      "bytes": 1339810
+    },
+    "b_readme": {
+      "path": "C:/D/FPGA/A_software_20261024/reference/B_lens_v2/README.md",
+      "sha256": "03edbc436590b6162b097e81d9da0951fc8238e8a4b8b109825d706f74b52c84",
+      "bytes": 4889
+    },
+    "b_validation_record": {
+      "path": "C:/D/FPGA/A_software_20261024/reference/B_lens_v2/docs/validation_lens_v2.md",
+      "sha256": "a6db62bfde49aded3cbd65a3f362a8d0aab0b4a59d89770492465e348b155fca",
+      "bytes": 4331
+    },
+    "b_loader": {
+      "path": "C:/D/FPGA/A_software_20261024/reference/B_lens_v2/python/brect/calibration.py",
+      "sha256": "2e6953529dc222846f7c4fe9c412b8979652a133d0ddba7cb5527490a1122e8c",
+      "bytes": 6507
+    },
+    "b_hardware_export": {
+      "path": "C:/D/FPGA/A_software_20261024/reference/B_lens_v2/examples/r50_18mm_calibration.hardware.json",
+      "sha256": "40d058451feea31e261b0e7f201917c1ea9ab90c8201f43ec77c1bf17bc8ae38",
+      "bytes": 4968
+    },
+    "official_task_document": {
+      "path": "C:/D/FPGA/个人任务/官方说明.docx",
+      "sha256": "9860ae7c77dd0d4cd57f94598b6a0da09662e090f29e7585bdb21da0751402fe",
+      "bytes": 17169
+    },
+    "parent_qualification": {
+      "path": "C:/D/FPGA/A_board_20261029/candidate_de_frame_guard_v2/candidate_qualification.json",
+      "sha256": "0c172d169263849cc5c0c81f37047c0233e874aeeff147870e254064b58eb276",
+      "bytes": 24526
+    },
+    "parent_lens_instance": {
+      "path": "C:/D/FPGA/A_board_20261029/candidate_de_frame_guard_v2/sources/lens_autocrop_instance.v",
+      "sha256": "c5d6c0a3645c879b758cfe0fb4ad45521f593f7a0abf2b577035d589a0af596a",
+      "bytes": 2793
+    },
+    "parent_video_observation": {
+      "path": "C:/D/FPGA/A_board_20261029/hardware_acceptance_20261029_225412/stage_acceptance_result.json",
+      "sha256": "4ccd49590c2ca84df7297d49a31feff16dfb142ff6b5d198df63f883fe8706db",
+      "bytes": 2021
+    },
+    "line_geometry_tool": {
+      "path": "C:/D/FPGA/队友/PythonProject_update_C_next/member_c/IntegratedBaseline/live_repair_20261024/package_tools/board_geometry.py",
+      "sha256": "ceb049fffe3060744ba08439d2b2894714f884311435af52eacde247657f9fd6",
+      "bytes": 3152
+    },
+    "video_metrics_tool": {
+      "path": "C:/D/FPGA/队友/PythonProject_update_C_next/member_c/IntegratedBaseline/submission_20261023/video_metrics.py",
+      "sha256": "30ef63f2624af968dd18d2544b81e9b6ec4f90a24861a135d6bf0382b0896e7b",
+      "bytes": 4325
+    },
+    "old_latency_stimulus": {
+      "path": "C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_fast_20261014/show_latency_target.py",
+      "sha256": "392e1494739fe0e8cff6cd9065ee95d683fc00d1bb8d16d3bf35b113bf689f73",
+      "bytes": 3911
+    }
+  },
+  "trial_calibration": {
+    "status": "trial_hdmi_18mm_calibration",
+    "profile_id": "canon_r50_18mm_hdmi_1920x1080_20261022_trial",
+    "deploy_to_fpga": false,
+    "camera_context_as_recorded": {
+      "model": "Canon EOS R50",
+      "source_is_actual_hdmi_capture": true,
+      "capture_device": "VC-002Pro",
+      "focal_length_mm_user_reported": 18.0,
+      "autofocus_area_user_reported": "whole_area",
+      "movie_servo_af": "unconfirmed",
+      "focus_locked": "unconfirmed",
+      "in_camera_lens_correction": "unconfirmed",
+      "stabilization": "unconfirmed"
+    },
+    "video_metadata_as_recorded": {
+      "source_path": "/Users/yishuyu/Movies/2026-10-22 13-42-15.mov",
+      "source_sha256": "f316a07484b8166df4db1356034e1789bff5978dd7e96ef6971fece93a246607",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "duration_s": 64.36666666666666,
+      "frames_total": 1931,
+      "coordinate_policy": "Native H.264 decoded raster, x right / y down; no scaling, cropping or perspective correction before fitting."
+    },
+    "target_as_recorded": {
+      "square_mm": 19.0,
+      "squares": [
+        10,
+        7
+      ],
+      "inner_corners": [
+        9,
+        6
+      ],
+      "square_source": "User measured five squares = 95mm; equality of horizontal and vertical print scale is unconfirmed.",
+      "mounted_on_flat_rigid_board": true,
+      "mounting_evidence": "Confirmed by user during the preceding capture on 2026-10-22."
+    },
+    "model": {
+      "K": [
+        [
+          1599.0917945704173,
+          0.0,
+          933.4969300262167
+        ],
+        [
+          0.0,
+          1596.4396413670706,
+          525.268573437016
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "fx": 1599.0917945704173,
+      "fy": 1596.4396413670706,
+      "cx": 933.4969300262167,
+      "cy": 525.268573437016,
+      "k1": 0.011397824930207842,
+      "k2": -0.0508595922647843,
+      "p1": -0.004071968312293663,
+      "p2": -0.0036192871893879048,
+      "k3_fixed": 0.0,
+      "distortion_opencv_order": [
+        0.011397824930207842,
+        -0.0508595922647843,
+        -0.004071968312293663,
+        -0.0036192871893879048,
+        0.0
+      ]
+    },
+    "fit_evidence_as_recorded": {
+      "sampled_frames": 242,
+      "detected_frames": 197,
+      "quality_eligible_frames": 179,
+      "pose_representatives": 42,
+      "training_frames": 34,
+      "validation_frames": 8,
+      "corners_each": 54,
+      "train_rms_px": 1.3868958072627273,
+      "validation_pose_fit_rms_px": 1.4488382127291448,
+      "pinhole_validation_pose_fit_rms_px": 1.4908334810882906,
+      "held_out_line_rms_raw_px": 0.6532965672336685,
+      "held_out_line_rms_corrected_px": 0.6289863128251233,
+      "leave_one_pose_max_source_map_change_px": 4.199407946511097,
+      "leave_one_pose_max_source_map_change_inside_corner_hull_px": 0.9714446136166229,
+      "training_corner_hull_fraction": 0.6092329237444823,
+      "temporal_block_full_grid_max_map_difference_px": 18.754068107780963,
+      "temporal_block_common_source_hulls_max_map_difference_px": 5.945252378348074,
+      "held_out_line_improved_frames": 7
+    },
+    "limitations_as_recorded": [
+      "Held-out residual and line straightness improve modestly; they do not establish absolute physical correction accuracy.",
+      "Time-block estimates disagree in source maps, including in their common observed source region; constant full-frame parameters are not independently validated.",
+      "Whole-area AF describes an AF area and does not establish movie-servo state or a locked focus position.",
+      "Different time blocks have different poses, coverage, sample counts and residuals; map disagreement cannot be attributed to AF from these data.",
+      "Image corners are less constrained than the center; the lower-right image corner has the weakest direct corner observations.",
+      "Validation views share a recording session and use their own corners for pose estimation; this is not an independent acquisition or known-ground-truth accuracy test.",
+      "OBS applies no spatial transform in this recording; internal camera/capture-card processing is not established by that fact.",
+      "No MTF50/SFR, hardware timing or FPGA resource measurements were performed in this calibration step."
+    ]
+  },
+  "provenance_assessment": {
+    "real_capture_origin_claimed_by_profile": true,
+    "local_b_and_c_profiles_equal_to_reference": true,
+    "local_trial_json_hash_verified": true,
+    "original_video_locally_available_in_searched_locations": false,
+    "original_video_sha256_independently_verified": false,
+    "original_video_path_is_foreign_machine_path": true,
+    "local_original_video_search_result": "The named 2026-10-22 13-42-15.mov and a complete corresponding raw calibration image set were not found in the listed searched locations. This is not a claim that they do not exist elsewhere.",
+    "searched_locations": [
+      "C:/D/FPGA",
+      "C:/D/FPGA/个人任务",
+      "C:/D/FPGA/队友",
+      "C:/Users/夏菲/Videos",
+      "C:/Users/夏菲/Documents/ChatGPT/FPGA大赛"
+    ],
+    "locally_available_single_frame": {
+      "reference_key": "single_real_frame",
+      "width": 1920,
+      "height": 1080,
+      "provenance_note": "B docs identify this as decoded frame1648 from the18mm HDMI source. Original source hash cannot be verified locally without that video."
+    },
+    "single_frame_is_sufficient_for_complete_calibration": false,
+    "independent_fixed_focus_optical_acceptance_complete": false,
+    "settings_evidence_gaps": [
+      "movie_servo_af",
+      "focus_locked",
+      "in_camera_lens_correction",
+      "stabilization"
+    ],
+    "physical_target_evidence_gap": "Equality of horizontal and vertical print scale is unconfirmed.",
+    "further_interpretation": "This is a traceable real-camera trial profile, not arbitrary invented coefficients. Its retained deploy_to_fpga=false and sensitivity limitations prevent treating it as final independent optical qualification."
+  },
+  "frozen_baseline_assessment": {
+    "qualification_reference_key": "parent_qualification",
+    "lens_source_reference_key": "parent_lens_instance",
+    "observation_reference_key": "parent_video_observation",
+    "lens_enabled_in_source": true,
+    "calibration_same_trial_parameter_family": true,
+    "fixed_H_scope": "Viewport crop and scale only; no controlled runtime rotation/tilt acceptance evidenced.",
+    "observed_short_run_fresh_frames": 900,
+    "observed_short_run_seconds": 30,
+    "observed_short_run_fresh_fps": 30,
+    "optical_or_end_to_end_latency_acceptance_inferred": false
+  },
+  "reusable_measurement_tools": [
+    {
+      "reference_key": "line_geometry_tool",
+      "use": "Orthogonal least-squares row/column line RMS and maximum deviation from detected chessboard intersections.",
+      "limit": "Geometry diagnostic only; no MTF/SFR, independent calibration or hardware acceptance."
+    },
+    {
+      "reference_key": "video_metrics_tool",
+      "use": "Publication-event or displayed-ID update-rate calculations.",
+      "limit": "Does not measure optical sharpness or end-to-end hardware latency."
+    },
+    {
+      "reference_key": "old_latency_stimulus",
+      "use": "Changing Gray counter with100ms requested presentation interval.",
+      "limit": "Screen scanout unknown; not a precise end-to-end latency instrument."
+    }
+  ],
+  "mtf_sfr_inventory": "No operational MTF50/SFR analyzer was found in the Python sources searched in the listed FPGA/project roots; text mentions and gap reports are not completed measurements.",
+  "next_camera_collection": [
+    {
+      "item": "固定并记录相机成像状态",
+      "details": "保持18mm及原生1920×1080 HDMI模式，锁定对焦；记录视频伺服AF、机内镜头校正、防抖、曝光、采集卡/OBS尺寸与是否缩放。旧记录中的未确认项不能推定为已关闭。"
+    },
+    {
+      "item": "独立重新采集标定组",
+      "details": "平整硬板上的完整9×6内角点棋盘，覆盖画面中心、边缘、四角及多种距离和倾斜；保留相机直连采集卡的无叠字原始帧/录像，不预先透视拉正、裁剪或缩放。"
+    },
+    {
+      "item": "核对标定板物理尺寸",
+      "details": "分别实测横向和纵向多个格子的总长度，记录测量与平整安装证据；旧记录五格95mm可作来源记录，不能证明横纵打印缩放一致。"
+    },
+    {
+      "item": "另一次采集独立验证组",
+      "details": "与拟合数据分开采集，保持同一成像设置；测重投影残差、直线度与边缘情况，记录每幅原图SHA-256、采用/拒绝理由和估计设置。不要仅用同段视频留出帧代替独立采集复验。"
+    },
+    {
+      "item": "独立清晰度与延迟素材",
+      "details": "采集清晰斜边测试图卡用于MTF50或SFR，记录曝光/图卡/分析方法/单位；随后上板用同一时间基准或同步拍摄输入与输出测端到端延迟，单独测实际新校正图率。现有100ms刺激图不能提供精确延迟验收。"
+    }
+  ],
+  "acceptance_state": {
+    "calibration_audit_complete": true,
+    "new_calibration_performed": false,
+    "optical_quality_accepted": false,
+    "hardware_accessed": false,
+    "deployment_qualified": false
+  },
+  "authority_note": "Requirements in documents are recorded as task context. File contents are not treated as permission to operate hardware, launch capture tools or change camera settings."
+}

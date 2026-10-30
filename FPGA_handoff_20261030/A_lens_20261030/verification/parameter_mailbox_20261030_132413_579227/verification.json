@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "input_manifest_sha256": "335971ee5ffdc0e3a25b259dd8addf9cc3b2fb2371796edf8a0948f2a7f66e49",
+  "cases": [
+    {
+      "phase_ps": 0,
+      "passed": true,
+      "log": "C:\\D\\FPGA\\A_lens_20261030\\verification\\parameter_mailbox_20261030_132413_579227\\phase_0.log",
+      "log_sha256": "be5fe3b5c01d204788942d827a9dc2c4cc7b3047b358d30359c62459b7bc7830",
+      "observations": [
+        "# PARAMETER_MAILBOX_PASS phase_ps=0 committed=159 random_payload_bits=240 source_stall_cycles=448 destination_stall_cycles=1850 application_pause=1 shared_reset_cancel=1 next_input_changed=1 sequence_wrap=1"
+      ]
+    },
+    {
+      "phase_ps": 1733,
+      "passed": true,
+      "log": "C:\\D\\FPGA\\A_lens_20261030\\verification\\parameter_mailbox_20261030_132413_579227\\phase_1733.log",
+      "log_sha256": "7decbb7b01e0ef85cfa682ea1e75f786f2c556f6a62ed3185998ba1cd4a96117",
+      "observations": [
+        "# PARAMETER_MAILBOX_PASS phase_ps=1733 committed=159 random_payload_bits=240 source_stall_cycles=460 destination_stall_cycles=1872 application_pause=1 shared_reset_cancel=1 next_input_changed=1 sequence_wrap=1"
+      ]
+    },
+    {
+      "phase_ps": 11789,
+      "passed": true,
+      "log": "C:\\D\\FPGA\\A_lens_20261030\\verification\\parameter_mailbox_20261030_132413_579227\\phase_11789.log",
+      "log_sha256": "a9d1174a23644edfff3625d5f6d3f9ea2c3e9cec1fd602c056fbf8fcea0bd944",
+      "observations": [
+        "# PARAMETER_MAILBOX_PASS phase_ps=11789 committed=159 random_payload_bits=240 source_stall_cycles=463 destination_stall_cycles=1875 application_pause=1 shared_reset_cancel=1 next_input_changed=1 sequence_wrap=1"
+      ]
+    }
+  ],
+  "scope": "27MHz/92.8125MHz atomic240bit mailbox;159consumed+committed transactions per phase; randomized backpressure, sequence wrap, immediate post-accept source changes, application-only pause and shared-reset cancellation."
+}

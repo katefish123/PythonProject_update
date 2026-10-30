@@ -1,0 +1,12 @@
+{
+  "passed": false,
+  "hardware_accessed": false,
+  "throughput_or_optical_acceptance": false,
+  "scope": "Check64x8/raster traversal and actual processor/writer control RTL.\n\nThe processor boundary uses an explicit coordinate/tag passthrough math model:\nthis checks traversal, independent stalls, addresses and frame-affine commits,\nnot affine arithmetic, lens accuracy, DDR throughput or hardware30fps.\n",
+  "input_manifest_sha256": "599aa1eec7100861f37d694dd1e4547802a79e4f5bfda336fffa5d355d59c973",
+  "compile_log_sha256": "c6bdc912cc0bbb5e6945e67edfec7c22c4c84be58042b6872f90e1f08ccc21f0",
+  "simulation_log_sha256": "6f4c9b51e8cf6954eb5250bec416422fbb0235264fc39d26270349810fad396c",
+  "observations": [
+    "# ** Fatal: MISSING_WRITER_STALL_COVERAGE"
+  ]
+}

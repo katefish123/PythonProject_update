@@ -1,0 +1,190 @@
+`timescale 1ns/1ps
+`default_nettype none
+// System boundary for a DDR-backed source and two DDR result frames.
+// The external UI memory engine is single-transaction, 256 bits / command.
+module video_correct_ddr_stream_core #(
+ parameter IN_W=1920,IN_H=1080,SRC_W=640,SRC_H=480,OUT_W=320,OUT_H=452,SCALE=2,
+ parameter H_SYNC=44,H_BACK=148,H_ACTIVE=1920,H_FRONT=88,
+ parameter V_SYNC=5,V_BACK=36,V_ACTIVE=1080,V_FRONT=4,
+ parameter CAPTURE_TIMEOUT=54000000,RETRY_CYCLES=270000,
+ parameter CAPTURE_BURST_BEATS=1,
+ parameter FIFO_ADDR_BITS=9,BIST_BEATS=256,OVERLAP_CAPTURE=0,LATE_CAPTURE_PERCENT=0,ADAPTIVE_DISPLAY_GUARD=0,INLINE_GEOMETRY=0,
+ parameter BLACK_RMIN=0,BLACK_RMAX=64,BLACK_GMIN=0,BLACK_GMAX=64,BLACK_BMIN=0,BLACK_BMAX=64,P0_XMIN=0,P0_XMAX=SRC_W/2-1,P0_YMIN=0,P0_YMAX=SRC_H/2-1,P1_XMIN=SRC_W/2,P1_XMAX=SRC_W-1,P1_YMIN=0,P1_YMAX=SRC_H/2-1,P2_XMIN=SRC_W/2,P2_XMAX=SRC_W-1,P2_YMIN=SRC_H/2,P2_YMAX=SRC_H-1,P3_XMIN=0,P3_XMAX=SRC_W/2-1,P3_YMIN=SRC_H/2,P3_YMAX=SRC_H-1,
+ parameter [27:0] SOURCE_BASE1=28'h0800000,
+ parameter MARKER_MIN_PIXELS=16,MARKER_MAX_PIXELS=4096,MARKER_MAX_SPAN=128,
+ parameter [27:0] RESULT_BASE0=28'h0100000,RESULT_BASE1=28'h0200000,BIST_BASE=28'h03f0000
+)(
+ input wire proc_clk,proc_rst_n,rx_clk,rx_rst_n,pix_clk,pix_rst_n,ui_clk,ui_rst_n,
+ input wire hdmi_ready,ddr_ready,memory_fault,
+ input wire rx_vs,rx_de,input wire [23:0] rx_rgb,
+ input wire nearest,force_pattern,
+ output wire hsync,vsync,de,output wire [23:0] rgb,
+ output wire image_valid,working,frame_error,input_wait,display_underrun,
+ output wire selftest_passed,selftest_failed,
+ output wire [31:0] good_frames,rejected_frames,
+ output reg[3:0]diagnostic_reason,output wire[3:0]diagnostic_phase,
+ input wire preview_valid,overlay_on,input wire[23:0]preview_rgb,overlay_rgb,
+ output wire[11:0]scan_x,scan_y,output wire scan_de,scan_start,scan_reset_n,
+ output wire cmd_source_block,input wire[2047:0]rsp_source_block,
+ output wire[2047:0]cmd_burst_data,output wire cmd_valid,cmd_write,output wire [27:0] cmd_addr,
+ output wire [255:0] cmd_wdata,output wire [31:0] cmd_wstrb,
+ input wire cmd_ready,rsp_valid,rsp_write,input wire [255:0] rsp_rdata
+);
+ wire test_v,test_r,test_write,test_rsp;
+ wire [27:0] test_a;wire [255:0] test_data;wire [31:0] test_mask;
+ ddr_self_test #(.BEATS(BIST_BEATS),.BASE(BIST_BASE)) selftest(.clk(ui_clk),.rst_n(ui_rst_n),
+  .enabled(ddr_ready&&!memory_fault),.passed(selftest_passed),.failed(selftest_failed),
+  .cmd_valid(test_v),.cmd_ready(test_r),.cmd_write(test_write),.cmd_addr(test_a),
+  .cmd_wdata(test_data),.cmd_wstrb(test_mask),.rsp_valid(test_rsp),.rsp_write(rsp_write),.rsp_rdata(rsp_rdata));
+ wire app_ready=selftest_passed&&!selftest_failed&&!memory_fault;
+ (* ASYNC_REG="TRUE" *) reg [2:0] ready_sync,fault_sync;
+ always @(posedge proc_clk or negedge proc_rst_n)begin
+  if(!proc_rst_n)begin ready_sync<=0;fault_sync<=0;end
+  else begin ready_sync<={ready_sync[1:0],app_ready};fault_sync<={fault_sync[1:0],memory_fault||selftest_failed};end
+ end
+ wire capture_req,capture_ack,capture_good,start,processor_rst;
+ reg done_pending,complete_pulse;
+ wire p_done,p_error,p_busy,writer_drained,writer_fault,path_start_ready;
+ wire capture_rejected;wire[3:0]rx_failure_reason,writer_reason,capture_reason,processor_reason;
+ (* ASYNC_REG="TRUE" *) reg[3:0]capture_reason0,capture_reason1,capture_reason2;
+ always @(posedge proc_clk or negedge proc_rst_n)begin
+  if(!proc_rst_n)begin capture_reason0<=0;capture_reason1<=0;capture_reason2<=0;diagnostic_reason<=0;end
+  else begin
+   capture_reason0<=capture_reason;capture_reason1<=capture_reason0;capture_reason2<=capture_reason1;
+   if(fault_sync[2])diagnostic_reason<=7;
+   else if(writer_fault)diagnostic_reason<=6;
+   else if(p_error)diagnostic_reason<=processor_reason;
+   else if(capture_rejected)diagnostic_reason<=capture_reason2!=0?capture_reason2:4'd2;
+   else if(complete_pulse)diagnostic_reason<=0;
+   else if(input_wait)diagnostic_reason<=1;
+  end
+ end
+ wire [31:0] p_pixels;
+ localparam LATE_CAPTURE_PIXELS=OUT_W*OUT_H*LATE_CAPTURE_PERCENT/100;
+ wire capture_permitted=(LATE_CAPTURE_PERCENT==0)||(p_busy&&p_pixels>=LATE_CAPTURE_PIXELS);
+ wire write_bank,pub_toggle,pub_bank,display_ack,session_error;
+ wire all_error=p_error||writer_fault||fault_sync[2];
+ always @(posedge proc_clk or negedge proc_rst_n)begin
+  if(!proc_rst_n)begin done_pending<=0;complete_pulse<=0;end
+  else begin
+   complete_pulse<=0;
+   if(p_done)done_pending<=1;
+   if(done_pending&&writer_drained&&!all_error)begin complete_pulse<=1;done_pending<=0;end
+   if(start||all_error)done_pending<=0;
+  end
+ end
+ assign frame_error=session_error||fault_sync[2];
+ wire capture_bank,source_bank,capture_inflight;
+ generate if(OVERLAP_CAPTURE)begin: parallel_session
+ frame_session_overlap_stream #(.CAPTURE_TIMEOUT(CAPTURE_TIMEOUT),.RETRY_CYCLES(RETRY_CYCLES)) session(
+  .start_permitted(path_start_ready),.capture_permitted(capture_permitted),.capture_bank(capture_bank),.source_bank(source_bank),.capture_inflight(capture_inflight),.source_ready(),
+  .clk(proc_clk),.rst_n(proc_rst_n),.enabled(hdmi_ready&&ready_sync[2]),
+  .capture_request(capture_req),.capture_complete(capture_ack),.capture_ok(capture_good),
+  .processor_start(start),.processor_reset_n(processor_rst),.processor_done(complete_pulse),.processor_error(all_error),
+  .write_bank(write_bank),.publish_toggle(pub_toggle),.publish_bank(pub_bank),.display_ack(display_ack),
+  .frame_error(session_error),.input_wait(input_wait),.working(working),.good_frames(good_frames),.rejected_frames(rejected_frames),.phase(diagnostic_phase),.capture_rejected(capture_rejected));
+ end else begin: serial_session
+  assign capture_inflight=1'b0;assign capture_bank=1'b0;assign source_bank=1'b0;
+ frame_session #(.CAPTURE_TIMEOUT(CAPTURE_TIMEOUT),.RETRY_CYCLES(RETRY_CYCLES)) session(
+  .clk(proc_clk),.rst_n(proc_rst_n),.enabled(hdmi_ready&&ready_sync[2]),
+  .capture_request(capture_req),.capture_complete(capture_ack),.capture_ok(capture_good),
+  .processor_start(start),.processor_reset_n(processor_rst),.processor_done(complete_pulse),.processor_error(all_error),
+  .write_bank(write_bank),.publish_toggle(pub_toggle),.publish_bank(pub_bank),.display_ack(display_ack),
+  .frame_error(session_error),.input_wait(input_wait),.working(working),.good_frames(good_frames),.rejected_frames(rejected_frames),.phase(diagnostic_phase),.capture_rejected(capture_rejected));
+ end endgenerate
+
+
+ wire fifo_full,fifo_empty,fifo_we,fifo_re,fifo_rvalid;
+ wire [284:0] fifo_wdata,fifo_rdata;
+ wire rx_complete,rx_good,sample_v,sample_first,sample_last,sample_token;
+ ddr_snapshot_capture #(.IN_W(IN_W),.IN_H(IN_H),.SRC_W(SRC_W),.SRC_H(SRC_H)) source_capture(
+  .rx_clk(rx_clk),.rx_rst_n(rx_rst_n),.rx_vs(rx_vs),.rx_de(rx_de),.rx_rgb(rx_rgb),.request_toggle(capture_req),
+  .sample_valid(sample_v),.sample_first(sample_first),.sample_last(sample_last),.sample_token(sample_token),
+  .fifo_full(fifo_full),.rx_complete_toggle(rx_complete),.capture_ok(rx_good),.failure_reason(rx_failure_reason),.fifo_wr_en(fifo_we),.fifo_wr_data(fifo_wdata));
+ async_packet_fifo #(.DATA_WIDTH(285),.ADDR_BITS(FIFO_ADDR_BITS)) capture_fifo(
+  .wr_clk(rx_clk),.rd_clk(ui_clk),.rst_n(rx_rst_n&&ui_rst_n),
+  .wr_en(fifo_we),.wr_data(fifo_wdata),.full(fifo_full),.rd_en(fifo_re),.rd_data(fifo_rdata),.rd_valid(fifo_rvalid),.empty(fifo_empty));
+ // Bank selector is stable one proc cycle before the request toggle.
+ (* ASYNC_REG="TRUE" *) reg [2:0] capture_bank_sync;
+ always @(posedge ui_clk or negedge ui_rst_n)begin
+  if(!ui_rst_n)capture_bank_sync<=0;
+  else capture_bank_sync<={capture_bank_sync[1:0],capture_bank};
+ end
+ wire cap_v,cap_r,cap_w,cap_rsp,cap_rsp_write,writer_ack,writer_good;
+ wire [95:0] corners0,corners1;wire valid0,valid1;
+ generate if(INLINE_GEOMETRY)begin: capture_geometry_path
+  (* ASYNC_REG="TRUE" *) reg [2:0] bank_rx;
+  always @(posedge rx_clk or negedge rx_rst_n)begin
+   if(!rx_rst_n)bank_rx<=0;else bank_rx<={bank_rx[1:0],capture_bank};
+  end
+  wire mt,mid,mb,mok;wire [95:0] mc;
+  capture_geometry #(.SRC_W(SRC_W),.SRC_H(SRC_H),.MIN_PIXELS(MARKER_MIN_PIXELS),.MAX_PIXELS(MARKER_MAX_PIXELS),.MAX_SPAN(MARKER_MAX_SPAN),.BLACK_RMIN(BLACK_RMIN),.BLACK_RMAX(BLACK_RMAX),.BLACK_GMIN(BLACK_GMIN),.BLACK_GMAX(BLACK_GMAX),.BLACK_BMIN(BLACK_BMIN),.BLACK_BMAX(BLACK_BMAX),.P0_XMIN(P0_XMIN),.P0_XMAX(P0_XMAX),.P0_YMIN(P0_YMIN),.P0_YMAX(P0_YMAX),.P1_XMIN(P1_XMIN),.P1_XMAX(P1_XMAX),.P1_YMIN(P1_YMIN),.P1_YMAX(P1_YMAX),.P2_XMIN(P2_XMIN),.P2_XMAX(P2_XMAX),.P2_YMIN(P2_YMIN),.P2_YMAX(P2_YMAX),.P3_XMIN(P3_XMIN),.P3_XMAX(P3_XMAX),.P3_YMIN(P3_YMIN),.P3_YMAX(P3_YMAX)) geometry(
+   .rx_clk(rx_clk),.rx_rst_n(rx_rst_n),.proc_clk(proc_clk),.proc_rst_n(proc_rst_n),.sample_valid(sample_v),.sample_first(sample_first),.sample_last(sample_last),.sample_rgb(rx_rgb),
+   .sample_token(sample_token),.sample_bank(bank_rx[2]),.rx_complete_toggle(rx_complete),
+   .metadata_toggle(mt),.metadata_token(mid),.metadata_bank(mb),.metadata_ok(mok),.metadata_corners(mc));
+  geometry_frame_join joiner(.clk(proc_clk),.rst_n(proc_rst_n),.request_toggle(capture_req),.request_bank(capture_bank),
+   .writer_complete(writer_ack),.writer_ok(writer_good),.writer_reason(writer_reason),.failure_reason(capture_reason),.metadata_toggle(mt),.metadata_token(mid),.metadata_bank(mb),.metadata_ok(mok),.metadata_corners(mc),
+   .complete_toggle(capture_ack),.capture_ok(capture_good),.corners0(corners0),.corners1(corners1),.valid0(valid0),.valid1(valid1));
+ end else begin: no_capture_geometry
+  assign capture_ack=writer_ack;assign capture_good=writer_good;assign capture_reason=writer_reason;assign corners0=0;assign corners1=0;assign valid0=0;assign valid1=0;
+ end endgenerate
+ wire [27:0] cap_a;wire [255:0] cap_data,cap_rdata;wire [31:0] cap_mask;
+ ddr_capture_writer_banked #(.SRC_W(SRC_W),.SRC_H(SRC_H),.BURST_BEATS(CAPTURE_BURST_BEATS)) capture_writer(
+  .ui_clk(ui_clk),.ui_rst_n(ui_rst_n),.base_word_addr(capture_bank_sync[2]?SOURCE_BASE1:28'd0),.request_toggle(capture_req),.rx_complete_toggle(rx_complete),.rx_capture_ok(rx_good),.rx_failure_reason(rx_failure_reason),
+  .fifo_empty(fifo_empty),.fifo_rd_data(fifo_rdata),.fifo_rd_valid(fifo_rvalid),.fifo_rd_en(fifo_re),
+  .cmd_burst_data(cmd_burst_data),.cmd_valid(cap_v),.cmd_ready(cap_r),.cmd_write(cap_w),.cmd_addr(cap_a),.cmd_wdata(cap_data),.cmd_wstrb(cap_mask),
+  .rsp_valid(cap_rsp),.rsp_write(cap_rsp_write),.complete_toggle(writer_ack),.capture_ok(writer_good),.failure_reason(writer_reason));
+
+ wire br_v,br_r,br_w,br_rsp,br_rsp_write,br_block;
+ wire [27:0]br_a;wire[255:0]br_data,br_rdata;wire[31:0]br_mask;
+ assign writer_drained=1'b1;assign writer_fault=1'b0;
+ c_stream_correction_path #(.SRC_W(SRC_W),.SRC_H(SRC_H),.OUT_W(OUT_W),.OUT_H(OUT_H),.ACTIVE_W(OUT_W-3),.ACTIVE_X(1),.RESULT_BASE0(RESULT_BASE0),.RESULT_BASE1(RESULT_BASE1)) stream_path(
+ .proc_clk(proc_clk),.ui_clk(ui_clk),.rst_n(proc_rst_n&&ui_rst_n),.start(start),.abort(!processor_rst),.nearest(nearest),
+ .input_geometry_valid(source_bank?valid1:valid0),.input_corners(source_bank?corners1:corners0),.source_base(source_bank?SOURCE_BASE1:28'd0),.frame_bank(write_bank),
+ .start_ready(path_start_ready),.busy(p_busy),.done(p_done),.error(p_error),.failure_reason(processor_reason),.completed_pixels(p_pixels),.processor_cycles(),
+ .cmd_valid(br_v),.cmd_ready(br_r),.cmd_write(br_w),.cmd_source_block(br_block),.cmd_addr(br_a),.cmd_wdata(br_data),.cmd_wstrb(br_mask),
+ .rsp_valid(br_rsp),.rsp_write(br_rsp_write),.rsp_rdata(br_rdata),.rsp_source_block(rsp_source_block),.engine_fault(memory_fault));
+ (* ASYNC_REG="TRUE" *) reg [2:0] capture_busy_ui;
+ wire display_v,display_r,display_rsp,display_prefetch_busy;wire [27:0] display_a;wire [255:0] display_rdata;
+ ddr_result_display #(.OUT_W(OUT_W),.OUT_H(OUT_H),.SCALE(SCALE),.BASE0(RESULT_BASE0),.BASE1(RESULT_BASE1),
+  .H_SYNC(H_SYNC),.H_BACK(H_BACK),.H_ACTIVE(H_ACTIVE),.H_FRONT(H_FRONT),
+  .V_SYNC(V_SYNC),.V_BACK(V_BACK),.V_ACTIVE(V_ACTIVE),.V_FRONT(V_FRONT)) display_reader(
+  .ui_clk(ui_clk),.ui_rst_n(ui_rst_n),.pix_clk(pix_clk),.pix_rst_n(pix_rst_n),
+  .publish_toggle(pub_toggle),.publish_bank(pub_bank),.ack_toggle(display_ack),.preview_valid(preview_valid),.preview_rgb(preview_rgb),.overlay_on(overlay_on),.overlay_rgb(overlay_rgb),
+  .scan_x(scan_x),.scan_y(scan_y),.scan_de(scan_de),.scan_start(scan_start),.scan_reset_n(scan_reset_n),
+  .force_pattern(force_pattern),.capture_guard(OVERLAP_CAPTURE&&capture_busy_ui[2]),
+  .cmd_valid(display_v),.cmd_ready(display_r),.cmd_addr(display_a),.rsp_valid(display_rsp),.rsp_rdata(display_rdata),
+  .hsync(hsync),.vsync(vsync),.de(de),.rgb(rgb),.image_valid(image_valid),.underrun(display_underrun),.prefetch_busy(display_prefetch_busy));
+ // Do not use the writer's FIFO-pop gaps for long processor reads while
+ // capture packets are queued. Display retains highest priority.
+ // Three-stream protection is needed while capture is outstanding. Outside
+ // that window, normal display-priority arbitration permits processor progress.
+ always @(posedge ui_clk or negedge ui_rst_n)begin
+  if(!ui_rst_n)capture_busy_ui<=0;
+  else capture_busy_ui<={capture_busy_ui[1:0],capture_inflight};
+ end
+ wire strict_display_guard=!ADAPTIVE_DISPLAY_GUARD||capture_busy_ui[2];
+ wire processor_ui_allowed=!OVERLAP_CAPTURE||(fifo_empty&&(!strict_display_guard||!display_prefetch_busy));
+ wire app_v,app_r,app_w,app_rsp;
+ wire [27:0] app_a;wire [255:0] app_data;wire [31:0] app_mask;
+ ddr_arbiter3 ui_mux(.clk(ui_clk),.rst_n(ui_rst_n),.enabled(app_ready),
+  .c0_valid(br_v&&processor_ui_allowed),.c0_ready(br_r),.c0_write(br_w),.c0_addr(br_a),.c0_wdata(br_data),.c0_wstrb(br_mask),
+  .c0_rsp_valid(br_rsp),.c0_rsp_write(br_rsp_write),.c0_rdata(br_rdata),
+  .c1_valid(cap_v),.c1_ready(cap_r),.c1_write(cap_w),.c1_addr(cap_a),.c1_wdata(cap_data),.c1_wstrb(cap_mask),
+  .c1_rsp_valid(cap_rsp),.c1_rsp_write(cap_rsp_write),.c1_rdata(cap_rdata),
+  .c2_valid(display_v),.c2_ready(display_r),.c2_write(1'b0),.c2_addr(display_a),.c2_wdata(256'd0),.c2_wstrb(32'd0),
+  .c2_rsp_valid(display_rsp),.c2_rsp_write(),.c2_rdata(display_rdata),
+  .cmd_valid(app_v),.cmd_ready(app_r),.cmd_write(app_w),.cmd_addr(app_a),.cmd_wdata(app_data),.cmd_wstrb(app_mask),
+  .rsp_valid(app_rsp),.rsp_write(rsp_write),.rsp_rdata(rsp_rdata));
+ assign cmd_source_block=selftest_passed&&app_v&&!display_v&&!cap_v&&br_block;
+ assign cmd_valid=ddr_ready&&!memory_fault&&(selftest_passed?app_v:test_v);
+ assign cmd_write=selftest_passed?app_w:test_write;
+ assign cmd_addr=selftest_passed?app_a:test_a;
+ assign cmd_wdata=selftest_passed?app_data:test_data;
+ assign cmd_wstrb=selftest_passed?app_mask:test_mask;
+ assign test_r=!selftest_passed&&cmd_valid&&cmd_ready;
+ assign app_r=selftest_passed&&cmd_valid&&cmd_ready;
+ assign test_rsp=!selftest_passed&&rsp_valid;
+ assign app_rsp=selftest_passed&&rsp_valid;
+endmodule
+`default_nettype wire

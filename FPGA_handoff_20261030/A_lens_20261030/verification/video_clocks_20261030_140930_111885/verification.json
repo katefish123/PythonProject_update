@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "inputs_sha256": "5c220d3f1fc68dd12c793e0700f9ea3fc7b4d321928c25e19710e116a612f6cc",
+  "simulation_log_sha256": "437020268c1dcbd5a929c0537ccf56b837bb6d19754e01def3c35420bcf59c7b",
+  "observations": [
+    "# VIDEO_CLOCKS_PASS pixel_mhz=74.25 processing_mhz=92.8125 pixel_period_ns=13.468360 processing_period_ns=10.774693 pixel_samples=1000 proc_samples=1249"
+  ]
+}

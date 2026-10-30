@@ -1,0 +1,9 @@
+{
+  "tool": "C:\\D\\FPGA\\A_lens_20261030\\tools\\send_lens_angle.py",
+  "tool_sha256": "9dce22e0e17aed5d5f5bf97571993a9412139821cb8887e0354c8684b5a2a8b0",
+  "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+  "calibration_sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+  "checker_sha256": "5fe59af615e3206f0745a18ce233471e511f45b9894e36076ff5683408564cbe",
+  "viewport_reference": "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\viewport.py",
+  "viewport_reference_sha256": "ba62a031d16e9e26a8e13fcaa3dc23ea11973b79d5aab7b174e1710dc93caef2"
+}

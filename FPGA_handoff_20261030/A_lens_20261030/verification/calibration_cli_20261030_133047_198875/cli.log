@@ -1,0 +1,1 @@
+{"profile": "C:\\D\\FPGA\\A_lens_20261030\\verification\\calibration_cli_20261030_133047_198875\\标定输出\\camera_profile.json", "training_rms_px": 0.08101623422663091, "validation_rms_px": 0.06997828826216461, "deploy_to_fpga": false}

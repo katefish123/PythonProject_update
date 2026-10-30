@@ -1,0 +1,9 @@
+{
+  "passed": false,
+  "hardware_accessed": false,
+  "inputs_sha256": "fa59c49a02d43afdf4fb7f297e2c646277bd230ff288daa33791af2c021aecf5",
+  "simulation_log_sha256": "87408b8aa06020a12331c19ed8ccff3b5d091ca036dcdb8663c95face4da70bc",
+  "observations": [
+    "# ** Error: (vsim-7) Failed to open -modelsimini file \"{C:\\D\\FPGA\\A_lens_20261030\\verification\\video_clocks_20261030_131133_615334\\modelsim.ini}\" in read mode."
+  ]
+}

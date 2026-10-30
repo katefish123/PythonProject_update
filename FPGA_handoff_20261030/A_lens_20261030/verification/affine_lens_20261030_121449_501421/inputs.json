@@ -1,0 +1,1048 @@
+{
+  "source_candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1",
+  "target_rtl_sha256": "d4ba1f37e66dbc9b5033074cec128c7abcaf72aafba63bad630450ff6dc6ebe5",
+  "input_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\lens_affine_instance.v": "d4ba1f37e66dbc9b5033074cec128c7abcaf72aafba63bad630450ff6dc6ebe5",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\lens_distort_coord.v": "b3d561121c6f16834f5a3ebfb99ac1ff5bbd8570d91fe0b1b4ac32609920a0b4",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\perspective_core.v": "6b98cb7d8cc28e3c192bbcf67cfb3c97c2d3731c6bab95be92017b0047721fa1",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\perspective_coord.v": "0948622bff0b5bfca7c64fb7f7bd063d2d1c823f9f1b979b689396954904b66c",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1\\sources\\scaled_div_pipe.v": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741",
+    "C:\\D\\FPGA\\A_board_20261029\\candidate_de_frame_guard_v2\\sources\\lens_autocrop_instance.v": "c5d6c0a3645c879b758cfe0fb4ad45521f593f7a0abf2b577035d589a0af596a",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\examples\\r50_18mm_viewport.json": "76051f5028b844fe9be8148c6e2f7539c18a1aacfc198efa9115bcd4231b20a2",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\__init__.py": "5835bcb38f8099bb03f52d3faf362d3848e4446bb923a7266cd3651e93e9d29b",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\calibration.py": "2e6953529dc222846f7c4fe9c412b8979652a133d0ddba7cb5527490a1122e8c",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\cli.py": "6e78815efd8bde5e9c50cd3b0f9d8a39bde2d4ed8a0eae41007116c9bd430b7e",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\fixed.py": "5f4114f814e6105c4e1801785ad661431b07d3d37bb7113445beda070fca49a5",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\golden.py": "f9d75903707cea8ee59f5bc6a25d25afbe8301f11486416c0f0e04d9fb9d21ed",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\lens.py": "204414c3888c26ec3bd5e0bacfbfadfe4ea4db47c76417c6943422df32e45885",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\lens_cli.py": "fba8f09a411b617c8a2be7601ca174afb4204eb5e84f05039abfde68f83d7cd3",
+    "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\viewport.py": "ba62a031d16e9e26a8e13fcaa3dc23ea11973b79d5aab7b174e1710dc93caef2"
+  },
+  "snapshot_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\lens_affine_instance.v": "d4ba1f37e66dbc9b5033074cec128c7abcaf72aafba63bad630450ff6dc6ebe5",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\lens_distort_coord.v": "b3d561121c6f16834f5a3ebfb99ac1ff5bbd8570d91fe0b1b4ac32609920a0b4",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\perspective_core.v": "6b98cb7d8cc28e3c192bbcf67cfb3c97c2d3731c6bab95be92017b0047721fa1",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\perspective_coord.v": "0948622bff0b5bfca7c64fb7f7bd063d2d1c823f9f1b979b689396954904b66c",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\scaled_div_pipe.v": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\lens_autocrop_instance.v": "c5d6c0a3645c879b758cfe0fb4ad45521f593f7a0abf2b577035d589a0af596a"
+  },
+  "checker_sha256": "02900330471ae45de99136c59dfc8d0439794d2d8a126e5ae29b147886e0d10e",
+  "testbench_sha256": "10b2f9f1e97d4ef28f1fdaa4e706423bbe25212867bf46438934c988f1eed52a",
+  "vector_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\input_tags.hex": "93e7f17227d5f9fdb6997bfc692174cdb312cae4df0e84667f1250e552a6dab1",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\expected_requests.hex": "b887e8ff9641920aae98a30bd4808b95d2482a9ca029f57866f6b65143956d00",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\affine_lens_20261030_121449_501421\\expected_rgb.hex": "67cfc7fb3df62801b68725067c5cdd61b885da2d43158041b02163212ff97154"
+  },
+  "point_count": 7968,
+  "frames": [
+    {
+      "name": "safe_crop",
+      "nearest": false,
+      "affine_q24": [
+        16668374,
+        0,
+        146376934,
+        0,
+        16668374,
+        100663296
+      ],
+      "start": 32,
+      "count": 320,
+      "legacy_crosscheck": true,
+      "coverage": {
+        "inside": 320,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "safe_crop",
+      "nearest": true,
+      "affine_q24": [
+        16668374,
+        0,
+        146376934,
+        0,
+        16668374,
+        100663296
+      ],
+      "start": 352,
+      "count": 320,
+      "legacy_crosscheck": true,
+      "coverage": {
+        "inside": 320,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "rotation_0_allow_outside",
+      "nearest": false,
+      "affine_q24": [
+        16777216,
+        0,
+        0,
+        0,
+        16777216,
+        0
+      ],
+      "start": 672,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 329,
+        "outside": 119,
+        "affine_rejected": 0,
+        "lens_errors": 15
+      }
+    },
+    {
+      "name": "rotation_0_allow_outside",
+      "nearest": true,
+      "affine_q24": [
+        16777216,
+        0,
+        0,
+        0,
+        16777216,
+        0
+      ],
+      "start": 1120,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 332,
+        "outside": 116,
+        "affine_rejected": 0,
+        "lens_errors": 15
+      }
+    },
+    {
+      "name": "rotation_15_allow_outside",
+      "nearest": false,
+      "affine_q24": [
+        16205546,
+        4342263,
+        -1794133755,
+        -4342263,
+        16205546,
+        4474817214
+      ],
+      "start": 1568,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 261,
+        "outside": 187,
+        "affine_rejected": 79,
+        "lens_errors": 6
+      }
+    },
+    {
+      "name": "rotation_15_allow_outside",
+      "nearest": true,
+      "affine_q24": [
+        16205546,
+        4342263,
+        -1794133755,
+        -4342263,
+        16205546,
+        4474817214
+      ],
+      "start": 2016,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 261,
+        "outside": 187,
+        "affine_rejected": 79,
+        "lens_errors": 6
+      }
+    },
+    {
+      "name": "rotation_45_allow_outside",
+      "nearest": false,
+      "affine_q24": [
+        11863283,
+        11863283,
+        -1685322769,
+        -11863283,
+        11863283,
+        14033886977
+      ],
+      "start": 2464,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 202,
+        "outside": 246,
+        "affine_rejected": 126,
+        "lens_errors": 2
+      }
+    },
+    {
+      "name": "rotation_45_allow_outside",
+      "nearest": true,
+      "affine_q24": [
+        11863283,
+        11863283,
+        -1685322769,
+        -11863283,
+        11863283,
+        14033886977
+      ],
+      "start": 2912,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 202,
+        "outside": 246,
+        "affine_rejected": 126,
+        "lens_errors": 2
+      }
+    },
+    {
+      "name": "rotation_90_allow_outside",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        16777216,
+        7046430720,
+        -16777216,
+        0,
+        25149046784
+      ],
+      "start": 3360,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 152,
+        "outside": 296,
+        "affine_rejected": 177,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "rotation_90_allow_outside",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        16777216,
+        7046430720,
+        -16777216,
+        0,
+        25149046784
+      ],
+      "start": 3808,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 152,
+        "outside": 296,
+        "affine_rejected": 177,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "rotation_180_allow_outside",
+      "nearest": false,
+      "affine_q24": [
+        -16777216,
+        0,
+        32195477504,
+        0,
+        -16777216,
+        18102616064
+      ],
+      "start": 4256,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 307,
+        "outside": 141,
+        "affine_rejected": 111,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "rotation_180_allow_outside",
+      "nearest": true,
+      "affine_q24": [
+        -16777216,
+        0,
+        32195477504,
+        0,
+        -16777216,
+        18102616064
+      ],
+      "start": 4704,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 310,
+        "outside": 138,
+        "affine_rejected": 111,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "rotation_270_allow_outside",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        -16777216,
+        25149046784,
+        16777216,
+        0,
+        -7046430720
+      ],
+      "start": 5152,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 153,
+        "outside": 295,
+        "affine_rejected": 168,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "rotation_270_allow_outside",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        -16777216,
+        25149046784,
+        16777216,
+        0,
+        -7046430720
+      ],
+      "start": 5600,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 154,
+        "outside": 294,
+        "affine_rejected": 168,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "negative_translation",
+      "nearest": false,
+      "affine_q24": [
+        16777216,
+        0,
+        -268435456,
+        0,
+        16777216,
+        -134217728
+      ],
+      "start": 6048,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 293,
+        "outside": 155,
+        "affine_rejected": 74,
+        "lens_errors": 13
+      }
+    },
+    {
+      "name": "negative_translation",
+      "nearest": true,
+      "affine_q24": [
+        16777216,
+        0,
+        -268435456,
+        0,
+        16777216,
+        -134217728
+      ],
+      "start": 6496,
+      "count": 448,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 293,
+        "outside": 155,
+        "affine_rejected": 74,
+        "lens_errors": 13
+      }
+    },
+    {
+      "name": "signed40_extremes",
+      "nearest": false,
+      "affine_q24": [
+        549755813887,
+        -549755813888,
+        549755813887,
+        -549755813888,
+        549755813887,
+        -549755813888
+      ],
+      "start": 6944,
+      "count": 128,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 128,
+        "affine_rejected": 128,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "signed40_extremes",
+      "nearest": true,
+      "affine_q24": [
+        549755813887,
+        -549755813888,
+        549755813887,
+        -549755813888,
+        549755813887,
+        -549755813888
+      ],
+      "start": 7072,
+      "count": 128,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 128,
+        "affine_rejected": 128,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "negative_sub_q8",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        8388608000
+      ],
+      "start": 7200,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 32,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "negative_sub_q8",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        8388608000
+      ],
+      "start": 7232,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 32,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "just_below_4096",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        68719476735,
+        0,
+        0,
+        8388608000
+      ],
+      "start": 7264,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "just_below_4096",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        68719476735,
+        0,
+        0,
+        8388608000
+      ],
+      "start": 7296,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "at_4096_rejected",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        68719476736,
+        0,
+        0,
+        8388608000
+      ],
+      "start": 7328,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 32,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "at_4096_rejected",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        68719476736,
+        0,
+        0,
+        8388608000
+      ],
+      "start": 7360,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 32,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "lens_normalization_error",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        67108864000,
+        0,
+        0,
+        68702699520
+      ],
+      "start": 7392,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 0,
+        "lens_errors": 32
+      }
+    },
+    {
+      "name": "lens_normalization_error",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        67108864000,
+        0,
+        0,
+        68702699520
+      ],
+      "start": 7424,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 0,
+        "lens_errors": 32
+      }
+    },
+    {
+      "name": "border_0_128000",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        69730304,
+        0,
+        0,
+        8426422272
+      ],
+      "start": 7456,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_0_128000",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        69730304,
+        0,
+        0,
+        8426422272
+      ],
+      "start": 7488,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_-1_128000",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        69664768,
+        0,
+        0,
+        8426422272
+      ],
+      "start": 7520,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_-1_128000",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        69664768,
+        0,
+        0,
+        8426422272
+      ],
+      "start": 7552,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_-128_128000",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        61341696,
+        0,
+        0,
+        8426422272
+      ],
+      "start": 7584,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_-128_128000",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        61341696,
+        0,
+        0,
+        8426422272
+      ],
+      "start": 7616,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_491264_128000",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        32360235008,
+        0,
+        0,
+        8427995136
+      ],
+      "start": 7648,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_491264_128000",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        32360235008,
+        0,
+        0,
+        8427995136
+      ],
+      "start": 7680,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_491391_128000",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        32368885760,
+        0,
+        0,
+        8427995136
+      ],
+      "start": 7712,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_491391_128000",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        32368885760,
+        0,
+        0,
+        8427995136
+      ],
+      "start": 7744,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_128000_0",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        8442281984,
+        0,
+        0,
+        63438848
+      ],
+      "start": 7776,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_128000_0",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        8442281984,
+        0,
+        0,
+        63438848
+      ],
+      "start": 7808,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_128000_276224",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        8403288064,
+        0,
+        0,
+        18129223680
+      ],
+      "start": 7840,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_128000_276224",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        8403288064,
+        0,
+        0,
+        18129223680
+      ],
+      "start": 7872,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_128000_276351",
+      "nearest": false,
+      "affine_q24": [
+        0,
+        0,
+        8403288064,
+        0,
+        0,
+        18137612288
+      ],
+      "start": 7904,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 0,
+        "outside": 32,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    },
+    {
+      "name": "border_128000_276351",
+      "nearest": true,
+      "affine_q24": [
+        0,
+        0,
+        8403288064,
+        0,
+        0,
+        18137612288
+      ],
+      "start": 7936,
+      "count": 32,
+      "legacy_crosscheck": false,
+      "coverage": {
+        "inside": 32,
+        "outside": 0,
+        "affine_rejected": 0,
+        "lens_errors": 0
+      }
+    }
+  ],
+  "border_stimuli": [
+    {
+      "target_q8": [
+        0,
+        128000
+      ],
+      "ideal_q8": [
+        1064,
+        128577
+      ],
+      "mapped_q8": [
+        0,
+        128000
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        -1,
+        128000
+      ],
+      "ideal_q8": [
+        1063,
+        128577
+      ],
+      "mapped_q8": [
+        -1,
+        128000
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        -128,
+        128000
+      ],
+      "ideal_q8": [
+        936,
+        128577
+      ],
+      "mapped_q8": [
+        -128,
+        128000
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        491264,
+        128000
+      ],
+      "ideal_q8": [
+        493778,
+        128601
+      ],
+      "mapped_q8": [
+        491264,
+        128000
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        491391,
+        128000
+      ],
+      "ideal_q8": [
+        493910,
+        128601
+      ],
+      "mapped_q8": [
+        491391,
+        128000
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        128000,
+        0
+      ],
+      "ideal_q8": [
+        128819,
+        968
+      ],
+      "mapped_q8": [
+        128000,
+        0
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        128000,
+        276224
+      ],
+      "ideal_q8": [
+        128224,
+        276630
+      ],
+      "mapped_q8": [
+        128000,
+        276224
+      ],
+      "l1_error_q8": 0
+    },
+    {
+      "target_q8": [
+        128000,
+        276351
+      ],
+      "ideal_q8": [
+        128224,
+        276758
+      ],
+      "mapped_q8": [
+        128000,
+        276351
+      ],
+      "l1_error_q8": 0
+    }
+  ],
+  "reference": "B brect.lens._map_hardware with exact Python integer affine multiply/add/shift and RGB UQ0.8 bilinear arithmetic",
+  "affine_outside_contract": "Geometric affine rejection carries invalid tag -> req_inside false and black. req_error reflects lens numerical error only, exactly as current RTL.",
+  "hardware_accessed": false
+}

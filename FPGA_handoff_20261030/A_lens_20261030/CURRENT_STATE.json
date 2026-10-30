@@ -1,0 +1,127 @@
+{
+  "updated": "2026-10-30T14:54:45.764535+08:00",
+  "scope": "1080p30 Brown k1/k2/p1/p2 lens correction plus PC-controlled 2D affine rotation/scale. Automatic tracking, IMU and optional four-point perspective are deferred.",
+  "active_candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+  "baseline": "C:/D/FPGA/A_board_20261029/candidate_de_frame_guard_v2",
+  "source_manifest_sha256": "965d3f977bca0f9a3a811678c357c7697a6daa763f5a81054bbb73809f9a8bb9",
+  "clock_mhz": {
+    "processing": 92.8125,
+    "output": 74.25,
+    "input": 148.5,
+    "ddr_ui": 125
+  },
+  "address_order": "Axis-aligned affine: raster. Rotated/sheared affine:128x128 tiles, last row band clipped; every DDR result burst remains64 contiguous pixels.",
+  "current_source_full_video_passes": [
+    {
+      "path": "C:\\D\\FPGA\\A_lens_20261030\\verification\\video_20261030_135116_949527_71c14726\\verification.json",
+      "sha256": "0ea3f00a51978b279e98fdc5c5372bea1d8b3069e20bda0002328327fc8d46f1",
+      "parameters": {
+        "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+        "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+        "angle_deg": 0.0,
+        "alternating_angle_deg": null,
+        "frames": 6,
+        "raw": false,
+        "nearest": false,
+        "measurement_only": false,
+        "pixel_phase_ns": 0
+      },
+      "simulated_30fps": true
+    },
+    {
+      "path": "C:\\D\\FPGA\\A_lens_20261030\\verification\\video_20261030_135116_949527_a6d685fb\\verification.json",
+      "sha256": "996e7a8bf76a834e6ade9cf61b32a9da23b44013f02b9d615b63276cd1db1885",
+      "parameters": {
+        "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+        "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+        "angle_deg": 90.0,
+        "alternating_angle_deg": null,
+        "frames": 6,
+        "raw": false,
+        "nearest": false,
+        "measurement_only": false,
+        "pixel_phase_ns": 0
+      },
+      "simulated_30fps": true
+    },
+    {
+      "path": "C:\\D\\FPGA\\A_lens_20261030\\verification\\video_20261030_135116_965544_57108aba\\verification.json",
+      "sha256": "0d6a17f77d1107f87e8906990e32222a317cfb81fdf3bf10e833628bbe4bd35c",
+      "parameters": {
+        "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+        "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+        "angle_deg": 0.0,
+        "alternating_angle_deg": 90.0,
+        "frames": 6,
+        "raw": false,
+        "nearest": false,
+        "measurement_only": false,
+        "pixel_phase_ns": 0
+      },
+      "simulated_30fps": true
+    },
+    {
+      "path": "C:\\D\\FPGA\\A_lens_20261030\\verification\\video_20261030_135942_518802_be4a8060\\verification.json",
+      "sha256": "0cf817b91ef9d80216777de0e7d59a30353834829abf7892a1fa0c54baf1c2a8",
+      "parameters": {
+        "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+        "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+        "angle_deg": 0,
+        "alternating_angle_deg": null,
+        "frames": 6,
+        "raw": true,
+        "nearest": false,
+        "measurement_only": false,
+        "pixel_phase_ns": 0
+      },
+      "simulated_30fps": true
+    },
+    {
+      "path": "C:\\D\\FPGA\\A_lens_20261030\\verification\\video_20261030_135942_519642_30d8ed4b\\verification.json",
+      "sha256": "fec663bafc95c6e2088dd2408855ea51518727798200cfb1a1ebb24f9775225f",
+      "parameters": {
+        "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+        "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+        "angle_deg": 12.0,
+        "alternating_angle_deg": null,
+        "frames": 6,
+        "raw": false,
+        "nearest": true,
+        "measurement_only": false,
+        "pixel_phase_ns": 0
+      },
+      "simulated_30fps": true
+    }
+  ],
+  "incomplete_video_runs": [],
+  "native_builds": [
+    {
+      "path": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage\\build\\pds_20261030_135116_814250\\offline_build_inputs.json",
+      "status": "stopped_by_user",
+      "qualified": false
+    }
+  ],
+  "hardware_accessed_this_scope": false,
+  "camera_needed_now": false,
+  "complete": false,
+  "real_calibration_independently_validated": false,
+  "remaining": [
+    "Finish all current-source functional modes if any verification runs remain incomplete.",
+    "Complete current native physical implementation and audit every timing summary/IO/resource constraint.",
+    "Package exact qualified source/bitstream/evidence only after those gates pass.",
+    "Later: fixed-focus independent camera calibration/optical measurements, actual board angle-update/30fps and physical end-to-end latency acceptance."
+  ],
+  "previous_candidate": "C:/D/FPGA/A_lens_20261030/candidate_host_angle_v1",
+  "current_lens_pipeline_stages": 11,
+  "scope_notes": "V1 passed11 full native-video regressions; first physical runs retained negative setup paths. V2 adds one exact radial-product pipeline boundary and has passed RTL/frozen-model equivalence and actual full-synthesis lens-cell integer comparisons. No hardware access.",
+  "status": "paused_by_user",
+  "paused_by_user": true,
+  "paused_at": "2026-10-30T14:54:45.764535+08:00",
+  "native_qualification_passed": false,
+  "handoff": "C:\\D\\FPGA\\A_lens_20261030\\交接说明_20261030_暂停.md",
+  "handoff_sha256": "780051eae51f816b36b45909e49f23ae338f0b4a96db89b1d4fdc948c03ddf53",
+  "functional_candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+  "experimental_candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64",
+  "experiment_status": "V3 zero-degree full video30fps passed;90-degree steady34.895ms fails30fps. Bridge regression testbench has compile errors; no V3 physical build.",
+  "functional_ready": true
+}

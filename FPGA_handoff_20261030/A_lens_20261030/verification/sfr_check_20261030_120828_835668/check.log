@@ -1,0 +1,28 @@
+PASS gaussian_s0.7_vertical expected=0.26770089 estimated=0.26636227 relative_error=0.005000
+PASS gaussian_s0.7_horizontal expected=0.26770089 estimated=0.26636227 relative_error=0.005000
+PASS gaussian_s1.2_vertical expected=0.15615885 estimated=0.15619356 relative_error=0.000222
+PASS gaussian_s1.2_horizontal expected=0.15615885 estimated=0.15619356 relative_error=0.000222
+PASS gaussian_s2.0_vertical expected=0.09369531 estimated=0.09383863 relative_error=0.001530
+PASS gaussian_s2.0_horizontal expected=0.09369531 estimated=0.09383863 relative_error=0.001530
+PASS gaussian_s3.0_vertical expected=0.06246354 estimated=0.06275181 relative_error=0.004615
+PASS gaussian_s3.0_horizontal expected=0.06246354 estimated=0.06275181 relative_error=0.004615
+PASS srgb_rgb_decode expected=0.15615885 estimated=0.15652927 relative_error=0.002372
+PASS cli_accept
+PASS cli_bad_roi
+PASS cli_missing_transfer
+PASS rejection blank: contrast
+PASS rejection multiple_edges: contrast
+PASS rejection checkerboard_corner: edge_polarity
+PASS rejection axis_aligned: edge_angle
+PASS rejection too_large_angle: edge_angle
+PASS rejection clipped: clipping
+PASS rejection noisy: multiple_edges
+PASS rejection curved: edge_straightness
+PASS rejection out_of_bounds: roi
+PASS rejection negative_roi: roi
+PASS rejection too_small_roi: roi_size
+PASS rejection wrong_roi_no_edge: contrast
+PASS rejection wrong_orientation: contrast
+PASS rejection unspecified_transfer: transfer
+PASS rejection missing_roi: roi
+SFR_SELF_CHECK_PASS synthetic_only=1 hardware_accessed=0

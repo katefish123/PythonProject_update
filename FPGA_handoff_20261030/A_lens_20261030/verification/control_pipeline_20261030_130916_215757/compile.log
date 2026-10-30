@@ -1,0 +1,18 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 13:09:18 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/modelsim.ini C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/reset_sync.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/lens_uart_control.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/lens_parameter_mailbox.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/frame_processor_stream.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/lens_affine_instance.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/lens_distort_coord.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/sources/bilinear_interp.v C:/D/FPGA/A_lens_20261030/verification/control_pipeline_20261030_130916_215757/tb_control_pipeline.sv 
+-- Compiling module reset_sync
+-- Compiling module lens_uart_control
+-- Compiling module lens_uart_rx
+-- Compiling module lens_uart_tx
+-- Compiling module lens_parameter_mailbox
+-- Compiling module frame_processor_stream
+-- Compiling module lens_affine_instance
+-- Compiling module lens_distort_coord
+-- Compiling module bilinear_interp
+-- Compiling module tb_control_pipeline
+
+Top level modules:
+	tb_control_pipeline
+End time: 13:09:18 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

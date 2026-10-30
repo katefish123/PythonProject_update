@@ -1,0 +1,10 @@
+{
+  "status": "stopped_by_user",
+  "at": "2026-10-30T14:54:45.764535+08:00",
+  "reason": "User requested pause and teammate handoff.",
+  "driver_status_file": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage\\build\\pds_20261030_135116_814250\\offline_build_inputs.json",
+  "stop_is_not_a_tool_crash": true,
+  "native_qualification_passed": false,
+  "hardware_accessed_this_scope": false,
+  "handoff": "C:\\D\\FPGA\\A_lens_20261030\\\u4ea4\u63a5\u8bf4\u660e_20261030_\u6682\u505c.md"
+}

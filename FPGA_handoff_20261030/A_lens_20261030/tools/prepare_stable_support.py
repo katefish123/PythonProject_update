@@ -1,0 +1,8 @@
+from pathlib import Path
+import shutil
+root=Path('C:/D/FPGA/A_lens_20261030/candidate_host_angle_v1');opt=Path('C:/D/FPGA/A_perspective_20261029/candidate_auto_chessboard_v7_queue_local/sources')
+for n in ['continuous_capture_rx.v','ddr_quad_tile_cache.v','ddr_word_engine_result_burst.v']:shutil.copyfile(opt/n,root/'sources'/n)
+p=root/'sources/lens_parameter_mailbox.v';s=p.read_text();s=s.replace(' reg request_toggle,ack_toggle,ack_seen;',' reg[1:0]s_release,d_release;\n always @(posedge s_clk or negedge rst_n)if(!rst_n)s_release<=0;else s_release<={s_release[0],1\'b1};\n always @(posedge d_clk or negedge rst_n)if(!rst_n)d_release<=0;else d_release<={d_release[0],1\'b1};\n wire s_live=s_release[1],d_live=d_release[1];\n reg request_toggle,ack_toggle,ack_seen;')
+s=s.replace('assign s_ready=rst_n&&','assign s_ready=s_live&&').replace('always @(posedge s_clk or negedge rst_n)begin\n  if(!rst_n)', 'always @(posedge s_clk or negedge s_live)begin\n  if(!s_live)').replace('always @(posedge d_clk or negedge rst_n)begin\n  if(!rst_n)', 'always @(posedge d_clk or negedge d_live)begin\n  if(!d_live)');p.write_text(s)
+p=root/'sources/video_correct_ddr_top.v';s=p.read_text();s=s.replace(' wire host_valid,host_ready,host_committed,angle_valid,angle_ready;', ' wire host_reset_n;\n reset_sync host_reset(.clk(sys_clk_27m),.arst_n(clocks_ready),.rst_n(host_reset_n));\n wire host_valid,host_ready,host_committed,angle_valid,angle_ready;').replace('host_control(.clk(sys_clk_27m),.rst_n(clocks_ready)','host_control(.clk(sys_clk_27m),.rst_n(host_reset_n)');p.write_text(s)
+print('Reused exact already-verified queue/cache/read-lane optimizations, added per-domain mailbox reset release and27MHz UART reset synchronizer.')

@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "serial_ports_opened": false,
+  "cases": [
+    {
+      "angle": 0,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 1,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 5,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 12,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": -12,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 45,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 90,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 180,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 270,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    }
+  ],
+  "cli_checks": [
+    {
+      "name": "dry_run_with_port",
+      "returncode": 0,
+      "serial_imported": false,
+      "log_sha256": "c64620ce996498842a2dcc9751b08bc6034a9f89b7dec9fd872edd6bddfe5d1b"
+    },
+    {
+      "name": "quantized_singular",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "5ebfea1a95b8b7de364866b337ea914cd790e7a5b25e0589d2083524f54c3f4e"
+    },
+    {
+      "name": "mismatch_before_serial",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "51f54fd3ed4a52bb695b965c6eccf58176453f5391c702f9c34a496f2477d21c"
+    },
+    {
+      "name": "mismatch_dry_run",
+      "returncode": 0,
+      "serial_imported": false,
+      "log_sha256": "054fde849577a20bab7007e2b5f789350404989c5791cdaccd483e7332964b2d"
+    },
+    {
+      "name": "singular",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "f75bd7ff0b15bb738ee1029d07680bbdbb5d8596aa57912811f7ab377ca5460d"
+    },
+    {
+      "name": "perspective",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "c26f9a4b5003b03df115dde564678c30034e238fac5c32b8516788781e3d5f9d"
+    }
+  ],
+  "inputs_sha256": "6d0f589c89985ec4802ab4f56e232b2ebfa10964ea190d604c978747288c43e3",
+  "scope": "Host angle/profile binding regression; serial is replaced by an import trap."
+}

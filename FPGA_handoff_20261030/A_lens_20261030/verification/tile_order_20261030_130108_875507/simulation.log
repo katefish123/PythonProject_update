@@ -1,0 +1,34 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -modelsimini C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_130108_875507/modelsim.ini -c work.tb_tile_order -do "C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_130108_875507/run.do" 
+# Start time: 13:01:09 on Oct 30,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_tile_order(fast)
+# do C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_130108_875507/run.do
+# WRITER_ORDER_PASS tiled=1 full_frames=2 bursts=65 input_stalls=1328 cmd_stalls=1609 wrong_address_rejected=1 partial_abort_drained=1 restart=1
+# WRITER_ORDER_PASS tiled=0 full_frames=2 bursts=65 input_stalls=1328 cmd_stalls=1609 wrong_address_rejected=1 partial_abort_drained=1 restart=1
+# PROCESSOR_ORDER_PASS tiled=1 runtime=1 full_frames=2 qstalls=9641 rstalls=5459 wstalls=10774 abort=1 cfg_snapshot_no_new_command=1
+# PROCESSOR_ORDER_PASS tiled=0 runtime=0 full_frames=2 qstalls=9641 rstalls=5459 wstalls=10774 abort=1 cfg_snapshot_no_new_command=1
+# TILE_ORDER_RTL_PASS raster_default=1 tiled=1 runtime_commit=1
+# ** Note: $finish    : C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_130108_875507/tb_tile_order.sv(201)
+#    Time: 149590 ns  Iteration: 2  Instance: /tb_tile_order
+# Break at C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_130108_875507/tb_tile_order.sv line 201
+# Stopped at C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_130108_875507/tb_tile_order.sv line 201
+# End time: 13:01:10 on Oct 30,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

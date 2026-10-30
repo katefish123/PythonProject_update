@@ -1,0 +1,9 @@
+Reading pref.tcl
+
+# 2020.4
+
+# ** Error: (vsim-7) Failed to open -modelsimini file "{C:\D\FPGA\A_lens_20261030\verification\video_clocks_20261030_131133_615334\modelsim.ini}" in read mode.
+# Invalid argument. (errno = EINVAL)
+# Error loading design
+Error loading design
+# Errors: 1, Warnings: 0

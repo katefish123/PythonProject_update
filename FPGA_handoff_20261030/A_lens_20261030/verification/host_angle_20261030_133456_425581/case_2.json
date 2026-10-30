@@ -1,0 +1,242 @@
+{
+  "angle_deg_clockwise_display": 5,
+  "requested_zoom": 1,
+  "applied_zoom": 1.2,
+  "automatic_safe_crop": true,
+  "rotation_center": [
+    959.5,
+    539.5
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "matrix": [
+    [
+      0.8301622867584229,
+      0.07262980937957764,
+      123.7755583524704
+    ],
+    [
+      -0.07262980937957764,
+      0.8301622867584229,
+      161.3157455921173
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "coefficients_q24": [
+    13927812,
+    1218526,
+    2076609278,
+    -1218526,
+    13927812,
+    2706429108
+  ],
+  "safety_scope": "B viewport checked every output center with float and exact quantized H/lens arithmetic; valid only for bound trial calibration and this matrix.",
+  "requested_matrix": [
+    [
+      0.9961947202682495,
+      0.08715575933456421,
+      -43.369336009025574
+    ],
+    [
+      -0.08715575933456421,
+      0.9961947202682495,
+      85.67889553308487
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "memory_locality_minimum_zoom": 1.2,
+  "extra_zoom_for_memory_locality": 1.2,
+  "viewport_report": {
+    "policy": "auto",
+    "source_size": [
+      1920,
+      1080
+    ],
+    "output_size": [
+      1920,
+      1080
+    ],
+    "base_H": [
+      [
+        0.830162266890208,
+        0.07262979944547018,
+        123.7755583673715
+      ],
+      [
+        -0.07262979944547018,
+        0.830162266890208,
+        161.31574561695257
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "effective_H": [
+      [
+        0.830162266890208,
+        0.07262979944547018,
+        123.7755583673715
+      ],
+      [
+        -0.07262979944547018,
+        0.830162266890208,
+        161.31574561695257
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "H_q24": [
+      13927812,
+      1218526,
+      2076609278,
+      -1218526,
+      13927812,
+      2706429108,
+      0,
+      0,
+      16777216
+    ],
+    "viewport": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "valid_integer_rectangle": [
+      0,
+      0,
+      1919,
+      1079
+    ],
+    "scale": 1.0,
+    "zoom": 1.0,
+    "retained_canvas_area_fraction": 1.0,
+    "aspect_ratio_preserved": true,
+    "sampling_bound": "strict bilinear (also safe for nearest)",
+    "before": {
+      "float_outside_pixels": 0,
+      "fixed_outside_pixels": 0
+    },
+    "after": {
+      "float_outside_pixels": 0,
+      "fixed_outside_pixels": 0
+    },
+    "verified_pixels": 2073600,
+    "proof": "Every output center checked using float mapping and exact quantized H/lens arithmetic",
+    "binding": "Valid only for this calibration, base H, effective H and source/output sizes; replan on change",
+    "calibration_metadata": {
+      "status": "trial_hdmi_18mm_calibration",
+      "deploy_to_fpga": false,
+      "profile_id": "canon_r50_18mm_hdmi_1920x1080_20261022_trial",
+      "suggested_use": "Current 18mm HDMI software reference for parameter parsing, inverse mapping and bilinear integration; final optical deployment requires independent fixed-focus verification.",
+      "camera_user_context": {
+        "model": "Canon EOS R50",
+        "source_is_actual_hdmi_capture": true,
+        "capture_device": "VC-002Pro",
+        "focal_length_mm_user_reported": 18.0,
+        "autofocus_area_user_reported": "whole_area",
+        "movie_servo_af": "unconfirmed",
+        "focus_locked": "unconfirmed",
+        "in_camera_lens_correction": "unconfirmed",
+        "stabilization": "unconfirmed"
+      },
+      "video": {
+        "source_path": "/Users/yishuyu/Movies/2026-10-22 13-42-15.mov",
+        "source_sha256": "f316a07484b8166df4db1356034e1789bff5978dd7e96ef6971fece93a246607",
+        "width": 1920,
+        "height": 1080,
+        "fps": 30.0,
+        "duration_s": 64.36666666666666,
+        "frames_total": 1931,
+        "coordinate_policy": "Native H.264 decoded raster, x right / y down; no scaling, cropping or perspective correction before fitting."
+      },
+      "target": {
+        "square_mm": 19.0,
+        "squares": [
+          10,
+          7
+        ],
+        "inner_corners": [
+          9,
+          6
+        ],
+        "square_source": "User measured five squares = 95mm; equality of horizontal and vertical print scale is unconfirmed.",
+        "mounted_on_flat_rigid_board": true,
+        "mounting_evidence": "Confirmed by user during the preceding capture on 2026-10-22."
+      },
+      "evidence": {
+        "sampled_frames": 242,
+        "detected_frames": 197,
+        "quality_eligible_frames": 179,
+        "pose_representatives": 42,
+        "training_frames": 34,
+        "validation_frames": 8,
+        "corners_each": 54,
+        "train_rms_px": 1.3868958072627273,
+        "validation_pose_fit_rms_px": 1.4488382127291448,
+        "pinhole_validation_pose_fit_rms_px": 1.4908334810882906,
+        "held_out_line_rms_raw_px": 0.6532965672336685,
+        "held_out_line_rms_corrected_px": 0.6289863128251233,
+        "leave_one_pose_max_source_map_change_px": 4.199407946511097,
+        "leave_one_pose_max_source_map_change_inside_corner_hull_px": 0.9714446136166229,
+        "training_corner_hull_fraction": 0.6092329237444823,
+        "temporal_block_full_grid_max_map_difference_px": 18.754068107780963,
+        "temporal_block_common_source_hulls_max_map_difference_px": 5.945252378348074,
+        "held_out_line_improved_frames": 7
+      },
+      "mapping_sanity_check": {
+        "grid": [
+          201,
+          121
+        ],
+        "all_finite": true,
+        "jacobian_determinant_min": 0.9183035592979223,
+        "jacobian_determinant_max": 1.01697760790972,
+        "nonpositive_jacobian_points": 0,
+        "radial_mapping_derivative_min": 0.953495807543815,
+        "note": "Sampled analytic local Jacobian, with P=K. Positive samples are a sanity check, not a global accuracy certificate."
+      },
+      "limitations": [
+        "Held-out residual and line straightness improve modestly; they do not establish absolute physical correction accuracy.",
+        "Time-block estimates disagree in source maps, including in their common observed source region; constant full-frame parameters are not independently validated.",
+        "Whole-area AF describes an AF area and does not establish movie-servo state or a locked focus position.",
+        "Different time blocks have different poses, coverage, sample counts and residuals; map disagreement cannot be attributed to AF from these data.",
+        "Image corners are less constrained than the center; the lower-right image corner has the weakest direct corner observations.",
+        "Validation views share a recording session and use their own corners for pose estimation; this is not an independent acquisition or known-ground-truth accuracy test.",
+        "OBS applies no spatial transform in this recording; internal camera/capture-card processing is not established by that fact.",
+        "No MTF50/SFR, hardware timing or FPGA resource measurements were performed in this calibration step."
+      ]
+    }
+  },
+  "pre_viewport_zoom": 1.2,
+  "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+  "calibration_sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+  "viewport_reference": "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\viewport.py",
+  "viewport_reference_sha256": "ba62a031d16e9e26a8e13fcaa3dc23ea11973b79d5aab7b174e1710dc93caef2"
+}

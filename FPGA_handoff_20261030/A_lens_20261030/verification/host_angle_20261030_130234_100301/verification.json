@@ -1,0 +1,83 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "serial_ports_opened": false,
+  "cases": [
+    {
+      "angle": 0,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 12,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": -12,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 45,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 90,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 180,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    },
+    {
+      "angle": 270,
+      "all_output_centers_verified": 2073600,
+      "packet_bytes": 38,
+      "binding_compatible": true
+    }
+  ],
+  "cli_checks": [
+    {
+      "name": "dry_run_with_port",
+      "returncode": 0,
+      "serial_imported": false,
+      "log_sha256": "163e64629ea81859425dba239a5fc6937e4bd2a2eb5ca059a3c2657273629fd2"
+    },
+    {
+      "name": "mismatch_before_serial",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "51f54fd3ed4a52bb695b965c6eccf58176453f5391c702f9c34a496f2477d21c"
+    },
+    {
+      "name": "mismatch_dry_run",
+      "returncode": 0,
+      "serial_imported": false,
+      "log_sha256": "466f26405b8855a275ce9d796a2b7298eef71a8e8562d31e65ae6e7f660087e0"
+    },
+    {
+      "name": "singular",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "f75bd7ff0b15bb738ee1029d07680bbdbb5d8596aa57912811f7ab377ca5460d"
+    },
+    {
+      "name": "perspective",
+      "returncode": 2,
+      "serial_imported": false,
+      "log_sha256": "c26f9a4b5003b03df115dde564678c30034e238fac5c32b8516788781e3d5f9d"
+    }
+  ],
+  "inputs_sha256": "4a0215c5bf9f60045ec577f063d12de8fe210c7a5eb101427d706670c1a34d14",
+  "scope": "Host angle/profile binding regression; serial is replaced by an import trap."
+}
