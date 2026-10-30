@@ -1,0 +1,23 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 13:59:12 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/modelsim.ini C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_APM_E2.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_DFF_C.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_GRS.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT1.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT2.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT4.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT5.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT6.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT6CARRY.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_LUT6D.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/GTP_MUX2LUT6.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/INT_LUTMUX2_UDP.v C:/pango/PDS_2022.2-SP6.4/arch/vendor/pango/verilog/simulation/INT_LUTMUX4_UDP.v C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/actual_lens.vm C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/tb_native_lens.sv 
+-- Compiling module GTP_APM_E2
+-- Compiling module GTP_DFF_C
+-- Compiling module GTP_GRS
+-- Compiling module GTP_LUT1
+-- Compiling module GTP_LUT2
+-- Compiling module GTP_LUT4
+-- Compiling module GTP_LUT5
+-- Compiling module GTP_LUT6
+-- Compiling module GTP_LUT6CARRY
+-- Compiling module GTP_LUT6D
+-- Compiling module GTP_MUX2LUT6
+-- Compiling UDP INT_LUTMUX2_UDP
+-- Compiling UDP INT_LUTMUX4_UDP
+-- Compiling module lens_distort_coord
+-- Compiling module tb_native_lens
+
+Top level modules:
+	tb_native_lens
+End time: 13:59:12 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

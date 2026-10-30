@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "serial_ports_opened": false,
+  "inputs_sha256": "4b411f5bbcb0ec409e5efe279cfc533d472e593c29088836c9bbc0d7f58a1017",
+  "sources_unchanged": true,
+  "simulation_log_sha256": "aaebc931a26c146a07531a6c515c282db13ee06338eecfae2b193680a0a2fa74",
+  "compile_log_sha256": "dec7edd8d911f394040813eeb58f5d631515ac7e21ca1b5e20650b999c5ae71e",
+  "observations": [
+    "# CONTROL_PIPELINE_PASS baud=115200 source_mhz=27 processing_mhz=92.8125 frames=4 pixels=16384 frame_commits=2 ack_bytes=16 pending_app_reset=2 retained_app_reset=1 public_cancel=1 midframe_atomic=1 bilinear=3 nearest=1 write_stalls=383322"
+  ]
+}

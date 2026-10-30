@@ -1,0 +1,45 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -modelsimini C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/modelsim.ini -c -voptargs="+acc=r+tb_raw_pipeline" work.tb_raw_pipeline -do "C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/run.do" -gRGB_PATTERN=0 -gFRAMES=6 -gCORRECTED=1 
+# Start time: 13:05:04 on Oct 30,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_raw_pipeline(fast)
+# do C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/run.do
+# ANGLE_FRAME_START id=1 time_ns=33325441
+# ANGLE_FRAME_DONE id=1 elapsed_ns=34309475 source_blocks=13996 result_blocks=32400
+# CORRECTED_SNAPSHOT id=1 corners=000000000000000000000000 H=00010000000000000000000000000004370000000000000000ffff70dbd90291d74fe900008f24270000000000 source_base=0000000 result_base=0200000
+# PIPELINE_PUBLICATION corrected=1 id=1 count=1 time=67634929000
+# FRESH_DISPLAY id=1 count=1 time=67634970000
+# ANGLE_FRAME_START id=2 time_ns=67635037
+# ANGLE_FRAME_DONE id=2 elapsed_ns=35927331 source_blocks=13996 result_blocks=32400
+# CORRECTED_SNAPSHOT id=2 corners=000000000000000000000000 H=00010000000000000000000000000004370000000000000000ffff70dbd90291d74fe900008f24270000000000 source_base=0800000 result_base=0400000
+# PIPELINE_PUBLICATION corrected=1 id=2 count=2 time=103562381000
+# FRESH_DISPLAY id=2 count=2 time=133481449000
+# ANGLE_FRAME_START id=3 time_ns=133481516
+# ANGLE_FRAME_DONE id=3 elapsed_ns=34282336 source_blocks=13996 result_blocks=32400
+# CORRECTED_SNAPSHOT id=3 corners=000000000000000000000000 H=00010000000000000000000000000004370000000000000000ffff70dbd90291d74fe900008f24270000000000 source_base=0000000 result_base=0200000
+# PIPELINE_PUBLICATION corrected=1 id=3 count=3 time=167763866000
+# ** Fatal: FRESH30_DEADLINE_MISSED gap_ns=34282458
+#    Time: 167763906510 ps  Scope: tb_raw_pipeline File: C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/tb_lens_video.sv Line: 156
+# ** Note: $finish    : C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/tb_lens_video.sv(156)
+#    Time: 167763906510 ps  Iteration: 0  Instance: /tb_raw_pipeline
+# Break at C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/tb_lens_video.sv line 156
+# Stopped at C:/D/FPGA/A_lens_20261030/verification/video_20261030_130500_277481/tb_lens_video.sv line 156
+# End time: 13:06:43 on Oct 30,2026, Elapsed time: 0:01:39
+# Errors: 1, Warnings: 0

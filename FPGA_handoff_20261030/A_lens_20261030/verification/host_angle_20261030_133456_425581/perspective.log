@@ -1,0 +1,10 @@
+usage: send_lens_angle.py [-h] [--angle-deg ANGLE_DEG] [--zoom ZOOM]
+                          [--width WIDTH] [--height HEIGHT]
+                          [--center-x CENTER_X] [--center-y CENTER_Y]
+                          [--sequence SEQUENCE]
+                          [--base-matrix-json BASE_MATRIX_JSON]
+                          [--calibration CALIBRATION]
+                          [--hardware-candidate HARDWARE_CANDIDATE]
+                          [--no-autocrop] [--dry-run] [--output OUTPUT]
+                          [--port PORT] [--baud BAUD] [--timeout TIMEOUT]
+send_lens_angle.py: error: Only affine base matrices with fixed bottom row are supported

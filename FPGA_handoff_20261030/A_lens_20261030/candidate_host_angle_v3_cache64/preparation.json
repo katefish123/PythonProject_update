@@ -1,0 +1,7 @@
+{
+  "base": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+  "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64",
+  "hardware_accessed": false,
+  "qualified": false,
+  "scope": "Same11-stage lens arithmetic.64x64 rotated traversal/cache64. Exact1920 address division uses registered reciprocal product and one added elastic stage; original bad-address/tag checks remain."
+}

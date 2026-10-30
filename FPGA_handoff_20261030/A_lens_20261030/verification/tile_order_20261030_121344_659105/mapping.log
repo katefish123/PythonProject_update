@@ -1,0 +1,3 @@
+Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+vmap -modelsimini C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_121344_659105/modelsim.ini work C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_121344_659105/work 
+Modifying C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_121344_659105/modelsim.ini

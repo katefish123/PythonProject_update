@@ -1,0 +1,28 @@
+{
+  "hardware_accessed": false,
+  "serial_ports_opened": false,
+  "source_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\reset_sync.v": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\lens_uart_control.v": "659d5dab0cbe9a759367c1494b1712b0323a0938ae774620b04cd25dfe775955",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\lens_parameter_mailbox.v": "58a5b5673f4ca50b3438174dd0acfc97a3c01c2e35d559ea41df2cad6fc39be1",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\frame_processor_stream.v": "734f0ab8c2f450c1aacb84c2b52b2fe5e7bbe1c6b8e73d5794cf8e620e22ff42",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\lens_affine_instance.v": "d4ba1f37e66dbc9b5033074cec128c7abcaf72aafba63bad630450ff6dc6ebe5",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\lens_distort_coord.v": "45544797de801b81b8e9a5cb515cec3b73f03b09891b730867290fea1ac44c92",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\bilinear_interp.v": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+  },
+  "bench_sha256": "1759a45418743b0a9406c6ea438b9808f440ffaf4df15eb958761f8fa491a61c",
+  "checker_sha256": "095ae5c451546aada329cc7fe5fc4067a69c86166e6044980cab4dba30294043",
+  "golden_checker_sha256": "87b773e8512565f5c6d24a2727f32087a117572e1991e5e8e36f1298c117715c",
+  "host_sha256": "5741d13af8b372e1c22c949c9f5609987e6ebf5260d63cd7fd0381d6c40aa4fb",
+  "calibration_sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+  "fixtures": {
+    "acks.hex": "ecea44482907c8ec4324e2192f5395e8b82c5fee7f05fe7473aa0c9e3f37a12a",
+    "matrices.hex": "822d9983952e5f5b6dce51ef95aaad0a6988de7c48b213065711bf2538c687f5",
+    "packet_a.hex": "e2a138e1bb9da0ca39a610c3584957708598049df5f435e0b2aa53fb3c495807",
+    "packet_b.hex": "1323713ccf576d31285fdc801c912cc92749a068b1c6bbc87cfb727587c7fc70",
+    "packet_c.hex": "c6263c50b2545c7304be72eb90dcfee4138749be287597b78ef83d320b1a3573",
+    "requests.hex": "5ab0761d2b001075144f98300b5656868e23fddfbee89cc9b7ddfbd139a40a73",
+    "rgb.hex": "27a2e5074c5b28e2c92f3172c0992f64effbb2dea82ff717b087e442206f2e31"
+  },
+  "scope": "Actual115200-baud UART -> mailbox -> affine/lens -> RGB frame commit test.\n\nThe memory response boundary is an explicit deterministic pixel model with\nbackpressure. This check covers control composition and arithmetic, not DDR fps.\n"
+}

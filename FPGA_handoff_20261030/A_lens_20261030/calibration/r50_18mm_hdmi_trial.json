@@ -1,0 +1,147 @@
+{
+  "status": "trial_hdmi_18mm_calibration",
+  "deploy_to_fpga": false,
+  "profile_id": "canon_r50_18mm_hdmi_1920x1080_20261022_trial",
+  "suggested_use": "Current 18mm HDMI software reference for parameter parsing, inverse mapping and bilinear integration; final optical deployment requires independent fixed-focus verification.",
+  "camera_user_context": {
+    "model": "Canon EOS R50",
+    "source_is_actual_hdmi_capture": true,
+    "capture_device": "VC-002Pro",
+    "focal_length_mm_user_reported": 18.0,
+    "autofocus_area_user_reported": "whole_area",
+    "movie_servo_af": "unconfirmed",
+    "focus_locked": "unconfirmed",
+    "in_camera_lens_correction": "unconfirmed",
+    "stabilization": "unconfirmed"
+  },
+  "video": {
+    "source_path": "/Users/yishuyu/Movies/2026-10-22 13-42-15.mov",
+    "source_sha256": "f316a07484b8166df4db1356034e1789bff5978dd7e96ef6971fece93a246607",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration_s": 64.36666666666666,
+    "frames_total": 1931,
+    "coordinate_policy": "Native H.264 decoded raster, x right / y down; no scaling, cropping or perspective correction before fitting."
+  },
+  "target": {
+    "square_mm": 19.0,
+    "squares": [
+      10,
+      7
+    ],
+    "inner_corners": [
+      9,
+      6
+    ],
+    "square_source": "User measured five squares = 95mm; equality of horizontal and vertical print scale is unconfirmed.",
+    "mounted_on_flat_rigid_board": true,
+    "mounting_evidence": "Confirmed by user during the preceding capture on 2026-10-22."
+  },
+  "model": {
+    "K": [
+      [
+        1599.0917945704173,
+        0.0,
+        933.4969300262167
+      ],
+      [
+        0.0,
+        1596.4396413670706,
+        525.268573437016
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "fx": 1599.0917945704173,
+    "fy": 1596.4396413670706,
+    "cx": 933.4969300262167,
+    "cy": 525.268573437016,
+    "k1": 0.011397824930207842,
+    "k2": -0.0508595922647843,
+    "p1": -0.004071968312293663,
+    "p2": -0.0036192871893879048,
+    "k3_fixed": 0.0,
+    "distortion_opencv_order": [
+      0.011397824930207842,
+      -0.0508595922647843,
+      -0.004071968312293663,
+      -0.0036192871893879048,
+      0.0
+    ],
+    "pixel_units": [
+      "fx",
+      "fy",
+      "cx",
+      "cy"
+    ],
+    "dimensionless": [
+      "k1",
+      "k2",
+      "p1",
+      "p2"
+    ],
+    "output_camera_matrix_for_preview": [
+      [
+        1599.0917945704173,
+        0.0,
+        933.4969300262167
+      ],
+      [
+        0.0,
+        1596.4396413670706,
+        525.268573437016
+      ],
+      [
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "evidence": {
+    "sampled_frames": 242,
+    "detected_frames": 197,
+    "quality_eligible_frames": 179,
+    "pose_representatives": 42,
+    "training_frames": 34,
+    "validation_frames": 8,
+    "corners_each": 54,
+    "train_rms_px": 1.3868958072627273,
+    "validation_pose_fit_rms_px": 1.4488382127291448,
+    "pinhole_validation_pose_fit_rms_px": 1.4908334810882906,
+    "held_out_line_rms_raw_px": 0.6532965672336685,
+    "held_out_line_rms_corrected_px": 0.6289863128251233,
+    "leave_one_pose_max_source_map_change_px": 4.199407946511097,
+    "leave_one_pose_max_source_map_change_inside_corner_hull_px": 0.9714446136166229,
+    "training_corner_hull_fraction": 0.6092329237444823,
+    "temporal_block_full_grid_max_map_difference_px": 18.754068107780963,
+    "temporal_block_common_source_hulls_max_map_difference_px": 5.945252378348074,
+    "held_out_line_improved_frames": 7
+  },
+  "mapping_sanity_check": {
+    "grid": [
+      201,
+      121
+    ],
+    "all_finite": true,
+    "jacobian_determinant_min": 0.9183035592979223,
+    "jacobian_determinant_max": 1.01697760790972,
+    "nonpositive_jacobian_points": 0,
+    "radial_mapping_derivative_min": 0.953495807543815,
+    "note": "Sampled analytic local Jacobian, with P=K. Positive samples are a sanity check, not a global accuracy certificate."
+  },
+  "limitations": [
+    "Held-out residual and line straightness improve modestly; they do not establish absolute physical correction accuracy.",
+    "Time-block estimates disagree in source maps, including in their common observed source region; constant full-frame parameters are not independently validated.",
+    "Whole-area AF describes an AF area and does not establish movie-servo state or a locked focus position.",
+    "Different time blocks have different poses, coverage, sample counts and residuals; map disagreement cannot be attributed to AF from these data.",
+    "Image corners are less constrained than the center; the lower-right image corner has the weakest direct corner observations.",
+    "Validation views share a recording session and use their own corners for pose estimation; this is not an independent acquisition or known-ground-truth accuracy test.",
+    "OBS applies no spatial transform in this recording; internal camera/capture-card processing is not established by that fact.",
+    "No MTF50/SFR, hardware timing or FPGA resource measurements were performed in this calibration step."
+  ]
+}

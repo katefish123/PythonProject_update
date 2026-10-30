@@ -1,0 +1,7 @@
+{
+  "host_sha256": "a360d3eb035f01743ece59b17271d9c295ca8d19272d228cdc6e810a952a7d13",
+  "checker_sha256": "4d7ab682cc562e0403da92b59eaac18a5e3d4dd1f80a66591282fecb9d41a7d2",
+  "calibration_sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+  "rtl_sha256": "d4ba1f37e66dbc9b5033074cec128c7abcaf72aafba63bad630450ff6dc6ebe5",
+  "viewport_reference_sha256": "ba62a031d16e9e26a8e13fcaa3dc23ea11973b79d5aab7b174e1710dc93caef2"
+}

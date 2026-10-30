@@ -1,0 +1,19 @@
+{
+  "source_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\quad_packet_bridge.v": "883267ea8911f8f7ecac93b673441b9c65ce82fb5f7566b4f6c4bb0c22767558",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\async_packet_stream.v": "a3a41faa78efa494a83eb5ebb29b08d0a11f7ea77a7019ed7a5e91942b8d81bc",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\async_packet_fifo.v": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a"
+  },
+  "reference_sha256": "ed31b22a44c8ef26e061c096ee70b4026b88732c5c3c12aae9072d341cb7a68c",
+  "generated_reference_sha256": "34071879953135215ede2a6da2c2f93e8d2baa78bd30ebe03959f59bcd6e5256",
+  "testbench_sha256": "c43a1eee9c80fd2d214c83534aaafa6c76ecf29393c4da98a5f09b182aa5205e",
+  "checker_sha256": "07d88774f2d880516e29d3e930cb348fc5d3eb6cbd9432314a01f2cc05ae9527",
+  "division_domain_exhaustive_n": 65536,
+  "hardware_accessed": false,
+  "fixtures": {
+    "large_expected.hex": "b80be0ce800a2070f8b3b6f704aa444aac50e9d6ac29a612050759431d435e60",
+    "large_input.hex": "900d6ee9c59a6538653c4c5b5083fbd5ad663f606aa1e3df4faf52e1f1a97950",
+    "small_expected.hex": "19cbef50babede6efd192708839f8b1fe4ca25a42338beddddbfe43add4b43c6",
+    "small_input.hex": "2e3d71435ccb89a8fbe39bcdcb5eff269560fe2d8fa58f98fe90eb1c452e459b"
+  }
+}

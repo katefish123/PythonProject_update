@@ -1,0 +1,33 @@
+{
+  "scope": "Analytic synthetic images only; NOT hardware/camera measurement or ISO certification.",
+  "target_source": "C:\\D\\FPGA\\A_lens_20261030\\tools\\slanted_edge_sfr.py",
+  "target_source_sha256": "13569fdb53589e8b9c12de3cec8503a23ec4366f0aa7240320fea1f0b29f0d85",
+  "checker_sha256": "9502e5c5c1606f3e100694ebdf4397228b25312c4bdd2629d67641bc04a3f3be",
+  "input_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\tools\\slanted_edge_sfr.py": "13569fdb53589e8b9c12de3cec8503a23ec4366f0aa7240320fea1f0b29f0d85",
+    "C:\\D\\FPGA\\A_lens_20261030\\tools\\check_sfr.py": "9502e5c5c1606f3e100694ebdf4397228b25312c4bdd2629d67641bc04a3f3be",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s0.7_vertical.png": "86476f69599e04f6fd9b9b39bb691f584cc79864b1498ab89dd6fb6c07dc7bc8",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s0.7_horizontal.png": "637b2781cf034712f7ec62854714aebdf28613f8d8a2f8026cdfa920a3a3b968",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s1.2_vertical.png": "3d2b5ddf478542d1768b387afb2cc078afc122228bbd0dfb3f8faed5c4b676cb",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s1.2_horizontal.png": "7af5ade639ec4af06616bd7cfe4d6bc7653ad4752c7267ffd86bff79b37feb11",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s2.0_vertical.png": "fd8d85aae47b28b109bd09de7baf0aa4a93c7b08e3d23b2c74b6dfcc0532e623",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s2.0_horizontal.png": "293357f4fa3b9d7fa7946d19c766e2777292e85f0622e13480ddc858945a0b45",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s3.0_vertical.png": "ae865e4901a7e1e366c962fc9de42c62fa719ea1c369de1a0eb195780ce0d71c",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_s3.0_horizontal.png": "45e3cd9be579cab85f0deb9ce1517302053da6436ae1e7209bd7c9f8d6a48c30",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\gaussian_srgb_rgb.png": "960f697f02821a2ecb3af10b3697ac43a297684c024b462182cbd699e011fe51",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\reject_blank.png": "2535b2aeedf4b1cf92448273480b9555d19f8daf8186e49118ff3d4ddbae0b6e",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\reject_multiple_edges.png": "18c545cab5ad89089d6d0b3317312d057bdd2e3979f9734d9ee2eec7edfa1e5a",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\reject_checkerboard_corner.png": "7a0904eac901c568fda83813ab451f41d6d2550283896a0623a7492f0fd43442",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\reject_axis_aligned.png": "9bf0f5248fc01c6834b87bf6c7458c6f9297e9c4b3a4d59e5e5c2061789bb85c",
+    "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120724_840436\\reject_large_angle.png": "dd5dfd75f11239c3a57192883e9cb115e44aed94c6c100e38980ed32bba0571f"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.2.6",
+    "opencv": "4.12.0"
+  },
+  "gaussian_mtf": "exp(-2*pi^2*sigma^2*f^2)",
+  "gaussian_mtf50": "sqrt(log(2))/(sqrt(2)*pi*sigma)",
+  "synthetic_sampling": "continuous Gaussian-blurred ideal step at pixel centers; no pixel aperture integration",
+  "relative_mtf50_tolerance": 0.04
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\D\FPGA\A_lens_20261030\tools\camera_calibration.py", line 78, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\D\FPGA\A_lens_20261030\tools\camera_calibration.py", line 65, in main
+    if set(th)&set(vh):raise ValueError('Training and validation share identical image content')
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Training and validation share identical image content

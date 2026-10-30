@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "real_camera_or_optical_acceptance": false,
+  "scope": "Exercise real image detection and native-file calibration CLI on synthetic poses.\n\nAll images in this check are synthetic pinhole fixtures, never real camera evidence.\n",
+  "native_images_detected": 28,
+  "unicode_file_paths": true,
+  "duplicate_cross_set_rejected": true,
+  "train_rms_px": 0.08101623422663091,
+  "validation_pose_fit_rms_px": 0.06997828826216461,
+  "inputs_sha256": "f4552ed09ec4eec72242a631883379cfc2f463e9ece307300673fe5dab79dfa5",
+  "profile_sha256": "50db3f995931ca6d938fc8d3191f0675ea584403b3485afbda2d1ff1c43a6470",
+  "cli_log_sha256": "3e245d48af3733d1060a7a3797bd934e967fcf7fae72769d2a5326ea4d530f64"
+}

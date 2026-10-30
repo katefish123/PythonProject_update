@@ -1,0 +1,31 @@
+{
+  "source_sha256": {
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\frame_processor_stream.v": "734f0ab8c2f450c1aacb84c2b52b2fe5e7bbe1c6b8e73d5794cf8e620e22ff42",
+    "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v3_cache64\\sources\\ddr_result_writer_burst64.v": "645f6155ee657b46c491b365f2069dab769f4b866f2d8508f2c9665a177d29d9"
+  },
+  "testbench_sha256": "de4e17bd22f74f250d6a44f7693561d300e667b496a5fc4068416bc18fee7b3c",
+  "checker_sha256": "eb2ed5196bbf9c33bdac2ac2017c945d971ca9cea9647905ee2cbf614bc18b1d",
+  "static_full_frame": [
+    {
+      "tiled": false,
+      "pixels": 2073600,
+      "bursts": 32400,
+      "nonlinear_block_jumps": 0,
+      "every_pixel_once": true,
+      "contiguous_aligned64word_bursts": true,
+      "address_sequence_sha256": "7cf0abb7b70fe707747fd4f16b765613a7280d760e0a3e0aaba36b4300134a52"
+    },
+    {
+      "tiled": true,
+      "pixels": 2073600,
+      "bursts": 32400,
+      "nonlinear_block_jumps": 32383,
+      "every_pixel_once": true,
+      "contiguous_aligned64word_bursts": true,
+      "address_sequence_sha256": "1816f9a11ab537cec549bb1282ad4ef9a15275fc053aff1ff1c98fe23180d13e"
+    }
+  ],
+  "scope": "Check128x128 clipped-band/raster traversal and actual processor/writer control RTL.\n\nThe processor boundary uses an explicit coordinate/tag passthrough math model:\nthis checks traversal, independent stalls, addresses and frame-affine commits,\nnot affine arithmetic, lens accuracy, DDR throughput or hardware30fps.\n",
+  "hardware_accessed": false,
+  "throughput_or_optical_acceptance": false
+}
