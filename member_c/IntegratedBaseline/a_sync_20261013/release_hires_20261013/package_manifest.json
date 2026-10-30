@@ -1,0 +1,30 @@
+{
+  "qualified_at_utc": "2026-10-13T07:15:38.478668+00:00",
+  "upstream_commit": "6b0b2e257efcfbb379d3f447403beb5ad08e0086",
+  "source_manifest_sha256": "3c3a33d795b74cb0d78399844338daebf0a2acc4ce3a9c9a7be6a4f8cc7eec41",
+  "qualification_method": "post_build_revalidation_with_bound_simulation_replay",
+  "simulations_passed": 12,
+  "timing_passed": true,
+  "hardware_accepted": false,
+  "files": {
+    "reproduction_manifest.json": "3c3a33d795b74cb0d78399844338daebf0a2acc4ce3a9c9a7be6a4f8cc7eec41",
+    "simulation_qualification.json": "e8d5ee2806fa4a54cc1d8bb9bfc0b12cac1897da6f3a8c55b4ab16e0972dc112",
+    "original_build_qualification.json": "964be9e503dfbe3a06ded3bdc28cf95961ebb9d78ed783dbd57821397f6f6079",
+    "logs/tb_ddr_display.log": "55f01167d31425c0f575672ba810fe477752b23e38dafb750136a76be43a9dc5",
+    "logs/tb_native_display.log": "cffbe23b721f115d3e064409b903ca5c6fff458e85d1181c047ab41d95f1945d",
+    "logs/tb_video_correct_ddr_core.log": "07fd0593e6578e0d5508365ad900d63de3465c5a71449a85c07b6be13734e745",
+    "logs/tb_ddr_full_frame.log": "c0da4972f99b5446cc3520c30b16451f72ca0a7f12abc74e07055d39d26a0127",
+    "logs/tb_native_capture.log": "8eca67bc186d321145aff1ffb2d3ca68504c7d8f49ac06b2a95f987d1eeb4110",
+    "logs/tb_native_display_stress.log": "740ace706368e457113cff5833fef36fb790c027c624a34e17cfefaf2dfb4979",
+    "logs/tb_ddr_word_engine.log": "65242633fdede7339fc80719fad0e4761f4ca7ef1871b7cb0e0380c9d650a4b4",
+    "logs/tb_ddr_read_ahead.log": "ed1069232f0beb63b3fc806b7461d10a351968cf2f0376d1245189df6120ce41",
+    "logs/tb_hires_read_ahead_display.log": "d22ed16d25ee7e209adaf455ee6d8a8d7123b15d0689fd6fc4fbab335ff20919",
+    "logs/tb_hires_read_ahead_control.log": "be0d8e90dfa46a3f45798e520ca86ce501d8c3e1cd7b7a603297633e3f4d0ece",
+    "logs/tb_hires_read_ahead_shared.log": "b10cf3410a0978d931352798f749999158ae9abf10beae4bd18f8e014596ebaa",
+    "logs/tb_core_word_engine.log": "1b84571f227a8ab35d788a331a46ddad151c4e5f701839b6af31f31de6a15e2e",
+    "timing_summary.txt": "5b633a4e29455e2df5fa8e43b5b5d6b42bec9d6b2f7a9ae346bac662d6b3fae6",
+    "build.log": "76138fd154b44c9a0b4139cc3fba99ebbcf50ff4e5375a09135fd8a6ece1c5a2",
+    "video_correct_ddr_top.sbit": "4f0e91e09d5fc90d4873dfd220388522b3ee45a84d3ef52488bcb5086e360e81",
+    "video_correct_ddr_top.smsk": "86e26b809b2fa1b823856a1e284477529652182d1c4f33e3be4f7d27e8cacdc1"
+  }
+}

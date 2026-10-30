@@ -1,0 +1,11 @@
+{
+  "commit": "6b0b2e257efcfbb379d3f447403beb5ad08e0086",
+  "accepted": {
+    "verified_sources": 109,
+    "source_archive_sha256": "fd4c0f7db00a9a68efc571b1de87db2cc42bfb59ad9e5b41e847421908d4ed23"
+  },
+  "hires_candidate": {
+    "verified_sources": 109,
+    "source_archive_sha256": null
+  }
+}

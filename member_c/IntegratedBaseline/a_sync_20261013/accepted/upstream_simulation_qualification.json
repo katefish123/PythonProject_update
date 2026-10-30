@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-11T04:15:26.7496458Z",
+  "tests": {
+    "reconnect_hdmi_tx_first": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_reconnect_20261011\\results\\reconnect_hdmi_tx_first.run.log",
+      "log_sha256": "35280813eb32fed64515b0c77577a466d4d1cdc792753634066b36483522a0e3"
+    },
+    "reconnect_dvi_tx_first": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_reconnect_20261011\\results\\reconnect_dvi_tx_first.run.log",
+      "log_sha256": "5198c2d66686d29e38736a29a595ca5ba415e0ddbbd57c00f879b5ec4523cbe6"
+    },
+    "startup_tx_first": {
+      "passed": true,
+      "exit_code": 0,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_reconnect_20261011\\results\\startup_tx_first.run.log",
+      "log_sha256": "dfd9abf788670ff5aa8ca18c80dada5fb5bf0bb292ed692039ec303af8ce0a21"
+    }
+  },
+  "hardware_accepted": false
+}

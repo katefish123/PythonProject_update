@@ -1,0 +1,58 @@
+# do run_ddr_application_check.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_ddr_application work_ddr_application 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:05:11 on Oct 13,2026
+# vlog -sv -work work_ddr_application 01_design_code/rgb888_block_packer.v 01_design_code/ddr_frame_slots.v 02_simulation/tb_ddr_application.v 02_simulation/tb_ddr_frame_model.v 
+# -- Compiling module rgb888_block_packer
+# -- Compiling module ddr_frame_slots
+# -- Compiling module tb_ddr_application
+# -- Compiling module tb_ddr_frame_model
+# 
+# Top level modules:
+# 	tb_ddr_application
+# 	tb_ddr_frame_model
+# End time: 10:05:11 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_ddr_application.tb_ddr_application 
+# Start time: 10:05:12 on Oct 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_ddr_application(fast)
+# Loading work.rgb888_block_packer(fast)
+# Loading work.ddr_frame_slots(fast)
+# PASS_DDR_APPLICATION packer=ok slots=ok
+# ** Note: $finish    : 02_simulation/tb_ddr_application.v(75)
+#    Time: 616 ns  Iteration: 0  Instance: /tb_ddr_application
+# Break in Module tb_ddr_application at 02_simulation/tb_ddr_application.v line 75
+# Stopped at 02_simulation/tb_ddr_application.v line 75
+# End time: 10:05:13 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_ddr_application.tb_ddr_frame_model 
+# Start time: 10:05:13 on Oct 13,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.tb_ddr_frame_model(fast)
+# Loading work.rgb888_block_packer(fast)
+# Loading work.ddr_frame_slots(fast)
+# PASS_DDR_FRAME_MODEL frames=3 pixels_per_frame=2073600 stalls=3/7
+# ** Note: $finish    : 02_simulation/tb_ddr_frame_model.v(64)
+#    Time: 127008421 ns  Iteration: 0  Instance: /tb_ddr_frame_model
+# Break in Module tb_ddr_frame_model at 02_simulation/tb_ddr_frame_model.v line 64
+# Stopped at 02_simulation/tb_ddr_frame_model.v line 64
+# End time: 10:05:22 on Oct 13,2026, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0

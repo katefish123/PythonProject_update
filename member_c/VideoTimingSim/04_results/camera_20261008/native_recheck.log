@@ -1,0 +1,9 @@
+# Verification excerpt; full local transcript retained outside the repository.
+# Start time: 23:49:46 on Oct 08,2026
+# End time: 23:49:46 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Start time: 23:49:46 on Oct 08,2026
+# PASS_NATIVE_ALL_PIXELS frames=2 pixels_per_frame=2073600
+#    Time: 34333460616 ps  Iteration: 1  Instance: /tb_hdmi_camera_native
+# End time: 23:49:52 on Oct 08,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0
