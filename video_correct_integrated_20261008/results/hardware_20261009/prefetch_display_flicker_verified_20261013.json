@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-12T16:02:49.459436+00:00",
+  "current_image": "release/ddr_camera_hires_prefetch_20261012/video_correct_ddr_top.sbit",
+  "image_sha256": "60fb0b53a5c13b2c1adf47539c66bb4426d967effa2e3f2a279a9cac09865f22",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_hires_prefetch_20261012_221000.log",
+  "original_video": "C:\\Users\\夏菲\\Videos\\2026-10-12 23-06-49.mp4",
+  "original_bytes": 1677863983,
+  "original_sha256": "609373ec82aaa5d0b3dc49d14f18c2da24c3af9da071974955e585260eebabd1",
+  "duration_encoded_seconds": 2233.27,
+  "bounded_probe": "results\\hardware_20261009\\prefetch_flicker_20261012_230649\\probe.json",
+  "full_page_observed": true,
+  "stable_picture_accepted": false,
+  "user_report": "Full corrected rectangle; slightly improved letters; flickering.",
+  "visual_observation": "Saved real video samples show complete upright page and intermittently only its top thin strip. Native vertical row probe confirms frequent dark missing rows in the first75s and last25s.",
+  "clarity_improvement_measured": false,
+  "algorithm_update_fps_measured": false,
+  "cause_confirmed": false,
+  "pending": "Independent display transaction continuity repair and bounded contention regression. No new recording needed to diagnose current failure.",
+  "original_video_modified": false,
+  "original_A_B_C_modified": false
+}

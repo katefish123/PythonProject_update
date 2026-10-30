@@ -1,0 +1,16 @@
+{
+  "model": "Canon EOS R50",
+  "focal_length_mm": 18,
+  "focus_mode_and_locked_position": "待实拍记录",
+  "movie_servo_af": "待实拍记录",
+  "in_camera_lens_correction": "待实拍记录",
+  "stabilization": "待实拍记录",
+  "hdmi_output_size": [1920, 1080],
+  "capture_device": "VC-002Pro",
+  "capture_scaling_and_crop": "待确认未缩放、未裁剪",
+  "checkerboard_horizontal_pitch_mm": null,
+  "checkerboard_vertical_pitch_mm": null,
+  "independent_validation_acquisition": "待记录",
+  "source_recording_and_capture_time": "待记录",
+  "is_template_not_capture_evidence": true
+}

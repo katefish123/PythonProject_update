@@ -1,0 +1,11 @@
+{
+  "saved_at_utc": "2026-10-11T17:34:05.040231+00:00",
+  "archive": "release\\paused_fpga_20261012_013405.zip",
+  "archive_sha256": "88abfee8235313885b41590dd4b073bf5e9c39fbbc938ece535c614d54085558",
+  "file_count": 638,
+  "bytes": 28111313,
+  "verified_zip_crc": true,
+  "current_board_unchanged": true,
+  "paused_by_user": true,
+  "resume_document": "docs\\保存与接续_20261012.md"
+}

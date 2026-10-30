@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-05",
+  "tool": "PDS 2022.2-SP6.4 build146967",
+  "device": "PG2L100H/-6/FBG676",
+  "top": "hdmi_colorbar_top",
+  "flow_exit_code": 0,
+  "pin_locations_checked": 34,
+  "bitstream_bytes": 3791112,
+  "bitstream_sha256": "EB4A955FA70B6F26BE573B9D5C23BC23511F59A99EA78856652AFCFA3DB5BD0A",
+  "video_setup_wns_ns": 4.475,
+  "config_setup_wns_ns": 96.173,
+  "fast_hold_video_whs_ns": 0.252,
+  "fast_hold_config_whs_ns": 0.131,
+  "external_io_timing_closed": false,
+  "hardware_tested": false
+}

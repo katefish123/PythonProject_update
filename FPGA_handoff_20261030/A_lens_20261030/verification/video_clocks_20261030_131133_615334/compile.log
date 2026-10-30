@@ -1,0 +1,11 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 13:11:33 on Oct 30,2026
+vlog -sv -modelsimini C:\D\FPGA\A_lens_20261030\verification\video_clocks_20261030_131133_615334\modelsim.ini C:\pango\PDS_2022.2-SP6.4\arch\vendor\pango\verilog\simulation\GTP_GPLL.v C:\D\FPGA\A_lens_20261030\candidate_host_angle_v1\sources\video_pll_27m_148m5.v C:\D\FPGA\A_lens_20261030\verification\video_clocks_20261030_131133_615334\tb_clocks.sv 
+-- Compiling module GTP_GPLL
+-- Compiling module video_pll_27m_148m5
+-- Compiling module tb_clocks
+
+Top level modules:
+	tb_clocks
+End time: 13:11:33 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-11T11:05:17.2618017Z",
+  "bitstream_sha256": "7aed1ed5af2d32994a620f7bd3f198253365ceeccd967528daa6694e52dac2e0",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\program_ddr_camera_hires_20261011_190358.log",
+  "actual_camera_correction_accepted": false
+}

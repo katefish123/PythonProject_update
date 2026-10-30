@@ -1,0 +1,96 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results
+T_opt
+!s110 1791699773
+VcZ@KC7hegg_Nfj=mQ<iVZ3
+04 18 4 work tb_marker_detector fast 0
+=1-bcfce7c3c068-6acb2b3d-8-2a08
+o-quiet -auto_acc_if_foreign -work work_tb_marker_detector +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vmarker_detector
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791699907
+!i10b 1
+!s100 Ei`V`CJZ?^YkInY7laH5S0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I>[lT=mcb5YU4j6=dDkHW=3
+S1
+R0
+Z5 w1791699905
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/marker_detector.v
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/marker_detector.v
+!i122 3
+L0 4 111
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791699907.000000
+!s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/tb_marker_detector.sv|C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/unsigned_div_seq.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/marker_detector.v|
+Z9 !s90 -sv|-work|work_tb_marker_detector|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/marker_detector.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/unsigned_div_seq.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/tb_marker_detector.sv|
+!i113 0
+Z10 o-sv -work work_tb_marker_detector -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_marker_detector
+R2
+R3
+!i10b 1
+!s100 :Ub`TKKIb>>gm1Z]I^doB3
+R4
+ICD4UD7[cP`>g3KeG5kAfG1
+S1
+R0
+R5
+8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/tb_marker_detector.sv
+FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/tb_marker_detector.sv
+!i122 3
+L0 2 60
+R6
+R7
+r1
+!s85 0
+31
+R8
+Z11 !s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/tb_marker_detector.sv|C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/unsigned_div_seq.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_status_20261011/results/marker_detector.v|
+R9
+!i113 0
+R10
+R1
+vunsigned_div_seq
+R2
+R3
+!i10b 1
+!s100 `aW7FF=DXJ[=d8XD`]bHH1
+R4
+IS2E^>TPncj<8HeGXU9JPV3
+S1
+R0
+w1791460448
+8C:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/unsigned_div_seq.v
+FC:/D/FPGA/video_correct_integrated_20261008/vendor/b/rtl/unsigned_div_seq.v
+!i122 3
+L0 2 31
+R6
+R7
+r1
+!s85 0
+31
+R8
+R11
+R9
+!i113 0
+R10
+R1

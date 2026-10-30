@@ -1,0 +1,9 @@
+{
+  "qualified_at_utc": "2026-10-10T05:34:08.5228508Z",
+  "normal_two_frames_passed": true,
+  "missing_vs_two_frames_passed": true,
+  "rx_first_i2c_passed": true,
+  "normal_exit_code": 0,
+  "missing_vs_exit_code": 0,
+  "i2c_exit_code": 0
+}

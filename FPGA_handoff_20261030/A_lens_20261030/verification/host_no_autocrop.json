@@ -1,0 +1,67 @@
+{
+  "angle_deg_clockwise_display": -17.0,
+  "requested_zoom": 1.2,
+  "applied_zoom": 1.2,
+  "automatic_safe_crop": false,
+  "rotation_center": [
+    959.5,
+    539.5
+  ],
+  "resolution": [
+    1920,
+    1080
+  ],
+  "matrix": [
+    [
+      0.796920657157898,
+      -0.24364310503005981,
+      326.30010110139847
+    ],
+    [
+      0.24364310503005981,
+      0.796920657157898,
+      -124.21422207355499
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "coefficients_q24": [
+    13370110,
+    -4087653,
+    5474407277,
+    4087653,
+    13370110,
+    -2083968834
+  ],
+  "safety_scope": "Explicit --no-autocrop: source-unavailable pixels may be filled black; no full-grid coverage claim.",
+  "requested_matrix": [
+    [
+      0.796920657157898,
+      -0.24364310503005981,
+      326.30010110139847
+    ],
+    [
+      0.24364310503005981,
+      0.796920657157898,
+      -124.21422207355499
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "calibration": "C:\\D\\FPGA\\A_lens_20261030\\calibration\\r50_18mm_hdmi_trial.json",
+  "calibration_sha256": "43e70062458e779c6692804b506dab9c43f65aa3844e42867c79463dbb85c38e",
+  "viewport_reference": "C:\\D\\FPGA\\A_software_20261024\\reference\\B_lens_v2\\python\\brect\\viewport.py",
+  "viewport_reference_sha256": "ba62a031d16e9e26a8e13fcaa3dc23ea11973b79d5aab7b174e1710dc93caef2",
+  "sequence": 78,
+  "packet_hex": "a55a014e0000fe02cc00009ba0c1ffff6dd34c4601655f3e0000fe02cc0000be28c983ffa3c5",
+  "expected_ack_hex": "a55a814e0000e029",
+  "packet_bytes": 38,
+  "serial_accessed": false,
+  "protocol": "lens-affine-uart-v1/CRC16-CCITT-FALSE"
+}

@@ -1,0 +1,79 @@
+{
+  "source": [
+    640,
+    480
+  ],
+  "output": [
+    320,
+    452
+  ],
+  "markers_tl_tr_br_bl": [
+    [
+      200,
+      45
+    ],
+    [
+      465,
+      100
+    ],
+    [
+      435,
+      420
+    ],
+    [
+      180,
+      390
+    ]
+  ],
+  "marker_size": "9x9",
+  "marker_stats": {
+    "red": {
+      "count": 81,
+      "span": [
+        8,
+        8
+      ]
+    },
+    "green": {
+      "count": 81,
+      "span": [
+        8,
+        8
+      ]
+    },
+    "yellow": {
+      "count": 81,
+      "span": [
+        8,
+        8
+      ]
+    },
+    "blue": {
+      "count": 81,
+      "span": [
+        8,
+        8
+      ]
+    }
+  },
+  "algorithm": "b_rectifier bilinear fixed-point",
+  "fixed_h_q16_24": [
+    15738022,
+    -423404,
+    3355443200,
+    3279900,
+    13528637,
+    754974720,
+    3872,
+    1781,
+    16777216
+  ],
+  "hdmi": {
+    "size": [
+      1920,
+      1080
+    ],
+    "mapping": "repeat each source bin across [floor(n*display/source), floor((n+1)*display/source))"
+  },
+  "expected_pixels": 144640
+}

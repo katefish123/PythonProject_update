@@ -1,0 +1,95 @@
+PAGE 82
+                            Fabric Configuration 软件说明 
+                                                                   Fabric Configuration 用户手册(V1.0) 82 / 109 
+8. cfg_set_tcl_break 
+cfg_set_tcl_break，设置 Tcl 遇到 error 是否往下执行(执行 Tcl 文件) 
+用法：cfg_set_tcl_break –flag true 表示 Tcl 遇到 error 中断不继续往下执行。 
+ 
+9. cfg_set_options 
+cfg_set_options，设置 Jtag Server 的运行属性，一个参数 
+- report_detail  设置板上自动化是否写详细报告，参数类型 Boolean_value 
+(TRUE/FALSE) 
+[-server_delay_time] 设置 server 的延时时间，即延时多长后，server 开始读取数据。参
+数类型为大于 0 的整数 
+用法： cfg_set_options –rpt_detail true -server_delay_time integer-value 
+ 
+4.5.2 针对 FPGA 器件的命令 
+包含对 FPGA 的 ID、user code 及状态寄存器读取功能，逻辑位流下载、回读及校验等
+Tcl 命令。 
+1. cfg_scan_chain 
+cfg_scan_chain， 扫描 Jtag 链命令（初始化链操作） 无参数 
+用法：cfg_scan_chain 
+2. cfg_assign_file 
+cfg_assign_file， 配置位流文件命令，包含 2 个参数 
+ –file 配置位流文件的路径 
+ [–device_index]  指定 device 索引，可选，默认缺省为 0 
+用法：cfg_assign_file -file D:/bs/counter.sbit -device_index  0 
+3. cfg_set_device_property 
+cfg_set_device_property，设置器件编程、回读、嵌入式 Flash 属性，包含 4 个参数 
+[-device_index] 指定 device 索引，可选，默认缺省为 0 
+[-program] 指定编程属性，为 16 进制数 
+设置举例：若 Bit0 和 Bit1 同时置 1，则 program 值为 3 
+PAGE 83
+                            Fabric Configuration 软件说明 
+                                                                   Fabric Configuration 用户手册(V1.0) 83 / 109 
+注：对于 Compact 系列，Bit1 和 Bit2 不能同时置 1 
+Bit0：关断配置（Compact \Logos\Logos2\Titan2） 
+Bit1：ISC 配置（Compact\Logos\Logos2\Titan2） 
+Bit2：离线配置（Compact） 
+[-readback] 指定回读属性，为 16 进制数 
+设置举例：若 Bit0 和 Bit1 同时置 1，则 readback 值为 3 
+注：对于 Compact 系列，Bit1 和 Bit2 不能同时置 1 
+Bit0：关断回读（Compact \Logos\Logos2\Titan2） 
+Bit1：ISC 回读（Compact\Logos\Logos2\Titan2） 
+Bit2：离线回读（Compact） 
+[-eflash] 指定嵌入式 Flash 属性，为 16 进制数 
+  设置举例：若只将 Bit0 和 Bit6 同时置 1，则 eflash 值为 41 
+  设置情况： 
+① 仅设置 Bit0-Bit7 属性，则软件自动补全 Bit8-Bit51 属性值 
+② 同时设置 Bit0-Bit51 属性，有两种方式可设置。第一种，可通过界面设置指定的
+eflash 属性，点击 OK 后 Tcl 控制台会打印出该属性值，具体属性设置操作详见
+4.3.19；第二种，使用记录用户操作功能，首先设置器件属性，编程器件，即可
+生成 tcl 脚本，打开脚本文件即可获取 tcl 命令设置属性，具体操作详见 4.3.22 
+注：eflash 默认值为 4fd004fc000e6，仅 Compact 系列支持该属性设置 
+Bit0：表示在下载位流之前是否使能擦除 EFlash 
+Bit1：表示在下载位流之后是否使能验证 EFlash 
+Bit2：表示擦除 Eflash 时，是否整片擦除 
+Bit3：表示擦除 EFlash 之后是否使能复位 
+Bit4：表示编程 EFlash 之后是否使能复位 
+Bit5：表示编程特征控制位之后是否使能复位 
+Bit6：表示在下载位流之后是否使能编程特征控制位 
+Bit7：表示在编程 CRAM 之前是否使能编程特征控制位 
+Bit19-Bit8：操作 Embed Flash 的起始地址页，用于设置编程、擦除、回读的起始地
+址页 
+Bit31-Bit20：操作 Embed Flash 的尾地址页，用于锁定 Embed flash 从开始到该指定
+PAGE 84
+                            Fabric Configuration 软件说明 
+                                                                   Fabric Configuration 用户手册(V1.0) 84 / 109 
+页的内容 
+Bit51-Bit32：指定回读从操作 Embed Flash 的起始地址页开始的内容大小，单位为
+Byte 
+用法：cfg_set_device_property -device_index integer-value -program hex-value –readback 
+hex-value -eflash hex-value 
+4. cfg_program 
+cfg_program，编程位流命令，包含 2 个参数 
+ [–device_index]  指定 device 索引，可选，默认缺省为 0 
+用法：cfg_program -device_index 0 
+5. cfg_program_key_file 
+cfg_program_key_file，编程位流加密秘钥命令，包含 3 个参数 
+[–device_index]  指定 device 索引，可选，默认缺省为 0 
+[–key_location ] 指定秘钥存储位置，默认为临时秘钥寄存器； 
+0: Temporary Key Register; 1: eFuse Register; 2: Battery Backed RAM 
+–file: 指定秘钥文件的路径信息 
+用法：cfg_program_key_file -device_index 0 -key_location 0 -file D:/bs/ led.nky 
+6. cfg_readback 
+cfg_readback，回读位流文件命令，包含 2 个参数 
+-file: 指定回读文件的路径信息 
+[–device_index]  指定 device 索引，可选，默认缺省为 0 
+用法：cfg_readback -file  D:/bs/test.sbit  -device_index 0 
+7. cfg_verify 
+cfg_verify，验证位流文件命令，包含 1 个参数 
+ [–device_index]  指定 device 索引，可选，默认缺省为 0 
+用法：cfg_verify -device_index  0 
+8. cfg_read_device_property 
+cfg_read_device_property，获得器件属性信息，包含 2 个参数 
+-mode 获取器件属性的模式即获取哪一个属性 

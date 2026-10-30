@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-10-10T17:25:45.019782+00:00",
+  "snapshot_directory": "C:\\D\\FPGA\\video_correct_integrated_20261008\\release\\hdmi_preview_paused_20261011_012540",
+  "archive": "C:\\D\\FPGA\\video_correct_integrated_20261008\\release\\hdmi_preview_paused_20261011_012540.zip",
+  "archive_sha256": "6e7708148fab300d71ea8de2dcb9f24df5ce59c1b4a6ef2d90906e9b8fbe5ed7",
+  "snapshot_files_hashed": 609,
+  "copied_file_hashes_verified": true,
+  "archive_crc_verified": true,
+  "paused_by_user": true,
+  "automatic_resume_created": false
+}

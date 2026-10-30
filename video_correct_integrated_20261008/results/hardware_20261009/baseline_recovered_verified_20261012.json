@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-11T17:00:59.716528+00:00",
+  "current_image": "release/ddr_camera_reconnect_20261011/video_correct_ddr_top.sbit",
+  "image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_reconnect_20261011_235140.log",
+  "physical_route": "R50 -> FPGA HDMI-IN -> FPGA HDMI-OUT -> VC-002Pro -> PC USB",
+  "hdmi_output_recovered_user_report": "Colorbars after baseline restore, followed by complete corrected rectangle during target test.",
+  "evidence": "results\\hardware_20261009\\clean_corrected_camera_20261012_003742.json",
+  "video_sha256": "f5539bd929e4be1aec84dfc5a9b27d706bedaddfd7c182575277a7f367db9e31",
+  "full_page_visually_checked": true,
+  "stable_encoded_picture_seconds_approximately": 52.233333333333334,
+  "current_boot_optical_correction_accepted": true,
+  "current_boot_picture_recovery_accepted": true,
+  "clarity_improvement_accepted": false,
+  "long_term_stability_accepted": false,
+  "algorithm_update_fps_measured": false,
+  "limit": "Frame-hold behavior is permitted; encoded30fps and a stable optical page cannot establish actual algorithm update FPS. Does not grant any high-detail image acceptance."
+}

@@ -1,0 +1,14 @@
+[dshow @ 000002749289f980] "ASUS FHD webcam" (video)
+[dshow @ 000002749289f980]   Alternative name "@device_pnp_\\?\usb#vid_3277&pid_0096&mi_00#7&ead33bb&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global"
+[dshow @ 000002749289f980] "VC-002Pro " (video)
+[dshow @ 000002749289f980]   Alternative name "@device_pnp_\\?\usb#vid_345f&pid_2132&mi_00#7&39ae5db8&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global"
+[dshow @ 000002749289f980] "数字音频接口 (VC-002Pro )" (audio)
+[dshow @ 000002749289f980]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{7F01D735-1551-4FF4-9547-6339A86B8DD5}"
+[dshow @ 000002749289f980] "麦克风阵列 (网易虚拟音频设备)" (audio)
+[dshow @ 000002749289f980]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{034D0E9A-D510-439C-B62C-00CA8EEB4655}"
+[dshow @ 000002749289f980] "耳机 (OpenDots ONE by Shokz)" (audio)
+[dshow @ 000002749289f980]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{81F4E1F3-A87D-40D7-A63D-2F6EBA5D8786}"
+[dshow @ 000002749289f980] "麦克风阵列 (Realtek(R) Audio)" (audio)
+[dshow @ 000002749289f980]   Alternative name "@device_cm_{33D9A762-90C8-11D0-BD43-00A0C911CE86}\wave_{AD12933C-7B73-42F1-8D35-0BD299C2B0AA}"
+[in#0 @ 000002749289f580] Error opening input: Immediate exit requested
+Error opening input file dummy.

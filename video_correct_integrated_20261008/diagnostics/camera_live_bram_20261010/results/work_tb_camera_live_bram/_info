@@ -1,0 +1,245 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_bram_20261010/results
+T_opt
+!s110 1791631409
+Vb2]FMjB3JBX30PA=MQzEX3
+04 19 4 work tb_camera_live_bram fast 0
+=1-bcfce7c3c068-6aca2031-19-867c
+o-quiet -auto_acc_if_foreign -work work_tb_camera_live_bram +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vcamera_live_bram_top
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791631408
+!i10b 1
+!s100 7PSfX?i4foOFRZ4<<S7]13
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ID@fzY=E:dEaA4?<=Q7mZN3
+S1
+R0
+Z5 w1791631405
+8camera_live_bram_top.v
+Fcamera_live_bram_top.v
+!i122 2
+L0 5 201
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791631408.000000
+Z9 !s107 C:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_bram_20261010/tb_camera_live_bram.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v|C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v|cdc_snapshot.v|hdmi_bram_probe.v|camera_live_bram_top.v|
+Z10 !s90 -sv|-work|work_tb_camera_live_bram|camera_live_bram_top.v|hdmi_bram_probe.v|cdc_snapshot.v|C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v|C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v|C:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_bram_20261010/tb_camera_live_bram.v|
+!i113 0
+Z11 o-sv -work work_tb_camera_live_bram -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcdc_snapshot
+R2
+R3
+!i10b 1
+!s100 QY1U5MEKhV5LQelUDZ]8V3
+R4
+I0Qi<?3Uk9l`;XJL;`Aa6a3
+S1
+R0
+R5
+8cdc_snapshot.v
+Fcdc_snapshot.v
+!i122 2
+L0 3 23
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vconfig_pll_27m_10m
+R2
+R3
+!i10b 1
+!s100 JBVlm[4Emc3M_OC<W47o[0
+R4
+I8E6Il2CL>5GBziz`jkiZh2
+S1
+R0
+Z12 w1791631152
+Z13 8C:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_bram_20261010/tb_camera_live_bram.v
+Z14 FC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_live_bram_20261010/tb_camera_live_bram.v
+!i122 2
+L0 75 4
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vhdmi_bram_probe
+R2
+R3
+!i10b 1
+!s100 Q^CJ=eR3[lk5]heHVYVBE0
+R4
+I8_O^CA68V]]<]Jzo[W48N2
+S1
+R0
+R5
+8hdmi_bram_probe.v
+Fhdmi_bram_probe.v
+!i122 2
+L0 3 63
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vhdmi_config_runtime_diag
+R2
+R3
+!i10b 1
+!s100 K0c2]_QTEb:_Bf4Pf];L33
+R4
+Iln8QWEXgz2`AUmCBk8gm70
+S1
+R0
+R12
+R13
+R14
+!i122 2
+L0 79 7
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vreset_sync
+R2
+R3
+!i10b 1
+!s100 >L@QLA@n^9=cQ_2oGzlGB3
+R4
+I@148N>_k`fn@3L5U1bA<m2
+S1
+R0
+w1791461077
+8C:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v
+FC:/D/FPGA/video_correct_integrated_20261008/rtl/common/reset_sync.v
+!i122 2
+L0 2 7
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vtb_camera_live_bram
+R2
+R3
+!i10b 1
+!s100 ]_cgf78c3UmWfHXU:0^5z3
+R4
+IZ<9eD=kQZ`8<5:0U2bfJn1
+S1
+R0
+R12
+R13
+R14
+!i122 2
+L0 2 67
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vvideo_pll_27m_148m5
+R2
+R3
+!i10b 1
+!s100 M^LBbR`ZRP1ni1VTcbWnd3
+R4
+IXMn_h?L<hieQ[G0WICKS93
+S1
+R0
+R12
+R13
+R14
+!i122 2
+L0 71 4
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vvideo_timing_vtc
+R2
+R3
+!i10b 1
+!s100 >bN_?_:BQEijb7?^:jc3O0
+R4
+IWZ;8fImVE8m?CR>l3Q=LP1
+S1
+R0
+w1791476583
+8C:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v
+FC:/D/FPGA/video_correct_integrated_20261008/vendor/c_current/01_design_code/video_timing_vtc.v
+!i122 2
+L0 5 57
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1

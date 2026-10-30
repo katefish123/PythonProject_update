@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-11T06:31:07.987711+00:00",
+  "evidence": "results\\hardware_20261009\\live_overlay_fpga_20261011.json",
+  "evidence_image_sha256": "b6f8ddafba670fffe2b9045a4c84cceb4c41c043551753c2172d1394e0154a2f",
+  "valid_samples": 18,
+  "rx_width": 1920,
+  "active_height": 1080,
+  "hs_period_range": [
+    2199,
+    2201
+  ],
+  "vs_edges_first_last": [
+    3916,
+    4935
+  ],
+  "vs_edge_rate_over_approx_encoded_video_seconds": 59.94117647058823,
+  "camera_configuration_errors_seen": false,
+  "coarse_buffer_valid_all_samples": true,
+  "user_motion_verbatim": "新诊断录像已保存 ，上方取景跟着手变化",
+  "limit": "Current short BRAM diagnostic camera input only. VS counter over encoded video seconds is an approximate consistency check, not calibrated HDMI timing, native clarity, long-term stability or correction throughput."
+}

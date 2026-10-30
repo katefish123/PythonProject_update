@@ -1,0 +1,23 @@
+{
+  "raw_hex": "0x5d90001b27000000000000000ffff00040",
+  "payload_hex": "0x5d90001b27000000000000000ffff0004",
+  "tx_done": true,
+  "rx_done": false,
+  "ack_error": true,
+  "latest_nack_valid": true,
+  "device": "0xb2",
+  "addr": "0x3",
+  "state": 3,
+  "ack_slot": 4,
+  "write": true,
+  "owner_tx": true,
+  "sda": 2,
+  "scl": false,
+  "rx_clock": false,
+  "de_seen": false,
+  "width": 0,
+  "hs_counter": 0,
+  "rgb": "0x0",
+  "ACK_count": 65535,
+  "NACK_count": 4
+}

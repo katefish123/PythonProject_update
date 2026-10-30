@@ -1,0 +1,9 @@
+01_design_code/video_timing_vtc.v
+01_design_code/test_pattern_generator_tpg.v
+01_design_code/video_top.v
+01_design_code/third_party/ms7210/ms7210_ctl.v
+01_design_code/third_party/ms7210/iic_dri.v
+01_design_code/ms7210_config.v
+01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v
+01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v
+01_design_code/hdmi_colorbar_top.v

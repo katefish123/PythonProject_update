@@ -1,0 +1,41 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -modelsimini C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/modelsim.ini work.tb_native_lens -do "C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/run.do" 
+# Start time: 13:59:12 on Oct 30,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_native_lens(fast)
+# Loading work.lens_distort_coord(fast)
+# Loading work.GTP_APM_E2(fast)
+# Loading work.GTP_APM_E2(fast__1)
+# Loading work.GTP_APM_E2(fast__2)
+# Loading work.GTP_APM_E2(fast__3)
+# Loading work.GTP_APM_E2(fast__4)
+# Loading work.GTP_APM_E2(fast__5)
+# Loading work.GTP_APM_E2(fast__6)
+# Loading work.GTP_APM_E2(fast__7)
+# Loading work.GTP_APM_E2(fast__8)
+# Loading work.GTP_APM_E2(fast__9)
+# do C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/run.do
+# NATIVE_LENS_PASS points=4075 checked=4068 numerical_errors=301 cancelled=7 bubbles=2151 consumed_tag_bits=25 ignored_trimmed_tag_bit=11
+# ** Note: $finish    : C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/tb_native_lens.sv(39)
+#    Time: 67272856 ps  Iteration: 1  Instance: /tb_native_lens
+# Break at C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/tb_native_lens.sv line 39
+# Stopped at C:/D/FPGA/A_lens_20261030/verification/native_lens_20261030_135911_765883/tb_native_lens.sv line 39
+# End time: 13:59:15 on Oct 30,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0

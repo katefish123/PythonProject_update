@@ -1,0 +1,2441 @@
+{
+  "recorded_at_utc": "2026-10-10T17:25:40.494027+00:00",
+  "files": {
+    "constr/board_bram.fdc": {
+      "bytes": 21673,
+      "sha256": "31383e5d82d707cb879140c1c574938c70caa96ab29ec7c21415c5553136c02b"
+    },
+    "constr/board_ddr.fdc": {
+      "bytes": 65075,
+      "sha256": "f4c9023ff609082127024fdb228c67bac765cc71e70611a5bf8cdf7f048119fb"
+    },
+    "docs/c_update.json": {
+      "bytes": 27438,
+      "sha256": "15b952900f9f752f5dbd1af4920443a1b6ad02c55aec85f5c4744a6aec37f95f"
+    },
+    "docs/current_stage_verification.json": {
+      "bytes": 12107,
+      "sha256": "4fd4ca45eadfcbfa4ac7389de687cf56ccbc8a0a86741bca9872c3e07a821327"
+    },
+    "docs/ddr_ip_notes.md": {
+      "bytes": 6920,
+      "sha256": "35fbb81f079fbd4dfcd3061ceb93c1cc85656f3f52f41ad2f40b3a3a22dc4c83"
+    },
+    "docs/ddr_stage_verification.json": {
+      "bytes": 21862,
+      "sha256": "e2a15b5734f6a35132971e80c633a7f7feaf533c5d0ff8f2a4b5ee6bf8dc16d1"
+    },
+    "docs/DDR工程说明.md": {
+      "bytes": 6851,
+      "sha256": "6eb16ff685c47942780358b72c1053a23bac9e890d712e9a0c8939436af5f59d"
+    },
+    "docs/hardware_20261009.json": {
+      "bytes": 7283,
+      "sha256": "8dc6260fc4a1683d6d177f80c210c1d49ac91674b64b09cb6b2114a742745eee"
+    },
+    "docs/hdmi_preview.md": {
+      "bytes": 1872,
+      "sha256": "bd3211094f442887938a0078f815485bf96ac900669422a78698bdcc81c409d5"
+    },
+    "docs/hdmi_startup_fix_20261009.md": {
+      "bytes": 2524,
+      "sha256": "e800f1ed58539cc7b776f0f1f79fa77321f7b4f7990336bd1769736547d3ab56"
+    },
+    "docs/OBS与相机直通_20261009.md": {
+      "bytes": 4223,
+      "sha256": "89037860237cf39acde3da7af8dc262a13825819bf0d0b168b41a51b7097a2dc"
+    },
+    "docs/R50相机与OBS设置_20261011.md": {
+      "bytes": 3337,
+      "sha256": "67ccc556d210dff54b7cb82cb7ab7869d302d7e608dbf740929243f98de4fc5a"
+    },
+    "docs/source_manifest.json": {
+      "bytes": 25730,
+      "sha256": "c8bf623cef762e3c20a0626c3ee6765d2ab54eb49008bcae68f2ef450394c976"
+    },
+    "docs/上板记录_20261009.md": {
+      "bytes": 10604,
+      "sha256": "b243d7582f8974841eafec3f574770036ee20a0f92b99cb07c67c8406b966619"
+    },
+    "docs/实时预览联调_20261010.md": {
+      "bytes": 10827,
+      "sha256": "bbe453a34fe0aab0ea72879ac07a09a2d86ca484d840d14a352f894d6b24a23b"
+    },
+    "docs/恢复联调_20261010.md": {
+      "bytes": 6422,
+      "sha256": "a440aebbc1585ed595ba132afe48a41e93b411d9980058fa0620eb3a72a326f0"
+    },
+    "docs/暂停记录_20261010.md": {
+      "bytes": 3863,
+      "sha256": "e21c5cc91e76014d5c7c60873cf862a3f1280ac4a906ebc82808467fe0ce6d75"
+    },
+    "docs/暂停记录_20261011.md": {
+      "bytes": 3540,
+      "sha256": "d02dc745be515b27f9b30b6d5154391fedafa5e4bd49e4fd174787c01232157e"
+    },
+    "docs/继续工作.md": {
+      "bytes": 23176,
+      "sha256": "98230eedc3b44695027eaafc88bd54306665bb8e407912ac7a9f721ef622953e"
+    },
+    "docs/高清预览联调_20261010.md": {
+      "bytes": 12422,
+      "sha256": "264129540fd95fd35702316f595f59f79a604c8872175e55b00e6125d4ec6579"
+    },
+    "modelsim.ini": {
+      "bytes": 100632,
+      "sha256": "e551a9800769be5962b3a32747cffdfd2b70ef3eb99298bdeb55c40b240819a4"
+    },
+    "PAUSE_README.md": {
+      "bytes": 3540,
+      "sha256": "d02dc745be515b27f9b30b6d5154391fedafa5e4bd49e4fd174787c01232157e"
+    },
+    "pds/build_board_bram.tcl": {
+      "bytes": 2476,
+      "sha256": "392244e11bc9b6d8b769651ccb027db130057e0233f4b213dc3a580a587db254"
+    },
+    "pds/build_board_ddr.tcl": {
+      "bytes": 12409,
+      "sha256": "5a1303075e6155851b2c061d5287e99cd99613c1656ca4ca59a3df20853f66a3"
+    },
+    "pds/config_help.tcl": {
+      "bytes": 19,
+      "sha256": "47edfe7b87cdc326828c16c4b3206f66028bfe83f6af4d9feb309111f4263e3e"
+    },
+    "pds/program_camera_live_bram.tcl": {
+      "bytes": 1028,
+      "sha256": "af89588c969f46843185bb5c6675b780f1bb3eb615364481f0a55942ec65788e"
+    },
+    "pds/program_camera_live_bram_reconnect.tcl": {
+      "bytes": 1059,
+      "sha256": "d264096bdedcd074bb6f19da65679d04f4339539b335cda3fcb3af8e84e3eb45"
+    },
+    "pds/program_camera_live_native.tcl": {
+      "bytes": 1055,
+      "sha256": "a6ef27a75506888852e40f75cd38da9c6af72e35466335bed570b5e4deca9acd"
+    },
+    "pds/program_camera_native_rx_first.tcl": {
+      "bytes": 1067,
+      "sha256": "9e111b562767c01cd264fb62fae5d9d83a75f8481ec2f3dfb3d66dcff2b08216"
+    },
+    "pds/program_camera_passthrough.tcl": {
+      "bytes": 734,
+      "sha256": "100d8a469f6375068c2613888e4ca13dfe6587bbae36a2146dc295055be5b12d"
+    },
+    "pds/program_camera_passthrough_rx_first.tcl": {
+      "bytes": 739,
+      "sha256": "245399fc91e43bc1aa1ac13e5ca14901dcaf6b1544bc511cdd8702411a9b87e9"
+    },
+    "pds/program_ddr_cram.tcl": {
+      "bytes": 810,
+      "sha256": "7f2fa6e2056d348e716f2d0e106adb4204e71e5820af5cea0d52c311973a4eef"
+    },
+    "pds/program_ddr_shutdown_1mhz_20261010.tcl": {
+      "bytes": 716,
+      "sha256": "f5e13497eb0b196ec7cbf243b1aaa35f601fc2cfed2e7cc9f993253664faf143"
+    },
+    "pds/program_ddr_startup_fixed.tcl": {
+      "bytes": 827,
+      "sha256": "d1af75f58dacc9b3d8957ba81fe47d1ac26c49a5cb868f90a52312279eb5e860"
+    },
+    "pds/program_ddr_status_probe.tcl": {
+      "bytes": 738,
+      "sha256": "c8935d4470addaedaad2786a599d28a12972afe3e8854834b9f8c73d2a80c4b6"
+    },
+    "pds/program_hdmi_runtime_probe.tcl": {
+      "bytes": 724,
+      "sha256": "532259fb37a69ee54e50e1d11d1b6027bb35cea9e2a3de8bd91838dc42bac562"
+    },
+    "pds/program_internal_fixture.tcl": {
+      "bytes": 782,
+      "sha256": "c4b9882d2fea9284f591d687e6c3847d1d4f6d954bed1a662f24998e708e4605"
+    },
+    "pds/program_link_i2c_probe.tcl": {
+      "bytes": 724,
+      "sha256": "a0b3097022d3e457043f808f736228e228d51c004a83926796ea0a62bb4a7659"
+    },
+    "pds/program_link_i2c_probe_v2.tcl": {
+      "bytes": 732,
+      "sha256": "725f860d885c9032d8cc0d7b89c44adee92b3e61f544c823b884d11f61f343b7"
+    },
+    "pds/program_link_probe.tcl": {
+      "bytes": 733,
+      "sha256": "1bc4f05a1141bad8a9f86ae026c1f1ba613bb955bcc85098fc96601fbd563a76"
+    },
+    "pds/program_runtime_isc_1mhz_20261010.tcl": {
+      "bytes": 659,
+      "sha256": "2e18b6b47ea4f4590b952ebd8205da755a8a3f9a719758693eee6f878272bd97"
+    },
+    "pds/program_runtime_shutdown_1mhz_resume_20261010.tcl": {
+      "bytes": 693,
+      "sha256": "89fa0d7a4e5d53663be4d8eeb5da6410b497eace4c744e7f43bc71faf5f6265d"
+    },
+    "pds/program_rx_first_1mhz_resume_20261010.tcl": {
+      "bytes": 745,
+      "sha256": "4ca8d17d7af84987638721ea2bc9af0427b1729e70e443bf805370e03dabe08f"
+    },
+    "pds/program_rx_first_shutdown_1mhz_20261010.tcl": {
+      "bytes": 697,
+      "sha256": "d77e1c47158a70f2a051306f647b87b405e35e9c36077e57eb9f06401c6a25d7"
+    },
+    "pds/read_adc_temperature.tcl": {
+      "bytes": 182,
+      "sha256": "5ee2594ae63cc2226db1ada3b9b83a35a9f9016eb4b923ba67fb44333994ff29"
+    },
+    "pds/read_board_io.tcl": {
+      "bytes": 236,
+      "sha256": "3bb5764e7e69336e3e571b698ab756c5c4e26156990f1f4a8b545e40d3d49586"
+    },
+    "pds/scan_board.tcl": {
+      "bytes": 322,
+      "sha256": "d33c9e17922236a8991b4abdc83c3f823e3cc4130e529280506dca60a0346937"
+    },
+    "pds/verify_current_ddr.tcl": {
+      "bytes": 434,
+      "sha256": "b5d9dfcd510ec48a44bf35e754cbe71f600ff1d2e9c83a128c731d76cb828728"
+    },
+    "pds/verify_rx_first_1mhz_20261010.tcl": {
+      "bytes": 605,
+      "sha256": "9c35b5c2517cda677aaca992a668b8ffa9b2094d05731efae92dd9b560ecde8d"
+    },
+    "pds/verify_rx_first_500khz_20261010.tcl": {
+      "bytes": 553,
+      "sha256": "81e5cd1141743b2554ad844b9636943f0fb29a378931213cff20f8b59af0cf1d"
+    },
+    "README.md": {
+      "bytes": 20403,
+      "sha256": "e892ec1e1c784ad9596856c69160b12aabd5d58969ce189ef788f72165bd26ad"
+    },
+    "release/camera_live_bram_20261010/build_qualification.json": {
+      "bytes": 1048,
+      "sha256": "9a5c9a098968bcdaad299ed19096d8aedd0dc227adb8c446b6d2beee09f1ce8e"
+    },
+    "release/camera_live_bram_20261010/build_registered_output.log": {
+      "bytes": 193614,
+      "sha256": "d5b4a62fe3038311d73abb7e7b82c477ad48aa712713d2a3ea9aef0d149198d8"
+    },
+    "release/camera_live_bram_20261010/camera_live_bram_top.sbit": {
+      "bytes": 3791112,
+      "sha256": "00f3a1aec7c75893ba2ecccb09578379512f8f8d92b6a2d765bc53cea3cc1816"
+    },
+    "release/camera_live_bram_20261010/camera_live_bram_top.smsk": {
+      "bytes": 3791112,
+      "sha256": "ccd45cc64c1443b2f1e3f745b5d053bc78c92882eab94d1988551bd063dda61c"
+    },
+    "release/camera_live_bram_20261010/camera_live_bram_top_timing_summary_after_hold_fix.txt": {
+      "bytes": 9159,
+      "sha256": "f17ded276ad2cf053612c0f5d5da8cdadc46fbed0f782ceedd8345423f9d2387"
+    },
+    "release/camera_live_bram_20261010/simulation_qualification.json": {
+      "bytes": 467,
+      "sha256": "efd070f4b305676c5d0bc3a6a9a85396ce3283697f9df09d7eec5a637fe3c58f"
+    },
+    "release/camera_live_bram_20261010/source_hashes.json": {
+      "bytes": 2129,
+      "sha256": "a7e7408bec4366ed8a4c127744b1f2809cf2cbcd0a799e02142b8ba1755a624c"
+    },
+    "release/camera_live_bram_20261010/source_snapshot.zip": {
+      "bytes": 35506,
+      "sha256": "f204e1c9175a5c7d548824ed200c0352fec4b438c713015ebb826d0cfbaa4e9d"
+    },
+    "release/camera_live_bram_reconnect_20261010/baseline.run.log": {
+      "bytes": 16585,
+      "sha256": "d24c6072e7b33dbd1d921e91e2cfe9dd74bc952b7c3d7c138fe31ad5d766090e"
+    },
+    "release/camera_live_bram_reconnect_20261010/build_qualification.json": {
+      "bytes": 1980,
+      "sha256": "29dcd5d16e2a20c9a7658528b5e75a532b65aeac0388fa8870f1bb9d91d4e713"
+    },
+    "release/camera_live_bram_reconnect_20261010/build_run.log": {
+      "bytes": 197788,
+      "sha256": "876358eff0bee1fce8136a85c5d05c44f69d3adefae91af713a29a06211c918a"
+    },
+    "release/camera_live_bram_reconnect_20261010/camera_live_bram_top.sbit": {
+      "bytes": 3791112,
+      "sha256": "be1a72cade3008e25cff3f6925bf6347fea8211da6e5447fdd82ef137e7f5212"
+    },
+    "release/camera_live_bram_reconnect_20261010/camera_live_bram_top.smsk": {
+      "bytes": 3791112,
+      "sha256": "93c7d577a5524ad32a1c3468d9502b6b8a2a09ae6bbb4273ccdd7daeeb894148"
+    },
+    "release/camera_live_bram_reconnect_20261010/camera_live_bram_top_timing_summary_after_hold_fix.txt": {
+      "bytes": 9159,
+      "sha256": "29c153919fa23c5b6cd8f3bdbacea7395b45195d97595fb4b9d7a0b9a33967fb"
+    },
+    "release/camera_live_bram_reconnect_20261010/fixed_dvi.run.log": {
+      "bytes": 17402,
+      "sha256": "58622c77c32bfd587e9e5c5a04f12c12f786f951f25cbaad614157c40776faab"
+    },
+    "release/camera_live_bram_reconnect_20261010/fixed_hdmi.run.log": {
+      "bytes": 17408,
+      "sha256": "f6c5395d3a8696f6fa8aeb7506f23f2f6f0d66f3cb1b24efa0262b564695a7ef"
+    },
+    "release/camera_live_bram_reconnect_20261010/simulation_qualification.json": {
+      "bytes": 444,
+      "sha256": "3f54762d967195c8538e8470fda197e8f7fe3f90a5e960d21b6c7dbcc520d85c"
+    },
+    "release/camera_live_bram_reconnect_20261010/source_hashes.json": {
+      "bytes": 2368,
+      "sha256": "3711f5005b98c1bdc627aa8694efa091e88581723edd0c7f5958bbf275b72ea7"
+    },
+    "release/camera_live_bram_reconnect_20261010/source_snapshot.zip": {
+      "bytes": 34542,
+      "sha256": "83793a4e02081fcfdc6855ccbd2c7e2c379f973e95d992598975e8e4a68e8355"
+    },
+    "release/camera_live_native_20261010/build_qualification.json": {
+      "bytes": 2868,
+      "sha256": "bcd8bbab7bf50dc2f47797d9d1fe671693302fb2bd8c0ea5a0d035100b4cd29c"
+    },
+    "release/camera_live_native_20261010/build_run.log": {
+      "bytes": 133229,
+      "sha256": "3ab9e54348406d2e94658e94f13f056da54721e2c7abcd6fb44be3e481234ac0"
+    },
+    "release/camera_live_native_20261010/camera_live_native_top.sbit": {
+      "bytes": 3791112,
+      "sha256": "00e696c084513c48465ad22662585d862a7d30cc76efb0c998d70a98bb388b53"
+    },
+    "release/camera_live_native_20261010/camera_live_native_top.smsk": {
+      "bytes": 3791112,
+      "sha256": "c08c571dbfc9366925b6828101d6a2da5b2d32754cf9b8d2afdb854dae984b7f"
+    },
+    "release/camera_live_native_20261010/camera_live_native_top_timing_summary_after_hold_fix.txt": {
+      "bytes": 7935,
+      "sha256": "fb8fff3f66fc54c9a2aad0dd3a92362065781aa03d3a1383d9b072ac78ae10fb"
+    },
+    "release/camera_live_native_20261010/pixels_missing_vs.run.log": {
+      "bytes": 2515,
+      "sha256": "3a8058fd7082eb6eea273028f7d4cbedea719243e47a8c28e4dbcf3fb3e449f9"
+    },
+    "release/camera_live_native_20261010/pixels_normal.run.log": {
+      "bytes": 2491,
+      "sha256": "aa4e25bae86767b137936f00d47e96f72fd60de4f12fa5395b99e0b01a439e79"
+    },
+    "release/camera_live_native_20261010/provenance.json": {
+      "bytes": 1498,
+      "sha256": "92f59915fbfe773c5a31afc78e3c56858504b09d55bc4b1f9177ca2b95e3b3bf"
+    },
+    "release/camera_live_native_20261010/real_config.run.log": {
+      "bytes": 32099,
+      "sha256": "bb36ae63f633c925b0c8ea7c4a1214103e3fc55dafd38ad8019779a77abd2feb"
+    },
+    "release/camera_live_native_20261010/real_reconnect.run.log": {
+      "bytes": 16743,
+      "sha256": "9424f38ed05c5cbfc8e8af352fd8ad501a497fa16277d09388f3dca133d93f32"
+    },
+    "release/camera_live_native_20261010/simulation_qualification.json": {
+      "bytes": 1001,
+      "sha256": "2bf508f88f28b3e3b3bc5fbb50af5a3eceac09e628a707077de356c9eb7d87fd"
+    },
+    "release/camera_live_native_20261010/source_hashes.json": {
+      "bytes": 1712,
+      "sha256": "a2801d53112e76dadf3d766e34d9c34bb9ead1275ab9a99fbc96bc695f8fff66"
+    },
+    "release/camera_live_native_20261010/source_snapshot.zip": {
+      "bytes": 36242,
+      "sha256": "14e49c32e5c3e869ff82369e5107b341905afde826cb992b15bd589c29e08545"
+    },
+    "release/camera_native_rx_first_20261010/baseline_polling.run.log": {
+      "bytes": 16002,
+      "sha256": "12f684a633ee96bd99bebf171100ca2f548a18f6cca66c8956926a552984d044"
+    },
+    "release/camera_native_rx_first_20261010/build_qualification.json": {
+      "bytes": 3715,
+      "sha256": "9f89b36edc0fadb07c13089692c74199eb33be9e6dee1f881f37f971ed3fcd71"
+    },
+    "release/camera_native_rx_first_20261010/build_run.log": {
+      "bytes": 134576,
+      "sha256": "2e786ee8a3791a93d6c4476471421bc56e30fe8fef469221a2e92bfb297128cb"
+    },
+    "release/camera_native_rx_first_20261010/camera_native_rx_first_top.sbit": {
+      "bytes": 3791112,
+      "sha256": "b918087a2ec5179e78f1a3f78e903538e401abbc120ba40201abb45a9fb5cbc2"
+    },
+    "release/camera_native_rx_first_20261010/camera_native_rx_first_top.smsk": {
+      "bytes": 3791112,
+      "sha256": "61bfdac038bdcd5c7eb6a427b7d9d3b5a06046742db34e805ec5f8dde79f18c1"
+    },
+    "release/camera_native_rx_first_20261010/camera_native_rx_first_top_timing_summary_after_hold_fix.txt": {
+      "bytes": 7935,
+      "sha256": "ff69bdf1557dcabd3402cfe48388e8974713191a8233db91f2e5bb5ef354b268"
+    },
+    "release/camera_native_rx_first_20261010/config_rx.run.log": {
+      "bytes": 30094,
+      "sha256": "19922a7b4765aa25793aded559e5e662d2e358ef29420d1946434c186fed8599"
+    },
+    "release/camera_native_rx_first_20261010/config_tx.run.log": {
+      "bytes": 31995,
+      "sha256": "52050729d90acd1d8bb286b50bfd7b58d62e460c067112700262f973a87f9c51"
+    },
+    "release/camera_native_rx_first_20261010/fixed_rx_dvi.run.log": {
+      "bytes": 16652,
+      "sha256": "4d6dba919ce3df1f19498d8973d980e17748168c0bd676377fdb2f39674c2286"
+    },
+    "release/camera_native_rx_first_20261010/fixed_rx_reconnect.run.log": {
+      "bytes": 16509,
+      "sha256": "ea356ed410addf8e21ee2a6ec1bad2681c32bad0dce3db91cc71a6a45d96ace0"
+    },
+    "release/camera_native_rx_first_20261010/fixed_tx_reconnect.run.log": {
+      "bytes": 16688,
+      "sha256": "c09fada40cf167509c3834f3f888c16ddb8d2179b4d917b4eb599daf58ed07c3"
+    },
+    "release/camera_native_rx_first_20261010/pixels.run.log": {
+      "bytes": 2369,
+      "sha256": "76150b036ef1b28dcdab38a84e4b24546a244db6edb137ea72dcf0985b659225"
+    },
+    "release/camera_native_rx_first_20261010/pixels_missing_vs.run.log": {
+      "bytes": 2435,
+      "sha256": "2d0656a489db2b391d0cb315c2682ea2c0d8eca6411a067ca37ec10654a81939"
+    },
+    "release/camera_native_rx_first_20261010/simulation_qualification.json": {
+      "bytes": 1495,
+      "sha256": "7be614395ab2d26e666beec5ecbbb780c11800c1033c533fdb1d12e5467278fe"
+    },
+    "release/camera_native_rx_first_20261010/source_hashes.json": {
+      "bytes": 1756,
+      "sha256": "fa5a26f91c542b3251c63d4373c80c842d9a2b10445d5e2da06bbdcaaad7d243"
+    },
+    "release/camera_native_rx_first_20261010/source_snapshot.zip": {
+      "bytes": 40857,
+      "sha256": "6e18bd53ae8807ca9034f0390e4d5e697e1e61b991224abd7b71f6617992e8e8"
+    },
+    "release/ddr_startup_fixed_20261009/board_ddr.fdc": {
+      "bytes": 65075,
+      "sha256": "f4c9023ff609082127024fdb228c67bac765cc71e70611a5bf8cdf7f048119fb"
+    },
+    "release/ddr_startup_fixed_20261009/hdmi_startup_fix_20261009.md": {
+      "bytes": 2524,
+      "sha256": "e800f1ed58539cc7b776f0f1f79fa77321f7b4f7990336bd1769736547d3ab56"
+    },
+    "release/ddr_startup_fixed_20261009/manifest.json": {
+      "bytes": 20193,
+      "sha256": "e9bd70f553be9e4f6b9b048f7e877060ebd4c1725f250d148a3b628d1d1668ff"
+    },
+    "release/ddr_startup_fixed_20261009/source_snapshot.zip": {
+      "bytes": 954046,
+      "sha256": "ce06b4543d976be62f8d91cd35d773c97fa6d53c4f1dd84cc6de68149820b0f6"
+    },
+    "release/ddr_startup_fixed_20261009/video_correct_ddr_top.dmr": {
+      "bytes": 272243,
+      "sha256": "2fd2dffbf47a283ad3a8017d20b194ec374bcb5867cc2b395e0dc312e9cb08a4"
+    },
+    "release/ddr_startup_fixed_20261009/video_correct_ddr_top.rtr": {
+      "bytes": 1505170,
+      "sha256": "e1b3ddce36d7b8e6be8f63b655a71b4ba78eb6068abc601fade35e1136a87d32"
+    },
+    "release/ddr_startup_fixed_20261009/video_correct_ddr_top.sbit": {
+      "bytes": 3791112,
+      "sha256": "85c11bebe47b97621619daf1fbf0f04e33fa270f5444e481c8280ee2d5ac2875"
+    },
+    "release/ddr_startup_fixed_20261009/video_correct_ddr_top.smsk": {
+      "bytes": 3791112,
+      "sha256": "ed58aa35d30e49631e4c0d9dd88216e340d940eefbadff16475f23a2a5f75c1e"
+    },
+    "results/hardware_20261009/adc_temperature.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/board_io.log": {
+      "bytes": 2713,
+      "sha256": "26f534f1872fbbd66e2dcb345d6d5669e3df689c745261bc5428bcbe50e23b98"
+    },
+    "results/hardware_20261009/bram_camera_recovered_20261011.json": {
+      "bytes": 2324,
+      "sha256": "d0b730e39fa4d9ae76781a0cccc83e7e70d2ddb9eb12bbae26ee159cf5715b46"
+    },
+    "results/hardware_20261009/bram_camera_recovered_before_native_20261011.png": {
+      "bytes": 947383,
+      "sha256": "fd3fa09f4afe6d23f9936726052d239ed3a69a78b669915e1ac019647fdad92f"
+    },
+    "results/hardware_20261009/bram_probe_after_native_black_20261011.json": {
+      "bytes": 1088,
+      "sha256": "acaee6af08992285255d6f244e7b1b710e2687b538be312f94c6e33cef92a068"
+    },
+    "results/hardware_20261009/bram_probe_after_native_black_20261011.png": {
+      "bytes": 14586,
+      "sha256": "5e59b777c67a9f438a10f6bc634d1df33ea9fe4d71a4869776d346a8fcee7ba9"
+    },
+    "results/hardware_20261009/bram_reconnect_before_hd_upgrade_20261010.json": {
+      "bytes": 1094,
+      "sha256": "a1c38b6d63d723156b809b571ec4248472378ec9cee75a54457fb78cc47f74e6"
+    },
+    "results/hardware_20261009/bram_reconnect_before_hd_upgrade_20261010.png": {
+      "bytes": 15718,
+      "sha256": "9d5a1b4a4b601e795b08e9a8d40986e0f79b2f0b2b805e13e93c78398bc401c6"
+    },
+    "results/hardware_20261009/camera_bram_after_live_input_loss_20261010.json": {
+      "bytes": 1142,
+      "sha256": "4350aeded1b65a5446d447261e47663df01d1b51c03f287dfd259449a6e475e4"
+    },
+    "results/hardware_20261009/camera_bram_after_live_input_loss_20261010.png": {
+      "bytes": 17370,
+      "sha256": "9f2179263044ab33ffa9172a940fa650dac9c8fa3226acd45b74ba404a6a0132"
+    },
+    "results/hardware_20261009/camera_bram_initial_grid_20261010.json": {
+      "bytes": 1131,
+      "sha256": "ebc87c6f48c9b55409afb08552c49459cdc64c9bdd76b907c29ea8a82c5522c9"
+    },
+    "results/hardware_20261009/camera_bram_initial_grid_20261010.png": {
+      "bytes": 15151,
+      "sha256": "46d92cc4854d2458c4bb7ed6a1fcc670edcb20f2d555a4537cc6ae6dd8b98f2d"
+    },
+    "results/hardware_20261009/camera_bram_input_loss_20261010.mp4": {
+      "bytes": 74257963,
+      "sha256": "6bfc9299357bb4144e86eb06f2f139742c3cf61bfc982d1dc5b3df715178510a"
+    },
+    "results/hardware_20261009/camera_bram_live_state_20261010.json": {
+      "bytes": 2467,
+      "sha256": "2dab50acba3b8711038be2255abe3797463fcc293547229cc3e42243a3d6c5b9"
+    },
+    "results/hardware_20261009/camera_direct_no_signal_20261011.json": {
+      "bytes": 1326,
+      "sha256": "a34259ab415fd401654bf0bf827864143705bdc9aca145f658a7d20e3587812e"
+    },
+    "results/hardware_20261009/camera_direct_obs_user_20261010.png": {
+      "bytes": 1411876,
+      "sha256": "ecfe05c65ff7eb46680394fe467a9474de1b14c7d85d33dcc83e6279a08f71cf"
+    },
+    "results/hardware_20261009/camera_direct_recovered_20261011.json": {
+      "bytes": 1288,
+      "sha256": "515e731c477e4aa48e0a661353e53382b74665c7c26f32138842f3d0020b0829"
+    },
+    "results/hardware_20261009/camera_flicker_state_20261011.json": {
+      "bytes": 6726,
+      "sha256": "b876a237774af987fe1c07fcda4d1c98c6719cfaea5dd95dc4e0eb3213a22128"
+    },
+    "results/hardware_20261009/camera_live_bram_program_20261010_195231.json": {
+      "bytes": 378,
+      "sha256": "9cc51e02509f5e61f8245e4f52a56ebe353069cc5c8bb56953f372a72175e535"
+    },
+    "results/hardware_20261009/camera_live_bram_reconnect_program_20261010_210414.json": {
+      "bytes": 388,
+      "sha256": "68d02f3d808610ca475606132fee7497f9d1255028b2bb74f1ee9330a2c74265"
+    },
+    "results/hardware_20261009/camera_live_bram_reconnect_program_20261011_003652.json": {
+      "bytes": 388,
+      "sha256": "d0c1c1c945ad5bb273069095342be5982e7afcd83077cc5181f6996ca9874a02"
+    },
+    "results/hardware_20261009/camera_live_native_program_20261010_224110.json": {
+      "bytes": 380,
+      "sha256": "b79a927f8eaa5127cdce50e5b988e3c6cd479548323503fae0cf61e6eb6e7d05"
+    },
+    "results/hardware_20261009/camera_native_comparison_state_20261011.json": {
+      "bytes": 3822,
+      "sha256": "9e2066ce713a11c8f8a33127e554c61176a4b6404365c75378f418032a81e852"
+    },
+    "results/hardware_20261009/camera_native_flicker_observation_20261011.json": {
+      "bytes": 2705,
+      "sha256": "c6fd7c40cdef00b2689ff725c866e8abd6cd30ff9bd83f56f5f88888ebec862a"
+    },
+    "results/hardware_20261009/camera_native_rx_first_program_20261010_225301.json": {
+      "bytes": 384,
+      "sha256": "74559d0afa43e07e6adfc25db3dbcc7013737a60533c4cc739a71bb8dac29825"
+    },
+    "results/hardware_20261009/camera_native_rx_first_program_20261011_005851.json": {
+      "bytes": 384,
+      "sha256": "8bbb2db885815c8e6d9841a062d944d9ffbce02ea49cb5413d95cef04e40fe88"
+    },
+    "results/hardware_20261009/camera_native_state_20261010.json": {
+      "bytes": 2047,
+      "sha256": "7a23bfa7aa0a2bbfe9cb74887eb88119825ab291159449b53afbf79a1c7fd2d5"
+    },
+    "results/hardware_20261009/camera_reconnect_state_20261010.json": {
+      "bytes": 3041,
+      "sha256": "28496b921da00e6c45fd8838773acd0a184589b8229770a01072f7a64fed1bf2"
+    },
+    "results/hardware_20261009/camera_rx_first_native_state_20261010.json": {
+      "bytes": 2553,
+      "sha256": "9e140927fb23d7fe2b285e544bc37f558636838bf8725729a03b4c0447e02b71"
+    },
+    "results/hardware_20261009/capture_after_reconnect.log": {
+      "bytes": 897,
+      "sha256": "cf82d0e340940e11b1d9800a50bc3340e48afe61947a1e3a7514a7b53ede3e9f"
+    },
+    "results/hardware_20261009/capture_after_reconnect.png": {
+      "bytes": 16734,
+      "sha256": "3c32566c6f8b474091ce0260c08e985375093dcee0b247f7bfcb28b1a8b2037f"
+    },
+    "results/hardware_20261009/capture_after_reload.log": {
+      "bytes": 894,
+      "sha256": "9ff27fa18c7424dbf13cdedaff826f1afa92a854f20221be1364d78741d02009"
+    },
+    "results/hardware_20261009/capture_after_reload.png": {
+      "bytes": 16734,
+      "sha256": "3c32566c6f8b474091ce0260c08e985375093dcee0b247f7bfcb28b1a8b2037f"
+    },
+    "results/hardware_20261009/capture_camera_passthrough.jpg": {
+      "bytes": 97811,
+      "sha256": "2a4f41a80736397b68b01c94212a10d35690fd70ba7cca6c544faea9e4a0da6c"
+    },
+    "results/hardware_20261009/capture_camera_passthrough_current.jpg": {
+      "bytes": 97811,
+      "sha256": "2a4f41a80736397b68b01c94212a10d35690fd70ba7cca6c544faea9e4a0da6c"
+    },
+    "results/hardware_20261009/capture_camera_reconnected.jpg": {
+      "bytes": 134261,
+      "sha256": "8f1aac6779d7683762d770c581f7b5a226585727973f43999df37dcd446623f6"
+    },
+    "results/hardware_20261009/capture_ddr_startup_fixed.jpg": {
+      "bytes": 134261,
+      "sha256": "8f1aac6779d7683762d770c581f7b5a226585727973f43999df37dcd446623f6"
+    },
+    "results/hardware_20261009/capture_ddr_status_probe.jpg": {
+      "bytes": 26693,
+      "sha256": "58979b9678b6a7095afe0bffa84815667cdcf0d5256fe16951055e729b5fa6bb"
+    },
+    "results/hardware_20261009/capture_ddr_status_probe.json": {
+      "bytes": 344,
+      "sha256": "3451c4fa0928882103aa169844ea6034d99f9dc11e9633eb19136454e4268193"
+    },
+    "results/hardware_20261009/capture_device_options.log": {
+      "bytes": 6625,
+      "sha256": "18c57e64f0089f2c620bc341168998a2716b278b30eaf89e3759ccf5341cf38e"
+    },
+    "results/hardware_20261009/capture_internal_fixture.jpg": {
+      "bytes": 42954,
+      "sha256": "359bb5fd0ea7e44f855c25089bf18a95a72c561eb45ac5fde2556acb58af6170"
+    },
+    "results/hardware_20261009/capture_internal_fixture_card_mjpeg.jpg": {
+      "bytes": 120997,
+      "sha256": "24623f229c3c6c55fbc4485180a16e48c977608f0106a271f76b95a842418bf8"
+    },
+    "results/hardware_20261009/capture_internal_fixture_card_mjpeg.log": {
+      "bytes": 959,
+      "sha256": "836001ef8d5ca6e922830843d3cdceedbb6a3eefe215cf02b8c82a6c9ea5ad3c"
+    },
+    "results/hardware_20261009/capture_internal_fixture_native.log": {
+      "bytes": 1598,
+      "sha256": "336fe5265e4bf315116968ec8465ff1e1f653d442d5ae414b776f5fb7b1bbf8f"
+    },
+    "results/hardware_20261009/capture_internal_fixture_native.nv12": {
+      "bytes": 3110400,
+      "sha256": "1c62ec20150d0fe631688528a57d32efc20d06b7c3b2bfa91a73cf5f51e257a1"
+    },
+    "results/hardware_20261009/capture_internal_fixture_native.png": {
+      "bytes": 73723,
+      "sha256": "df01de879ce62129dd0edee1a19e075b2af082424dca8f43c3c6af98781a359b"
+    },
+    "results/hardware_20261009/capture_internal_fixture_yuy2.log": {
+      "bytes": 905,
+      "sha256": "32f97b647059025332f9a378d22b29b3dc7a73c526b61a4f96e7a3e43e3b58f6"
+    },
+    "results/hardware_20261009/capture_internal_fixture_yuy2.png": {
+      "bytes": 76850,
+      "sha256": "70381cf08458036b68b19e67c77eb809fbab9baee3a8adb79679f56f6643ee32"
+    },
+    "results/hardware_20261009/capture_link_i2c_probe_v1.jpg": {
+      "bytes": 31130,
+      "sha256": "c2dc8c712d701c06254675379b8c09dbca0dfe47ffb36b16ed95858dfcbc1140"
+    },
+    "results/hardware_20261009/capture_link_i2c_probe_v1.json": {
+      "bytes": 430,
+      "sha256": "640207a60fd85bfbb9f95f77ed5223c69e85240b73da0b57ac9ddfde10198bef"
+    },
+    "results/hardware_20261009/capture_link_i2c_probe_v1_later.jpg": {
+      "bytes": 31130,
+      "sha256": "c2dc8c712d701c06254675379b8c09dbca0dfe47ffb36b16ed95858dfcbc1140"
+    },
+    "results/hardware_20261009/capture_link_i2c_probe_v2.jpg": {
+      "bytes": 39887,
+      "sha256": "1c3a5c6bc67f8ecc13a327f4600532520f84df9919d9746a8eac4559313662ed"
+    },
+    "results/hardware_20261009/capture_link_i2c_probe_v2.json": {
+      "bytes": 486,
+      "sha256": "cce63073051120237c7b35165ee89bae3dc23966d949486871ff1e21e49aaa63"
+    },
+    "results/hardware_20261009/capture_link_probe.log": {
+      "bytes": 892,
+      "sha256": "c1f760aa926ed9936174d5f756822f8559482fd70a2fcd976cb1164013e7ad27"
+    },
+    "results/hardware_20261009/capture_link_probe.png": {
+      "bytes": 17618,
+      "sha256": "a17174ad47eff75dc8749fd3c71b78cf0be9d3456a9ab886b1d21587b679cc70"
+    },
+    "results/hardware_20261009/capture_link_probe_resume.log": {
+      "bytes": 898,
+      "sha256": "cffed98463a2aaaefb4be6aac35e76f287a386bdb3448a375f555144b819a0e7"
+    },
+    "results/hardware_20261009/capture_link_probe_resume.png": {
+      "bytes": 47232,
+      "sha256": "e23c4f317f7bc8f4ce4ddfd8383ce60675d3e14695560652fbaf106f4b95c87a"
+    },
+    "results/hardware_20261009/capture_options.log": {
+      "bytes": 6625,
+      "sha256": "be931d1da5b27ef8655c675aa6c2845d15fcba2ad47d024f936d04f2664a154e"
+    },
+    "results/hardware_20261009/capture_output.log": {
+      "bytes": 888,
+      "sha256": "b31ebbc474cd627459ad3ba13fbcee7f2ea64f6dae4dd53d5730ee2e002afc95"
+    },
+    "results/hardware_20261009/capture_output.png": {
+      "bytes": 16734,
+      "sha256": "3c32566c6f8b474091ce0260c08e985375093dcee0b247f7bfcb28b1a8b2037f"
+    },
+    "results/hardware_20261009/capture_target_displayed.jpg": {
+      "bytes": 134261,
+      "sha256": "8f1aac6779d7683762d770c581f7b5a226585727973f43999df37dcd446623f6"
+    },
+    "results/hardware_20261009/compare_internal_fixture.json": {
+      "bytes": 1527,
+      "sha256": "d3f507de0a41cbad88282010fee83c07ebce283f138b832740ecfd83e73a3b7d"
+    },
+    "results/hardware_20261009/compare_internal_fixture_card_mjpeg.json": {
+      "bytes": 1564,
+      "sha256": "80612759a336b2cf640f45424d5ad3d02adee4353f7d215ff937a8a1f7447b4f"
+    },
+    "results/hardware_20261009/compare_internal_fixture_native.json": {
+      "bytes": 1552,
+      "sha256": "9daa2b87926643ae81f477d1bc9cc672c6a0dec872311f6ff1b044823ce61207"
+    },
+    "results/hardware_20261009/config_help.log": {
+      "bytes": 1457,
+      "sha256": "0870551785186f617b34d350dc78ba5dc21337df104438d76d6c363e8168d1f7"
+    },
+    "results/hardware_20261009/direct_camera_before_reconnect_20261011.png": {
+      "bytes": 958745,
+      "sha256": "51488dad4e47bfbd0d6283c070a4ad373198d8929ddebe4f6c0861eceb1257fd"
+    },
+    "results/hardware_20261009/dshow_current_device_resume_20261010.json": {
+      "bytes": 5043,
+      "sha256": "49bff401be1d1cbdf2a5c00785f7f17ef93e1cb4c3b2c8186fa69a17da895f92"
+    },
+    "results/hardware_20261009/dshow_device_before_live_replug_20261010_195107.json": {
+      "bytes": 5043,
+      "sha256": "661e2ad91af5303ca9e185f25a37726ed2e40cdab62229b5dc380cbf66a167d0"
+    },
+    "results/hardware_20261009/hardware_status_before_live_preview_20261010.json": {
+      "bytes": 3809,
+      "sha256": "ea7fd8e0ff639cdbd83c7cc543d72c02cfbea6432c74f4da98ce14d4e284ed68"
+    },
+    "results/hardware_20261009/hardware_status_before_native_20261010.json": {
+      "bytes": 4593,
+      "sha256": "06d9cc77a473a2d21837dc3a3b5030af8d24e58ab806a2c406ffad5a4eed3c5a"
+    },
+    "results/hardware_20261009/hdmi_runtime_probe_20261010.json": {
+      "bytes": 1206,
+      "sha256": "b3c27f0db976814fec4c7c9a6645ae1731968812ef3d10b36681ccb460b8ae89"
+    },
+    "results/hardware_20261009/hdmi_runtime_probe_20261010.png": {
+      "bytes": 12043,
+      "sha256": "b22b46d6554e770839c5a8a2c621fb816e9213dd74500eeb45dd7faaa14f575b"
+    },
+    "results/hardware_20261009/jtag_server.log": {
+      "bytes": 280,
+      "sha256": "d19d914bf010c76a4a7f921ebb14d200a1474ce4f569862884a2d7b518f97ab3"
+    },
+    "results/hardware_20261009/jtag_server_error.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/link_probe_decoded.json": {
+      "bytes": 267,
+      "sha256": "610a181857b9c9b6cb163a5511e823bfd5ebcda5fd992246f5b90ae8944c7c12"
+    },
+    "results/hardware_20261009/link_probe_resume_decoded.json": {
+      "bytes": 634,
+      "sha256": "b9c1d6c5ab1cdb944f43f93bd22a8716c5e659cc8dd4cd9aaadeba0f903df281"
+    },
+    "results/hardware_20261009/live_capture_20261009_183151_950.log": {
+      "bytes": 765,
+      "sha256": "f9ace32255735a475aedb7267d797f32fe294c35464377954454c9041b515d3f"
+    },
+    "results/hardware_20261009/live_capture_20261009_183151_950.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/live_capture_20261009_191148_264.log": {
+      "bytes": 765,
+      "sha256": "f02e54fd084b56eba890f0a6b4312ca123aa8982bea2f6929b85827897769c7e"
+    },
+    "results/hardware_20261009/live_capture_20261009_191148_264.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/live_capture_20261009_191709_142.log": {
+      "bytes": 765,
+      "sha256": "1a09a7369d14b59009ce271d749c9e7216808db722728977854c2e9e2ddfd36c"
+    },
+    "results/hardware_20261009/live_capture_20261009_191709_142.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/live_capture_20261009_192014_952.log": {
+      "bytes": 615,
+      "sha256": "662dcdd973f822386b66bd26ffe6f21e1a502f7d16eef5e04e9288b297ed03de"
+    },
+    "results/hardware_20261009/live_capture_20261009_192014_952.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/live_capture_stderr.log": {
+      "bytes": 1796514,
+      "sha256": "2758ef17ddd15a55c2f5db188ce9fb850023c79cfa8ca9dffb2bbe67c50d2769"
+    },
+    "results/hardware_20261009/live_capture_stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/live_latest.jpg": {
+      "bytes": 97811,
+      "sha256": "2a4f41a80736397b68b01c94212a10d35690fd70ba7cca6c544faea9e4a0da6c"
+    },
+    "results/hardware_20261009/live_preview_processes.json": {
+      "bytes": 533,
+      "sha256": "bba96451ea4d57a363895fc4a1fb3b9e5fad1d4ddf7697fa45f5959080e3cf46"
+    },
+    "results/hardware_20261009/live_preview_state_20261010.json": {
+      "bytes": 1341,
+      "sha256": "c2d1833e4f828d9aab52b3908c89885e7c9d52e4561abd4f64011e61c8b4abcc"
+    },
+    "results/hardware_20261009/main_after_key0_bars_20261010.jpg": {
+      "bytes": 78261,
+      "sha256": "eada2cce4bd80c6fb1b6203c7e1963d9ab1204a59e8703e099af6e785fa17e53"
+    },
+    "results/hardware_20261009/ms7200_power_sequence.png": {
+      "bytes": 89137,
+      "sha256": "fdee2729884f31c901e4ba3260ff39b12971b2d799e1176ee9da43c004d929f1"
+    },
+    "results/hardware_20261009/native_camera_mjpeg_flicker_20261011.png": {
+      "bytes": 1197156,
+      "sha256": "05734ca0dafdb37ac43b1addc02c98f043df8d755804bdd5e9c583e598c3cbce"
+    },
+    "results/hardware_20261009/native_camera_nv12_black_frame_20261011.png": {
+      "bytes": 6142,
+      "sha256": "fa20ca01f393807e89e6453bb0dca221dd9f3ba1aca393cb030bd139cba899eb"
+    },
+    "results/hardware_20261009/native_nv12_direct_stable_20261011.json": {
+      "bytes": 1670,
+      "sha256": "761cc8a2ce7b353d255aa49e73cc20a09625a6095a8ed20fb59b70c60144ec04"
+    },
+    "results/hardware_20261009/native_rx_first_after_key0_no_signal_20261010.jpg": {
+      "bytes": 80483,
+      "sha256": "2e7b419ab94b5a9d24623df94678b6a6148eb903467230787d49bda1750c4435"
+    },
+    "results/hardware_20261009/native_rx_first_before_reset_20261010.jpg": {
+      "bytes": 77614,
+      "sha256": "db2131a2550c829b0cbf81f847897f6cd28b0706e1f150d8b065a419214859db"
+    },
+    "results/hardware_20261009/native_target_viewer_20261010.json": {
+      "bytes": 234,
+      "sha256": "b632f133d0d9073ea165cc218d194afa7a3976a75c99b624d6612db05a4f951f"
+    },
+    "results/hardware_20261009/native_target_viewer_current_20261010.json": {
+      "bytes": 234,
+      "sha256": "db77c6590e8a760cc9c48a299b169c6550ce09c21378f583a2f7eb9e9cbd1e3c"
+    },
+    "results/hardware_20261009/obs_after_direct_no_signal_20261011.txt": {
+      "bytes": 36633,
+      "sha256": "0275d623becf3f4890de06e31f18666780b0688281767e805c0a0d380b440ee7"
+    },
+    "results/hardware_20261009/obs_after_flicker_format_check_20261011.txt": {
+      "bytes": 36397,
+      "sha256": "cd146c90ae9564e222d2ad909e623159ff2a658340cfe51639324d9aad862893"
+    },
+    "results/hardware_20261009/obs_before_flicker_format_check_20261011.txt": {
+      "bytes": 34948,
+      "sha256": "286a91754404c9417b30003562118464b70ba657efd16decde31c309d6e13fd1"
+    },
+    "results/hardware_20261009/obs_camera_viewer.png": {
+      "bytes": 20715,
+      "sha256": "660936216a969f8cd66a4a24ca74e5f3f53ae12dd584fd2cafead306b0b0e2df"
+    },
+    "results/hardware_20261009/obs_device_query.json": {
+      "bytes": 5043,
+      "sha256": "49bff401be1d1cbdf2a5c00785f7f17ef93e1cb4c3b2c8186fa69a17da895f92"
+    },
+    "results/hardware_20261009/obs_device_refresh_20261010.json": {
+      "bytes": 603,
+      "sha256": "6c98a7d63cc695e9198995c0b375e70c576924670904184768a541c2e45f0e76"
+    },
+    "results/hardware_20261009/obs_native_mjpeg_and_nv12_flicker_20261011.txt": {
+      "bytes": 70410,
+      "sha256": "a05dd1d88c6a9d637c83d49e07cfe7e2568952c608364fcb7e98c3bf104eeb39"
+    },
+    "results/hardware_20261009/obs_scene_before_device_refresh_20261010_061257.json": {
+      "bytes": 5796,
+      "sha256": "eab5a63f03fa2ec407b164e4f078ceed55f3e4da0198780d1dd47899024db6c8"
+    },
+    "results/hardware_20261009/obs_scene_before_device_refresh_20261010_115130.json": {
+      "bytes": 5826,
+      "sha256": "9d4b84e885ecaecf8bb33c51449a2befea27057ca3ec7dd11267349da7f3791e"
+    },
+    "results/hardware_20261009/obs_scene_before_flicker_format_check_20261011.json": {
+      "bytes": 5890,
+      "sha256": "56f2231c9c76222c02ace00d0b5b369350ce83399219c6915aa78749ff9e4721"
+    },
+    "results/hardware_20261009/obs_scene_mjpeg_1080p30_20261011.json": {
+      "bytes": 5896,
+      "sha256": "399c2c4ff3e8db8bfc3e2f16a03c8ad0a9ef27067d0a3859d2f9403244f76b13"
+    },
+    "results/hardware_20261009/paused_state_20261011.json": {
+      "bytes": 3079,
+      "sha256": "60ad432e3d22a1e92c8eaf11ad0ec0b8d90d3e5fd1078767bdf41381968ac652"
+    },
+    "results/hardware_20261009/preview_processes.json": {
+      "bytes": 52,
+      "sha256": "016532fd885ab74b061e8cfed1c5f951b0f3826b2d7a314213b28771fef9d575"
+    },
+    "results/hardware_20261009/preview_server.log": {
+      "bytes": 34,
+      "sha256": "98f58a498ec247709addce855edb83fff7ea0677c7bdfa9522044807310a8295"
+    },
+    "results/hardware_20261009/preview_server_20261009_183151_950.log": {
+      "bytes": 34,
+      "sha256": "98f58a498ec247709addce855edb83fff7ea0677c7bdfa9522044807310a8295"
+    },
+    "results/hardware_20261009/preview_server_20261009_183151_950.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/preview_server_error.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/preview_target_server.log": {
+      "bytes": 34,
+      "sha256": "98f58a498ec247709addce855edb83fff7ea0677c7bdfa9522044807310a8295"
+    },
+    "results/hardware_20261009/preview_target_server_error.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "results/hardware_20261009/proc_amp_before.json": {
+      "bytes": 218,
+      "sha256": "17257f3659a0ae0ff44d074f5240597acc5895347e09e6a3369fdf0b2aa7488e"
+    },
+    "results/hardware_20261009/proc_amp_before_ps51.json": {
+      "bytes": 206,
+      "sha256": "34052e085a52427eb3d7fcaab40de40ab585b5474a3424b72d7a20e7776b73fb"
+    },
+    "results/hardware_20261009/proc_amp_before_v2.json": {
+      "bytes": 4918,
+      "sha256": "e0e474c3b02c0b5aff9d80b13b0182142922cfe9c44ea0d29337b4e53295a7b7"
+    },
+    "results/hardware_20261009/program_after_cabling.log": {
+      "bytes": 6314,
+      "sha256": "ed2dc88e8ca8e2a0ef852f795715d51695bc79454fded1a8216e813e0db82553"
+    },
+    "results/hardware_20261009/program_camera_live_bram_20261010_195231.log": {
+      "bytes": 6342,
+      "sha256": "e6123036c5506340fd3428eba30f949addeccd440f3f96cad462172882226eee"
+    },
+    "results/hardware_20261009/program_camera_live_bram_reconnect_20261010_210414.log": {
+      "bytes": 6362,
+      "sha256": "77cafeff511f7a07d4d7fbb29472a71f757a6ae01a5304a1f9be614b242a1827"
+    },
+    "results/hardware_20261009/program_camera_live_bram_reconnect_20261011_003652.log": {
+      "bytes": 6362,
+      "sha256": "d9663239fc057fd90c983794d532cf88d95457ee60612b6cd96f251f25a10fd9"
+    },
+    "results/hardware_20261009/program_camera_live_native_20261010_224110.log": {
+      "bytes": 6350,
+      "sha256": "bc739a8ed3f856406b1a5fd329afd548ca42ea455fb67a04add14c34535b1d96"
+    },
+    "results/hardware_20261009/program_camera_live_retry_20261010.log": {
+      "bytes": 6440,
+      "sha256": "c47a137d9f511c5ce6c358202c2c4537547e53a20e69bd38c7239ce9fa8dea39"
+    },
+    "results/hardware_20261009/program_camera_native_rx_first_20261010_225301.log": {
+      "bytes": 6366,
+      "sha256": "2c0cec13a37dc983dad7881b244462632e48ec29c70288a965c910424e228e22"
+    },
+    "results/hardware_20261009/program_camera_native_rx_first_20261011_005851.log": {
+      "bytes": 6366,
+      "sha256": "b7b607d8d2a525932c5d7931fe49c72b1358e504fb208259a1a83c07d7906533"
+    },
+    "results/hardware_20261009/program_camera_passthrough.log": {
+      "bytes": 6378,
+      "sha256": "76433e8d1763b751fc66405baad7ceca2a7a1a414828710daf79299202b1ba5d"
+    },
+    "results/hardware_20261009/program_camera_passthrough_20261010.log": {
+      "bytes": 6378,
+      "sha256": "09a82783b739b0fa407be67ae4b72c2f84d51f028dda4ce9a11819b780dbd5ae"
+    },
+    "results/hardware_20261009/program_ddr_cram.log": {
+      "bytes": 6314,
+      "sha256": "2bacb9f002cd335ba0133d9da3e8751e93129cb754b9d84438b1e1cffe7bff86"
+    },
+    "results/hardware_20261009/program_ddr_shutdown_1mhz_20261010.log": {
+      "bytes": 6346,
+      "sha256": "0038cb75759e7b409f501a35425144f2f340cfd50d7c274967e8c30f95766c59"
+    },
+    "results/hardware_20261009/program_ddr_startup_fixed.log": {
+      "bytes": 6320,
+      "sha256": "3b60450b0debf628c9b651a1f269ef4186891e4984f0d6078d9d7544fbaf31ea"
+    },
+    "results/hardware_20261009/program_ddr_status_probe.log": {
+      "bytes": 6352,
+      "sha256": "86eac04984982dfd1200add56d8845a11718f4a71122d3df96f814c8363ccbd5"
+    },
+    "results/hardware_20261009/program_hdmi_runtime_probe_20261010.log": {
+      "bytes": 6356,
+      "sha256": "6ebd0dafc203f0bfd3ac2548e135271535e0e0154b254c59d6cd6e6bbcc9b432"
+    },
+    "results/hardware_20261009/program_internal_fixture.log": {
+      "bytes": 6438,
+      "sha256": "1891f4348e32b612a93bab0675ac9400545804da31d848fe115a1c6eac204c7f"
+    },
+    "results/hardware_20261009/program_link_i2c_probe.log": {
+      "bytes": 6348,
+      "sha256": "9fbefd880640868e184bccc1a57836d3e4d47d76373803782775750cc90a647a"
+    },
+    "results/hardware_20261009/program_link_i2c_probe_v2.log": {
+      "bytes": 6360,
+      "sha256": "3271cbd1b1993f6f3d37b83e3e67ddad18a58bc6540f3f1f560a74513280ebaa"
+    },
+    "results/hardware_20261009/program_link_probe.log": {
+      "bytes": 6332,
+      "sha256": "f8d682d207deb8bc8e95497dbf3c8a0498d0f82e23b20efdf909dcf4c7637305"
+    },
+    "results/hardware_20261009/program_link_probe_resume.log": {
+      "bytes": 6332,
+      "sha256": "f8d682d207deb8bc8e95497dbf3c8a0498d0f82e23b20efdf909dcf4c7637305"
+    },
+    "results/hardware_20261009/program_runtime_after_reseat_20261010.log": {
+      "bytes": 6382,
+      "sha256": "058c84f92ca61dbfbdc5c2bd578e53be948ec78b295684fa11943894f62d2e08"
+    },
+    "results/hardware_20261009/program_runtime_isc_1mhz_20261010.log": {
+      "bytes": 3340,
+      "sha256": "1d6b004a3bf87b2c6c9f640b12cfad030a061e4101ebf6ab7264efb05418dfad"
+    },
+    "results/hardware_20261009/program_rx_first_1mhz_resume_20261010.log": {
+      "bytes": 5579,
+      "sha256": "c67cac2415684301af81c7a7571276c6757c738e5aa55ff7c0df76738f3d3cec"
+    },
+    "results/hardware_20261009/program_rx_first_resume_20261010.log": {
+      "bytes": 5636,
+      "sha256": "fbc80795608594859df930bdce2ba33712357dac636c4c6423e0d2a7474c42a6"
+    },
+    "results/hardware_20261009/program_rx_first_shutdown_1mhz_20261010.log": {
+      "bytes": 6440,
+      "sha256": "f8b488ae8240d527bbd4c3b5fda51547b4718c2d0e6e1bb9402d7d2e78d3857d"
+    },
+    "results/hardware_20261009/readback_analysis_resume_20261010.json": {
+      "bytes": 3501,
+      "sha256": "631a94c443ff9006c45a82e1ec89127dcd8cd4d1637685cdd1cbb4a277dec14a"
+    },
+    "results/hardware_20261009/resume_programming_verified_20261010.json": {
+      "bytes": 1209,
+      "sha256": "7746722f12ba79d5ed73565b9f81800a906f212493883eac096d51102699f244"
+    },
+    "results/hardware_20261009/scan_board.log": {
+      "bytes": 2491,
+      "sha256": "de3037167f1c4193029ae8e3dcef6f2cca4a4d03cc42d3360453d7e3f100d8e2"
+    },
+    "results/hardware_20261009/scan_resume_afternoon.log": {
+      "bytes": 1187,
+      "sha256": "01adf82d33451f7634671ed2e10a7622931d49531c1aded812a230c464a6b5df"
+    },
+    "results/hardware_20261009/stalled_isc_recovery_20261010.json": {
+      "bytes": 296,
+      "sha256": "40dc2b8ee074598ceb25e9cf1eca4b4e8dac69f3257b876c2da8737d2a7ca915"
+    },
+    "results/hardware_20261009/verify_after_cabling.log": {
+      "bytes": 3536,
+      "sha256": "6e0336c5b9d1fa9124ab949eb83585499b9ee8d4cfefe01db0f87cfdf6f90ce0"
+    },
+    "results/hardware_20261009/verify_rx_first_1mhz_20261010.log": {
+      "bytes": 4802,
+      "sha256": "c34401168db525c7f654b9691b9f8fc9c41c3befac246ddb20e8f3a15dd8a305"
+    },
+    "results/hardware_20261009/verify_rx_first_500khz_20261010.log": {
+      "bytes": 3635,
+      "sha256": "9bdab8eee648b078b0452c8514d03aca788b708dd2ebcc30bc5fd1f3509d85a9"
+    },
+    "results/hardware_20261009/video_devices.log": {
+      "bytes": 1387,
+      "sha256": "e6a7ca435914a2f1a485ec006ddd287dcd7be8ee6c1a942ba638fa0a7feadf2b"
+    },
+    "rtl/algo/marker_detector.v": {
+      "bytes": 4795,
+      "sha256": "f3625b37800bcb276c7d763e9022b4d7018c9471db0f8c00a3222807116b1cd0"
+    },
+    "rtl/common/reset_sync.v": {
+      "bytes": 278,
+      "sha256": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2"
+    },
+    "rtl/hdmi/diag/hdmi_config_diag.v": {
+      "bytes": 3347,
+      "sha256": "48eda1c2306f90067cfb578075185592f7973fb3b659f210b3e12dda0435cc3e"
+    },
+    "rtl/hdmi/diag/hdmi_config_diag_v2.v": {
+      "bytes": 3497,
+      "sha256": "f0259251f49679e415906e954e6f1a56e8538639f658f3d09731a4850acf273f"
+    },
+    "rtl/hdmi/diag/iic_dri_diag.v": {
+      "bytes": 18343,
+      "sha256": "9070a3a9f706d7d03443f8409cb1a185ec7b77d1bc9da3eb46cdbc1c12d7e9a5"
+    },
+    "rtl/hdmi/diag/iic_dri_diag_v2.v": {
+      "bytes": 19378,
+      "sha256": "c9f7bf40f22b0b18b1ee5d1128662a532b5e88a75a58f91fbbaab367fde8e1a3"
+    },
+    "rtl/hdmi/hdmi_config.v": {
+      "bytes": 5702,
+      "sha256": "25bd7ccb841da20ceb437bd369f2344ebe4077e323348898911fb4bccfa58ba5"
+    },
+    "rtl/hdmi/iic_dri.v": {
+      "bytes": 18569,
+      "sha256": "163749ecb015e200c1ba6f35b9413460e52e959b51a1d81bfe51aff5f0c16fdb"
+    },
+    "rtl/hdmi/ms7200_ctl.v": {
+      "bytes": 33895,
+      "sha256": "2e3a975a3a2fb4553dfba8cfa5f9da9daedbd7cdb002f834ea59d713c7a4abf0"
+    },
+    "rtl/hdmi/ms7210_ctl.v": {
+      "bytes": 11818,
+      "sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242"
+    },
+    "rtl/hdmi/MS7210_SOURCE.md": {
+      "bytes": 2420,
+      "sha256": "4713b6c2f7f6a099e7568932cf9b5281dc85d977e26f3a9b1323a8acf8aa9d5e"
+    },
+    "rtl/hdmi/README.md": {
+      "bytes": 2716,
+      "sha256": "0901ec179ecdea418004f003be9c85e1d80bc8e52e99ac688e823aa6d9e8d578"
+    },
+    "rtl/memory/async_packet_fifo.v": {
+      "bytes": 2797,
+      "sha256": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a"
+    },
+    "rtl/memory/ddr3_ip/ddr3_ip.v": {
+      "bytes": 22192,
+      "sha256": "d3a103ce4864f2c5fdc1a01420f7bf28dcd0b1ea6c49b4d7e24a3c289222649c"
+    },
+    "rtl/memory/ddr3_ip/ddr3_ip_ddrphy_top.v": {
+      "bytes": 53202,
+      "sha256": "bebb715c84309ed6277152f51fe305ed164febc70c44aa5715259c50ea685e87"
+    },
+    "rtl/memory/ddr3_ip/ddr3_ip_tmpl.v": {
+      "bytes": 6220,
+      "sha256": "f7915973307712e059fb107f8f9302cd8d254ba0a61f9d02133bce506f3378b0"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/ddr2_tb/ddr2_test_top_tb.v": {
+      "bytes": 4457,
+      "sha256": "a1b03b594edb9f4ded3ba19e5b79ffa085b863bce8a95f8d09d15e0bf198ff0b"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/ddr3_tb/ddr3_test_top_tb.v": {
+      "bytes": 10674,
+      "sha256": "129233f740303e35255bc6dc9def6694754d6d44bc21136d89a0c78c8c1fc095"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/lpddr_tb/lpddr_test_top_tb.v": {
+      "bytes": 4492,
+      "sha256": "009bd08c867a33c3676a12039803b25ea114674f893bd1bf8babb60958d54522"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/mem/2048Mb_mobile_ddr_parameters.vh": {
+      "bytes": 15784,
+      "sha256": "79050533fe3c031089b4a3342fb697a6f6c48c319ae2f42851f7d7c827ccabeb"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/mem/ddr2.v": {
+      "bytes": 112253,
+      "sha256": "f60ede5952f1eda7335a8c972db0583044b44bbb207c6ad58d8aab0a041d907f"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/mem/ddr2_parameters.vh": {
+      "bytes": 29868,
+      "sha256": "85884841cc62000ba8cd9df1f61fc1a765f3c6d1f329df56726966eab5cee1a5"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/mem/ddr3.v": {
+      "bytes": 168147,
+      "sha256": "4737406fa172b0c68ba052076369c17ad9977c311d0b89434a4325578ab0b87d"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/mem/ddr3_parameters.vh": {
+      "bytes": 86711,
+      "sha256": "690e437be1ac10e2412908afa17ab58434ad8aa686100c77a8184b8e1fb016fa"
+    },
+    "rtl/memory/ddr3_ip/example_design/bench/mem/mobile_ddr.v": {
+      "bytes": 94749,
+      "sha256": "c5446b454b22527209ef8ca6d2b99784b0e1e37fbd907eed3f438afe17b0833e"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/adc/adc.v": {
+      "bytes": 3052,
+      "sha256": "d096e3b3a34c142b44eb9edbb67b0dc07743557d1c2da1576f20542cd1da7d34"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/adc/adc_ctrl.v": {
+      "bytes": 2619,
+      "sha256": "aec7278db10399f195a3f4df3624323441596db1614266b2152f929fa5d0983a"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/axi_bist_top_v1_0.v": {
+      "bytes": 12480,
+      "sha256": "583f88c5a115bdb6ec81d7217e71bedbfd250a6f2a7f7cbab19f2eb7b3648605"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/prbs15_64bit_v1_0.v": {
+      "bytes": 5788,
+      "sha256": "0bb5df486165bf0be77eb6c6f2d460beb578918c06db1c795c5d44ec8cf7be94"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/prbs31_128bit_v1_0.v": {
+      "bytes": 7151,
+      "sha256": "6f792d3091347a3bf00268fd0752e3c049fc80c8790457b6e7da767e0b2bf6a7"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/test_ddr.v": {
+      "bytes": 47100,
+      "sha256": "1d0a860fa0a426dfc20bc44322e57812c892df5eb5049fd31366d377ebd9a936"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/test_main_ctrl_v1_0.v": {
+      "bytes": 6388,
+      "sha256": "1d9a5ba7a6fed34ae09a6f46b0e3f7e2f24c17ef02110eca1c270c2422769eb0"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/test_rd_ctrl_v1_0.v": {
+      "bytes": 16144,
+      "sha256": "d1bc613b0102efb2e13eefbc131d62ad4cde63ce7f3cf6fc781268de707e9ade"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/test_wr_ctrl_v1_0.v": {
+      "bytes": 11766,
+      "sha256": "a455e81d4ee494006b25b466537e5eb7d9acfb28d24f4f5531365e1a00145913"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_clk_gen_32bit.v": {
+      "bytes": 1048,
+      "sha256": "62f78ac1c82ca75f06a5d6242e06488ee3035f2d2abc6ba19af44060972f914c"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_cmd_parser_32bit.v": {
+      "bytes": 6741,
+      "sha256": "937308c48f9ffe9ccd29df4b03e68a439b5906807a94fc7c2b6f6773784eeea1"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_seu_rs232_intf.v": {
+      "bytes": 3495,
+      "sha256": "b23d375b33a3c1d212e92dda8ce58704231e7ed7b72a2a9780c942ffba8316c2"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_seu_uart_rx.v": {
+      "bytes": 3512,
+      "sha256": "2679f4d666d200c95b7c13c0a48798b99777ac16b3d9b458cbe026b6ca63d5f2"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_seu_uart_tx.v": {
+      "bytes": 3711,
+      "sha256": "82967062eaa2b3f600de286ad74f4d186d3885793a0ccf1cd1b69b01a5a622e5"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_uart_ctrl_32bit.v": {
+      "bytes": 6008,
+      "sha256": "235d9d78dc1bea4c0106e1d43a7bf57649463d5a1fca781a907b48cec736b6a5"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_uart_ctrl_top_32bit.v": {
+      "bytes": 7237,
+      "sha256": "3fb1f73b4ebf27b90b3efae421d3076af2eda5566cffd4de9f30b9f63f11daf9"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_ctrl_32bit/ips2l_ver_ctrl_32bit.v": {
+      "bytes": 6374,
+      "sha256": "26793896296ed2b35ffdd04f55ff3db50fadd7b2e69396e247e52e8ec4821ea0"
+    },
+    "rtl/memory/ddr3_ip/example_design/rtl/uart_rd_lock.v": {
+      "bytes": 15251,
+      "sha256": "be38038d97b69a8ca670119354155e9d74bb6d4dd8c184b610201d50f864555a"
+    },
+    "rtl/memory/ddr3_ip/pnr/ddr3_ip.pds": {
+      "bytes": 20179,
+      "sha256": "d3eea844aab55b39766c74d7ed3b7de2e0f40732545000f977714c5b62b16f8a"
+    },
+    "rtl/memory/ddr3_ip/pnr/ddr_test.fdc": {
+      "bytes": 52582,
+      "sha256": "d6898e93d5280b12c05e6202a271d532447ab9827ad841474d08eb68527b8066"
+    },
+    "rtl/memory/ddr3_ip/readme.txt": {
+      "bytes": 2725,
+      "sha256": "b8e6aee8d709441f0d176b80495d453e2f70e3e74847a6dc3abc66d17fdfc00b"
+    },
+    "rtl/memory/ddr3_ip/rtl/ddrphy/ddr3_ip_slice_top_v1_10.v": {
+      "bytes": 55689,
+      "sha256": "6a4319f8cc5cc68ec647e5db7ba893f4932d19a42e977ad48dfb09987f3947c9"
+    },
+    "rtl/memory/ddr3_ip/sim/modelsim/ctrl_phy_sim.tcl": {
+      "bytes": 897,
+      "sha256": "9c2d5cdfc045b4dcb250cea9d7f8387acde5daa489271f9bff33e79ea43f361a"
+    },
+    "rtl/memory/ddr3_ip/sim_lib/ddrphy/ddr3_ip_slice_top_v1_10.v": {
+      "bytes": 55689,
+      "sha256": "6a4319f8cc5cc68ec647e5db7ba893f4932d19a42e977ad48dfb09987f3947c9"
+    },
+    "rtl/memory/ddr_arbiter3.v": {
+      "bytes": 2199,
+      "sha256": "cab398b830250fbbe27ab4b56776fa35dd6504ee58adeb254fcb796ab981c806"
+    },
+    "rtl/memory/ddr_capture_writer.v": {
+      "bytes": 3244,
+      "sha256": "4ebb54ac3f0f15d32373404c43ef8d95c7dac45e0d47fa8304240b78be875432"
+    },
+    "rtl/memory/ddr_command_bridge.v": {
+      "bytes": 2981,
+      "sha256": "b35d1c1fb0cdfb3e3a9e1d2a1f853fb3a6a8c6dc12f469b971288f60318e7d6a"
+    },
+    "rtl/memory/ddr_pixel_cache.v": {
+      "bytes": 6406,
+      "sha256": "754c430b90ca813930a5b159936ddeaf28acfd1bde5d5e4cbf040d1998bf5a71"
+    },
+    "rtl/memory/ddr_result_writer.v": {
+      "bytes": 2487,
+      "sha256": "48d771abfa3df1c097c0c12103445583ee52e6c7716fb8137df9a1fabfe017e9"
+    },
+    "rtl/memory/ddr_self_test.v": {
+      "bytes": 2110,
+      "sha256": "f4d45a38f5461c0f0e58f30e0af0236c9493e39b67a750014733e8b020597cb4"
+    },
+    "rtl/memory/ddr_word_engine.v": {
+      "bytes": 7251,
+      "sha256": "dae5d647c481dbbfd6d920722a12460cd18668e79c6c745a47e80f9251fb09c3"
+    },
+    "rtl/top/frame_processor.v": {
+      "bytes": 6472,
+      "sha256": "5aa858283f5b8e7824a2caf90c2526823f7fe171d3767469330607cba86b4bc5"
+    },
+    "rtl/top/frame_session.v": {
+      "bytes": 4187,
+      "sha256": "78b4dc1044bb72e202d013ca308aa42b6548d209b88ea1f47c82681d5f1a6bad"
+    },
+    "rtl/top/hdmi_link_i2c_probe_top.v": {
+      "bytes": 12179,
+      "sha256": "fb044d9527110c6e14124998e509f4c02af9e8b8d552ae0e783bf830405ba515"
+    },
+    "rtl/top/hdmi_link_i2c_probe_v2_top.v": {
+      "bytes": 12789,
+      "sha256": "3a5bdc919a6bda19310921a38e865c278c3915090c30cb7c777d5b82271dbf07"
+    },
+    "rtl/top/hdmi_link_probe_top.v": {
+      "bytes": 9031,
+      "sha256": "a60ce8090f2733b7fc0d1bd19bfca0f2f0e4a70223e455d789ebde6c1df49765"
+    },
+    "rtl/top/video_correct_board_top.v": {
+      "bytes": 4158,
+      "sha256": "980fc714db1e297c45ab651da5e23ac09bb44b8848774ca29081f478d79017a3"
+    },
+    "rtl/top/video_correct_core.v": {
+      "bytes": 3594,
+      "sha256": "6fae32a3cf50efa48e53d5fd3a10f2daba85694282dadbbf436229a64d93e0f1"
+    },
+    "rtl/top/video_correct_ddr_core.v": {
+      "bytes": 9972,
+      "sha256": "2bca02b02e3d89b78699e22a904df1afcca72363a5334a3cb5d6fc56d0810185"
+    },
+    "rtl/top/video_correct_ddr_top.v": {
+      "bytes": 7477,
+      "sha256": "bf5441906fd36813635957085449f4d29cbedbe7e30e717a5a48680f83c3efb2"
+    },
+    "rtl/video/ddr_result_display.v": {
+      "bytes": 13714,
+      "sha256": "8004bd3d4bf13a4fec18b8f121494b2aa2ea6936c3c5f41cf4b47e1fe8b1592e"
+    },
+    "rtl/video/ddr_snapshot_capture.v": {
+      "bytes": 4345,
+      "sha256": "5e0fd4776c8041ea2886328b14b535ff491ca8750507b58e32b962e3739e2322"
+    },
+    "rtl/video/result_display.v": {
+      "bytes": 3618,
+      "sha256": "461f6100edf4ecb073b83fab9dc0472d6e6df1c15fb88029c8b7ddbbcb7872e9"
+    },
+    "rtl/video/snapshot_capture.v": {
+      "bytes": 2268,
+      "sha256": "ee2ee9ff0fe56e1ac63556230e56f979a88701f9fa726dd8abaf6ac11e19b51f"
+    },
+    "scripts/archive_current_stage.py": {
+      "bytes": 4474,
+      "sha256": "5bd90548153beb93db3a5f4373a61c831c97879ccf233e17f2f17f7955938a7a"
+    },
+    "scripts/archive_ddr_stage.py": {
+      "bytes": 3845,
+      "sha256": "460ff1d846a6f19f5cd45d80272bba7f730e0262d45ccc756ce57d6b55a4990a"
+    },
+    "scripts/archive_ddr_startup_fixed.py": {
+      "bytes": 4067,
+      "sha256": "8516e4259a27223736de2457fb5d0b6e3916da7bcf4fdda2d9748051c12943f0"
+    },
+    "scripts/archive_rx_first_candidate.py": {
+      "bytes": 3744,
+      "sha256": "89310b16ec6ab193283c9e3ff2be0c9d86cb6d2efc9ff6b854caaba38f8b108b"
+    },
+    "scripts/build_board.ps1": {
+      "bytes": 728,
+      "sha256": "868329e495f15d1ad9ac291c703edf6bd5066d2513cb625657d467a4733b3c2c"
+    },
+    "scripts/build_ddr_board.ps1": {
+      "bytes": 707,
+      "sha256": "31b83ac97c73cce0badce7f4d45cd68d4f66408e76f0626908d290030680b18c"
+    },
+    "scripts/build_link_i2c_probe.ps1": {
+      "bytes": 2466,
+      "sha256": "b8a67087383af3e0e0295823b82f4e43c16dd08fa66398b0d7a4ba0d0fb98861"
+    },
+    "scripts/build_link_i2c_probe_v2.ps1": {
+      "bytes": 2478,
+      "sha256": "57ba709ac50cbce207fb9fa61d9db2f6b112a1680deaf89744b857cf09d89fac"
+    },
+    "scripts/build_link_probe.ps1": {
+      "bytes": 2461,
+      "sha256": "e76550f312edfa2ff4891487b2a3a5f7db3267938143a5e150c9f92109892a3d"
+    },
+    "scripts/compare_hardware_fixture.py": {
+      "bytes": 5283,
+      "sha256": "e6ecc828ec1921f5555ea856805586fbe9e3f0cc1b34c4c4f90f2534dcbb4864"
+    },
+    "scripts/decode_link_probe.py": {
+      "bytes": 1895,
+      "sha256": "527fb359f17e9536920ffde581b9ea2e2430b3c33aee7d8df4545cdc3ea9bf65"
+    },
+    "scripts/download_obs_resume.py": {
+      "bytes": 2824,
+      "sha256": "fe218fc9a3ea5ad44a4758f9a6c57c5ecd5da66a29010d3508fc91271b360057"
+    },
+    "scripts/hdmi_preview.py": {
+      "bytes": 5605,
+      "sha256": "6de2ba962460742c409d4bd5a723775f02a5c4595f824433e3c9d76f23e5997c"
+    },
+    "scripts/make_board_fixture.py": {
+      "bytes": 4174,
+      "sha256": "0ed74b6fdb7a200e4ae196445d6d330d407a0289cd99bc1f4360bbb1eae6fcf5"
+    },
+    "scripts/make_ddr_fixture.py": {
+      "bytes": 5581,
+      "sha256": "56191c1250e5477a3571d3e33f04cf446b76f39868b555a1ad35b19d27c03e76"
+    },
+    "scripts/prepare_board_build.py": {
+      "bytes": 5427,
+      "sha256": "0f8ad8daf0c10f304e0040e53c06e4f01e7401aeb0d2a2cb80c5f95a65f622dc"
+    },
+    "scripts/prepare_ddr_build.py": {
+      "bytes": 6404,
+      "sha256": "c12d7c53d2a12c5335e63a2272a4f602f750e8abd816d84c1df821af4f4176ca"
+    },
+    "scripts/prepare_ddr_ip.py": {
+      "bytes": 10600,
+      "sha256": "6df302047f04ff523444ad7b74ac672b785a354db79ad63e2c28c01c7664b345"
+    },
+    "scripts/prepare_link_i2c_probe.py": {
+      "bytes": 5457,
+      "sha256": "23d884e4714aeba89e93c339c9c97cc4623f52598ed9de9df26feb2ec31d81be"
+    },
+    "scripts/prepare_link_i2c_probe_v2.py": {
+      "bytes": 5324,
+      "sha256": "ce38ef0d1dddcc29cbb415f5675f1cc471bf0d1f076ddf0c96b00319eb1626a5"
+    },
+    "scripts/prepare_link_probe.py": {
+      "bytes": 5306,
+      "sha256": "2ae2e60250a9799558f8cbc82f95736d6f6a09c7ce3371f3bf78bd90f91380e1"
+    },
+    "scripts/prepare_obs_viewer.py": {
+      "bytes": 3484,
+      "sha256": "1536953268a665ad9342e499567f168f70779c050b8341fa68c33fba1d5d8179"
+    },
+    "scripts/program_camera_live_bram.ps1": {
+      "bytes": 2250,
+      "sha256": "d77f281b2b5a15d5617d46f84b7a20f4ceadc88116be9bad0d9a81f5d93eb855"
+    },
+    "scripts/program_camera_live_bram_reconnect.ps1": {
+      "bytes": 2323,
+      "sha256": "2203e5b7681cc5b880c05a18a8775ada81f563c69c2a549090fa81fd77870f2d"
+    },
+    "scripts/program_camera_live_native.ps1": {
+      "bytes": 2317,
+      "sha256": "36d943573b228a6076923042695a92d06f1fae646b857f60e852f9b228f9dc32"
+    },
+    "scripts/program_camera_native_rx_first.ps1": {
+      "bytes": 2337,
+      "sha256": "057be80c12647bee66d0341b5002af5456636a23011aac06922bfa28f6800407"
+    },
+    "scripts/qualify_b.py": {
+      "bytes": 2197,
+      "sha256": "c4bf7f7b30d3a0164a190fc9ac8608459f1e01e8231131731d739d97e5563f96"
+    },
+    "scripts/read_dshow_proc_amp.ps1": {
+      "bytes": 9705,
+      "sha256": "8424c41f68edfacaa3c0ce838412a28d331a4e31ea40a814dc857169fb9276c9"
+    },
+    "scripts/record_bram_camera_recovered_20261011.py": {
+      "bytes": 5038,
+      "sha256": "3deef6b10cd8c5694762d0ea363c89e685a9f8524e9eb082227af1fad9669c9b"
+    },
+    "scripts/record_bram_live_program_20261010.py": {
+      "bytes": 3422,
+      "sha256": "3952418fe51662710bcb918bda2c45ed3bc79d971a299063b657183e0676d8cd"
+    },
+    "scripts/record_camera_native_20261010.py": {
+      "bytes": 5812,
+      "sha256": "a46057e2262b36a94f45ea822830b84d666e41ae4c1e462de113ed9dfa33045a"
+    },
+    "scripts/record_camera_reconnect_20261010.py": {
+      "bytes": 4171,
+      "sha256": "c455affc3d43e604fe2ef850715a9865e16234af7f3576e2c38687a636b4e474"
+    },
+    "scripts/record_direct_no_signal_20261011.py": {
+      "bytes": 4610,
+      "sha256": "e451ddbc9eaa320b9d36143f29fe020231069f0c3286db337ab4dabcbe5458a0"
+    },
+    "scripts/record_direct_recovered_20261011.py": {
+      "bytes": 3870,
+      "sha256": "d5fa8d4012aa3a7112b47d76c1c6561dcf10c4aaefa618e992c9d145e3300a41"
+    },
+    "scripts/record_flicker_stage_20261011.py": {
+      "bytes": 5276,
+      "sha256": "e33568de9a1b147e81d273b26e596f047ee25450bdeb1b3e737cebcfd2d878f0"
+    },
+    "scripts/record_input_missing_20261011.py": {
+      "bytes": 3787,
+      "sha256": "e1cc3bc714b1f925bc8a3d23e69005ac5e094ed306dea5ffe88ed7a7660b228e"
+    },
+    "scripts/record_live_preview_20261010.py": {
+      "bytes": 3766,
+      "sha256": "2ac937ba26ded962172cebce03a590e7331b2bfcce2dc291ddd454a67b5777c4"
+    },
+    "scripts/record_native_bypass_stable_20261011.py": {
+      "bytes": 4743,
+      "sha256": "bc583be9427d0c4deb949395d2c69b7a5753738a862bffbf2ecd3070af00f3c6"
+    },
+    "scripts/record_native_comparison_20261011.py": {
+      "bytes": 5223,
+      "sha256": "6f6aa44c9f369921a88d2fb9877704e3db3a1c70ae742cd6d4065dc17b869071"
+    },
+    "scripts/record_native_flicker_20261011.py": {
+      "bytes": 6261,
+      "sha256": "1e1fa4786e1b99480685e54da9b3188a1346434333a938e80d555212b1ad8c1b"
+    },
+    "scripts/record_resume_verified.py": {
+      "bytes": 2556,
+      "sha256": "18cdc293eb154be07b3f65c3703e11c2f3a39e3950869990b8b0ace91002daee"
+    },
+    "scripts/record_rx_first_native_20261010.py": {
+      "bytes": 4869,
+      "sha256": "c2b76977cb1a36c7ee5af69f743c40e76608d20518166e4ec7b122b5b543c69d"
+    },
+    "scripts/refresh_obs_capture_device.py": {
+      "bytes": 1974,
+      "sha256": "5f84ffa623fed5fa23d4b22924eaeafa1fbaf31a9bc81326f8106ef6692db02d"
+    },
+    "scripts/run_board_frame.ps1": {
+      "bytes": 1989,
+      "sha256": "0e5ab02bcc820e154e10b20c28c41122a5e31fef51c95c06529a8b77985bd428"
+    },
+    "scripts/run_core_tests.ps1": {
+      "bytes": 1880,
+      "sha256": "a42598e4bf2603d8843cfa22c486aaf2eebd0b3a712247666bcbedeb9973e21c"
+    },
+    "scripts/run_ddr_capture.ps1": {
+      "bytes": 1701,
+      "sha256": "6a90d099f961cc90c932d49b468870862213853f21524cb213aa030309e962b4"
+    },
+    "scripts/run_ddr_display.ps1": {
+      "bytes": 1489,
+      "sha256": "ab792e844c0cadcb0118178fb3050744d81c20dbb03ce166481e7ac49b958256"
+    },
+    "scripts/run_ddr_full_frame.ps1": {
+      "bytes": 3109,
+      "sha256": "12c2ca46958a1ec188f08a364a70ca414ba036f3b4f347caf7dee8628b2a9d36"
+    },
+    "scripts/run_ddr_memory_tests.ps1": {
+      "bytes": 3050,
+      "sha256": "6d971e08fec003dce961b384a5f7d6483865baf2de0132b2e3fb44ae9bc354e5"
+    },
+    "scripts/run_hdmi_config_tests.ps1": {
+      "bytes": 1256,
+      "sha256": "d5db1b12c11ee8dc34e6e0c8e9c48dd2705c8788d18facff7bc867c50e391abc"
+    },
+    "scripts/run_integration.py": {
+      "bytes": 1572,
+      "sha256": "49ba148511dc929a038c5a9221f1d0d61e3ef53ad3e3f7a25b4aa644d3fa756d"
+    },
+    "scripts/run_video_correct_ddr_core.ps1": {
+      "bytes": 2011,
+      "sha256": "758a9c490b65c8eeab33a451c99d3eb47bbf614c8768fea670ed825f86a94e5c"
+    },
+    "scripts/run_video_tests.ps1": {
+      "bytes": 2069,
+      "sha256": "c370c1bfd67f2926b3c988887188ace95b91600dfa3cd09aaa7b5f7279f5d8c5"
+    },
+    "scripts/save_pause_20261010.py": {
+      "bytes": 5625,
+      "sha256": "f20d21737c906e034b333e5bdf09bc2ec6b0d7fe208f05fbd101c6310882c639"
+    },
+    "scripts/save_pause_20261011.py": {
+      "bytes": 13688,
+      "sha256": "08461e965be92bf1c579218ae28f831d7001d1e183fea94886c6f9ad17435abb"
+    },
+    "scripts/show_camera_target.py": {
+      "bytes": 1377,
+      "sha256": "c8c8e7f5eeb459c8c782fe6ad68b143931d07beb0593338c5343daeeb0bcab36"
+    },
+    "scripts/snapshot_c_update.py": {
+      "bytes": 1115,
+      "sha256": "f4fe310e232a88b4df43bf9bf51fc722466242018c00e3bee82845e445223566"
+    },
+    "scripts/start_hdmi_preview.ps1": {
+      "bytes": 7544,
+      "sha256": "574299bb4351e826891e22abf329fc2d968c3a255f19d41193b973c6ccc37af1"
+    },
+    "scripts/start_obs_viewer.ps1": {
+      "bytes": 1320,
+      "sha256": "e21ef1ec6df0984246f5d75c2097346103395068a798afb5d51a4485b49e9c0a"
+    },
+    "scripts/stop_hdmi_preview.ps1": {
+      "bytes": 2213,
+      "sha256": "cd34fcc0ad6ee75835a60eee6234f56d91672e490f0be9d9e24130f4d3bd2d08"
+    },
+    "sim/modelsim.ini": {
+      "bytes": 99465,
+      "sha256": "a5607fe33ddfe3db8506d04d574aae8b6904d026b5e6e80847e06a652ffee552"
+    },
+    "sim/run_ddr_display.do": {
+      "bytes": 352,
+      "sha256": "629b64fa686392755f6a9fe09a67b2d9cc57fd812774cb819e3c2c44b8961629"
+    },
+    "sim/run_hdmi_config.do": {
+      "bytes": 646,
+      "sha256": "c4a06934bc67a8dda6b7dc811a651a6ac2772f4b893361d5e03ae20642c98ddd"
+    },
+    "sim/tb_board_frame.sv": {
+      "bytes": 2948,
+      "sha256": "591be8eadc535f79cad9cefc9d5df179abbe85eacd131faca8f593dbd22c102f"
+    },
+    "sim/tb_ddr_capture.sv": {
+      "bytes": 7718,
+      "sha256": "7d056dceef1a9558b9cc660ad90a0e34f968c768e66a9beca23729751ca87cec"
+    },
+    "sim/tb_ddr_display.sv": {
+      "bytes": 8173,
+      "sha256": "ebe484733e538c58a0ab5c4b613744dc2cfb2756fd2b1fb02b43930a58407cfb"
+    },
+    "sim/tb_ddr_full_frame.sv": {
+      "bytes": 7179,
+      "sha256": "07c2be62d2e94ee8486f3cbe9a6ad0502bca23f154ad1cce4de852404b3585d0"
+    },
+    "sim/tb_ddr_helpers.sv": {
+      "bytes": 19020,
+      "sha256": "4b4f1f2fc871ed3c80903c5592544f7c52040b025380795217bb73d2cd0f323e"
+    },
+    "sim/tb_ddr_pixel_cache.sv": {
+      "bytes": 8068,
+      "sha256": "dc8b6831944519fdd6d4949f53b4886ea3f2f25ddaaa2854d49bb248e8b8880a"
+    },
+    "sim/tb_ddr_word_engine.sv": {
+      "bytes": 10227,
+      "sha256": "15616e86e30670d5b6f85467b02b4424e49f7ecdf9d67c735959d66d79e8bc21"
+    },
+    "sim/tb_frame_processor.sv": {
+      "bytes": 3608,
+      "sha256": "5ef0e80174cd2c8b173278f3d91f521112c124c60365d936f12ae1856199152d"
+    },
+    "sim/tb_hdmi_config.sv": {
+      "bytes": 10097,
+      "sha256": "4dea4093ba26bf71270a850d2b4b5b77f37515099267481f613978d3100a7f45"
+    },
+    "sim/tb_hdmi_link_probe.sv": {
+      "bytes": 3936,
+      "sha256": "bf9a2d7437bef967b93e3bc148e253331c579a7bd8ea5cca020b761bbd62003f"
+    },
+    "sim/tb_iic_dri_diag_v2.sv": {
+      "bytes": 2901,
+      "sha256": "92d36377ea45015452b0e1c14b896f87872663db0cd43603e6ccf8a5cf66ca3b"
+    },
+    "sim/tb_iic_dri_read_bytes.sv": {
+      "bytes": 3616,
+      "sha256": "86f850e9739be7d47a08173c3debfd5842de7b81e6c55c595b126687093a9713"
+    },
+    "sim/tb_result_display.sv": {
+      "bytes": 2848,
+      "sha256": "95b93d6c24fb475557ee34b467bb19d885043c41f043f642e3b4364dfbd4c3d3"
+    },
+    "sim/tb_snapshot_capture.sv": {
+      "bytes": 2423,
+      "sha256": "9320b58bdd1a2f95de0e3f0fffbd1ddbbec57afcfa322ec51e54afd45e8fcff5"
+    },
+    "sim/tb_video_correct_core.sv": {
+      "bytes": 6684,
+      "sha256": "fa6d10531401b75d8e23aa8dd3326c143dc7342ecaa26262bfdc4258d20993a5"
+    },
+    "sim/tb_video_correct_ddr_core.sv": {
+      "bytes": 10516,
+      "sha256": "6a4660eb65d16688695a871978688136990e19ba0806e8067474453cf523a4d1"
+    },
+    "tools/obs-studio/portable/config/obs-studio/basic/scenes/FPGA.json": {
+      "bytes": 5896,
+      "sha256": "5bea1961f7054c473969b0013fd65d22facc0a9a43046533a1074124923498f8"
+    },
+    "tools/obs-studio/portable/config/obs-studio/logs/2026-10-10 19-51-31.txt": {
+      "bytes": 70410,
+      "sha256": "a05dd1d88c6a9d637c83d49e07cfe7e2568952c608364fcb7e98c3bf104eeb39"
+    },
+    "vendor/b/docs/algorithm.md": {
+      "bytes": 4941,
+      "sha256": "0dd4d52bb965ac6806bb695542170dce3aa9eb368f96d830c10f2f2ac40c3c14"
+    },
+    "vendor/b/docs/board_pds.md": {
+      "bytes": 8120,
+      "sha256": "32fbb5522e43d453ba72aec5c71e444bfe5d33015fec5527aa9e72ecd500dbae"
+    },
+    "vendor/b/docs/changes_v1.md": {
+      "bytes": 4016,
+      "sha256": "68b56c27e5b0b18dc3cc531cdcc641877e1ecf60cbbc87e469d450e6b674fb6e"
+    },
+    "vendor/b/docs/integration_v1.md": {
+      "bytes": 7496,
+      "sha256": "d1350c89409b6f619318346f0b927ab3d12504db4542cdc2c73657597a09c8ac"
+    },
+    "vendor/b/docs/interfaces.md": {
+      "bytes": 12550,
+      "sha256": "89333c78941928cec23a089306d664026647e190979897ca4923cc71b862dfb4"
+    },
+    "vendor/b/docs/provenance.json": {
+      "bytes": 1306,
+      "sha256": "f6043b134f26a3b0714931d33938830a2e65977c85a2aec5e00c0f30d0cd17a4"
+    },
+    "vendor/b/docs/timing_example.sdc": {
+      "bytes": 362,
+      "sha256": "6027c4fbcc4af838339abbd35ce13bc219bf415694b97b0a697c3f2f84cf77ca"
+    },
+    "vendor/b/docs/validation_record.md": {
+      "bytes": 10388,
+      "sha256": "cdebc24658676c5c55f41153bd3e8ae898b6c02032db30d9e74be8108675c1db"
+    },
+    "vendor/b/examples/b_rectifier_instance.v": {
+      "bytes": 3304,
+      "sha256": "67b7d75342be3a623f76f0e6c920a8a50c1b0ebcf75eac545e06afea095554ed"
+    },
+    "vendor/b/examples/demo_document.png": {
+      "bytes": 5488,
+      "sha256": "899f7ed5fe2c6a73a2acf4a504e0221489bd68075d8ce314e41eaca940525408"
+    },
+    "vendor/b/examples/demo_fixed.png": {
+      "bytes": 28446,
+      "sha256": "d13a491e721586c6860dc2aa80031c07aec7aec8f1be84c7710c621adb1b3b39"
+    },
+    "vendor/b/examples/demo_float.png": {
+      "bytes": 28418,
+      "sha256": "940033e62b4551f040b58da7a91c18270c55da88e31a60c6e8b68b32e7876db3"
+    },
+    "vendor/b/examples/demo_input.png": {
+      "bytes": 14993,
+      "sha256": "a2194de5881c40e31e7812e731341d69c252fa85c02400d50ecb59993eb87104"
+    },
+    "vendor/b/examples/demo_parameters.json": {
+      "bytes": 489,
+      "sha256": "9e96b5939ae4a0cd89010b1c2ddcdcfe0265a63ed64960512944c85a6259bac5"
+    },
+    "vendor/b/examples/demo_preview.png": {
+      "bytes": 53071,
+      "sha256": "0a77fa6295fee144d2fa81c0b5dcb777c6072c7351feead9d9eb1ca7eff84c67"
+    },
+    "vendor/b/examples/fixed0.png": {
+      "bytes": 1351,
+      "sha256": "d1e138da00de8d5c6e513c34c993c8871c08a1f9ca2210fbe9248ccb15874134"
+    },
+    "vendor/b/examples/fixed1.png": {
+      "bytes": 413,
+      "sha256": "4ccca4abb062a7ef2e12a94a1c50277bb80f181f7dafdaf2d841a1a217e1d10d"
+    },
+    "vendor/b/examples/float0.png": {
+      "bytes": 1366,
+      "sha256": "6d9790eb7c18e40e00d065d6251ea460d64adda1d1073c923329e041c253fb4c"
+    },
+    "vendor/b/examples/float1.png": {
+      "bytes": 413,
+      "sha256": "4ccca4abb062a7ef2e12a94a1c50277bb80f181f7dafdaf2d841a1a217e1d10d"
+    },
+    "vendor/b/examples/integration_config.json": {
+      "bytes": 7475,
+      "sha256": "45e669c727cc3c1ab161eb5b758c681f14f9b807fffe16ad2aba20cd05316d16"
+    },
+    "vendor/b/examples/preview.png": {
+      "bytes": 53375,
+      "sha256": "1e526861bc8fb97e89b2ba167a49c2f5bbce8343e6057cbbdf9b604b7aba53c5"
+    },
+    "vendor/b/examples/source0.png": {
+      "bytes": 556,
+      "sha256": "8f2ec36b466b5528e4b8e95c77cd4c478602774833f1e1f95c5a7dd4212df3f5"
+    },
+    "vendor/b/examples/source1.png": {
+      "bytes": 518,
+      "sha256": "912ba197e11c7b99ab08fca97d97498b5f1469d6149908e352081b931d56a80a"
+    },
+    "vendor/b/examples/source2.png": {
+      "bytes": 499,
+      "sha256": "0ecfe079145705d624135d0302871e18e0ed35b6192fe52dea34f51628c648c4"
+    },
+    "vendor/b/examples/thresholds.json": {
+      "bytes": 175,
+      "sha256": "14b575335db3d0cb1a19120f4d717bdbb294a308c2259e34db345a860b481f39"
+    },
+    "vendor/b/modelsim.ini": {
+      "bytes": 99340,
+      "sha256": "b3a50363a687e7f1f09ac5451686bcf210f899b84accb3d17b77ff174e4f63d4"
+    },
+    "vendor/b/python/brect/__init__.py": {
+      "bytes": 202,
+      "sha256": "5835bcb38f8099bb03f52d3faf362d3848e4446bb923a7266cd3651e93e9d29b"
+    },
+    "vendor/b/python/brect/cli.py": {
+      "bytes": 3184,
+      "sha256": "6e78815efd8bde5e9c50cd3b0f9d8a39bde2d4ed8a0eae41007116c9bd430b7e"
+    },
+    "vendor/b/python/brect/fixed.py": {
+      "bytes": 4288,
+      "sha256": "5f4114f814e6105c4e1801785ad661431b07d3d37bb7113445beda070fca49a5"
+    },
+    "vendor/b/python/brect/golden.py": {
+      "bytes": 5108,
+      "sha256": "f9d75903707cea8ee59f5bc6a25d25afbe8301f11486416c0f0e04d9fb9d21ed"
+    },
+    "vendor/b/README.md": {
+      "bytes": 11920,
+      "sha256": "ca07bd08728c74e09d705cd5e24bfeb8998e2eb469329ec02fc91b646c4ec0bd"
+    },
+    "vendor/b/requirements.txt": {
+      "bytes": 72,
+      "sha256": "f5c0d9180fb6e0f6d6f5a34023e858ac4a9eea984abee58e9a2c7606fd98665f"
+    },
+    "vendor/b/results/cli_smoke/fixed.png": {
+      "bytes": 28446,
+      "sha256": "d13a491e721586c6860dc2aa80031c07aec7aec8f1be84c7710c621adb1b3b39"
+    },
+    "vendor/b/results/cli_smoke/float.png": {
+      "bytes": 28418,
+      "sha256": "940033e62b4551f040b58da7a91c18270c55da88e31a60c6e8b68b32e7876db3"
+    },
+    "vendor/b/results/cli_smoke/parameters.json": {
+      "bytes": 926,
+      "sha256": "e99b6279cc94fc1e2076d1fa0e90b355f0f28b89879896ee2e864067078f111a"
+    },
+    "vendor/b/results/history/2026-10-05/modelsim_native_evidence.json": {
+      "bytes": 711,
+      "sha256": "1099dcf973ccef90de2a7099b6d566e0067b3907dbdb85e5b3258a0334205a98"
+    },
+    "vendor/b/results/history/2026-10-05/rtl_coord.csv": {
+      "bytes": 77286,
+      "sha256": "dfd7db3bbe47a0dc82452516c2000b2acd8652a24e6cc0e9bcfe978cfbb4d5f7"
+    },
+    "vendor/b/results/history/2026-10-05/rtl_interp.csv": {
+      "bytes": 11890,
+      "sha256": "d77300373500604e75da7572328b42bbb7e39a50e5c5bfc45db23f89206c4e46"
+    },
+    "vendor/b/results/history/2026-10-05/rtl_rectified0.png": {
+      "bytes": 1351,
+      "sha256": "d1e138da00de8d5c6e513c34c993c8871c08a1f9ca2210fbe9248ccb15874134"
+    },
+    "vendor/b/results/history/2026-10-05/rtl_rectified2.png": {
+      "bytes": 413,
+      "sha256": "4ccca4abb062a7ef2e12a94a1c50277bb80f181f7dafdaf2d841a1a217e1d10d"
+    },
+    "vendor/b/results/history/2026-10-05/rtl_solver.csv": {
+      "bytes": 2855,
+      "sha256": "0356b8e625dbde8e826d4bea02950c993b9d0b8f48ec89b9a91f1a1396cb6516"
+    },
+    "vendor/b/results/history/2026-10-05/rtl_video.csv": {
+      "bytes": 45840,
+      "sha256": "2ff3ed512d96292fee2fc4f9a00bb9b19e371583a12e67e9d803f1c476acdf00"
+    },
+    "vendor/b/results/history/2026-10-05/verification.json": {
+      "bytes": 4886,
+      "sha256": "a1c2e47f19178c753cf15c3a13734c24c8bd79f265ed1caa1676a6036a83314d"
+    },
+    "vendor/b/results/modelsim_native_evidence.json": {
+      "bytes": 711,
+      "sha256": "1099dcf973ccef90de2a7099b6d566e0067b3907dbdb85e5b3258a0334205a98"
+    },
+    "vendor/b/results/rtl_coord.csv": {
+      "bytes": 77286,
+      "sha256": "dfd7db3bbe47a0dc82452516c2000b2acd8652a24e6cc0e9bcfe978cfbb4d5f7"
+    },
+    "vendor/b/results/rtl_interp.csv": {
+      "bytes": 11890,
+      "sha256": "d77300373500604e75da7572328b42bbb7e39a50e5c5bfc45db23f89206c4e46"
+    },
+    "vendor/b/results/rtl_rectified0.png": {
+      "bytes": 1351,
+      "sha256": "d1e138da00de8d5c6e513c34c993c8871c08a1f9ca2210fbe9248ccb15874134"
+    },
+    "vendor/b/results/rtl_rectified2.png": {
+      "bytes": 413,
+      "sha256": "4ccca4abb062a7ef2e12a94a1c50277bb80f181f7dafdaf2d841a1a217e1d10d"
+    },
+    "vendor/b/results/rtl_solver.csv": {
+      "bytes": 2855,
+      "sha256": "0356b8e625dbde8e826d4bea02950c993b9d0b8f48ec89b9a91f1a1396cb6516"
+    },
+    "vendor/b/results/rtl_video.csv": {
+      "bytes": 45840,
+      "sha256": "2ff3ed512d96292fee2fc4f9a00bb9b19e371583a12e67e9d803f1c476acdf00"
+    },
+    "vendor/b/results/verification.json": {
+      "bytes": 7208,
+      "sha256": "986315667bbcccaf2bd7387f863eeea127f4dacbccd1f346dd64d55576c9b9d0"
+    },
+    "vendor/b/rtl/b_rectifier.v": {
+      "bytes": 3972,
+      "sha256": "3bf7632448ddf91c0a4c100c534576a52dd2d100fb69f4ecefab04cdeb8681fc"
+    },
+    "vendor/b/rtl/bilinear_interp.v": {
+      "bytes": 1164,
+      "sha256": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+    },
+    "vendor/b/rtl/homography_solver.v": {
+      "bytes": 3711,
+      "sha256": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9"
+    },
+    "vendor/b/rtl/marker_detector.v": {
+      "bytes": 4574,
+      "sha256": "dbb887ecce740c902428246758aeb418cfdba489079078cc70674415f6ba436f"
+    },
+    "vendor/b/rtl/perspective_coord.v": {
+      "bytes": 1651,
+      "sha256": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3"
+    },
+    "vendor/b/rtl/perspective_core.v": {
+      "bytes": 1836,
+      "sha256": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5"
+    },
+    "vendor/b/rtl/scaled_div_pipe.v": {
+      "bytes": 2066,
+      "sha256": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741"
+    },
+    "vendor/b/rtl/signed_div_seq.v": {
+      "bytes": 873,
+      "sha256": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d"
+    },
+    "vendor/b/rtl/unsigned_div_seq.v": {
+      "bytes": 1051,
+      "sha256": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3"
+    },
+    "vendor/b/run_modelsim.do": {
+      "bytes": 2485,
+      "sha256": "7afa4679e1a5392c8c1cf16eab60b9e97b95e084408c80ec13037e6a4deb7509"
+    },
+    "vendor/b/scripts/generate_vectors.py": {
+      "bytes": 8053,
+      "sha256": "b13c0fd637a89380f56fe64a1e19fd483d22e590c5c81e0f9f1846d5894c5ca5"
+    },
+    "vendor/b/scripts/make_demo.py": {
+      "bytes": 2806,
+      "sha256": "cf514ce3fc8e9619daf3945fb6421c5f4d4e8c36c67aff58f64707bbd7a9aba4"
+    },
+    "vendor/b/scripts/run_checks.py": {
+      "bytes": 9483,
+      "sha256": "20dd9342229758cfba02b557997e14b75e94b85cff48d0483cee0d656d5cbca9"
+    },
+    "vendor/b/scripts/test_models.py": {
+      "bytes": 5003,
+      "sha256": "b910a29f7006ea33b5a70d7613dcc63002defee981a83b9e49f7f5a199f9e74a"
+    },
+    "vendor/b/scripts/test_modelsim_script.py": {
+      "bytes": 10450,
+      "sha256": "96e4abeb3c49930fa45347a377588e4c9cbcc72daabded6c5045ec09190f99da"
+    },
+    "vendor/b/sim/tb_b_integration.sv": {
+      "bytes": 22268,
+      "sha256": "ad079a43f6f83dc799d0e3ff6d4660f332772528e99181ad287d167735c37a6b"
+    },
+    "vendor/b/sim/tb_b_rectifier.sv": {
+      "bytes": 5958,
+      "sha256": "6f4d9115712d8bc877e74f38c44b2429bbd1402127f90c0cb96ac9dfb156c702"
+    },
+    "vendor/b/sim/tb_bilinear_interp.sv": {
+      "bytes": 1466,
+      "sha256": "810c183f9713d77edb03eda5bec69f62235a4f10a33a6cb72b2490e6b123f317"
+    },
+    "vendor/b/sim/tb_cache_contract.sv": {
+      "bytes": 5280,
+      "sha256": "6702aca2c887c70dac9f5d9e8b8162c7cf84628e3d065407097ae33d3acc58f7"
+    },
+    "vendor/b/sim/tb_homography_solver.sv": {
+      "bytes": 2018,
+      "sha256": "807448282e6a1c9f862b8bd34a1e8082ab13e1b67ecc4f560cc0025b80ee8431"
+    },
+    "vendor/b/sim/tb_marker_detector.sv": {
+      "bytes": 2228,
+      "sha256": "b8a34701766730312410038e1fe61bd716429e25bafe4a63360fdf6f5b8c2b93"
+    },
+    "vendor/b/sim/tb_perspective_coord.sv": {
+      "bytes": 2092,
+      "sha256": "25e6b5727a30935efab8c36a2e5931997a53143b661af6d477ad6ac6085b0a8d"
+    },
+    "vendor/b/sim/tb_request_boundaries.sv": {
+      "bytes": 6071,
+      "sha256": "c56ba95e9b4dd1e7a78e2768236555d7f655e6128cf9187151aa1367c9b17f93"
+    },
+    "vendor/b/vectors/bootstrap_req.txt": {
+      "bytes": 294,
+      "sha256": "801866fc665c8486e12f88e05aa4cbbd1bac6d9049b2bbe487341d14b46b458d"
+    },
+    "vendor/b/vectors/coord.txt": {
+      "bytes": 536974,
+      "sha256": "c84811f70395dbff46d36353b8c310bd6e847c2d403a6a5667f83c86d9619a78"
+    },
+    "vendor/b/vectors/expected0.hex": {
+      "bytes": 5376,
+      "sha256": "2f0ff56452533003c1ffe8e2919bb097b6d0c657668f4f7af3d42b16d4ece25c"
+    },
+    "vendor/b/vectors/expected1.hex": {
+      "bytes": 5376,
+      "sha256": "85b15237fe262bb54c02e2ab10a918599eeec9aa43c9446eb4b81b8d0c9ae3a4"
+    },
+    "vendor/b/vectors/frame0_req.txt": {
+      "bytes": 27760,
+      "sha256": "c63413d5cdb195c2e0aa5d4c6e14295935841006db9a131623534633f86c722e"
+    },
+    "vendor/b/vectors/frame1_req.txt": {
+      "bytes": 25126,
+      "sha256": "93533039d69e1051ac26aaabb02720bfed4fa7c0b31701e0a623fc8a3bc1e65f"
+    },
+    "vendor/b/vectors/hold.hex": {
+      "bytes": 5376,
+      "sha256": "0a29c2e4aea27046b3c9124a27b32b4b88992b1e7cba71a0039e4c0baee04271"
+    },
+    "vendor/b/vectors/hold_req.txt": {
+      "bytes": 25126,
+      "sha256": "93533039d69e1051ac26aaabb02720bfed4fa7c0b31701e0a623fc8a3bc1e65f"
+    },
+    "vendor/b/vectors/interp.txt": {
+      "bytes": 49792,
+      "sha256": "23713159e8d8ca8c7f1402f5e04a8e516fee805d89077c291fba3b759587883f"
+    },
+    "vendor/b/vectors/manifest.json": {
+      "bytes": 1735,
+      "sha256": "67917a9d8cae6d141d04a371fa9a63aea6981d518bfb8082f357fa88fac33c2f"
+    },
+    "vendor/b/vectors/precommit.hex": {
+      "bytes": 5376,
+      "sha256": "8a48b1941675a4c81b9975b82d74b44c0c42f6b71ce2fd16c182ca9b0e4f9552"
+    },
+    "vendor/b/vectors/precommit_req.txt": {
+      "bytes": 229,
+      "sha256": "985269f715b55439ae75ed91525402f791f2c7747a4436f0be5caed8febf4e86"
+    },
+    "vendor/b/vectors/solver.txt": {
+      "bytes": 4711,
+      "sha256": "dccb23bd7d1659da597897ba9efce2763dbd8c0d8c26ac7e64f55f5e2f72e595"
+    },
+    "vendor/b/vectors/source0.hex": {
+      "bytes": 21504,
+      "sha256": "ea1e7eebbe39cb0bd30863c8a7778261677cdea097d97d59beeff0f46f918317"
+    },
+    "vendor/b/vectors/source1.hex": {
+      "bytes": 21504,
+      "sha256": "29337b3bb9855a74a81e7df21ee0ab408a9ff6ac0a11fa3c6b07d13ac6041a0a"
+    },
+    "vendor/b/vectors/source2.hex": {
+      "bytes": 21504,
+      "sha256": "d51dd0af0fcddc6eaf3bfd16931cf165c375b2c049ad238ebeba51bf7b4ff743"
+    },
+    "vendor/c/01_design_code/hdmi_colorbar_top.v": {
+      "bytes": 3469,
+      "sha256": "5ace1104cb9e1ddbf06b1faea914f92d98a2382553a8be08f3706a4b2d8a42be"
+    },
+    "vendor/c/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v": {
+      "bytes": 11227,
+      "sha256": "8f58c2266af621629e7f09cd6e309881ed7ee39eaad9535a99b023bc891714ea"
+    },
+    "vendor/c/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m_tb.v": {
+      "bytes": 6216,
+      "sha256": "d5602e73a35ff904d405c06e365f27d0af457c9daad3a69262875c3595a01e6b"
+    },
+    "vendor/c/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m_tmpl.v": {
+      "bytes": 419,
+      "sha256": "5940d4ab6580be319bb21263942558056d86ee2fdf81e1219314a6b01f488506"
+    },
+    "vendor/c/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v": {
+      "bytes": 11224,
+      "sha256": "b74af59403683ea68f3e85d5cbcb08a288a822764d846785a4e72a4d30c85e48"
+    },
+    "vendor/c/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5_tb.v": {
+      "bytes": 6220,
+      "sha256": "86165065bfe86f2f148afe6ed90648879d48f9063cad757fbb071d9b06208991"
+    },
+    "vendor/c/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5_tmpl.v": {
+      "bytes": 420,
+      "sha256": "5d807afe52692259efabc965e620ffe9772660139a3c858c17cf7b1714cf8689"
+    },
+    "vendor/c/01_design_code/ms7210_config.v": {
+      "bytes": 2014,
+      "sha256": "37f7db90e7f41cf8f026b614670217e57833b1769151fd65e69e4119560d5f8e"
+    },
+    "vendor/c/01_design_code/test_pattern_generator_tpg.v": {
+      "bytes": 2441,
+      "sha256": "66497a15ec101ccb35ab55a7a07d9ce591d1043e9279c87614cfa99b861bb213"
+    },
+    "vendor/c/01_design_code/third_party/ms7210/iic_dri.v": {
+      "bytes": 16475,
+      "sha256": "2ad038b367eb2e2809642e662e32969f94be91c1216f0b60066a144074adb471"
+    },
+    "vendor/c/01_design_code/third_party/ms7210/ms7210_ctl.v": {
+      "bytes": 11818,
+      "sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242"
+    },
+    "vendor/c/01_design_code/third_party/ms7210/SOURCE.md": {
+      "bytes": 2420,
+      "sha256": "4713b6c2f7f6a099e7568932cf9b5281dc85d977e26f3a9b1323a8acf8aa9d5e"
+    },
+    "vendor/c/01_design_code/video_timing_vtc.v": {
+      "bytes": 1926,
+      "sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+    },
+    "vendor/c/01_design_code/video_top.v": {
+      "bytes": 1905,
+      "sha256": "38c9fce4d2a79e9283a205fa17f1d13944b325dce99c4b1bb3e91e057817507f"
+    },
+    "vendor/c/02_simulation/tb_hdmi_colorbar_top.v": {
+      "bytes": 5091,
+      "sha256": "1fe35f17f98f00c62dbf2257bb7178acb7015ba4cbe6ce1efe6c6614153d80dc"
+    },
+    "vendor/c/02_simulation/tb_ms7210_config.v": {
+      "bytes": 6524,
+      "sha256": "c9e7a1f09a533ba126dd13d615ad160a379a9153ba7b7bc59f4fcb3b88922120"
+    },
+    "vendor/c/02_simulation/tb_tpg_patterns.v": {
+      "bytes": 2377,
+      "sha256": "4330c9de77e6e975d406a8e39867a1cc789a531d0d4999e19373a68a5ab8b076"
+    },
+    "vendor/c/02_simulation/tb_video_timing.v": {
+      "bytes": 3579,
+      "sha256": "43ab2b5269835ffe5eb183aac0c4d6a6415ed83619ee51bab09666ab0a5afc5d"
+    },
+    "vendor/c/02_simulation/tb_video_timing_1080p.v": {
+      "bytes": 5300,
+      "sha256": "2a2f9cabb8a3d55d39ed1d353e88c5a8025115fd4acbfa2c3a1bf8d1b2c9658a"
+    },
+    "vendor/c/02_simulation/tb_video_top.v": {
+      "bytes": 6602,
+      "sha256": "b379c41f86ee9e3168df78429b5e52487a0d9d357461e02f278c15bfcbda3216"
+    },
+    "vendor/c/03_documents/HDMI输出接入设计.md": {
+      "bytes": 4270,
+      "sha256": "4bb2353cce449f32b22ca2fd589d0028ec8e221e7c16163bbd5e39068bf08d71"
+    },
+    "vendor/c/03_documents/V5整合说明与缺项清单.md": {
+      "bytes": 4087,
+      "sha256": "3a7b5707bdee2689b27bb4b2e03d5e0407eb2273dd179ed6128c9ceefe974954"
+    },
+    "vendor/c/03_documents/VTC与TPG分模块设计.md": {
+      "bytes": 1959,
+      "sha256": "26a0828b343681b9463d8e147bc7d7697cc26c8fa2e3e9f6bcfa2f24b5301601"
+    },
+    "vendor/c/03_documents/仿真说明.md": {
+      "bytes": 2445,
+      "sha256": "3a06388e48a27c20d89dbafc317d7acd916a8400d45ee3e41a4cd2a4b4a37f4e"
+    },
+    "vendor/c/03_documents/模块说明.md": {
+      "bytes": 2947,
+      "sha256": "889209c8e12eb53e64bd0929a04505c8d8862be5b4194f82089761a19cb9ea18"
+    },
+    "vendor/c/04_results/pds_v5/README.md": {
+      "bytes": 1440,
+      "sha256": "5d5dd64d29da4c39ebf36a172f8c98439462b994e675adc360e6d8b1b26b579a"
+    },
+    "vendor/c/04_results/pds_v5/verification.json": {
+      "bytes": 524,
+      "sha256": "eea0408e94e32099c4141ea69df04426ba3ec67f7f5789cbe1604fc95b627f70"
+    },
+    "vendor/c/04_results/README.md": {
+      "bytes": 3478,
+      "sha256": "d9e0d176176ad656c2414872484b497c372408d9b952e7cf2ebc58b0aa77bf3c"
+    },
+    "vendor/c/05_pds/build_v5.tcl": {
+      "bytes": 843,
+      "sha256": "395197cea2b19aba1d70d2a3f9c518770683a25a2d363ff7df99a02c7210d8f7"
+    },
+    "vendor/c/05_pds/mes2l676_hdmi_out.fdc": {
+      "bytes": 12044,
+      "sha256": "af09196735b87d114ed82c5bad7ed1094b79dfbb6f1a83182a74367e83afdae9"
+    },
+    "vendor/c/05_pds/README.md": {
+      "bytes": 2715,
+      "sha256": "c6d8dbe2146372fac8698e608ebbb7d0a708082687a7e4d5dc311dbcf638214b"
+    },
+    "vendor/c/05_pds/VideoTimingSim_V5.pds": {
+      "bytes": 4541,
+      "sha256": "199cd1e2e82438b523b113beb17e1f95b1dc1b04d7cdb9a887032289d49b42ae"
+    },
+    "vendor/c/README.md": {
+      "bytes": 5589,
+      "sha256": "dd26ba1e97879b02657fad6853f57db5651e15cfdcc1effd621d20c67cce55d2"
+    },
+    "vendor/c/run_1080p_check.do": {
+      "bytes": 479,
+      "sha256": "a2058b421e8f6285ebda5d2b2097ad98d8f6204ff1e8c07c787d46514f17e144"
+    },
+    "vendor/c/run_hdmi_board_check.do": {
+      "bytes": 912,
+      "sha256": "e71e1afd56c942b71433e3905081a7182e14ef2be2007a9e3d685e49c4d90622"
+    },
+    "vendor/c/run_hdmi_real_compile.do": {
+      "bytes": 814,
+      "sha256": "ee9cd61a6375e14ee4d331fb21466c842bc6be07ef4afb86665133695b5880f3"
+    },
+    "vendor/c/run_ms7210_check.do": {
+      "bytes": 835,
+      "sha256": "d69ae8b0fae7c7da3bb606868fc30f3f2ff787e17ee5767880046abeaf4e73fa"
+    },
+    "vendor/c/run_top_check.do": {
+      "bytes": 668,
+      "sha256": "3ce4f6d96ce97af770c7a796e58a17b361445e71602a5059dc4d53dca265b69b"
+    },
+    "vendor/c/run_tpg_check.do": {
+      "bytes": 423,
+      "sha256": "07e556cf6196995fcf1ac46f6341146776c91c3de7d40c9685f1cf029a5ed249"
+    },
+    "vendor/c/run_wave.do": {
+      "bytes": 836,
+      "sha256": "c44e9a8ebf4f78c87546fd8301be0f2f8d7e81cad36521b6283efa33a7f636bc"
+    },
+    "vendor/c_current/01_design_code/cdc_snapshot.v": {
+      "bytes": 1139,
+      "sha256": "02452769c7e1c047090c39f905ba29db6f4278bc6bbffe1ec4cf6a0be875579c"
+    },
+    "vendor/c_current/01_design_code/hdmi_bram_camera_top.v": {
+      "bytes": 5921,
+      "sha256": "56c1b2141afb78d0f609b85f6adca11d225417e8c6330fd59b1c3fdc20c4390b"
+    },
+    "vendor/c_current/01_design_code/hdmi_bram_probe.v": {
+      "bytes": 3100,
+      "sha256": "b7e7435533091d590d9858a302eb23edda95d04aae5d5fb1b88e51794becc8c4"
+    },
+    "vendor/c_current/01_design_code/hdmi_camera_loop_top.v": {
+      "bytes": 1937,
+      "sha256": "49a4cf5a2c381dc392d84324ef8a7c270b39a1dc1d089408c85d53c14325750e"
+    },
+    "vendor/c_current/01_design_code/hdmi_colorbar_top.v": {
+      "bytes": 3469,
+      "sha256": "5ace1104cb9e1ddbf06b1faea914f92d98a2382553a8be08f3706a4b2d8a42be"
+    },
+    "vendor/c_current/01_design_code/hdmi_vs_recover.v": {
+      "bytes": 1554,
+      "sha256": "2dca5fd7131ed43786648b9c28dd351088947a722418aebc890a1ba3389c1b51"
+    },
+    "vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v": {
+      "bytes": 11227,
+      "sha256": "8f58c2266af621629e7f09cd6e309881ed7ee39eaad9535a99b023bc891714ea"
+    },
+    "vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m_tb.v": {
+      "bytes": 6216,
+      "sha256": "d5602e73a35ff904d405c06e365f27d0af457c9daad3a69262875c3595a01e6b"
+    },
+    "vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m_tmpl.v": {
+      "bytes": 419,
+      "sha256": "5940d4ab6580be319bb21263942558056d86ee2fdf81e1219314a6b01f488506"
+    },
+    "vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v": {
+      "bytes": 11224,
+      "sha256": "b74af59403683ea68f3e85d5cbcb08a288a822764d846785a4e72a4d30c85e48"
+    },
+    "vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5_tb.v": {
+      "bytes": 6220,
+      "sha256": "86165065bfe86f2f148afe6ed90648879d48f9063cad757fbb071d9b06208991"
+    },
+    "vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5_tmpl.v": {
+      "bytes": 420,
+      "sha256": "5d807afe52692259efabc965e620ffe9772660139a3c858c17cf7b1714cf8689"
+    },
+    "vendor/c_current/01_design_code/ms7210_config.v": {
+      "bytes": 2014,
+      "sha256": "37f7db90e7f41cf8f026b614670217e57833b1769151fd65e69e4119560d5f8e"
+    },
+    "vendor/c_current/01_design_code/ms72xx_shared_config.v": {
+      "bytes": 2316,
+      "sha256": "4cd35524c1288cf7e91630c738ab84e1b7a5fbfe46915bc55b83a850c91e7dce"
+    },
+    "vendor/c_current/01_design_code/test_pattern_generator_tpg.v": {
+      "bytes": 2441,
+      "sha256": "66497a15ec101ccb35ab55a7a07d9ce591d1043e9279c87614cfa99b861bb213"
+    },
+    "vendor/c_current/01_design_code/third_party/ms7210/iic_dri.v": {
+      "bytes": 16475,
+      "sha256": "2ad038b367eb2e2809642e662e32969f94be91c1216f0b60066a144074adb471"
+    },
+    "vendor/c_current/01_design_code/third_party/ms7210/ms7210_ctl.v": {
+      "bytes": 11818,
+      "sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242"
+    },
+    "vendor/c_current/01_design_code/third_party/ms7210/SOURCE.md": {
+      "bytes": 2420,
+      "sha256": "4713b6c2f7f6a099e7568932cf9b5281dc85d977e26f3a9b1323a8acf8aa9d5e"
+    },
+    "vendor/c_current/01_design_code/video_timing_vtc.v": {
+      "bytes": 1926,
+      "sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+    },
+    "vendor/c_current/01_design_code/video_top.v": {
+      "bytes": 1905,
+      "sha256": "38c9fce4d2a79e9283a205fa17f1d13944b325dce99c4b1bb3e91e057817507f"
+    },
+    "vendor/c_current/02_simulation/tb_cdc_snapshot.v": {
+      "bytes": 1112,
+      "sha256": "dd2cfddca32e2c803c0e2bba6133b0015040d32507ff332983428b3bd08add64"
+    },
+    "vendor/c_current/02_simulation/tb_hdmi_bram_probe.v": {
+      "bytes": 1687,
+      "sha256": "cb7f289a0a12f240273997ca20d02f8578c529d2e4ea344ed610dcabae636d4a"
+    },
+    "vendor/c_current/02_simulation/tb_hdmi_bram_stale.v": {
+      "bytes": 1774,
+      "sha256": "ff2f86b6887dea99b43e9d74efe06cbac61b65d3cb56b922fb959b2da8d0cadf"
+    },
+    "vendor/c_current/02_simulation/tb_hdmi_camera_native.v": {
+      "bytes": 2197,
+      "sha256": "5f37332ceffcd19a998143ea992b9defccc4a9acd4f4de52469a3c6d54124f3c"
+    },
+    "vendor/c_current/02_simulation/tb_hdmi_colorbar_top.v": {
+      "bytes": 5091,
+      "sha256": "1fe35f17f98f00c62dbf2257bb7178acb7015ba4cbe6ce1efe6c6614153d80dc"
+    },
+    "vendor/c_current/02_simulation/tb_ms7210_config.v": {
+      "bytes": 6524,
+      "sha256": "c9e7a1f09a533ba126dd13d615ad160a379a9153ba7b7bc59f4fcb3b88922120"
+    },
+    "vendor/c_current/02_simulation/tb_ms72xx_shared_config.v": {
+      "bytes": 7837,
+      "sha256": "fad1c68ccce7c3a729c769c4a6e0d41104c646af425693247a2f51a6e91269ae"
+    },
+    "vendor/c_current/02_simulation/tb_tpg_patterns.v": {
+      "bytes": 2377,
+      "sha256": "4330c9de77e6e975d406a8e39867a1cc789a531d0d4999e19373a68a5ab8b076"
+    },
+    "vendor/c_current/02_simulation/tb_video_timing.v": {
+      "bytes": 3579,
+      "sha256": "43ab2b5269835ffe5eb183aac0c4d6a6415ed83619ee51bab09666ab0a5afc5d"
+    },
+    "vendor/c_current/02_simulation/tb_video_timing_1080p.v": {
+      "bytes": 5300,
+      "sha256": "2a2f9cabb8a3d55d39ed1d353e88c5a8025115fd4acbfa2c3a1bf8d1b2c9658a"
+    },
+    "vendor/c_current/02_simulation/tb_video_top.v": {
+      "bytes": 6602,
+      "sha256": "b379c41f86ee9e3168df78429b5e52487a0d9d357461e02f278c15bfcbda3216"
+    },
+    "vendor/c_current/03_documents/C相机链路交接_20261008.md": {
+      "bytes": 6403,
+      "sha256": "6417c87b43eb58c6ad75529db105e638d1a23421a6672ea1f6655cf28e24daf1"
+    },
+    "vendor/c_current/03_documents/HDMI输出接入设计.md": {
+      "bytes": 4270,
+      "sha256": "4bb2353cce449f32b22ca2fd589d0028ec8e221e7c16163bbd5e39068bf08d71"
+    },
+    "vendor/c_current/03_documents/V5整合说明与缺项清单.md": {
+      "bytes": 4087,
+      "sha256": "3a7b5707bdee2689b27bb4b2e03d5e0407eb2273dd179ed6128c9ceefe974954"
+    },
+    "vendor/c_current/03_documents/VTC与TPG分模块设计.md": {
+      "bytes": 1959,
+      "sha256": "26a0828b343681b9463d8e147bc7d7697cc26c8fa2e3e9f6bcfa2f24b5301601"
+    },
+    "vendor/c_current/03_documents/仿真说明.md": {
+      "bytes": 2445,
+      "sha256": "3a06388e48a27c20d89dbafc317d7acd916a8400d45ee3e41a4cd2a4b4a37f4e"
+    },
+    "vendor/c_current/03_documents/模块说明.md": {
+      "bytes": 2947,
+      "sha256": "889209c8e12eb53e64bd0929a04505c8d8862be5b4194f82089761a19cb9ea18"
+    },
+    "vendor/c_current/04_results/camera_20261008/evidence.txt": {
+      "bytes": 970,
+      "sha256": "238a4e1e5671ca15a601377dce551ad0984677e12cc0bf1a4380cdd6a29f312b"
+    },
+    "vendor/c_current/04_results/camera_20261008/pds_recheck.txt": {
+      "bytes": 1234,
+      "sha256": "43c5e2544455589f4f06614a71c4dd6ad328d2ebcfd61c7d02208a930f8e8e22"
+    },
+    "vendor/c_current/04_results/pds_v5/README.md": {
+      "bytes": 1440,
+      "sha256": "5d5dd64d29da4c39ebf36a172f8c98439462b994e675adc360e6d8b1b26b579a"
+    },
+    "vendor/c_current/04_results/pds_v5/verification.json": {
+      "bytes": 524,
+      "sha256": "eea0408e94e32099c4141ea69df04426ba3ec67f7f5789cbe1604fc95b627f70"
+    },
+    "vendor/c_current/04_results/README.md": {
+      "bytes": 3478,
+      "sha256": "d9e0d176176ad656c2414872484b497c372408d9b952e7cf2ebc58b0aa77bf3c"
+    },
+    "vendor/c_current/05_pds/build_camera_native.tcl": {
+      "bytes": 1648,
+      "sha256": "256c19d0d28f07ef5e38ba70fe6abefcd39de691493fc185187b085590dd6af6"
+    },
+    "vendor/c_current/05_pds/build_v5.tcl": {
+      "bytes": 843,
+      "sha256": "395197cea2b19aba1d70d2a3f9c518770683a25a2d363ff7df99a02c7210d8f7"
+    },
+    "vendor/c_current/05_pds/mes2l676_camera_native.fdc": {
+      "bytes": 19854,
+      "sha256": "18a15653d3e87b243191ad0c523b0419a9c585f1cb9d791b7b33361de0f4f619"
+    },
+    "vendor/c_current/05_pds/mes2l676_hdmi_out.fdc": {
+      "bytes": 12044,
+      "sha256": "af09196735b87d114ed82c5bad7ed1094b79dfbb6f1a83182a74367e83afdae9"
+    },
+    "vendor/c_current/05_pds/program_camera_native.tcl": {
+      "bytes": 645,
+      "sha256": "ee2966e05693a557ad972a753ab962b6ea6d564de5f8666c7a84b5325c0c5197"
+    },
+    "vendor/c_current/05_pds/README.md": {
+      "bytes": 2715,
+      "sha256": "c6d8dbe2146372fac8698e608ebbb7d0a708082687a7e4d5dc311dbcf638214b"
+    },
+    "vendor/c_current/05_pds/VideoTimingSim_V5.pds": {
+      "bytes": 4541,
+      "sha256": "199cd1e2e82438b523b113beb17e1f95b1dc1b04d7cdb9a887032289d49b42ae"
+    },
+    "vendor/c_current/README.md": {
+      "bytes": 5977,
+      "sha256": "24298ac29fc198f0895fd5033d7b948032567b31411e055af348310262c8fe3a"
+    },
+    "vendor/c_current/run_1080p_check.do": {
+      "bytes": 479,
+      "sha256": "a2058b421e8f6285ebda5d2b2097ad98d8f6204ff1e8c07c787d46514f17e144"
+    },
+    "vendor/c_current/run_camera_i2c_check.do": {
+      "bytes": 837,
+      "sha256": "25c55b42a6a5336bfa7401ace17a61fc3899685e02d3e0b8a2c2eadb733e880c"
+    },
+    "vendor/c_current/run_camera_native_check.do": {
+      "bytes": 601,
+      "sha256": "4adcde576ffbd58a014ba072151b188f7beee5cf16962b386a87e6177bf799e7"
+    },
+    "vendor/c_current/run_hdmi_board_check.do": {
+      "bytes": 912,
+      "sha256": "e71e1afd56c942b71433e3905081a7182e14ef2be2007a9e3d685e49c4d90622"
+    },
+    "vendor/c_current/run_hdmi_real_compile.do": {
+      "bytes": 814,
+      "sha256": "ee9cd61a6375e14ee4d331fb21466c842bc6be07ef4afb86665133695b5880f3"
+    },
+    "vendor/c_current/run_ms7210_check.do": {
+      "bytes": 835,
+      "sha256": "d69ae8b0fae7c7da3bb606868fc30f3f2ff787e17ee5767880046abeaf4e73fa"
+    },
+    "vendor/c_current/run_top_check.do": {
+      "bytes": 668,
+      "sha256": "3ce4f6d96ce97af770c7a796e58a17b361445e71602a5059dc4d53dca265b69b"
+    },
+    "vendor/c_current/run_tpg_check.do": {
+      "bytes": 423,
+      "sha256": "07e556cf6196995fcf1ac46f6341146776c91c3de7d40c9685f1cf029a5ed249"
+    },
+    "vendor/c_current/run_wave.do": {
+      "bytes": 836,
+      "sha256": "c44e9a8ebf4f78c87546fd8301be0f2f8d7e81cad36521b6283efa33a7f636bc"
+    },
+    "vendor/c_current/tools/prepare_local_ms7200.py": {
+      "bytes": 1864,
+      "sha256": "23a6bc64e72e98440ce32b53223dc9e3889cd8b83d1facde4b2d743214f44b31"
+    },
+    "vendor/c_current/tools/prepare_local_rgb_edid.py": {
+      "bytes": 1208,
+      "sha256": "e252b4dc0371635c51b351960063ec20e82b9ac612ec1f4a94e7e50a582c1188"
+    },
+    "vendor/c_current/tools/prepare_local_rx_telemetry.py": {
+      "bytes": 1432,
+      "sha256": "9fa53266c3cbca7ed5a0a6afe3acb91d89928f3c223b8e44326c9d258fd6818a"
+    },
+    "下载高清相机预览.cmd": {
+      "bytes": 344,
+      "sha256": "96059934afdfcc72fadeee25a3a8904bd2c8af607432bcc8a3236de3ad30c4ca"
+    },
+    "下载高清相机预览_接收优先.cmd": {
+      "bytes": 348,
+      "sha256": "8e391080a66a6ce3b930b3608b8c8a80f57aae823db50ee8d09229123ef4437d"
+    },
+    "恢复相机预览.cmd": {
+      "bytes": 332,
+      "sha256": "72cd4e8e8041bc7e48325421792066381f024f8418eb25bf79d66769d5c5f54c"
+    },
+    "恢复相机预览_重连修正版.cmd": {
+      "bytes": 352,
+      "sha256": "5ab818f218e01b0b85bfb1b04230f7da1e57a40ed96610066d9d988dba12a2b5"
+    },
+    "打开OBS.cmd": {
+      "bytes": 102,
+      "sha256": "31b9ed8bf4d570210a351e21bdc6576160c8ba521fa1349e42969fb9c43b5c48"
+    },
+    "显示相机测试图.cmd": {
+      "bytes": 148,
+      "sha256": "cf2d5d3c10e72652d9c0481052d4a1d2f390b75ab1c6a0b27004346c2c91c374"
+    }
+  }
+}

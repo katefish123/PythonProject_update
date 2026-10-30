@@ -1,0 +1,56 @@
+{
+  "recorded_at_utc": "2026-10-11T09:59:36.621857+00:00",
+  "current_image": "release/ddr_camera_reconnect_20261011/video_correct_ddr_top.sbit",
+  "current_image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_reconnect_20261011_175028.log",
+  "program_verify_passed": true,
+  "program_log_sha256": "75b4aa89d66ced361ce1d50acf646b8d2a38c77dbc0020085218dd23a9bc3853",
+  "flash_modified": false,
+  "phase": "Full-page real camera correction with clean HDMI output, diagnostic grid removed",
+  "first_real_camera_rectification_observed": true,
+  "first_real_camera_rectification_evidence": "results/hardware_20261009/first_real_camera_rectification_20261011.json",
+  "previous_verified_scope": "D205 image visibly rectifies real optical page; 25 samples valid, no underrun; counter 1 -> 2. This is historical after current reprogramming.",
+  "diagnostic_grid_present": false,
+  "actual_camera_correction_accepted": true,
+  "actual_camera_display_accepted_for_current_image": true,
+  "current_boot_ddr_bist_observed": false,
+  "current_receiver_probe_decoded": false,
+  "current_valid_camera_width_height_measured": false,
+  "current_failed_stage": null,
+  "capture_counter_first_last": null,
+  "capture_bad_count": null,
+  "successful_result_count": null,
+  "source_sampling": [
+    640,
+    480
+  ],
+  "processed_output": [
+    320,
+    452
+  ],
+  "hdmi_output": [
+    1920,
+    1080
+  ],
+  "display_window": {
+    "x": 640,
+    "y": 88,
+    "width": 640,
+    "height": 904
+  },
+  "algorithm_update_fps_measured": false,
+  "long_term_camera_display_verified": false,
+  "computer_use_paused_by_user": true,
+  "original_A_B_C_modified": false,
+  "original_target_modified": false,
+  "project": "diagnostics/ddr_camera_reconnect_20261011/results/video_correct_ddr_reconnect.pds",
+  "source_snapshot": "release/ddr_camera_reconnect_20261011/source_snapshot.zip",
+  "pending": "Prepare and qualify independent 960x540-source / 640x904-result clone for improved detail. Keep this actually verified 320x452 baseline loaded until the new clone passes checks.",
+  "actual_camera_display_accepted": true,
+  "full_clean_page_visually_checked": true,
+  "short_clean_page_display_observed_seconds_approx": 46.8,
+  "clarity_accepted": false,
+  "updated_at_utc": "2026-10-11T10:55:40.063954+00:00",
+  "evidence": "results\\hardware_20261009\\clean_corrected_camera_20261011_181218.json",
+  "qualification_limit": "Real full clean rectification and short stable/held display accepted. Optical/processing sharpness still needs improvement. Continuous update rate and long-run behavior are not accepted by a static or held frame."
+}

@@ -1,0 +1,15 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 11:09:52 on Oct 09,2026
+vlog -sv -work hdmi_link_probe_work C:\D\FPGA\video_correct_integrated_20261008\rtl\top\hdmi_link_probe_top.v C:\D\FPGA\video_correct_integrated_20261008\rtl\common\reset_sync.v C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v C:\D\FPGA\video_correct_integrated_20261008\sim\tb_hdmi_link_probe.sv 
+-- Compiling module hdmi_link_probe_top
+-- Compiling module reset_sync
+-- Compiling module video_timing_vtc
+-- Compiling module tb_hdmi_link_probe
+-- Compiling module video_pll_27m_148m5
+-- Compiling module config_pll_27m_10m
+-- Compiling module hdmi_config
+
+Top level modules:
+	tb_hdmi_link_probe
+End time: 11:09:52 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

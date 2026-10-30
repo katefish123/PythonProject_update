@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "serial_ports_opened": false,
+  "inputs_sha256": "84940c966587accc0993c50e495d4a4c7f67d0ccc3acae324357287e00fe9ac9",
+  "simulation_log_sha256": "a32b9acc9ebea62700d669cc8e4d67869f33757b2eacdf397b77494cce210ae9",
+  "observations": [
+    "# UART_CONTROL_PASS crc_bad=1 invalid_version=1 invalid_flags=1 truncated=1 back_to_back_busy=1 held_cfg=1 no_early_ack=1 stale_commit=1 commit_ack=3 reset_cancel=2 wire_golden_bytes=24"
+  ]
+}

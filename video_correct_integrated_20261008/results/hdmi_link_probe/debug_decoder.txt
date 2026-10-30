@@ -1,0 +1,24 @@
+HDMI link probe status-bar decoder
+
+The bottom 40 active picture lines are split into four 10-line bands. Each
+band has 15 cells across the 1920-pixel width; each cell is 128 pixels wide.
+Read cells left-to-right, then bands top-to-bottom. Green (00B000) means 1;
+red (B00000) means 0. The stream is MSB-first for this 60-bit word:
+
+  bit 59       initDone = rx_done && tx_done
+  bit 58       ackError
+  bit 57       rxclockSeen
+  bit 56       deSeen
+  bits 55:40   rxWidth: pixel count of the most recently completed DE line
+  bits 39:24   rxHeight: HS rising-edge count since the latest VS rising edge
+                or reset. If VS is absent, this keeps increasing (saturating
+                at 65535), so zero is not used to imply no clock/DE.
+  bits 23:0    sampleRGB: latest RGB sample captured while DE was high
+
+rxWidth, rxHeight, and sampleRGB are captured in the RX pixel-clock domain and
+synchronized to the 148.5 MHz display domain. Status bits cross from their
+respective controller/clock domains. rxclockSeen and deSeen are sticky until reset.
+The 60 cells are grouped as bits 59:45, 44:30, 29:15, and 14:0.
+
+LEDs are ordered [7:0]: rxclockSeen, ackError, deSeen, tx_done, rx_done,
+configPLL lock, videoPLL lock, 27 MHz heartbeat.

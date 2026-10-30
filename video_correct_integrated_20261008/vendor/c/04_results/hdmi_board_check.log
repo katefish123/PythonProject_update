@@ -1,0 +1,99 @@
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_hdmi_board_check work_hdmi_board_check 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:32:07 on Oct 08,2026
+# vlog -work work_hdmi_board_check 01_design_code/video_timing_vtc.v 
+# -- Compiling module video_timing_vtc
+# 
+# Top level modules:
+# 	video_timing_vtc
+# End time: 16:32:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:32:07 on Oct 08,2026
+# vlog -work work_hdmi_board_check 01_design_code/test_pattern_generator_tpg.v 
+# -- Compiling module test_pattern_generator_tpg
+# 
+# Top level modules:
+# 	test_pattern_generator_tpg
+# End time: 16:32:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:32:07 on Oct 08,2026
+# vlog -work work_hdmi_board_check 01_design_code/video_top.v 
+# -- Compiling module video_top
+# 
+# Top level modules:
+# 	video_top
+# End time: 16:32:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:32:07 on Oct 08,2026
+# vlog -work work_hdmi_board_check 01_design_code/ms7210_config.v 
+# -- Compiling module ms7210_config
+# 
+# Top level modules:
+# 	ms7210_config
+# End time: 16:32:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:32:07 on Oct 08,2026
+# vlog -work work_hdmi_board_check 01_design_code/hdmi_colorbar_top.v 
+# -- Compiling module hdmi_colorbar_top
+# 
+# Top level modules:
+# 	hdmi_colorbar_top
+# End time: 16:32:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 16:32:07 on Oct 08,2026
+# vlog -work work_hdmi_board_check 02_simulation/tb_hdmi_colorbar_top.v 
+# -- Compiling module tb_hdmi_colorbar_top
+# -- Compiling module video_pll_27m_148m5
+# -- Compiling module config_pll_27m_10m
+# -- Compiling module ms7210_ctl
+# -- Compiling module iic_dri
+# 
+# Top level modules:
+# 	tb_hdmi_colorbar_top
+# 	video_pll_27m_148m5
+# 	config_pll_27m_10m
+# 	ms7210_ctl
+# 	iic_dri
+# End time: 16:32:07 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf 04_results/hdmi_board_check.wlf work_hdmi_board_check.tb_hdmi_colorbar_top 
+# Start time: 16:32:07 on Oct 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_hdmi_colorbar_top(fast)
+# Loading work.hdmi_colorbar_top(fast)
+# Loading work.video_pll_27m_148m5(fast)
+# Loading work.config_pll_27m_10m(fast)
+# Loading work.video_top(fast)
+# Loading work.video_timing_vtc(fast)
+# Loading work.test_pattern_generator_tpg(fast)
+# Loading work.ms7210_config(fast)
+# Loading work.ms7210_ctl(fast)
+# Loading work.iic_dri(fast)
+# TEST_PASS_HDMI_TOP
+# ** Note: $stop    : 02_simulation/tb_hdmi_colorbar_top.v(82)
+#    Time: 186 ns  Iteration: 0  Instance: /tb_hdmi_colorbar_top
+# Break in Module tb_hdmi_colorbar_top at 02_simulation/tb_hdmi_colorbar_top.v line 82
+# Stopped at 02_simulation/tb_hdmi_colorbar_top.v line 82
+# 0
+# End time: 16:32:09 on Oct 08,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

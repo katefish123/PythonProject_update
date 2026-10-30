@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-10T14:42:31.4174294Z",
+  "bitstream_sha256": "00e696c084513c48465ad22662585d862a7d30cc76efb0c998d70a98bb388b53",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\program_camera_live_native_20261010_224110.log",
+  "actual_camera_display_accepted": false
+}

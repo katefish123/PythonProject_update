@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-10-14T13:11:04.842429+08:00",
+  "hardware_video_version": "historical_baseline_black_873cb996",
+  "hardware_video_recorded_local": "2026-10-14 01:14:46 Asia/Shanghai",
+  "source_video": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black\\black_camera_2026-10-14 01-14-46.mp4",
+  "source_video_sha256": "5a02b7913ee067fac62f813d1f6be7ce436e9d28f8397750bedd769c5d70a8bd",
+  "demo_source_start_seconds": 8.17,
+  "demo_seconds_requested": 32.7,
+  "crop_xywh": [
+    640,
+    88,
+    640,
+    904
+  ],
+  "audio_in_demo": false,
+  "fast_bitstream_sha256": "39574d43ef4605fc1953de32dab1bb520a2f46de0ddfa059cb7860333669777d",
+  "fast_program_verify_passed": true,
+  "fast_program_receipt": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261014_black_fast\\black_fast_program_20261014_125009.json",
+  "baseline_model_seconds": 0.4561252592592593,
+  "fast_model_seconds": 0.23679411111111112,
+  "model_time_reduction_percent": 48.08572726367725,
+  "fast_python_native_system_checks": [
+    17,
+    9,
+    16
+  ],
+  "exact_rgb_pixels": 578560,
+  "latest_resident_program": "baseline_black_873cb996_reloaded_20261014_130506",
+  "fast_optical_speed_comparison_passed": false,
+  "absolute_end_to_end_latency_measured": false,
+  "geometric_accuracy_accepted": false,
+  "free_360_degree_rotation_accepted": false,
+  "realtime_30fps_accepted": false,
+  "latest_observation": "Fast probes 13:02:44 and 13:04:37 were pixel-identical despite a moving counter. Reloaded baseline produced color bars at 13:06:54 and 13:07:52. Source/ROI and input-state inspection remains necessary.",
+  "files_sha256": {
+    "黑标校正_旧版真实上板演示.mp4": "e79b32f57227299125158b26ccecd38e586cecacc8d918a8c0ace332e6caa9fe",
+    "黑标校正_旧版真实上板截图.png": "e0b9fc6c664cb9cd65c19fb647d53729602719ab37b61792ec5f29cdfe0a35a4",
+    "提速版_合成测试前后对照.png": "dea16befe8a4a3d7c325b29945f9645f57e35fc22bdab672155f235dc897785d"
+  },
+  "presentation_video_decode_verified": true,
+  "presentation_decoded_frames": 981,
+  "presentation_duration_seconds": 32.7
+}

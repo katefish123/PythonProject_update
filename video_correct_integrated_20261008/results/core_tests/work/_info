@@ -1,0 +1,413 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008
+T_opt
+!s110 1791477450
+VHk9iZ:YhF2VNMZUM:5Dfm0
+04 21 4 work tb_video_correct_core fast 0
+=1-f83dc625ce34-6ac7c6ca-1c-8080
+o-quiet -auto_acc_if_foreign -work video_core_tests +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vb_rectifier
+Z2 !s110 1791477449
+!i10b 1
+!s100 6;00hX51LB?[QYf:gHb803
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IEOLAC>9DWF_HL1;>]<@[>3
+R0
+Z4 w1791460448
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\b_rectifier.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\b_rectifier.v
+!i122 8
+L0 3 77
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1791477449.000000
+Z8 !s107 C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_core.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_board_top.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_session.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\result_display.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\c\01_design_code\video_timing_vtc.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\unsigned_div_seq.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\signed_div_seq.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\scaled_div_pipe.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_core.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_coord.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\marker_detector.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\homography_solver.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\bilinear_interp.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\b_rectifier.v|
+Z9 !s90 -work|C:\D\FPGA\video_correct_integrated_20261008\results\core_tests\work|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\b_rectifier.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\bilinear_interp.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\homography_solver.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\marker_detector.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_coord.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_core.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\scaled_div_pipe.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\signed_div_seq.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\unsigned_div_seq.v|C:\D\FPGA\video_correct_integrated_20261008\vendor\c\01_design_code\video_timing_vtc.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\result_display.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_session.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_board_top.v|C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_core.v|
+!i113 0
+Z10 o-work {C:\D\FPGA\video_correct_integrated_20261008\results\core_tests\work} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vbilinear_interp
+R2
+!i10b 1
+!s100 DYh;Je5kAK^G;m>Lfi;aP0
+R3
+I85gK7D]@TWE[=8aT5FM?[2
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\bilinear_interp.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\bilinear_interp.v
+!i122 8
+Z11 L0 2 31
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vframe_processor
+R2
+!i10b 1
+!s100 hW4LdK7zJ6Sb7F7oG]<gi2
+R3
+I;@XN`?d>SC:6QYB]@`=6Y2
+R0
+w1791460849
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v
+!i122 8
+L0 7 136
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vframe_session
+R2
+!i10b 1
+!s100 9^b?7CGQ`zGPFjYcf8g<R0
+R3
+I?K=L:[PIa1[DGHk]0a:Ij3
+R0
+Z12 w1791476715
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_session.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_session.v
+!i122 8
+L0 5 91
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vhomography_solver
+R2
+!i10b 1
+!s100 _hf4]GKOadXno7BZNL7Y@2
+R3
+IAg6z10CcMKC1n@Ya6i=>_1
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\homography_solver.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\homography_solver.v
+!i122 8
+L0 3 100
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vmarker_detector
+R2
+!i10b 1
+!s100 4SaJMFFzJ>gJiPK4=aN8F2
+R3
+IK0o6g=;bZ=lZ>l9jBJ[R41
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\marker_detector.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\marker_detector.v
+!i122 8
+L0 3 106
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vperspective_coord
+R2
+!i10b 1
+!s100 bCb3I[GIh94do;8hNkl?^2
+R3
+I_6MASC:Ef7Y_3l9djbVBQ1
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_coord.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_coord.v
+!i122 8
+L0 3 32
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vperspective_core
+R2
+!i10b 1
+!s100 OZ[>eHNjG?QFI1Th=_=mM0
+R3
+ISgKEoY6]D@KLD680E_l0f3
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_core.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\perspective_core.v
+!i122 8
+L0 4 31
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vresult_display
+R2
+!i10b 1
+!s100 mUbZ1cK^N>3>?BUL4;0OD2
+R3
+IA`?V=OWgJKc1U;e1kJLUN2
+R0
+w1791477445
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\video\result_display.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\video\result_display.v
+!i122 8
+L0 6 74
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vscaled_div_pipe
+R2
+!i10b 1
+!s100 cAfzEiI2]C^_UmJo`YRnS3
+R3
+ITU>NVGW5^2QEmVm@Ngf7A2
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\scaled_div_pipe.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\scaled_div_pipe.v
+!i122 8
+L0 4 49
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vsigned_div_seq
+R2
+!i10b 1
+!s100 @b@96z@bn9jU_IAeiFj^Y3
+R3
+ISi_87S<b;]4PM8IH]jlPG2
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\signed_div_seq.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\signed_div_seq.v
+!i122 8
+L0 2 21
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vsnapshot_capture
+R2
+!i10b 1
+!s100 JMb[aXh?@iVY036FIGSOK1
+R3
+IQT_]i?NVP01kLiIlagm4P1
+R0
+w1791461077
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v
+!i122 8
+L0 6 56
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vtb_video_correct_core
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R2
+!i10b 1
+!s100 1jOiP;j7hgm=9K7Z<^HT;1
+R3
+IelZ[[_hlhf=4?c6H?KU=:2
+S1
+R0
+w1791477015
+8C:\D\FPGA\video_correct_integrated_20261008\sim\tb_video_correct_core.sv
+FC:\D\FPGA\video_correct_integrated_20261008\sim\tb_video_correct_core.sv
+!i122 9
+L0 2 153
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:\D\FPGA\video_correct_integrated_20261008\sim\tb_video_correct_core.sv|
+!s90 -sv|-work|C:\D\FPGA\video_correct_integrated_20261008\results\core_tests\work|C:\D\FPGA\video_correct_integrated_20261008\sim\tb_video_correct_core.sv|
+!i113 0
+o-sv -work {C:\D\FPGA\video_correct_integrated_20261008\results\core_tests\work} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vunsigned_div_seq
+R2
+!i10b 1
+!s100 J[_4>Y7]HRQBVZ<3mj;JS3
+R3
+I@h=5DL4oHbD@IFXzAB;8C1
+R0
+R4
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\unsigned_div_seq.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\b\rtl\unsigned_div_seq.v
+!i122 8
+R11
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vvideo_correct_board_top
+R2
+!i10b 1
+!s100 ?n@V`XL889OYMGUG8RMI>0
+R3
+IlgGIeU0lKQ^eN]Gd8FUgP0
+R0
+w1791476908
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_board_top.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_board_top.v
+!i122 8
+L0 6 71
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vvideo_correct_core
+R2
+!i10b 1
+!s100 egGmL4D_D;M`ehWOG=>o60
+R3
+IS7BcUK@2P4TOJePfDS<780
+R0
+R12
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_core.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\top\video_correct_core.v
+!i122 8
+L0 5 50
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vvideo_timing_vtc
+R2
+!i10b 1
+!s100 OLZ`=Di<fQ0:gWL0SboN;2
+R3
+I8J>PYmH2@6J@K?RcTZJfA3
+R0
+w1791186938
+8C:\D\FPGA\video_correct_integrated_20261008\vendor\c\01_design_code\video_timing_vtc.v
+FC:\D\FPGA\video_correct_integrated_20261008\vendor\c\01_design_code\video_timing_vtc.v
+!i122 8
+L0 5 57
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1

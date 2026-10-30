@@ -1,0 +1,6 @@
+{
+  "device_name_requested": "VC-002Pro ",
+  "found": false,
+  "read_only": true,
+  "error": "Cannot convert the \"System.__ComObject\" value of type \"System.__ComObject\" to type \"IReadOnlyCreateDevEnum\"."
+}

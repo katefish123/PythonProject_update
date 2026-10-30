@@ -1,0 +1,12 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 13:48:12 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/uart_20261030_134812_342419/modelsim.ini C:/D/FPGA/A_lens_20261030/verification/uart_20261030_134812_342419/lens_uart_control.v C:/D/FPGA/A_lens_20261030/verification/uart_20261030_134812_342419/tb_uart.sv 
+-- Compiling module lens_uart_control
+-- Compiling module lens_uart_rx
+-- Compiling module lens_uart_tx
+-- Compiling module tb_uart
+
+Top level modules:
+	tb_uart
+End time: 13:48:12 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

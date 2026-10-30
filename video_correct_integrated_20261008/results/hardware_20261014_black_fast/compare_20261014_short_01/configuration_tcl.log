@@ -1,0 +1,4 @@
+[2026.10.14 11:37:18] : cfg_set_tcl_break succeed, 0.0
+[2026.10.14 11:37:20] : cfg_connect succeed, 2.1
+[2026.10.14 11:37:22] : cfg_set_cable_property succeed, 1.0
+[2026.10.14 11:37:30] : cfg_scan_chain failed, 7.1

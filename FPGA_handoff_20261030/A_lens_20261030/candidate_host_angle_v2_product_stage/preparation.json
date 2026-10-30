@@ -1,0 +1,9 @@
+{
+  "base": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v1",
+  "candidate": "C:\\D\\FPGA\\A_lens_20261030\\candidate_host_angle_v2_product_stage",
+  "scope": "One added exact pipeline stage, no rounding/model changes; V1 remains unchanged.",
+  "v1_lens_sha256": "b3d561121c6f16834f5a3ebfb99ac1ff5bbd8570d91fe0b1b4ac32609920a0b4",
+  "new_lens_sha256": "45544797de801b81b8e9a5cb515cec3b73f03b09891b730867290fea1ac44c92",
+  "hardware_accessed": false,
+  "qualified": false
+}

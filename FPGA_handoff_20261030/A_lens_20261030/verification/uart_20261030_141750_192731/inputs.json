@@ -1,0 +1,19 @@
+{
+  "rtl_sha256": "659d5dab0cbe9a759367c1494b1712b0323a0938ae774620b04cd25dfe775955",
+  "host_tool_sha256": "5741d13af8b372e1c22c949c9f5609987e6ebf5260d63cd7fd0381d6c40aa4fb",
+  "checker_sha256": "08dde06bca28a1db9d3a1b9ed19ac04d80a169699dd2e9a27513b56cf5312ac9",
+  "testbench_sha256": "593da0db8ae821df2316e060cbe5098963cc575fb0abf7a7fb081dfc1ac0551c",
+  "fixtures": {
+    "ack_a.hex": "7045bcd2e816fe66f835e5bb47c368562c85affd4664fb68b87362c9e90b6121",
+    "ack_b.hex": "33c9c167c0355b1838d4d6a8adc6b75e593600aa82b0d72a364281feb80397e3",
+    "ack_c.hex": "c28eb947ebc6cfeb2b767d341566abb0d9df0e7803c72d359c215396d2f7a308",
+    "bad_crc.hex": "c8a67551168f4dccb4432b780ad8d5177293227a86f53123b7b58c81cd8d4855",
+    "bad_flags.hex": "feb8ad8d956ab7b5d01f713504bc339dbda6d77fd25d509f27260dca9cfab212",
+    "bad_version.hex": "fbc062c4415e360f43dbfce6a21a07d6a5072caac7e8383d733e53f565472375",
+    "packet_a.hex": "bb8190df87dba85d0b4f1c70f1e37494d5090ef7809bd57205a4dace67bd3e50",
+    "packet_b.hex": "c9f9ce637202afc67a017b44c0b9b3a1d4e035ac8ecf3c347cfabfa8cf9f526b",
+    "packet_c.hex": "001dbf024b66968bfc2faefe744e553f1daa76de1dd2d4602797e261309c3ee1"
+  },
+  "hardware_accessed": false,
+  "serial_ports_opened": false
+}

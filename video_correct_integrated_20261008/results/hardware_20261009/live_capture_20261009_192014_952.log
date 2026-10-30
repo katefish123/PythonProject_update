@@ -1,0 +1,10 @@
+Input #0, dshow, from 'video=VC-002Pro ':
+  Duration: N/A, start: 4510.382820, bitrate: N/A
+  Stream #0:0: Video: mjpeg (Baseline) (MJPG / 0x47504A4D), yuvj422p(pc, bt470bg/bt709/unknown), 1920x1080, 30 fps, 30 tbr, 10000k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Output #0, image2, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\live_latest.jpg':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: mjpeg (Baseline) (MJPG / 0x47504A4D), yuvj422p(pc, bt470bg/bt709/unknown), 1920x1080, q=2-31, 30 fps, 30 tbr, 10000k tbn
+Press [q] to stop, [?] for help

@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-10T16:54:25.373992+00:00",
+  "source": "User reply after direct camera power-off, HDMI reseat and movie-mode restart",
+  "user_report_verbatim": "出现真实取景",
+  "route_reported_by_user": "R50 directly to VC-002Pro; FPGA bypassed",
+  "obs_capture_format_last_verified": "1920x1080 MJPEG 30fps",
+  "current_direct_camera_to_capture_accepted": true,
+  "continuous_direct_camera_display_verified": false,
+  "fpga_camera_display_accepted": false,
+  "scope_of_inference": "Direct camera, cable and capture can display a current real image after this recovery operation. This does not prove a specific root cause, long-term stability, FPGA video reception, native preview or correction.",
+  "previous_direct_failure_evidence": "results/hardware_20261009/camera_direct_no_signal_20261011.json",
+  "screenshot_independently_verified": false,
+  "programmed_image_changed": false,
+  "obs_configuration_changed": false,
+  "computer_use_paused_by_user": true,
+  "pending": "User saves direct-camera OBS source screenshot, reconnects R50 to FPGA HDMI-IN and FPGA HDMI-OUT to capture, keeps camera live and FPGA powered without KEY0, waits 10 seconds; save another source screenshot if diagnostic grid only. Desktop automation remains paused."
+}

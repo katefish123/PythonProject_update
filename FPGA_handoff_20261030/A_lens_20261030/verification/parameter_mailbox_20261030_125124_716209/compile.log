@@ -1,0 +1,10 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 12:51:24 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/parameter_mailbox_20261030_125124_716209/modelsim.ini C:/D/FPGA/A_lens_20261030/verification/parameter_mailbox_20261030_125124_716209/lens_parameter_mailbox.v C:/D/FPGA/A_lens_20261030/verification/parameter_mailbox_20261030_125124_716209/tb_mailbox.sv 
+-- Compiling module lens_parameter_mailbox
+-- Compiling module tb_mailbox
+
+Top level modules:
+	tb_mailbox
+End time: 12:51:24 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

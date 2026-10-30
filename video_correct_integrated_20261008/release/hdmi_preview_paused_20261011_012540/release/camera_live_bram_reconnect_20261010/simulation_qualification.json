@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-10T12:56:57.2805024Z",
+  "baseline_failure_reproduced": true,
+  "tests": {
+    "fixed_hdmi": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "fixed_dvi": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "config_tx_first": {
+      "exit_code": 0,
+      "passed": true
+    },
+    "config_rx_first": {
+      "exit_code": 0,
+      "passed": true
+    }
+  },
+  "hardware_programmed": false
+}

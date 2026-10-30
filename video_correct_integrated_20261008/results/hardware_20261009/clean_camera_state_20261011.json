@@ -1,0 +1,63 @@
+{
+  "recorded_at_utc": "2026-10-11T17:00:59.716528+00:00",
+  "current_image": "release/ddr_camera_reconnect_20261011/video_correct_ddr_top.sbit",
+  "current_image_sha256": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+  "program_log": "results\\hardware_20261009\\program_ddr_camera_reconnect_20261011_235140.log",
+  "program_verify_passed": true,
+  "program_log_sha256": "cbb37f5731889ef60f577b28c8ea0c7464fe7a9f92c49cbb355db702dd0f48bb",
+  "flash_modified": false,
+  "phase": "Baseline actual full optical correction recovered; high-detail read-ahead candidate in preparation",
+  "first_real_camera_rectification_observed": true,
+  "first_real_camera_rectification_evidence": "results/hardware_20261009/first_real_camera_rectification_20261011.json",
+  "previous_verified_scope": "Historical clean a4 image physically showed a complete corrected page; 18:12:18 recording retained about47s after first page without fallback/blackout. Current boot/output still pending.",
+  "diagnostic_grid_present": false,
+  "actual_camera_correction_accepted": true,
+  "actual_camera_display_accepted_for_current_image": true,
+  "current_boot_ddr_bist_observed": false,
+  "current_receiver_probe_decoded": false,
+  "current_valid_camera_width_height_measured": false,
+  "current_failed_stage": null,
+  "capture_counter_first_last": null,
+  "capture_bad_count": null,
+  "successful_result_count": null,
+  "source_sampling": [
+    640,
+    480
+  ],
+  "processed_output": [
+    320,
+    452
+  ],
+  "hdmi_output": [
+    1920,
+    1080
+  ],
+  "display_window": {
+    "x": 640,
+    "y": 88,
+    "width": 640,
+    "height": 904
+  },
+  "algorithm_update_fps_measured": false,
+  "long_term_camera_display_verified": false,
+  "computer_use_paused_by_user": true,
+  "original_A_B_C_modified": false,
+  "original_target_modified": false,
+  "project": "diagnostics/ddr_camera_reconnect_20261011/results/video_correct_ddr_reconnect.pds",
+  "source_snapshot": "release/ddr_camera_reconnect_20261011/source_snapshot.zip",
+  "pending": "Paused by user. Working baseline retained. High-detail build/timing completed, but release is not sealed or programmed. Resume only on user instruction.",
+  "download_entry": "下载相机校正_重连版.cmd",
+  "diagnostic_signature": null,
+  "diagnostic_fields": null,
+  "previous_verified_baseline": "results/hardware_20261009/working_clean_baseline_verified_20261011.json",
+  "capture_hdmi_recovery_evidence": "results/hardware_20261009/capture_hdmi_recovery_latest_20261011.json",
+  "physical_route_current": "R50 -> FPGA HDMI-IN -> FPGA HDMI-OUT -> VC-002Pro -> PC USB",
+  "clarity_accepted": false,
+  "clarity_improvement_accepted": false,
+  "current_boot_hdmi_output_user_confirmed": true,
+  "actual_camera_display_accepted": true,
+  "short_recording_stable_picture_accepted": true,
+  "current_boot_recovery_evidence": "results\\hardware_20261009\\baseline_recovered_verified_20261012.json",
+  "paused_by_user": true,
+  "paused_at_utc": "2026-10-11T17:34:05.040231+00:00"
+}

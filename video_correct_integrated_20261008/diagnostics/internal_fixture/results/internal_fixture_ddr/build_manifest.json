@@ -1,0 +1,24 @@
+{
+  "top": "video_correct_ddr_internal_fixture_top",
+  "build_directory": "diagnostics/internal_fixture/results/internal_fixture_ddr",
+  "model_sim": "PASS: 691200 active input sample points, all 480 source rows",
+  "independent_oracle": "vendor/b/python/brect.fixed.rectify_fixed; marker check vendor/b/python/brect.golden.detect_markers",
+  "ddr_bist_enabled": true,
+  "hdmi_mode": "TX_FIRST=1; fixture hdmi_ready waits for tx_done only; RX path intentionally unused",
+  "pds": "Pango PDS 2022.2-SP6.4; compile/synthesize/map/place-route/report_timing/gen_bit_stream succeeded",
+  "timing_summary_slow_corner_ns": {
+    "pixel_clock_setup_wns": 2.216,
+    "pixel_clock_tns": 0.0,
+    "pixel_clock_hold_whs": 0.346,
+    "pixel_clock_ths": 0.0,
+    "all_constraints_met": true
+  },
+  "bitstream": {
+    "path": "diagnostics/internal_fixture/results/internal_fixture_ddr/generate_bitstream/video_correct_ddr_internal_fixture_top.sbit",
+    "bytes": 3791112,
+    "sha256": "47aeafc2e9ebbd9b61227755a0b815befcad8da96f130d3a5c1233a9ca8e6176"
+  },
+  "source_fixture_sha256": "f772fa30dc918cf376b8c6ce9b265651ad5c89f07e671e70de2fc3d5e323a412",
+  "expected_output_sha256": "5e0279543ef0568775d9cb23fd4b2a254a485546183ccfa93782aa56cac9c675",
+  "post_pnr_timing_report": "diagnostics/internal_fixture/results/internal_fixture_ddr/report_timing/video_correct_ddr_internal_fixture_top.rtr"
+}

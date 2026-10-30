@@ -1,0 +1,50 @@
+{
+  "capture_path": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\capture_internal_fixture.jpg",
+  "actual_dimensions": {
+    "width": 1920,
+    "height": 1080
+  },
+  "expected_fixture_dimensions": {
+    "width": 320,
+    "height": 452
+  },
+  "active_roi_xy_inclusive": {
+    "x": [
+      640,
+      1279
+    ],
+    "y": [
+      88,
+      991
+    ],
+    "width": 640,
+    "height": 904
+  },
+  "scaling": "2x nearest-neighbor expansion of expected fixture",
+  "zero_offset_metrics": {
+    "mae_rgb": 54.472246036135694,
+    "rmse_rgb": 54.54099248092058,
+    "p95_abs_rgb_error": 55.0,
+    "p99_abs_rgb_error": 62.0,
+    "max_abs_rgb_error": 154,
+    "pixel_max_rgb_difference_within_threshold_ratio": {
+      "4": 0.0,
+      "8": 0.0,
+      "16": 3.456858407079646e-06
+    },
+    "low_luminance_pixel_ratio_luma_le_8": 0.0,
+    "possible_black_rows_roi_relative": [],
+    "possible_black_row_count": 0,
+    "possible_black_row_rule": "ROI row mean Rec.709 luminance <= 8 on a 0..255 scale",
+    "best_offset_diagnostic": {
+      "capture_window_offset_px": {
+        "x": 0,
+        "y": 0
+      },
+      "mae_rgb": 54.472246036135694,
+      "search_radius_px": 3,
+      "note": "Diagnostic only; edge crop varies by offset. Required zero-offset metrics remain primary."
+    }
+  },
+  "interpretation": "Report measured RGB differences. HDMI capture NV12 conversion and JPEG encoding can introduce loss; no universal pass threshold is assumed."
+}

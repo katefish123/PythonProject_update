@@ -1,0 +1,477 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "hardware_accessed": false,
+  "iso_certified": false,
+  "input_manifest_sha256": "f32fbf7d87f73127805d0bb3a983b73c46be09bf208ef16e32d42fa0b3b2ef15",
+  "log_sha256": "5a9465ab93c7c8a3a41e602bd1419ba23c5b2e379d2d6374f6d5737cdbcdd18b",
+  "cases": [
+    {
+      "name": "gaussian_s0.7_vertical",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "orientation": "vertical",
+      "transfer": "linear",
+      "sigma_normal_pixels": 0.7,
+      "expected_mtf50_cycles_per_pixel": 0.2677008930418251,
+      "estimated_mtf50_cycles_per_pixel": 0.26636226716895256,
+      "relative_error": 0.005000453519829695,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "rising",
+        "edge_slope": 0.055908681810736216,
+        "edge_intercept_roi_pixels": 97.58341192052539,
+        "edge_angle_degrees_from_selected_axis": 3.200000114318773,
+        "fit_rms_pixels": 2.4000215022057496e-05,
+        "fit_maximum_pixels": 6.032663416988271e-05,
+        "edge_margin_pixels": 97.58341192052539,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.1999660524490078e-14,
+        "minimum_bin_samples": 48,
+        "maximum_bin_samples": 56
+      }
+    },
+    {
+      "name": "gaussian_s0.7_horizontal",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_horizontal.png",
+      "orientation": "horizontal",
+      "transfer": "linear",
+      "sigma_normal_pixels": 0.7,
+      "expected_mtf50_cycles_per_pixel": 0.2677008930418251,
+      "estimated_mtf50_cycles_per_pixel": 0.26636226716895256,
+      "relative_error": 0.005000453519829695,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "rising",
+        "edge_slope": 0.055908681810736216,
+        "edge_intercept_roi_pixels": 97.58341192052539,
+        "edge_angle_degrees_from_selected_axis": 3.200000114318773,
+        "fit_rms_pixels": 2.4000215022057496e-05,
+        "fit_maximum_pixels": 6.032663416988271e-05,
+        "edge_margin_pixels": 97.58341192052539,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.1999660524490078e-14,
+        "minimum_bin_samples": 48,
+        "maximum_bin_samples": 56
+      }
+    },
+    {
+      "name": "gaussian_s1.2_vertical",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s1.2_vertical.png",
+      "orientation": "vertical",
+      "transfer": "linear",
+      "sigma_normal_pixels": 1.2,
+      "expected_mtf50_cycles_per_pixel": 0.156158854274398,
+      "estimated_mtf50_cycles_per_pixel": 0.15619355921351827,
+      "relative_error": 0.00022224125094627567,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "falling",
+        "edge_slope": -0.0998132444990846,
+        "edge_intercept_roi_pixels": 113.70073937833027,
+        "edge_angle_degrees_from_selected_axis": 5.6999985833011495,
+        "fit_rms_pixels": 2.344210971618326e-05,
+        "fit_maximum_pixels": 6.319035112767324e-05,
+        "edge_margin_pixels": 93.03939776701975,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 2.775557561562881e-15,
+        "minimum_bin_samples": 40,
+        "maximum_bin_samples": 63
+      }
+    },
+    {
+      "name": "gaussian_s1.2_horizontal",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s1.2_horizontal.png",
+      "orientation": "horizontal",
+      "transfer": "linear",
+      "sigma_normal_pixels": 1.2,
+      "expected_mtf50_cycles_per_pixel": 0.156158854274398,
+      "estimated_mtf50_cycles_per_pixel": 0.15619355921351827,
+      "relative_error": 0.00022224125094627567,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "falling",
+        "edge_slope": -0.0998132444990846,
+        "edge_intercept_roi_pixels": 113.70073937833027,
+        "edge_angle_degrees_from_selected_axis": 5.6999985833011495,
+        "fit_rms_pixels": 2.344210971618326e-05,
+        "fit_maximum_pixels": 6.319035112767324e-05,
+        "edge_margin_pixels": 93.03939776701975,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 2.775557561562881e-15,
+        "minimum_bin_samples": 40,
+        "maximum_bin_samples": 63
+      }
+    },
+    {
+      "name": "gaussian_s2.0_vertical",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s2.0_vertical.png",
+      "orientation": "vertical",
+      "transfer": "linear",
+      "sigma_normal_pixels": 2.0,
+      "expected_mtf50_cycles_per_pixel": 0.09369531256463878,
+      "estimated_mtf50_cycles_per_pixel": 0.09383863203926453,
+      "relative_error": 0.0015296333477394786,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "rising",
+        "edge_slope": 0.1423211162832498,
+        "edge_intercept_roi_pixels": 88.63964743483272,
+        "edge_angle_degrees_from_selected_axis": 8.100002278920117,
+        "fit_rms_pixels": 3.0192086282755028e-05,
+        "fit_maximum_pixels": 8.01977763984496e-05,
+        "edge_margin_pixels": 88.63964743483272,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.0385211209514369e-14,
+        "minimum_bin_samples": 49,
+        "maximum_bin_samples": 60
+      }
+    },
+    {
+      "name": "gaussian_s2.0_horizontal",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s2.0_horizontal.png",
+      "orientation": "horizontal",
+      "transfer": "linear",
+      "sigma_normal_pixels": 2.0,
+      "expected_mtf50_cycles_per_pixel": 0.09369531256463878,
+      "estimated_mtf50_cycles_per_pixel": 0.09383863203926453,
+      "relative_error": 0.0015296333477394786,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "rising",
+        "edge_slope": 0.1423211162832498,
+        "edge_intercept_roi_pixels": 88.63964743483272,
+        "edge_angle_degrees_from_selected_axis": 8.100002278920117,
+        "fit_rms_pixels": 3.0192086282755028e-05,
+        "fit_maximum_pixels": 8.01977763984496e-05,
+        "edge_margin_pixels": 88.63964743483272,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.0385211209514369e-14,
+        "minimum_bin_samples": 49,
+        "maximum_bin_samples": 60
+      }
+    },
+    {
+      "name": "gaussian_s3.0_vertical",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s3.0_vertical.png",
+      "orientation": "vertical",
+      "transfer": "linear",
+      "sigma_normal_pixels": 3.0,
+      "expected_mtf50_cycles_per_pixel": 0.06246354170975919,
+      "estimated_mtf50_cycles_per_pixel": 0.06275181407038961,
+      "relative_error": 0.004615049879334254,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "falling",
+        "edge_slope": -0.179928399198907,
+        "edge_intercept_roi_pixels": 121.99276475182229,
+        "edge_angle_degrees_from_selected_axis": 10.199999995540514,
+        "fit_rms_pixels": 3.8777095709119475e-05,
+        "fit_maximum_pixels": 0.00011106637379043605,
+        "edge_margin_pixels": 84.74758611764855,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.5728159515523009e-15,
+        "minimum_bin_samples": 51,
+        "maximum_bin_samples": 55
+      }
+    },
+    {
+      "name": "gaussian_s3.0_horizontal",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s3.0_horizontal.png",
+      "orientation": "horizontal",
+      "transfer": "linear",
+      "sigma_normal_pixels": 3.0,
+      "expected_mtf50_cycles_per_pixel": 0.06246354170975919,
+      "estimated_mtf50_cycles_per_pixel": 0.06275181407038961,
+      "relative_error": 0.004615049879334254,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.6,
+        "polarity": "falling",
+        "edge_slope": -0.179928399198907,
+        "edge_intercept_roi_pixels": 121.99276475182229,
+        "edge_angle_degrees_from_selected_axis": 10.199999995540514,
+        "fit_rms_pixels": 3.8777095709119475e-05,
+        "fit_maximum_pixels": 0.00011106637379043605,
+        "edge_margin_pixels": 84.74758611764855,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.5728159515523009e-15,
+        "minimum_bin_samples": 51,
+        "maximum_bin_samples": 55
+      }
+    },
+    {
+      "name": "srgb_rgb_decode",
+      "kind": "analytic_synthetic_gaussian",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_srgb_rgb.png",
+      "orientation": "horizontal",
+      "transfer": "srgb",
+      "sigma_normal_pixels": 1.2,
+      "expected_mtf50_cycles_per_pixel": 0.156158854274398,
+      "estimated_mtf50_cycles_per_pixel": 0.1565292673019835,
+      "relative_error": 0.0023720270573619473,
+      "relative_tolerance": 0.012,
+      "quality": {
+        "linear_contrast": 0.593581850634719,
+        "polarity": "rising",
+        "edge_slope": 0.09276338668050234,
+        "edge_intercept_roi_pixels": 93.7726070931012,
+        "edge_angle_degrees_from_selected_axis": 5.299783649424316,
+        "fit_rms_pixels": 0.005417797359457334,
+        "fit_maximum_pixels": 0.015397255258150722,
+        "edge_margin_pixels": 93.7726070931012,
+        "plateau_relative_noise": 0.0,
+        "negative_lsf_fraction": 1.6037601128470662e-14,
+        "minimum_bin_samples": 50,
+        "maximum_bin_samples": 56
+      }
+    },
+    {
+      "name": "cli_accept",
+      "kind": "cli_contract",
+      "passed": true,
+      "return_code": 0
+    },
+    {
+      "name": "cli_bad_roi",
+      "kind": "cli_contract",
+      "passed": true,
+      "return_code": 2
+    },
+    {
+      "name": "cli_missing_transfer",
+      "kind": "cli_contract",
+      "passed": true,
+      "return_code": 2
+    },
+    {
+      "name": "blank",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_blank.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "contrast",
+      "reason": "ROI lacks one sufficiently strong edge."
+    },
+    {
+      "name": "multiple_edges",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_multiple_edges.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "contrast",
+      "reason": "ROI lacks one sufficiently strong edge."
+    },
+    {
+      "name": "checkerboard_corner",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_checkerboard_corner.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "edge_polarity",
+      "reason": "Edge polarity is inconsistent across rows; avoid corners or multiple features."
+    },
+    {
+      "name": "axis_aligned",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_axis_aligned.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "edge_angle",
+      "reason": "Use an edge slanted 2 to 12 degrees from the selected axis."
+    },
+    {
+      "name": "too_large_angle",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_large_angle.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "edge_angle",
+      "reason": "Use an edge slanted 2 to 12 degrees from the selected axis."
+    },
+    {
+      "name": "clipped",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_clipped_codes.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "clipping",
+      "reason": "More than 0.5% of ROI code values are clipped at an endpoint."
+    },
+    {
+      "name": "noisy",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_noisy_plateaus.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "multiple_edges",
+      "reason": "ROI contains extra edges, texture, or excessive row noise."
+    },
+    {
+      "name": "curved",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\reject_curved_edge.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "edge_straightness",
+      "reason": "Edge is curved, ragged, interrupted, or poorly located."
+    },
+    {
+      "name": "out_of_bounds",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": [
+        200,
+        20,
+        100,
+        100
+      ],
+      "error_code": "roi",
+      "reason": "ROI must be positive and entirely inside the image; it is never clipped."
+    },
+    {
+      "name": "negative_roi",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": [
+        -1,
+        24,
+        100,
+        100
+      ],
+      "error_code": "roi",
+      "reason": "ROI must be positive and entirely inside the image; it is never clipped."
+    },
+    {
+      "name": "too_small_roi",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": [
+        100,
+        100,
+        32,
+        32
+      ],
+      "error_code": "roi_size",
+      "reason": "ROI must span at least 64x64 pixels."
+    },
+    {
+      "name": "wrong_roi_no_edge",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": [
+        0,
+        24,
+        64,
+        208
+      ],
+      "error_code": "contrast",
+      "reason": "ROI lacks one sufficiently strong edge."
+    },
+    {
+      "name": "wrong_orientation",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "contrast",
+      "reason": "ROI lacks one sufficiently strong edge."
+    },
+    {
+      "name": "unspecified_transfer",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": [
+        24,
+        24,
+        208,
+        208
+      ],
+      "error_code": "transfer",
+      "reason": "Select transfer=linear or transfer=srgb."
+    },
+    {
+      "name": "missing_roi",
+      "kind": "expected_rejection",
+      "passed": true,
+      "input_file": "C:\\D\\FPGA\\A_lens_20261030\\verification\\sfr_check_20261030_120828_835668\\gaussian_s0.7_vertical.png",
+      "roi": null,
+      "error_code": "roi",
+      "reason": "ROI must contain four integer values: x y width height."
+    }
+  ],
+  "failures": []
+}

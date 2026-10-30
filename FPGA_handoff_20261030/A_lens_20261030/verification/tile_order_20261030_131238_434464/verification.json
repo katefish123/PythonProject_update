@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "throughput_or_optical_acceptance": false,
+  "scope": "Check128x128 clipped-band/raster traversal and actual processor/writer control RTL.\n\nThe processor boundary uses an explicit coordinate/tag passthrough math model:\nthis checks traversal, independent stalls, addresses and frame-affine commits,\nnot affine arithmetic, lens accuracy, DDR throughput or hardware30fps.\n",
+  "input_manifest_sha256": "0ddd7618eaa316d15174967043577a4318e31d1c9929e507e3278c488f987bd0",
+  "compile_log_sha256": "e3709b04b7cd7ee110894f0563f7cad522ea00a5675712ea358649a41fb42264",
+  "simulation_log_sha256": "25067e2521b46f5252be3234ebf972379a442ab29d749fa0e2e744fcd84df310",
+  "observations": [
+    "# WRITER_ORDER_PASS tiled=1 full_frames=2 bursts=1153 input_stalls=1328 cmd_stalls=5376 wrong_address_rejected=1 partial_abort_drained=1 restart=1",
+    "# WRITER_ORDER_PASS tiled=0 full_frames=2 bursts=1153 input_stalls=1328 cmd_stalls=5376 wrong_address_rejected=1 partial_abort_drained=1 restart=1",
+    "# PROCESSOR_ORDER_PASS tiled=0 runtime=0 full_frames=2 qstalls=191135 rstalls=103320 wstalls=192333 abort=1 cfg_snapshot_no_new_command=1",
+    "# PROCESSOR_ORDER_PASS tiled=1 runtime=1 full_frames=2 qstalls=191135 rstalls=103320 wstalls=192333 abort=1 cfg_snapshot_no_new_command=1",
+    "# PROCESSOR_ORDER_PASS tiled=1 runtime=1 full_frames=2 qstalls=191135 rstalls=103320 wstalls=192333 abort=1 cfg_snapshot_no_new_command=1",
+    "# TILE_ORDER_RTL_PASS raster_default=1 tiled=1 runtime_axis_aligned_raster=1 runtime_commit=1"
+  ]
+}

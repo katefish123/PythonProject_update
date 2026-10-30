@@ -1,0 +1,15 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 22:05:35 on Oct 09,2026
+vlog -work C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\work C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\results\tb_camera_passthrough.sv C:\D\FPGA\video_correct_integrated_20261008\diagnostics\camera_passthrough\hdmi_camera_passthrough_top.v C:\D\FPGA\video_correct_integrated_20261008\rtl\common\reset_sync.v C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\hdmi_vs_recover.v C:\D\FPGA\video_correct_integrated_20261008\vendor\c_current\01_design_code\video_timing_vtc.v 
+-- Compiling module config_pll_27m_10m
+-- Compiling module hdmi_config
+-- Compiling module tb_hdmi_camera_native
+-- Compiling module hdmi_camera_passthrough_top
+-- Compiling module reset_sync
+-- Compiling module hdmi_vs_recover
+-- Compiling module video_timing_vtc
+
+Top level modules:
+	tb_hdmi_camera_native
+End time: 22:05:35 on Oct 09,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

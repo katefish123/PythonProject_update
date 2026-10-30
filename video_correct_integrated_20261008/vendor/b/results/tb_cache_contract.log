@@ -1,0 +1,2 @@
+CACHE_CONTRACT_PASS main=48 reset_discarded=10 fresh_black=4 continuous_burst=32 queued_variable_delay=yes mixed_modes=yes
+sim/tb_cache_contract.sv:95: $finish called at 4150000 (1ps)

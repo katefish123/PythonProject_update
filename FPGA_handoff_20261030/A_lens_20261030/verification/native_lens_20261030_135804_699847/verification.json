@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "hardware_accessed": false,
+  "scope": "Check actual full-board synthesized lens cells against B's exact integer model.\n\nOnly the lens leaf is isolated. Its parent-factored input-bit inversions are\nreproduced exactly. The parent-trimmed unused destination-tag bit11 is excluded.\n",
+  "inputs_sha256": "c6265d10bd4b629bc87c5bc81bd92c6aecc44c54181089fb0014e73b1671324d",
+  "simulation_log_sha256": "54a766c65a9278eb7c1613719966d49d73aa7637b5fd45a58ebddbd4938d269a",
+  "observations": [
+    "# NATIVE_LENS_PASS points=4075 checked=4069 numerical_errors=301 cancelled=6 bubbles=2151 consumed_tag_bits=25 ignored_trimmed_tag_bit=11"
+  ]
+}

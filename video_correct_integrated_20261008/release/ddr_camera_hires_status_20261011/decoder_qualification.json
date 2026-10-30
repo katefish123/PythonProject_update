@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "physical_camera_evidence": false,
+  "checked_fields": {
+    "rx_good_captures": 5,
+    "rx_bad_captures": 2,
+    "last_capture_samples": 518400,
+    "last_capture_lines": 1080,
+    "last_capture_packets": 64800,
+    "good_results": 3,
+    "rejected_results": 9,
+    "processor_cycles": 25000000,
+    "marker_counts": [
+      1200,
+      1201,
+      1202,
+      1203
+    ],
+    "display_last_row_cycles": 2500,
+    "display_max_row_cycles": 5591,
+    "display_rows_done": 1000,
+    "display_current_row": 900,
+    "display_fetch_state": 3,
+    "display_beat_index": 79,
+    "display_scan_active": true,
+    "display_request_seen": 1,
+    "display_ack_seen": 0
+  },
+  "wrong_signature_rejected": true,
+  "decoder_sha256": "e443b607eafcc705d99d60f517c986c6af843e813f0dba664ba4855c4375ca48"
+}

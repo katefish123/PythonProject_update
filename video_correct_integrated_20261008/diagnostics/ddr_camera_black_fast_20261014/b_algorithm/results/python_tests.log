@@ -1,0 +1,22 @@
+test_bad_denominator_and_ranges (__main__.Models.test_bad_denominator_and_ranges) ... ok
+test_black_markers_and_statistics (__main__.Models.test_black_markers_and_statistics) ... ok
+test_black_single_channel_above_threshold (__main__.Models.test_black_single_channel_above_threshold) ... ok
+test_border_and_nearest (__main__.Models.test_border_and_nearest) ... ok
+test_colored_markers_are_rejected (__main__.Models.test_colored_markers_are_rejected) ... ok
+test_corners_and_interior (__main__.Models.test_corners_and_interior) ... ok
+test_custom_rois_exclude_black_text (__main__.Models.test_custom_rois_exclude_black_text) ... ok
+test_hd_corner_precision (__main__.Models.test_hd_corner_precision) ... ok
+test_identity_both_samplers (__main__.Models.test_identity_both_samplers) ... ok
+test_interpolation_weights (__main__.Models.test_interpolation_weights) ... ok
+test_invalid_black_configuration (__main__.Models.test_invalid_black_configuration) ... ok
+test_invalid_geometry (__main__.Models.test_invalid_geometry) ... ok
+test_invalid_rgb_and_legacy_thresholds (__main__.Models.test_invalid_rgb_and_legacy_thresholds) ... ok
+test_marker_area_limits_and_rounding (__main__.Models.test_marker_area_limits_and_rounding) ... ok
+test_markers_reject_and_threshold_boundary (__main__.Models.test_markers_reject_and_threshold_boundary) ... ok
+test_roi_inclusive_edges_odd_dimensions (__main__.Models.test_roi_inclusive_edges_odd_dimensions) ... ok
+test_signed_division (__main__.Models.test_signed_division) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.192s
+
+OK

@@ -1,0 +1,13 @@
+{
+  "paused_at_utc": "2026-10-13T06:43:18.276567+00:00",
+  "paused_by_user": true,
+  "package": "release\\paused_rowtrain_20261013_144318.zip",
+  "package_sha256": "c15197dbfe170396de7bfec88dfe8c09aea6b4769ed1894b6bd88cf92729fc69",
+  "package_bytes": 76789111,
+  "zip_crc_and_hashes_verified": true,
+  "current_image_sha256": "eb06c8f9645665111b339e2ea305549a107830275d50f7625245b163b371d987",
+  "source_code_and_bitstream_changed": false,
+  "actual_update_rate_hz": 0.85,
+  "latest_evidence": "results\\hardware_20261009\\rowtrain_actual_update_rate_verified_20261013.json",
+  "pending": "Paused at explicit user request. Preserve working eb06c8f9 release. On resume check power/connections and reprogram same image if power was lost. Next investigate per-stage processing waits and improve update throughput in an independent clone; current640x904 observed rate0.85Hz. No changes while paused."
+}

@@ -1,0 +1,20 @@
+{
+  "qualified_at_utc": "2026-10-13T08:44:40.5592129Z",
+  "tests": {
+    "tb_ddr_full_frame": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_FULL_FRAME_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_ddr_full_frame.run.log",
+      "log_sha256": "c290ce57d69bdbf826baa0c1d2e06f865066717c97cb0bf38dc1b5b1444bdde9"
+    },
+    "tb_core_word_engine": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "CORE_WORD_ENGINE_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_coordqueue_20261013\\results\\tb_core_word_engine.run.log",
+      "log_sha256": "7b9b30b5ebee3aafa0e5f0b02d412ca666d936eafc170fb073d56fcdd96c0315"
+    }
+  },
+  "hardware_accepted": false
+}

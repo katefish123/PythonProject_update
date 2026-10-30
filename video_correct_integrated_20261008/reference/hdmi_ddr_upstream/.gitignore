@@ -1,0 +1,36 @@
+# PDS implementation products
+/compile/
+/constraint_backup/
+/constraint_check/
+/device_map/
+/generate_bitstream/
+/generate_netlist/
+/log/
+/logbackup/
+/place_route/
+/report_power/
+/report_timing/
+/synthesize/
+/flow.log
+/run.log
+/pds.log
+/stdout.log
+/stderr.log
+/multiseed_summary.csv
+
+# Simulation products and temporary research files
+/sim_prj/**/work/
+/sim_prj/**/results/
+/tmp/
+*.vcd
+*.wlf
+
+# Local recovery material
+/codex_backups/
+
+# PDS products nested under generated IP directories
+**/rev_*/
+/ipcore/**/.last_generated
+/ipcore/**/generate.log
+/ipcore/**/pnr/
+/ipcore/**/example_design/

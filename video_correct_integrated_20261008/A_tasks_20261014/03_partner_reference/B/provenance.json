@@ -1,0 +1,21 @@
+{
+  "original_files_modified": false,
+  "v3_python": {
+    "path": "/Users/yishuyu/Documents/FPGA/PythonProject_local/旋转算法参考/v3/rotate_image.py",
+    "sha256": "1513e6503543d4edb5bc48879cd8803fdb9256f8fc01208f4d77c1ea914ba90a",
+    "test_sha256": "dbe2ace2944628511b99f038f5a4220cd1647ce73753df2a5c20137feb156dad",
+    "relation": "New independent package; preserves inverse-mapping and full-precision bilinear rules; 500 direct compatibility samples run"
+  },
+  "existing_geometry_float_sha256": "03468c2b1b60d0d04db73f73d35cab776a4c68b8eca3b282c38348d152d0961e",
+  "existing_geometry_fixed_sha256": "e358c28133d753a76aa5ca54149f69e679747bf6d6b6f72b25cb4b3108565f5d",
+  "board_manual": {
+    "filename": "教程1_硬件实验指导手册_盘古676系列100Pro开发板.pdf",
+    "sha256": "f2fb07625a0a31705d7e8477308f7bcb1aa5272b6b0754cfbf9daca20ebec114",
+    "pdf_resource_table_page": 20,
+    "APM_discrepancy": "Manual says 740; official PANGO Logos2 resource table lists 240 for PG2L100H(X), 740 for PG2L200H; verify actual PDS device library"
+  },
+  "prior_conversation": "6ac30818-5bf4-83ee-a66b-770f9fa44066",
+  "third_party_rtl_copied": false,
+  "A_C_modules_copied_or_changed": false,
+  "target_delivery": "/Users/yishuyu/Documents/FPGA/PythonProject_local/1/member_b_perspective"
+}

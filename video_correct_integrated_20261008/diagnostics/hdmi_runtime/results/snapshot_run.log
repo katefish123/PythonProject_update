@@ -1,0 +1,57 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {..\run_snapshot.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_snapshot work_snapshot 
+# Copying C:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 01:02:20 on Oct 10,2026
+# vlog -sv -work work_snapshot ../hdmi_runtime_probe_top.v ../../../rtl/common/reset_sync.v ../tb_runtime_snapshot.sv 
+# -- Compiling module hdmi_runtime_probe_top
+# -- Compiling module reset_sync
+# -- Compiling module tb_runtime_snapshot
+# -- Compiling module video_pll_27m_148m5
+# -- Compiling module config_pll_27m_10m
+# -- Compiling module hdmi_config_runtime_diag
+# -- Compiling module video_timing_vtc
+# 
+# Top level modules:
+# 	tb_runtime_snapshot
+# End time: 01:02:20 on Oct 10,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -c -voptargs="+acc" -wlf snapshot.wlf work_snapshot.tb_runtime_snapshot 
+# Start time: 01:02:21 on Oct 10,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_runtime_snapshot(fast)
+# Loading work.hdmi_runtime_probe_top(fast)
+# Loading work.video_pll_27m_148m5(fast)
+# Loading work.config_pll_27m_10m(fast)
+# Loading work.reset_sync(fast)
+# Loading work.reset_sync(fast__1)
+# Loading work.hdmi_config_runtime_diag(fast)
+# Loading work.video_timing_vtc(fast)
+# TEST_PASS_NO_RX_CLOCK
+# TEST_PASS_RX_GEOMETRY_AND_CDC
+# TEST_PASS_STOPPED_RX_CLOCK
+# TEST_PASS_RESUMED_RX_CLOCK
+# ** Note: $finish    : ../tb_runtime_snapshot.sv(60)
+#    Time: 286850 ns  Iteration: 1  Instance: /tb_runtime_snapshot
+# End time: 01:02:22 on Oct 10,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

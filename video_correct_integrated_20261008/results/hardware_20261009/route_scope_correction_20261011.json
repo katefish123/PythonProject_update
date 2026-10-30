@@ -1,0 +1,17 @@
+{
+  "recorded_at_utc": "2026-10-11T05:14:43.641213+00:00",
+  "source": "Explicit physical-wiring clarification from user",
+  "user_report_verbatim": "刚刚没连过板子，现在重新连好了，现在有彩条",
+  "earlier_inference_error": "Earlier route was inferred from a response about stable preview to a question describing FPGA wiring; physical route was not independently established",
+  "corrected_scope_of_115906_motion_video": "R50 directly to capture; 27.9s and 836 frames with no black frames verify camera/capture only",
+  "corrected_scope_of_120934_target_video": "R50 directly to capture; does not verify MS7200, source framebuffer or FPGA marker detection",
+  "corrected_scope_of_125532_post_download_video": "R50 directly to capture; live camera image despite DDR download was caused by bypass route",
+  "current_user_reported_route": "R50 -> FPGA HDMI-IN -> FPGA HDMI-OUT -> VC-002Pro -> USB PC",
+  "current_fpga_user_result": "一直是彩条",
+  "current_ddr_camera_correction_accepted": false,
+  "today_fpga_native_continuity_accepted": false,
+  "earlier_0100_bram_physical_evidence_invalidated": false,
+  "earlier_build_simulation_program_evidence_invalidated": false,
+  "computer_use_paused_by_user": true,
+  "next": "Read genuine receiver diagnostic; distinguish missing HDMI input from DDR capture or marker rejection before further calibration"
+}

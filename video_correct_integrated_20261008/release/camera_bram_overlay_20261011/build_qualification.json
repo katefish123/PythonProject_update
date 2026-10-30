@@ -1,0 +1,76 @@
+{
+  "utc": "2026-10-11T06:08:11.522809+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "part": "PG2L100H -6 FBG676",
+  "top": "camera_live_bram_top",
+  "tests": {
+    "qualified_at_utc": "2026-10-11T06:05:42.5803863Z",
+    "tests": {
+      "tb_hdmi_bram_probe": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "PASS_BRAM_TWO_CLOCKS_TWO_BANKS",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_bram_overlay_20261011\\results\\tb_hdmi_bram_probe.run.log",
+        "log_sha256": "c3dfc7f91bd146d412a58bb3efa6affce017d6254e90cde65598baf69d5a98a4"
+      },
+      "tb_hdmi_bram_stale": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "PASS_BRAM_STALE_TIMEOUT_AND_RECOVERY",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_bram_overlay_20261011\\results\\tb_hdmi_bram_stale.run.log",
+        "log_sha256": "70e5de62a7ef2e80799681f4eedf0382bf26959ee83d9d1bac1feda6340f556d"
+      },
+      "tb_camera_bram_overlay": {
+        "passed": true,
+        "exit_code": 0,
+        "pass_message": "PASS_LIVE_CAMERA_STATUS_OVERLAY_FULL_1080P",
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\camera_bram_overlay_20261011\\results\\tb_camera_bram_overlay.run.log",
+        "log_sha256": "c719ac88817a203fd3f07915a9a57db64ad60af94b8f7b7ce5d20de7592fa7f4"
+      }
+    },
+    "hardware_accepted": false
+  },
+  "change": "Overlay real D104/B401 state at y840..1079 even while coarse camera image is valid; preserve camera pixels above y840.",
+  "unchanged_compiled_sources": [
+    "hdmi_bram_probe.v",
+    "cdc_snapshot.v",
+    "hdmi_config_runtime_diag.v",
+    "reset_sync.v",
+    "iic_dri.v",
+    "ms7200_ctl.v",
+    "ms7210_ctl.v",
+    "video_timing_vtc.v",
+    "video_pll_27m_148m5.v",
+    "config_pll_27m_10m.v",
+    "camera_live_bram.fdc"
+  ],
+  "base_release": "release/camera_live_bram_reconnect_20261010",
+  "base_sbit_sha256": "be1a72cade3008e25cff3f6925bf6347fea8211da6e5447fdd82ef137e7f5212",
+  "hardware_programmed": false,
+  "actual_camera_display_accepted": false,
+  "actual_camera_correction_accepted": false,
+  "flash_modified": false,
+  "capture_size": [
+    320,
+    180
+  ],
+  "output_size": [
+    1920,
+    1080
+  ],
+  "timing_limit": "Provisional HDMI IO timing model; actual live receiver metrics and physical camera output still require verification.",
+  "files": {
+    "build_run.log": "2fd532f93f19e06b156a32807c1c4478d3fc42595c2de25b4e25c8bdc595592a",
+    "camera_live_bram_top.rtr": "d21ce954f33281bb547d43030d51c6fd79811f8c7e92f717ceda2fea21717542",
+    "camera_live_bram_top.sbit": "b6f8ddafba670fffe2b9045a4c84cceb4c41c043551753c2172d1394e0154a2f",
+    "camera_live_bram_top.smsk": "eb99875dad5de7cb3c31239fe867d39a207774ecf0b0b984dddba5539d9d4ae2",
+    "overlay.diff": "1cee800e140675996f91b4268cadaf1832ac384a27ff9610e151ab52e752d283",
+    "simulation_qualification.json": "58da84030a688e4d0bd4265b96a7bc32c65f41c94463702401abafca37112892",
+    "source_hashes.json": "b330afe49d5c88e3b1264f61bee4a4b6f458bce390c553ada16d3442f55487fa",
+    "source_snapshot.zip": "b0a8c1203071d5e65871ace0d3392f5af9a3bb95768a48a8bb638829989df80e",
+    "tb_camera_bram_overlay.run.log": "c719ac88817a203fd3f07915a9a57db64ad60af94b8f7b7ce5d20de7592fa7f4",
+    "tb_hdmi_bram_probe.run.log": "c3dfc7f91bd146d412a58bb3efa6affce017d6254e90cde65598baf69d5a98a4",
+    "tb_hdmi_bram_stale.run.log": "70e5de62a7ef2e80799681f4eedf0382bf26959ee83d9d1bac1feda6340f556d"
+  }
+}

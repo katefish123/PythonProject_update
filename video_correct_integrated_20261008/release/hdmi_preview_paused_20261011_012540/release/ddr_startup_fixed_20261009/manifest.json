@@ -1,0 +1,483 @@
+{
+  "client_date": "2026-10-09",
+  "utc": "2026-10-09T11:23:03.189182+00:00",
+  "status": "startup_fixed_build_verified_camera_acceptance_pending",
+  "part": "PG2L100H -6 FBG676",
+  "top": "video_correct_ddr_top",
+  "source_frame": [
+    640,
+    480
+  ],
+  "result_frame": [
+    320,
+    452
+  ],
+  "display": "1920x1080 nominal 60Hz",
+  "changes": [
+    "TX-first HDMI initialization",
+    "10ms I2C post-reset settle",
+    "scratch-probe retries separated from fatal post-probe NACK",
+    "clean I2C reset"
+  ],
+  "timing_status": "All Constraints Met under vendor PHY and provisional video IO models",
+  "bitstreams": [
+    {
+      "path": "release/ddr_startup_fixed_20261009/video_correct_ddr_top.sbit",
+      "sha256": "85c11bebe47b97621619daf1fbf0f04e33fa270f5444e481c8280ee2d5ac2875",
+      "bytes": 3791112
+    },
+    {
+      "path": "release/ddr_startup_fixed_20261009/video_correct_ddr_top.smsk",
+      "sha256": "ed58aa35d30e49631e4c0d9dd88216e340d940eefbadff16475f23a2a5f75c1e",
+      "bytes": 3791112
+    }
+  ],
+  "sources": [
+    {
+      "path": "vendor/b/rtl/b_rectifier.v",
+      "sha256": "3bf7632448ddf91c0a4c100c534576a52dd2d100fb69f4ecefab04cdeb8681fc"
+    },
+    {
+      "path": "vendor/b/rtl/bilinear_interp.v",
+      "sha256": "ac5e9dc73efbbc64f385d2ea50d7e5efee02f057f444ccc4dd7d3f1272091bb6"
+    },
+    {
+      "path": "vendor/b/rtl/homography_solver.v",
+      "sha256": "ffd648c0b51a5e6b9378614446a2b62980ce3bdb9897ab2388ada036a914bee9"
+    },
+    {
+      "path": "vendor/b/rtl/perspective_coord.v",
+      "sha256": "fc0fb7d1ad820aacd54a2ae64d9ed99f8e87e7313b9b1ef5e8b630abea6fd4f3"
+    },
+    {
+      "path": "vendor/b/rtl/perspective_core.v",
+      "sha256": "c39509435a668d6f74158781a7c8f794d754c02cf10cebc66b44d0829e891db5"
+    },
+    {
+      "path": "vendor/b/rtl/scaled_div_pipe.v",
+      "sha256": "372f81d1d1961d9fbc583632feb0ef93124e6b8e6b13423a6ade2ba2e940b741"
+    },
+    {
+      "path": "vendor/b/rtl/signed_div_seq.v",
+      "sha256": "2a4e95a1fc77d2eea7f392bf2f4260066eba456d03a7d6c31868c28e0fcb765d"
+    },
+    {
+      "path": "vendor/b/rtl/unsigned_div_seq.v",
+      "sha256": "dc12588b771773a9d9492d84bea826166c6ab5d4b3857a0a22949b3445eb05c3"
+    },
+    {
+      "path": "rtl/algo/marker_detector.v",
+      "sha256": "f3625b37800bcb276c7d763e9022b4d7018c9471db0f8c00a3222807116b1cd0"
+    },
+    {
+      "path": "rtl/common/reset_sync.v",
+      "sha256": "72b946984fb922bd4e36b88152e3977055d72a40ed6647f9ba398b6cbd9129c2"
+    },
+    {
+      "path": "rtl/video/ddr_result_display.v",
+      "sha256": "8004bd3d4bf13a4fec18b8f121494b2aa2ea6936c3c5f41cf4b47e1fe8b1592e"
+    },
+    {
+      "path": "rtl/video/ddr_snapshot_capture.v",
+      "sha256": "5e0fd4776c8041ea2886328b14b535ff491ca8750507b58e32b962e3739e2322"
+    },
+    {
+      "path": "rtl/video/result_display.v",
+      "sha256": "461f6100edf4ecb073b83fab9dc0472d6e6df1c15fb88029c8b7ddbbcb7872e9"
+    },
+    {
+      "path": "rtl/video/snapshot_capture.v",
+      "sha256": "ee2ee9ff0fe56e1ac63556230e56f979a88701f9fa726dd8abaf6ac11e19b51f"
+    },
+    {
+      "path": "rtl/memory/async_packet_fifo.v",
+      "sha256": "4aa3e03862f7755eb8138f60d4ed084ea878f181c2fa5ce0c1287f0bb5f1e42a"
+    },
+    {
+      "path": "rtl/memory/ddr_arbiter3.v",
+      "sha256": "cab398b830250fbbe27ab4b56776fa35dd6504ee58adeb254fcb796ab981c806"
+    },
+    {
+      "path": "rtl/memory/ddr_capture_writer.v",
+      "sha256": "4ebb54ac3f0f15d32373404c43ef8d95c7dac45e0d47fa8304240b78be875432"
+    },
+    {
+      "path": "rtl/memory/ddr_command_bridge.v",
+      "sha256": "b35d1c1fb0cdfb3e3a9e1d2a1f853fb3a6a8c6dc12f469b971288f60318e7d6a"
+    },
+    {
+      "path": "rtl/memory/ddr_pixel_cache.v",
+      "sha256": "754c430b90ca813930a5b159936ddeaf28acfd1bde5d5e4cbf040d1998bf5a71"
+    },
+    {
+      "path": "rtl/memory/ddr_result_writer.v",
+      "sha256": "48d771abfa3df1c097c0c12103445583ee52e6c7716fb8137df9a1fabfe017e9"
+    },
+    {
+      "path": "rtl/memory/ddr_self_test.v",
+      "sha256": "f4d45a38f5461c0f0e58f30e0af0236c9493e39b67a750014733e8b020597cb4"
+    },
+    {
+      "path": "rtl/memory/ddr_word_engine.v",
+      "sha256": "dae5d647c481dbbfd6d920722a12460cd18668e79c6c745a47e80f9251fb09c3"
+    },
+    {
+      "path": "rtl/hdmi/hdmi_config.v",
+      "sha256": "25bd7ccb841da20ceb437bd369f2344ebe4077e323348898911fb4bccfa58ba5"
+    },
+    {
+      "path": "rtl/hdmi/iic_dri.v",
+      "sha256": "163749ecb015e200c1ba6f35b9413460e52e959b51a1d81bfe51aff5f0c16fdb"
+    },
+    {
+      "path": "rtl/hdmi/ms7200_ctl.v",
+      "sha256": "2e3a975a3a2fb4553dfba8cfa5f9da9daedbd7cdb002f834ea59d713c7a4abf0"
+    },
+    {
+      "path": "rtl/hdmi/ms7210_ctl.v",
+      "sha256": "f192e1b9b2d6ea6a39c41b6b4ef080fed1488e22e6aeb756c8c9f784d9629242"
+    },
+    {
+      "path": "rtl/top/frame_processor.v",
+      "sha256": "5aa858283f5b8e7824a2caf90c2526823f7fe171d3767469330607cba86b4bc5"
+    },
+    {
+      "path": "rtl/top/frame_session.v",
+      "sha256": "78b4dc1044bb72e202d013ca308aa42b6548d209b88ea1f47c82681d5f1a6bad"
+    },
+    {
+      "path": "rtl/top/video_correct_ddr_core.v",
+      "sha256": "2bca02b02e3d89b78699e22a904df1afcca72363a5334a3cb5d6fc56d0810185"
+    },
+    {
+      "path": "rtl/top/video_correct_ddr_top.v",
+      "sha256": "bf5441906fd36813635957085449f4d29cbedbe7e30e717a5a48680f83c3efb2"
+    },
+    {
+      "path": "vendor/c_current/01_design_code/video_timing_vtc.v",
+      "sha256": "23260615dab0bc47cfbe5bf53366e2e9a1f9131204b4b29a9bcb879c6a210577"
+    },
+    {
+      "path": "vendor/c_current/01_design_code/hdmi_vs_recover.v",
+      "sha256": "2dca5fd7131ed43786648b9c28dd351088947a722418aebc890a1ba3389c1b51"
+    },
+    {
+      "path": "vendor/c_current/01_design_code/ip/video_pll_27m_148m5/video_pll_27m_148m5.v",
+      "sha256": "b74af59403683ea68f3e85d5cbcb08a288a822764d846785a4e72a4d30c85e48"
+    },
+    {
+      "path": "vendor/c_current/01_design_code/ip/config_pll_27m_10m/config_pll_27m_10m.v",
+      "sha256": "8f58c2266af621629e7f09cd6e309881ed7ee39eaad9535a99b023bc891714ea"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/ddr3_ip.v",
+      "sha256": "d3a103ce4864f2c5fdc1a01420f7bf28dcd0b1ea6c49b4d7e24a3c289222649c"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/ddr3_ip_ddrphy_top.v",
+      "sha256": "bebb715c84309ed6277152f51fe305ed164febc70c44aa5715259c50ea685e87"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ddr3_ip_slice_top_v1_10.v",
+      "sha256": "6a4319f8cc5cc68ec647e5db7ba893f4932d19a42e977ad48dfb09987f3947c9"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_calib_mux_v1_0.vp",
+      "sha256": "676e36319e7ce80b93e3543e255d53708d9fc71606587a6e692eab1ec82ecaed"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_calib_top_v1_10.vp",
+      "sha256": "04faf434cef120b5d712911dfc97c8f498901b0679fba720b806f596d688bded"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_control_path_adj_v1_10.vp",
+      "sha256": "8cdd7b9ec01c143882217b038cbf840d77e52ee3037e629e75e10b03fc223a38"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_cpd_ctrl_v1_3.vp",
+      "sha256": "56f52683adbe720c7d43da1a9f199f4ab3add3f3b5960e3f687f87f60267c161"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_cpd_lock_v1_0.vp",
+      "sha256": "a6696f8e79e2d132a6e76ad4997d5366d6c9cf8f05c60f77feff1b47b50d0090"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_data_slice_dqs_gate_cal_v1_10.vp",
+      "sha256": "8764275d4eeb8d1765b3a09aba527d6d3bf3e46f5e1d17eefc685d7e0dbe1520"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_data_slice_v1_10.vp",
+      "sha256": "e13e33d97ecbfea1838c4dd28e7f9f1c57dcb974606179523be46bba75344d50"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_data_slice_wrcal_v1_10.vp",
+      "sha256": "b7a9757c252f74c4b57eb0fb74738c57e4eed3e669ddd7ffeeca1acedd330b2e"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_data_slice_wrlvl_v1_10.vp",
+      "sha256": "871874f4af0f068571416916898f83eb07052e6e015c5800ffdf65d67620cf7e"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_dfi_v1_3.vp",
+      "sha256": "9828a1ef43a864d287a7a317910fe330bfc904f44e8f60c8773aafa1d8c1534e"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_dll_update_ctrl_v1_3.vp",
+      "sha256": "bc4e8f402d2fb98920e050a3c1514d44ec959877217d7865a30b22b7da73cac6"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_dqs_gate_coarse_cal_v1_0.vp",
+      "sha256": "950a0010929854894c2c92d9f3f8e9dce0fee6985fee70d4160540a058853ede"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_dqs_rddata_align_v1_10.vp",
+      "sha256": "c0cab4287a7a7b6b720977c1c5f9259c5f48f8da18e9a3ca1173a073b1ccf025"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_dqsi_rdel_cal_v1_3.vp",
+      "sha256": "ef7e57755ab7558b1b518aa73999384368f349efe7077cf9283e0911e711ac1a"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_drift_ctrl_v1_0.vp",
+      "sha256": "8ea99ac6decf6fe14c0585b4f121d7a1acc17290d7a1c68725d984e704e277bc"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_eyecal_v1_5.vp",
+      "sha256": "31977dd34339d163ecbd8b9949ac4b65f0eaa6fbcd9a75d787400ae73f7f51d2"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_gate_update_ctrl_v1_3.vp",
+      "sha256": "ce20eb3b9cbe3b392d8be0aa1d6787247bc7b2d91af36a1f734f35c9eb03d642"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_gatecal_v1_10.vp",
+      "sha256": "b6859250ca098e81ff05bcab08dfe8ffee77648218e90c040a1dd3838a0671f2"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_gpll_phase_v1_0.vp",
+      "sha256": "ef8ebe3742d23848bd2a1492d4901f886ce49aa98dbc295873b67e4116ba8524"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_info_v1_0.vp",
+      "sha256": "0794201be97885e7695a16b6c35848655b08c4bf191405d26417126512ce4aa8"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_init_v1_0.vp",
+      "sha256": "817f9f32b2260a4c35af446e89ff4c2d4b065381b25cb2020c538d22b4a45088"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_main_ctrl_v1_10.vp",
+      "sha256": "39d5024d7364b441340b131d265d0648d8b7c1f92cc417424d7c584413c5f4a6"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_rdcal_v1_10.vp",
+      "sha256": "6b4c7f3c24a4750ac69b4e7882617105c6e31f02da712aaa87932b8561ccea2b"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_reset_ctrl_v1_3.vp",
+      "sha256": "17189b59ed5307c4a27ec35485b33af5c98a89e6ee7f9c5d85aaed9c03a77163"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_rst_clk_phase_adj_v1_0.vp",
+      "sha256": "dd1dbae71726d968df475fe7fbb2b7321411fa67786092c0dc2e065edcf39382"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_rst_debounce_v1_0.vp",
+      "sha256": "bff7ed95c8d305dfb88e6002c6de8453a21c72c03a5a0521a76ddd105598dc4d"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_slice_rddata_align_v1_0.vp",
+      "sha256": "befb44f07d851524109a6dc8e17c5b8062694aa274ed8dbc4f7326b8fe1c443e"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_training_ctrl_v1_0.vp",
+      "sha256": "777e8ee9d8d819fdcf04b39b5a5d6086c52369a7f19f04dbd0d06f7a7d3d6110"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_upcal_v1_0.vp",
+      "sha256": "afbca3503da609f7951ad7fbef386bd007f403c89f52377211ba521967c94455"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_wdata_path_adj_v1_10.vp",
+      "sha256": "85f625ed4a09964442e8616074eea9e4757e43b4217589bb9e2f289c9748b272"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_wrcal_v1_7.vp",
+      "sha256": "0a8cb0bb70bd40809260c50bcb85d092c16fea5d9ab2e4fbbe647ccbd1bfb1b0"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ddrphy/ips2l_ddrphy_wrlvl_v1_0.vp",
+      "sha256": "00c086bd729be3ab8287f6eb786cfb3549c97aa92f8465c608b8fc2477df3edc"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/ips2l_rst_sync_v1_3.vp",
+      "sha256": "64b8d83f15f2ff373e6b1040405c42051d8761bd1857dec719c884c2eb59361a"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/distributed_fifo/ips2l_distributed_fifo_v1_0.vp",
+      "sha256": "d6c0b0d8560b0f22128b4883933944fc686fd7597cfea0d6c545cc6af56c0b7a"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/distributed_fifo/rtl/ips2l_distributed_fifo_ctr_v1_0.vp",
+      "sha256": "fe31c8f44bea653ab20bb1830ad4f8ed41566e9cfef354bd5e2d48c7682f353d"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/distributed_fifo/rtl/ips2l_distributed_fifo_v1_0_distributed_fifo_v1_0.vp",
+      "sha256": "867ac91a1485dfe613a81f372d788e784bba8cd4b0497e56986135e92685ba73"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/distributed_fifo/rtl/ips2l_distributed_sdpram_v1_0_distributed_fifo_v1_0.vp",
+      "sha256": "3561bbbbd4e4432a538c3d20818d262b4f1e5517c48296f6b1b4cc8afdd19aef"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_apb_cross_v1_2.vp",
+      "sha256": "62f7d55354a8afe4d02bc6f6d6dc30fc8e9960d3b21709988b887acc99d09cf5"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_calib_delay_v1_2.vp",
+      "sha256": "a52e992b9766b6cb22ed23aa01d1cc5ac9b6a429a8e49de7a13ac51dd70e9784"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_cfg_apb_v1_2.vp",
+      "sha256": "482cb280a614f70209f1d07892fdd773a259d2ca0f23e8f38b85a9faf00513b9"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcd_bm_v1_2.vp",
+      "sha256": "bfbd472dd8b427fe6b003dd510f73db89f915ac92d31fe8a779c40f9d4e56bee"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcd_rowaddr_v1_2.vp",
+      "sha256": "4ac4721747b13020e1895be6265e55df90968f05beb8056279589039394bb9be"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcd_sm_v1_2.vp",
+      "sha256": "d7e710e3ed4d1807fb0bdd4d84c264817247a4da41123c72439c555573821f49"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcd_top_v1_2.vp",
+      "sha256": "26ab4e142f555602c023f62b19df52056c6d51da5052401254066cae0655ddaa"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcp_back_ctrl_v1_2.vp",
+      "sha256": "fe7b340b41d80ec7428cc38329a41864bcf5c209a6310610d09c7bc8579e541f"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcp_buf_v1_2.vp",
+      "sha256": "dab35fa172243ecbb5426a8ebccc2c168368ea0a6ea0558c909b815d781b17d6"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcp_out_v1_2.vp",
+      "sha256": "9471082e23170b144dc619f7f7e08c94b8a03378f72da388f744d6acb728928b"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dcp_top_v1_2.vp",
+      "sha256": "21b1f0e3b4660e1078b47000bfe50022346414f5d5e713ac9e522a4f39f76548"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_dfi_v1_2.vp",
+      "sha256": "abf138d692e634fabe5f569b98d897dfece8a8ae66cee1dba830a56d7e255df1"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_lp_v1_2.vp",
+      "sha256": "7a80ccb1e053e5c9d8f389169359570f256d709ff2e4ad2c51fda7a7a6a4239d"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_mrs_v1_2.vp",
+      "sha256": "f78133bc021a57cf469773daaf102817fc37069447e8accc80afa1f4b20b0ad6"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_prefetch_fifo_v1_2.vp",
+      "sha256": "ee3aa91e980fb3dd08231cf1806a28edf759f4ea8248adfd44407d607519b9e4"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_rdatapath_v1_2.vp",
+      "sha256": "72dd8ece021f4ee74fd576c1628c4f7d3606ef632f0e68b9569a288a092a6b0f"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_reg_fifo2_v1_2.vp",
+      "sha256": "bc9cff65e4002a51af0c20c2f0a9b9f17dacde5157b58691bbfb1c44348ee08a"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_ui_axi_v1_2a.vp",
+      "sha256": "145b69395412be2553835f9278cdf1cb1703d3beeb914abf7d985e3c69f817fb"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_wdatapath_v1_2.vp",
+      "sha256": "db648e90ff607ca2f9e2b5cca048de417439888d0b906288e0cec7cf038d9dee"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_wdp_align_v1_2.vp",
+      "sha256": "1645e9eb7fac3c9c13cd3e0d7367f132293f9cec16835ce188c6345993d2b730"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_wdp_dcp_v1_2.vp",
+      "sha256": "3f30be0f49f78f09915743995c950fa6ff8de5f14598ebc8802e73b5c6d140ee"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/ips2l_mcdq_wrapper_v1_2b.vp",
+      "sha256": "d35010f49be551fb15ab2655cbeffcaaaa74fdf3ccb0754b033fc979d615e805"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_com_timing_v1_2.vp",
+      "sha256": "e3f19c4be6352ab64f07426973387f2876c540ee992f6eac9d3f2d470b3d49c2"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_tfaw_timing_v1_2.vp",
+      "sha256": "c632619f042bebb4f059df7f20eee90eb2b51b81210430cb37d01958ad3cd30f"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_tfaw_v1_2.vp",
+      "sha256": "ab87b7718bffc4fb2a2b27765576187f09b5266bbca7fc393c43c6dec96ff379"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_act2wr_pass_v1_2.vp",
+      "sha256": "1b3874b059923481f292ba382ad156f7dcdd9ad39da6c86dddd480290ccce498"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_act_pass_v1_2.vp",
+      "sha256": "9f32b6936e039c15f7b07b74480179d39d1b3787965e1b90bd067a7ede7fdd4c"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_pre_pass_v1_2.vp",
+      "sha256": "e40a64caec9725c231cd88dde69973eab3aca38c9d2e66a2c5c0bbddf3103ae0"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_rd_pass_v1_2.vp",
+      "sha256": "78b1de719a43ee0fc80e1a5464f7284439d91f1d4b3f83ef2ae5611920293988"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_ref_pass_v1_2.vp",
+      "sha256": "c79dde6f9a682c55aff7bb89c4863f76a069b874fb154dff7d3e4d4a7a88f9d1"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_timing_wr_pass_v1_2.vp",
+      "sha256": "ea3470ca984554d4908ec950314f9242042417c6c4c6b3fd05ac5d6daab98c90"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/mcdq_ctrl/syn_mod/ips2l_mcdq_trc_timing_v1_2.vp",
+      "sha256": "7234241e5968f91ec6e396794f0bb80f6c7d1bca2038aa004d5078d3937953da"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/pll/ips2l_ddrphy_gpll_v1_3.vp",
+      "sha256": "3fecc367573a4b5bd158e1a8ff106c5c401c5f180143e8e5abe6bb068e5078d2"
+    },
+    {
+      "path": "rtl/memory/ddr3_ip/rtl/pll/ips2l_ddrphy_ppll_v1_0.vp",
+      "sha256": "34bb46106b84eab147f130bd7526f1486d35caeb40b0258cd59656e50d19dddd"
+    }
+  ],
+  "new_test_evidence": [
+    {
+      "path": "results/hdmi_startup_fix/rx_first.log",
+      "sha256": "db8fc1ae507e3c87095b09d98267607513c1df9c3cf532a3767ec6aef2819ec0"
+    },
+    {
+      "path": "results/hdmi_startup_fix/tx_first.log",
+      "sha256": "ea9b4f5f285ab4d5cfe93d036d5ca15a8c3d53abd4813605ce7ebe2f9e27afa7"
+    }
+  ],
+  "previous_functional_evidence": "docs/ddr_stage_verification.json",
+  "hardware_evidence": "docs/hardware_20261009.json",
+  "source_snapshot_sha256": "ce06b4543d976be62f8d91cd35d773c97fa6d53c4f1dd84cc6de68149820b0f6",
+  "camera_end_to_end_accepted": false
+}

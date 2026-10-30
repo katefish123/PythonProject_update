@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-14T05:19:35.6528057Z",
+  "bitstream_sha256": "b6f8ddafba670fffe2b9045a4c84cceb4c41c043551753c2172d1394e0154a2f",
+  "program_verify_passed": true,
+  "flash_modified": false,
+  "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\program_camera_bram_overlay_20261014_131817.log",
+  "actual_camera_display_accepted": false
+}

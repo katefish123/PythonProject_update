@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-10-14T02:37:44.524482+00:00",
+  "backup": "C:\\D\\FPGA\\video_correct_integrated_20261008\\release\\offline_black_fast_20261014_103248.zip",
+  "sha256": "52772985337e51a6c10e4027fcc127c732f2537116c4694b814932c8ac82c0ab",
+  "bytes": 4746695,
+  "archive_crc_and_all_file_hashes_verified": true,
+  "files_preserved": 310,
+  "compiled_sources_and_verification_inputs_verified_in_source_snapshot": true,
+  "baseline_release_and_sources_preserved": true,
+  "hardware_programmed": false
+}

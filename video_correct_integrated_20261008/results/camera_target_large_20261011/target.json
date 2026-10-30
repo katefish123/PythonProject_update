@@ -1,0 +1,64 @@
+{
+  "source_size": [
+    640,
+    480
+  ],
+  "marker_side": 27,
+  "original_marker_side": 9,
+  "points": [
+    [
+      200,
+      45
+    ],
+    [
+      465,
+      100
+    ],
+    [
+      435,
+      420
+    ],
+    [
+      180,
+      390
+    ]
+  ],
+  "golden_marker_stats": {
+    "red": {
+      "count": 729,
+      "span": [
+        26,
+        26
+      ]
+    },
+    "green": {
+      "count": 729,
+      "span": [
+        26,
+        26
+      ]
+    },
+    "yellow": {
+      "count": 729,
+      "span": [
+        26,
+        26
+      ]
+    },
+    "blue": {
+      "count": 729,
+      "span": [
+        26,
+        26
+      ]
+    }
+  },
+  "centres_unchanged": true,
+  "original_asset_sha256": "df2e4ff4aa7fc33842fb9b28db34eccd80a39ed0247de691b6d4f29625d33df4",
+  "new_asset_sha256": "ecc1fab5412fb87fbe76b4ea4e262976a3d183e8470e481f8830df8241fc572d",
+  "original_asset_modified": false,
+  "original_viewer_modified": false,
+  "purpose": "Independent physical-camera target with larger colour patches, to reduce optical edge blending and provide sufficient actual sampled marker area. Not FPGA output or hardware acceptance.",
+  "entry": "显示相机测试图_大角标.cmd",
+  "esc_closes_viewer": true
+}

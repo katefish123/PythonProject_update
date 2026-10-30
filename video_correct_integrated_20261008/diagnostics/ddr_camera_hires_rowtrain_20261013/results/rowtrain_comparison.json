@@ -1,0 +1,42 @@
+{
+  "recorded_at_utc": "2026-10-12T16:11:31.163984+00:00",
+  "same_memory_model": {
+    "result_first_read_ui_clocks": 40,
+    "source_first_read_ui_clocks": 80,
+    "periodic_refresh_extra_ui_clocks": 100,
+    "physical_write_wait_ui_clocks": 12,
+    "capture_packet_period_ui_clocks": 32,
+    "processor_request_period_ui_clocks": 97,
+    "capture_and_processor_phases_separate": true,
+    "phase_ui_clocks": 2083340
+  },
+  "model_is_measured_board_latency": false,
+  "hardware_accepted": false,
+  "row_budget_approx_ui_clocks": 1852,
+  "variants": {
+    "old": {
+      "frames": 2,
+      "correct_pixels": 579200,
+      "black_pixels": 577920,
+      "max_row_cycles": 6123,
+      "capture": 65104,
+      "source": 38562,
+      "max_capture_backlog": 6,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_hires_rowtrain_20261013\\results\\tb_old_contention_control.run.log",
+      "log_sha256": "06a2e97460aeb14e6c012cfd85db5184596f4fcf0a9443c8e2a901034e14b748"
+    },
+    "repaired": {
+      "frames": 2,
+      "correct_pixels": 1157120,
+      "black_pixels": 0,
+      "max_row_cycles": 835,
+      "capture": 65104,
+      "source": 34524,
+      "max_capture_backlog": 24,
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_hires_rowtrain_20261013\\results\\tb_rowtrain_contention.run.log",
+      "log_sha256": "b0292dda7e1e2c540f4eb93daf5d6c49d25881fa560d04f107275abb474d95ed"
+    }
+  },
+  "rejected_overload_trial": "rejected_simultaneous_overload_new.log retains failed trial with continuous full capture AND processing and twelve-clock write drain. Real FrameSession freezes and drains capture before processor start, so qualification uses separate capture/processing phases. Legacy simultaneous traffic remains a separate test without additional write stall.",
+  "qualification_scope": "Exact full output pixels of two banks, bounded capture backlog, both clients making progress, same hypothetical physical-memory delays. Does not prove physical latency, FPS, or long-term stability."
+}

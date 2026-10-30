@@ -1,0 +1,94 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 14:41:29 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/modelsim.ini C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/async_packet_fifo.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/async_packet_fifo_monitored.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/async_packet_stream.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/async_packet_stream_monitored.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/b_rectifier.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/bilinear_interp.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/board_recovery_reset.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/c_corner_rectifier.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/c_frame_mode_controller.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/c_stream_burst_correction_path.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/c_stream_correction_path.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/capture_geometry.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/color_marker_detector.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/continuous_capture_geometry.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/continuous_capture_rx.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/continuous_capture_writer.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/continuous_source_path.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_arbiter3.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_arbiter3_fair.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_arbiter3_turnaround.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_capture_writer.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_command_bridge.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_pixel_cache.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_quad_tile_cache.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_result_display_raw_corrected.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_result_writer.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_result_writer_burst64.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_result_writer_stream.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_self_test.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_snapshot_capture.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_word_engine.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ddr_word_engine_result_burst.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/debug_hex_overlay.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/fault_diagnostics_stream.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/frame_processor.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/frame_processor_stream.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/frame_session.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/frame_session_overlap_stream.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/frame_telemetry_overlay.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/geometry_frame_join.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/hdmi_config.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/hdmi_vs_recover.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/homography_solver.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/iic_dri.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/lens_affine_instance.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/lens_autocrop_instance.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/lens_distort_coord.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/lens_parameter_mailbox.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/lens_uart_control.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/manager_raw.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/marker_color_classifier.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/marker_detector.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ms7200_ctl.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/ms7210_ctl.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/native_service_monitor.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/perspective_coord.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/perspective_core.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/quad_geometry_guard.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/quad_packet_bridge.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/reset_sync.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/result_display.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/rx_preview.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/rx_preview_stream.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/scaled_div_pipe.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/signed_div_seq.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/snapshot_capture.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/snapshot_cdc.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/status_overlay.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/unsigned_div_seq.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/video_correct_ddr_continuous_core.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/video_correct_ddr_core.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/video_correct_ddr_stream_core.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/video_correct_ddr_top.v C:/D/FPGA/A_lens_20261030/candidate_host_angle_v3_cache64/sources/video_timing_vtc.v C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/quad_packet_bridge_reference.v C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/tb_bridge.sv 
+-- Compiling module async_packet_fifo
+-- Compiling module async_packet_fifo_monitored
+-- Compiling module async_packet_stream
+-- Compiling module async_packet_stream_monitored
+-- Compiling module b_rectifier
+-- Compiling module bilinear_interp
+-- Compiling module board_recovery_reset
+-- Compiling module c_corner_rectifier
+-- Compiling module c_frame_mode_controller
+-- Compiling module c_stream_burst_correction_path
+-- Compiling module c_stream_correction_path
+-- Compiling module capture_geometry
+-- Compiling module color_marker_detector
+-- Compiling module continuous_capture_geometry
+-- Compiling module continuous_capture_rx
+-- Compiling module continuous_capture_writer
+-- Compiling module continuous_source_path
+-- Compiling module ddr_arbiter3
+-- Compiling module ddr_arbiter3_fair
+-- Compiling module ddr_arbiter3_turnaround
+-- Compiling module ddr_capture_writer
+-- Compiling module ddr_capture_writer_banked
+-- Compiling module ddr_command_bridge
+-- Compiling module ddr_pixel_cache
+-- Compiling module ddr_quad_tile_cache
+-- Compiling module ddr_result_display_raw_corrected
+-- Compiling module ddr_result_writer
+-- Compiling module ddr_result_writer_burst64
+-- Compiling module burst64_async_fifo
+-- Compiling module ddr_result_writer_stream
+-- Compiling module stream_writer_async_fifo
+-- Compiling module ddr_self_test
+-- Compiling module ddr_snapshot_capture
+-- Compiling module ddr_word_engine
+-- Compiling module ddr_word_engine_result_burst
+-- Compiling module debug_hex_overlay
+-- Compiling module fault_diagnostics_stream
+-- Compiling module frame_processor
+-- Compiling module frame_processor_stream
+-- Compiling module frame_session
+-- Compiling module frame_session_overlap
+-- Compiling module frame_session_overlap_stream
+-- Compiling module frame_telemetry_overlay
+-- Compiling module geometry_frame_join
+-- Compiling module hdmi_config
+-- Compiling module hdmi_vs_recover
+-- Compiling module homography_solver
+-- Compiling module iic_dri
+-- Compiling module lens_affine_instance
+-- Compiling module lens_autocrop_instance
+-- Compiling module lens_distort_coord
+-- Compiling module lens_parameter_mailbox
+-- Compiling module lens_uart_control
+-- Compiling module lens_uart_rx
+-- Compiling module lens_uart_tx
+-- Compiling module continuous_capture_manager
+-- Compiling module marker_color_classifier
+-- Compiling module marker_detector
+-- Compiling module ms7200_ctl
+-- Compiling module ms7210_ctl
+-- Compiling module native_service_monitor
+-- Compiling module perspective_coord
+-- Compiling module perspective_core
+-- Compiling module quad_geometry_guard
+-- Compiling module quad_packet_bridge
+-- Compiling module reset_sync
+-- Compiling module result_display
+-- Compiling module rx_preview
+-- Compiling module rx_preview_stream
+-- Compiling module scaled_div_pipe
+-- Compiling module signed_div_seq
+-- Compiling module snapshot_capture
+-- Compiling module snapshot_cdc
+-- Compiling module status_overlay
+-- Compiling module unsigned_div_seq
+-- Compiling module video_correct_ddr_continuous_core
+-- Compiling module video_correct_ddr_core
+-- Compiling module video_correct_ddr_stream_core
+-- Compiling module video_correct_ddr_top
+-- Compiling module video_timing_vtc
+-- Compiling module quad_packet_bridge_reference
+-- Compiling module bridge_lane
+** Error: (vlog-13069) C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/tb_bridge.sv(5): near ";": syntax error, unexpected ';', expecting '='.
+** Error: (vlog-13069) C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/tb_bridge.sv(8): near "=": syntax error, unexpected '=', expecting ';'.
+** Error: C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/tb_bridge.sv(23): (vlog-2730) Undefined variable: 'q_ready'.
+-- Compiling module bridge_case
+-- Compiling module tb_bridge
+** Error: (vlog-13069) C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/tb_bridge.sv(62): near "large": syntax error, unexpected large.
+** Error: C:/D/FPGA/A_lens_20261030/verification/bridge_decode_20261030_144129_111559/tb_bridge.sv(62): (vlog-13205) Syntax error found in the scope following 'bridge_case'. Is there a missing '::'?
+End time: 14:41:29 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 5, Warnings: 0

@@ -1,0 +1,14 @@
+Input #0, dshow, from 'video=VC-002Pro ':
+  Duration: N/A, start: 4003.582857, bitrate: N/A
+  Stream #0:0: Video: rawvideo (NV12 / 0x3231564E), nv12(tv, bt709/bt709/unknown), 1920x1080, 30 fps, 30 tbr, 10000k tbn
+Stream mapping:
+  Stream #0:0 -> #0:0 (rawvideo (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to 'C:\D\FPGA\video_correct_integrated_20261008\results\hardware_20261009\live_latest.jpg':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Video: mjpeg, yuv420p(pc, bt709/bt709/unknown, progressive), 1920x1080, q=2-31, 200 kb/s, 2 fps, 2 tbn
+      Metadata:
+        encoder         : Lavc61.19.100 mjpeg
+      Side data:
+        cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: N/A

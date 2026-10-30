@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008
+T_opt
+!s110 1791502158
+VlbgS6JgOe^Q>Mi0ba]DOL2
+04 14 4 work tb_ddr_display fast 0
+=1-bcfce7c3c068-6ac8274e-96-71a0
+o-quiet -auto_acc_if_foreign -work work_ddr_display
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vddr_result_display
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791502157
+!i10b 1
+!s100 o6boZ0437BdXATPI:l<Uc0
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IiOg37ia@Y`M0J`9O0zJRK0
+S1
+R0
+w1791502124
+8rtl/video/ddr_result_display.v
+Frtl/video/ddr_result_display.v
+!i122 0
+L0 7 289
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z7 !s108 1791502157.000000
+Z8 !s107 sim/tb_ddr_display.sv|rtl/video/ddr_result_display.v|vendor/c_current/01_design_code/video_timing_vtc.v|
+Z9 !s90 -sv|-work|work_ddr_display|vendor/c_current/01_design_code/video_timing_vtc.v|rtl/video/ddr_result_display.v|sim/tb_ddr_display.sv|
+!i113 0
+Z10 o-sv -work work_ddr_display -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_ddr_display
+R2
+R3
+!i10b 1
+!s100 l5z_1KGOX9em0W>>oN73K1
+R4
+IlZmH_gk9Y[eRj`glW?OWc3
+S1
+R0
+w1791502144
+8sim/tb_ddr_display.sv
+Fsim/tb_ddr_display.sv
+!i122 0
+L0 2 82
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1
+vvideo_timing_vtc
+R2
+R3
+!i10b 1
+!s100 >bN_?_:BQEijb7?^:jc3O0
+R4
+IK8Hf7<^Ci]bBRE9QO?e^91
+S1
+R0
+w1791476583
+8vendor/c_current/01_design_code/video_timing_vtc.v
+Fvendor/c_current/01_design_code/video_timing_vtc.v
+!i122 0
+L0 5 57
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R1

@@ -1,0 +1,170 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008/diagnostics/camera_native_rx_first_20261010/results
+T_opt
+!s110 1791643799
+V2[[E[A:WMfElYlPcCf2`i1
+04 15 4 work tb_rx_reconnect fast 0
+=1-bcfce7c3c068-6aca5096-399-a910
+o-quiet -auto_acc_if_foreign -work work_baseline_polling -g INITIAL_STATUS=3 -g TX_FIRST=0 +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+vhdmi_config
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1791643798
+!i10b 1
+!s100 1eO5XmCek:XoeH<a_JhY61
+Z4 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ISlzd[KWNT6Q^lG7lQPRLE2
+S1
+R0
+Z5 w1791643797
+8hdmi_config_baseline.v
+Fhdmi_config_baseline.v
+!i122 0
+L0 7 151
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z8 !s108 1791643798.000000
+Z9 !s107 tb_rx_reconnect.sv|ms72xx_i2c_test_device.sv|iic_dri.v|ms7210_ctl.v|ms7200_ctl.v|hdmi_config_baseline.v|
+Z10 !s90 -sv|-work|work_baseline_polling|hdmi_config_baseline.v|ms7200_ctl.v|ms7210_ctl.v|iic_dri.v|ms72xx_i2c_test_device.sv|tb_rx_reconnect.sv|
+!i113 0
+Z11 o-sv -work work_baseline_polling -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+viic_dri
+R2
+R3
+!i10b 1
+!s100 oUiM`i69d9ozUQNJAoN?`1
+R4
+If:Regmol8JJOe7NE2:<gd2
+S1
+R0
+R5
+8iic_dri.v
+Fiic_dri.v
+!i122 0
+L0 23 520
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vms7200_ctl
+R2
+R3
+!i10b 1
+!s100 B72_1`=B2V`]:CB=LHb>e0
+R4
+Il<9bN[fXKm8e1;G2Y^?n91
+S1
+R0
+R5
+8ms7200_ctl.v
+Fms7200_ctl.v
+!i122 0
+L0 43 1580
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vms7210_ctl
+R2
+R3
+!i10b 1
+!s100 =j3BH?BX`=7LWEXkJE9gE0
+R4
+II`1;_N7@6gmAQ5?M7zTFf2
+S1
+R0
+R5
+8ms7210_ctl.v
+Fms7210_ctl.v
+!i122 0
+L0 22 344
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vms72xx_i2c_test_device
+R2
+R3
+!i10b 1
+!s100 YdDX9VAkjKPA3FJcUe@ZS1
+R4
+I_LZOJBX1S4E@IFV3_1_6i1
+S1
+R0
+R5
+8ms72xx_i2c_test_device.sv
+Fms72xx_i2c_test_device.sv
+!i122 0
+L0 2 136
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1
+vtb_rx_reconnect
+R2
+R3
+!i10b 1
+!s100 `l^I1j7Sjc]hafflNW]bE2
+R4
+Iemh_PD9ZaT`;R?X6U6Hlo2
+S1
+R0
+R5
+8tb_rx_reconnect.sv
+Ftb_rx_reconnect.sv
+!i122 0
+L0 2 69
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 0
+R11
+R1

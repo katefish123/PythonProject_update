@@ -1,0 +1,17 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 12:51:31 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_125131_093734/modelsim.ini C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_125131_093734/source_snapshot/frame_processor_stream.v C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_125131_093734/source_snapshot/ddr_result_writer_burst64.v C:/D/FPGA/A_lens_20261030/verification/tile_order_20261030_125131_093734/tb_tile_order.sv 
+-- Compiling module frame_processor_stream
+-- Compiling module ddr_result_writer_burst64
+-- Compiling module burst64_async_fifo
+-- Compiling module coordinate_math_stub
+-- Compiling module lens_affine_instance
+-- Compiling module lens_autocrop_instance
+-- Compiling module processor_case
+-- Compiling module writer_case
+-- Compiling module tb_tile_order
+
+Top level modules:
+	tb_tile_order
+End time: 12:51:31 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

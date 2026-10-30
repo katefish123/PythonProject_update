@@ -1,0 +1,62 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -voptargs="+acc" ddr_full_frame.tb_ddr_full_frame -do "C:\Windows\TEMP\ddr_full_frame_25388\tb_ddr_full_frame.do" 
+# Start time: 07:47:27 on Oct 09,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2685) [TFMPC] - Too few port connections for 'algorithm'.  Expected 50, found 39.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'stale_frames'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'marker_dropped'.
+# ** Warning: C:\D\FPGA\video_correct_integrated_20261008\rtl\top\frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'corners_valid'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_pixel_cache(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_ddr_full_frame(fast)
+# Loading work.frame_processor(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# Loading work.ddr_pixel_cache(fast)
+# Loading work.ddr_result_writer(fast)
+# do {C:\Windows\TEMP\ddr_full_frame_25388\tb_ddr_full_frame.do}
+# DDR_FULL_FRAME_PASS pixels=144640 beats=18080 source_reads=125459
+# DDR_FULL_FRAME_ADDR source_first=0 source_last=269872 out_first=00018000 out_last=0003b4f8
+# DDR_FULL_FRAME_CYCLES=6829350 GEOMETRY_VALID=1
+# DDR_FULL_FRAME_TEST_PASSED=1
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/sim/tb_ddr_full_frame.sv(150)
+#    Time: 252945872718 ps  Iteration: 1  Instance: /tb_ddr_full_frame
+# Break in Module tb_ddr_full_frame at C:/D/FPGA/video_correct_integrated_20261008/sim/tb_ddr_full_frame.sv line 150
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/sim/tb_ddr_full_frame.sv line 150
+# End time: 07:48:10 on Oct 09,2026, Elapsed time: 0:00:43
+# Errors: 0, Warnings: 12

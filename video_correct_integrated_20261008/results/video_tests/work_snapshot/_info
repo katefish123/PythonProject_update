@@ -1,0 +1,69 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/D/FPGA/video_correct_integrated_20261008
+T_opt
+!s110 1791476520
+VLbhm`VP9;fQ>AOX9n213F3
+04 19 4 work tb_snapshot_capture fast 0
+=1-f83dc625ce34-6ac7c328-103-bde8
+o-quiet -auto_acc_if_foreign -work video_snapshot +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.4;71
+R0
+vsnapshot_capture
+Z2 !s110 1791477446
+!i10b 1
+!s100 JMb[aXh?@iVY036FIGSOK1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I<[zOkFJBPEO:L<<>=YML80
+R0
+w1791461077
+8C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v
+FC:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v
+!i122 10
+L0 6 56
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z6 !s108 1791477446.000000
+!s107 C:\D\FPGA\video_correct_integrated_20261008\sim\tb_snapshot_capture.sv|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v|
+Z7 !s90 -work|C:\D\FPGA\video_correct_integrated_20261008\results\video_tests\work_snapshot|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v|C:\D\FPGA\video_correct_integrated_20261008\sim\tb_snapshot_capture.sv|
+!i113 0
+Z8 o-work {C:\D\FPGA\video_correct_integrated_20261008\results\video_tests\work_snapshot} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_snapshot_capture
+DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R2
+!i10b 1
+!s100 cGa]:Qmbj9Q;SoWcXZegI0
+R3
+IlfDb;]5<OJ^<Czh;;z1MR0
+S1
+R0
+w1791476430
+8C:\D\FPGA\video_correct_integrated_20261008\sim\tb_snapshot_capture.sv
+FC:\D\FPGA\video_correct_integrated_20261008\sim\tb_snapshot_capture.sv
+!i122 10
+L0 2 68
+R4
+R5
+r1
+!s85 0
+31
+R6
+Z9 !s107 C:\D\FPGA\video_correct_integrated_20261008\sim\tb_snapshot_capture.sv|C:\D\FPGA\video_correct_integrated_20261008\rtl\video\snapshot_capture.v|
+R7
+!i113 0
+R8
+R1

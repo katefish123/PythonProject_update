@@ -1,0 +1,858 @@
+{
+  "record": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\ddr_status_fpga_20261011.json",
+  "samples": 25,
+  "grids": 25,
+  "probes": [
+    {
+      "s": 0.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6005,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 1,
+      "rejected": 6004,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        4097,
+        37,
+        1398,
+        2278
+      ],
+      "xspans": [
+        343,
+        324,
+        334,
+        461
+      ],
+      "yspans": [
+        434,
+        94,
+        267,
+        394
+      ],
+      "ui_written": 0
+    },
+    {
+      "s": 1.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6017,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 1,
+      "rejected": 6016,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        4097,
+        45,
+        2115,
+        1819
+      ],
+      "xspans": [
+        336,
+        295,
+        329,
+        442
+      ],
+      "yspans": [
+        263,
+        82,
+        82,
+        305
+      ],
+      "ui_written": 12050
+    },
+    {
+      "s": 2.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6029,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 1,
+      "rejected": 6028,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        4097,
+        25,
+        1262,
+        1733
+      ],
+      "xspans": [
+        328,
+        279,
+        322,
+        429
+      ],
+      "yspans": [
+        254,
+        76,
+        76,
+        302
+      ],
+      "ui_written": 25309
+    },
+    {
+      "s": 3.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6042,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 1,
+      "rejected": 6040,
+      "failure": 1,
+      "session": 5,
+      "processor": 2,
+      "counts": [
+        4097,
+        8,
+        214,
+        1388
+      ],
+      "xspans": [
+        322,
+        7,
+        83,
+        106
+      ],
+      "yspans": [
+        249,
+        0,
+        68,
+        266
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 4.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6053,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 1,
+      "rejected": 6052,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        4097,
+        41,
+        195,
+        1650
+      ],
+      "xspans": [
+        324,
+        77,
+        154,
+        91
+      ],
+      "yspans": [
+        246,
+        16,
+        117,
+        214
+      ],
+      "ui_written": 8800
+    },
+    {
+      "s": 5.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6065,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 1,
+      "rejected": 6064,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        39,
+        42,
+        0,
+        49
+      ],
+      "xspans": [
+        6,
+        4,
+        1,
+        6
+      ],
+      "yspans": [
+        8,
+        10,
+        1,
+        7
+      ],
+      "ui_written": 22080
+    },
+    {
+      "s": 6.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6074,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6072,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        41,
+        85,
+        0,
+        56
+      ],
+      "xspans": [
+        5,
+        8,
+        1,
+        5
+      ],
+      "yspans": [
+        6,
+        10,
+        1,
+        9
+      ],
+      "ui_written": 35391
+    },
+    {
+      "s": 7.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6086,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6084,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        0,
+        92,
+        3,
+        24
+      ],
+      "xspans": [
+        1,
+        8,
+        7,
+        4
+      ],
+      "yspans": [
+        1,
+        10,
+        4,
+        5
+      ],
+      "ui_written": 5600
+    },
+    {
+      "s": 8.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6098,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6096,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        0,
+        89,
+        11,
+        20
+      ],
+      "xspans": [
+        1,
+        7,
+        7,
+        3
+      ],
+      "yspans": [
+        1,
+        11,
+        7,
+        6
+      ],
+      "ui_written": 18880
+    },
+    {
+      "s": 9.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6110,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6108,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        0,
+        83,
+        0,
+        0
+      ],
+      "xspans": [
+        1,
+        7,
+        1,
+        1
+      ],
+      "yspans": [
+        1,
+        11,
+        1,
+        1
+      ],
+      "ui_written": 32160
+    },
+    {
+      "s": 10.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6123,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6120,
+      "failure": 1,
+      "session": 5,
+      "processor": 2,
+      "counts": [
+        0,
+        79,
+        7,
+        26
+      ],
+      "xspans": [
+        1,
+        7,
+        6,
+        5
+      ],
+      "yspans": [
+        1,
+        10,
+        7,
+        5
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 11.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6134,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6132,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 15680
+    },
+    {
+      "s": 12.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6146,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6144,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 28956
+    },
+    {
+      "s": 13.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6158,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6156,
+      "failure": 1,
+      "session": 8,
+      "processor": 0,
+      "counts": [
+        0,
+        76,
+        68,
+        39
+      ],
+      "xspans": [
+        1,
+        7,
+        7,
+        5
+      ],
+      "yspans": [
+        1,
+        10,
+        9,
+        7
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 14.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6170,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6168,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        0,
+        83,
+        69,
+        48
+      ],
+      "xspans": [
+        1,
+        7,
+        6,
+        6
+      ],
+      "yspans": [
+        1,
+        10,
+        9,
+        8
+      ],
+      "ui_written": 0
+    },
+    {
+      "s": 15.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6182,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6179,
+      "failure": 1,
+      "session": 5,
+      "processor": 2,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 16.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6194,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6192,
+      "failure": 1,
+      "session": 8,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 17.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6206,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6204,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 0
+    },
+    {
+      "s": 18.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6218,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6215,
+      "failure": 1,
+      "session": 5,
+      "processor": 2,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 19.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6230,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6228,
+      "failure": 1,
+      "session": 8,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 20.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6242,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6240,
+      "failure": 1,
+      "session": 8,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 21.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6254,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6252,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 0
+    },
+    {
+      "s": 22.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6266,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6264,
+      "failure": 1,
+      "session": 8,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 23.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6278,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6276,
+      "failure": 1,
+      "session": 8,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 38400
+    },
+    {
+      "s": 24.5,
+      "ddr_ready": true,
+      "bist": true,
+      "captures": 6290,
+      "capture_bad": 0,
+      "samples": 307200,
+      "lines": 1080,
+      "capture_flags": 4,
+      "good_results": 2,
+      "rejected": 6288,
+      "failure": 1,
+      "session": 2,
+      "processor": 0,
+      "counts": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "xspans": [
+        20,
+        1,
+        1,
+        1
+      ],
+      "yspans": [
+        29,
+        1,
+        1,
+        1
+      ],
+      "ui_written": 0
+    }
+  ],
+  "contact_sheet": "C:\\D\\FPGA\\video_correct_integrated_20261008\\results\\hardware_20261009\\ddr_status_fpga_20261011_174046\\contact_sheet.jpg"
+}

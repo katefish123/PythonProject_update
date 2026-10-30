@@ -1,0 +1,16 @@
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+Start time: 12:14:49 on Oct 30,2026
+vlog -sv -modelsimini C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/modelsim.ini C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/lens_affine_instance.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/lens_distort_coord.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/bilinear_interp.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/perspective_core.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/perspective_coord.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/scaled_div_pipe.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/lens_autocrop_instance.v C:/D/FPGA/A_lens_20261030/verification/affine_lens_20261030_121449_501421/tb_affine_lens.sv 
+-- Compiling module lens_affine_instance
+-- Compiling module lens_distort_coord
+-- Compiling module bilinear_interp
+-- Compiling module perspective_core
+-- Compiling module perspective_coord
+-- Compiling module scaled_div_pipe
+-- Compiling module lens_autocrop_instance
+-- Compiling module tb_affine_lens
+
+Top level modules:
+	tb_affine_lens
+End time: 12:14:49 on Oct 30,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

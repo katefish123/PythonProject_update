@@ -1,0 +1,9 @@
+bitstream file: generate_bitstream/HDMI_IN_DDR3_ROI_top.sbit
+size: 9188552 bytes
+generated time: 2026-07-12 19:01:13 (file time)
+SHA-256: 84BFFF622F84F57733FB134ED475C6F9CED875F66A33A379D2C265667F58D6B7
+corresponding revision: latest checkout on branch agent/hdmi-roi-pipeline, HEAD c526e2e (Fix HDMI ROI plate detection pipeline), implementation artifacts completed 2026-07-12 19:01:16
+previous stable bitstream: codex_backups/S02F1_20260712_162812/S01_HDMI_IN_DDR3_ROI_top.sbit
+previous stable SHA-256: 2E2B376D16F67445A13FED181EADDBE9ADB65B3549B1933A616DEBF8BFB11656
+previous stable size: 9188552 bytes
+board download evidence: none found

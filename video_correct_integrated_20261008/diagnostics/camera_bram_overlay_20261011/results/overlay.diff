@@ -1,0 +1,45 @@
+--- retained_be1_top.v
++++ isolated_overlay_top.v
+@@ -156,7 +156,7 @@
+  reg [8:0] scaled_x;
+  reg [7:0] scaled_y;
+  reg [15:0] read_address;
+- reg [2:0] hs_pipe,vs_pipe,de_pipe;
++ reg [2:0] hs_pipe,vs_pipe,de_pipe,status_pipe;
+  reg [23:0] fallback_0,fallback_1,fallback_2;
+  wire buffer_snapshot_valid,buffer_snapshot_busy;
+  cdc_snapshot #(.WIDTH(19)) buffer_observation(
+@@ -174,20 +174,21 @@
+  wire [4:0] row=(y-12'd840)/12'd12;
+  wire [8:0] bit_index=9'd319-{row,col};
+  wire status_area=raw_de&&(y>=12'd840);
+- // Without a fresh camera frame, show a diagnostic grid on a dark background.
++ // Diagnostic clone: show actual status below y=840 even while camera frames arrive.
+  // Never substitute a test picture for actual camera pixels.
+  wire [23:0] fallback_rgb=status_area?
+   (status_frame[bit_index]?24'h00b000:24'hb00000):24'h100010;
+  always @(posedge pix_clk or negedge pix_rst_n)begin
+   if(!pix_rst_n)begin
+    scaled_x<=0;scaled_y<=0;read_address<=0;
+-   hs_pipe<=0;vs_pipe<=0;de_pipe<=0;
++   hs_pipe<=0;vs_pipe<=0;de_pipe<=0;status_pipe<=0;
+    fallback_0<=0;fallback_1<=0;fallback_2<=0;display_frame_count<=0;
+   end else begin
+    scaled_x<=raw_de?x/6:0;scaled_y<=raw_de?y/6:0;
+    read_address<=scaled_y*320+scaled_x;
+    hs_pipe<={hs_pipe[1:0],raw_hs};vs_pipe<={vs_pipe[1:0],raw_vs};
+-   de_pipe<={de_pipe[1:0],raw_de};
++   de_pipe<={de_pipe[1:0],raw_de};
++   status_pipe<={status_pipe[1:0],status_area};
+    fallback_0<=fallback_rgb;fallback_1<=fallback_0;fallback_2<=fallback_1;
+    if(output_frame_start)display_frame_count<=display_frame_count+1'b1;
+   end
+@@ -197,7 +198,7 @@
+   if(!pix_rst_n)begin hd_tx_hs<=0;hd_tx_vs<=0;hd_tx_de<=0;hd_tx_data<=0;end
+   else begin
+    hd_tx_hs<=hs_pipe[2];hd_tx_vs<=vs_pipe[2];hd_tx_de<=de_pipe[2];
+-   hd_tx_data<=de_pipe[2]?(frame_valid?stored_pixel:fallback_2):24'd0;
++   hd_tx_data<=de_pipe[2]?((frame_valid&&!status_pipe[2])?stored_pixel:fallback_2):24'd0;
+   end
+  end
+  assign hd_tx_pclk=pix_clk;

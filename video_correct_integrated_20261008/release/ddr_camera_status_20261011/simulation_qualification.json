@@ -1,0 +1,34 @@
+{
+  "qualified_at_utc": "2026-10-11T06:25:12.8060203Z",
+  "tests": {
+    "tb_ddr_status_overlay": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_STATUS_OVERLAY_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_ddr_status_overlay.run.log",
+      "log_sha256": "fef44cbb6328719ce49e3911f7c35af426307fc9b7d02657ebafaf13a525d2dd"
+    },
+    "tb_marker_detector": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "MARKER_STATUS_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_marker_detector.run.log",
+      "log_sha256": "2c2811405d4c817c4f6fa7e878b8b884bc8587c201acb0f2d7598ec88c0526ea"
+    },
+    "tb_ddr_capture": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_CAPTURE_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_ddr_capture.run.log",
+      "log_sha256": "d513b79f7248dce82d13d657d98313a8a0d898bcbbe54b05beb24e7a0f89a61c"
+    },
+    "tb_video_correct_ddr_core": {
+      "passed": true,
+      "exit_code": 0,
+      "pass_message": "DDR_CORE_STATUS_PASS",
+      "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_status_20261011\\results\\tb_video_correct_ddr_core.run.log",
+      "log_sha256": "c88acc07daa356f1eca093ce1b7881abe113f18e8eaea8de45b35fecbb19fd93"
+    }
+  },
+  "hardware_accepted": false
+}

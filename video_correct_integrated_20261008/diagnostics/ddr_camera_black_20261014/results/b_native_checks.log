@@ -1,0 +1,621 @@
+Reading pref.tcl
+
+# 2020.4
+
+# do {C:\D\FPGA\video_correct_integrated_20261008\diagnostics\ddr_camera_black_20261014\results\b_native.do}
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_black_b work_black_b 
+# Copying C:/modeltech64_2020.4/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/b_rectifier.v 
+# -- Compiling module b_rectifier
+# 
+# Top level modules:
+# 	b_rectifier
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/bilinear_interp.v 
+# -- Compiling module bilinear_interp
+# 
+# Top level modules:
+# 	bilinear_interp
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/homography_solver.v 
+# -- Compiling module homography_solver
+# 
+# Top level modules:
+# 	homography_solver
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/marker_detector.v 
+# -- Compiling module marker_detector
+# 
+# Top level modules:
+# 	marker_detector
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/perspective_coord.v 
+# -- Compiling module perspective_coord
+# 
+# Top level modules:
+# 	perspective_coord
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/perspective_core.v 
+# -- Compiling module perspective_core
+# 
+# Top level modules:
+# 	perspective_core
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/scaled_div_pipe.v 
+# -- Compiling module scaled_div_pipe
+# 
+# Top level modules:
+# 	scaled_div_pipe
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/signed_div_seq.v 
+# -- Compiling module signed_div_seq
+# 
+# Top level modules:
+# 	signed_div_seq
+# End time: 00:41:36 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:36 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/rtl/unsigned_div_seq.v 
+# -- Compiling module unsigned_div_seq
+# 
+# Top level modules:
+# 	unsigned_div_seq
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/examples/b_rectifier_instance.v 
+# -- Compiling module b_rectifier_instance
+# 
+# Top level modules:
+# 	b_rectifier_instance
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_integration.sv 
+# -- Compiling module tb_b_integration
+# 
+# Top level modules:
+# 	tb_b_integration
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_rectifier.sv 
+# -- Compiling module tb_b_rectifier
+# 
+# Top level modules:
+# 	tb_b_rectifier
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_bilinear_interp.sv 
+# -- Compiling module tb_bilinear_interp
+# 
+# Top level modules:
+# 	tb_bilinear_interp
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_cache_contract.sv 
+# -- Compiling module tb_cache_contract
+# 
+# Top level modules:
+# 	tb_cache_contract
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_homography_solver.sv 
+# -- Compiling module tb_homography_solver
+# 
+# Top level modules:
+# 	tb_homography_solver
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv 
+# -- Compiling module tb_marker_config
+# 
+# Top level modules:
+# 	tb_marker_config
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_detector.sv 
+# -- Compiling module tb_marker_detector
+# 
+# Top level modules:
+# 	tb_marker_detector
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_perspective_coord.sv 
+# -- Compiling module tb_perspective_coord
+# 
+# Top level modules:
+# 	tb_perspective_coord
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 00:41:37 on Oct 14,2026
+# vlog -sv -work work_black_b C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_request_boundaries.sv 
+# -- Compiling module request_boundary_case
+# -- Compiling module tb_request_boundaries
+# 
+# Top level modules:
+# 	tb_request_boundaries
+# End time: 00:41:37 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_perspective_coord 
+# Start time: 00:41:37 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_perspective_coord(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# COORD_PASS 4329
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_perspective_coord.sv(43)
+#    Time: 46510 ns  Iteration: 1  Instance: /tb_perspective_coord
+# Break in Module tb_perspective_coord at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_perspective_coord.sv line 43
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_perspective_coord.sv line 43
+# 1
+BLACK_NATIVE_VERIFIED tb_perspective_coord
+# End time: 00:41:39 on Oct 14,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_homography_solver 
+# Start time: 00:41:39 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# Loading sv_std.std
+# Loading work.tb_homography_solver(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast)
+# SOLVER_PASS 37
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_homography_solver.sv(34)
+#    Time: 190610 ns  Iteration: 1  Instance: /tb_homography_solver
+# Break in Module tb_homography_solver at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_homography_solver.sv line 34
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_homography_solver.sv line 34
+# 1
+BLACK_NATIVE_VERIFIED tb_homography_solver
+# End time: 00:41:39 on Oct 14,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_bilinear_interp 
+# Start time: 00:41:39 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_bilinear_interp(fast)
+# Loading work.bilinear_interp(fast)
+# INTERP_PASS 1000
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_bilinear_interp.sv(31)
+#    Time: 10630 ns  Iteration: 1  Instance: /tb_bilinear_interp
+# Break in Module tb_bilinear_interp at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_bilinear_interp.sv line 31
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_bilinear_interp.sv line 31
+# 1
+BLACK_NATIVE_VERIFIED tb_bilinear_interp
+# End time: 00:41:40 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_marker_detector 
+# Start time: 00:41:40 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_marker_detector(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# MARKER_PASS valid=2 rejected=9 dropped=1 black_upper=64 channel_65_rejected=3
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_detector.sv(66)
+#    Time: 22480 ns  Iteration: 1  Instance: /tb_marker_detector
+# Break in Module tb_marker_detector at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_detector.sv line 66
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_detector.sv line 66
+# 1
+BLACK_NATIVE_VERIFIED tb_marker_detector
+# End time: 00:41:41 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_marker_config 
+# Start time: 00:41:41 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_marker_config(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.marker_detector(fast__1)
+# Loading work.marker_detector(fast__2)
+# Loading work.marker_detector(fast__3)
+# Loading work.marker_detector(fast__4)
+# Loading work.marker_detector(fast__5)
+# Loading work.marker_detector(fast__6)
+# Loading work.marker_detector(fast__7)
+# Loading work.marker_detector(fast__8)
+# Loading work.marker_detector(fast__9)
+# Loading work.marker_detector(fast__10)
+# Loading work.marker_detector(fast__11)
+# Loading work.marker_detector(fast__12)
+# Loading work.marker_detector(fast__13)
+# Loading work.marker_detector(fast__14)
+# Loading work.marker_detector(fast__15)
+# Loading work.marker_detector(fast__16)
+# Loading work.marker_detector(fast__17)
+# Loading work.marker_detector(fast__18)
+# Loading work.marker_detector(fast__19)
+# Loading work.marker_detector(fast__20)
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[0]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[1]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[2]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[3]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[4]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[5]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[6]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[7]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[8]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[9]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[10]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[11]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[12]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[13]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[14]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[15]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[16]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[17]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[18]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[19]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[20]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'bad_dut'.  Expected 20, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_marker_config/bad_config[21]/bad_dut File: C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv Line: 52
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: (vsim-3722) C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(52): [TFMPC] - Missing connection for port 'y3'.
+# MARKER_CONFIG_PASS odd_roi_frames=2 custom_roi_frames=1 lower_threshold=32 lower_31_rejected=1 illegal_configs=22 frames_without_black=2 shared_edge_pairs=6
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv(125)
+#    Time: 12670 ns  Iteration: 1  Instance: /tb_marker_config
+# Break in Module tb_marker_config at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv line 125
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_marker_config.sv line 125
+# 1
+BLACK_NATIVE_VERIFIED tb_marker_config
+# End time: 00:41:42 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 198
+# vsim -voptargs="+acc" work_black_b.tb_b_rectifier 
+# Start time: 00:41:42 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# Loading sv_std.std
+# Loading work.tb_b_rectifier(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# VIDEO_PASS pixels=2344 corners=2 rejected=1
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_rectifier.sv(112)
+#    Time: 147970 ns  Iteration: 1  Instance: /tb_b_rectifier
+# Break in Module tb_b_rectifier at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_rectifier.sv line 112
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_rectifier.sv line 112
+# 1
+BLACK_NATIVE_VERIFIED tb_b_rectifier
+# End time: 00:41:43 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_cache_contract 
+# Start time: 00:41:43 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.tb_cache_contract(fast)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# CACHE_CONTRACT_PASS main=48 reset_discarded=10 fresh_black=4 continuous_burst=32 queued_variable_delay=yes mixed_modes=yes
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_cache_contract.sv(95)
+#    Time: 4150 ns  Iteration: 1  Instance: /tb_cache_contract
+# Break in Module tb_cache_contract at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_cache_contract.sv line 95
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_cache_contract.sv line 95
+# 1
+BLACK_NATIVE_VERIFIED tb_cache_contract
+# End time: 00:41:44 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_b_integration 
+# Start time: 00:41:44 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# Loading sv_std.std
+# Loading work.tb_b_integration(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# B_INTEGRATION_COLLISION old_pending=H1 active=H1 new_pending=H0
+# B_INTEGRATION_RESET coord=22 cache=75 interp=2
+# B_INTEGRATION_PASS accepted=3427 requests=3405 responses=3330 outputs=3328 cancelled=99 commits=3 collision=1 corners=3 solves=3
+# B_INTEGRATION_COVERAGE input_burst=99 request_burst=77 queue_peak=217 response_latency=3..250 source_overlap=1634/1634/1595 mixed_banks=148
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_integration.sv(402)
+#    Time: 142650 ns  Iteration: 1  Instance: /tb_b_integration
+# Break in Module tb_b_integration at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_integration.sv line 402
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_b_integration.sv line 402
+# 1
+BLACK_NATIVE_VERIFIED tb_b_integration
+# End time: 00:41:46 on Oct 14,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work_black_b.tb_request_boundaries 
+# Start time: 00:41:46 on Oct 14,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast__1)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast__2)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# Loading sv_std.std
+# Loading work.tb_request_boundaries(fast)
+# Loading work.request_boundary_case(fast)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.request_boundary_case(fast__1)
+# Loading work.perspective_core(fast__1)
+# Loading work.homography_solver(fast__1)
+# Loading work.request_boundary_case(fast__2)
+# Loading work.perspective_core(fast__2)
+# Loading work.homography_solver(fast__2)
+# BOUNDARY_CASE_PASS source=4096x4096 requests=13 outputs=13
+# BOUNDARY_CASE_PASS source=1920x1080 requests=14 outputs=14
+# BOUNDARY_CASE_PASS source=640x480 requests=16 outputs=16
+# BOUNDARIES_PASS sizes=640x480,1920x1080,4096x4096 sparse_addresses=yes edge_black_policy=characterized
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_request_boundaries.sv(117)
+#    Time: 10390 ns  Iteration: 2  Instance: /tb_request_boundaries
+# Break in Module tb_request_boundaries at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_request_boundaries.sv line 117
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/diagnostics/ddr_camera_black_20261014/b_algorithm/sim/tb_request_boundaries.sv line 117
+# 1
+BLACK_NATIVE_VERIFIED tb_request_boundaries
+ALL_BLACK_NATIVE_CHECKS_PASS
+# End time: 00:41:47 on Oct 14,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

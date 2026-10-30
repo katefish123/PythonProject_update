@@ -1,0 +1,52 @@
+Reading pref.tcl
+
+# 2020.4
+
+# vsim -c -voptargs="+acc" work.tb_request_boundaries -do "C:\D\FPGA\video_correct_integrated_20261008\results\b_native\tb_request_boundaries.do" 
+# Start time: 19:55:49 on Oct 08,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast__1)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast__2)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_request_boundaries(fast)
+# Loading work.request_boundary_case(fast)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.request_boundary_case(fast__1)
+# Loading work.perspective_core(fast__1)
+# Loading work.homography_solver(fast__1)
+# Loading work.request_boundary_case(fast__2)
+# Loading work.perspective_core(fast__2)
+# Loading work.homography_solver(fast__2)
+# do {C:\D\FPGA\video_correct_integrated_20261008\results\b_native\tb_request_boundaries.do}
+# BOUNDARY_CASE_PASS source=4096x4096 requests=13 outputs=13
+# BOUNDARY_CASE_PASS source=1920x1080 requests=14 outputs=14
+# BOUNDARY_CASE_PASS source=640x480 requests=16 outputs=16
+# BOUNDARIES_PASS sizes=640x480,1920x1080,4096x4096 sparse_addresses=yes edge_black_policy=characterized
+# ** Note: $finish    : C:/D/FPGA/video_correct_integrated_20261008/vendor/b/sim/tb_request_boundaries.sv(117)
+#    Time: 10390 ns  Iteration: 2  Instance: /tb_request_boundaries
+# Break in Module tb_request_boundaries at C:/D/FPGA/video_correct_integrated_20261008/vendor/b/sim/tb_request_boundaries.sv line 117
+# Stopped at C:/D/FPGA/video_correct_integrated_20261008/vendor/b/sim/tb_request_boundaries.sv line 117
+# 1
+# NATIVE_PASS_BIT=1
+# End time: 19:55:49 on Oct 08,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

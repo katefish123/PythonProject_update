@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "hardware_accessed": false,
+  "real_optical_acceptance": false,
+  "training_rms_px": 0.03406578449024403,
+  "held_out_rms_px": 0.03486508361010714,
+  "maximum_known_model_map_error_px": 0.08070429394366237,
+  "estimated_K": [
+    [
+      1598.8283065354692,
+      0.0,
+      933.660371898698
+    ],
+    [
+      0.0,
+      1596.2682359809683,
+      525.2729014394014
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "estimated_distortion": [
+    0.011302800339224683,
+    -0.050641545099105484,
+    -0.004061603365890934,
+    -0.0035960507837206447,
+    0.0
+  ],
+  "invalid_inputs_rejected": 5,
+  "input_manifest_sha256": "719f2b53498bf2d78332987fa4af8a66860b7fa86ca62a8842158aaa9793a95a"
+}

@@ -1,0 +1,6 @@
+{
+  "utc": "2026-10-14T03:37:17.7276466Z",
+  "old_pid": 31468,
+  "new_pid": 33632,
+  "scope": "restart owned task background JTAG server; no configuration writes"
+}
