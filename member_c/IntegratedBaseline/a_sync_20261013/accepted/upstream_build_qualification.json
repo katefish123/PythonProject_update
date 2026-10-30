@@ -1,0 +1,61 @@
+{
+  "recorded_at_utc": "2026-10-11T04:31:13.956695+00:00",
+  "simulations_passed": true,
+  "timing_passed": true,
+  "tests": {
+    "utc": "2026-10-11T04:15:26.7496458Z",
+    "tests": {
+      "reconnect_hdmi_tx_first": {
+        "passed": true,
+        "exit_code": 0,
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_reconnect_20261011\\results\\reconnect_hdmi_tx_first.run.log",
+        "log_sha256": "35280813eb32fed64515b0c77577a466d4d1cdc792753634066b36483522a0e3"
+      },
+      "reconnect_dvi_tx_first": {
+        "passed": true,
+        "exit_code": 0,
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_reconnect_20261011\\results\\reconnect_dvi_tx_first.run.log",
+        "log_sha256": "5198c2d66686d29e38736a29a595ca5ba415e0ddbbd57c00f879b5ec4523cbe6"
+      },
+      "startup_tx_first": {
+        "passed": true,
+        "exit_code": 0,
+        "log": "C:\\D\\FPGA\\video_correct_integrated_20261008\\diagnostics\\ddr_camera_reconnect_20261011\\results\\startup_tx_first.run.log",
+        "log_sha256": "dfd9abf788670ff5aa8ca18c80dada5fb5bf0bb292ed692039ec303af8ce0a21"
+      }
+    },
+    "hardware_accepted": false
+  },
+  "part": "PG2L100H -6 FBG676",
+  "top": "video_correct_ddr_top",
+  "source_snapshot": [
+    640,
+    480
+  ],
+  "processed_output": [
+    320,
+    452
+  ],
+  "output_hdmi": "1920x1080 nominal 60Hz; corrected result enlarged 2x",
+  "change": "Previously proven receiver relock recovery extended to status 0x03; other compiled sources unchanged from retained DDR release",
+  "unchanged_source_count": 107,
+  "existing_algorithm_and_ddr_check_evidence": "docs/ddr_stage_verification.json; prior 8192-byte DDR BIST and internal fixture are historical, not current camera acceptance",
+  "hardware_programmed": false,
+  "actual_camera_correction_accepted": false,
+  "flash_modified": false,
+  "timing_limit": "Vendor DDR PHY constraints and provisional external HDMI IO model; requires new real-camera/DDR board validation",
+  "files": {
+    "board_ddr.fdc": "f4c9023ff609082127024fdb228c67bac765cc71e70611a5bf8cdf7f048119fb",
+    "build_run.log": "f4e5ccf85ab38e9bf10d27527dd9e4dc3e854aadc3042d21abe65e446bfaadf3",
+    "reconnect_change.diff": "94a86fe23f0c5002c2d4390bb42e77fd07356d545921c7dcb0e787555b279448",
+    "reconnect_dvi_tx_first.run.log": "5198c2d66686d29e38736a29a595ca5ba415e0ddbbd57c00f879b5ec4523cbe6",
+    "reconnect_hdmi_tx_first.run.log": "35280813eb32fed64515b0c77577a466d4d1cdc792753634066b36483522a0e3",
+    "simulation_qualification.json": "3e54d0d23b3e00bc56782ce72604cf20b8ef42800d87d74f6e72b20bcb071b5b",
+    "source_hashes.json": "8f3dc513dae7b9b6aa80401f55016b2cb18290491da3fd3f8ba8738182baccd5",
+    "source_snapshot.zip": "fd4c0f7db00a9a68efc571b1de87db2cc42bfb59ad9e5b41e847421908d4ed23",
+    "startup_tx_first.run.log": "dfd9abf788670ff5aa8ca18c80dada5fb5bf0bb292ed692039ec303af8ce0a21",
+    "video_correct_ddr_top.rtr": "a564cd3caf703c166e5106110e63566288132f4369c065e25e5eef4913f30f29",
+    "video_correct_ddr_top.sbit": "a4bd7f42732c100b598cb974e03477877aab4032e39f6de558bb245d666e232e",
+    "video_correct_ddr_top.smsk": "b13e304fccdc40bb1bb6fd978ed01384fcf6147adaae6d59872b624929f567a1"
+  }
+}

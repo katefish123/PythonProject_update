@@ -1,0 +1,17 @@
+{
+  "reconnect_hdmi_tx_first": [
+    "tb_rx_reconnect",
+    "-gTX_FIRST=1 -gINITIAL_STATUS=3",
+    "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+  ],
+  "reconnect_dvi_tx_first": [
+    "tb_rx_reconnect",
+    "-gTX_FIRST=1 -gINITIAL_STATUS=2",
+    "TEST_PASS_TWO_RECONNECTS_WITHOUT_RESET"
+  ],
+  "startup_tx_first": [
+    "tb_hdmi_config",
+    "-gTX_FIRST=1",
+    "TEST_PASS_NO_DEVICE"
+  ]
+}
