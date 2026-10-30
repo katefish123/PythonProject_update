@@ -1,0 +1,206 @@
+# do run_accepted_checks.do
+# D:/FPGA/C_handoff_20261008/member_c/IntegratedBaseline/a_sync_20261013
+# reading modelsim.ini
+# D:/FPGA/C_handoff_20261008/member_c/IntegratedBaseline/a_sync_20261013/verification/work
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap a_accepted D:/FPGA/C_handoff_20261008/member_c/IntegratedBaseline/a_sync_20261013/verification/work 
+# Modifying modelsim.ini
+# vendor/b/rtl/bilinear_interp.v vendor/b/rtl/b_rectifier.v vendor/b/rtl/homography_solver.v vendor/b/rtl/perspective_coord.v vendor/b/rtl/perspective_core.v vendor/b/rtl/scaled_div_pipe.v vendor/b/rtl/signed_div_seq.v vendor/b/rtl/unsigned_div_seq.v
+# vendor/b/rtl/bilinear_interp.v vendor/b/rtl/b_rectifier.v vendor/b/rtl/homography_solver.v vendor/b/rtl/perspective_coord.v vendor/b/rtl/perspective_core.v vendor/b/rtl/scaled_div_pipe.v vendor/b/rtl/signed_div_seq.v vendor/b/rtl/unsigned_div_seq.v rtl/algo/marker_detector.v vendor/c_current/01_design_code/video_timing_vtc.v
+# tb_ddr_word_engine tb_ddr_pixel_cache tb_ddr_helpers tb_ddr_capture tb_ddr_display tb_video_correct_ddr_core
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:36:38 on Oct 13,2026
+# vlog -sv -work a_accepted vendor/b/rtl/bilinear_interp.v vendor/b/rtl/b_rectifier.v vendor/b/rtl/homography_solver.v vendor/b/rtl/perspective_coord.v vendor/b/rtl/perspective_core.v vendor/b/rtl/scaled_div_pipe.v vendor/b/rtl/signed_div_seq.v vendor/b/rtl/unsigned_div_seq.v rtl/algo/marker_detector.v vendor/c_current/01_design_code/video_timing_vtc.v rtl/memory/async_packet_fifo.v rtl/memory/ddr_arbiter3.v rtl/memory/ddr_capture_writer.v rtl/memory/ddr_command_bridge.v rtl/memory/ddr_pixel_cache.v rtl/memory/ddr_result_writer.v rtl/memory/ddr_self_test.v rtl/memory/ddr_word_engine.v rtl/video/ddr_snapshot_capture.v rtl/video/ddr_result_display.v rtl/top/frame_processor.v rtl/top/frame_session.v rtl/top/video_correct_ddr_core.v sim/tb_ddr_word_engine.sv sim/tb_ddr_pixel_cache.sv sim/tb_ddr_helpers.sv sim/tb_ddr_capture.sv sim/tb_ddr_display.sv sim/tb_video_correct_ddr_core.sv 
+# -- Compiling module bilinear_interp
+# -- Compiling module b_rectifier
+# -- Compiling module homography_solver
+# -- Compiling module perspective_coord
+# -- Compiling module perspective_core
+# -- Compiling module scaled_div_pipe
+# -- Compiling module signed_div_seq
+# -- Compiling module unsigned_div_seq
+# -- Compiling module marker_detector
+# -- Compiling module video_timing_vtc
+# -- Compiling module async_packet_fifo
+# -- Compiling module ddr_arbiter3
+# -- Compiling module ddr_capture_writer
+# -- Compiling module ddr_command_bridge
+# -- Compiling module ddr_pixel_cache
+# -- Compiling module ddr_result_writer
+# -- Compiling module ddr_self_test
+# -- Compiling module ddr_word_engine
+# -- Compiling module ddr_snapshot_capture
+# -- Compiling module ddr_result_display
+# -- Compiling module frame_processor
+# -- Compiling module frame_session
+# -- Compiling module video_correct_ddr_core
+# -- Compiling module tb_ddr_word_engine
+# -- Compiling module tb_ddr_pixel_cache
+# -- Compiling module tb_ddr_helpers
+# -- Compiling module tb_ddr_capture
+# -- Compiling module tb_ddr_display
+# -- Compiling module tb_video_correct_ddr_core
+# 
+# Top level modules:
+# 	tb_ddr_word_engine
+# 	tb_ddr_pixel_cache
+# 	tb_ddr_helpers
+# 	tb_ddr_capture
+# 	tb_ddr_display
+# 	tb_video_correct_ddr_core
+# End time: 10:36:39 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" a_accepted.tb_ddr_word_engine 
+# Start time: 10:36:39 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_word_engine(fast)".
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_ddr_word_engine(fast)
+# Loading work.ddr_word_engine(fast)
+# DDR_WORD_ENGINE_PASS aw=2 w=2 ar=2
+# ** Note: $finish    : sim/tb_ddr_word_engine.sv(248)
+#    Time: 610 ns  Iteration: 1  Instance: /tb_ddr_word_engine
+# Break in Module tb_ddr_word_engine at sim/tb_ddr_word_engine.sv line 248
+# Stopped at sim/tb_ddr_word_engine.sv line 248
+# End time: 10:36:40 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" a_accepted.tb_ddr_pixel_cache 
+# Start time: 10:36:40 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_pixel_cache(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_pixel_cache(fast)
+# Loading work.ddr_pixel_cache(fast)
+# DDR_PIXEL_CACHE_PASS memory_reads=11
+# ** Note: $finish    : sim/tb_ddr_pixel_cache.sv(194)
+#    Time: 1156 ns  Iteration: 0  Instance: /tb_ddr_pixel_cache
+# Break in Module tb_ddr_pixel_cache at sim/tb_ddr_pixel_cache.sv line 194
+# Stopped at sim/tb_ddr_pixel_cache.sv line 194
+# End time: 10:36:42 on Oct 13,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" a_accepted.tb_ddr_helpers 
+# Start time: 10:36:42 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_self_test(fast__1)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_self_test(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_command_bridge(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_helpers(fast)
+# Loading work.ddr_command_bridge(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_result_writer(fast)
+# Loading work.ddr_self_test(fast)
+# Loading work.ddr_self_test(fast__1)
+# DDR_HELPERS_PASS bridge_async_rsp_reset arbiter_routes writer_pack_flush selftest_good_bad_reset
+# ** Note: $finish    : sim/tb_ddr_helpers.sv(383)
+#    Time: 1272 ns  Iteration: 1  Instance: /tb_ddr_helpers
+# Break in Module tb_ddr_helpers at sim/tb_ddr_helpers.sv line 383
+# Stopped at sim/tb_ddr_helpers.sv line 383
+# End time: 10:36:43 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" a_accepted.tb_ddr_capture 
+# Start time: 10:36:43 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.ddr_capture_writer(fast)
+# DDR_GOOD_PASS seed=1 packets=64 sampling=floor-nearest
+# DDR_REJECT_PASS seed=2 lines=35 short_line=1 overflow=0 packets_written=64
+# DDR_REJECT_PASS seed=3 lines=10 short_line=0 overflow=0 packets_written=20
+# DDR_REJECT_PASS seed=4 lines=35 short_line=0 overflow=1 packets_written=33
+# DDR_GOOD_PASS seed=5 packets=64 sampling=floor-nearest
+# DDR_CAPTURE_PASS full_frame=1 short_line=1 short_frame=1 overflow=1 reset_recovery=1
+# ** Note: $finish    : sim/tb_ddr_capture.sv(168)
+#    Time: 116176 ns  Iteration: 1  Instance: /tb_ddr_capture
+# Break in Module tb_ddr_capture at sim/tb_ddr_capture.sv line 168
+# Stopped at sim/tb_ddr_capture.sv line 168
+# End time: 10:36:45 on Oct 13,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" a_accepted.tb_ddr_display 
+# Start time: 10:36:45 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# Loading sv_std.std
+# Loading work.tb_ddr_display(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# DDR_DISPLAY_PASS full-DE bars, exact multirow output pixels for both banks, VTC/RGB alignment, and whole-line black on late fetch; commands=23
+# ** Note: $finish    : sim/tb_ddr_display.sv(167)
+#    Time: 51015100 ps  Iteration: 1  Instance: /tb_ddr_display
+# Break in Module tb_ddr_display at sim/tb_ddr_display.sv line 167
+# Stopped at sim/tb_ddr_display.sv line 167
+# End time: 10:36:47 on Oct 13,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" a_accepted.tb_video_correct_ddr_core 
+# Start time: 10:36:47 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_result_display(fast)".
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2685) [TFMPC] - Too few port connections for 'algorithm'.  Expected 50, found 39.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'stale_frames'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y3'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x3'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y2'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x2'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'marker_dropped'.
+# ** Warning: rtl/top/frame_processor.v(61): (vopt-2718) [TFMPC] - Missing connection for port 'corners_valid'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_processor(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "homography_solver(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_pixel_cache(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_capture_writer(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "frame_session(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_self_test(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "ddr_command_bridge(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=12.
+# Loading sv_std.std
+# Loading work.tb_video_correct_ddr_core(fast)
+# Loading work.video_correct_ddr_core(fast)
+# Loading work.ddr_self_test(fast)
+# Loading work.frame_session(fast)
+# Loading work.ddr_snapshot_capture(fast)
+# Loading work.async_packet_fifo(fast)
+# Loading work.ddr_capture_writer(fast)
+# Loading work.frame_processor(fast)
+# Loading work.b_rectifier(fast)
+# Loading work.marker_detector(fast)
+# Loading work.unsigned_div_seq(fast)
+# Loading work.homography_solver(fast)
+# Loading work.signed_div_seq(fast)
+# Loading work.unsigned_div_seq(fast__1)
+# Loading work.perspective_core(fast)
+# Loading work.perspective_coord(fast)
+# Loading work.scaled_div_pipe(fast)
+# Loading work.bilinear_interp(fast)
+# Loading work.ddr_pixel_cache(fast)
+# Loading work.ddr_result_writer(fast)
+# Loading work.ddr_arbiter3(fast)
+# Loading work.ddr_command_bridge(fast)
+# Loading work.ddr_result_display(fast)
+# Loading work.video_timing_vtc(fast)
+# BIST_PASS writes=8 reads=8
+# DDR_CORE_PASS good=1 rejected=0 cmd=5425 capture=1536 dest=288 display_reads=1152 publications=3
+# ** Note: $finish    : sim/tb_video_correct_ddr_core.sv(153)
+#    Time: 2074013500 ps  Iteration: 2  Instance: /tb_video_correct_ddr_core
+# Break in Module tb_video_correct_ddr_core at sim/tb_video_correct_ddr_core.sv line 153
+# Stopped at sim/tb_video_correct_ddr_core.sv line 153
+# End time: 10:36:50 on Oct 13,2026, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 12

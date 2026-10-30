@@ -1,0 +1,42 @@
+# do run_ddr_block_writer_check.do
+# Model Technology ModelSim SE-64 vmap 2020.4 Lib Mapping Utility 2020.10 Oct 13 2020
+# vmap work_ddr_block_writer work_ddr_block_writer 
+# Modifying modelsim.ini
+# Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+# Start time: 10:02:22 on Oct 13,2026
+# vlog -sv -work work_ddr_block_writer 01_design_code/ddr_block_writer.v 02_simulation/tb_ddr_block_writer.v 
+# -- Compiling module ddr_block_writer
+# -- Compiling module tb_ddr_block_writer
+# 
+# Top level modules:
+# 	tb_ddr_block_writer
+# End time: 10:02:22 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim work_ddr_block_writer.tb_ddr_block_writer 
+# Start time: 10:02:23 on Oct 13,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.4 Oct 13 2020
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.tb_ddr_block_writer(fast)
+# ** Fatal: byte address conversion or stalled command changed
+#    Time: 66 ns  Scope: tb_ddr_block_writer File: 02_simulation/tb_ddr_block_writer.v Line: 32
+# ** Note: $finish    : 02_simulation/tb_ddr_block_writer.v(32)
+#    Time: 66 ns  Iteration: 0  Instance: /tb_ddr_block_writer
+# Break at 02_simulation/tb_ddr_block_writer.v line 32
+# Stopped at 02_simulation/tb_ddr_block_writer.v line 32
+# ** UI-Msg: (vish-4014) No objects found matching '/tb_ddr_block_writer/test_passed'.
+# Executing ONERROR command at macro ./run_ddr_block_writer_check.do line 9
+# End time: 10:02:25 on Oct 13,2026, Elapsed time: 0:00:02
+# Errors: 1, Warnings: 0
