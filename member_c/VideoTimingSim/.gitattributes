@@ -1,0 +1,8 @@
+# Preserve vendor-generated report formatting without treating table padding as an edit error.
+04_results/pds_v5/*.bgr -whitespace
+04_results/pds_v5/*.log -whitespace
+04_results/pds_v5/*.dmr -whitespace
+04_results/pds_v5/*.prr -whitespace
+04_results/pds_v5/*.snr -whitespace
+04_results/pds_v5/*.rtr -whitespace
+04_results/pds_v5/*.pcf -whitespace

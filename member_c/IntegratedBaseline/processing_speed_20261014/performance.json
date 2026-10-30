@@ -1,0 +1,25 @@
+{
+  "source_size": [
+    1920,
+    1080
+  ],
+  "result_size": [
+    640,
+    904
+  ],
+  "source_pixels": 2073600,
+  "compared_result_pixels": 578560,
+  "processing_clock_hz": 27000000,
+  "baseline_cycles": 29972848,
+  "optimized_cycles": 12864714,
+  "cycle_reduction_percent": 57.07877342853772,
+  "processing_speedup": 2.3298495403784334,
+  "baseline_model_seconds": 1.1101054814814815,
+  "optimized_model_seconds": 0.4764708888888889,
+  "hardware_measured": false,
+  "continuous_capture_parallel": false,
+  "baseline_log": "../fullhd_source_20261013/release/logs/tb_fullhd_frame.log",
+  "baseline_log_sha256": "323d478488b96075fc02047b259a2e7b63c8656ee32316d66aa3dcba631f36c9",
+  "optimized_log": "release/logs/tb_fullhd_frame.log",
+  "optimized_log_sha256": "cdea0712f1e2763eb06f7057a6a355664866a01fe99b83ef09da004f2b8808e7"
+}

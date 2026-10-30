@@ -1,0 +1,7 @@
+verification/work/
+modelsim.ini
+transcript
+vsim.wlf
+accepted/modelsim.ini
+accepted/transcript
+accepted/vsim.wlf

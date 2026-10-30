@@ -1,0 +1,7 @@
+Tool: ModelSim SE-64 2020.4
+Red: full RGB block/backpressure, empty implementation, exit 1.
+Green: PASS_DDR_APPLICATION packer=ok slots=ok
+Green: PASS_DDR_FRAME_MODEL frames=3 pixels_per_frame=2073600 stalls=3/7
+Errors: 0, Warnings: 0 for compilation and both simulations.
+Application storage model checks RGB readback and locked source frame preservation.
+No physical DDR controller, PDS timing, CDC, random-neighbor reads or board programming.
