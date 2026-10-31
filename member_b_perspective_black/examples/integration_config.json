@@ -1,0 +1,351 @@
+{
+  "schema_version": 2,
+  "revision": "B_black_markers_roi_2026-10-11",
+  "record_date": "2026-10-11",
+  "record_only": true,
+  "rtl_reads_this_file": false,
+  "rtl_behavior_changed": true,
+  "instruction": "此文件记录默认值和待确认项。RTL不读取JSON；最终值须覆写A工程中的实例化参数并重新编译/综合。",
+  "rtl_parameters": {
+    "SRC_W": 640,
+    "SRC_H": 480,
+    "OUT_W": 320,
+    "OUT_H": 452,
+    "UPDATE_EVERY": 5,
+    "MIN_PIXELS": 16,
+    "MAX_PIXELS": 4096,
+    "MAX_SPAN": 128,
+    "BLACK_RMIN": 0,
+    "BLACK_RMAX": 64,
+    "BLACK_GMIN": 0,
+    "BLACK_GMAX": 64,
+    "BLACK_BMIN": 0,
+    "BLACK_BMAX": 64,
+    "P0_XMIN": 0,
+    "P0_XMAX": 319,
+    "P0_YMIN": 0,
+    "P0_YMAX": 239,
+    "P1_XMIN": 320,
+    "P1_XMAX": 639,
+    "P1_YMIN": 0,
+    "P1_YMAX": 239,
+    "P2_XMIN": 320,
+    "P2_XMAX": 639,
+    "P2_YMIN": 240,
+    "P2_YMAX": 479,
+    "P3_XMIN": 0,
+    "P3_XMAX": 319,
+    "P3_YMIN": 240,
+    "P3_YMAX": 479
+  },
+  "parameter_selection": {
+    "current_values": "package_defaults",
+    "final_rtl_parameters": null,
+    "status": "pending",
+    "owners": {
+      "source_dimensions": "A",
+      "paper_output_dimensions": "A/B",
+      "instance_parameter_override": "A",
+      "black_threshold_and_marker_parameters": "B",
+      "marker_rois": "B"
+    },
+    "action": "确认真实尺寸、黑阈值、四ROI和摄像头统计后填写final_rtl_parameters，并同步修改RTL实例化与约束，重新仿真/综合。"
+  },
+  "source": {
+    "final_width": null,
+    "final_height": null,
+    "input_link": null,
+    "format": "RGB888",
+    "coordinate_origin": "active_area_top_left_zero",
+    "status": "pending",
+    "owner": "A",
+    "capture_alignment": "送入B的src_rgb/src_x/src_y/src_valid及帧起止必须与源缓存写入属于同一采集像素。"
+  },
+  "rectified_output": {
+    "final_width": null,
+    "final_height": null,
+    "physical_paper_ratio": null,
+    "status": "pending",
+    "owner": "A/B"
+  },
+  "processing_clock": {
+    "actual_hz": null,
+    "source": null,
+    "clock_domain_name": null,
+    "status": "pending",
+    "owner": "A/C",
+    "example_constraint_path": "docs/timing_example.sdc",
+    "example_constraint_hz": 50000000,
+    "example_is_actual_clock": false,
+    "example_is_measured_fmax": false
+  },
+  "sampling": {
+    "default_nearest": 0,
+    "final_default_nearest": null,
+    "mode": "per_request_input",
+    "allowed_values": [
+      0,
+      1
+    ],
+    "status": "pending",
+    "owner": "A/B",
+    "note": "0为双线性，1为最近邻；接口每笔采样nearest，不提供固定硬件默认值。"
+  },
+  "camera_tuning": {
+    "status": "not_run",
+    "final_parameters_status": "pending",
+    "owner": "B",
+    "threshold_application": "compile_time_parameters",
+    "python_threshold_file": "examples/thresholds.json",
+    "python_thresholds_configure_rtl": false,
+    "raw_rgb_sample_paths": [],
+    "exposure": null,
+    "white_balance": null,
+    "lighting": null,
+    "marker_counts_and_spans": null,
+    "action": "记录真实RGB样本、曝光/白平衡/灯光和每ROI统计，调整黑阈值、ROI和统计参数后重新仿真/综合。",
+    "python_roi_file": "examples/rois_demo.json",
+    "python_rois_configure_rtl": false
+  },
+  "display": {
+    "c_default_active_width": 1920,
+    "c_default_active_height": 1080,
+    "final_active_width": null,
+    "final_active_height": null,
+    "final_refresh_hz": null,
+    "pixel_clock_hz": null,
+    "window_x": null,
+    "window_y": null,
+    "scaling": null,
+    "outside_window_rgb": null,
+    "hdmi_transmitter_configuration": null,
+    "status": "pending",
+    "owner": "A/C",
+    "note": "C的有效扫描区与B的SRC、OUT尺寸独立；默认计数不证明实际1080p60。"
+  },
+  "cache": {
+    "owner": "A",
+    "implementation_status": "pending",
+    "response_order": "request_order",
+    "exactly_one_response_per_request": true,
+    "black_responses_keep_queue_position": true,
+    "reorder_before_b_if_memory_completes_out_of_order": true,
+    "read_memory_only_when_req_inside": true,
+    "metadata_echo": [
+      "req_inside",
+      "req_tag",
+      "req_fx",
+      "req_fy"
+    ],
+    "address_unit": "pixel",
+    "pixel_packing": null,
+    "byte_or_word_address_conversion": null,
+    "read_latency_cycles": null,
+    "request_fifo_depth": null,
+    "response_fifo_depth": null,
+    "measured_throughput": null,
+    "source_frame_lock": "one_complete_source_frame_per_destination_frame",
+    "source_buffer_count": null,
+    "source_frame_selection": null,
+    "source_frame_release": null,
+    "retain_source_frame_version_per_request": true,
+    "overwrite_locked_frame_before_last_read_completes": false,
+    "h_to_source_frame_relation": null,
+    "destination_buffer_count": null,
+    "destination_display_handoff": null
+  },
+  "reset_and_cdc": {
+    "owner": "A/C",
+    "implementation_status": "pending",
+    "b_reset": "active_low_async_assert",
+    "reset_deassertion": "synchronize_in_each_actual_clock_domain",
+    "flush_external_request_response_reorder_and_output_queues": true,
+    "discard_late_pre_reset_memory_completions": true,
+    "b_has_reset_epoch_port": false,
+    "cdc_implementation": null,
+    "note": "复位后的B不能识别旧响应；仅返回复位后新请求。"
+  },
+  "numerical_policy": {
+    "owner": "B",
+    "status": "unchanged",
+    "coefficient_format": "signed40_Q16.24",
+    "mac_format": "signed64",
+    "divider_input_format": "unsigned48_after_nonnegative_check",
+    "numerator_min_inclusive": 0,
+    "numerator_max_exclusive": 281474976710656,
+    "denominator_min_exclusive": 1048576,
+    "denominator_max_exclusive": 281474976710656,
+    "ratio_max_exclusive": 4096,
+    "source_coordinate_format": "unsigned20_UQ12.8",
+    "edge_policy": "strict_outside_black",
+    "blanket_clamp": false,
+    "error_requires_black_response": true,
+    "representable_positive_image_oob_sets_req_error": false
+  },
+  "validation": {
+    "bench_manifest": "sim/tests.list",
+    "full_bench_count": 9,
+    "icarus_full": {
+      "owner": "B",
+      "status": "pass",
+      "report_path": "results/verification.json",
+      "expected_marker": "ALL_CHECKS_PASS",
+      "run_utc": "2026-10-11T04:05:49.166581+00:00",
+      "bench_count": 9,
+      "python_model_tests": 17,
+      "modelsim_script_control_tests": 11,
+      "native_modelsim_executed": false,
+      "note": "当前黑标记版本完整Icarus/Python检查通过；原生ModelSim、PDS和开发板未执行。",
+      "version": "black_markers_2026-10-11",
+      "actual_rtl_comparison": {
+        "coordinates": 4329,
+        "interpolations": 1000,
+        "solver_cases": 37,
+        "video_pixels": 2344
+      }
+    },
+    "modelsim_full": {
+      "owner": "A/B",
+      "status": "not_run",
+      "tool_version": null,
+      "log_path": "results/modelsim_full.log",
+      "expected_marker": "ALL_MODELSIM_CHECKS_PASS"
+    },
+    "pds": {
+      "owner": "A/B",
+      "status": "not_run",
+      "documented_target_device": "PG2L100H-6IFBG676",
+      "actual_selected_device": null,
+      "tool_version": null,
+      "top_module": null,
+      "target_clock_hz": null,
+      "lut": null,
+      "ff": null,
+      "drm": null,
+      "apm": null,
+      "worst_slack_ns": null,
+      "unconstrained_paths": null,
+      "timing_result": null,
+      "measured_fmax_hz": null,
+      "report_paths": []
+    },
+    "board": {
+      "owner": "A/C",
+      "status": "not_run",
+      "board_model": null,
+      "board_revision": null,
+      "device_confirmed": null,
+      "bitstream_path": null,
+      "clock_hz": null,
+      "source_mode": null,
+      "display_mode": null,
+      "ddr_and_hdmi_log_paths": [],
+      "measured_frame_rate_fps": null
+    },
+    "historical_icarus_full": {
+      "owner": "B",
+      "status": "pass",
+      "report_path": "backups/2026-10-11_before_black_detection/results/verification.json",
+      "expected_marker": "ALL_CHECKS_PASS",
+      "run_utc": "2026-10-06T14:42:24.564265+00:00",
+      "bench_count": 8,
+      "python_model_tests": 10,
+      "modelsim_script_control_tests": 11,
+      "native_modelsim_executed": false,
+      "installed_project_run_utc": "2026-10-06T14:52:18.602914+00:00",
+      "version": "historical_color_v1_2026-10-06"
+    }
+  },
+  "related_documents": [
+    "README.md",
+    "docs/interfaces.md",
+    "docs/integration_v1.md",
+    "docs/validation_record.md",
+    "docs/changes_v1.md",
+    "docs/board_pds.md",
+    "docs/black_markers.md",
+    "docs/file_guide.md",
+    "docs/changes_black_detection.md"
+  ],
+  "marker_detection": {
+    "rule": "RGB各通道同时满足闭区间，每角累加其ROI内全部黑像素，不做连通域分离",
+    "black_rgb_inclusive": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        64,
+        64,
+        64
+      ]
+    ],
+    "corner_order": [
+      "TL",
+      "TR",
+      "BR",
+      "BL"
+    ],
+    "rtl_point_order": [
+      "P0",
+      "P1",
+      "P2",
+      "P3"
+    ],
+    "roi_bounds_inclusive": true,
+    "default_rois_depend_on_source_dimensions": true,
+    "default_roi_mode": "nonoverlapping_quadrants",
+    "default_rois": {
+      "TL": [
+        [
+          0,
+          0
+        ],
+        [
+          319,
+          239
+        ]
+      ],
+      "TR": [
+        [
+          320,
+          0
+        ],
+        [
+          639,
+          239
+        ]
+      ],
+      "BR": [
+        [
+          320,
+          240
+        ],
+        [
+          639,
+          479
+        ]
+      ],
+      "BL": [
+        [
+          0,
+          240
+        ],
+        [
+          319,
+          479
+        ]
+      ]
+    },
+    "rois_must_be_inside_source": true,
+    "rois_must_be_pairwise_disjoint_including_edges": true,
+    "python_invalid_config": "ValueError",
+    "rtl_invalid_config": "frame_reject_at_idle_frame_end",
+    "python_demo_roi_file": "examples/rois_demo.json",
+    "python_roi_files_configure_rtl": false,
+    "interference_note": "ROI内黑字、阴影、背景黑物会共同参与质心；真实画面应收窄窗口。",
+    "old_color_threshold_parameters_supported": false,
+    "input_output_remain_rgb888": true
+  }
+}

@@ -1,0 +1,11 @@
+backups/
+results/
+vectors/
+work/
+__pycache__/
+*.pyc
+*.vvp
+*.vo
+*.qdb
+*.qpg
+*.qtl

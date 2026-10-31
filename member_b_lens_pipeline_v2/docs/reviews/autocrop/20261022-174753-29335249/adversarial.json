@@ -1,0 +1,8 @@
+{
+  "reviewer": "adversarial",
+  "findings": [],
+  "residual_risks": [
+    "Native ModelSim fidelity remains unverified in this read-only review. The Tcl harness checks command boundaries and failure propagation but does not compile or simulate HDL; the package explicitly records that limitation."
+  ],
+  "testing_gaps": []
+}

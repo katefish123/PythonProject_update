@@ -1,0 +1,12 @@
+# Testbench success-marker; shared by Icarus and ModelSim runners.
+tb_perspective_coord COORD_PASS
+tb_homography_solver SOLVER_PASS
+tb_bilinear_interp INTERP_PASS
+tb_marker_detector MARKER_PASS
+tb_b_rectifier VIDEO_PASS
+tb_cache_contract CACHE_CONTRACT_PASS
+tb_b_integration B_INTEGRATION_PASS
+tb_request_boundaries BOUNDARIES_PASS
+tb_lens_distort_coord LENS_COORD_PASS
+tb_lens_integration LENS_INTEGRATION_PASS
+tb_lens_autocrop AUTOCROP_PASS

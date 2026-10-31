@@ -1,0 +1,7 @@
+results/
+vectors/
+work/
+__pycache__/
+*.pyc
+
+.compound-engineering/config.local.yaml

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "case": "missing OpenCV blocks complete acceptance",
+  "fixture": "/var/folders/v5/3gzkj1t94014sgph3kj97w_c0000gn/T/lens_v2_missing_oracle__pdfiddx",
+  "exit_code": 1,
+  "verification_status": "fail",
+  "lens_tests": 8,
+  "skipped_tests": 1,
+  "oracle": {
+    "status": "not_run",
+    "reason": "required lens acceptance test skipped"
+  },
+  "installation_guidance": true,
+  "false_pass_marker": false
+}

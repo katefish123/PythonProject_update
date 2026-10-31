@@ -1,0 +1,46 @@
+{
+  "repo": "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_lens_pipeline_v2",
+  "base": "3b7ce85cacf33cbb8450c4bbb97a626c5a9ca176",
+  "mode": "local-aligned",
+  "intent": "Eliminate mapping-created black edges using a host-planned, aspect-preserving safe viewport. Compose the crop into destination-to-source H and prove every final float and quantized fixed sampling point is inside; keep original RGB content and use one resampling. Bind all lens constants, H and source/output sizes together for the static FPGA wrapper, preserve trial deployment metadata, original core behavior, and regressions.",
+  "docs_root": "docs",
+  "plan_source": null,
+  "explicit_new_files": [
+    "docs/black_border_handling.md",
+    "examples/autocrop_files.f",
+    "examples/lens_autocrop_instance.v",
+    "scripts/generate_autocrop_vectors.py",
+    "sim/tb_lens_autocrop.sv"
+  ],
+  "cross_model_review_mode": "off",
+  "standards_paths": [],
+  "branch": "feat/lens-calibration-pipeline",
+  "head_sha": "fc428afdfb049e2e266467a7a9b2c6ede4bdcd1d",
+  "reviewed_source_sha256": {
+    "README.md": "e5ac748d3469cd648c7394132cf531fb01f147b7f35ab046dd2ac60260c240b0",
+    "docs/validation_lens_v2.md": "a6db62bfde49aded3cbd65a3f362a8d0aab0b4a59d89770492465e348b155fca",
+    "examples/r50_18mm_viewport.json": "545ca9646cecdda9eb294e207f6eb7340ba36b68ba41312b8d4ba7ead6fff0f4",
+    "examples/r50_18mm_viewport.vh": "9b96114f44f42ef9ae04d55afbb0dc7aab05965970ab2d34492b26899aa00c80",
+    "python/brect/lens_cli.py": "fba8f09a411b617c8a2be7601ca174afb4204eb5e84f05039abfde68f83d7cd3",
+    "python/brect/viewport.py": "ba62a031d16e9e26a8e13fcaa3dc23ea11973b79d5aab7b174e1710dc93caef2",
+    "run_modelsim.do": "decc90a12b4ad0ac87cc99b0d4b3352e9218cb6b48113ead1d04de387c6e02fb",
+    "scripts/export_lens_viewport.py": "4d488de27a8cc02622f2f03e87f0c920d23a037f3a9bc9fd4d4a88effbcfd241",
+    "scripts/run_checks.py": "01934a2e8a13778bcb92de2c8e45f4765897d616b0af5958fbbb4ebf06e33d07",
+    "scripts/test_modelsim_script.py": "6d95e12e453e28fd19ddfbec3a5032526b2bdda752a88f78a17fef5fd9cae4fb",
+    "scripts/test_viewport.py": "9208faf4921f159f2ba826ef5825a19e03df62dbd8ff72d7f7f938743b723516",
+    "sim/tests.list": "81542aded501984244c2a444ce3af0332ac121a7b35b3f38b7f4b8aadd9b3263",
+    "docs/black_border_handling.md": "d36cc7ab20712469d7e88868cc3d67ca7f62ccb74419bc80c054abdf2f009bb7",
+    "examples/autocrop_files.f": "4ba2745541bd45a9a6ceae442f034243806733a0b0eb0327405bd2b597bc9f09",
+    "examples/lens_autocrop_instance.v": "21a046b1a4b57de6daada6a343f2b023e36292677647af13d61aaae4ae99cd44",
+    "scripts/generate_autocrop_vectors.py": "333e5421a3932083ba131cb8bbf5c6b363a521a6a7f8792bc355797c7545507a",
+    "sim/tb_lens_autocrop.sv": "df501156682e7570070482027ef36c6b054cacfa8e51e40b41fe2a755edc3949"
+  },
+  "roster": {
+    "correctness": "session",
+    "testing": "mid-tier",
+    "maintainability": "mid-tier",
+    "performance": "mid-tier",
+    "api-contract": "mid-tier",
+    "adversarial": "session"
+  }
+}

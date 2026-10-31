@@ -1,0 +1,231 @@
+{
+  "status": "complete",
+  "verdict": "Ready with fixes",
+  "scope": {
+    "base": "3b7ce85cacf33cbb8450c4bbb97a626c5a9ca176",
+    "branch": "feat/lens-calibration-pipeline",
+    "head_sha": "fc428afdfb049e2e266467a7a9b2c6ede4bdcd1d",
+    "pr_url": null,
+    "files_changed": 17
+  },
+  "intent": "Eliminate mapping-created black edges using a host-planned, aspect-preserving safe viewport. Compose the crop into destination-to-source H and prove every final float and quantized fixed sampling point is inside; keep original RGB content and use one resampling. Bind all lens constants, H and source/output sizes together for the static FPGA wrapper, preserve trial deployment metadata, original core behavior, and regressions.",
+  "intent_confidence": "explicit",
+  "reviewers": [
+    "correctness",
+    "testing",
+    "maintainability",
+    "performance",
+    "api-contract",
+    "adversarial"
+  ],
+  "findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "file": "README.md",
+      "first_evidence": "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\",",
+      "independent_reviewers": [
+        "api-contract"
+      ],
+      "line": 35,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "api-contract"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Change the README command to --output results/lens_autocrop_demo; add an explicit --border keep command when referring to the legacy results/lens_demo comparison. Update docs/integration_lens_v2.md's same command and default-behavior description for consistency.",
+      "title": "Documented CLI command overwrites legacy demo results",
+      "why_it_matters": "A reader following the README now writes automatically cropped float/fixed images and parameters into results/lens_demo, while that directory's preview and reported comparison describe the preserved uncropped run. This silently mixes two different framing contracts in one example and invalidates the documented legacy comparison. Point the normal command at results/lens_autocrop_demo, and show --border keep explicitly for reproducing results/lens_demo.",
+      "evidence": [
+        "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\",",
+        "README.md:35 -- PYTHONPATH=python python -B -m brect.lens_cli examples/real_18mm_input.png --calibration calibration/r50_18mm_hdmi_trial.json --output results/lens_demo --mode both",
+        "docs/validation_lens_v2.md:23 -- 下面保留原版不裁剪、H=单位阵且双线性的数值对照，输出为 `results/lens_demo/float.png`、`fixed.png` 和 `parameters.json`。最新 CLI 已默认去黑边，最新输出与报告为 `results/lens_autocrop_demo/`",
+        "README.md:13 -- - `results/lens_demo/preview.jpg`：真实 1080p 棋盘原图、浮点、定点输出对照。"
+      ]
+    },
+    {
+      "#": 2,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "file": "scripts/test_viewport.py",
+      "first_evidence": "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+      "independent_reviewers": [
+        "testing"
+      ],
+      "line": 102,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "testing"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Add a nonuniform RGB fixture with sharp edges to the CLI test, and compare both saved outputs pixel-for-pixel with direct render_lens_float/render_lens_fixed calls using the exported effective H; retain the uniform and black fixtures for border semantics.",
+      "title": "Use a patterned image to verify single sampling",
+      "why_it_matters": "A second resize or interpolation pass in the CLI would blur real photos while this acceptance test still passes: every source pixel is 173, so any number of resampling passes produce the same image. The change explicitly promises one sample of the original RGB image. A patterned fixture compared with the direct renderer output would make that promise observable in the CLI test.",
+      "evidence": [
+        "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+        "scripts/test_viewport.py:112 -- self.assertTrue((np.array(Image.open(tmp/f'out/{kind}.png'))==173).all())",
+        "python/brect/lens_cli.py:83-85 -- outputs are rendered from the original image, the boundary where an added pass would affect CLI behavior"
+      ]
+    }
+  ],
+  "actionable_findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "file": "README.md",
+      "first_evidence": "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\",",
+      "independent_reviewers": [
+        "api-contract"
+      ],
+      "line": 35,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "api-contract"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Change the README command to --output results/lens_autocrop_demo; add an explicit --border keep command when referring to the legacy results/lens_demo comparison. Update docs/integration_lens_v2.md's same command and default-behavior description for consistency.",
+      "title": "Documented CLI command overwrites legacy demo results",
+      "why_it_matters": "A reader following the README now writes automatically cropped float/fixed images and parameters into results/lens_demo, while that directory's preview and reported comparison describe the preserved uncropped run. This silently mixes two different framing contracts in one example and invalidates the documented legacy comparison. Point the normal command at results/lens_autocrop_demo, and show --border keep explicitly for reproducing results/lens_demo.",
+      "evidence": [
+        "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\",",
+        "README.md:35 -- PYTHONPATH=python python -B -m brect.lens_cli examples/real_18mm_input.png --calibration calibration/r50_18mm_hdmi_trial.json --output results/lens_demo --mode both",
+        "docs/validation_lens_v2.md:23 -- 下面保留原版不裁剪、H=单位阵且双线性的数值对照，输出为 `results/lens_demo/float.png`、`fixed.png` 和 `parameters.json`。最新 CLI 已默认去黑边，最新输出与报告为 `results/lens_autocrop_demo/`",
+        "README.md:13 -- - `results/lens_demo/preview.jpg`：真实 1080p 棋盘原图、浮点、定点输出对照。"
+      ]
+    },
+    {
+      "#": 2,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "file": "scripts/test_viewport.py",
+      "first_evidence": "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+      "independent_reviewers": [
+        "testing"
+      ],
+      "line": 102,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "testing"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Add a nonuniform RGB fixture with sharp edges to the CLI test, and compare both saved outputs pixel-for-pixel with direct render_lens_float/render_lens_fixed calls using the exported effective H; retain the uniform and black fixtures for border semantics.",
+      "title": "Use a patterned image to verify single sampling",
+      "why_it_matters": "A second resize or interpolation pass in the CLI would blur real photos while this acceptance test still passes: every source pixel is 173, so any number of resampling passes produce the same image. The change explicitly promises one sample of the original RGB image. A patterned fixture compared with the direct renderer output would make that promise observable in the CLI test.",
+      "evidence": [
+        "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+        "scripts/test_viewport.py:112 -- self.assertTrue((np.array(Image.open(tmp/f'out/{kind}.png'))==173).all())",
+        "python/brect/lens_cli.py:83-85 -- outputs are rendered from the original image, the boundary where an added pass would affect CLI behavior"
+      ]
+    }
+  ],
+  "triage_groups": [],
+  "pre_existing_findings": [],
+  "requirements_completeness": null,
+  "learnings": [],
+  "agent_native_gaps": [],
+  "deployment_notes": [],
+  "residual_risks": [],
+  "testing_gaps": [],
+  "coverage": {
+    "scope_mode": "local-aligned",
+    "depth": "full roster selected by risk; lite gate not eligible",
+    "scope_helper": {
+      "status": "complete",
+      "exec_lines": 385,
+      "uncounted_files": 6,
+      "lite_eligible": false
+    },
+    "explicit_scope_extension": "Five new autocrop files in files.txt were included by the caller despite untracked status; no Git staging or mutations were performed.",
+    "project_standards": "not run (successful search found no applicable standards files within the reviewed repository)",
+    "reviewer_selection": {
+      "correctness": "required logic and boundary review",
+      "testing": "changed Python/RTL tests, vector generator and harness",
+      "maintainability": "new planner/export/wrapper boundaries and substantial executable diff",
+      "performance": "exhaustive float/fixed grid evaluation and size bounds",
+      "api-contract": "CLI default, exported geometry and FPGA wrapper boundary",
+      "adversarial": "full-grid verifier and harness fidelity"
+    },
+    "reviewer_outcomes": {
+      "correctness": "complete, valid terminal JSON collected",
+      "testing": "complete, valid terminal JSON collected",
+      "maintainability": "complete, valid terminal JSON collected",
+      "performance": "complete, valid terminal JSON collected",
+      "api-contract": "complete, valid terminal JSON collected",
+      "adversarial": "complete, valid terminal JSON collected"
+    },
+    "all_reviewer_terminal_outcomes_collected": true,
+    "failed_reviewers": [],
+    "timed_out_reviewers": [],
+    "cross_model_review": {
+      "status": "disabled",
+      "reason": "disabled by checkout config (cross_model_review_mode: off)",
+      "adversarial_coverage": "in-process reviewer completed"
+    },
+    "fast_pass": {
+      "urgent_candidates": 0
+    },
+    "mechanics": {
+      "malformed_returns": 0,
+      "malformed_findings": 0,
+      "suppressed_by_confidence": {},
+      "quote_gate_demotions": 0,
+      "mode_aware_demotions": 0
+    },
+    "validation": {
+      "batch_count": 1,
+      "selected_findings": [
+        1,
+        2
+      ],
+      "verdicts": [
+        {
+          "#": 1,
+          "validated": true,
+          "reason": "The documented command now defaults to auto cropping but writes float.png, fixed.png, and parameters.json into results/lens_demo, which the validation document identifies as the preserved uncropped comparison."
+        },
+        {
+          "#": 2,
+          "validated": true,
+          "reason": "Existing patterned tests cover the renderer and an identity CLI case, while the auto crop CLI test uses uniform pixels, so an added resampling pass on the cropped path could blur real images without failing these tests."
+        }
+      ],
+      "drops": 0,
+      "cross_model_skip_count": 0,
+      "infrastructure_failures": [],
+      "all_terminal_outcomes_collected": true
+    },
+    "settlement_suppression": "not evaluated; no plan discovered",
+    "verification_evidence": {
+      "source": "results/verification.json",
+      "status": "pass",
+      "python_baseline": 10,
+      "python_lens": 8,
+      "python_viewport": 7,
+      "rtl_targets": 11,
+      "autocrop_transactions": 13046,
+      "modelsim_control_checks": 11,
+      "autocrop_build_input_hashes_checked": 6,
+      "autocrop_build_input_hashes_match": true,
+      "reviewed_source_hashes_match": true,
+      "adversarial_random_scalar_vector_comparisons": 60000
+    },
+    "limitations": [
+      "Native ModelSim execution was not performed; the checked Tcl command harness is not native HDL compilation/simulation.",
+      "The autocrop RTL test covers the complete perimeter and an interior grid; exhaustive 1920x1080 validity comes from the exact host model.",
+      "PDS, board timing, hardware performance and optical calibration accuracy are outside this review scope."
+    ]
+  },
+  "artifact_path": "/private/tmp/compound-engineering-501/ce-code-review/20261022-174753-29335249",
+  "durable_artifact_path": "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_lens_pipeline_v2/docs/reviews/autocrop/20261022-174753-29335249",
+  "run_id": "20261022-174753-29335249"
+}

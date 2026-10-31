@@ -1,0 +1,55 @@
+[
+  {
+    "#": 1,
+    "autofix_class": "gated_auto",
+    "confidence": 75,
+    "file": "README.md",
+    "first_evidence": "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\",",
+    "independent_reviewers": [
+      "api-contract"
+    ],
+    "line": 35,
+    "owner": "downstream-resolver",
+    "pre_existing": false,
+    "requires_verification": true,
+    "reviewers": [
+      "api-contract"
+    ],
+    "severity": "P2",
+    "suggested_fix": "Change the README command to --output results/lens_autocrop_demo; add an explicit --border keep command when referring to the legacy results/lens_demo comparison. Update docs/integration_lens_v2.md's same command and default-behavior description for consistency.",
+    "title": "Documented CLI command overwrites legacy demo results",
+    "why_it_matters": "A reader following the README now writes automatically cropped float/fixed images and parameters into results/lens_demo, while that directory's preview and reported comparison describe the preserved uncropped run. This silently mixes two different framing contracts in one example and invalidates the documented legacy comparison. Point the normal command at results/lens_autocrop_demo, and show --border keep explicitly for reproducing results/lens_demo.",
+    "evidence": [
+      "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\",",
+      "README.md:35 -- PYTHONPATH=python python -B -m brect.lens_cli examples/real_18mm_input.png --calibration calibration/r50_18mm_hdmi_trial.json --output results/lens_demo --mode both",
+      "docs/validation_lens_v2.md:23 -- 下面保留原版不裁剪、H=单位阵且双线性的数值对照，输出为 `results/lens_demo/float.png`、`fixed.png` 和 `parameters.json`。最新 CLI 已默认去黑边，最新输出与报告为 `results/lens_autocrop_demo/`",
+      "README.md:13 -- - `results/lens_demo/preview.jpg`：真实 1080p 棋盘原图、浮点、定点输出对照。"
+    ]
+  },
+  {
+    "#": 2,
+    "autofix_class": "gated_auto",
+    "confidence": 75,
+    "file": "scripts/test_viewport.py",
+    "first_evidence": "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+    "independent_reviewers": [
+      "testing"
+    ],
+    "line": 102,
+    "owner": "downstream-resolver",
+    "pre_existing": false,
+    "requires_verification": true,
+    "reviewers": [
+      "testing"
+    ],
+    "severity": "P2",
+    "suggested_fix": "Add a nonuniform RGB fixture with sharp edges to the CLI test, and compare both saved outputs pixel-for-pixel with direct render_lens_float/render_lens_fixed calls using the exported effective H; retain the uniform and black fixtures for border semantics.",
+    "title": "Use a patterned image to verify single sampling",
+    "why_it_matters": "A second resize or interpolation pass in the CLI would blur real photos while this acceptance test still passes: every source pixel is 173, so any number of resampling passes produce the same image. The change explicitly promises one sample of the original RGB image. A patterned fixture compared with the direct renderer output would make that promise observable in the CLI test.",
+    "evidence": [
+      "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+      "scripts/test_viewport.py:112 -- self.assertTrue((np.array(Image.open(tmp/f'out/{kind}.png'))==173).all())",
+      "python/brect/lens_cli.py:83-85 -- outputs are rendered from the original image, the boundary where an added pass would affect CLI behavior"
+    ]
+  }
+]

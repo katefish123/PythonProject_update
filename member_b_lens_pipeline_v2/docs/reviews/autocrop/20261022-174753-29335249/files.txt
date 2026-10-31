@@ -1,0 +1,17 @@
+README.md
+docs/validation_lens_v2.md
+examples/r50_18mm_viewport.json
+examples/r50_18mm_viewport.vh
+python/brect/lens_cli.py
+python/brect/viewport.py
+run_modelsim.do
+scripts/export_lens_viewport.py
+scripts/run_checks.py
+scripts/test_modelsim_script.py
+scripts/test_viewport.py
+sim/tests.list
+docs/black_border_handling.md
+examples/autocrop_files.f
+examples/lens_autocrop_instance.v
+scripts/generate_autocrop_vectors.py
+sim/tb_lens_autocrop.sv

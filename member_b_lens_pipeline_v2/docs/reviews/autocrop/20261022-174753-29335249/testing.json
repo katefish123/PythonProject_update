@@ -1,0 +1,27 @@
+{
+  "reviewer": "testing",
+  "findings": [
+    {
+      "title": "Use a patterned image to verify single sampling",
+      "severity": "P2",
+      "file": "scripts/test_viewport.py",
+      "line": 102,
+      "why_it_matters": "A second resize or interpolation pass in the CLI would blur real photos while this acceptance test still passes: every source pixel is 173, so any number of resampling passes produce the same image. The change explicitly promises one sample of the original RGB image. A patterned fixture compared with the direct renderer output would make that promise observable in the CLI test.",
+      "autofix_class": "gated_auto",
+      "owner": "downstream-resolver",
+      "requires_verification": true,
+      "suggested_fix": "Add a nonuniform RGB fixture with sharp edges to the CLI test, and compare both saved outputs pixel-for-pixel with direct render_lens_float/render_lens_fixed calls using the exported effective H; retain the uniform and black fixtures for border semantics.",
+      "confidence": 75,
+      "evidence": [
+        "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')",
+        "scripts/test_viewport.py:112 -- self.assertTrue((np.array(Image.open(tmp/f'out/{kind}.png'))==173).all())",
+        "python/brect/lens_cli.py:83-85 -- outputs are rendered from the original image, the boundary where an added pass would affect CLI behavior"
+      ],
+      "pre_existing": false
+    }
+  ],
+  "residual_risks": [],
+  "testing_gaps": [
+    "The new wrapper testbench drives only coordinates listed by the generator, and that generator selects the full perimeter plus a 19x33 interior grid; the full 1920x1080 RTL mapping is modeled on the host, not simulated exhaustively. The documentation states this limit accurately."
+  ]
+}

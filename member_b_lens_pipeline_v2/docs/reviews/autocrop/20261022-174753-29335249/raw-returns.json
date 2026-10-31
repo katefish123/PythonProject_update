@@ -1,0 +1,70 @@
+[
+  {
+    "reviewer": "correctness",
+    "residual_risks": [],
+    "testing_gaps": [],
+    "findings": []
+  },
+  {
+    "reviewer": "testing",
+    "residual_risks": [],
+    "testing_gaps": [
+      "The new wrapper testbench drives only coordinates listed by the generator, and that generator selects the full perimeter plus a 19x33 interior grid; the full 1920x1080 RTL mapping is modeled on the host, not simulated exhaustively. The documentation states this limit accurately."
+    ],
+    "findings": [
+      {
+        "title": "Use a patterned image to verify single sampling",
+        "severity": "P2",
+        "file": "scripts/test_viewport.py",
+        "line": 102,
+        "autofix_class": "gated_auto",
+        "owner": "downstream-resolver",
+        "requires_verification": true,
+        "suggested_fix": "Add a nonuniform RGB fixture with sharp edges to the CLI test, and compare both saved outputs pixel-for-pixel with direct render_lens_float/render_lens_fixed calls using the exported effective H; retain the uniform and black fixtures for border semantics.",
+        "confidence": 75,
+        "pre_existing": false,
+        "first_evidence": "scripts/test_viewport.py:102 -- Image.fromarray(np.full((48,64,3),173,np.uint8)).save(tmp/'input.png')"
+      }
+    ]
+  },
+  {
+    "reviewer": "maintainability",
+    "residual_risks": [],
+    "testing_gaps": [],
+    "findings": []
+  },
+  {
+    "reviewer": "performance",
+    "residual_risks": [],
+    "testing_gaps": [],
+    "findings": []
+  },
+  {
+    "reviewer": "api-contract",
+    "residual_risks": [],
+    "testing_gaps": [],
+    "findings": [
+      {
+        "title": "Documented CLI command overwrites legacy demo results",
+        "severity": "P2",
+        "file": "README.md",
+        "line": 35,
+        "autofix_class": "gated_auto",
+        "owner": "downstream-resolver",
+        "requires_verification": true,
+        "suggested_fix": "Change the README command to --output results/lens_autocrop_demo; add an explicit --border keep command when referring to the legacy results/lens_demo comparison. Update docs/integration_lens_v2.md's same command and default-behavior description for consistency.",
+        "confidence": 75,
+        "pre_existing": false,
+        "first_evidence": "python/brect/lens_cli.py:62 --     parser.add_argument(\"--border\", choices=(\"auto\", \"keep\"), default=\"auto\","
+      }
+    ]
+  },
+  {
+    "reviewer": "adversarial",
+    "residual_risks": [
+      "Native ModelSim fidelity remains unverified in this read-only review. The Tcl harness checks command boundaries and failure propagation but does not compile or simulate HDL; the package explicitly records that limitation."
+    ],
+    "testing_gaps": [],
+    "findings": []
+  }
+]
