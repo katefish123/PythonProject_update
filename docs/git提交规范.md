@@ -7,8 +7,10 @@
 - 所有提交的 **author 与 committer 统一为项目负责人个人账号**：
 
   ```text
-  slowshine <3297694176@qq.com>
+  Nefelibata-Gray <3297694176@qq.com>
   ```
+
+  该邮箱已验证并绑定 GitHub 账号 `Nefelibata-Gray`，提交会归属到该账号。
 
 - 禁止使用工具或代理账号作为提交身份，包括但不限于 `Codex <codex@openai.com>`、`Copilot`、`cursor`、`noreply@anthropic.com` 等。
 - 禁止在提交信息中添加指向 AI 工具或机器人账号的 `Co-authored-by:` 尾注。
@@ -19,7 +21,7 @@
 每台参与本项目的机器执行一次：
 
 ```bash
-git config --global user.name  "slowshine"
+git config --global user.name  "Nefelibata-Gray"
 git config --global user.email "3297694176@qq.com"
 ```
 
@@ -52,7 +54,7 @@ git log -1 --format='author=%an <%ae>%ncommitter=%cn <%ce>'
 
 | 日期 | 操作 | 范围 |
 | --- | --- | --- |
-| 2026-10-31 | 将 `256b5ea`、`5c1fd3e` 的 author/committer 由 `Codex <codex@openai.com>` 改写为 `slowshine <3297694176@qq.com>`，并强推 `main`、`main-A` | 提交树内容、提交说明、提交时间均未变；`main-B`、`main-C`、`c-pipeline-next` 未受影响 |
+| 2026-10-31 | 将 `256b5ea`、`5c1fd3e` 的 author/committer 由 `Codex <codex@openai.com>` 改写为 `Nefelibata-Gray <3297694176@qq.com>`，并强推 `main`、`main-A` | 提交树内容、提交说明、提交时间均未变；`main-B`、`main-C`、`c-pipeline-next` 未受影响 |
 
 补充说明：
 
