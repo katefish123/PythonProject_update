@@ -1,0 +1,146 @@
+{
+  "status": "complete",
+  "verdict": "Ready with fixes",
+  "scope": {
+    "base": "c6a9966094d49152b6214b3c4f0b2c7ffee56617",
+    "branch": "feat/lens-calibration-pipeline",
+    "head_sha": "995482eea86315f9017bc1aa5a17b46e75ca4de5",
+    "pr_url": null,
+    "files_changed": 28,
+    "untracked": "Explicitly included source, docs, examples and image asset; review outputs excluded."
+  },
+  "intent": "Integrate the provisional R50 18mm HDMI 1920x1080 profile through strict JSON parsing and compile-time constants into destination-to-ideal-source H, Brown k1/k2/p1/p2 mapping, existing cache and one sampling operation. Preserve default-disabled legacy behavior, exact Python integer/RTL equality, II=1, E0-to-E9 latency, reset flush and metadata order; retain deploy_to_fpga=false.",
+  "intent_confidence": "explicit",
+  "reviewers": [
+    "correctness",
+    "testing",
+    "maintainability",
+    "performance",
+    "api-contract",
+    "adversarial"
+  ],
+  "findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "file": "scripts/test_lens.py",
+      "first_evidence": "scripts/test_lens.py:86 --             self.skipTest(\"Optional OpenCV oracle unavailable\")",
+      "independent_reviewers": [
+        "testing"
+      ],
+      "line": 86,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "testing"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Separate the float-versus-fixed accuracy assertions into an unconditional test. Make scripts/run_checks.py require execution of the independent OpenCV oracle, or explicitly fail/report incomplete when it is skipped; retain OpenCV as optional for general runtime use.",
+      "title": "Acceptance gate passes with the independent oracle skipped",
+      "why_it_matters": "Without cv2, the suite skips the independent nonzero Brown-model oracle and the float-versus-fixed accuracy assertions that share its test method, yet scripts/run_checks.py can still report ALL_CHECKS_PASS and count seven lens tests. Separate unconditional numerical assertions from the optional import, and require the independent oracle in the acceptance gate so an incomplete run cannot look fully verified. The current delivery ran with cv2 present, so its recorded numerical evidence remains valid.",
+      "evidence": [
+        "scripts/test_lens.py:86 --             self.skipTest(\"Optional OpenCV oracle unavailable\")",
+        "scripts/test_lens.py:97 --         for x, y in [(i * 213, j * 217) for i in range(19) for j in range(14)]:",
+        "requirements.txt:3 -- # Optional camera input and independent lens test oracle: opencv-python>=4.5",
+        "scripts/run_checks.py:132 --         report[\"lens_python_tests\"]=int(re.search(r\"Ran (\\d+) tests\",lens_log)[1])",
+        "scripts/run_checks.py:168 --         print(\"ALL_CHECKS_PASS\" if not args.python_only else \"PYTHON_ONLY_PASS RTL_NOT_RUN\")"
+      ]
+    }
+  ],
+  "actionable_findings": [
+    {
+      "#": 1,
+      "autofix_class": "gated_auto",
+      "confidence": 75,
+      "file": "scripts/test_lens.py",
+      "first_evidence": "scripts/test_lens.py:86 --             self.skipTest(\"Optional OpenCV oracle unavailable\")",
+      "independent_reviewers": [
+        "testing"
+      ],
+      "line": 86,
+      "owner": "downstream-resolver",
+      "pre_existing": false,
+      "requires_verification": true,
+      "reviewers": [
+        "testing"
+      ],
+      "severity": "P2",
+      "suggested_fix": "Separate the float-versus-fixed accuracy assertions into an unconditional test. Make scripts/run_checks.py require execution of the independent OpenCV oracle, or explicitly fail/report incomplete when it is skipped; retain OpenCV as optional for general runtime use.",
+      "title": "Acceptance gate passes with the independent oracle skipped",
+      "why_it_matters": "Without cv2, the suite skips the independent nonzero Brown-model oracle and the float-versus-fixed accuracy assertions that share its test method, yet scripts/run_checks.py can still report ALL_CHECKS_PASS and count seven lens tests. Separate unconditional numerical assertions from the optional import, and require the independent oracle in the acceptance gate so an incomplete run cannot look fully verified. The current delivery ran with cv2 present, so its recorded numerical evidence remains valid.",
+      "evidence": [
+        "scripts/test_lens.py:86 --             self.skipTest(\"Optional OpenCV oracle unavailable\")",
+        "scripts/test_lens.py:97 --         for x, y in [(i * 213, j * 217) for i in range(19) for j in range(14)]:",
+        "requirements.txt:3 -- # Optional camera input and independent lens test oracle: opencv-python>=4.5",
+        "scripts/run_checks.py:132 --         report[\"lens_python_tests\"]=int(re.search(r\"Ran (\\d+) tests\",lens_log)[1])",
+        "scripts/run_checks.py:168 --         print(\"ALL_CHECKS_PASS\" if not args.python_only else \"PYTHON_ONLY_PASS RTL_NOT_RUN\")"
+      ]
+    }
+  ],
+  "triage_groups": [],
+  "pre_existing_findings": [],
+  "requirements_completeness": null,
+  "learnings": [],
+  "agent_native_gaps": [],
+  "deployment_notes": [],
+  "residual_risks": [],
+  "testing_gaps": [],
+  "coverage": {
+    "reviewer_terminal_outcomes": {
+      "correctness": "complete",
+      "testing": "complete",
+      "maintainability": "complete",
+      "performance": "complete",
+      "api-contract": "complete",
+      "adversarial": "complete"
+    },
+    "conditional_reasons": {
+      "testing": "Changed regression harnesses and meaningful numerical/RTL behavior.",
+      "maintainability": "New cross-language numeric pipeline and public profile boundary.",
+      "performance": "Loop-heavy 1080p transforms and II=1 RTL stages.",
+      "api-contract": "Published calibration, constant, CLI and cache-response contracts.",
+      "adversarial": "More than 200 executable lines and a silent-pass verification mechanism."
+    },
+    "project_standards": "Not run: successful search found no applicable standards files in the reviewed repository.",
+    "lite_roster": false,
+    "cross_model_review": "Disabled by checkout config; all review local, no external job started.",
+    "failed_reviewers": [],
+    "validator": {
+      "batches": 1,
+      "selected": [
+        1
+      ],
+      "validated": [
+        1
+      ],
+      "dropped": [],
+      "failures": [],
+      "cross_model_skip_count": 0
+    },
+    "suppressed_by_confidence": {},
+    "quote_gate_demotions": 0,
+    "mode_aware_demotions": 0,
+    "malformed_findings": 0,
+    "malformed_returns": 0,
+    "settlement_suppression": "Not evaluated: no plan artifact discovered; numeric contract and stated scope reviewed directly.",
+    "verified_evidence": "Existing final verification report was read and its source hashes matched all recorded source files; ten RTL targets passed, including 530 coordinate vectors and 835 combined cache/RGB transactions. The cv2-present seven-test lens run remains valid.",
+    "contract_coverage": [
+      "Calibration size/grid, redundancy and provisional metadata reuse",
+      "Constant quantization and bounded signed intermediates",
+      "RTL shift order, latency, reset and tags",
+      "Default-disabled legacy path and signed source bounds",
+      "One cache sampling path and ordered variable-latency responses",
+      "Delivery docs and explicit incomplete scope"
+    ],
+    "limits": [
+      "No native ModelSim, PDS synthesis, timing/resource, board, end-to-end performance or optical acceptance claim was evaluated.",
+      "Verification artifacts were inspected without rerunning generators or mutating shared source, tests, vectors, results or git."
+    ],
+    "reviewed_snapshot": "/tmp/compound-engineering-501/ce-code-review/20261022-160145-099d1d65/full.diff"
+  },
+  "artifact_path": "/tmp/compound-engineering-501/ce-code-review/20261022-160145-099d1d65",
+  "receipt_path": "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_lens_pipeline_v2/docs/reviews/lens_pipeline_v2/review.json",
+  "run_id": "20261022-160145-099d1d65"
+}

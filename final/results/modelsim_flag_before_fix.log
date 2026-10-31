@@ -1,0 +1,143 @@
+test_compile_failure_stops_before_any_simulation (__main__.ModelSimScript.test_compile_failure_stops_before_any_simulation) ... ok
+test_every_source_is_a_separate_existing_filename (__main__.ModelSimScript.test_every_source_is_a_separate_existing_filename) ... FAIL
+test_multiple_values_cannot_be_treated_as_one_pass_flag (__main__.ModelSimScript.test_multiple_values_cannot_be_treated_as_one_pass_flag) ... ok
+test_one_bit_pass_does_not_use_signed_decimal_display (__main__.ModelSimScript.test_one_bit_pass_does_not_use_signed_decimal_display) ... FAIL
+test_package_directory_may_contain_spaces (__main__.ModelSimScript.test_package_directory_may_contain_spaces) ... FAIL
+test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) ... 
+  test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) (style='braced') ... FAIL
+  test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) (style='whitespace') ... FAIL
+  test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) (style='showbase') ... FAIL
+test_unpassed_testbench_stops_before_next_top (__main__.ModelSimScript.test_unpassed_testbench_stops_before_next_top) ... FAIL
+test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) ... 
+  test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) (value='0') ... FAIL
+  test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) (value='x') ... FAIL
+  test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) (value='z') ... FAIL
+
+======================================================================
+FAIL: test_every_source_is_a_separate_existing_filename (__main__.ModelSimScript.test_every_source_is_a_separate_existing_filename)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 136, in test_every_source_is_a_separate_existing_filename
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : tb_perspective_coord did not set test_passed
+
+
+======================================================================
+FAIL: test_one_bit_pass_does_not_use_signed_decimal_display (__main__.ModelSimScript.test_one_bit_pass_does_not_use_signed_decimal_display)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 160, in test_one_bit_pass_does_not_use_signed_decimal_display
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : tb_perspective_coord did not set test_passed
+
+
+======================================================================
+FAIL: test_package_directory_may_contain_spaces (__main__.ModelSimScript.test_package_directory_may_contain_spaces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 193, in test_package_directory_may_contain_spaces
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : tb_perspective_coord did not set test_passed
+
+
+======================================================================
+FAIL: test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) (style='braced')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 167, in test_single_value_tcl_list_formats_are_unwrapped
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : tb_perspective_coord did not set test_passed
+
+
+======================================================================
+FAIL: test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) (style='whitespace')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 167, in test_single_value_tcl_list_formats_are_unwrapped
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : tb_perspective_coord did not set test_passed
+
+
+======================================================================
+FAIL: test_single_value_tcl_list_formats_are_unwrapped (__main__.ModelSimScript.test_single_value_tcl_list_formats_are_unwrapped) (style='showbase')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 167, in test_single_value_tcl_list_formats_are_unwrapped
+    self.assertEqual(result.returncode, 0, result.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : tb_perspective_coord did not set test_passed
+
+
+======================================================================
+FAIL: test_unpassed_testbench_stops_before_next_top (__main__.ModelSimScript.test_unpassed_testbench_stops_before_next_top)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 155, in test_unpassed_testbench_stops_before_next_top
+    self.assertEqual([value for kind, value in events if kind == "simulate"], TOPS[:2])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['tb_perspective_coord'] != ['tb_perspective_coord', 'tb_homography_solver']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'tb_homography_solver'
+
+- ['tb_perspective_coord']
++ ['tb_perspective_coord', 'tb_homography_solver']
+
+======================================================================
+FAIL: test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) (value='0')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 177, in test_zero_unknown_and_high_impedance_flags_are_failures
+    self.assertEqual([v for kind, v in events if kind == "simulate"], TOPS[:2])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['tb_perspective_coord'] != ['tb_perspective_coord', 'tb_homography_solver']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'tb_homography_solver'
+
+- ['tb_perspective_coord']
++ ['tb_perspective_coord', 'tb_homography_solver']
+
+======================================================================
+FAIL: test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) (value='x')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 177, in test_zero_unknown_and_high_impedance_flags_are_failures
+    self.assertEqual([v for kind, v in events if kind == "simulate"], TOPS[:2])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['tb_perspective_coord'] != ['tb_perspective_coord', 'tb_homography_solver']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'tb_homography_solver'
+
+- ['tb_perspective_coord']
++ ['tb_perspective_coord', 'tb_homography_solver']
+
+======================================================================
+FAIL: test_zero_unknown_and_high_impedance_flags_are_failures (__main__.ModelSimScript.test_zero_unknown_and_high_impedance_flags_are_failures) (value='z')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_perspective/scripts/test_modelsim_script.py", line 177, in test_zero_unknown_and_high_impedance_flags_are_failures
+    self.assertEqual([v for kind, v in events if kind == "simulate"], TOPS[:2])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['tb_perspective_coord'] != ['tb_perspective_coord', 'tb_homography_solver']
+
+Second list contains 1 additional elements.
+First extra element 1:
+'tb_homography_solver'
+
+- ['tb_perspective_coord']
++ ['tb_perspective_coord', 'tb_homography_solver']
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.112s
+
+FAILED (failures=10)

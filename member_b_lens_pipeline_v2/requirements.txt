@@ -1,0 +1,3 @@
+numpy>=1.24
+Pillow>=9
+# Optional camera input and independent lens test oracle: opencv-python>=4.5

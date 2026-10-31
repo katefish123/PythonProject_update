@@ -1,0 +1,9 @@
+{
+  "residual_risks": [],
+  "testing_gaps": [],
+  "coverage_limits": [
+    "Native ModelSim execution was not performed; the checked Tcl command harness is not native HDL compilation/simulation.",
+    "The autocrop RTL test covers the complete perimeter and an interior grid; exhaustive 1920x1080 validity comes from the exact host model.",
+    "PDS, board timing, hardware performance and optical calibration accuracy are outside this review scope."
+  ]
+}

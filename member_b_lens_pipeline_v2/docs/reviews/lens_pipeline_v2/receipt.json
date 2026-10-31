@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "verdict": "Ready with fixes",
+  "artifact_path": "/Users/yishuyu/.codex/.chatgpt-projects/g-p-6aae24ff7e008191af984d8c28304cf6/output/member_b_lens_pipeline_v2/docs/reviews/lens_pipeline_v2/review.json",
+  "native_artifact_path": "/tmp/compound-engineering-501/ce-code-review/20261022-160145-099d1d65",
+  "run_id": "20261022-160145-099d1d65",
+  "actionable_findings": 1,
+  "validator_status": "complete"
+}

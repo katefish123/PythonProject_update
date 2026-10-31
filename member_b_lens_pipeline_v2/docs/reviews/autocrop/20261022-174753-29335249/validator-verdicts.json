@@ -1,0 +1,14 @@
+{
+  "verdicts": [
+    {
+      "#": 1,
+      "validated": true,
+      "reason": "The documented command now defaults to auto cropping but writes float.png, fixed.png, and parameters.json into results/lens_demo, which the validation document identifies as the preserved uncropped comparison."
+    },
+    {
+      "#": 2,
+      "validated": true,
+      "reason": "Existing patterned tests cover the renderer and an identity CLI case, while the auto crop CLI test uses uniform pixels, so an added resampling pass on the cropped path could blur real images without failing these tests."
+    }
+  ]
+}
