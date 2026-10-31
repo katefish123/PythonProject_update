@@ -58,6 +58,7 @@ HDMI 输入
 | [`member_c/`](member_c/) | 成员 C 的视频与硬件成果 |
 | [`member_c/VideoTimingSim/`](member_c/VideoTimingSim/) | VTC、TPG、正式顶层及 ModelSim 仿真工程 |
 | [`docs/`](docs/) | 已确认的设计说明和协作资料 |
+| [`docs/git提交规范.md`](docs/git提交规范.md) | 提交身份、本机配置、历史改写与分支合并规则 |
 
 成员 C 的工程使用说明见 [`member_c/VideoTimingSim/README.md`](member_c/VideoTimingSim/README.md)。
 
